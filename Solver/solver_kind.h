@@ -24,7 +24,7 @@
 
 #include <cstdint>
 #include <ostream>
-namespace cvc5 {
+namespace solverbin {
 #undef ENUM
 #define ENUM(name) class name
 #define EVALUE(name) name
@@ -4964,6 +4964,8 @@ enum ENUM(Kind) : int32_t
    *   - Solver::mkRegexpNone() const
    */
   EVALUE(REGEXP_NONE),
+  EVALUE(REGEXP_CHARCLASS),
+  EVALUE(REGEXP_STRING),
   /**
    * Regular expression all.
    *
@@ -5691,14 +5693,14 @@ namespace std {
  * Hash function for Kinds.
  */
 template <>
-struct CVC5_EXPORT hash<cvc5::Kind>
+struct CVC5_EXPORT hash<solverbin::Kind>
 {
   /**
    * Hashes a Kind to a size_t.
    * @param kind The kind.
    * @return The hash value.
    */
-  size_t operator()(cvc5::Kind kind) const;
+  size_t operator()(solverbin::Kind kind) const;
 };
 
 }  // namespace std
@@ -5714,7 +5716,7 @@ struct CVC5_EXPORT hash<cvc5::Kind>
 #endif
 
 #ifndef CVC5_API_USE_C_ENUMS
-namespace cvc5 {
+namespace solverbin {
 #endif
 
 // clang-format off
@@ -5944,7 +5946,7 @@ const char* cvc5_sort_kind_to_string(Cvc5SortKind kind);
  * @param k the sort kind
  * @return the string representation of kind k
  */
-std::string sortKindToString(SortKind k);
+std::string sortKindToString(SortKind k) CVC5_EXPORT;
 
 /**
  * Serialize a kind to given stream.
@@ -5952,7 +5954,7 @@ std::string sortKindToString(SortKind k);
  * @param k the sort kind to be serialized to the given output stream
  * @return the output stream
  */
-std::ostream& operator<<(std::ostream& out, SortKind k);
+std::ostream& operator<<(std::ostream& out, SortKind k) CVC5_EXPORT;
 
 }  // namespace cvc5
 #endif
@@ -5971,14 +5973,14 @@ namespace std {
  * Hash function for SortKinds.
  */
 template <>
-struct CVC5_EXPORT hash<cvc5::SortKind>
+struct CVC5_EXPORT hash<solverbin::SortKind>
 {
   /**
    * Hashes a SortKind to a size_t.
    * @param kind The kind.
    * @return The hash value.
    */
-  size_t operator()(cvc5::SortKind kind) const;
+  size_t operator()(solverbin::SortKind kind) const;
 };
 }  // namespace std
 #endif

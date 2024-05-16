@@ -29,7 +29,7 @@
 
 #include <cstdint>
 #include <ostream>
-namespace cvc5 {
+namespace solverbin {
 #undef ENUM
 #define ENUM(name) class name
 #define EVALUE(name) name
@@ -2400,14 +2400,14 @@ namespace std {
  * Hash function for ProofRules.
  */
 template <>
-struct CVC5_EXPORT hash<cvc5::ProofRule>
+struct CVC5_EXPORT hash<solverbin::ProofRule>
 {
   /**
    * Hashes a ProofRule to a size_t.
    * @param rule The proof rule.
    * @return The hash value.
    */
-  size_t operator()(cvc5::ProofRule rule) const;
+  size_t operator()(solverbin::ProofRule rule) const;
 };
 }  // namespace std
 

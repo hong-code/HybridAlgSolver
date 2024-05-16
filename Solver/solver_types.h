@@ -23,7 +23,7 @@
 #define ENUM(name) Cvc5##name
 #else
 #include <iosfwd>
-namespace cvc5 {
+namespace solverbin {
 #define ENUM(name) class name
 #define EVALUE(name) name
 #endif
@@ -165,7 +165,7 @@ typedef enum ENUM(RoundingMode) ENUM(RoundingMode);
 #endif
 
 #ifndef CVC5_API_USE_C_ENUMS
-namespace cvc5::modes {
+namespace solverbin::modes {
 #endif
 
 /* -------------------------------------------------------------------------- */

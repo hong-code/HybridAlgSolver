@@ -4,8 +4,12 @@ cmake_minimum_required (VERSION 2.9)
 # 项目信息
 project (HYBRIDALGSOLVER)
 
+
 # 二进制
 add_executable(String_Solver main.cpp)
 
 # 添加子目录
 add_subdirectory(Solver)
+add_subdirectory(Parser)
+
+target_link_libraries(String_Solver Solverbin)
