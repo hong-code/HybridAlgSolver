@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../Solver/solver.h"
-#include "../Solver/String/regexp_symbolic.h"
+
 
 
 namespace solverbin {
@@ -11,8 +11,11 @@ namespace solverbin {
       #endif  
       std::string regex_string;
       REnodeClass Re;
-      REnode* root =  Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+      Parer(std::string regex_string);
+      Parer();
       REnode* Parse(REnode* r, std::string &RegexString);
-      int getcharacter(std::string &RegexString);
+      signed int getcharacter(std::string &RegexString);
+      void InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC);
+      std::vector<RuneClass> unicode2utf_8(unsigned long unicode);
   };
 }

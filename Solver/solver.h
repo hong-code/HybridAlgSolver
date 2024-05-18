@@ -33,8 +33,12 @@
 #include <variant>
 #include <vector>
 
+
 namespace solverbin {
 
+#ifndef int_21
+typedef signed int int_21;
+#endif 
 
 enum AssertionStatus {
   IsInRe,
@@ -49,8 +53,8 @@ enum AssertionStatus {
 
 struct RuneClass
 {
-  unsigned min;
-  unsigned max;
+  int_21 min;
+  int_21 max;
   friend bool operator < (const RuneClass& n1, const RuneClass& n2)
   {
     if (n1.min != n2.min)
@@ -59,9 +63,10 @@ struct RuneClass
       return n1.max < n2.max;
   }
   RuneClass() : min(), max(){}
-  RuneClass(unsigned i, unsigned a) : min(i), max(a){}
+  RuneClass(int_21 i, int_21 a) : min(i), max(a){}
 };// the definition of CharClass
 
+int chartorune(unsigned long *rune, std::string &str);
 
 class REnode{
   public:
@@ -106,12 +111,12 @@ class REnodeClass{
     REnode* Renode;
     int color_max = 0;
 
-    REnodeClass(Node r);
+    REnodeClass(std::string e);
     REnodeClass();
     
     std::set<uint8_t> Alphabet; // the alphabet of the node
 
-    REnode* linearize(Node e, std::set<RuneClass>& BytemapRange); // convert the node to the linear form
+    // REnode* linearize(Node e, std::set<RuneClass>& BytemapRange); // convert the node to the linear form
 
     std::string REnodeToString(REnode* e); // convert the node to the string
 
@@ -128,6 +133,8 @@ class REnodeClass{
     void BuildBytemapToString(uint8_t* ByteMap); // convert the bytemap to the string
 
     void RuneSequenceToString(std::map<REnode*, REnode*>& RS); // convert the range to the string
+
+    int runetochar(char *str, const int_21 *rune);
 
     void ConvertToUTF_8(int_21 min, int_21 max, RuneSequence& RS); // convert the range to the utf-8
 

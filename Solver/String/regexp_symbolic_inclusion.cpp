@@ -44,8 +44,8 @@ namespace solverbin {
   }
 
   RegExpSymbolic::InclusionDFA::InclusionDFA(Node r1, Node r2){
-    e1 = REnodeClass(r1);
-    e2 = REnodeClass(r2);
+    e1 = REnodeClass("re");
+    e2 = REnodeClass("re");
     D1 = FULLmatchDFA(e1);
     D2 = FULLmatchDFA(e2);
     SSBegin = new SimulationState(Begin, D1.DState, D2.DState);

@@ -12,4 +12,5 @@ add_executable(String_Solver main.cpp)
 add_subdirectory(Solver)
 add_subdirectory(Parser)
 
-target_link_libraries(String_Solver Solverbin)
+# target_link_libraries(String1_Solver Solverbin Parserbin)
+target_link_libraries(String_Solver Parserbin Solverbin)

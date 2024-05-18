@@ -77,7 +77,7 @@ namespace solverbin{
     }
       
     case Kind::REGEXP_UNION:{
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
+      e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
       if (e1->FiretSeq.empty()){
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           auto RS1 = FirstNode(e1->Children[i]);
@@ -125,24 +125,44 @@ namespace solverbin{
     case Kind::REGEXP_PLUS:{
       e1->Status = NODE_STATUS::NODE_NULLABLE;
       if (e1->FiretSeq.empty()){
-        REnode* e3 = initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));
-        e3->Children = e1->Children;
+        e1->kind = Kind::REGEXP_CONCAT;
         if (e1->UnfoldNode == nullptr)
           e1->UnfoldNode = CopyREnode(e1->Children[0]);
-        auto RS1 = FirstNode(e1->UnfoldNode);
-        if (e1->UnfoldNode->Status == NODE_STATUS::NODE_NULLABLE_NOT)
-          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        if (RS1.size() != 0){
-          for (auto it : RS1){
-            if (it.second->KindReturn() == Kind::REGEXP_NONE){
-              RSVec.insert(std::make_pair(it.first, e3));
-            }
-            else{
+        REnode* e3 = initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));  
+        e3->Children = e1->Children;
+        e1->Children.pop_back();
+        e1->Children.insert(e1->Children.begin(), e3);
+        e1->Children.insert(e1->Children.begin(), e1->UnfoldNode);
+        for (long unsigned int i = 0; i < e1->Children.size(); i++){
+          auto RS1 = FirstNode(e1->Children[i]);
+          if (RS1.size() != 0){
+            for (auto it : RS1){
               REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
-              e2->Children.emplace_back(it.second);
-              e2->Children.emplace_back(e3);
+              if (it.second->KindReturn() == Kind::REGEXP_NONE){
+                if (i == e1->Children.size() - 1)
+                  e2 = it.second;
+                else{
+                  if (i == e1->Children.size() - 2){
+                    e2 = *(e1->Children.end()-1);
+                  }
+                  else
+                    e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
+                }
+              }
+              else{
+                if (i == e1->Children.size() - 1)
+                  e2 = it.second;
+                else{
+                  e2->Children.emplace_back(it.second);
+                  e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
+                }
+              }
               RSVec.insert(std::make_pair(it.first, e2));
             }
+          }
+          if (e1->Children[i]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
+            e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+            break;
           }
         }
         e1->FiretSeq = RSVec;
@@ -389,7 +409,7 @@ namespace solverbin{
   }
   RegExpSymbolic::FollowAtomata::FollowAtomata(){}
   RegExpSymbolic::FollowAtomata::FollowAtomata(Node e){
-    REClass = REnodeClass(e);
+    REClass = REnodeClass("");
     REClass.REnodeToString(REClass.Renode);
     // REClass.FirstNode(REClass.Renode);
     // NState->NodeSequence = REClass.FirstNode(Renode1);

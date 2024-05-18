@@ -259,6 +259,7 @@ namespace solverbin {
         void ComputeAlphabet(std::set<uint8_t>& A1, uint8_t* ByteMap1, uint8_t* ByteMap2);
         IntersectionNFA(Node r1, Node r2);
         IntersectionNFA() {};
+        IntersectionNFA(REnodeClass r1, REnodeClass r2);
         bool Intersect();
         bool IsIntersect(SimulationState* s);
     };

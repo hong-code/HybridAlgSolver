@@ -1,11 +1,184 @@
-#include "../Parser/parser.h"
+#include "parser.h"
+#include "../Solver/solver.h"
+#include <cmath>
+#include <map>
+#include <list>
+#include <bitset>
+#include <ostream>
+#include <string.h>
+
 
 namespace solverbin {
+
+
+  signed int Parer::getcharacter(std::string &RegexString){
+    switch (RegexString[0])
+    {
+      case '\\':{
+        RegexString.erase(0,1);
+        if (RegexString[0] == 'u'){
+          RegexString.erase(0,1);
+          signed int ret = stoi(RegexString.substr(0, 4), 0, 16);
+          RegexString.erase(0,4);
+          return ret;
+        }
+        else {
+          signed int ret = RegexString[0];
+          RegexString.erase(0,1);
+          return ret;
+        }
+        break;
+      }
+    
+      default:{
+        signed int ret = RegexString[0];
+        RegexString.erase(0,1);
+        return ret;
+      }
+    }
+  }
+
+  void Parer::InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC){
+    if (RuneSet.size() == 0){
+      RuneSet.emplace_back(RC);
+      return;
+    }
+    unsigned long low = RC.min;
+    unsigned long high = RC.max;
+    int l = 0;
+    int h = RuneSet.size() - 1;
+    int mid, low_index, high_index;
+    bool low_in, high_in;
+    while (l < h)
+    {
+      mid = (h + l) / 2;
+      if (RuneSet[mid].min > low){
+        h = mid - 1;
+      }
+      else if (RuneSet[mid].min < low){
+        l = mid + 1;
+      }
+      else{
+        l = mid;
+        break;
+      }
+    }
+    if (RuneSet[l].min <= low){
+      if (RuneSet[l].max+1 >= low){
+        low_in = true;
+        low_index = l;
+        RC.min = RuneSet[l].min;
+      }
+      else{
+        low_in = false;
+        low_index = l + 1;
+        if (low_index == RuneSet.size()){
+          RuneSet.emplace_back(RC);
+          return;
+        }
+      }
+    }else{
+      if ((l-1) > 0)
+      if (RuneSet[l-1].max+1 >= low){
+        low_in = true;
+        low_index = l - 1;
+        RC.min = RuneSet[l-1].min;
+      }
+      else{
+        low_in = false;
+        low_index = l;
+      }
+      else {
+        low_in = false;
+        low_index = 0;
+      }
+    }
+    l = 0;
+    h = RuneSet.size() - 1;
+    while (l < h)
+    {
+      mid = (h + l) / 2;
+      if (RuneSet[mid].max < high){
+        l = mid + 1;
+      }
+      else if (RuneSet[mid].max > high){
+        h = mid - 1;
+      }
+      else{
+        l = mid;
+        break;
+      }
+    }
+    if (RuneSet[l].max >= high){
+      if (RuneSet[l].min-1 <= high){
+        high_in = true;
+        high_index = l;
+        RC.max = RuneSet[l].max;
+      }
+      else{
+        high_in = false;
+        high_index = l - 1;
+        if (high_index < 0){
+          RuneSet.insert(RuneSet.begin(), RC);
+          return;
+        }
+      }
+    }else{
+      if ((l+1) < RuneSet.size())
+      if (RuneSet[l+1].min-1 <= high){
+        high_in = true;
+        high_index = l + 1;
+        RC.max = RuneSet[l+1].max;
+      }
+      else{
+        high_in = false;
+        high_index = l;
+      }
+      else {
+        high_index = RuneSet.size() - 1;
+        high_in = false;
+      }
+    }
+    if (low_in){
+      if (high_in){
+        if (low_index == high_index)
+          return;
+        else {
+          RuneSet.erase(RuneSet.begin() + low_index, RuneSet.begin() + high_index + 1);
+          RuneSet.insert(RuneSet.begin() + low_index, RC);
+        }
+      }
+      else{
+        RuneSet.erase(RuneSet.begin() + low_index, RuneSet.begin() + high_index + 1);
+        RuneSet.insert(RuneSet.begin() + low_index, RC);
+      }
+    }else{
+      if (high_in){
+        RuneSet.erase(RuneSet.begin() + low_index, RuneSet.begin() + high_index + 1);
+        RuneSet.insert(RuneSet.begin() + low_index, RC);
+      }
+      else{
+        if (low_index == high_index){
+          RuneSet.erase(RuneSet.begin() + low_index, RuneSet.begin() + high_index + 1);
+          RuneSet.insert(RuneSet.begin() + low_index, RC);
+        }
+          
+        else {
+          RuneSet.erase(RuneSet.begin() + low_index, RuneSet.begin() + high_index + 1);
+          RuneSet.insert(RuneSet.begin() + low_index, RC);
+        }
+      }
+    }
+  }
+  
+
   REnode* Parer::Parse(REnode* r,  std::string &RegexString) {
+  REnode* rU = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   while (!RegexString.empty()) {
     switch (RegexString[0]) {
       default: {
-        REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {RegexString[0], RegexString[0]});
+        Re.BytemapRange.insert(RuneClass(unsigned(RegexString[0]), unsigned(RegexString[0])));
+        REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {int(RegexString[0]), int(RegexString[0])});
         r->Children.emplace_back(REnodeRune);
         RegexString.erase(0, 1);
         break;
@@ -14,7 +187,7 @@ namespace solverbin {
       case '(':{
         REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
         RegexString.erase(0, 1);
-        Parse(REnodeCONCAT, RegexString);
+        REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
         if (REnodeCONCAT->Children.size() > 1)
           r->Children.emplace_back(REnodeCONCAT);
         else
@@ -23,21 +196,47 @@ namespace solverbin {
       }
 
       case '|':{
-        REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
-        if (r->Children.size() > 1){
-          REnodeUNION->Children.emplace_back(r);
-          r = REnodeUNION;
-        }
-        else{
-          r->kind = Kind::REGEXP_UNION;
-        }
         RegexString.erase(0, 1);
+        if (rU->kind == Kind::REGEXP_UNION){
+          if (r->Children.size() <= 1){
+            rU->Children.emplace_back(r->Children[0]);
+          }
+          else{
+            rU->Children.emplace_back(r);
+          }
+          r = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+        }
+        else {
+          rU->kind = Kind::REGEXP_UNION;
+          if (r->Children.size() <= 1){
+            rU->Children.emplace_back(r->Children[0]);
+          }
+          else{
+            rU->Children.emplace_back(r);
+          }
+          r = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+        }
         break;
       }
         
 
-      case ')':
-        return r;
+      case ')':{
+        RegexString.erase(0,1);
+        if (rU->kind == Kind::REGEXP_UNION){
+          if (r->Children.size() <= 1){
+            rU->Children.emplace_back(r->Children[0]);
+          }
+          else{
+            rU->Children.emplace_back(r);
+          }
+          r = rU;
+          return r;
+        }
+        else {
+          return r;
+        }
+      }
+        
 
       case '^':  {// Beginning of line.
         //todo
@@ -73,172 +272,309 @@ namespace solverbin {
       }// Any character (possibly except newline).
 
       case '[': {  // Character class.
-        REnode* REnodeRClass = Re.initREnode(Kind::REGEXP_CHARCLASS, {0, 0});
+        std::vector<RuneClass> RuneSet;
+        REnode* REnodeRClass = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
+        RegexString.erase(0,1);
+        while (RegexString[0] != ']')
+        {
+          // unsigned long* low = (unsigned long*)malloc(sizeof(unsigned long));
+          // chartorune(low, RegexString);
+          int_21 low = getcharacter(RegexString);
+          if (RegexString[0] == '-'){
+            RegexString.erase(0,1);
+            // unsigned long* high = (unsigned long*)malloc(sizeof(unsigned long));
+            // chartorune(high, RegexString);
+            int_21 high = getcharacter(RegexString);
+            if (high < low){
+              std::cout << "error: low > high" << std::endl;
+              exit(0);
+            }
+            else{
+              InsertRune(RuneSet, {low, high});
+            }
+          }else{
+            int_21 high = low;
+            InsertRune(RuneSet, {low, high});
+          }
+        } 
         
+        RegexString.erase(0,1);
+        for (auto it : RuneSet){
+          RuneSequence RS;
+          Re.ConvertToUTF_8(it.min, it.max, RS);
+          for (long unsigned int i = 0; i < RS.size(); i++){
+            REnodeRClass->Children.emplace_back(RS[i]);
+          }
+        }
+        if (REnodeRClass->Children.size() > 1)
+          r->Children.emplace_back(REnodeRClass);
+        else
+          r->Children.emplace_back(REnodeRClass->Children[0]);
         break;
       }
 
-      case '*': {  // Zero or more.
-        RegexpOp op;
-        op = kRegexpStar;
-        goto Rep;
-      case '+':  // One or more.
-        op = kRegexpPlus;
-        goto Rep;
-      case '?':  // Zero or one.
-        op = kRegexpQuest;
-        goto Rep;
-      Rep:
-        StringPiece opstr = t;
-        bool nongreedy = false;
-        t.remove_prefix(1);  // '*' or '+' or '?'
-        if (ps.flags() & PerlX) {
-          if (!t.empty() && t[0] == '?') {
-            nongreedy = true;
-            t.remove_prefix(1);  // '?'
-          }
-          if (!lastunary.empty()) {
-            // In Perl it is not allowed to stack repetition operators:
-            //   a** is a syntax error, not a double-star.
-            // (and a++ means something else entirely, which we don't support!)
-            status->set_code(kRegexpRepeatOp);
-            status->set_error_arg(StringPiece(
-                lastunary.data(),
-                static_cast<size_t>(t.data() - lastunary.data())));
-            return NULL;
-          }
-        }
-        opstr = StringPiece(opstr.data(),
-                            static_cast<size_t>(t.data() - opstr.data()));
-        if (!ps.PushRepeatOp(op, opstr, nongreedy))
-          return NULL;
-        isunary = opstr;
+      case '*': { 
+        RegexString.erase(0, 1);
+        REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_STAR, {0, 0});
+        REnodeSTAR->Children.emplace_back(r->Children.back());
+        r->Children.pop_back();
+        r->Children.emplace_back(REnodeSTAR);
+        break;
+      } // Zero or more.
+
+      case '+': {
+        RegexString.erase(0, 1);
+        REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_PLUS, {0, 0});
+        REnodeSTAR->Children.emplace_back(r->Children.back());
+        r->Children.pop_back();
+        r->Children.emplace_back(REnodeSTAR);
         break;
       }
+      case '?': {
+        RegexString.erase(0, 1);
+        REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_OPT, {0, 0});
+        REnodeSTAR->Children.emplace_back(r->Children.back());
+        r->Children.pop_back();
+        r->Children.emplace_back(REnodeSTAR);
+        break;
+      }
+      // Rep:
+      //   StringPiece opstr = t;
+      //   bool nongreedy = false;
+      //   t.remove_prefix(1);  // '*' or '+' or '?'
+      //   if (ps.flags() & PerlX) {
+      //     if (!t.empty() && t[0] == '?') {
+      //       nongreedy = true;
+      //       t.remove_prefix(1);  // '?'
+      //     }
+      //     if (!lastunary.empty()) {
+      //       // In Perl it is not allowed to stack repetition operators:
+      //       //   a** is a syntax error, not a double-star.
+      //       // (and a++ means something else entirely, which we don't support!)
+      //       status->set_code(kRegexpRepeatOp);
+      //       status->set_error_arg(StringPiece(
+      //           lastunary.data(),
+      //           static_cast<size_t>(t.data() - lastunary.data())));
+      //       return NULL;
+      //     }
+      //   }
+      //   opstr = StringPiece(opstr.data(),
+      //                       static_cast<size_t>(t.data() - opstr.data()));
+      //   if (!ps.PushRepeatOp(op, opstr, nongreedy))
+      //     return NULL;
+      //   isunary = opstr;
+      //   break;
+      // }
 
       case '{': {  // Counted repetition.
-        int lo, hi;
-        StringPiece opstr = t;
-        if (!MaybeParseRepetition(&t, &lo, &hi)) {
-          // Treat like a literal.
-          if (!ps.PushLiteral('{'))
-            return NULL;
-          t.remove_prefix(1);  // '{'
-          break;
-        }
-        bool nongreedy = false;
-        if (ps.flags() & PerlX) {
-          if (!t.empty() && t[0] == '?') {
-            nongreedy = true;
-            t.remove_prefix(1);  // '?'
+        std::string lo, hi;
+        RegexString.erase(0, 1);
+        std::string NUM = "";
+        bool issplit = false;
+        while (RegexString[0] != '}')
+        {
+          if (RegexString[0] == ','){
+            issplit = true;
+            lo = NUM;
+            NUM = "";
+            RegexString.erase(0, 1);
           }
-          if (!lastunary.empty()) {
-            // Not allowed to stack repetition operators.
-            status->set_code(kRegexpRepeatOp);
-            status->set_error_arg(StringPiece(
-                lastunary.data(),
-                static_cast<size_t>(t.data() - lastunary.data())));
-            return NULL;
+          NUM.push_back(RegexString[0]);
+          RegexString.erase(0, 1);
+        }
+        if (issplit)
+          hi = NUM;
+        else{
+          lo = NUM;
+          hi = lo;
+        }
+        RegexString.erase(0, 1);
+        if (lo.size() == 0){
+          if (hi.size() == 0){
+            std::cout << "error: " << std::endl;
+          }
+          else{
+            auto hi_int = stoi(hi);
+            if (hi_int < 0){
+              std::cout << "error: " << std::endl;
+            }
+            else{
+              REnode* REnodeLOOP = Re.initREnode(Kind::REGEXP_LOOP, {0, 0});
+              REnodeLOOP->Children.emplace_back(r->Children.back());
+              r->Children.pop_back();
+              r->Children.emplace_back(REnodeLOOP);
+              REnodeLOOP->Counting = RuneClass(0, hi_int);
+            }
           }
         }
-        opstr = StringPiece(opstr.data(),
-                            static_cast<size_t>(t.data() - opstr.data()));
-        if (!ps.PushRepetition(lo, hi, opstr, nongreedy))
-          return NULL;
-        isunary = opstr;
+        else{
+          if (hi.size() == 0){
+            auto lo_int = stoi(lo);
+            REnode* REnodeLOOP = Re.initREnode(Kind::REGEXP_LOOP, {0, 0});
+            REnodeLOOP->Children.emplace_back(r->Children.back());
+            r->Children.pop_back();
+            r->Children.emplace_back(REnodeLOOP);
+            REnodeLOOP->Counting = RuneClass(lo_int, -1);
+          }
+          else{
+            auto lo_int = stoi(lo);
+            auto hi_int = stoi(hi);
+            REnode* REnodeLOOP = Re.initREnode(Kind::REGEXP_LOOP, {0, 0});
+            REnodeLOOP->Children.emplace_back(r->Children.back());
+            r->Children.pop_back();
+            r->Children.emplace_back(REnodeLOOP);
+            REnodeLOOP->Counting = RuneClass(lo_int, hi_int);
+          }
+        }
         break;
       }
 
       case '\\': {  // Escaped character or Perl sequence.
-        // \b and \B: word boundary or not
-        if ((ps.flags() & Regexp::PerlB) &&
-            t.size() >= 2 && (t[1] == 'b' || t[1] == 'B')) {
-          if (!ps.PushWordBoundary(t[1] == 'b'))
-            return NULL;
-          t.remove_prefix(2);  // '\\', 'b'
+        RegexString.erase(0, 1);
+        if (RegexString[0] == 'b' || RegexString[0] == 'B') {
+          //todo
+
+        }
+        if (RegexString[0] == 'A' || RegexString[0] == 'Z') {
+          //todo
+          
+        }
+        if (RegexString[0] == 'u'){
+          RegexString.erase(0, 1);
+          auto utfstring = RegexString.substr(0, 4);
+          signed int unicode = stoi(utfstring, 0, 16);
+          uint8_t ul[4];
+		      int n = Re.runetochar(reinterpret_cast<char*>(ul), &unicode);
+          for (int i = 0; i < n; i++){
+            Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
+            REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});
+            r->Children.emplace_back(REnodeRune);
+          }
+          RegexString.erase(0, 4);
           break;
         }
-
-        if ((ps.flags() & Regexp::PerlX) && t.size() >= 2) {
-          if (t[1] == 'A') {
-            if (!ps.PushSimpleOp(kRegexpBeginText))
-              return NULL;
-            t.remove_prefix(2);  // '\\', 'A'
-            break;
-          }
-          if (t[1] == 'z') {
-            if (!ps.PushSimpleOp(kRegexpEndText))
-              return NULL;
-            t.remove_prefix(2);  // '\\', 'z'
-            break;
-          }
-          // Do not recognize \Z, because this library can't
-          // implement the exact Perl/PCRE semantics.
-          // (This library treats "(?-m)$" as \z, even though
-          // in Perl and PCRE it is equivalent to \Z.)
-
-          if (t[1] == 'C') {  // \C: any byte [sic]
-            if (!ps.PushSimpleOp(kRegexpAnyByte))
-              return NULL;
-            t.remove_prefix(2);  // '\\', 'C'
-            break;
-          }
-
-          if (t[1] == 'Q') {  // \Q ... \E: the ... is always literals
-            t.remove_prefix(2);  // '\\', 'Q'
-            while (!t.empty()) {
-              if (t.size() >= 2 && t[0] == '\\' && t[1] == 'E') {
-                t.remove_prefix(2);  // '\\', 'E'
-                break;
-              }
-              Rune r;
-              if (StringPieceToRune(&r, &t, status) < 0)
-                return NULL;
-              if (!ps.PushLiteral(r))
-                return NULL;
-            }
-            break;
-          }
-        }
-
-        if (t.size() >= 2 && (t[1] == 'p' || t[1] == 'P')) {
-          Regexp* re = new Regexp(kRegexpCharClass, ps.flags() & ~FoldCase);
-          re->ccb_ = new CharClassBuilder;
-          switch (ParseUnicodeGroup(&t, ps.flags(), re->ccb_, status)) {
-            case kParseOk:
-              if (!ps.PushRegexp(re))
-                return NULL;
-              goto Break2;
-            case kParseError:
-              re->Decref();
-              return NULL;
-            case kParseNothing:
-              re->Decref();
-              break;
-          }
-        }
-
-        const UGroup *g = MaybeParsePerlCCEscape(&t, ps.flags());
-        if (g != NULL) {
-          Regexp* re = new Regexp(kRegexpCharClass, ps.flags() & ~FoldCase);
-          re->ccb_ = new CharClassBuilder;
-          AddUGroup(re->ccb_, g, g->sign, ps.flags());
-          if (!ps.PushRegexp(re))
-            return NULL;
+        if (RegexString[0] == 'd') {
+          Re.BytemapRange.insert(RuneClass(48, 57));
+          RegexString.erase(0, 1);
+          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_CHARCLASS, {48, 57});
+          r->Children.emplace_back(REnodeRune);
           break;
         }
+        Re.BytemapRange.insert(RuneClass(int(RegexString[0]), int(RegexString[0])));
+        REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {int(RegexString[0]), int(RegexString[0])});
+        r->Children.emplace_back(REnodeRune);
+        RegexString.erase(0, 1);
+        break;
+        
+        // if ((ps.flags() & Regexp::PerlX) && t.size() >= 2) {
+        //   if (t[1] == 'A') {
+        //     if (!ps.PushSimpleOp(kRegexpBeginText))
+        //       return NULL;
+        //     t.remove_prefix(2);  // '\\', 'A'
+        //     break;
+        //   }
+        //   if (t[1] == 'z') {
+        //     if (!ps.PushSimpleOp(kRegexpEndText))
+        //       return NULL;
+        //     t.remove_prefix(2);  // '\\', 'z'
+        //     break;
+        //   }
+        //   // Do not recognize \Z, because this library can't
+        //   // implement the exact Perl/PCRE semantics.
+        //   // (This library treats "(?-m)$" as \z, even though
+        //   // in Perl and PCRE it is equivalent to \Z.)
 
-        Rune r;
-        if (!ParseEscape(&t, &r, status, ps.rune_max()))
-          return NULL;
-        if (!ps.PushLiteral(r))
-          return NULL;
+        //   if (t[1] == 'C') {  // \C: any byte [sic]
+        //     if (!ps.PushSimpleOp(kRegexpAnyByte))
+        //       return NULL;
+        //     t.remove_prefix(2);  // '\\', 'C'
+        //     break;
+        //   }
+
+        //   if (t[1] == 'Q') {  // \Q ... \E: the ... is always literals
+        //     t.remove_prefix(2);  // '\\', 'Q'
+        //     while (!t.empty()) {
+        //       if (t.size() >= 2 && t[0] == '\\' && t[1] == 'E') {
+        //         t.remove_prefix(2);  // '\\', 'E'
+        //         break;
+        //       }
+        //       Rune r;
+        //       if (StringPieceToRune(&r, &t, status) < 0)
+        //         return NULL;
+        //       if (!ps.PushLiteral(r))
+        //         return NULL;
+        //     }
+        //     break;
+        //   }
+        // }
+
+        // if (t.size() >= 2 && (t[1] == 'p' || t[1] == 'P')) {
+        //   Regexp* re = new Regexp(kRegexpCharClass, ps.flags() & ~FoldCase);
+        //   re->ccb_ = new CharClassBuilder;
+        //   switch (ParseUnicodeGroup(&t, ps.flags(), re->ccb_, status)) {
+        //     case kParseOk:
+        //       if (!ps.PushRegexp(re))
+        //         return NULL;
+        //       goto Break2;
+        //     case kParseError:
+        //       re->Decref();
+        //       return NULL;
+        //     case kParseNothing:
+        //       re->Decref();
+        //       break;
+        //   }
+        // }
+
+        // const UGroup *g = MaybeParsePerlCCEscape(&t, ps.flags());
+        // if (g != NULL) {
+        //   Regexp* re = new Regexp(kRegexpCharClass, ps.flags() & ~FoldCase);
+        //   re->ccb_ = new CharClassBuilder;
+        //   AddUGroup(re->ccb_, g, g->sign, ps.flags());
+        //   if (!ps.PushRegexp(re))
+        //     return NULL;
+        //   break;
+        // }
+
+        // Rune r;
+        // if (!ParseEscape(&t, &r, status, ps.rune_max()))
+        //   return NULL;
+        // if (!ps.PushLiteral(r))
+        //   return NULL;
         break;
       }
     }
-  Break2:
-    lastunary = isunary;
+  // Break2:
+  //   lastunary = isunary;
   }
-  return ps.DoFinish();
+  if (rU->kind == Kind::REGEXP_UNION){
+   if (r->Children.size() <= 1){
+      rU->Children.emplace_back(r->Children[0]);
+    }
+    else{
+      rU->Children.emplace_back(r);
+    }
+    r = rU;
+    return r;
+  }
+  else {
+    return r;
+  }
+    
 }
+
+
+Parer::Parer(std::string regex_string){
+  Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+  Re.Renode = Parse(Re.Renode, regex_string);
+  if (Re.Renode->Children.size() == 1)
+    Re.Renode = Re.Renode->Children[0];
+  memset(Re.ByteMap, 0, sizeof(Re.ByteMap));
+  Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
+  Re.BuildBytemapToString(Re.ByteMap);
+  Re.BytemapRangeToString(Re.BytemapRange);
+  std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+
+}
+Parer::Parer(){}
+
 }

@@ -46,8 +46,22 @@ void RegExpSymbolic::IntersectionNFA::ComputeAlphabet(std::set<uint8_t>& A31, ui
 }
 
 RegExpSymbolic::IntersectionNFA::IntersectionNFA(Node r1, Node r2){
-  e1 = REnodeClass(r1);
-  e2 = REnodeClass(r2);
+  e1 = REnodeClass("");
+  e2 = REnodeClass("");
+  F1 = FollowAtomata(e1);
+  F2 = FollowAtomata(e2);
+  SSBegin = new SimulationState(Begin, F1.NState, F2.NState);
+  TODOCache.push(*SSBegin);
+  ComputeAlphabet(Alphabet, e1.ByteMap, e2.ByteMap);
+  std::copy(std::begin(e1.ByteMap),std::end(e1.ByteMap),std::begin(ByteMap));
+  e1.BuildBytemap(ByteMap, e2.BytemapRange);
+  e1.BuildBytemapToString(ByteMap);
+  RegExpSymbolic::DumpAlphabet(Alphabet);
+}
+
+RegExpSymbolic::IntersectionNFA::IntersectionNFA(REnodeClass r1, REnodeClass r2){
+  e1 = r1;
+  e2 = r2;
   F1 = FollowAtomata(e1);
   F2 = FollowAtomata(e2);
   SSBegin = new SimulationState(Begin, F1.NState, F2.NState);
@@ -71,7 +85,7 @@ bool RegExpSymbolic::IntersectionNFA::Intersect(){
 
 bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
   // std::cout << "witness str: " << InterStr << std::endl;
-  // DumpSimulationState(s);
+  DumpSimulationState(s);
   DoneCache.insert(std::make_pair(*s, s));
   s->IsIntersect = false;
   for (auto c : Alphabet){
@@ -110,8 +124,11 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
                 InterStr = InterStr + char(c);
                 if (IsIntersect(ns))
                   s->IsIntersect = true;
-                else
-                  continue;  
+                else{
+                  InterStr.pop_back();
+                  continue; 
+                }
+                   
               }
               else if (nextns1_it->NFlag == RegExpSymbolic::FollowAtomata::Match && nextns2_it->NFlag == RegExpSymbolic::FollowAtomata::Match){
                 SimulationSet.insert(itc->second); 
@@ -129,8 +146,10 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
                 ns->IFlag = Normal;
                 if (IsIntersect(ns))
                   s->IsIntersect = true;
-                else
-                  continue;  
+                else{
+                  InterStr.pop_back();
+                  continue; 
+                }
               }
           }
         }
