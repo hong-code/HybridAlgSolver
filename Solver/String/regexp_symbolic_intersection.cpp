@@ -84,7 +84,7 @@ bool RegExpSymbolic::IntersectionNFA::Intersect(){
 }
 
 bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
-  // std::cout << "witness str: " << InterStr << std::endl;
+  std::cout << "witness str: " << InterStr << std::endl;
   DumpSimulationState(s);
   DoneCache.insert(std::make_pair(*s, s));
   s->IsIntersect = false;
@@ -125,7 +125,7 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
                 if (IsIntersect(ns))
                   s->IsIntersect = true;
                 else{
-                  InterStr.pop_back();
+                  // InterStr.pop_back();
                   continue; 
                 }
                    
@@ -147,7 +147,7 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
                 if (IsIntersect(ns))
                   s->IsIntersect = true;
                 else{
-                  InterStr.pop_back();
+                  // InterStr.pop_back();
                   continue; 
                 }
               }
@@ -176,7 +176,7 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
     return true;
   }
   else{
-    InterStr = InterStr.substr(0, InterStr.length()-1);
+    InterStr.pop_back();
     return false;
   }
     

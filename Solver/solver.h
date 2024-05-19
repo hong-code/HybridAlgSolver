@@ -76,6 +76,8 @@ class REnode{
     RuneClass Rune_Class;     // charclass decoded by utf-8
     RuneClass Counting;      // counting range
     std::string Str;    // string Kind
+    std::string PrefixStr;
+    std::vector<std::map<REnode*, std::set<int>>> Prefix;
     REnode* UnfoldNode = nullptr;
     REnode* First = nullptr;
     std::map<uint8_t, std::map<REnode*, REnode*>> kToNode; // map from the byte to the node

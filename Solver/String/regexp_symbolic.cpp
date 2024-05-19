@@ -22,6 +22,7 @@
 #include <list>
 #include <bitset>
 #include <ostream>
+#include "../../Parser/parser.h"
 
 
 namespace solverbin {
@@ -843,8 +844,9 @@ bool RegExpSymbolic::AC_include(Node e1, Node e2) {
   return true;
 }
 
-bool RegExpSymbolic::FULLMATCH(Node r, std::string str) {
-  REnodeClass REClass = REnodeClass("");
+bool RegExpSymbolic::FULLMATCH(std::string r, std::string str) {
+  auto Pa = Parer(r);
+  REnodeClass REClass = Pa.Re;
   auto e1 = REClass.Renode;
   std::vector<uint8_t> uvec;
   std::map<REnode*, REnode*> RS2;
@@ -953,8 +955,9 @@ RegExpSymbolic::FULLmatchDFA::DFAState* RegExpSymbolic::FULLmatchDFA::StepOneByt
   return BeginState;
 }
 
-bool RegExpSymbolic::FULLmatchDFA::Fullmatch(Node r, std::string str) {
-  REClass = REnodeClass("");
+
+bool RegExpSymbolic::FULLmatchDFA::Fullmatch(std::string Pattern, std::string str) {
+  REClass = Parer(Pattern).Re;
   auto e1 = REClass.Renode;
   std::vector<uint8_t> uvec;
   std::map<REnode*, REnode*> RS2;

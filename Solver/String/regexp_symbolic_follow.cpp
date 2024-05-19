@@ -212,11 +212,14 @@ namespace solverbin{
           isNullable(e1->Children[0]);
         }
         if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
           iteration = e1->Counting.max;
         }
         else
           iteration = 1;
+        if (e1->Counting.min == 0 || e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE)  
+          e1->Status = NODE_STATUS::NODE_NULLABLE;
+        else
+          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
         for(int i = 0; i < iteration; i++){
           auto RS1 = FirstNode(CopyREnode(e1->Children[0]));
           if (RS1.size() != 0){
@@ -475,11 +478,9 @@ namespace solverbin{
         if (i.second->KindReturn() == Kind::REGEXP_NONE){
           NFAState* nfastate = new NFAState(Normal, REClass.FirstNode(i.second));
           nfastate->Node2Continuation = std::make_pair(i.first, i.second);
-          if (i.second->Status == NODE_STATUS::NODE_NULLABLE){
-            nfastate->NFlag = Match;
-          }else
-            nfastate->NFlag = Normal;
+          nfastate->NFlag = Match;
           NFAStateVec.insert(nfastate);
+          Node2NFAState.insert(std::make_pair(i.first, nfastate));
           continue;
         }
         auto ns = Node2NFAState.find(i.first);
@@ -494,6 +495,7 @@ namespace solverbin{
         }else
           nfastate->NFlag = Normal;
         NFAStateVec.insert(nfastate);
+        Node2NFAState.insert(std::make_pair(i.first, nfastate));
       }
       else
         continue;
