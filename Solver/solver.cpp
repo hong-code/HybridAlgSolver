@@ -190,44 +190,22 @@ bad:
 	void REnodeClass::BuildBytemap(uint8_t* Bytemap, std::set<RuneClass>& BytemapClass){
 		int color1 = color_max;
 		for (auto it : BytemapClass){
-			if (it.min >= 256)
-				continue;
-			int color_low = Bytemap[it.min];
-			if (it.min >= 1 && color_low == Bytemap[it.min-1]){
-				color1 = color_max + 1;
-				for (unsigned i = it.min; i < 256; i++){
-					if (Bytemap[i] == color_low){
-						Bytemap[i] = color1;
-						if (i == it.max){
-							break;
-						}
-					}
-					else{
-						break;
-					}
+			std::map<int, int> color2color;
+			for (int low = it.min; low <= it.max; low++){
+				auto cc = color2color.find(Bytemap[low]);
+				if (cc == color2color.end()){
+					color_max++;
+					color2color.insert(std::make_pair(Bytemap[low], color_max));
+					Bytemap[low] = color_max;
+				}
+				else {
+					Bytemap[low] = cc->second;
 				}
 			}
-			int color_hi = Bytemap[it.max];
-			if (it.max <= 254 && color_hi == Bytemap[it.max+1]){
-				if (color1 == color_max)
-					color1 = color_max + 1;
-				for (unsigned i = it.max; i >= 0; i--){
-					if (Bytemap[i] == color_hi){
-						Bytemap[i] = color1;
-						if (i == it.min){
-							break;
-						}
-					}
-					else{
-						break;
-					}
-				}
-			}
-			color_max = color1;
 		}
 	}
 
-	void ComputeAlphabet(uint8_t* ByteMap, std::set<uint8_t> &Alphabet){
+	void REnodeClass::ComputeAlphabet(uint8_t* ByteMap, std::set<uint8_t> &Alphabet){
 		std::set<uint8_t> color_set;
 		color_set.insert(ByteMap[0]);
 		if (ByteMap[0] != 0)

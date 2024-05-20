@@ -76,7 +76,7 @@ RegExpSymbolic::IntersectionNFA::IntersectionNFA(REnodeClass r1, REnodeClass r2)
 
 
 bool RegExpSymbolic::IntersectionNFA::Intersect(){
-  DumpSimulationState(SSBegin);
+  // DumpSimulationState(SSBegin);
   if (IsIntersect(SSBegin))
     return true;
   else
@@ -84,12 +84,12 @@ bool RegExpSymbolic::IntersectionNFA::Intersect(){
 }
 
 bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
-  std::cout << "witness str: " << InterStr << std::endl;
-  DumpSimulationState(s);
+  // std::cout << "witness str: " << InterStr << std::endl;
+  // DumpSimulationState(s);
   DoneCache.insert(std::make_pair(*s, s));
   s->IsIntersect = false;
   for (auto c : Alphabet){
-    std::cout << "matching: " << int(c) << " " << std::endl;
+    // std::cout << "matching: " << int(c) << " " << std::endl;
     if (s->byte2state.find(ByteMap[c]) == s->byte2state.end()){
       std::set<SimulationState*> SimulationSet;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
