@@ -8,6 +8,8 @@
 
 namespace solverbin{
 
+ 
+
   bool RegExpSymbolic::IntersectionK::IfMatch(SimulationState* SS){
     while (SS != nullptr){
       if (SS->NS->NFlag == RegExpSymbolic::FollowAtomata::Match){
@@ -21,42 +23,41 @@ namespace solverbin{
     return true;
   }
 
-  bool RegExpSymbolic::IntersectionK::ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns, SimulationCache* SC){
+  bool RegExpSymbolic::IntersectionK::ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns){
     if (i == 0)
       for (auto it : NextV[0]){
         s->NS = it;
         i++;
-        auto Ca = SC->NS2Cache.find(it);
         s->Next = (SimulationState*)malloc(sizeof(SimulationState));
-        if (Ca == SC->NS2Cache.end())
-          if (ComputAllState(NextV, i, s, s->Next, nullptr))
-            return true;
+        if (ComputAllState(NextV, i, s, s->Next))
+          return true;
         else
-          if (ComputAllState(NextV, i, s, s->Next, Ca->second));
-            return true;
+          i--;  
+
       }
     else if (i == RegExN){
-      if (SC == nullptr){
+      if (!IsInCache(s, Scache)){
         if (IfMatch(s)){
           return true;
         }
         else {
-          IntersectionK(s);
+          if (IsIntersect(s))
+            return true;
         }
       }
     }  
     else {
       for (auto it : NextV[i]){
         ns->NS = it;
-        i++;
-        ns->Next = (SimulationState*)malloc(sizeof(SimulationState));
-        auto Ca = SC->NS2Cache.find(it);
-        if (Ca == SC->NS2Cache.end())
-          if (ComputAllState(NextV, i, s, ns->Next, nullptr))
-            return true;
+        if (i == RegExN - 1)
+          ns->Next = nullptr;
+        else  
+          ns->Next = (SimulationState*)malloc(sizeof(SimulationState));
+        i++;  
+        if (ComputAllState(NextV, i, s, ns->Next))
+          return true;
         else
-          if (ComputAllState(NextV, i, s, ns->Next, Ca->second));
-            return true;
+          i--;
       }
     }
     return false;
@@ -105,13 +106,33 @@ namespace solverbin{
     }
   }
 
-  void RegExpSymbolic::IntersectionK::InsertInCache(SimulationState* ss, SimulationCache* sc){
+  // void RegExpSymbolic::IntersectionK::InsertInCache(SimulationState* ss, SimulationCache* sc){
+  //   while (ss != nullptr){
+  //     auto NextCache = new SimulationCache(ss->NS);
+  //     sc->NS2Cache.insert(std::make_pair(ss->NS, NextCache));
+  //     sc = NextCache;
+  //     ss = ss->Next;
+  //   }
+  // }
+
+   bool RegExpSymbolic::IntersectionK::IsInCache(SimulationState* ss, SimulationCache* sc){
+    bool ret = true;
     while (ss != nullptr){
-      auto NextCache = new SimulationCache(ss->NS);
-      sc->NS2Cache.insert(std::make_pair(ss->NS, NextCache));
-      sc = NextCache;
-      ss = ss->Next;
+      auto nextCache = sc->NS2Cache.find(ss->NS->Node2Continuation.first);
+      if (nextCache == sc->NS2Cache.end()){
+        auto NextCache = new SimulationCache(ss->NS);
+        sc->NS2Cache.insert(std::make_pair(ss->NS->Node2Continuation.first, NextCache));
+        ret = false;
+        sc = NextCache;
+        ss = ss->Next;
+      }
+      else{
+        ss = ss->Next;  
+        sc = nextCache->second;
+      }
     }
+    
+    return ret;
   }
 
   RegExpSymbolic::IntersectionK::IntersectionK(std::vector<REnodeClass> ReList){
@@ -119,15 +140,14 @@ namespace solverbin{
     REClassList = ReList;
     for (auto it : REClassList)
       FList.emplace_back(FollowAtomata(it));
-    
-    SSBegin = new SimulationState(FList[0].NState);
-    auto SS = SSBegin->Next;
+    auto SS = new SimulationState(FList[0].NState);
+    SSBegin = SS;
     for (int i = 1; i < FList.size(); i++){
-      SS = new SimulationState(FList[i].NState);
+      SS->Next = new SimulationState(FList[i].NState);
       SS = SS->Next;
     };
     Scache = new SimulationCache((FollowAtomata::NFAState*)malloc(sizeof(FollowAtomata::NFAState)));
-    InsertInCache(SSBegin, Scache);
+    // IsInCache(SSBegin, Scache);
     ComputeAlphabet(REClassList);
     RegExpSymbolic::DumpAlphabet(Alphabet);
   }
@@ -140,38 +160,35 @@ namespace solverbin{
   }
 
   bool RegExpSymbolic::IntersectionK::IsIntersect(SimulationState* s){
-    // std::cout << "witness str: " << InterStr << std::endl;
-    // DumpSimulationState(s);
-    InsertInCache(s, Scache);
+    std::cout << "witness str: " << InterStr << std::endl;
+    DumpSimulationState(s);
     for (auto c : Alphabet){
       // std::cout << "matching: " << int(c) << " " << std::endl;
-      if (s->byte2state.find(ByteMap[c]) == s->byte2state.end()){
-        std::set<SimulationState*> SimulationSet;
-        // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
-        auto ss = s;
-        std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextList;
-        int FollowID = 0;
-        while (ss != nullptr){
-          auto nextns1 = FList[FollowID].StepOneByte(ss->NS, c);
-          NextList.emplace_back(nextns1);
-          ss = ss->Next;
-          FollowID = FollowID + 1;
-        }
-        if (IsEmptyStateIn(NextList)){
-          continue;
-        }
-        InterStr.push_back(c);
-        auto currs = (SimulationState*)malloc(sizeof(SimulationState));
-        int level = 0;
-        s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
-        if (ComputAllState(NextList, level, s, currs, nullptr)){
-          return true;
-        }
-        else
-          InterStr.pop_back();
+      // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
+      auto ss = s;
+      std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextList;
+      int FollowID = 0;
+      bool ISN = false;
+      while (ss != nullptr){
+        auto nextns1 = FList[FollowID].StepOneByte(ss->NS, c);
+        if (nextns1.size() == 0)
+          ISN = true;
+        NextList.emplace_back(nextns1);
+        ss = ss->Next;
+        FollowID = FollowID + 1;
       }
-      else 
-      continue;
+      if (ISN){
+        continue;
+      }
+      InterStr.push_back(c);
+      auto currs = (SimulationState*)malloc(sizeof(SimulationState));
+      int level = 0;
+      if (ComputAllState(NextList, level, currs, nullptr)){
+        return true;
+      }
+      else
+        InterStr.pop_back();
+      
     }
 
     return false;

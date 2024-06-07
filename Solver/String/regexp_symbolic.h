@@ -341,7 +341,7 @@ namespace solverbin {
         // a Cache store k state
         struct SimulationCache{
           FollowAtomata::NFAState* NS1;
-          std::map<FollowAtomata::NFAState*, SimulationCache*> NS2Cache;
+          std::map<REnode*, SimulationCache*> NS2Cache;
           SimulationCache() : NS1()  {};
           SimulationCache(FollowAtomata::NFAState* ns) : NS1(ns) {};
         };
@@ -355,9 +355,10 @@ namespace solverbin {
         bool IsinAlphabet(uint8_t k, std::vector<REnodeClass> REClassList);
         void ComputeAlphabet(std::vector<REnodeClass> REClassList);
         bool IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>>);
-        bool ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns, SimulationCache* SC);
+        bool ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns);
         bool IfMatch(SimulationState* SS);
         void InsertInCache(SimulationState* ss, SimulationCache* sc);
+        bool IsInCache(SimulationState* ss, SimulationCache* sc);
         IntersectionK(std::vector<REnodeClass> RList);
         IntersectionK() {};
         bool Intersect();

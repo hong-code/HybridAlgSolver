@@ -146,11 +146,10 @@ namespace solverbin {
 
   REnode* Parer::LargeUnicodeBlock2Node(std::string &str){
     std::string Pclass;
-    if (str[0] == '\\')
-      str.erase(0, 1);
-    if (str[0] != 'p')
+    if (str[0] == '\\' && str[1] == 'p')
+      str.erase(0, 3);  
+    else
       return nullptr;
-    str.erase(0, 2);
     while (str[0] != '}'){
       Pclass.push_back(str[0]);
       str.erase(0,1);

@@ -23,13 +23,20 @@ namespace solverbin {
           return ret;
         }
         else if (RegexString[0] == 'x'){
-          RegexString.erase(0,2);
+          RegexString.erase(0,1);
           std::string NumString;
-          while (RegexString[0] != '}'){
-            NumString.push_back(RegexString[0]);
+          if (RegexString[0] != '{'){
+            NumString = RegexString.substr(0, 2);
+            RegexString.erase(0, 2);
+          }
+          else{
+            RegexString.erase(0, 1);
+            while (RegexString[0] != '}'){
+              NumString.push_back(RegexString[0]);
+              RegexString.erase(0, 1);
+            }
             RegexString.erase(0, 1);
           }
-          RegexString.erase(0, 1);
           signed int ret = stoi(NumString, 0, 16);
           return ret;
           break;
@@ -42,26 +49,26 @@ namespace solverbin {
         break;
       }
 
-      case 'u': {
-        RegexString.erase(0,1);
-        signed int ret = stoi(RegexString.substr(0, 4), 0, 16);
-        RegexString.erase(0,4);
-        return ret;
-        break;
-      }
+      // case 'u': {
+      //   RegexString.erase(0,1);
+      //   signed int ret = stoi(RegexString.substr(0, 4), 0, 16);
+      //   RegexString.erase(0,4);
+      //   return ret;
+      //   break;
+      // }
 
-      case 'x': {
-        RegexString.erase(0,2);
-        std::string NumString;
-        while (RegexString[0] != '}'){
-          NumString.push_back(RegexString[0]);
-          RegexString.erase(0, 1);
-        }
-        RegexString.erase(0, 1);
-        signed int ret = stoi(NumString, 0, 16);
-        return ret;
-        break;
-      }
+      // case 'x': {
+      //   RegexString.erase(0,2);
+      //   std::string NumString;
+      //   while (RegexString[0] != '}'){
+      //     NumString.push_back(RegexString[0]);
+      //     RegexString.erase(0, 1);
+      //   }
+      //   RegexString.erase(0, 1);
+      //   signed int ret = stoi(NumString, 0, 16);
+      //   return ret;
+      //   break;
+      // }
     
       default:{
         signed int ret = RegexString[0];
@@ -218,8 +225,11 @@ namespace solverbin {
       }
 
       case '(':{
+        
         REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
         RegexString.erase(0, 1);
+        if (RegexString[0] == '?')
+          RegexString.erase(0, 1);
         REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
         if (REnodeCONCAT->Children.size() > 1)
           r->Children.emplace_back(REnodeCONCAT);
@@ -228,11 +238,16 @@ namespace solverbin {
         break;
       }
 
+
       case '|':{
         RegexString.erase(0, 1);
         if (rU->kind == Kind::REGEXP_UNION){
           if (r->Children.size() <= 1){
-            rU->Children.emplace_back(r->Children[0]);
+            if(r->Children.size() == 0){
+              rU->Children.emplace_back(Re.initREnode(Kind::REGEXP_NONE, {0, 0}));
+            }
+            else
+              rU->Children.emplace_back(r->Children[0]);
           }
           else{
             rU->Children.emplace_back(r);
@@ -242,7 +257,11 @@ namespace solverbin {
         else {
           rU->kind = Kind::REGEXP_UNION;
           if (r->Children.size() <= 1){
-            rU->Children.emplace_back(r->Children[0]);
+            if(r->Children.size() == 0){
+              rU->Children.emplace_back(Re.initREnode(Kind::REGEXP_NONE, {0, 0}));
+            }
+            else
+              rU->Children.emplace_back(r->Children[0]);
           }
           else{
             rU->Children.emplace_back(r);
@@ -257,7 +276,11 @@ namespace solverbin {
         RegexString.erase(0,1);
         if (rU->kind == Kind::REGEXP_UNION){
           if (r->Children.size() <= 1){
-            rU->Children.emplace_back(r->Children[0]);
+            if(r->Children.size() == 0){
+              rU->Children.emplace_back(Re.initREnode(Kind::REGEXP_NONE, {0, 0}));
+            }
+            else
+              rU->Children.emplace_back(r->Children[0]);
           }
           else{
             rU->Children.emplace_back(r);
@@ -468,21 +491,20 @@ namespace solverbin {
       }
 
       case '\\': {  // Escaped character or Perl sequence.
-        RegexString.erase(0, 1);
-        if (RegexString[0] == 'b' || RegexString[0] == 'B') {
-          RegexString.erase(0, 1);
+        if (RegexString[1] == 'b' || RegexString[1] == 'B') {
+          RegexString.erase(0, 2);
           break;
           //todo
 
         }
-        if (RegexString[0] == 'A' || RegexString[0] == 'Z' || RegexString[0] == 'z') {
-          RegexString.erase(0, 1);
+        if (RegexString[1] == 'A' || RegexString[1] == 'Z' || RegexString[1] == 'z') {
+          RegexString.erase(0, 2);
           break;
           //todo
           
         }
-        if (RegexString[0] == 'u'){
-          RegexString.erase(0, 1);
+        if (RegexString[1] == 'u'){
+          RegexString.erase(0, 2);
           auto utfstring = RegexString.substr(0, 4);
           signed int unicode = stoi(utfstring, 0, 16);
           uint8_t ul[4];
@@ -495,8 +517,22 @@ namespace solverbin {
           RegexString.erase(0, 4);
           break;
         }
-        if (RegexString[0] == 'x'){
-          signed int unicode = getcharacter(RegexString);
+        if (RegexString[1] == 'x'){
+          RegexString.erase(0, 2);
+          std::string NumString;
+          if (RegexString[0] != '{'){
+            NumString = RegexString.substr(0, 2);
+            RegexString.erase(0, 2);
+          }
+          else{
+            RegexString.erase(0, 1);
+            while (RegexString[0] != '}'){
+              NumString.push_back(RegexString[0]);
+              RegexString.erase(0, 1);
+            }
+            RegexString.erase(0, 1);
+          }
+          int_21 unicode = std::stoi(NumString, 0, 16);
           uint8_t ul[4];
 		      int n = Re.runetochar(reinterpret_cast<char*>(ul), &unicode);
           for (int i = 0; i < n; i++){
@@ -506,15 +542,16 @@ namespace solverbin {
           }
           break;
         }
-        if (RegexString[0] == 'd') {
+        if (RegexString[1] == 'd') {
+          RegexString.erase(0, 1);
           Re.BytemapRange.insert(RuneClass(48, 57));
           RegexString.erase(0, 1);
           REnode* REnodeRune = Re.initREnode(Kind::REGEXP_CHARCLASS, {48, 57});
           r->Children.emplace_back(REnodeRune);
           break;
         }
-        if (RegexString[0] == 'w'){
-          RegexString.erase(0, 1);
+        if (RegexString[1] == 'w'){
+          RegexString.erase(0, 2);
           std::vector<RuneClass> runeset = {RuneClass(65, 90), RuneClass(48, 57), RuneClass(97, 122), RuneClass(95, 95)};
           REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
           for (auto it : runeset){
@@ -525,8 +562,8 @@ namespace solverbin {
           r->Children.emplace_back(REnodeUNION);
           break;
         }
-        if (RegexString[0] == 's'){
-          RegexString.erase(0, 1);
+        if (RegexString[1] == 's'){
+          RegexString.erase(0, 2);
           std::vector<RuneClass> runeset = {RuneClass(9, 11), RuneClass(13, 13), RuneClass(32, 32)};
           REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
           for (auto it : runeset){
@@ -537,11 +574,11 @@ namespace solverbin {
           r->Children.emplace_back(REnodeUNION);
           break;
         }
-        if (RegexString[0] == 'p'){
+        if (RegexString[1] == 'p'){
           auto reNode = LargeUnicodeBlock2Node(RegexString);
           r->Children.emplace_back(reNode);
         }
-
+        RegexString.erase(0, 1);
         Re.BytemapRange.insert(RuneClass(int(RegexString[0]), int(RegexString[0])));
         REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {int(RegexString[0]), int(RegexString[0])});
         r->Children.emplace_back(REnodeRune);
@@ -646,6 +683,17 @@ namespace solverbin {
 
 
 Parer::Parer(std::string regex_string){
+  if (regex_string[0] == '/'){
+    regex_string.erase(0, 1);
+    for (int j = regex_string.length()-1; j > 0; j--){
+      if (regex_string[j] == '/'){
+        regex_string.pop_back();
+        break;
+      }
+      regex_string.pop_back();
+    }
+  }
+  
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
   if (Re.Renode->Children.size() == 1)
