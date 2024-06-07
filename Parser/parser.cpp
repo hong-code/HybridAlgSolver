@@ -111,7 +111,7 @@ namespace solverbin {
         }
       }
     }else{
-      if ((l-1) > 0)
+      if ((l-1) >= 0)
       if (RuneSet[l-1].max+1 >= low){
         low_in = true;
         low_index = l - 1;

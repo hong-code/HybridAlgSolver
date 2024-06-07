@@ -120,7 +120,7 @@ class REnodeClass{
 
     // REnode* linearize(Node e, std::set<RuneClass>& BytemapRange); // convert the node to the linear form
 
-    std::string REnodeToString(REnode* e); // convert the node to the string
+    static std::string REnodeToString(REnode* e); // convert the node to the string
 
     std::map<REnode*, REnode*> FirstNode(REnode* e);
 
@@ -132,7 +132,7 @@ class REnodeClass{
 
     void ComputeAlphabet(uint8_t* ByteMap, std::set<uint8_t> &Alphabet); // compute the alphabet of the node
 
-    void BuildBytemapToString(uint8_t* ByteMap); // convert the bytemap to the string
+    static void BuildBytemapToString(uint8_t* ByteMap); // convert the bytemap to the string
 
     void RuneSequenceToString(std::map<REnode*, REnode*>& RS); // convert the range to the string
 

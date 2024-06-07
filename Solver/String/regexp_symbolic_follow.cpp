@@ -360,7 +360,7 @@ namespace solverbin{
   void  RegExpSymbolic::FollowAtomata::DumpState(NFAState* s){
     std::cout << "Follow: ";
     for (auto i : s->NodeSequence){
-      std::cout << i.first << ":" << REClass.REnodeToString(i.first) << " ";
+      std::cout << i.first << ":" << REnodeClass::REnodeToString(i.first) << " ";
     }
     std::cout << "" << std::endl;
   }

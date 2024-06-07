@@ -9,6 +9,7 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         String/regexp_symbolic_intersection.cpp
                         String/regexp_symbolic_follow.cpp
                         String/regexp_symbolic_inclusion.cpp
+                        String/regexp_symbolic_intersectionK.cpp
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
                         )
