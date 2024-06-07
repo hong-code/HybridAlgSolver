@@ -14,3 +14,6 @@ add_subdirectory(Parser)
 
 # target_link_libraries(String1_Solver Solverbin Parserbin)
 target_link_libraries(String_Solver Parserbin Solverbin)
+
+add_executable(IntersectionK IntersectionK.cpp)
+target_link_libraries(IntersectionK Parserbin Solverbin)

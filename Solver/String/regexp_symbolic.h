@@ -319,51 +319,38 @@ namespace solverbin {
 
     class IntersectionK{
       public:
-        REnodeClass e1;
-        REnodeClass e2;
-        FULLmatchDFA D1;
-        FULLmatchDFA D2;
-        enum InclusionFlag{
+        std::vector<REnodeClass> REClassList;
+        std::vector<FollowAtomata> FList;
+        std::vector<REnode*> ReNodeList;
+        int RegExN;
+        enum IntersectionFlag{
           Begin,
           Normal,
           Match,
-          IsInclusion
+          Isintersect
         };
-        enum InclusionState{
-          equivalence,
-          LBelong2R,
-          RBelong2L
-        };
-        InclusionState ICState = equivalence;
+
         struct SimulationState{
-          InclusionFlag IFlag;
-          bool IsInclusion;
-          bool IsDone;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d1;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d2;
-          std::map<u_int8_t, SimulationState*> byte2state;
-          friend bool operator < (const SimulationState& n1, const SimulationState& n2)
-          {
-            if (n1.d1 != n2.d1) {
-              return n1.d1 < n2.d1;
-            }
-            else
-              return n1.d2 < n2.d2;
-          }
-          SimulationState(InclusionFlag IF, FULLmatchDFA::FULLmatchDFA::DFAState* e1, FULLmatchDFA::FULLmatchDFA::DFAState* e2) : IFlag(IF), d1(e1), d2(e2){};
+          SimulationState* Next;
         };
+
+        // a Cache store k state
+        struct SimulationCache{
+          FollowAtomata::NFAState* NS1;
+          std::map<FollowAtomata::NFAState*, SimulationCache> NS2Cache;
+        };
+
         void DumpSimulationState(SimulationState* s);
         SimulationState* SSBegin;
         std::set<uint8_t> Alphabet;
-        std::map<SimulationState, SimulationState*> SimulationCache;
-        std::map<SimulationState, SimulationState*> DoneCache;
-        std::queue<SimulationState> TODOCache;
+        SimulationCache Scache;
+        std::string InterStr;
         uint8_t ByteMap[256];
-        void ComputeAlphabet(std::set<uint8_t>& A1, uint8_t* ByteMap1, uint8_t* ByteMap2);
-        InclusionDFA(Node r1, Node r2);
-        InclusionDFA() {};
-        bool Inclusion();
-        bool Isinclusion(SimulationState* s);
+        void ComputeAlphabet(std::set<uint8_t>& A1, std::vector<REnodeClass> REClassList);
+        IntersectionK() {};
+        IntersectionK(std::vector<REnodeClass> RList);
+        bool Intersect();
+        bool IsIntersect(SimulationState* s);
     };
 
   };//class
