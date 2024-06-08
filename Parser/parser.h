@@ -19,5 +19,6 @@ namespace solverbin {
       REnode* LargeUnicodeBlock2Node(std::string &RegexString);
       REnode* RetNode(std::vector<RuneClass> &vecR);
       std::vector<RuneClass> unicode2utf_8(unsigned long unicode);
+      std::vector<RuneClass> ProcessingBlash(std::string &RegexString);
   };
 }

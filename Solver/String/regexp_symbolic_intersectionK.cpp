@@ -27,8 +27,11 @@ namespace solverbin{
     if (i == 0)
       for (auto it : NextV[0]){
         s->NS = it;
+        if (i == RegExN - 1)
+          s->Next = nullptr;
+        else  
+          s->Next = (SimulationState*)malloc(sizeof(SimulationState));
         i++;
-        s->Next = (SimulationState*)malloc(sizeof(SimulationState));
         if (ComputAllState(NextV, i, s, s->Next))
           return true;
         else

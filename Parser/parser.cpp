@@ -11,6 +11,29 @@
 namespace solverbin {
 
 
+  std::vector<RuneClass> Parer::ProcessingBlash(std::string &RegexString){
+    std::vector<RuneClass> runeset;
+    if (RegexString[0] != '\\')
+      return runeset;
+    if (RegexString[1] == 'd') {
+      RegexString.erase(0, 2);
+      Re.BytemapRange.insert(RuneClass(48, 57));
+      runeset = {RuneClass(48, 57)};
+      return runeset;
+    }
+    else if (RegexString[1] == 'w'){
+      RegexString.erase(0, 2);
+      std::vector<RuneClass> runeset = {RuneClass(65, 90), RuneClass(48, 57), RuneClass(97, 122), RuneClass(95, 95)};
+      return runeset;
+    }
+    else if (RegexString[1] == 's'){
+      RegexString.erase(0, 2);
+      std::vector<RuneClass> runeset = {RuneClass(9, 11), RuneClass(13, 13), RuneClass(32, 32)};
+      return runeset;
+    }
+    return runeset;
+  }
+
   signed int Parer::getcharacter(std::string &RegexString){
     switch (RegexString[0])
     {
@@ -313,7 +336,7 @@ namespace solverbin {
         REnode* REnodeRClass1 = Re.initREnode(Kind::REGEXP_CHARCLASS, {0, 9});
         REDot->Children.emplace_back(REnodeRClass1);
         RuneSequence RS;
-        Re.ConvertToUTF_8(0xb, 0xffff , RS);
+        Re.ConvertToUTF_8(0xb, 0x10ffff , RS);
         if (RS.size() > 1){
           for (long unsigned int i = 0; i < RS.size(); i++){
             REDot->Children.emplace_back(RS[i]);
@@ -331,8 +354,19 @@ namespace solverbin {
         std::vector<RuneClass> RuneSet;
         REnode* REnodeRClass = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
         RegexString.erase(0,1);
-        while (RegexString[0] != ']')
+        int mark = 1;
+        while (RegexString[0] != ']' || mark != 1)
         {
+          // if (RegexString[0] == '.'){
+          //   InsertRune(RuneSet, RuneClass(0x0, 0x9));
+          //   InsertRune(RuneSet, RuneClass(0x10, 0x10ffff));
+          //   RegexString.erase(0, 1);
+          //   continue;
+          // }
+          if (RegexString[0] == '[')
+            mark++;
+          if (RegexString[0] == ']')
+            mark--;  
           // unsigned long* low = (unsigned long*)malloc(sizeof(unsigned long));
           // chartorune(low, RegexString);
           auto Renode = LargeUnicodeBlock2Node(RegexString);
@@ -340,9 +374,18 @@ namespace solverbin {
             REnodeRClass->Children.emplace_back(Renode);
             continue;  
           }
+          auto RetSet = ProcessingBlash(RegexString);
+          for (auto it : RetSet)
+            InsertRune(RuneSet, it);
+          if (RegexString[0] == ']')  
+            break;;
           int_21 low = getcharacter(RegexString);
           if (RegexString[0] == '-'){
             RegexString.erase(0,1);
+            if (RegexString[0] == ']' && mark == 1){
+              InsertRune(RuneSet, {45, 45});
+              continue;
+            }
             // unsigned long* high = (unsigned long*)malloc(sizeof(unsigned long));
             // chartorune(high, RegexString);
             int_21 high = getcharacter(RegexString);
@@ -439,6 +482,8 @@ namespace solverbin {
             lo = NUM;
             NUM = "";
             RegexString.erase(0, 1);
+            if (RegexString[0] == '}')
+              break;
           }
           NUM.push_back(RegexString[0]);
           RegexString.erase(0, 1);
@@ -472,10 +517,13 @@ namespace solverbin {
           if (hi.size() == 0){
             auto lo_int = stoi(lo);
             REnode* REnodeLOOP = Re.initREnode(Kind::REGEXP_LOOP, {0, 0});
+            REnode* REnodeStar = Re.initREnode(Kind::REGEXP_STAR, {0, 0});
             REnodeLOOP->Children.emplace_back(r->Children.back());
+            REnodeStar->Children.emplace_back(r->Children.back());
             r->Children.pop_back();
             r->Children.emplace_back(REnodeLOOP);
-            REnodeLOOP->Counting = RuneClass(lo_int, -1);
+            r->Children.emplace_back(REnodeStar);
+            REnodeLOOP->Counting = RuneClass(lo_int, lo_int);
           }
           else{
             auto lo_int = stoi(lo);
