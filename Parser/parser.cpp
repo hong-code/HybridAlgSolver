@@ -748,9 +748,9 @@ Parer::Parer(std::string regex_string){
     Re.Renode = Re.Renode->Children[0];
   memset(Re.ByteMap, 0, sizeof(Re.ByteMap));
   Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
-  Re.BuildBytemapToString(Re.ByteMap);
-  Re.BytemapRangeToString(Re.BytemapRange);
-  std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+  // Re.BuildBytemapToString(Re.ByteMap);
+  // Re.BytemapRangeToString(Re.BytemapRange);
+  // std::cout << Re.REnodeToString(Re.Renode) << std::endl;
 
 }
 Parer::Parer(){}
