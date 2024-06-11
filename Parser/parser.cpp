@@ -351,9 +351,14 @@ namespace solverbin {
       }// Any character (possibly except newline).
 
       case '[': {  // Character class.
+        bool IsReverse = false;
         std::vector<RuneClass> RuneSet;
         REnode* REnodeRClass = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
         RegexString.erase(0,1);
+        if (RegexString[0] == '^'){
+          IsReverse = true;
+          RegexString.erase(0,1);
+        }
         int mark = 1;
         while (RegexString[0] != ']' || mark != 1)
         {
@@ -403,11 +408,40 @@ namespace solverbin {
         } 
         
         RegexString.erase(0,1);
-        for (auto it : RuneSet){
-          RuneSequence RS;
-          Re.ConvertToUTF_8(it.min, it.max, RS);
-          for (long unsigned int i = 0; i < RS.size(); i++){
-            REnodeRClass->Children.emplace_back(RS[i]);
+        if (IsReverse){
+          int bound_left = 0;
+          RuneClass Trune;
+          for (auto it : RuneSet){
+            RuneSequence RS;
+            if (it.min == bound_left){
+              bound_left = it.max;
+              continue;
+            }
+            else{
+              Trune = RuneClass(bound_left, it.max-1);
+              bound_left = it.max;
+            }
+            Re.ConvertToUTF_8(Trune.min, Trune.max, RS);
+            for (long unsigned int i = 0; i < RS.size(); i++){
+              REnodeRClass->Children.emplace_back(RS[i]);
+            }
+          }
+          if ((0x10ffff - bound_left) > 0){
+            RuneSequence RS;
+            Trune = RuneClass(bound_left, 0x10ffff);
+            Re.ConvertToUTF_8(Trune.min, Trune.max, RS);
+            for (long unsigned int i = 0; i < RS.size(); i++){
+              REnodeRClass->Children.emplace_back(RS[i]);
+            }
+          }
+        }
+        else{
+          for (auto it : RuneSet){
+            RuneSequence RS;
+            Re.ConvertToUTF_8(it.min, it.max, RS);
+            for (long unsigned int i = 0; i < RS.size(); i++){
+              REnodeRClass->Children.emplace_back(RS[i]);
+            }
           }
         }
         if (REnodeRClass->Children.size() > 1)
