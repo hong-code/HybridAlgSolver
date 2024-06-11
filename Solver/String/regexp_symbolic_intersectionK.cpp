@@ -152,7 +152,7 @@ namespace solverbin{
     Scache = new SimulationCache((FollowAtomata::NFAState*)malloc(sizeof(FollowAtomata::NFAState)));
     // IsInCache(SSBegin, Scache);
     ComputeAlphabet(REClassList);
-    RegExpSymbolic::DumpAlphabet(Alphabet);
+    // RegExpSymbolic::DumpAlphabet(Alphabet);
   }
 
   bool RegExpSymbolic::IntersectionK::Intersect(){
@@ -163,8 +163,8 @@ namespace solverbin{
   }
 
   bool RegExpSymbolic::IntersectionK::IsIntersect(SimulationState* s){
-    std::cout << "witness str: " << InterStr << std::endl;
-    DumpSimulationState(s);
+    // std::cout << "witness str: " << InterStr << std::endl;
+    // DumpSimulationState(s);
     for (auto c : Alphabet){
       // std::cout << "matching: " << int(c) << " " << std::endl;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
