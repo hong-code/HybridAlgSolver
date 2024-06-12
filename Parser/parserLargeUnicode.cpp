@@ -144,7 +144,7 @@ namespace solverbin {
     return REnodeUNION;
   }
 
-  REnode* Parer::LargeUnicodeBlock2Node(std::string &str){
+  REnode* Parer::LargeUnicodeBlock2Node(std::wstring &str){
     std::string Pclass;
     if (str[0] == '\\' && str[1] == 'p')
       str.erase(0, 3);  

@@ -11,7 +11,8 @@ count = 0
 def do_task(id, TF):
     # print("-"*20, "\nsubmits task {}".format(id), "/", 736535, "\n", "-"*20)
     output = os.popen("timeout 600s /home/huanghong/HybridAlgSolver/build/IntersectionK %s %s" % (path + '/'+ id, TF))
-    print("-"*20, "\ntask {} is done".format(id),"\n", output.read(), "\n", "-"*20)
+    if len(output.read()) == 0:
+        print("-"*20, "\ntask {} is done".format(id),"\n", output.read(), "\n", "-"*20)
 
 
 
@@ -21,5 +22,5 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
     # 编译文件
     filenames=os.listdir(path)
     for i in range(len(filenames)):
-        print("python::"+filenames[i])
+        # print("python::"+filenames[i])
         executor.submit(do_task, filenames[i], filenames[i][-5])

@@ -68,7 +68,7 @@ namespace solverbin {
 
     bool AC_include(Node e1, Node e2);
 
-    bool FULLMATCH(std::string e1, std::string str); // check if the node is full match
+    bool FULLMATCH(std::wstring e1, std::string str); // check if the node is full match
 
     static void DumpAlphabet(std::set<uint8_t>& A); // dump the alphabet 
 
@@ -164,7 +164,7 @@ namespace solverbin {
         DFAState* FindInDFACache(DFACache* DC, DFAState* s);
         DFAState* StepOneByte(DFAState* s, uint8_t c);
         void DumpState(DFAState* s);
-        bool Fullmatch(std::string Pattern, std::string str); 
+        bool Fullmatch(std::wstring Pattern, std::string str); 
         std::map<REnode*, int> Node2Index; // map from the node to the index
         int IndexMax = 0;
         FULLmatchDFA();
