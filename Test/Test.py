@@ -7,20 +7,30 @@ import concurrent.futures
 path = '/home/huanghong/HybridAlgSolver/Test/wash_inter_with_results'
 count = 0
 
-# 定义一个函数，用于执行任务
-def do_task(id, TF):
-    # print("-"*20, "\nsubmits task {}".format(id), "/", 736535, "\n", "-"*20)
-    output = os.popen("timeout 600s /home/huanghong/HybridAlgSolver/build/IntersectionK %s %s" % (path + '/'+ id, TF))
-    if len(output.read()) == 0:
-        print("-"*20, "\ntask {} is done".format(id),"\n", output.read(), "\n", "-"*20)
 
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+
+# with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
 
     # 使用线程池执行任务
     # 编译文件
-    filenames=os.listdir(path)
-    for i in range(len(filenames)):
-        # print("python::"+filenames[i])
-        executor.submit(do_task, filenames[i], filenames[i][-5])
+def dotask(id, TF):
+    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/IntersectionK %s %s" % (path + '/'+ id, TF)
+    output = subprocess.Popen(command,  stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            shell=True,
+            text=True)
+    # if len(output.read()) == 0:
+    #     print("-"*20, "\ntask {} is done".format(id),"\n", output.read(), "\n", "-"*20)
+    stdout, stderr = output.communicate()
+    if output.returncode == -11:  # -11 is the typical exit code for segmentation fault on Unix systems
+        print("Segmentation fault (core dumped)")
+    print("Standard Output:\n", stdout)
+    print("Standard Error:\n", stderr)    
+
+filenames=os.listdir(path)
+for i in range(len(filenames)):
+    print(str(i) + ": " + filenames[i])
+    dotask(filenames[i], filenames[i][-5])
+
