@@ -8,10 +8,6 @@
 #include "Solver/DetectAmbiguity/DetectAmbiguity.h"
 
 
-using namespace std;
-
-
-
 
 int main(int argc, char* argv[]){
   if (argc != 3){
@@ -45,5 +41,4 @@ int main(int argc, char* argv[]){
   else{
     std::cout << argv[1] << " : NoMatch"  <<  std::endl;
   }
-    
 } 
