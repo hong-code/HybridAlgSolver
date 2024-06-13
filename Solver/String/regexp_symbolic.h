@@ -369,9 +369,10 @@ namespace solverbin {
       public:
         REnodeClass e1;
         FULLmatchDFA D1;
+        std::string Prefix_string;
         CompletmentDFA() {};
-        CompletmentDFA(REnodeClass e1);
-
+        CompletmentDFA(REnodeClass e1, std::string Prefix_string);
+        
     };
 
   };//class
