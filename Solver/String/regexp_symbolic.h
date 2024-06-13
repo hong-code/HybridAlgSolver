@@ -372,7 +372,7 @@ namespace solverbin {
         std::string Prefix_string;
         CompletmentDFA() {};
         CompletmentDFA(REnodeClass e1, std::string Prefix_string);
-        
+        std::string ComputeCompletmentDFA();
     };
 
   };//class
