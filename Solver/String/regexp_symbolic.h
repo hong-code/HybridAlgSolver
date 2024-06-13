@@ -366,7 +366,11 @@ namespace solverbin {
     };
 
     class CompletmentDFA{
-      REnodeClass e1;
+      public:
+        REnodeClass e1;
+        FULLmatchDFA D1;
+        CompletmentDFA() {};
+        CompletmentDFA(REnodeClass e1);
 
     };
 
