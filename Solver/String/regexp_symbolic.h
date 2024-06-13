@@ -365,6 +365,11 @@ namespace solverbin {
         bool IsIntersect(SimulationState* s);
     };
 
+    class CompletmentDFA{
+      REnodeClass e1;
+
+    };
+
   };//class
 
 

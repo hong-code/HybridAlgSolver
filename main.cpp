@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
   auto kk = solverbin::DetectABTNFA(ren3.Re);
   auto k1 = kk.IsABT(kk.SSBegin);
   if (k1){
-    std::cout <<  "prefix: " << kk.InterStr << std::endl;    
+    std::cout <<  "prefix: " << kk.InterStr << std::endl;
     std::cout << "infix: " << kk.WitnessStr << std::endl;
   }
   else
