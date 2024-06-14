@@ -370,6 +370,7 @@ namespace solverbin {
         REnodeClass e1;
         FULLmatchDFA D1;
         std::string Prefix_string;
+        std::set<uint8_t> Alphabet_completment;
         CompletmentDFA() {};
         CompletmentDFA(REnodeClass e1, std::string Prefix_string);
         std::string ComputeCompletmentDFA();
