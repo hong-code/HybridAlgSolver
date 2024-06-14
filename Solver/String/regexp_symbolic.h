@@ -374,6 +374,7 @@ namespace solverbin {
         CompletmentDFA() {};
         CompletmentDFA(REnodeClass e1, std::string Prefix_string);
         std::set<uint8_t> ComputeAlphabet(uint8_t bytemap[256]);
+        int CheckeRuneLevel(int i, int rune_level);
         std::string ComputeCompletmentDFA();
     };
 
