@@ -373,6 +373,7 @@ namespace solverbin {
         std::set<uint8_t> Alphabet_completment;
         CompletmentDFA() {};
         CompletmentDFA(REnodeClass e1, std::string Prefix_string);
+        std::set<uint8_t> ComputeAlphabet(uint8_t bytemap[256]);
         std::string ComputeCompletmentDFA();
     };
 
