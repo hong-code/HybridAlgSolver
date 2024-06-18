@@ -36,7 +36,8 @@ int main(int argc, char* argv[]){
   auto InK = solverbin::RegExpSymbolic::IntersectionK(ReList);
   if ((InK.Intersect() && 1 == std::stoi(argv[2])) || (!InK.Intersect() && 0 == std::stoi(argv[2]))){
     std::cout << argv[1] << " : Match"  <<  std::endl;
-    std::cout << "witness string" << InK.InterStr << std::endl;
+    if (1 == std::stoi(argv[2]))
+      std::cout << "witness string: " << InK.InterStr << std::endl;
   }
   else{
     std::cout << argv[1] << " : NoMatch"  <<  std::endl;

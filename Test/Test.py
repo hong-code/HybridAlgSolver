@@ -27,7 +27,7 @@ def dotask(id, TF):
     if output.returncode == -11:  # -11 is the typical exit code for segmentation fault on Unix systems
         print("Segmentation fault (core dumped)")
     print("Standard Output:\n", stdout)
-    print("Standard Error:\n", stderr)    
+    # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(path)
 for i in range(len(filenames)):
