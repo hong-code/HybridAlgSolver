@@ -46,8 +46,8 @@ namespace solverbin {
   RegExpSymbolic::InclusionDFA::InclusionDFA(Node r1, Node r2){
     e1 = REnodeClass("re");
     e2 = REnodeClass("re");
-    D1 = FULLmatchDFA(e1);
-    D2 = FULLmatchDFA(e2);
+    D1 = DFA(e1);
+    D2 = DFA(e2);
     SSBegin = new SimulationState(Begin, D1.DState, D2.DState);
     TODOCache.push(*SSBegin);
     ComputeAlphabet(Alphabet, e1.ByteMap, e2.ByteMap);
@@ -73,8 +73,8 @@ namespace solverbin {
     s->IsInclusion = true;
     for (auto c : Alphabet){
       if (s->byte2state.find(ByteMap[c]) == s->byte2state.end()){
-        FULLmatchDFA::FULLmatchDFA::DFAState* nextd1 = D1.StepOneByte(s->d1, c);
-        FULLmatchDFA::FULLmatchDFA::DFAState* nextd2 = D2.StepOneByte(s->d2, c);
+        DFA::DFA::DFAState* nextd1 = D1.StepOneByte(s->d1, c);
+        DFA::DFA::DFAState* nextd2 = D2.StepOneByte(s->d2, c);
         if (nextd1 == nullptr && nextd2 != nullptr){
           if (ICState == LBelong2R)
             continue;
@@ -129,7 +129,7 @@ namespace solverbin {
           }  
         }
         else{
-          if (nextd1->DFlag == RegExpSymbolic::FULLmatchDFA::Normal && nextd2->DFlag == RegExpSymbolic::FULLmatchDFA::Normal)
+          if (nextd1->DFlag == RegExpSymbolic::DFA::Normal && nextd2->DFlag == RegExpSymbolic::DFA::Normal)
           {
             s->byte2state.insert(std::make_pair(ByteMap[c], ns));
             ns->IFlag = Normal;
@@ -141,7 +141,7 @@ namespace solverbin {
             else
               continue;  
           }
-          else if (nextd1->DFlag == RegExpSymbolic::FULLmatchDFA::Match && nextd2->DFlag == RegExpSymbolic::FULLmatchDFA::Match){
+          else if (nextd1->DFlag == RegExpSymbolic::DFA::Match && nextd2->DFlag == RegExpSymbolic::DFA::Match){
             s->byte2state.insert(std::make_pair(ByteMap[c], ns));
             ns->IFlag = Match;
             if (!Isinclusion(ns)){
@@ -153,7 +153,7 @@ namespace solverbin {
               continue; 
           }
           else{
-            if (nextd1->DFlag == RegExpSymbolic::FULLmatchDFA::Match && nextd2->DFlag == RegExpSymbolic::FULLmatchDFA::Normal){
+            if (nextd1->DFlag == RegExpSymbolic::DFA::Match && nextd2->DFlag == RegExpSymbolic::DFA::Normal){
               if (ICState == equivalence){
                 ICState = RBelong2L;
               }

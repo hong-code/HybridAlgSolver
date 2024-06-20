@@ -123,7 +123,7 @@ namespace solverbin {
     };
     
 
-    class FULLmatchDFA{
+    class DFA{
       public:
         enum DFAStateFlag{
           Begin,
@@ -167,17 +167,17 @@ namespace solverbin {
         bool Fullmatch(std::wstring Pattern, std::string str); 
         std::map<REnode*, int> Node2Index; // map from the node to the index
         int IndexMax = 0;
-        FULLmatchDFA();
-        FULLmatchDFA(REnodeClass e);
+        DFA();
+        DFA(REnodeClass e);
     };
-    FULLmatchDFA FMDFA;
+    DFA FMDFA;
 
     class IntersectionDFA{
       public:
         REnodeClass e1;
         REnodeClass e2;
-        FULLmatchDFA D1;
-        FULLmatchDFA D2;
+        DFA D1;
+        DFA D2;
         enum IntersectionFlag{
           Begin,
           Normal,
@@ -188,8 +188,8 @@ namespace solverbin {
           IntersectionFlag IFlag;
           bool IsIntersect;
           bool IsDone;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d1;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d2;
+          DFA::DFA::DFAState* d1;
+          DFA::DFA::DFAState* d2;
           std::map<u_int8_t, SimulationState*> byte2state;
           friend bool operator < (const SimulationState& n1, const SimulationState& n2)
           {
@@ -199,7 +199,7 @@ namespace solverbin {
             else
               return n1.d2 < n2.d2;
           }
-          SimulationState(IntersectionFlag IF, FULLmatchDFA::FULLmatchDFA::DFAState* e1, FULLmatchDFA::FULLmatchDFA::DFAState* e2) : IFlag(IF), d1(e1), d2(e2){};
+          SimulationState(IntersectionFlag IF, DFA::DFA::DFAState* e1, DFA::DFA::DFAState* e2) : IFlag(IF), d1(e1), d2(e2){};
         };
         void DumpSimulationState(SimulationState* s);
         SimulationState* SSBegin;
@@ -270,8 +270,8 @@ namespace solverbin {
       public:
         REnodeClass e1;
         REnodeClass e2;
-        FULLmatchDFA D1;
-        FULLmatchDFA D2;
+        DFA D1;
+        DFA D2;
         enum InclusionFlag{
           Begin,
           Normal,
@@ -288,8 +288,8 @@ namespace solverbin {
           InclusionFlag IFlag;
           bool IsInclusion;
           bool IsDone;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d1;
-          FULLmatchDFA::FULLmatchDFA::DFAState* d2;
+          DFA::DFA::DFAState* d1;
+          DFA::DFA::DFAState* d2;
           std::map<u_int8_t, SimulationState*> byte2state;
           friend bool operator < (const SimulationState& n1, const SimulationState& n2)
           {
@@ -299,7 +299,7 @@ namespace solverbin {
             else
               return n1.d2 < n2.d2;
           }
-          SimulationState(InclusionFlag IF, FULLmatchDFA::FULLmatchDFA::DFAState* e1, FULLmatchDFA::FULLmatchDFA::DFAState* e2) : IFlag(IF), d1(e1), d2(e2){};
+          SimulationState(InclusionFlag IF, DFA::DFA::DFAState* e1, DFA::DFA::DFAState* e2) : IFlag(IF), d1(e1), d2(e2){};
         };
         void DumpSimulationState(SimulationState* s);
         SimulationState* SSBegin;
@@ -368,7 +368,7 @@ namespace solverbin {
     class CompletmentDFA{
       public:
         REnodeClass e1;
-        FULLmatchDFA D1;
+        DFA D1;
         std::string Prefix_string;
         std::set<uint8_t> Alphabet_completment;
         CompletmentDFA() {};

@@ -885,9 +885,9 @@ void RegExpSymbolic::DumpAlphabet(std::set<uint8_t>& A){
   std::cout << "" << std::endl;
 }
 
-RegExpSymbolic::FULLmatchDFA::FULLmatchDFA(){};
+RegExpSymbolic::DFA::DFA(){};
 
-RegExpSymbolic::FULLmatchDFA::FULLmatchDFA(REnodeClass e){
+RegExpSymbolic::DFA::DFA(REnodeClass e){
   IndexMax = 0;
   REClass = e;
   std::map<REnode*, REnode*> RS2;
@@ -901,7 +901,7 @@ RegExpSymbolic::FULLmatchDFA::FULLmatchDFA(REnodeClass e){
   }
 }
 
-RegExpSymbolic::FULLmatchDFA::DFAState* RegExpSymbolic::FULLmatchDFA::StepOneByte(DFAState* BeginState, uint8_t itc) {
+RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::StepOneByte(DFAState* BeginState, uint8_t itc) {
   if (BeginState->Next.find(REClass.ByteMap[itc]) != BeginState->Next.end()){
     return BeginState->Next.find(REClass.ByteMap[itc])->second;
   }
@@ -956,7 +956,7 @@ RegExpSymbolic::FULLmatchDFA::DFAState* RegExpSymbolic::FULLmatchDFA::StepOneByt
 }
 
 
-bool RegExpSymbolic::FULLmatchDFA::Fullmatch(std::wstring Pattern, std::string str) {
+bool RegExpSymbolic::DFA::Fullmatch(std::wstring Pattern, std::string str) {
   REClass = Parer(Pattern).Re;
   auto e1 = REClass.Renode;
   std::vector<uint8_t> uvec;
@@ -1009,7 +1009,7 @@ bool RegExpSymbolic::FULLmatchDFA::Fullmatch(std::wstring Pattern, std::string s
   return false;
 }
 
-void RegExpSymbolic::FULLmatchDFA::DumpState(DFAState* s){
+void RegExpSymbolic::DFA::DumpState(DFAState* s){
   std::cout << "The node index: ";
   for (auto i : s->IndexSequence){
     std::cout << i << " ";
@@ -1017,7 +1017,7 @@ void RegExpSymbolic::FULLmatchDFA::DumpState(DFAState* s){
   std::cout << "" << std::endl;
 }
 
-RegExpSymbolic::FULLmatchDFA::DFACache* RegExpSymbolic::FULLmatchDFA::Step2Left(DFACache* DC, int c){
+RegExpSymbolic::DFA::DFACache* RegExpSymbolic::DFA::Step2Left(DFACache* DC, int c){
   DFACache* dc = DC;
   for (int i = 0; i < c; i++){
     if (dc->left == nullptr){
@@ -1031,7 +1031,7 @@ RegExpSymbolic::FULLmatchDFA::DFACache* RegExpSymbolic::FULLmatchDFA::Step2Left(
   return dc;
 }
 
-RegExpSymbolic::FULLmatchDFA::DFACache* RegExpSymbolic::FULLmatchDFA::Step2Right(DFACache* DC, int c){
+RegExpSymbolic::DFA::DFACache* RegExpSymbolic::DFA::Step2Right(DFACache* DC, int c){
   DFACache* dc = DC;
   for (int i = 0; i < c; i++){
     if (dc->right == nullptr){
@@ -1045,7 +1045,7 @@ RegExpSymbolic::FULLmatchDFA::DFACache* RegExpSymbolic::FULLmatchDFA::Step2Right
   return dc;
 }
 
-RegExpSymbolic::FULLmatchDFA::DFAState* RegExpSymbolic::FULLmatchDFA::FindInDFACache(DFACache* DC, DFAState* s){
+RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::FindInDFACache(DFACache* DC, DFAState* s){
   int BeginiIndex = 0;
   for (auto i : s->IndexSequence){
     if (i - BeginiIndex > 0){
@@ -1096,8 +1096,8 @@ void RegExpSymbolic::IntersectionDFA::ComputeAlphabet(std::set<uint8_t>& A1, uin
 RegExpSymbolic::IntersectionDFA::IntersectionDFA(Node r1, Node r2){
   e1 = REnodeClass("");
   e2 = REnodeClass("");
-  D1 = FULLmatchDFA(e1);
-  D2 = FULLmatchDFA(e2);
+  D1 = DFA(e1);
+  D2 = DFA(e2);
   SSBegin = new SimulationState(Begin, D1.DState, D2.DState);
   TODOCache.push(*SSBegin);
   ComputeAlphabet(Alphabet, e1.ByteMap, e2.ByteMap);
@@ -1123,8 +1123,8 @@ bool RegExpSymbolic::IntersectionDFA::IsIntersect(SimulationState* s){
   s->IsIntersect = false;
   for (auto c : Alphabet){
     if (s->byte2state.find(ByteMap[c]) == s->byte2state.end()){
-      FULLmatchDFA::FULLmatchDFA::DFAState* nextd1 = D1.StepOneByte(s->d1, c);
-      FULLmatchDFA::FULLmatchDFA::DFAState* nextd2 = D2.StepOneByte(s->d2, c);
+      DFA::DFA::DFAState* nextd1 = D1.StepOneByte(s->d1, c);
+      DFA::DFA::DFAState* nextd2 = D2.StepOneByte(s->d2, c);
       if (nextd1 == nullptr || nextd2 == nullptr){
         continue;
       }
@@ -1150,7 +1150,7 @@ bool RegExpSymbolic::IntersectionDFA::IsIntersect(SimulationState* s){
         }  
       }
       else{
-        if (nextd1->DFlag == RegExpSymbolic::FULLmatchDFA::Normal && nextd2->DFlag == RegExpSymbolic::FULLmatchDFA::Normal)
+        if (nextd1->DFlag == RegExpSymbolic::DFA::Normal && nextd2->DFlag == RegExpSymbolic::DFA::Normal)
         {
           s->byte2state.insert(std::make_pair(ByteMap[c], ns));
           ns->IFlag = Normal;
@@ -1159,7 +1159,7 @@ bool RegExpSymbolic::IntersectionDFA::IsIntersect(SimulationState* s){
           else
             continue;  
         }
-        else if (nextd1->DFlag == RegExpSymbolic::FULLmatchDFA::Match && nextd2->DFlag == RegExpSymbolic::FULLmatchDFA::Match){
+        else if (nextd1->DFlag == RegExpSymbolic::DFA::Match && nextd2->DFlag == RegExpSymbolic::DFA::Match){
           s->byte2state.insert(std::make_pair(ByteMap[c], ns));
           ns->IFlag = Match;
           s->IsIntersect = true;
