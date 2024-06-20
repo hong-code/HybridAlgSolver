@@ -233,17 +233,51 @@ namespace solverbin {
       }
 
       case '(':{
-        
-        REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
         RegexString.erase(0, 1);
-        if (RegexString[0] == '?')
-          RegexString.erase(0, 1);
-        REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
-        // if (REnodeCONCAT->Children.size() > 1)
-          r->Children.emplace_back(REnodeCONCAT);
-        // else
-        //   r->Children.emplace_back(REnodeCONCAT->Children[0]);
-        break;
+        if (RegexString.substr(0, 2) == L"?="){
+          RegexString.erase(0,2);
+          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_Lookahead, {0, 0});
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeLookahead->Children[0] = REnodeCONCAT;
+          r->Children.emplace_back(REnodeLookahead);
+          break;
+        }
+        else if (RegexString.substr(0, 2) == L"?!"){
+          RegexString.erase(0,2);
+          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookahead, {0, 0});
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeLookahead->Children[0] = REnodeCONCAT;
+          r->Children.emplace_back(REnodeLookahead);
+          break;
+        }
+        else if (RegexString.substr(0, 2) == L"?<="){
+          RegexString.erase(0,3);
+          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_Lookbehind, {0, 0});
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeLookahead->Children[0] = REnodeCONCAT;
+          r->Children.emplace_back(REnodeLookahead);
+          break;
+        }
+        else if (RegexString.substr(0, 2) == L"?<!"){
+          RegexString.erase(0,3);
+          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookbehind, {0, 0});
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeLookahead->Children[0] = REnodeCONCAT;
+          r->Children.emplace_back(REnodeLookahead);
+          break;
+        }
+        else{
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          if (RegexString[0] == '?')
+            RegexString.erase(0, 1);
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+          // if (REnodeCONCAT->Children.size() > 1)
+            r->Children.emplace_back(REnodeCONCAT);
+          // else
+          //   r->Children.emplace_back(REnodeCONCAT->Children[0]);
+          break;
+        }
+        
       }
 
 
