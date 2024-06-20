@@ -163,6 +163,7 @@ namespace solverbin {
         DFACache* Step2Right(DFACache* DC, int c); // step to the left 
         DFAState* FindInDFACache(DFACache* DC, DFAState* s);
         DFAState* StepOneByte(DFAState* s, uint8_t c);
+        void MaintainNode2Index(DFAState* s, std::map<REnode*, REnode*> RS1);
         void DumpState(DFAState* s);
         bool Fullmatch(std::wstring Pattern, std::string str); 
         std::map<REnode*, int> Node2Index; // map from the node to the index

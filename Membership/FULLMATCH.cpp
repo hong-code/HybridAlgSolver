@@ -3,6 +3,13 @@
 
 namespace solverbin{
 
+  MatchFunctions::FullMatch::FullMatch(REnodeClass e)
+  {
+    e1 = e;
+    dfa = RegExpSymbolic::DFA(e);
+  };
+
+
   bool MatchFunctions::FullMatch::Fullmatch(std::string str) {
     std::vector<uint8_t> uvec;
     std::map<REnode*, REnode*> RS2;
@@ -20,16 +27,7 @@ namespace solverbin{
         std::cout << "begin: " << REnodeClass::REnodeToString(it.second) << std::endl;
         auto RS1 = e1.ccontinuation(it.second, itc);
         e1.RuneSequenceToString(RS1);
-        for (auto IT : RS1){
-          if (dfa.Node2Index.find(IT.first) == dfa.Node2Index.end()){
-            dfa.Node2Index.insert(std::make_pair(IT.first, dfa.IndexMax));
-            dfa.IndexMax++;
-          }
-          if (NS->NodeSequence.find(IT.first) == NS->NodeSequence.end()){
-            NS->NodeSequence.insert(IT);
-            NS->IndexSequence.insert(dfa.Node2Index.find(IT.first)->second);
-          }
-        }  
+        dfa.MaintainNode2Index(NS, RS1);
       }
       if (NS->NodeSequence.size() == 0){
         std::cout << "match failed" << std::endl;
@@ -41,7 +39,6 @@ namespace solverbin{
         BeginState = NS;
       }
       dfa.DumpState(BeginState);
-      // REClass.RuneSequenceToString(BeginState->NodeSequence);  
     }
     for (auto it : BeginState->NodeSequence){
       e1.isNullable(it.second);

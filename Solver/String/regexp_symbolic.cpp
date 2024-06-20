@@ -1063,6 +1063,19 @@ RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::FindInDFACache(DFACache* DC,
   }
 }
 
+void RegExpSymbolic::DFA::MaintainNode2Index(DFAState* NS, std::map<REnode*, REnode*> RS1){
+  for (auto IT : RS1){
+    if (Node2Index.find(IT.first) == Node2Index.end()){
+      Node2Index.insert(std::make_pair(IT.first, IndexMax));
+      IndexMax++;
+    }
+    if (NS->NodeSequence.find(IT.first) == NS->NodeSequence.end()){
+      NS->NodeSequence.insert(IT);
+      NS->IndexSequence.insert(Node2Index.find(IT.first)->second);
+    }
+  }  
+}
+
 void RegExpSymbolic::IntersectionDFA::ComputeAlphabet(std::set<uint8_t>& A1, uint8_t* ByteMap1, uint8_t* ByteMap2){
   std::set<uint8_t> color_set1;
   color_set1.insert(ByteMap1[0]);

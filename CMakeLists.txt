@@ -19,4 +19,4 @@ add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
 
 add_executable(Match Match.cpp)
-target_link_libraries(IntersectionK Parserbin Solverbin MembershipBin)
+target_link_libraries(Match Parserbin Solverbin MembershipBin)
