@@ -222,7 +222,6 @@ namespace solverbin {
         uint8_t ul[4];
         int_21 rune = RegexString[0];
 		    int n = Re.runetochar(reinterpret_cast<char*>(ul), &rune);
-        
         for (int i = 0; i < n; i++){
           Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
           REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});

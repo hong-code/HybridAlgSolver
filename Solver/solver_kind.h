@@ -4823,6 +4823,10 @@ enum ENUM(Kind) : int32_t
    *
    *   - Solver::mkOp(Kind, const std::vector<uint32_t>&) const
    */
+  EVALUE(REGEXP_Lookahead),
+  EVALUE(REGEXP_NLookahead),
+  EVALUE(REGEXP_Lookbehind),
+  EVALUE(REGEXP_NLookbehind),
   EVALUE(REGEXP_RUNE),
   /**
    * Regular expression difference.
