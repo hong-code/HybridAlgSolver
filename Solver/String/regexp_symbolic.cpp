@@ -446,34 +446,29 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
   std::map<REnode*, REnode*> RSVec;
   switch (e1->KindReturn()){
     case Kind::REGEXP_NONE:{
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
       break;
     }
     case Kind::REGEXP_RUNE:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         if (ByteMap[c] == 0){
           break;
         }
         else if (e1->Rune_Class.min == c){
           REnode* e2 = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+          e2->Status = NODE_NULLABLE;
           RSVec.insert(std::make_pair(e1, e2));
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
           break;
         }
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
     }
     case Kind::REGEXP_CONCAT:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           auto RS1 = ccontinuation(e1->Children[i], c);
           if (RS1.size() != 0){
@@ -498,30 +493,25 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
                   e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
                 }
               }
+              isNullable(e2);
               RSVec.insert(std::make_pair(it.first, e2));
             }
           }
           if (e1->Children[i]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
-            e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-            // e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
             break;
           }
         }
         e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
     }
       
     case Kind::REGEXP_UNION:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           auto RS1 = ccontinuation(e1->Children[i], c);
           if (RS1.size() != 0){
@@ -529,17 +519,11 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
               RSVec.insert(it);
             }
           }
-          if (e1->Children[i]->Status == NODE_STATUS::NODE_NULLABLE){
-            e1->Status = NODE_STATUS::NODE_NULLABLE;
-          }
         }
         e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
-        RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
       else{
+        RSVec = e1->kToNode[ByteMap[c]];
         break;
       }
       break;
@@ -549,102 +533,106 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
       break;
     }  
     case Kind::REGEXP_STAR:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
-          auto RS1 = ccontinuation(e1->Children[0], c);
-          if (RS1.size() != 0){
-            for (auto it : RS1){
-              if (it.second->KindReturn() == Kind::REGEXP_NONE){
-                RSVec.insert(std::make_pair(it.first, e1));
-              }
-              else{
-                REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
-                e2->Children.emplace_back(it.second);
-                e2->Children.emplace_back(e1);
-                RSVec.insert(std::make_pair(it.first, e2));
-              }
-            }
-            e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
-          }
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
-        }
-        else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
-          RSVec = e1->kToNode[ByteMap[c]];
-          break;
-        }
-        else{
-          break;
-        }
-      break;
-    }
-    case Kind::REGEXP_PLUS:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        REnode* e3 = initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));
-        e3->Children = e1->Children;
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
-        auto RS1 = ccontinuation(CopyREnode(e1->Children[0]), c);
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
+        auto RS1 = ccontinuation(e1->Children[0], c);
         if (RS1.size() != 0){
           for (auto it : RS1){
             if (it.second->KindReturn() == Kind::REGEXP_NONE){
-              RSVec.insert(std::make_pair(it.first, e3));
+              RSVec.insert(std::make_pair(it.first, e1));
             }
             else{
               REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               e2->Children.emplace_back(it.second);
-              e2->Children.emplace_back(e3);
+              e2->Children.emplace_back(e1);
               RSVec.insert(std::make_pair(it.first, e2));
+              isNullable(e2);
             }
           }
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
         }
-        if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT)
-          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        else
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
         break;
       }
+      break;
+    }
+    case Kind::REGEXP_PLUS:{
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
+        e1->kind = Kind::REGEXP_CONCAT;
+        e1->UnfoldNode = CopyREnode(e1->Children[0]);
+        REnode* e3 = initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));
+        e3->Status = NODE_NULLABLE;
+        e3->Children = e1->Children;
+        e1->Children.pop_back();
+        e1->Children.insert(e1->Children.begin(), e3);
+        e1->Children.insert(e1->Children.begin(), e1->UnfoldNode);
+        for (long unsigned int i = 0; i < e1->Children.size(); i++){
+          auto RS1 = ccontinuation(e1->Children[i], c);
+          if (RS1.size() != 0){
+            for (auto it : RS1){
+              REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+              if (it.second->KindReturn() == Kind::REGEXP_NONE){
+                if (i == e1->Children.size() - 1)
+                  e2 = it.second;
+                else{
+                  if (i == e1->Children.size() - 2){
+                    e2 = *(e1->Children.end()-1);
+                  }
+                  else
+                    e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
+                }
+              }
+              else{
+                if (i == e1->Children.size() - 1)
+                  e2 = it.second;
+                else{
+                  e2->Children.emplace_back(it.second);
+                  e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
+                }
+              }
+              isNullable(e2);
+              RSVec.insert(std::make_pair(it.first, e2));
+            }
+          }
+          if (e1->Children[i]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
+            break;
+          }
+        }
+        e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
+      }
       else{
+        RSVec = e1->kToNode[ByteMap[c]];
         break;
       }
       break;
     }
     case Kind::REGEXP_OPT:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         auto RS1 = ccontinuation(e1->Children[0], c);
         if (RS1.size() != 0){
           RSVec = RS1;
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
         }
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
     }
     case Kind::REGEXP_CHARCLASS:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         if (e1->Rune_Class.min <= c && c <= e1->Rune_Class.max){
           REnode* e2 = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+          e2->Status = NODE_NULLABLE;
           RSVec.insert(std::make_pair(e1, e2));
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
           break;
         }
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
@@ -656,14 +644,14 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
     case Kind::REGEXP_STRING:
       break;
     case Kind::REGEXP_LOOP:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         if (e1->UnfoldNode == nullptr)
           e1->UnfoldNode = CopyREnode(e1->Children[0]);
         auto RS1 = ccontinuation(e1->UnfoldNode, c);
         if (RS1.size() != 0){
           auto e3 = initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
           e3->Children = e1->Children;
+          e3->Status = e1->Status;
           if (e1->Counting.min > 0){
             e3->Counting = RuneClass(e1->Counting.min - 1, e1->Counting.max - 1);
           }
@@ -672,6 +660,7 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
           }
           if (e3->Counting.max == 0){
            e3->kind = Kind::REGEXP_NONE;
+           e1->Status = NODE_NULLABLE;
           }
           for (auto it : RS1){
             if (it.second->KindReturn() == Kind::REGEXP_NONE){
@@ -686,38 +675,33 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
                 REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                 e2->Children.emplace_back(it.second);
                 e2->Children.emplace_back(e3);
+                isNullable(e2);
                 RSVec.insert(std::make_pair(it.first, e2));
               }
             }
           }
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
         }
-        if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT || e1->Counting.min == 0)
-          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        else
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
     }
     case Kind::REGEXP_REPEAT:{
-      if (e1->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN || e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         if (e1->UnfoldNode == nullptr)
           e1->UnfoldNode = CopyREnode(e1->Children[0]);
         auto RS1 = ccontinuation(e1->UnfoldNode, c);
         if (RS1.size() != 0){
           auto e3 = initREnode(Kind::REGEXP_REPEAT, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
           e3->Children = e1->Children;
+          e3->Status = e1->Status;
           e3->Counting = RuneClass(e1->Counting.min - 1, e1->Counting.max - 1);
           if (e3->Counting.min == 0){
-           e3->kind = Kind::REGEXP_NONE;
+            e3->kind = Kind::REGEXP_NONE;
+            e3->Status = NODE_NULLABLE;
           }
           for (auto it : RS1){
             if (it.second->KindReturn() == Kind::REGEXP_NONE){
@@ -732,22 +716,16 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
                 REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                 e2->Children.emplace_back(it.second);
                 e2->Children.emplace_back(e3);
+                isNullable(e2);
                 RSVec.insert(std::make_pair(it.first, e2));
               }
             }
           }
           e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
         }
-        if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT)
-          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        else
-          e1->Status = NODE_STATUS::NODE_NULLABLE;
       }
-      else if (e1->kToNode.find(ByteMap[c]) != e1->kToNode.end()){
+      else {
         RSVec = e1->kToNode[ByteMap[c]];
-        break;
-      }
-      else{
         break;
       }
       break;
@@ -758,6 +736,8 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
 }
 
 void REnodeClass::isNullable(REnode *e1){
+  if (e1->Status != NODE_NULLABLE_UNKNOWN)
+    return;
   switch (e1->KindReturn())
   {
   case Kind::REGEXP_NONE:{
@@ -820,8 +800,19 @@ void REnodeClass::isNullable(REnode *e1){
     break;
   case Kind::REGEXP_STRING:
     break;
-  case Kind::REGEXP_LOOP:
+  case Kind::REGEXP_LOOP:{
+    isNullable(e1->Children[0]);
+    if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
+      e1->Status = NODE_STATUS::NODE_NULLABLE;
+    }
+    else if (e1->Counting.min == 0){
+      e1->Status = NODE_STATUS::NODE_NULLABLE;
+    }
+    else {
+      e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+    }
     break;
+  }
   case Kind::REGEXP_REPEAT:{
     isNullable(e1->Children[0]);
     if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){

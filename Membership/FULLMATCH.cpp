@@ -7,6 +7,7 @@ namespace solverbin{
   {
     e1 = e;
     dfa = RegExpSymbolic::DFA(e);
+    e1.isNullable(e1.Renode);
   };
 
 
@@ -41,7 +42,7 @@ namespace solverbin{
       dfa.DumpState(BeginState);
     }
     for (auto it : BeginState->NodeSequence){
-      e1.isNullable(it.second);
+      // e1.isNullable(it.second);
       if (it.second->Status == NODE_STATUS::NODE_NULLABLE){
         std::cout << "match successfully" << std::endl;
         return true;
