@@ -11,9 +11,12 @@ add_executable(String_Solver main.cpp)
 # 添加子目录
 add_subdirectory(Solver)
 add_subdirectory(Parser)
-
+add_subdirectory(Membership)
 # target_link_libraries(String1_Solver Solverbin Parserbin)
 target_link_libraries(String_Solver Parserbin Solverbin)
 
 add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
+
+add_executable(Match Match.cpp)
+target_link_libraries(IntersectionK Parserbin Solverbin MembershipBin)

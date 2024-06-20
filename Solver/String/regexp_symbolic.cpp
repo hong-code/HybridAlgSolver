@@ -956,58 +956,58 @@ RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::StepOneByte(DFAState* BeginS
 }
 
 
-bool RegExpSymbolic::DFA::Fullmatch(std::wstring Pattern, std::string str) {
-  REClass = Parer(Pattern).Re;
-  auto e1 = REClass.Renode;
-  std::vector<uint8_t> uvec;
-  std::map<REnode*, REnode*> RS2;
-  RS2.insert(std::make_pair(e1, e1));
-  DFAState* BeginState = new DFAState(Begin, RS2);
-  for (uint8_t itc : str){
-    if (BeginState->Next.find(itc) != BeginState->Next.end()){
-      BeginState = BeginState->Next[itc];
-      continue;
-    }
-    std::map<REnode*, REnode*> RS3;
-    DFAState *NS = new DFAState(Begin, RS3);
-    std::cout << "matching: " << int(itc) << std::endl;
-    for (auto it : BeginState->NodeSequence){
-      std::cout << "begin: " << REClass.REnodeToString(it.second) << std::endl;
-      auto RS1 = REClass.ccontinuation(it.second, itc);
-      REClass.RuneSequenceToString(RS1);
-      for (auto IT : RS1){
-        if (Node2Index.find(IT.first) == Node2Index.end()){
-          Node2Index.insert(std::make_pair(IT.first, IndexMax));
-          IndexMax++;
-        }
-        if (NS->NodeSequence.find(IT.first) == NS->NodeSequence.end()){
-          NS->NodeSequence.insert(IT);
-          NS->IndexSequence.insert(Node2Index.find(IT.first)->second);
-        }
-      }  
-    }
-    if (NS->NodeSequence.size() == 0){
-      std::cout << "match failed" << std::endl;
-      return false;
-    }
-    else{
-      NS = FindInDFACache(dfacache, NS);
-      BeginState->Next.insert(std::make_pair(itc, NS));
-      BeginState = NS;
-    }
-    DumpState(BeginState);
-    // REClass.RuneSequenceToString(BeginState->NodeSequence);  
-  }
-  for (auto it : BeginState->NodeSequence){
-    REClass.isNullable(it.second);
-    if (it.second->Status == NODE_STATUS::NODE_NULLABLE){
-      std::cout << "match successfully" << std::endl;
-      return true;
-    }
-  }
-  std::cout << "match failed" << std::endl;
-  return false;
-}
+// bool RegExpSymbolic::DFA::Fullmatch(std::wstring Pattern, std::string str) {
+//   REClass = Parer(Pattern).Re;
+//   auto e1 = REClass.Renode;
+//   std::vector<uint8_t> uvec;
+//   std::map<REnode*, REnode*> RS2;
+//   RS2.insert(std::make_pair(e1, e1));
+//   DFAState* BeginState = new DFAState(Begin, RS2);
+//   for (uint8_t itc : str){
+//     if (BeginState->Next.find(itc) != BeginState->Next.end()){
+//       BeginState = BeginState->Next[itc];
+//       continue;
+//     }
+//     std::map<REnode*, REnode*> RS3;
+//     DFAState *NS = new DFAState(Begin, RS3);
+//     std::cout << "matching: " << int(itc) << std::endl;
+//     for (auto it : BeginState->NodeSequence){
+//       std::cout << "begin: " << REClass.REnodeToString(it.second) << std::endl;
+//       auto RS1 = REClass.ccontinuation(it.second, itc);
+//       REClass.RuneSequenceToString(RS1);
+//       for (auto IT : RS1){
+//         if (Node2Index.find(IT.first) == Node2Index.end()){
+//           Node2Index.insert(std::make_pair(IT.first, IndexMax));
+//           IndexMax++;
+//         }
+//         if (NS->NodeSequence.find(IT.first) == NS->NodeSequence.end()){
+//           NS->NodeSequence.insert(IT);
+//           NS->IndexSequence.insert(Node2Index.find(IT.first)->second);
+//         }
+//       }  
+//     }
+//     if (NS->NodeSequence.size() == 0){
+//       std::cout << "match failed" << std::endl;
+//       return false;
+//     }
+//     else{
+//       NS = FindInDFACache(dfacache, NS);
+//       BeginState->Next.insert(std::make_pair(itc, NS));
+//       BeginState = NS;
+//     }
+//     DumpState(BeginState);
+//     // REClass.RuneSequenceToString(BeginState->NodeSequence);  
+//   }
+//   for (auto it : BeginState->NodeSequence){
+//     REClass.isNullable(it.second);
+//     if (it.second->Status == NODE_STATUS::NODE_NULLABLE){
+//       std::cout << "match successfully" << std::endl;
+//       return true;
+//     }
+//   }
+//   std::cout << "match failed" << std::endl;
+//   return false;
+// }
 
 void RegExpSymbolic::DFA::DumpState(DFAState* s){
   std::cout << "The node index: ";
