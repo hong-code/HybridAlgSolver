@@ -77,6 +77,7 @@ class REnode{
     RuneClass Counting;      // counting range
     std::string Str;    // string Kind
     std::string PrefixStr;
+    bool Iscompute = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;
     REnode* UnfoldNode = nullptr;
     REnode* First = nullptr;
@@ -108,7 +109,6 @@ class REnodeClass{
 
     uint8_t ByteMap[256];   // disjoint range of the node
     std::set<RuneClass> BytemapRange;  // the range of the node
-
 
     REnode* Renode;
     int color_max = 0;

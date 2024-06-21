@@ -304,6 +304,17 @@ std::string REnodeClass::REnodeToString(REnode* r ) {
         break;
       }
 
+      case Kind::REGEXP_Lookahead:
+      {
+        retStr += "(?=";
+        for(unsigned i=0; i<r->Children.size(); ++i) {
+          //if(i != 0) retStr += ".";
+          retStr += REnodeToString( r->Children[i] );
+        }
+        retStr += ")";
+        break;
+      }
+
       default:
       {
         // std::stringstream ss;
@@ -471,6 +482,10 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
       if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           auto RS1 = ccontinuation(e1->Children[i], c);
+          // if (e1->Children[i]->Iscompute == true){
+          //   REnode* e3 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+          //   if (i == )
+          // }
           if (RS1.size() != 0){
             for (auto it : RS1){
               REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
@@ -730,6 +745,30 @@ std::map<REnode*, REnode*> REnodeClass::ccontinuation(REnode* e1, unsigned int c
       }
       break;
     }
+    case Kind::REGEXP_Lookahead:{
+      if (e1->kToNode.find(ByteMap[c]) == e1->kToNode.end()){
+        auto RS1 = ccontinuation(e1->Children[0], c);
+        if (RS1.size() != 0){
+          for (auto it : RS1){
+            if (it.second->KindReturn() == Kind::REGEXP_NONE){
+              RSVec.insert(std::make_pair(it.first, it.second));
+            }
+            else{
+              REnode* e2 = initREnode(Kind::REGEXP_Lookahead, RuneClass(0, 0));
+              e2->Children.emplace_back(it.second);
+              RSVec.insert(std::make_pair(it.first, e2));
+              isNullable(e2);
+            }
+          }
+          e1->kToNode.insert(std::make_pair(ByteMap[c], RSVec));
+        }
+      }
+      else {
+        RSVec = e1->kToNode[ByteMap[c]];
+        break;
+      }
+      break;
+    }
     default: break;
   }
   return RSVec;
@@ -773,6 +812,7 @@ void REnodeClass::isNullable(REnode *e1){
   case Kind::REGEXP_STAR:{
     // isNullable(e1->Children[0]); if you want to check whether the child is nullable
     e1->Status = NODE_STATUS::NODE_NULLABLE;
+    isNullable(e1->Children[0]);
     break;
   }
   case Kind::REGEXP_PLUS:{
@@ -788,6 +828,7 @@ void REnodeClass::isNullable(REnode *e1){
   case Kind::REGEXP_OPT:{
     // isNullable(e1->Children[0]); if you want to check whether the child is nullable
     e1->Status = NODE_STATUS::NODE_NULLABLE;
+    isNullable(e1->Children[0]);
     break;
   }
   case Kind::REGEXP_CHARCLASS:{
@@ -823,6 +864,12 @@ void REnodeClass::isNullable(REnode *e1){
     }
     break;
   }  
+  case Kind::REGEXP_Lookahead:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+    isNullable(e1->Children[0]);
+    e1->Status = NODE_STATUS::NODE_NULLABLE;
+    break;
+  }
   default:
     break;
   }

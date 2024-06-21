@@ -238,7 +238,8 @@ namespace solverbin {
           RegexString.erase(0,2);
           REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_Lookahead, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
-          REnodeLookahead->Children[0] = REnodeCONCAT;
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+          REnodeLookahead->Children.emplace_back(REnodeCONCAT);
           r->Children.emplace_back(REnodeLookahead);
           break;
         }
@@ -246,6 +247,7 @@ namespace solverbin {
           RegexString.erase(0,2);
           REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookahead, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
           REnodeLookahead->Children[0] = REnodeCONCAT;
           r->Children.emplace_back(REnodeLookahead);
           break;
@@ -254,6 +256,7 @@ namespace solverbin {
           RegexString.erase(0,3);
           REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_Lookbehind, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
           REnodeLookahead->Children[0] = REnodeCONCAT;
           r->Children.emplace_back(REnodeLookahead);
           break;
@@ -262,6 +265,7 @@ namespace solverbin {
           RegexString.erase(0,3);
           REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookbehind, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
           REnodeLookahead->Children[0] = REnodeCONCAT;
           r->Children.emplace_back(REnodeLookahead);
           break;
