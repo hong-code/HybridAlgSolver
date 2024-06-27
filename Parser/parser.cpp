@@ -444,12 +444,12 @@ namespace solverbin {
           for (auto it : RuneSet){
             RuneSequence RS;
             if (it.min == bound_left){
-              bound_left = it.max;
+              bound_left = it.max + 1;
               continue;
             }
             else{
-              Trune = RuneClass(bound_left, it.max-1);
-              bound_left = it.max;
+              Trune = RuneClass(bound_left, it.min-1);
+              bound_left = it.max + 1;
             }
             Re.ConvertToUTF_8(Trune.min, Trune.max, RS);
             for (long unsigned int i = 0; i < RS.size(); i++){
@@ -500,8 +500,11 @@ namespace solverbin {
       }
       case '?': {
         RegexString.erase(0, 1);
+        auto TargetNode = r->Children.back();
+        if (TargetNode->kind == Kind::REGEXP_PLUS || TargetNode->kind == Kind::REGEXP_STAR || TargetNode->kind == Kind::REGEXP_LOOP || TargetNode->kind == Kind::REGEXP_REPEAT)
+          break;
         REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_OPT, {0, 0});
-        REnodeSTAR->Children.emplace_back(r->Children.back());
+        REnodeSTAR->Children.emplace_back(TargetNode);
         r->Children.pop_back();
         r->Children.emplace_back(REnodeSTAR);
         break;
@@ -709,13 +712,12 @@ namespace solverbin {
 
 Parer::Parer(std::wstring regex_string){
   if (regex_string[0] == '/'){
-    regex_string.erase(0, 1);
-    for (int j = regex_string.length()-1; j > 0; j--){
-      if (regex_string[j] == '/'){
-        regex_string.pop_back();
+    for (int j = regex_string.length()-1; j > 1; j--){
+      if (regex_string[j] == '/' ){
+        regex_string.erase(j, regex_string.length());
+        regex_string.erase(0, 1);
         break;
       }
-      regex_string.pop_back();
     }
   }
   

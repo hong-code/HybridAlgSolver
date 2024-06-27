@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
   if (result){
       std::cout << "sat" << std::endl;
       std::cout << "witness string: " << InK.InterStr << std::endl;
-    }
+  }
   else
     std::cout << "unsat" << std::endl;
   // if ((InK.Intersect() && 1 == std::stoi(argv[2])) || (!InK.Intersect() && 0 == std::stoi(argv[2]))){
