@@ -2,6 +2,7 @@
 #include <fstream>
 #include <locale>
 #include <codecvt>
+#include <unistd.h>
 #include "Solver/solver_kind.h"
 #include "Solver/solver.h"
 #include "Parser/parser.h"
