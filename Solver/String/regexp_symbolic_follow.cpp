@@ -256,11 +256,11 @@ namespace solverbin{
             }
           }
         }
-        if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT || e1->Counting.min == 0)
-          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        else
+        if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE || e1->Counting.min == 0)
           e1->Status = NODE_STATUS::NODE_NULLABLE;
-        e1->FiretSeq =  RSVec;
+        else
+          e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+        e1->FiretSeq = RSVec;
       }
       else 
         return e1->FiretSeq;

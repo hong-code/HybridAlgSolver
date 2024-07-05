@@ -156,6 +156,8 @@ namespace solverbin{
   }
 
   bool RegExpSymbolic::IntersectionK::Intersect(){
+    if (IfMatch(SSBegin))
+      return true;
     if (IsIntersect(SSBegin))
       return true;
     else

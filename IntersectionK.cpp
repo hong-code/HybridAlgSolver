@@ -37,8 +37,8 @@ int main(int argc, char* argv[]){
   auto InK = solverbin::RegExpSymbolic::IntersectionK(ReList);
   auto result = InK.Intersect();
   if (result){
-      std::cout << "sat" << std::endl;
-      std::cout << "witness string: " << InK.InterStr << std::endl;
+    std::cout << "sat" << std::endl;
+    std::cout << "witness string: " << InK.InterStr << std::endl;
   }
   else
     std::cout << "unsat" << std::endl;
