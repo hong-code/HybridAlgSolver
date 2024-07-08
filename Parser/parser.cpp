@@ -339,7 +339,7 @@ namespace solverbin {
             if (r->Children.size() == 0)
               return Re.initREnode(Kind::REGEXP_NONE, {0, 0});
             else  
-              return r->Children[0];  
+              return r;  
           }
           else
             return r;
@@ -410,8 +410,11 @@ namespace solverbin {
             continue;  
           }
           auto RetSet = ProcessingBlash(RegexString);
-          for (auto it : RetSet)
-            InsertRune(RuneSet, it);
+          if (RetSet.size() > 0){
+            for (auto it : RetSet)
+              InsertRune(RuneSet, it);
+            continue;  
+          }
           if (RegexString[0] == ']')  
             break;;
           int_21 low = getcharacter(RegexString);
