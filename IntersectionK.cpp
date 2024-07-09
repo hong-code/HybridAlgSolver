@@ -25,10 +25,12 @@ int main(int argc, char* argv[]){
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
     std::wstring unicodeStr = converter.from_bytes(line);
     c = unicodeStr.back();
-    unicodeStr.pop_back();
+    if (c == '\r'){
+      unicodeStr.pop_back();
+    }
     Regex_list.emplace_back(unicodeStr);
   }
-  Regex_list[Regex_list.size() - 1].push_back(c);
+  // Regex_list[Regex_list.size() - 1].push_back(c);
   std::vector<solverbin::REnodeClass> ReList;
   for (auto str : Regex_list){
     auto ren = solverbin::Parer(str);
