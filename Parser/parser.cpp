@@ -21,14 +21,29 @@ namespace solverbin {
       runeset = {RuneClass(48, 57)};
       return runeset;
     }
+    else if (RegexString[1] == 'D'){
+      RegexString.erase(0, 2);
+      std::vector<RuneClass> runeset = {RuneClass(0, 47), RuneClass(58, 0x10ffff)};
+      return runeset;
+    }
     else if (RegexString[1] == 'w'){
       RegexString.erase(0, 2);
       std::vector<RuneClass> runeset = {RuneClass(65, 90), RuneClass(48, 57), RuneClass(97, 122), RuneClass(95, 95)};
       return runeset;
     }
+    else if (RegexString[1] == 'W'){
+      RegexString.erase(0, 2);
+      std::vector<RuneClass> runeset = {RuneClass(0, 47), RuneClass(58, 64), RuneClass(91, 94), RuneClass(96, 96), RuneClass(123, 0x10ffff)};
+      return runeset;
+    }
     else if (RegexString[1] == 's'){
       RegexString.erase(0, 2);
       std::vector<RuneClass> runeset = {RuneClass(9, 11), RuneClass(13, 13), RuneClass(32, 32)};
+      return runeset;
+    }
+    else if (RegexString[1] == 'S'){
+      RegexString.erase(0, 2);
+      std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(12, 12), RuneClass(14, 31), RuneClass(33, 0x10FFFF)};
       return runeset;
     }
     return runeset;
@@ -219,16 +234,19 @@ namespace solverbin {
   while (!RegexString.empty()) {
     switch (RegexString[0]) {
       default: {
-        uint8_t ul[4];
-        int_21 rune = RegexString[0];
-		    int n = Re.runetochar(reinterpret_cast<char*>(ul), &rune);
-        for (int i = 0; i < n; i++){
-          Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
-          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});
-          r->Children.emplace_back(REnodeRune);
-          RegexString.erase(0, 1);  
+        REnode* REnodeRune = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+        RuneSequence RS;
+        Re.ConvertToUTF_8(RegexString[0], RegexString[0], RS);
+        if (RS.size() > 1){
+          for (auto itc : RS){
+            REnodeRune->Children.emplace_back(itc);
+          }
         }
-          
+        else{
+          REnodeRune = RS[0];
+        }
+        r->Children.emplace_back(REnodeRune);
+        RegexString.erase(0, 1);
         break;
       }
 
@@ -364,6 +382,7 @@ namespace solverbin {
       case '.':  {
         REnode* REDot = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
         REnode* REnodeRClass1 = Re.initREnode(Kind::REGEXP_CHARCLASS, {0, 9});
+        Re.BytemapRange.insert(RuneClass{0,9});
         REDot->Children.emplace_back(REnodeRClass1);
         RuneSequence RS;
         Re.ConvertToUTF_8(0xb, 0x10ffff , RS);
@@ -646,6 +665,20 @@ namespace solverbin {
           r->Children.emplace_back(REnodeRune);
           break;
         }
+        if (RegexString[1] == 'D'){
+          RegexString.erase(0, 2);
+          std::vector<RuneClass> runeset = {RuneClass(0, 47), RuneClass(58, 0x10ffff)};
+          REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
+          for (auto it : runeset){
+            RuneSequence RS;
+            Re.ConvertToUTF_8(it.min, it.max, RS);
+            for (auto it_rune : RS){
+              REnodeUNION->Children.emplace_back(it_rune);
+            }   
+          }
+          r->Children.emplace_back(REnodeUNION);
+          break;
+        }
         if (RegexString[1] == 'w'){
           RegexString.erase(0, 2);
           std::vector<RuneClass> runeset = {RuneClass(65, 90), RuneClass(48, 57), RuneClass(97, 122), RuneClass(95, 95)};
@@ -654,6 +687,20 @@ namespace solverbin {
             Re.BytemapRange.insert(it);
             REnode* REnodeRune = Re.initREnode(Kind::REGEXP_CHARCLASS, it);
             REnodeUNION->Children.emplace_back(REnodeRune);
+          }
+          r->Children.emplace_back(REnodeUNION);
+          break;
+        }
+        if (RegexString[1] == 'W'){
+          RegexString.erase(0, 2);
+          std::vector<RuneClass> runeset = {RuneClass(0, 47), RuneClass(58, 64), RuneClass(91, 94), RuneClass(96, 96), RuneClass(123, 0x10ffff)};
+          REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
+          for (auto it : runeset){
+            RuneSequence RS;
+            Re.ConvertToUTF_8(it.min, it.max, RS);
+            for (auto it_rune : RS){
+              REnodeUNION->Children.emplace_back(it_rune);
+            }   
           }
           r->Children.emplace_back(REnodeUNION);
           break;
@@ -670,22 +717,35 @@ namespace solverbin {
           r->Children.emplace_back(REnodeUNION);
           break;
         }
+        if (RegexString[1] == 'S'){
+          RegexString.erase(0, 2);
+          std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(12, 12), RuneClass(14, 31), RuneClass(33, 0x10ffff)};
+          REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
+          for (auto it : runeset){
+            RuneSequence RS;
+            Re.ConvertToUTF_8(it.min, it.max, RS);
+            for (auto it_rune : RS){
+              REnodeUNION->Children.emplace_back(it_rune);
+            }   
+          }
+          r->Children.emplace_back(REnodeUNION);
+          break;
+        }
         if (RegexString[1] == 'p'){
           auto reNode = LargeUnicodeBlock2Node(RegexString);
           r->Children.emplace_back(reNode);
           break;
         }
         RegexString.erase(0, 1);
-        uint8_t ul[4];
-        int_21 rune = RegexString[0];
-		    int n = Re.runetochar(reinterpret_cast<char*>(ul), &rune);
-        for (int i = 0; i < n; i++){
-          Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
-          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});
-          r->Children.emplace_back(REnodeRune);
-          RegexString.erase(0, 1);  
-        }
-        break;
+        // uint8_t ul[4];
+        // int_21 rune = RegexString[0];
+		    // int n = Re.runetochar(reinterpret_cast<char*>(ul), &rune);
+        // for (int i = 0; i < n; i++){
+        //   Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
+        //   REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});
+        //   r->Children.emplace_back(REnodeRune);
+        //   RegexString.erase(0, 1);  
+        // }
         break;
       }
     }
