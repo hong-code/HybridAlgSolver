@@ -822,15 +822,19 @@ namespace solverbin {
           break;
         }
         RegexString.erase(0, 1);
-        // uint8_t ul[4];
-        // int_21 rune = RegexString[0];
-		    // int n = Re.runetochar(reinterpret_cast<char*>(ul), &rune);
-        // for (int i = 0; i < n; i++){
-        //   Re.BytemapRange.insert(RuneClass(ul[i], ul[i]));
-        //   REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {ul[i], ul[i]});
-        //   r->Children.emplace_back(REnodeRune);
-        //   RegexString.erase(0, 1);  
-        // }
+        REnode* REnodeRune = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+        RuneSequence RS;
+        Re.ConvertToUTF_8(RegexString[0], RegexString[0], RS);
+        if (RS.size() > 1){
+          for (auto itc : RS){
+            REnodeRune->Children.emplace_back(itc);
+          }
+        }
+        else{
+          REnodeRune = RS[0];
+        }
+        r->Children.emplace_back(REnodeRune);
+        RegexString.erase(0, 1);
         break;
       }
     }
