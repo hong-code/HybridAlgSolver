@@ -1,5 +1,5 @@
 # Intersection of Regex
-Online Algorithms for Solving Regular Expression Intersection Non-emptiness
+#### Online Algorithms for Solving Regular Expression Intersection Non-emptiness
 ## Runtime environment
 #### Here we will introduce how to set up a runtime environment
 
@@ -38,17 +38,17 @@ make # compile into .exe file
 ```
 ## Running example
  
-A file `test.txt` containing three regexes is shown below:
+#### A file `test.txt` containing three regexes is shown below:
 ```
 \w*
 hos\w*name:2024
 hostname[2024]+
 ```
-And running the command:
+#### And running the command:
 ```bash
 ./IntersectionK 
 ```
-Its outputs will be printed in the shell:
+#### Its outputs will be printed in the shell:
 ```bash
 sat
 witness string: hostname:2024
