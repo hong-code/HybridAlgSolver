@@ -18,5 +18,8 @@ target_link_libraries(String_Solver Parserbin Solverbin)
 add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
 
+add_executable(PositionTest PositionTest.cpp)
+target_link_libraries(PositionTest Parserbin Solverbin)
+
 add_executable(Match Match.cpp)
 target_link_libraries(Match Parserbin Solverbin MembershipBin)
