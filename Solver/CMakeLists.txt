@@ -11,6 +11,8 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         String/regexp_symbolic_inclusion.cpp
                         String/regexp_symbolic_intersectionK.cpp
                         String/regexp_symbolic_Completment.cpp
+                        PositionAutomaton/PositionAutomaton.h
+                        PositionAutomaton/PositionAutomaton.cpp
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
                         )
