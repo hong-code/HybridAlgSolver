@@ -49,6 +49,7 @@ enum AssertionStatus {
       NODE_NULLABLE = 0,
       NODE_NULLABLE_UNKNOWN = 1,
       NODE_NULLABLE_NOT = 2,
+      NODE_LookAhead = 3,
 };
 
 struct RuneClass
@@ -73,6 +74,7 @@ class REnode{
     Kind kind;
     NODE_STATUS Status = NODE_NULLABLE_UNKNOWN; // the status of the node
     std::vector<REnode*> Children;   //child nodes
+    REnode* LookAround = nullptr; // lookaround node
     RuneClass Rune_Class;     // charclass decoded by utf-8
     RuneClass Counting;      // counting range
     std::string Str;    // string Kind
