@@ -11,7 +11,7 @@
 
 
 namespace solverbin{
-  
+
   class FollowAtomata{
     public:
       enum NFAStateFlag{
@@ -51,6 +51,7 @@ namespace solverbin{
       std::map<REnode*, NFAState*> Node2NFAState; // map from the node to the index
       int IndexMax = 0;
       NFACache* nfacache = new NFACache(IsNULL, nullptr, nullptr);
+      std::map<REnode*, REnode*> FirstNode(REnode* e1);
       NFACache* Step2Left(NFACache* DC, int c); // step to the left 
       NFACache* Step2Right(NFACache* DC, int c); // step to the left 
       NFAState* FindInNFACache(NFACache* DC, NFAState* s);

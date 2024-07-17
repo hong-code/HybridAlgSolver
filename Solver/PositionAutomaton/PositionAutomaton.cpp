@@ -12,7 +12,7 @@ using namespace solverbin;
 
 
 namespace solverbin{
-  std::map<REnode*, REnode*> REnodeClass::FirstNode(REnode* e1){
+  std::map<REnode*, REnode*> FollowAtomata::FirstNode(REnode* e1){
   // BuildBytemapToString(this->ByteMap);
   // std::cout << REnodeToString(e1) << std::endl;
   std::map<REnode*, REnode*> RSVec;
@@ -24,7 +24,7 @@ namespace solverbin{
     case Kind::REGEXP_RUNE:{
       if (e1->FiretSeq.empty()){
         e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-        REnode* e2 = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+        REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
         e1->FiretSeq.insert(std::make_pair(e1, e2));
         RSVec = e1->FiretSeq;
         break;
@@ -40,7 +40,7 @@ namespace solverbin{
           auto RS1 = FirstNode(e1->Children[i]);
           if (RS1.size() != 0){
             for (auto it : RS1){
-              REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+              REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               if (it.second->KindReturn() == Kind::REGEXP_NONE){
                 if (i == e1->Children.size() - 1)
                   e2 = it.second;
@@ -108,7 +108,7 @@ namespace solverbin{
                 RSVec.insert(std::make_pair(it.first, e1));
               }
               else{
-                REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+                REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                 e2->Children.emplace_back(it.second);
                 e2->Children.emplace_back(e1);
                 RSVec.insert(std::make_pair(it.first, e2));
@@ -126,8 +126,8 @@ namespace solverbin{
       if (e1->FiretSeq.empty()){
         e1->kind = Kind::REGEXP_CONCAT;
         if (e1->UnfoldNode == nullptr)
-          e1->UnfoldNode = CopyREnode(e1->Children[0]);
-        REnode* e3 = initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));  
+          e1->UnfoldNode = REClass.CopyREnode(e1->Children[0]);
+        REnode* e3 = REClass.initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));  
         e3->Children = e1->Children;
         e1->Children.pop_back();
         e1->Children.insert(e1->Children.begin(), e3);
@@ -136,7 +136,7 @@ namespace solverbin{
           auto RS1 = FirstNode(e1->Children[i]);
           if (RS1.size() != 0){
             for (auto it : RS1){
-              REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+              REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               if (it.second->KindReturn() == Kind::REGEXP_NONE){
                 if (i == e1->Children.size() - 1)
                   e2 = it.second;
@@ -186,7 +186,7 @@ namespace solverbin{
     case Kind::REGEXP_CHARCLASS:{
       e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
       if (e1->FiretSeq.empty()){
-        REnode* e2 = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+        REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
         e1->FiretSeq.insert(std::make_pair(e1, e2));
         RSVec = e1->FiretSeq;
         break;
@@ -208,7 +208,7 @@ namespace solverbin{
       if (e1->FiretSeq.empty()){
         int iteration = 1;
         if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN){
-          isNullable(e1->Children[0]);
+          REClass.isNullable(e1->Children[0]);
         }
         if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
           iteration = e1->Counting.max;
@@ -220,9 +220,9 @@ namespace solverbin{
         else
           e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
         for(int i = 0; i < iteration; i++){
-          auto RS1 = FirstNode(CopyREnode(e1->Children[0]));
+          auto RS1 = FirstNode(REClass.CopyREnode(e1->Children[0]));
           if (RS1.size() != 0){
-            auto e3 = initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
+            auto e3 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
             e3->Children = e1->Children;
             if (e1->Counting.min > 0){
               min--;
@@ -246,7 +246,7 @@ namespace solverbin{
                   RSVec.insert(std::make_pair(it.first, e2));
                 }
                 else{
-                  REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+                  REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                   e2->Children.emplace_back(it.second);
                   e2->Children.emplace_back(e3);
                   RSVec.insert(std::make_pair(it.first, e2));
@@ -271,7 +271,7 @@ namespace solverbin{
       if (e1->FiretSeq.empty()){
         int iteration = 1;
         if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN){
-          isNullable(e1->Children[0]);
+          REClass.isNullable(e1->Children[0]);
         }
         if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
           e1->Status = NODE_STATUS::NODE_NULLABLE;
@@ -281,9 +281,9 @@ namespace solverbin{
           iteration = 1;}
         if (iteration == 1){
           e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-          auto RS1 = FirstNode(CopyREnode(e1->Children[0]));
+          auto RS1 = FirstNode(REClass.CopyREnode(e1->Children[0]));
           if (RS1.size() != 0){
-            auto e3 = initREnode(Kind::REGEXP_REPEAT, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
+            auto e3 = REClass.initREnode(Kind::REGEXP_REPEAT, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
             e3->Children = e1->Children;
             min--;  max--;
             e3->Counting = RuneClass(min, max);
@@ -300,7 +300,7 @@ namespace solverbin{
                   RSVec.insert(std::make_pair(it.first, e2));
                 }
                 else{
-                  REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+                  REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                   e2->Children.emplace_back(it.second);
                   e2->Children.emplace_back(e3);
                   RSVec.insert(std::make_pair(it.first, e2));
@@ -312,7 +312,7 @@ namespace solverbin{
         }
         else{
           for(int i = 0; i < (iteration-1); i++){
-            e1->Children.emplace_back(CopyREnode(e1->Children[0]));
+            e1->Children.emplace_back(REClass.CopyREnode(e1->Children[0]));
           }
           e1->kind = Kind::REGEXP_CONCAT;
           e1->Status = NODE_STATUS::NODE_NULLABLE;
@@ -320,7 +320,7 @@ namespace solverbin{
             auto RS1 = FirstNode(e1->Children[i]);
             if (RS1.size() != 0){
               for (auto it : RS1){
-                REnode* e2 = initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
+                REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
                 if (it.second->KindReturn() == Kind::REGEXP_NONE){
                   if (i == e1->Children.size() - 1)
                     e2 = it.second;
