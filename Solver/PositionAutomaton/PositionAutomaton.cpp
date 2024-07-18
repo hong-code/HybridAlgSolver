@@ -159,17 +159,12 @@ namespace solverbin{
               RSVec.insert(std::make_pair(it.first, e2));
             }
           }
-        }
-        if (RSA.first != nullptr){
-          LookAheadNodes->Children.emplace_back(RSA.first);
-          e1->LookAround = LookAheadNodes;
-        }
-          
+        }  
         e1->FiretSeq = RSVec;
-        return std::make_pair(e1->LookAround, e1->FiretSeq);
+        return std::make_pair(nullptr, e1->FiretSeq);
       }
       else 
-        return std::make_pair(e1->LookAround, e1->FiretSeq);
+        return std::make_pair(nullptr, e1->FiretSeq);
       break;
     }
     case Kind::REGEXP_PLUS:{
@@ -414,6 +409,8 @@ namespace solverbin{
     case Kind::REGEXP_Lookahead:{
       e1->Status = NODE_STATUS::NODE_LookAhead;
       auto R1 = FirstNode(e1->Children[0]);
+      if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE)
+        return std::make_pair(nullptr, RSVec);
       auto RLookA = R1.first;
       auto RNode = R1.second; 
       REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
@@ -428,11 +425,11 @@ namespace solverbin{
           }
           e2->Children.emplace_back(e3);
         }
+        return std::make_pair(e2, RSVec);
       }
       else {
         return std::make_pair(REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0)), RSVec);
       }
-      return std::make_pair(e2, RSVec);
     }
 
     default: break;
@@ -560,7 +557,10 @@ namespace solverbin{
     for (auto i : s->NodeSequence){
       if (c >= i.first->Rune_Class.min && c <= i.first->Rune_Class.max){
         if (i.second->KindReturn() == Kind::REGEXP_NONE){
-          NFAState* nfastate = new NFAState(Normal, FirstNode(i.second).second);
+          auto tup = FirstNode(i.second);
+          if (tup.first != nullptr && tup.first->KindReturn() == Kind::REGEXP_NONE)
+            continue;
+          NFAState* nfastate = new NFAState(Normal, tup.second);
           nfastate->Node2Continuation = std::make_pair(i.first, i.second);
           nfastate->NFlag = Match;
           NFAStateVec.insert(nfastate);
@@ -572,7 +572,10 @@ namespace solverbin{
           NFAStateVec.insert(ns->second);
           continue;
         }
-        NFAState* nfastate = new NFAState(Normal, FirstNode(i.second).second);
+        auto tup = FirstNode(i.second);
+        if (tup.first != nullptr && tup.first->kind == Kind::REGEXP_NONE)
+          continue;
+        NFAState* nfastate = new NFAState(Normal, tup.second);
         nfastate->Node2Continuation = std::make_pair(i.first, i.second);
         if (i.second->Status == NODE_STATUS::NODE_NULLABLE){
           nfastate->NFlag = Match;

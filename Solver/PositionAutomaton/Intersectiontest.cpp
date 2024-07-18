@@ -165,8 +165,8 @@ namespace solverbin{
   }
 
   bool IntersectionK::IsIntersect(SimulationState* s){
-    // std::cout << "witness str: " << InterStr << std::endl;
-    // DumpSimulationState(s);
+    std::cout << "witness str: " << InterStr << std::endl;
+    DumpSimulationState(s);
     for (auto c : Alphabet){
       // std::cout << "matching: " << int(c) << " " << std::endl;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
