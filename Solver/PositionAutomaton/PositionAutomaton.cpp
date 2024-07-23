@@ -411,7 +411,7 @@ namespace solverbin{
       e1->Status = NODE_STATUS::NODE_LookAhead;
       auto R1 = FirstNode(e1->Children[0]);
       if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE)
-        return std::make_pair(nullptr, RSVec);
+        return std::make_pair(RSVec_First, RSVec);
       auto RLookA = R1.first;
       auto RNode = R1.second; 
       REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
@@ -591,6 +591,61 @@ namespace solverbin{
     }
     s->Next.insert(std::make_pair(REClass.ByteMap[c], NFAStateVec));
     return NFAStateVec;
+  }
+
+
+  void StateMachine::DumpState(State* s){
+    std::cout << "The node index: ";
+    for (auto i : s->IndexSequence){
+      std::cout << i << " ";
+    }
+    std::cout << "" << std::endl;
+  }
+
+  StateMachine::Cache* StateMachine::Step2Left(Cache* DC, int c){
+    Cache* dc = DC;
+    for (int i = 0; i < c; i++){
+      if (dc->left == nullptr){
+        dc->left = new Cache(IsNULL, nullptr, nullptr);
+        dc = dc->left;
+      }
+      else{
+        dc = dc->left;
+      }
+    }
+    return dc;
+  }
+
+  StateMachine::Cache* StateMachine::Step2Right(Cache* DC, int c){
+    Cache* dc = DC;
+    for (int i = 0; i < c; i++){
+      if (dc->right == nullptr){
+        dc->right = new Cache(IsNULL, nullptr, nullptr);
+        dc = dc->right;
+      }
+      else{
+        dc = dc->right;
+      }
+    }
+    return dc;
+  }
+
+  StateMachine::State* StateMachine::FindInCache(Cache* DC, State* s){
+    int BeginiIndex = 0;
+    for (auto i : s->IndexSequence){
+      if (i - BeginiIndex > 0){
+        DC = Step2Left(DC, i - BeginiIndex);
+      }
+      DC = Step2Right(DC, 1);
+      BeginiIndex = i;
+    }
+    if (DC->DCFlage == IsNotNULL){
+      return DC->S;
+    }else{
+      DC->DCFlage = IsNotNULL;
+      DC->S = s;
+      return s;
+    }
   }
 
 } //solverbin
