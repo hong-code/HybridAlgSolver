@@ -881,7 +881,7 @@ Parer::Parer(std::wstring regex_string){
   Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
   // Re.BuildBytemapToString(Re.ByteMap);
   // Re.BytemapRangeToString(Re.BytemapRange);
-  // std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+  std::cout << Re.REnodeToString(Re.Renode) << std::endl;
 
 }
 Parer::Parer(){}

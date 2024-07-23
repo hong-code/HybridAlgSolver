@@ -12,10 +12,11 @@ using namespace solverbin;
 
 
 namespace solverbin{
-  std::pair<REnode*, std::map<REnode*, REnode*>> FollowAtomata::FirstNode(REnode* e1){
+  std::pair<std::map<REnode*, REnode*>, std::map<REnode*, REnode*>> FollowAtomata::FirstNode(REnode* e1){
   // BuildBytemapToString(this->ByteMap);
   // std::cout << REnodeToString(e1) << std::endl;
   std::map<REnode*, REnode*> RSVec;
+  std::map<REnode*, REnode*> RSVec_First;
   switch (e1->KindReturn()){
     case Kind::REGEXP_NONE:{
       e1->Status = NODE_STATUS::NODE_NULLABLE;
@@ -30,7 +31,7 @@ namespace solverbin{
         break;
       }
       else {
-        return std::make_pair(nullptr, e1->FiretSeq);
+        return std::make_pair(RSVec_First, e1->FiretSeq);
       }
     }
     case Kind::REGEXP_CONCAT:{
