@@ -12,7 +12,7 @@ namespace solverbin{
 
   bool IntersectionK::IfMatch(SimulationState* SS){
     while (SS != nullptr){
-      if (SS->NS->NFlag == FollowAtomata::Match){
+      if (SS->NS->DFlag == FollowAtomata::Match){
         SS = SS->Next;
         continue;
       }
@@ -23,7 +23,7 @@ namespace solverbin{
     return true;
   }
 
-  bool IntersectionK::ComputAllState(std::vector<std::set<FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns){
+  bool IntersectionK::ComputAllState(std::vector<std::vector<FollowAtomata::State*>> NextV, int i, SimulationState* s, SimulationState* ns){
     if (i == 0)
       for (auto it : NextV[0]){
         s->NS = it;
@@ -66,7 +66,7 @@ namespace solverbin{
     return false;
   }
 
-  bool IntersectionK::IsEmptyStateIn(std::vector<std::set<FollowAtomata::NFAState*>> NextV){
+  bool IntersectionK::IsEmptyStateIn(std::vector<std::vector<FollowAtomata::State*>> NextV){
     for (auto it : NextV){
       if (it.empty())
         return false;
@@ -76,7 +76,7 @@ namespace solverbin{
 
   void IntersectionK::DumpSimulationState(SimulationState* s){
     while (s != nullptr){
-      std::cout << s->NS->Node2Continuation.first << ": continuation" <<  REnodeClass::REnodeToString(s->NS->Node2Continuation.second) << std::endl;
+      std::cout << "continuation: " <<  REnodeClass::REnodeToString(s->NS->Ccontinuation) << std::endl;
       FollowAtomata::DumpState(s->NS);
       s = s->Next;
     }
@@ -121,10 +121,10 @@ namespace solverbin{
    bool IntersectionK::IsInCache(SimulationState* ss, SimulationCache* sc){
     bool ret = true;
     while (ss != nullptr){
-      auto nextCache = sc->NS2Cache.find(ss->NS->Node2Continuation.first);
+      auto nextCache = sc->NS2Cache.find(ss->NS);
       if (nextCache == sc->NS2Cache.end()){
         auto NextCache = new SimulationCache(ss->NS);
-        sc->NS2Cache.insert(std::make_pair(ss->NS->Node2Continuation.first, NextCache));
+        sc->NS2Cache.insert(std::make_pair(ss->NS, NextCache));
         ret = false;
         sc = NextCache;
         ss = ss->Next;
@@ -149,7 +149,7 @@ namespace solverbin{
       SS->Next = new SimulationState(FList[i].NState);
       SS = SS->Next;
     };
-    Scache = new SimulationCache((FollowAtomata::NFAState*)malloc(sizeof(FollowAtomata::NFAState)));
+    Scache = new SimulationCache((FollowAtomata::State*)malloc(sizeof(FollowAtomata::State)));
     // IsInCache(SSBegin, Scache);
     ComputeAlphabet(REClassList);
     // DumpAlphabet(Alphabet);
@@ -171,7 +171,7 @@ namespace solverbin{
       // std::cout << "matching: " << int(c) << " " << std::endl;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
       auto ss = s;
-      std::vector<std::set<FollowAtomata::NFAState*>> NextList;
+      std::vector<std::vector<FollowAtomata::State*>> NextList;
       int FollowID = 0;
       bool ISN = false;
       while (ss != nullptr){

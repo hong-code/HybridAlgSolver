@@ -49,7 +49,7 @@ enum AssertionStatus {
       NODE_NULLABLE = 0,
       NODE_NULLABLE_UNKNOWN = 1,
       NODE_NULLABLE_NOT = 2,
-      NODE_LookAhead = 3,
+      NODE_MATCH = 3,
 };
 
 struct RuneClass
@@ -80,6 +80,7 @@ class REnode{
     std::string Str;    // string Kind
     std::string PrefixStr;
     bool Iscompute = false;
+    bool Isnullable = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;
     REnode* UnfoldNode = nullptr;
     REnode* First = nullptr;
