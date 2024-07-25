@@ -176,8 +176,10 @@ namespace solverbin{
       bool ISN = false;
       while (ss != nullptr){
         auto nextns1 = FList[FollowID].StepOneByte(ss->NS, c);
-        if (nextns1.size() == 0)
+        if (nextns1.size() == 0){
           ISN = true;
+          break;
+        }
         NextList.emplace_back(nextns1);
         ss = ss->Next;
         FollowID = FollowID + 1;

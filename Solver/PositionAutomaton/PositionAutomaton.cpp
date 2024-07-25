@@ -38,14 +38,14 @@ namespace solverbin{
             S->IndexSequence.insert(itc);
           REnode* e = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));  
           e->Children.emplace_back(it->Ccontinuation);
-          e->Children.emplace_back(S->Ccontinuation);
+          e->Children.emplace_back(s2->Ccontinuation);
           S->Ccontinuation = e;
           VEC.emplace_back(S);
         }
         else
           continue;  
-    }
-    else
+      }
+      else
         continue;    
     }
     return VEC;
@@ -110,14 +110,14 @@ namespace solverbin{
                   e2->Children.emplace_back(it->Ccontinuation);
                   e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
                 }
-              }  
-              it->Ccontinuation = e2;         
+              }        
+              auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
               if (RSVec1.size() != 0){
-                auto Vec_Ret = MergeState(RSVec1, it);
+                auto Vec_Ret = MergeState(RSVec1, nfa_e2);
                 RSVec2.insert(RSVec2.end(), Vec_Ret.begin(), Vec_Ret.end());
               }
               else{
-                RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange));
+                RSVec2.emplace_back(nfa_e2);
               }
             }
           }
@@ -556,7 +556,7 @@ namespace solverbin{
   void  FollowAtomata::DumpState(State* s){
     std::cout << "Follow: ";
     for (auto i : s->FirstSet){
-      std::cout << REnodeClass::REnodeToString(i->Ccontinuation) << " ";
+      std::cout << REnodeClass::REnodeToString(i->Ccontinuation) << "\n";
     }
     std::cout << "" << std::endl;
   }
