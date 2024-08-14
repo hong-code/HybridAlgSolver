@@ -151,9 +151,9 @@ namespace solverbin{
     case Kind::REGEXP_UNION:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
-      e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-      e1->Isnullable = false;
       if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+        e1->Isnullable = false;
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           auto RSA = FirstNode(e1->Children[i]);
           auto RS1 = RSA.second;
@@ -182,9 +182,9 @@ namespace solverbin{
     case Kind::REGEXP_STAR:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
-      e1->Isnullable = true;
       if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = true;
         auto RSA = FirstNode(e1->Children[0]);
         auto RS1 = RSA.second;
         if (RS1.size() != 0){
@@ -208,61 +208,12 @@ namespace solverbin{
         return std::make_pair(Vec1->second, Vec2->second);
       break;
     }
-    case Kind::REGEXP_PLUS:{
-      // e1->Status = NODE_STATUS::NODE_NULLABLE;
-      // if (e1->FiretSeq.empty()){
-      //   e1->kind = Kind::REGEXP_CONCAT;
-      //   if (e1->UnfoldNode == nullptr)
-      //     e1->UnfoldNode = REClass.CopyREnode(e1->Children[0]);
-      //   REnode* e3 = REClass.initREnode(Kind::REGEXP_STAR, RuneClass(0, 0));  
-      //   e3->Children = e1->Children;
-      //   e1->Children.pop_back();
-      //   e1->Children.insert(e1->Children.begin(), e3);
-      //   e1->Children.insert(e1->Children.begin(), e1->UnfoldNode);
-      //   for (long unsigned int i = 0; i < e1->Children.size(); i++){
-      //     auto RS1 = FirstNode(e1->Children[i]).second;
-      //     if (RS1.size() != 0){
-      //       for (auto it : RS1){
-      //         REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
-      //         if (it.second->KindReturn() == Kind::REGEXP_NONE){
-      //           if (i == e1->Children.size() - 1)
-      //             e2 = it.second;
-      //           else{
-      //             if (i == e1->Children.size() - 2){
-      //               e2 = *(e1->Children.end()-1);
-      //             }
-      //             else
-      //               e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
-      //           }
-      //         }
-      //         else{
-      //           if (i == e1->Children.size() - 1)
-      //             e2 = it.second;
-      //           else{
-      //             e2->Children.emplace_back(it.second);
-      //             e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
-      //           }
-      //         }
-      //         RSVec.insert(std::make_pair(it.first, e2));
-      //       }
-      //     }
-      //     if (e1->Children[i]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
-      //       e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-      //       break;
-      //     }
-      //   }
-      //   e1->FiretSeq = RSVec;
-      // }
-      // else 
-      //   return e1->FiretSeq;
-      // break;
-    }
     case Kind::REGEXP_OPT:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
-      e1->Isnullable = true;
       if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = true;
         auto LookAheadNodes = REClass.initREnode(Kind::REGEXP_OPT, RuneClass(0, 0));
         auto RSA = FirstNode(e1->Children[0]);
         auto RS1 = RSA.second;
@@ -280,9 +231,9 @@ namespace solverbin{
     case Kind::REGEXP_CHARCLASS:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
-      e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-      e1->Isnullable = false;
       if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = true;  
         REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
         IndexS2.insert(FindIndexOfNodes(e1));
         FollowAtomata::State* NS = new FollowAtomata::State(IndexS2, e2, e1->Rune_Class);
@@ -303,67 +254,7 @@ namespace solverbin{
     case Kind::REGEXP_STRING:
       break;
     case Kind::REGEXP_LOOP:{
-      // int min = e1->Counting.min;
-      // int max = e1->Counting.max;
-      // if (e1->FiretSeq.empty()){
-      //   int iteration = 1;
-      //   if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_UNKNOWN){
-      //     REClass.isNullable(e1->Children[0]);
-      //   }
-      //   if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
-      //     iteration = e1->Counting.max;
-      //   }
-      //   else
-      //     iteration = 1;
-      //   if (e1->Counting.min == 0 || e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE)  
-      //     e1->Status = NODE_STATUS::NODE_NULLABLE;
-      //   else
-      //     e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-      //   for(int i = 0; i < iteration; i++){
-      //     auto RS1 = FirstNode(REClass.CopyREnode(e1->Children[0])).second;
-      //     if (RS1.size() != 0){
-      //       auto e3 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0)); // e1 : r{d, d} e3 : r{d-1, d-1}
-      //       e3->Children = e1->Children;
-      //       if (e1->Counting.min > 0){
-      //         min--;
-      //         max--;
-      //         e3->Counting = RuneClass(min, max);
-      //       }
-      //       else{
-      //         max--;
-      //         e3->Counting = RuneClass(0, max);
-      //       }
-      //       if (e3->Counting.max == 0){
-      //         e3->kind = Kind::REGEXP_NONE;
-      //       }
-      //       for (auto it : RS1){
-      //         if (it.second->KindReturn() == Kind::REGEXP_NONE){
-      //           RSVec.insert(std::make_pair(it.first, e3));
-      //         }
-      //         else{
-      //           if (e3->kind == Kind::REGEXP_NONE){
-      //             REnode* e2 =  it.second;
-      //             RSVec.insert(std::make_pair(it.first, e2));
-      //           }
-      //           else{
-      //             REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
-      //             e2->Children.emplace_back(it.second);
-      //             e2->Children.emplace_back(e3);
-      //             RSVec.insert(std::make_pair(it.first, e2));
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      //   if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE || e1->Counting.min == 0)
-      //     e1->Status = NODE_STATUS::NODE_NULLABLE;
-      //   else
-      //     e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
-      //   e1->FiretSeq = RSVec;
-      // }
-      // else 
-      //   return e1->FiretSeq;
-      // break;
+      
     }
     case Kind::REGEXP_REPEAT:{
       // int min = e1->Counting.min;
@@ -455,9 +346,9 @@ namespace solverbin{
     case Kind::REGEXP_Lookahead:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
-      e1->Isnullable = false;
       if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = false;
         auto R1 = FirstNode(e1->Children[0]);
         for (auto it : R1.first){
           auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_Lookahead, RuneClass(0,0));
