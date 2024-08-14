@@ -232,8 +232,8 @@ namespace solverbin{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
       if (Vec2 == Node2NFAState.end()){
-        e1->Status = NODE_STATUS::NODE_NULLABLE;
-        e1->Isnullable = true;  
+        e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+        e1->Isnullable = false;  
         REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
         IndexS2.insert(FindIndexOfNodes(e1));
         FollowAtomata::State* NS = new FollowAtomata::State(IndexS2, e2, e1->Rune_Class);
