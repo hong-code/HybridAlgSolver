@@ -62,6 +62,7 @@ namespace solverbin{
   switch (e1->KindReturn()){
     case Kind::REGEXP_NONE:{
       e1->Status = NODE_STATUS::NODE_NULLABLE;
+      e1->Isnullable = true;
       break;
     }
     case Kind::REGEXP_RUNE:{
@@ -528,12 +529,12 @@ namespace solverbin{
       NFAStateVec = itc->second;
       return NFAStateVec;
     }
-    bool Mark = false;
+    // bool Mark = false;
     for (auto i : s->FirstSet){
       if (c >= i->ValideRange.min && c <= i->ValideRange.max){
         auto Tuple = FirstNode(i->Ccontinuation);
-        if (Tuple.second.size() == 0)
-          Mark = true;
+        // if (Tuple.second.size() == 0)
+        //   Mark = true;
         i->FirstSet = Tuple.second;
         i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
         if (i->Ccontinuation->Isnullable){
@@ -546,9 +547,9 @@ namespace solverbin{
         continue;
       
     }
-    if (Mark){
-      NFAStateVec.emplace_back(MatchState);
-    }
+    // if (Mark){
+    //   NFAStateVec.emplace_back(MatchState);
+    // }
     s->NextStates.insert(std::make_pair(REClass.ByteMap[c], NFAStateVec));
     return NFAStateVec;
   }
