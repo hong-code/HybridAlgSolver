@@ -163,7 +163,7 @@ namespace solverbin{
             e1->Status = NODE_STATUS::NODE_NULLABLE;
           } 
           if (e1->Children[i]->Isnullable){
-            e1->Isnullable;
+            e1->Isnullable = true;
           }
         }
         Node2NFAState.insert(std::make_pair(e1, RSVec2));
