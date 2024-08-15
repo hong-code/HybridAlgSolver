@@ -152,12 +152,16 @@ namespace solverbin{
     std::vector<FollowAtomata::State*> VEC;
     for (auto it : SV1){
       if (it->ValideRange.max >= s2->ValideRange.min){
-        if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
-          REClass.isNullable(it->Ccontinuation);
-        }
+        
         int up_bound = std::min(it->ValideRange.max, s2->ValideRange.max);
         int low_bound = std::max(it->ValideRange.min, s2->ValideRange.min);
         if (up_bound >= low_bound){
+          if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
+            REClass.isNullable(it->Ccontinuation);
+            if (it->Ccontinuation->Isnullable) {
+              continue;
+            }
+          }
           auto S = new FollowAtomata::State(s2->IndexSequence, it->Ccontinuation, it->ValideRange);
           S->ValideRange = RuneClass(low_bound, up_bound);
           for (auto itc : it->IndexSequence)
@@ -168,11 +172,27 @@ namespace solverbin{
           S->Ccontinuation = e;
           VEC.emplace_back(S);
         }
-        else
-          continue;  
+        else {
+          if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
+            REClass.isNullable(it->Ccontinuation);
+            if (!it->Ccontinuation->Isnullable) {
+              VEC.emplace_back(s2);
+            }
+          }
+          continue;
+        }
+
       }
-      else
-        continue;    
+      else {
+        if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
+          REClass.isNullable(it->Ccontinuation);
+          if (!it->Ccontinuation->Isnullable) {
+            VEC.emplace_back(s2);
+          }
+        }
+        continue;
+      }
+         
     }
     return VEC;
   }  
