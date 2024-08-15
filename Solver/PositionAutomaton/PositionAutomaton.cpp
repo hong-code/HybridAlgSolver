@@ -519,12 +519,12 @@ namespace solverbin{
         e1->Isnullable = false;
         auto R1 = FirstNode(e1->Children[0]);
         for (auto it : R1.first){
-          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_Lookahead, RuneClass(0,0));
+          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_NLookahead, RuneClass(0,0));
           REnode_LOOKA->Children.emplace_back(it->Ccontinuation);
           RSVec1.emplace_back(new FollowAtomata::State(it->IndexSequence, REnode_LOOKA, it->ValideRange));
         }
         for (auto it : R1.second){
-          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_Lookahead, RuneClass(0,0));
+          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_NLookahead, RuneClass(0,0));
           REnode_LOOKA->Children.emplace_back(it->Ccontinuation);
           RSVec1.emplace_back(new FollowAtomata::State(it->IndexSequence, REnode_LOOKA, it->ValideRange));
         }

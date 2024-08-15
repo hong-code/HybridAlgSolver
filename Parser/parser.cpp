@@ -291,7 +291,7 @@ namespace solverbin {
           REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookahead, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
           REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
-          REnodeLookahead->Children[0] = REnodeCONCAT;
+          REnodeLookahead->Children.emplace_back(REnodeCONCAT);
           r->Children.emplace_back(REnodeLookahead);
           break;
         }

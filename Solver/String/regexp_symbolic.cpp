@@ -315,6 +315,17 @@ std::string REnodeClass::REnodeToString(REnode* r ) {
         break;
       }
 
+      case Kind::REGEXP_NLookahead:
+      {
+        retStr += "(?!";
+        for(unsigned i=0; i<r->Children.size(); ++i) {
+          //if(i != 0) retStr += ".";
+          retStr += REnodeToString( r->Children[i] );
+        }
+        retStr += ")";
+        break;
+      }
+
       default:
       {
         // std::stringstream ss;
