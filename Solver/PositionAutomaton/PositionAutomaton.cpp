@@ -288,13 +288,14 @@ namespace solverbin{
           auto RS1 = RSA.second;
           if (RS1.size() != 0){
             for (auto it : RS1){
-              REnode* e2 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0));
+              REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
                 if (e1->Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
                   e2->Children = e1->Children;
                   e2->Counting = Counting;
+                  e2->kind == Kind::REGEXP_LOOP;
                 }
               }
               else{
