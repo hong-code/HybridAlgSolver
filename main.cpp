@@ -1,4 +1,8 @@
 #include <iostream>
+#include <fstream>
+#include <locale>
+#include <codecvt>
+#include <unistd.h>
 #include "Solver/solver_kind.h"
 #include "Solver/solver.h"
 #include "Parser/parser.h"
@@ -6,25 +10,33 @@
 
 
 int main(int argc, char* argv[]){
-  std::cout << "Hello, World!" << std::endl;
-  // std::string s = R"(^(([\p{Lu}\p{Ll}]|[1-9]|\-|\.)+)@{1}((([\p{Lu}\p{Ll}]|[1-9]|\-){1,67})|(([\p{Lu}\p{Ll}]|[1-9]|\-)+\.([\p{Lu}\p{Ll}]|[1-9]|\-){1,67}))\.((([a-z]|[A-Z]|[1-9]){2,4})(\.([a-z]|A|Z|[1-9]){2})?)\z)";
-  std::wstring s = L"(^(([\\p{Lu}\\p{Ll}]+((\\-|\\+|\\.)[\\p{Lu}\\p{Ll}]+)*@[\\p{Lu}\\p{Ll}]+((\\-|\\.)[\\p{Lu}\\p{Ll}]+)*\\.[\\p{Lu}\\p{Ll}]+((\\-|\\.)[\\p{Lu}\\p{Ll}]+)*)\\s*[,]{0,1}\\s*)+\\z)";
-
-  std::wstring ren  = L"([\\u3007-\\u3400])";
-  std::wstring tt  = L"(\\p{L})";
-  // auto s2 = R"(((\w|\d|\-|\.)+)@{1}(((\w|\d|\-){1,67})|((\w|\d|\-)+\.(\w|\d|\-){1,67}))\.((([a-z]|[A-Z]|\d){2,4})(\.([a-z]|A|Z|\d){2})?)\z)";
-  std::wstring s2 = L"(^((\\w+((\\-|\\+|\\.)\\w+)*@\\w+((\\-|\\.)\\w+)*\\.\\w+((\\-|\\.)\\w+)*)\\s*[,]{0,1}\\s*)+\\z)";
-  std::wstring s1 = L"(2@v\\.X)";
-  auto ren1 = solverbin::Parer(ren);
-  auto ren6 = solverbin::Parer(s);
-  auto ren2 = solverbin::Parer(s2);
-  auto int1 = solverbin::RegExpSymbolic::IntersectionNFA(ren1.Re, ren2.Re);
-  // int1.Intersect();
-  // solverbin::RegExpSymbolic RR;
-  std::wstring s5 = L"(^((\\w+((\\-|\\+|\\.)\\w+)*@\\w+((\\-|\\.)\\w+)*\\.\\w+((\\-|\\.)\\w+)*)\\s*[,]{0,1}\\s*)+\\z)";
-  auto ren3 = solverbin::Parer(s5);
+  if (argc != 2){
+    std::cout << "parameter error" << std::endl;
+  }
+  std::ifstream infile;
+  infile.open(argv[1], std::ios::binary);
+  std::string line;
+  bool Ret = true;
+  std::vector<std::wstring> Regex_list;
+  wchar_t c;
+  while (getline(infile, line))
+  {
+    std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+    std::wstring unicodeStr = converter.from_bytes(line);
+    c = unicodeStr.back();
+    if (c == '\r'){
+      unicodeStr.pop_back();
+    }
+    Regex_list.emplace_back(unicodeStr);
+  }
+  // Regex_list[Regex_list.size() - 1].push_back(c);
+  std::vector<solverbin::REnodeClass> ReList;
+  for (auto str : Regex_list){
+    auto ren = solverbin::Parer(str);
+    ReList.emplace_back(ren.Re);
+  }
   // auto kk = RR.FMDFA.Fullmatch(R"(a+(a?){0,5}aaaaaaaaaaaa)", "aaaaaaaaaaaaa");
-  auto kk = solverbin::DetectABTNFA(ren3.Re);
+  auto kk = solverbin::DetectABTNFA(ReList[0]);
   auto k1 = kk.IsABT(kk.SSBegin);
   if (k1){
     std::cout <<  "prefix: " << kk.InterStr << std::endl;
