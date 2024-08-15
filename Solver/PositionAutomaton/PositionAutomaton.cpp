@@ -50,7 +50,7 @@ namespace solverbin{
     e1->Isnullable = true;
     for (long unsigned int i = 0; i < e1->Children.size(); i++){
       Isnullable(e1->Children[i]);
-      if (e1->Children[i]->Isnullable = false){
+      if (!e1->Children[i]->Isnullable){
         e1->Isnullable = false;
         break;
       }
@@ -61,7 +61,7 @@ namespace solverbin{
     e1->Isnullable = false;
     for (long unsigned int i = 0; i < e1->Children.size(); i++){
       Isnullable(e1->Children[i]);
-      if (e1->Children[i]->Isnullable = true){
+      if (e1->Children[i]->Isnullable){
         e1->Isnullable = true;
         break;
       }
@@ -76,7 +76,7 @@ namespace solverbin{
   }
   case Kind::REGEXP_PLUS:{
     Isnullable(e1->Children[0]);
-    if (e1->Children[0]->Isnullable = true){
+    if (e1->Children[0]->Isnullable){
       e1->Isnullable = true;
     }
     else{
@@ -102,7 +102,7 @@ namespace solverbin{
     break;
   case Kind::REGEXP_LOOP:{
     Isnullable(e1->Children[0]);
-    if (e1->Children[0]->Isnullable = true){
+    if (e1->Children[0]->Isnullable){
       e1->Isnullable = true;
     }
     else if (e1->Counting.min == 0){
@@ -157,7 +157,7 @@ namespace solverbin{
         int low_bound = std::max(it->ValideRange.min, s2->ValideRange.min);
         if (up_bound >= low_bound){
           if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
-            REClass.isNullable(it->Ccontinuation);
+            Isnullable(it->Ccontinuation);
             if (it->Ccontinuation->Isnullable) {
               continue;
             }
@@ -174,7 +174,7 @@ namespace solverbin{
         }
         else {
           if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
-            REClass.isNullable(it->Ccontinuation);
+            Isnullable(it->Ccontinuation);
             if (!it->Ccontinuation->Isnullable) {
               VEC.emplace_back(s2);
             }
@@ -185,7 +185,7 @@ namespace solverbin{
       }
       else {
         if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
-          REClass.isNullable(it->Ccontinuation);
+          Isnullable(it->Ccontinuation);
           if (!it->Ccontinuation->Isnullable) {
             VEC.emplace_back(s2);
           }
