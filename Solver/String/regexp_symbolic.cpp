@@ -444,7 +444,15 @@ REnode* REnodeClass::CopyREnode(REnode* e1){
     REnode* e2 = CopyREnode(e1->Children[0]);
     e->Children.emplace_back(e2);
     break;
-  }  
+  }
+  case Kind::REGEXP_Lookahead:{
+    e->kind = e1->kind;
+    e->Status = e1->Status;
+    e->Counting = e1->Counting;
+    REnode* e2 = CopyREnode(e1->Children[0]);
+    e->Children.emplace_back(e2);
+    break;
+  }    
   default:
     break;
   }

@@ -25,6 +25,16 @@ namespace solverbin{
     }
   }
 
+  void FollowAtomata::ProcessCounting(RuneClass& r){
+    if (r.min == 0){
+      r.max--;
+    }
+    else {
+      r.min--;
+      r.max--;
+    }
+  }
+
   std::vector<FollowAtomata::State*> FollowAtomata::MergeState(std::vector<FollowAtomata::State*> SV1, FollowAtomata::State* s2){
     std::vector<FollowAtomata::State*> VEC;
     for (auto it : SV1){
@@ -122,8 +132,18 @@ namespace solverbin{
               }
             }
           }
-          if (RSA.first.size() != 0)
+          if (RSVec1.size() == 0)
             RSVec1.insert(RSVec1.end(), RSA.first.begin(), RSA.first.end());
+          else {
+            std::vector<FollowAtomata::State*> RSVec_Stable;
+            for (auto LookAroundNode : RSA.first){
+              auto nfa_LookAroundNode = new FollowAtomata::State(LookAroundNode->IndexSequence, LookAroundNode->Ccontinuation, LookAroundNode->ValideRange);
+              auto Vec_Ret = MergeState(RSVec1, nfa_LookAroundNode);
+              RSVec_Stable.insert(RSVec_Stable.end(), Vec_Ret.begin(), Vec_Ret.end());
+            }
+            if (RSVec_Stable.size() != 0)
+              RSVec1 = RSVec_Stable;
+          } 
           if (!e1->Children[i]->Isnullable){
             e1->Isnullable = false;
           }
@@ -254,7 +274,76 @@ namespace solverbin{
     case Kind::REGEXP_STRING:
       break;
     case Kind::REGEXP_LOOP:{
-      
+      auto Vec2 = Node2NFAState.find(e1);
+      auto Vec1 = Node2LookAState.find(e1);
+      RuneClass Counting;
+      Counting.min = e1->Counting.min;
+      Counting.max = e1->Counting.max;
+      if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = true;
+        while (Counting.max > 0){
+          auto RSA = FirstNode(REClass.CopyREnode(e1->Children[0]));
+          ProcessCounting(Counting);
+          auto RS1 = RSA.second;
+          if (RS1.size() != 0){
+            for (auto it : RS1){
+              REnode* e2 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0));
+              if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
+                if (e1->Counting.max == 0)
+                  e2 = it->Ccontinuation;
+                else{
+                  e2->Children = e1->Children;
+                  e2->Counting = Counting;
+                }
+              }
+              else{
+                if (e1->Counting.max == 0)
+                  e2 = it->Ccontinuation;
+                else{
+                  REnode* e3 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0));
+                  e3->Children = e1->Children;
+                  e3->Counting = Counting;
+                  e2->Children.emplace_back(it->Ccontinuation);
+                  e2->Children.emplace_back(e3);
+                }
+              }        
+              auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
+              if (RSVec1.size() != 0){
+                auto Vec_Ret = MergeState(RSVec1, nfa_e2);
+                RSVec2.insert(RSVec2.end(), Vec_Ret.begin(), Vec_Ret.end());
+              }
+              else{
+                RSVec2.emplace_back(nfa_e2);
+              }
+            }
+          }
+          if (RSVec1.size() == 0)
+            RSVec1.insert(RSVec1.end(), RSA.first.begin(), RSA.first.end());
+          else {
+            std::vector<FollowAtomata::State*> RSVec_Stable;
+            for (auto LookAroundNode : RSA.first){
+              auto nfa_LookAroundNode = new FollowAtomata::State(LookAroundNode->IndexSequence, LookAroundNode->Ccontinuation, LookAroundNode->ValideRange);
+              auto Vec_Ret = MergeState(RSVec1, nfa_LookAroundNode);
+              RSVec_Stable.insert(RSVec_Stable.end(), Vec_Ret.begin(), Vec_Ret.end());
+            }
+            if (RSVec_Stable.size() != 0)
+              RSVec1 = RSVec_Stable;
+          }
+          if (!e1->Children[0]->Isnullable && e1->Counting.min > 0){
+            e1->Isnullable = false;
+          }
+          if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
+            if (e1->Counting.min > 0)
+              e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+            break;
+          }
+        }
+      }  
+      else {
+        return std::make_pair(Vec1->second, Vec2->second);
+      }
+      break;
     }
     
     case Kind::REGEXP_Lookahead:{

@@ -62,6 +62,7 @@ namespace solverbin{
       State* FindInNFACache(NFACache* DC, State* s);
       std::vector<State*> StepOneByte(State* s, uint8_t c);
       static void DumpState(State* s);
+      void ProcessCounting(RuneClass&);
       FollowAtomata();
       FollowAtomata(REnodeClass e);
       FollowAtomata(Node r);
