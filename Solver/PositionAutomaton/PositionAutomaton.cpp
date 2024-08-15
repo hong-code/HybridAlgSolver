@@ -375,6 +375,34 @@ namespace solverbin{
       }
     }
 
+    case Kind::REGEXP_NLookahead:{
+      auto Vec2 = Node2NFAState.find(e1);
+      auto Vec1 = Node2LookAState.find(e1);
+      if (Vec2 == Node2NFAState.end()){
+        e1->Status = NODE_STATUS::NODE_NULLABLE;
+        e1->Isnullable = false;
+        auto R1 = FirstNode(e1->Children[0]);
+        for (auto it : R1.first){
+          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_Lookahead, RuneClass(0,0));
+          REnode_LOOKA->Children.emplace_back(it->Ccontinuation);
+          RSVec1.emplace_back(new FollowAtomata::State(it->IndexSequence, REnode_LOOKA, it->ValideRange));
+        }
+        for (auto it : R1.second){
+          auto REnode_LOOKA = REClass.initREnode(Kind::REGEXP_Lookahead, RuneClass(0,0));
+          REnode_LOOKA->Children.emplace_back(it->Ccontinuation);
+          RSVec1.emplace_back(new FollowAtomata::State(it->IndexSequence, REnode_LOOKA, it->ValideRange));
+        }
+        Node2LookAState.insert(std::make_pair(e1, RSVec1));
+        Node2NFAState.insert(std::make_pair(e1, RSVec2));
+        if (e1->Children[0]->Isnullable)
+          e1->Isnullable = true;
+        return std::make_pair(RSVec1, RSVec2); 
+      }
+      else {
+        return std::make_pair(Vec1->second, Vec2->second);
+      }
+    }
+
     default: break;
     
   }
