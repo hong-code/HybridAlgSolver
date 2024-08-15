@@ -17,4 +17,6 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         PositionAutomaton/PositionAutomaton.cpp
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
+                        DetectAmbiguity_WithLookAround/DetectAmbiguity.h
+                        DetectAmbiguity_WithLookAround/DetectAmbiguity.cpp
                         )

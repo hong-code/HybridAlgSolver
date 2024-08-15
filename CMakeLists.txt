@@ -23,3 +23,6 @@ target_link_libraries(PositionTest Parserbin Solverbin)
 
 add_executable(Match Match.cpp)
 target_link_libraries(Match Parserbin Solverbin MembershipBin)
+
+add_executable(DetectAmbiguity DetectAmbiguity.cpp)
+target_link_libraries(DetectAmbiguity Parserbin Solverbin)

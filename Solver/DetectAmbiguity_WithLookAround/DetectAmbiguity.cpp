@@ -8,44 +8,52 @@
 #include "DetectAmbiguity.h"
 
 namespace solverbin{
-  DetectABTNFA::DetectABTNFA(REnodeClass r){
+  void DetectABTNFA_Lookaround::DumpAlphabet(std::set<uint8_t>& A){
+    std::cout << "The alphabet: ";
+    for (auto it : A){
+      std::cout << int(it) << " ";
+    }
+    std::cout << "" << std::endl;
+  }
+
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r){
     e1 = r;
-    F1 = RegExpSymbolic::FollowAtomata(e1);
+    F1 = FollowAtomata(e1);
     SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
     e1.ComputeAlphabet(e1.ByteMap, Alphabet);
     e1.BuildBytemapToString(e1.ByteMap);
-    RegExpSymbolic::DumpAlphabet(Alphabet);
+    DumpAlphabet(Alphabet);
   }
 
-  void DetectABTNFA::DumpTernarySimulationState(TernarySimulationState* TSS){
+  void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState* TSS){
     std::cout << "SimulationState: " << TSS << " IFlag: " << TSS->IFlag << " IsIntersect: " << TSS->IsSat << 
     " IsDone" << TSS->IsDone << std::endl;
-    std::cout << TSS->NS1->Node2Continuation.first << ": continuation" << e1.REnodeToString(TSS->NS1->Node2Continuation.second) << std::endl;
-    std::cout << TSS->NS2->NS1->Node2Continuation.first << ": continuation" << e1.REnodeToString(TSS->NS2->NS1->Node2Continuation.second) << std::endl;
-    std::cout << TSS->NS2->NS2->Node2Continuation.first << ": continuation" << e1.REnodeToString(TSS->NS2->NS2->Node2Continuation.second) << std::endl;
+    std::cout << "continuation" << e1.REnodeToString(TSS->NS1->Ccontinuation) << std::endl;
+    std::cout << ": continuation" << e1.REnodeToString(TSS->NS2->NS1->Ccontinuation) << std::endl;
+    std::cout << ": continuation" << e1.REnodeToString(TSS->NS2->NS2->Ccontinuation) << std::endl;
     F1.DumpState(TSS->NS1);
     F1.DumpState(TSS->NS2->NS1);
     F1.DumpState(TSS->NS2->NS2);
   }
 
-  std::set<DetectABTNFA::TernarySimulationState> DetectABTNFA::DTSimulationState(TernarySimulationState* TS){
-    std::set<DetectABTNFA::TernarySimulationState> TSSSet;
-    if (TS->NS1->Node2Continuation.first == TS->NS2->NS1->Node2Continuation.first && TS->NS1->Node2Continuation.first != TS->NS2->NS2->Node2Continuation.first){
+  std::set<DetectABTNFA_Lookaround::TernarySimulationState> DetectABTNFA_Lookaround::DTSimulationState(TernarySimulationState* TS){
+    std::set<DetectABTNFA_Lookaround::TernarySimulationState> TSSSet;
+    if (TS->NS1->Ccontinuation == TS->NS2->NS1->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS2->Ccontinuation){
       TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS2, TS->NS2->NS2));
       TSSSet.insert(TernarySimulationState(Normal, TS->NS2->NS2, TS->NS1, TS->NS2->NS2));
     }
-    else if (TS->NS1->Node2Continuation.first == TS->NS2->NS2->Node2Continuation.first && TS->NS1->Node2Continuation.first != TS->NS2->NS1->Node2Continuation.first){
+    else if (TS->NS1->Ccontinuation == TS->NS2->NS2->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS1->Ccontinuation){
       TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS1, TS->NS2->NS1));
       TSSSet.insert(TernarySimulationState(Normal, TS->NS2->NS1, TS->NS2->NS1, TS->NS1));
     }
-    else if (TS->NS2->NS1->Node2Continuation.first == TS->NS2->NS2->Node2Continuation.first && TS->NS1->Node2Continuation.first != TS->NS2->NS1->Node2Continuation.first){
+    else if (TS->NS2->NS1->Ccontinuation == TS->NS2->NS2->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS1->Ccontinuation){
       TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS1, TS->NS2->NS1));
       TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS1, TS->NS1));
     }
     return TSSSet;
   }
 
-  bool DetectABTNFA::DetectABTOFS(TernarySimulationState* TSS, std::set<TernarySimulationState> TSSET){
+  bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState* TSS, std::set<TernarySimulationState> TSSET){
     std::cout << "witness str: " << WitnessStr << std::endl;
     // DumpTernarySimulationState(TSS);
     for (auto c : Alphabet){
@@ -89,7 +97,7 @@ namespace solverbin{
     return false;
   }
 
-  bool DetectABTNFA::IsABT(TernarySimulationState* TSS){
+  bool DetectABTNFA_Lookaround::IsABT(TernarySimulationState* TSS){
     std::cout << "witness str: " << InterStr << std::endl;
     DumpTernarySimulationState(TSS);
     for (auto c : Alphabet){
