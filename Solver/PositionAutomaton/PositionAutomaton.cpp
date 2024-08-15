@@ -35,10 +35,126 @@ namespace solverbin{
     }
   }
 
+  void FollowAtomata::Isnullable(REnode* e1){
+  switch (e1->KindReturn())
+  {
+  case Kind::REGEXP_NONE:{
+    e1->Isnullable = true;
+    break;
+  }
+  case Kind::REGEXP_RUNE:{
+    e1->Isnullable = false;
+    break;
+  }
+  case Kind::REGEXP_CONCAT:{
+    e1->Isnullable = true;
+    for (long unsigned int i = 0; i < e1->Children.size(); i++){
+      Isnullable(e1->Children[i]);
+      if (e1->Children[i]->Isnullable = false){
+        e1->Isnullable = false;
+        break;
+      }
+    }
+    break;
+  }
+  case Kind::REGEXP_UNION:{
+    e1->Isnullable = false;
+    for (long unsigned int i = 0; i < e1->Children.size(); i++){
+      Isnullable(e1->Children[i]);
+      if (e1->Children[i]->Isnullable = true){
+        e1->Isnullable = true;
+        break;
+      }
+    }
+    break;
+  }
+  case Kind::REGEXP_STAR:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+    e1->Isnullable = true;
+    Isnullable(e1->Children[0]);
+    break;
+  }
+  case Kind::REGEXP_PLUS:{
+    Isnullable(e1->Children[0]);
+    if (e1->Children[0]->Isnullable = true){
+      e1->Isnullable = true;
+    }
+    else{
+      e1->Isnullable = false;
+    }
+    break;
+  }
+  case Kind::REGEXP_OPT:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+    e1->Isnullable = true;
+    Isnullable(e1->Children[0]);
+    break;
+  }
+  case Kind::REGEXP_CHARCLASS:{
+    e1->Isnullable = false;
+    break;
+  }
+  case Kind::REGEXP_DIFF:
+    break;
+  case Kind::REGEXP_COMPLEMENT:
+    break;
+  case Kind::REGEXP_STRING:
+    break;
+  case Kind::REGEXP_LOOP:{
+    Isnullable(e1->Children[0]);
+    if (e1->Children[0]->Isnullable = true){
+      e1->Isnullable = true;
+    }
+    else if (e1->Counting.min == 0){
+      e1->Isnullable = true;
+    }
+    else {
+      e1->Isnullable = false;
+    }
+    break;
+  }
+  // case Kind::REGEXP_REPEAT:{
+  //   isNullable(e1->Children[0]);
+  //   if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE){
+  //     e1->Status = NODE_STATUS::NODE_NULLABLE;
+  //   }
+  //   else{
+  //     e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
+  //   }
+  //   break;
+  // }  
+  case Kind::REGEXP_Lookahead:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+    Isnullable(e1->Children[0]);
+    if (e1->Children[0]->Isnullable)
+      e1->Isnullable = true;
+    else  
+      e1->Isnullable = false;  
+    break;
+  }
+
+  case Kind::REGEXP_NLookahead:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+    Isnullable(e1->Children[0]);
+    if (e1->Children[0]->Isnullable)
+      e1->Isnullable = true;
+    else  
+      e1->Isnullable = false; 
+    break;
+  }
+
+  default:
+    break;
+  }
+}
+
   std::vector<FollowAtomata::State*> FollowAtomata::MergeState(std::vector<FollowAtomata::State*> SV1, FollowAtomata::State* s2){
     std::vector<FollowAtomata::State*> VEC;
     for (auto it : SV1){
       if (it->ValideRange.max >= s2->ValideRange.min){
+        if (it->Ccontinuation->kind == Kind::REGEXP_NLookahead) {
+          REClass.isNullable(it->Ccontinuation);
+        }
         int up_bound = std::min(it->ValideRange.max, s2->ValideRange.max);
         int low_bound = std::max(it->ValideRange.min, s2->ValideRange.min);
         if (up_bound >= low_bound){
