@@ -538,10 +538,15 @@ namespace solverbin {
       } // Zero or more.
 
       case '+': {
+        // RegexString.erase(0, 1);
+        // REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_PLUS, {0, 0});
+        // REnodeSTAR->Children.emplace_back(r->Children.back());
+        // r->Children.pop_back();
+        // r->Children.emplace_back(REnodeSTAR);
+
         RegexString.erase(0, 1);
-        REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_PLUS, {0, 0});
-        REnodeSTAR->Children.emplace_back(r->Children.back());
-        r->Children.pop_back();
+        REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_STAR, {0, 0});
+        REnodeSTAR->Children.emplace_back(Re.CopyREnode(r->Children.back()));
         r->Children.emplace_back(REnodeSTAR);
         break;
       }

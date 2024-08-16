@@ -55,7 +55,7 @@ namespace solverbin{
 
   bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState* TSS, std::set<TernarySimulationState> TSSET){
     std::cout << "witness str: " << WitnessStr << std::endl;
-    // DumpTernarySimulationState(TSS);
+    DumpTernarySimulationState(TSS);
     for (auto c : Alphabet){
       std::cout << "matching: " << int(c) << " " << std::endl;
       // if (TSS->byte2state.find(ByteMap[c]) == TSS->byte2state.end()){
@@ -123,7 +123,6 @@ namespace solverbin{
                 auto TSSET = DTSimulationState(ns);
                 InterStr.push_back(c);
                 if (!TSSET.empty()){
-                  SimulationCache.insert(std::make_pair(*ns, ns));
                   DumpTernarySimulationState(ns);
                   if (DetectABTOFS(ns, TSSET)){
                     InterStr = InterStr + WitnessStr;
