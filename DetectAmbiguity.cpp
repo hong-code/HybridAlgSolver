@@ -4,12 +4,19 @@
 #include <codecvt>
 #include <unistd.h>
 #include "Solver/solver_kind.h"
-#include "Solver/solver.h"
 #include "Parser/parser.h"
 #include "Solver/DetectAmbiguity_WithLookAround/DetectAmbiguity.h"
 
 
 int main(int argc, char* argv[]){
+  // DebugInformation
+  solverbin::Debug PrintInformation;
+  PrintInformation.PrintRegexString = true;
+  PrintInformation.PrintAlphabet = false;
+  PrintInformation.PrintREnode = true;
+  PrintInformation.PrintSimulation = false;
+  PrintInformation.PrintBytemap = false;
+
   if (argc != 2){
     std::cout << "parameter error" << std::endl;
   }
@@ -29,20 +36,21 @@ int main(int argc, char* argv[]){
     }
     Regex_list.emplace_back(unicodeStr);
   }
-  // Regex_list[Regex_list.size() - 1].push_back(c);
+
   std::vector<solverbin::REnodeClass> ReList;
+  std::wcout.sync_with_stdio(true);
   for (auto str : Regex_list){
+    if (solverbin::debug.PrintRegexString) std::wcout << L"Regex: " << str << std::endl;
     auto ren = solverbin::Parer(str);
     ReList.emplace_back(ren.Re);
+    auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re);
+    auto k1 = kk.IsABT(kk.SSBegin);
+    if (k1){
+      std::cout <<  "prefix: " << kk.InterStr << std::endl;
+      std::cout << "infix: " << kk.WitnessStr << std::endl;
+    }
+    else
+      std::cout << "false" << std::endl;
   }
-  // auto kk = RR.FMDFA.Fullmatch(R"(a+(a?){0,5}aaaaaaaaaaaa)", "aaaaaaaaaaaaa");
-  auto kk = solverbin::DetectABTNFA_Lookaround(ReList[0]);
-  auto k1 = kk.IsABT(kk.SSBegin);
-  if (k1){
-    std::cout <<  "prefix: " << kk.InterStr << std::endl;
-    std::cout << "infix: " << kk.WitnessStr << std::endl;
-  }
-  else
-    std::cout << "false" << std::endl;
-  // int1.Intersect();
+
 } 

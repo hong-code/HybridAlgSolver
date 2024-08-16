@@ -21,8 +21,8 @@ namespace solverbin{
     F1 = FollowAtomata(e1);
     SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
     e1.ComputeAlphabet(e1.ByteMap, Alphabet);
-    e1.BuildBytemapToString(e1.ByteMap);
-    DumpAlphabet(Alphabet);
+    if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
+    if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
   }
 
   void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState* TSS){
@@ -54,10 +54,12 @@ namespace solverbin{
   }
 
   bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState* TSS, std::set<TernarySimulationState> TSSET){
-    std::cout << "witness str: " << WitnessStr << std::endl;
-    DumpTernarySimulationState(TSS);
+    if (debug.PrintSimulation){
+      std::cout << "witness str: " << WitnessStr << std::endl;
+      DumpTernarySimulationState(TSS);
+    }
     for (auto c : Alphabet){
-      std::cout << "matching: " << int(c) << " " << std::endl;
+      if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
       // if (TSS->byte2state.find(ByteMap[c]) == TSS->byte2state.end()){
         std::set<TernarySimulationState*> TernarySimulationSet;
         auto nextns1 = F1.StepOneByte(TSS->NS1, c);
@@ -69,7 +71,7 @@ namespace solverbin{
           for (auto nextns2_it : nextns2){
             for (auto nextns3_it : nextns3){
               auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
-              DumpTernarySimulationState(ns);
+              if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
               auto itc = SimulationCache.find(*ns);
               if (itc != SimulationCache.end()){
                 TernarySimulationSet.insert(itc->second);
@@ -98,10 +100,12 @@ namespace solverbin{
   }
 
   bool DetectABTNFA_Lookaround::IsABT(TernarySimulationState* TSS){
-    std::cout << "witness str: " << InterStr << std::endl;
-    DumpTernarySimulationState(TSS);
+    if (debug.PrintSimulation){
+      std::cout << "witness str: " << WitnessStr << std::endl;
+      DumpTernarySimulationState(TSS);
+    }
     for (auto c : Alphabet){
-      std::cout << "matching: " << int(c) << " " << std::endl;
+      if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
       // if (TSS->byte2state.find(ByteMap[c]) == TSS->byte2state.end()){
         std::set<TernarySimulationState*> TernarySimulationSet;
         auto nextns1 = F1.StepOneByte(TSS->NS1, c);
@@ -113,7 +117,7 @@ namespace solverbin{
           for (auto nextns2_it : nextns2){
             for (auto nextns3_it : nextns3){
               auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
-              DumpTernarySimulationState(ns);
+              if (debug.PrintSimulation) DumpTernarySimulationState(ns);
               auto itc = DoneCache.find(*ns);
               if (itc != DoneCache.end()){
                 TernarySimulationSet.insert(itc->second);
@@ -123,7 +127,6 @@ namespace solverbin{
                 auto TSSET = DTSimulationState(ns);
                 InterStr.push_back(c);
                 if (!TSSET.empty()){
-                  DumpTernarySimulationState(ns);
                   if (DetectABTOFS(ns, TSSET)){
                     InterStr = InterStr + WitnessStr;
                     return true;

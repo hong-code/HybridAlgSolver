@@ -6,6 +6,7 @@
 #include <bitset>
 #include <ostream>
 #include <string.h>
+#include <regex>
 
 
 namespace solverbin {
@@ -523,14 +524,21 @@ namespace solverbin {
         }
         if (REnodeRClass->Children.size() > 1)
           r->Children.emplace_back(REnodeRClass);
-        else
+        else if (REnodeRClass->Children.size() == 1)
           r->Children.emplace_back(REnodeRClass->Children[0]);
+        else 
+          break;  
         break;
       }
 
       case '*': { 
         RegexString.erase(0, 1);
         REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_STAR, {0, 0});
+        if (r->Children.size() == 0){
+          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'*', '*'});
+          r->Children.emplace_back(REnodeRune);
+          break;
+        }
         REnodeSTAR->Children.emplace_back(r->Children.back());
         r->Children.pop_back();
         r->Children.emplace_back(REnodeSTAR);
@@ -546,6 +554,11 @@ namespace solverbin {
 
         RegexString.erase(0, 1);
         REnode* REnodeSTAR = Re.initREnode(Kind::REGEXP_STAR, {0, 0});
+        if (r->Children.size() == 0){
+          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'+', '+'});
+          r->Children.emplace_back(REnodeRune);
+          break;
+        }
         REnodeSTAR->Children.emplace_back(Re.CopyREnode(r->Children.back()));
         r->Children.emplace_back(REnodeSTAR);
         break;
@@ -566,18 +579,21 @@ namespace solverbin {
         std::string lo, hi;
         RegexString.erase(0, 1);
         std::string NUM = "";
+        std::wstring Prefix_string;
         bool issplit = false;
-        while (RegexString[0] != '}')
+        while (RegexString.size() != 0 && RegexString[0] != '}')
         {
           if (RegexString[0] == ','){
             issplit = true;
             lo = NUM;
             NUM = "";
+            Prefix_string.push_back(RegexString[0]);
             RegexString.erase(0, 1);
             if (RegexString[0] == '}')
               break;
           }
           NUM.push_back(RegexString[0]);
+          Prefix_string.push_back(RegexString[0]);
           RegexString.erase(0, 1);
         }
         if (issplit)
@@ -585,6 +601,12 @@ namespace solverbin {
         else{
           lo = NUM;
           hi = lo;
+        }
+        if (!solverbin::isInteger(lo) || !solverbin::isInteger(hi)){
+          REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'{', '{'});
+          r->Children.emplace_back(REnodeRune);
+          RegexString.insert(0, Prefix_string);
+          break;
         }
         RegexString.erase(0, 1);
         if (lo.size() == 0){
@@ -886,7 +908,8 @@ Parer::Parer(std::wstring regex_string){
   Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
   // Re.BuildBytemapToString(Re.ByteMap);
   // Re.BytemapRangeToString(Re.BytemapRange);
-  std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+  if (solverbin::debug.PrintREnode)
+    std::cout << Re.REnodeToString(Re.Renode) << std::endl;
 
 }
 Parer::Parer(){}

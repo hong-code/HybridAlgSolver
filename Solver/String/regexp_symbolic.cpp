@@ -22,6 +22,7 @@
 #include <list>
 #include <bitset>
 #include <ostream>
+#include <regex>
 #include "../../Parser/parser.h"
 
 
@@ -178,6 +179,24 @@ namespace solverbin {
 //   return r;
 // }
 
+bool isInteger(const std::string& str){
+    // 使用正则表达式检查字符串是否是一个整数
+    std::regex intRegex("^[+-]?[0-9]+$");
+    if (!std::regex_match(str, intRegex)) {
+        return false;
+    }
+
+    try {
+        std::size_t pos;
+        int num = std::stoi(str, &pos);
+        // 如果转换后位置不在字符串末尾，说明不是一个纯整数
+        return pos == str.length();
+    } catch (std::invalid_argument&) {
+        return false;
+    } catch (std::out_of_range&) {
+        return false;
+    }
+}
 
 std::string REnodeClass::REnodeToString(REnode* r ) {
   std::string retStr;
