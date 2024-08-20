@@ -432,7 +432,7 @@ namespace solverbin{
                 else{
                   e2->Children = e1->Children;
                   e2->Counting = Counting;
-                  e2->kind == Kind::REGEXP_LOOP;
+                  e2->kind = Kind::REGEXP_LOOP;
                 }
               }
               else{

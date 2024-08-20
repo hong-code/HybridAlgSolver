@@ -60,38 +60,35 @@ namespace solverbin{
     }
     for (auto c : Alphabet){
       if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-        auto nextns1 = F1.StepOneByte(TSS->NS1, c);
-        auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
-        auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
-        if (nextns1.empty() || nextns2.empty() || nextns3.empty())
-          continue;
-        for (auto nextns1_it : nextns1){
-          for (auto nextns2_it : nextns2){
-            for (auto nextns3_it : nextns3){
-              auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
-              if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
-              auto itc = SimulationCache.find(*ns);
-              if (itc != SimulationCache.end()){
-                
+      auto nextns1 = F1.StepOneByte(TSS->NS1, c);
+      auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
+      auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
+      if (nextns1.empty() || nextns2.empty() || nextns3.empty())
+        continue;
+      for (auto nextns1_it : nextns1){
+        for (auto nextns2_it : nextns2){
+          for (auto nextns3_it : nextns3){
+            auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
+            if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
+            auto itc = SimulationCache.find(*ns);
+            if (itc != SimulationCache.end()){
+              
+            }
+            else{
+              SimulationCache.insert(std::make_pair(*ns, ns));
+              WitnessStr.push_back(c);
+              if (TSSET.find(*ns) != TSSET.end()){
+                return true;
               }
-              else{
-                SimulationCache.insert(std::make_pair(*ns, ns));
-                WitnessStr.push_back(c);
-                if (TSSET.find(*ns) != TSSET.end()){
-                  return true;
-                }
-                if (DetectABTOFS(ns, TSSET)){
-                  return true;
-                }
-                else
-                  WitnessStr.pop_back();
+              if (DetectABTOFS(ns, TSSET)){
+                return true;
               }
+              else
+                WitnessStr.pop_back();
             }
           }
         }
-      // }
-      // else
-      //   continue;
+      }
     }
     return false;
   }
