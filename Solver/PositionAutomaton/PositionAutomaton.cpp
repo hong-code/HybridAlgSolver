@@ -419,7 +419,8 @@ namespace solverbin{
         e1->Status = NODE_STATUS::NODE_NULLABLE;
         e1->Isnullable = true;
         while (Counting.max > 0){
-          auto RSA = FirstNode(REClass.CopyREnode(e1->Children[0]));
+          auto node_new = REClass.CopyREnode(e1->Children[0]);
+          auto RSA = FirstNode(node_new);
           ProcessCounting(Counting);
           auto RS1 = RSA.second;
           if (RS1.size() != 0){
@@ -470,7 +471,7 @@ namespace solverbin{
           if (!e1->Children[0]->Isnullable && e1->Counting.min > 0){
             e1->Isnullable = false;
           }
-          if (e1->Children[0]->Status == NODE_STATUS::NODE_NULLABLE_NOT){
+          if (node_new->Status == NODE_STATUS::NODE_NULLABLE_NOT){
             if (e1->Counting.min > 0)
               e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
             break;

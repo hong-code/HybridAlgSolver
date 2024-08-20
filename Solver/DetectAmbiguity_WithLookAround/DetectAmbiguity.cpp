@@ -60,8 +60,6 @@ namespace solverbin{
     }
     for (auto c : Alphabet){
       if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-      // if (TSS->byte2state.find(ByteMap[c]) == TSS->byte2state.end()){
-        std::set<TernarySimulationState*> TernarySimulationSet;
         auto nextns1 = F1.StepOneByte(TSS->NS1, c);
         auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
         auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
@@ -74,7 +72,7 @@ namespace solverbin{
               if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
               auto itc = SimulationCache.find(*ns);
               if (itc != SimulationCache.end()){
-                TernarySimulationSet.insert(itc->second);
+                
               }
               else{
                 SimulationCache.insert(std::make_pair(*ns, ns));
@@ -91,7 +89,6 @@ namespace solverbin{
             }
           }
         }
-        TSS->byte2state.insert(std::make_pair(ByteMap[c], TernarySimulationSet));  
       // }
       // else
       //   continue;
@@ -106,50 +103,43 @@ namespace solverbin{
     }
     for (auto c : Alphabet){
       if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-      // if (TSS->byte2state.find(ByteMap[c]) == TSS->byte2state.end()){
-        std::set<TernarySimulationState*> TernarySimulationSet;
-        auto nextns1 = F1.StepOneByte(TSS->NS1, c);
-        auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
-        auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
-        if (nextns1.empty() || nextns2.empty() || nextns3.empty())
-          continue;
-        for (auto nextns1_it : nextns1){
-          for (auto nextns2_it : nextns2){
-            for (auto nextns3_it : nextns3){
-              auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
-              if (debug.PrintSimulation) DumpTernarySimulationState(ns);
-              auto itc = DoneCache.find(*ns);
-              if (itc != DoneCache.end()){
-                TernarySimulationSet.insert(itc->second);
-              }
-              else{
-                DoneCache.insert(std::make_pair(*ns, ns));
-                auto TSSET = DTSimulationState(ns);
-                InterStr.push_back(c);
-                if (!TSSET.empty()){
-                  if (DetectABTOFS(ns, TSSET)){
-                    InterStr = InterStr + WitnessStr;
-                    return true;
-                  }
-                  else {
-                    SimulationCache.clear();
-                    WitnessStr = "";
-                  }
-                }
-                if (IsABT(ns)){
+      auto nextns1 = F1.StepOneByte(TSS->NS1, c);
+      auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
+      auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
+      if (nextns1.empty() || nextns2.empty() || nextns3.empty())
+        continue;
+      for (auto nextns1_it : nextns1){
+        for (auto nextns2_it : nextns2){
+          for (auto nextns3_it : nextns3){
+            auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
+            if (debug.PrintSimulation) DumpTernarySimulationState(ns);
+            auto itc = DoneCache.find(*ns);
+            if (itc != DoneCache.end()){
+            }
+            else{
+              DoneCache.insert(std::make_pair(*ns, ns));
+              auto TSSET = DTSimulationState(ns);
+              InterStr.push_back(c);
+              if (!TSSET.empty()){
+                if (DetectABTOFS(ns, TSSET)){
+                  InterStr = InterStr + WitnessStr;
                   return true;
                 }
                 else {
-                  InterStr.pop_back();
+                  SimulationCache.clear();
+                  WitnessStr = "";
                 }
+              }
+              if (IsABT(ns)){
+                return true;
+              }
+              else {
+                InterStr.pop_back();
               }
             }
           }
         }
-        TSS->byte2state.insert(std::make_pair(ByteMap[c], TernarySimulationSet));  
-      // }
-      // else
-      //   continue;
+      }
     }
     return false;
   }

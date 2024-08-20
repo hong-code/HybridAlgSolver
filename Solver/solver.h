@@ -161,7 +161,7 @@ class Debug{
     Debug(bool p1, bool p2, bool p3, bool p4, bool p5) :PrintRegexString(p1), PrintBytemap(p2), PrintAlphabet(p3), PrintSimulation(p4), PrintREnode(p5) {};
 };
 
-static Debug debug = Debug(false, false, false, false, true);
+static Debug debug = Debug(false, false, false, true, true);
 
 bool isInteger(const std::string& str);
 
