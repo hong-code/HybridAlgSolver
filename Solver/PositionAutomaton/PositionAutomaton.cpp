@@ -430,20 +430,17 @@ namespace solverbin{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  e2->Children = e1->Children;
+                  e2 = e1;
                   e2->Counting = Counting;
-                  e2->kind = Kind::REGEXP_LOOP;
                 }
               }
               else{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  REnode* e3 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0));
-                  e3->Children = e1->Children;
-                  e3->Counting = Counting;
+                  e1->Counting = Counting;
                   e2->Children.emplace_back(it->Ccontinuation);
-                  e2->Children.emplace_back(e3);
+                  e2->Children.emplace_back(e1);
                 }
               }        
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
