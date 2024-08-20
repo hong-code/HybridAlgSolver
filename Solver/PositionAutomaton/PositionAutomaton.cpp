@@ -427,7 +427,7 @@ namespace solverbin{
             for (auto it : RS1){
               REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
-                if (e1->Counting.max == 0)
+                if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
                   e2->Children = e1->Children;
@@ -436,7 +436,7 @@ namespace solverbin{
                 }
               }
               else{
-                if (e1->Counting.max == 0)
+                if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
                   REnode* e3 = REClass.initREnode(Kind::REGEXP_LOOP, RuneClass(0, 0));
