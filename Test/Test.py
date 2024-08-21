@@ -2,9 +2,23 @@ import os
 import subprocess
 # 导入线程池模块
 import concurrent.futures
+import re
+import os
+import subprocess
+import signal
+import functools
+from concurrent import futures
+import time
+import subprocess
+import shutil
+import sqlite3
+import threading
+from timeit import default_timer as timer
+from concurrent.futures import ThreadPoolExecutor,as_completed
+
 
 # 读取/home/supermaxine/Documents/USENIX24/AttackStringGen/regex_set/regexes下1.txt到736535.txt
-path = '/home/huanghong/HybridAlgSolver/Test/wash_inter_with_results'
+path = 'regexes'
 count = 0
 
 
@@ -15,8 +29,8 @@ count = 0
 
     # 使用线程池执行任务
     # 编译文件
-def dotask(id, TF):
-    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/IntersectionK %s %s" % (path + '/'+ id, TF)
+def dotask(id):
+    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/DetectAmbiguity %s" % (path + '/'+ id)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
@@ -30,7 +44,9 @@ def dotask(id, TF):
     # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(path)
+thread_num = 16
 for i in range(len(filenames)):
-    print(str(i) + ": " + filenames[i])
-    dotask(filenames[i], filenames[i][-5])
+    with ThreadPoolExecutor(max_workers=thread_num) as executor:
+        print(str(i) + ": " + filenames[i])
+        executor.submit(dotask, filenames[i])    
 
