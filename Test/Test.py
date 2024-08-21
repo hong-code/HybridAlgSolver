@@ -19,6 +19,7 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 
 # 读取/home/supermaxine/Documents/USENIX24/AttackStringGen/regex_set/regexes下1.txt到736535.txt
 path = 'regexes'
+Output = 'Output'
 count = 0
 
 
@@ -29,8 +30,8 @@ count = 0
 
     # 使用线程池执行任务
     # 编译文件
-def dotask(id):
-    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/DetectAmbiguity %s" % (path + '/'+ id)
+def dotask(id, Output, Length):
+    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/DetectAmbiguity %s %s %s" % (path + '/'+ id, Output, Length)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
@@ -48,5 +49,5 @@ thread_num = 32
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i])
-        executor.submit(dotask, filenames[i])    
+        executor.submit(dotask, filenames[i], Output + '/' + filenames[i], 100000)    
 

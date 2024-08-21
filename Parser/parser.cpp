@@ -316,11 +316,25 @@ namespace solverbin {
         }
         else{
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
-          if (RegexString[0] == '?')
+          if (RegexString[0] == '?'){
             RegexString.erase(0, 1);
+            if (RegexString[0] == ':')
+              RegexString.erase(0, 1);
+            else if (RegexString[0] == '<'){
+              RegexString.erase(0, 1);
+              while (RegexString[0] != '>')
+                RegexString.erase(0, 1);
+              RegexString.erase(0, 1);  
+            }
+            else if (RegexString[0] == 'P' && RegexString[1] == '<'){
+              while (RegexString[0] != '>')
+                RegexString.erase(0, 1);
+              RegexString.erase(0, 1);
+            }
+          }
           REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
           // if (REnodeCONCAT->Children.size() > 1)
-            r->Children.emplace_back(REnodeCONCAT);
+          r->Children.emplace_back(REnodeCONCAT);
           // else
           //   r->Children.emplace_back(REnodeCONCAT->Children[0]);
           break;
@@ -602,7 +616,7 @@ namespace solverbin {
           lo = NUM;
           hi = lo;
         }
-        if (!solverbin::isInteger(lo) || !solverbin::isInteger(hi)){
+        if (!solverbin::isInteger(lo) && lo.size() != 0 || !solverbin::isInteger(hi) && hi.size() != 0){
           REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'{', '{'});
           r->Children.emplace_back(REnodeRune);
           RegexString.insert(0, Prefix_string);
