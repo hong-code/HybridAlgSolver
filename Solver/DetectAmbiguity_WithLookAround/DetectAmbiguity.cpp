@@ -4,6 +4,7 @@
 #include <bitset>
 #include <queue>
 #include <iostream>
+#include <fstream>
 #include <string.h>
 #include "DetectAmbiguity.h"
 
@@ -16,7 +17,24 @@ namespace solverbin{
     std::cout << "" << std::endl;
   }
 
-  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r){
+  bool DetectABTNFA_Lookaround::Writefile(){
+    std::ofstream Outfile;
+    Outfile.open(Output);
+    if (!Outfile.is_open()) {
+      std::cerr << "Failed to open the file." << std::endl;
+      return 0;
+    }
+    attack_string = InterStr;
+    while (attack_string.size() <= length)
+      attack_string.append(WitnessStr);
+    Outfile << attack_string << "@"; 
+    Outfile.close();
+    return 1;
+  }
+
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path){
+    length = l;
+    Output = Path;
     e1 = r;
     F1 = FollowAtomata(e1);
     SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
@@ -120,6 +138,7 @@ namespace solverbin{
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
                   InterStr = InterStr + WitnessStr;
+                  Writefile();
                   return true;
                 }
                 else {

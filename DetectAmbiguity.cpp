@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
   PrintInformation.PrintSimulation = false;
   PrintInformation.PrintBytemap = false;
 
-  if (argc != 2){
+  if (argc != 4){
     std::cout << "parameter error" << std::endl;
   }
   std::ifstream infile;
@@ -34,8 +34,7 @@ int main(int argc, char* argv[]){
     if (c == '\r'){
       unicodeStr.pop_back();
     }
-    if (unicodeStr[0] != '^')
-      unicodeStr.insert(0, L".*");
+    unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }
 
@@ -45,7 +44,7 @@ int main(int argc, char* argv[]){
     if (solverbin::debug.PrintRegexString) std::wcout << L"Regex: " << str << std::endl;
     auto ren = solverbin::Parer(str);
     ReList.emplace_back(ren.Re);
-    auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re);
+    auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re, std::stoi(argv[3]), argv[2]);
     auto k1 = kk.IsABT(kk.SSBegin);
     if (k1){
       std::cout <<  "prefix: " << kk.InterStr << std::endl;

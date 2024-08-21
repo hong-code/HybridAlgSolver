@@ -44,9 +44,9 @@ def dotask(id):
     # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(path)
-thread_num = 16
-for i in range(len(filenames)):
-    with ThreadPoolExecutor(max_workers=thread_num) as executor:
+thread_num = 32
+with ThreadPoolExecutor(max_workers=thread_num) as executor:
+    for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i])
         executor.submit(dotask, filenames[i])    
 
