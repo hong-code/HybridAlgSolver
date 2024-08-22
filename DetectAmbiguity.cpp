@@ -34,7 +34,8 @@ int main(int argc, char* argv[]){
     if (c == '\r'){
       unicodeStr.pop_back();
     }
-    unicodeStr.insert(0, L".*");
+    if (unicodeStr[0] != '^')
+      unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }
 
