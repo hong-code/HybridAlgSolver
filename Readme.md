@@ -14,7 +14,7 @@ sudo apt install build-essential  # install gcc, g++ and make
 sudo apt install cmake  # install cmake
 ```
 
-## Running commands
+## Running Commands
 #### Here, we will introduce how to run our tool.
 
 ### Directory structure
@@ -52,4 +52,15 @@ hostname[2024]+
 ```bash
 sat
 witness string: hostname:2024
+```
+
+
+# Detect Ambiguity of Regex
+Online Algorithms for Detecting Ambiguity of Regex and Generating an Effective Attack String.
+
+# Running Commands
+
+```bash
+cd build
+./DetectAmbiguity
 ```
