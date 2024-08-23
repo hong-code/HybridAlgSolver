@@ -39,12 +39,12 @@ namespace solverbin {
     }
     else if (RegexString[1] == 's'){
       RegexString.erase(0, 2);
-      std::vector<RuneClass> runeset = {RuneClass(9, 11), RuneClass(13, 13), RuneClass(32, 32)};
+      std::vector<RuneClass> runeset = {RuneClass(9, 13), RuneClass(32, 32)};;
       return runeset;
     }
     else if (RegexString[1] == 'S'){
       RegexString.erase(0, 2);
-      std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(12, 12), RuneClass(14, 31), RuneClass(33, 0x10FFFF)};
+      std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(14, 31), RuneClass(33, 0x10ffff)};
       return runeset;
     }
     else if (RegexString[1] == 't'){
@@ -773,7 +773,7 @@ namespace solverbin {
         }
         if (RegexString[1] == 's'){
           RegexString.erase(0, 2);
-          std::vector<RuneClass> runeset = {RuneClass(9, 11), RuneClass(13, 13), RuneClass(32, 32)};
+          std::vector<RuneClass> runeset = {RuneClass(9, 13), RuneClass(32, 32)};
           REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
           for (auto it : runeset){
             Re.BytemapRange.insert(it);
@@ -785,7 +785,7 @@ namespace solverbin {
         }
         if (RegexString[1] == 'S'){
           RegexString.erase(0, 2);
-          std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(12, 12), RuneClass(14, 31), RuneClass(33, 0x10ffff)};
+          std::vector<RuneClass> runeset = {RuneClass(0, 8), RuneClass(14, 31), RuneClass(33, 0x10ffff)};
           REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, RuneClass(0, 0));
           for (auto it : runeset){
             RuneSequence RS;
