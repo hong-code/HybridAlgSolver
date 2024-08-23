@@ -1,8 +1,9 @@
 /build
 /.vscode
-Test
 log.txt
 test.txt
 regexes
 Output
 LOG.txt
+Test/errors
+Test/wash_inter_with_results
