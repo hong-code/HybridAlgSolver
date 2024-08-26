@@ -61,6 +61,9 @@ Online Algorithms for Detecting Ambiguity of Regex and Generating an Effective A
 # Running Commands
 
 ```bash
-cd build
-./DetectAmbiguity
+cd HybridAlgSolver # Enter the root directory of the project
+mkdir build && cd build # create build directory
+cmake .. # load cmakelist file
+make # compile into .exe file
+./DetectAmbiguity [Path of Regex File] [Path of Output File] # runnning command
 ```
