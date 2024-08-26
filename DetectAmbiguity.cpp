@@ -9,13 +9,6 @@
 
 
 int main(int argc, char* argv[]){
-  // DebugInformation
-  solverbin::Debug PrintInformation;
-  PrintInformation.PrintRegexString = true;
-  PrintInformation.PrintAlphabet = false;
-  PrintInformation.PrintREnode = true;
-  PrintInformation.PrintSimulation = false;
-  PrintInformation.PrintBytemap = false;
 
   if (argc != 4){
     std::cout << "parameter error" << std::endl;
