@@ -32,5 +32,6 @@ namespace solverbin{
           continue;
       }
     }
+    return true;
   }
 }
