@@ -604,9 +604,6 @@ namespace solverbin{
         continue;
       
     }
-    // if (Mark){
-    //   NFAStateVec.emplace_back(MatchState);
-    // }
     s->NextStates.insert(std::make_pair(REClass.ByteMap[c], NFAStateVec));
     return NFAStateVec;
   }
