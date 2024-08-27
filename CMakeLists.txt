@@ -26,3 +26,6 @@ target_link_libraries(Match Parserbin Solverbin MembershipBin)
 
 add_executable(DetectAmbiguity DetectAmbiguity.cpp)
 target_link_libraries(DetectAmbiguity Parserbin Solverbin)
+
+add_executable(Completment Completment.cpp)
+target_link_libraries(Completment Parserbin Solverbin)
