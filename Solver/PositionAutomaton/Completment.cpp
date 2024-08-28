@@ -22,17 +22,27 @@ namespace solverbin{
             auto Tuple = FirstNode(i->Ccontinuation);
             i->FirstSet = Tuple.second;
             i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
-            DFA_State.emplace_back(FindInNFACache(nfacache, i));
+            if (i->Ccontinuation->Isnullable){
+              i->DFlag = Match;
+            } else
+              i->DFlag = Normal;
+            auto NFASTATE = FindInNFACache(nfacache, i);
+            DFA_NextState.insert(DFA_NextState.end(), NFASTATE->FirstSet.begin(), NFASTATE->FirstSet.end());
+          } 
+          else {
+            DFA_NextState.insert(DFA_NextState.end(), i->FirstSet.begin(), i->FirstSet.end());
           }
-          if (i->Ccontinuation->Isnullable){
-            i->DFlag = Match;
-            return false;
-          } else
-            i->DFlag = Normal;
         }
         else
           continue;
       }
+      if (DFA_NextState.empty())
+        return false;
+      else {
+        DFA_State = DFA_NextState;
+        DFA_NextState.clear();
+      }  
+      
     }
     return true;
   }
