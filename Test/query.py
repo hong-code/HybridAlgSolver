@@ -3,7 +3,7 @@ import sqlite3
 import base64
 
 conn = sqlite3.connect('Datasets/DataBase/regexlib.db')
-
+# conn = sqlite3.connect('Datasets/DataBase/snort.db')
 # 创建一个游标对象
 cursor = conn.cursor()
 
@@ -15,6 +15,7 @@ cursor = conn.cursor()
 
 cursor.execute("SELECT regexes.regex_base64, regexes.id FROM regexes where regexes.id IN (SELECT hunter_verify_results.id FROM hunter_verify_results where hunter_verify_results.id NOT IN (SELECT DetectAmbiguity_verify_results.id FROM DetectAmbiguity_verify_results WHERE  DetectAmbiguity_verify_results.time >= 1) and hunter_verify_results.time >= 1)")
 # and NOT EXISTS (SELECT 1 FROM DetectAmbiguity_verify_results, hunter_verify_results where DetectAmbiguity_verify_results.time >= 1
+# cursor.execute("SELECT regexes.regex_base64, regexes.id FROM regexes where regexes.id IN (SELECT hunter_verify_results.id FROM hunter_verify_results where hunter_verify_results.id NOT IN (SELECT DetectAmbiguity_verify_results.id FROM DetectAmbiguity_verify_results WHERE  DetectAmbiguity_verify_results.time >= 1) and hunter_verify_results.time >= 1)")
 
 
 
@@ -40,4 +41,4 @@ for i, line in enumerate(rows):
     #     f.write(decoded_string)
     decoded_bytes = base64.b64decode(line[0])
     decoded_string = decoded_bytes.decode('utf-8')
-    print(decoded_string + ',' + str(line[1]))
+    print(decoded_string + ',' + line[0])

@@ -12,7 +12,7 @@ using namespace solverbin;
 
 
 namespace solverbin{
-  bool FollowAtomata::Complement(FollowAtomata::State* Init_state, std::string Complement_str){
+  bool FollowAtomata::Complement(FollowAtomata::State* Init_state, std::string Complement_str, std::string &suffix){
     std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
       std::vector<State*> DFA_NextState;
@@ -44,6 +44,37 @@ namespace solverbin{
       }  
       
     }
-    return true;
+    bool IsMatch = false;
+    for (int c = 0; c <= 244; c++) {
+      for (auto state : DFA_State) {
+        if (c >= state->ValideRange.min && c <= state->ValideRange.max) {
+          IsMatch = true;
+          break;
+        }
+      }
+      if (!IsMatch) {
+        if (c >= 0 && c <= 127) {
+          suffix.push_back(c);
+        }
+        else if (c >= 194 && c <= 223) {
+          suffix.push_back(c); suffix.push_back(128);
+        }
+        else if (c == 224) {
+          suffix.push_back(c); suffix.push_back(160); suffix.push_back(128);
+        }
+        else if (c >= 225 && c <= 239) {
+          suffix.push_back(c); suffix.push_back(128); suffix.push_back(128);
+        }
+        else if (c == 240) {
+          suffix.push_back(c); suffix.push_back(144); suffix.push_back(128); suffix.push_back(128);
+        }
+        else {
+          suffix.push_back(c); suffix.push_back(128); suffix.push_back(128); suffix.push_back(128);
+        }
+        break;
+      }
+      IsMatch = false;
+    }
+    return !IsMatch;
   }
 }

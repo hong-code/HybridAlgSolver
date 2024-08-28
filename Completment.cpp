@@ -39,7 +39,8 @@ int main(int argc, char* argv[]) {
     auto ren = solverbin::Parer(str);
     ReList.emplace_back(ren.Re);
     auto initState = solverbin::FollowAtomata(ren.Re);
-    initState.Complement(initState.NState, "aaaaaaaaaaaa");
+    std::string Suffix;
+    initState.Complement(initState.NState, "aaaaaaaaaaaa", Suffix);
   }
 
 }
