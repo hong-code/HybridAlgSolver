@@ -68,9 +68,11 @@ namespace solverbin{
         else if (c == 240) {
           suffix.push_back(c); suffix.push_back(144); suffix.push_back(128); suffix.push_back(128);
         }
-        else {
+        else if (c >= 241 && c <= 244){
           suffix.push_back(c); suffix.push_back(128); suffix.push_back(128); suffix.push_back(128);
         }
+        else 
+          continue;
         break;
       }
       IsMatch = false;
