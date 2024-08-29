@@ -7,7 +7,6 @@ Test/errors
 Test/error.json
 Test/wash_inter_with_results
 regexlib.txt
-JavaMatch
 Snort.txt
 Datasets/DataBase/corpus.db
 Datasets/DataBase/snort.db
