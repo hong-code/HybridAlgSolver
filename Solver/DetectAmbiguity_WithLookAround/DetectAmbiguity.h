@@ -63,6 +63,7 @@ namespace solverbin{
         std::queue<TernarySimulationState> TODOCache;
         std::string InterStr;
         std::string WitnessStr;
+        std::string Suffix;
         std::string attack_string;
         std::string Output;
         int length = 0;

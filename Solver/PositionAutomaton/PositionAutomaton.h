@@ -61,7 +61,7 @@ namespace solverbin{
       NFACache* Step2Right(NFACache* DC, int c); // step to the left 
       State* FindInNFACache(NFACache* DC, State* s);
       std::vector<State*> StepOneByte(State* s, uint8_t c);
-      bool Complement(State* InitState, std::string);
+      bool Complement(State* InitState, std::string preffix, std::string &suffix);
       void Isnullable(REnode* e);
       static void DumpState(State* s);
       void ProcessCounting(RuneClass&);

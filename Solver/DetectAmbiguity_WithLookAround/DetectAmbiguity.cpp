@@ -27,6 +27,7 @@ namespace solverbin{
     attack_string = InterStr;
     while (attack_string.size() <= length)
       attack_string.append(WitnessStr);
+    attack_string.append(Suffix);  
     Outfile << attack_string << "@"; 
     Outfile.close();
     return 1;
@@ -138,8 +139,14 @@ namespace solverbin{
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
                   InterStr = InterStr + WitnessStr;
-                  Writefile();
-                  return true;
+                  if (F1.Complement(F1.NState, InterStr, Suffix)){
+                    Writefile();
+                    return true;
+                  }
+                  else {
+                    SimulationCache.clear();
+                    WitnessStr = "";
+                  }
                 }
                 else {
                   SimulationCache.clear();
