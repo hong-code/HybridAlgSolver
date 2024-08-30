@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { decode } = require("base-64");
 
 function main() {
   if (process.argv.length !== 4) {
@@ -13,7 +12,7 @@ function main() {
   const filePath = process.argv[3];
 
   try {
-    const regex = decode(base64Regex);
+    const regex = atob(base64Regex);
     const pattern = new RegExp(regex, "g");
 
     try {
