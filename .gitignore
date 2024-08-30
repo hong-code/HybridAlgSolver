@@ -8,3 +8,5 @@ Test/error.json
 Test/wash_inter_with_results
 regexlib.txt
 Snort.txt
+Datasets/DataBase/corpus.db
+Datasets/DataBase/snort.db
