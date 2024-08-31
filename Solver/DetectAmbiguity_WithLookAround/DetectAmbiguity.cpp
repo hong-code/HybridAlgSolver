@@ -6,6 +6,8 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include "DetectAmbiguity.h"
 
 namespace solverbin{
@@ -19,7 +21,13 @@ namespace solverbin{
 
   bool DetectABTNFA_Lookaround::Writefile(){
     std::ofstream Outfile;
-    Outfile.open(Output);
+    NumberOfCandidates++;
+    if (mkdir(Output.c_str(), 0777) == 0) {
+      std::cout << "Directory created successfully: " << Output << std::endl;
+    } else {
+      std::cerr << "Error: Unable to create directory " << Output << std::endl;
+    }
+    Outfile.open(Output + "/" + std::to_string(NumberOfCandidates) + ".txt");
     if (!Outfile.is_open()) {
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
@@ -29,11 +37,13 @@ namespace solverbin{
       attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
     Outfile << attack_string << "@"; 
+    Suffix.clear();
     Outfile.close();
     return 1;
   }
 
-  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path){
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy){
+    isLazy = Is_Lazy;
     length = l;
     Output = Path;
     e1 = r;
@@ -138,10 +148,11 @@ namespace solverbin{
               InterStr.push_back(c);
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
-                  InterStr = InterStr + WitnessStr;
-                  if (F1.Complement(F1.NState, InterStr, Suffix)){
+                  std::string Preff = InterStr + WitnessStr;
+                  if (F1.Complement(F1.NState, Preff, Suffix)){
                     Writefile();
-                    return true;
+                    if (isLazy)
+                      return true;
                   }
                   else {
                     SimulationCache.clear();

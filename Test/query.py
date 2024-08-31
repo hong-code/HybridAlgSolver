@@ -41,4 +41,4 @@ for i, line in enumerate(rows):
     #     f.write(decoded_string)
     decoded_bytes = base64.b64decode(line[0])
     decoded_string = decoded_bytes.decode('utf-8')
-    print(decoded_string + ',' + line[0])
+    print(decoded_string + ',' + str(line[1]) + ',' + line[0])
