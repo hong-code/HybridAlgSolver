@@ -22,6 +22,11 @@ namespace solverbin{
   bool DetectABTNFA_Lookaround::Writefile(){
     std::ofstream Outfile;
     NumberOfCandidates++;
+    if (mkdir(Output.c_str(), 0777) == 0) {
+      std::cout << "Directory created successfully: " << Output << std::endl;
+    } else {
+      std::cerr << "Error: Unable to create directory " << Output << std::endl;
+    }
     Outfile.open(Output + "/" + std::to_string(NumberOfCandidates) + ".txt");
     if (!Outfile.is_open()) {
       std::cerr << "Failed to open the file." << std::endl;
@@ -47,11 +52,6 @@ namespace solverbin{
     e1.ComputeAlphabet(e1.ByteMap, Alphabet);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
     if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
-    if (mkdir(Path.c_str(), 0777) == 0) {
-        std::cout << "Directory created successfully: " << Path << std::endl;
-    } else {
-        std::cerr << "Error: Unable to create directory " << Path << std::endl;
-    }
   }
 
   void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState* TSS){
@@ -148,13 +148,11 @@ namespace solverbin{
               InterStr.push_back(c);
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
-                  InterStr = InterStr + WitnessStr;
-                  if (F1.Complement(F1.NState, InterStr, Suffix)){
+                  std::string Preff = InterStr + WitnessStr;
+                  if (F1.Complement(F1.NState, Preff, Suffix)){
                     Writefile();
                     if (isLazy)
                       return true;
-                    else
-                      continue;  
                   }
                   else {
                     SimulationCache.clear();

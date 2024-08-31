@@ -27,7 +27,10 @@ int main(int argc, char* argv[]){
     if (c == '\r'){
       unicodeStr.pop_back();
     }
-    if (unicodeStr[0] != '^')
+    int i = 0;
+    while (unicodeStr[i] == '(')
+      i++;
+    if (unicodeStr[i] != '^')
       unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }

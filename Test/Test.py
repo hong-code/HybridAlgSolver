@@ -21,7 +21,7 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 path = 'regexes'
 Output = 'Output'
 count = 0
-
+Islazy = 0
 
 
 
@@ -30,8 +30,8 @@ count = 0
 
     # 使用线程池执行任务
     # 编译文件
-def dotask(id, Output, Length):
-    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/DetectAmbiguity %s %s %s" % (path + '/'+ id, Output, Length)
+def dotask(id, Output, Length, Islazy):
+    command = "timeout 600s /home/huanghong/HybridAlgSolver/build/DetectAmbiguity %s %s %s %s" % (path + '/'+ id, Output, Length, Islazy)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
@@ -48,6 +48,6 @@ filenames=os.listdir(path)
 thread_num = 32
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
-        print(str(i) + ": " + filenames[i])
-        executor.submit(dotask, filenames[i], Output + '/' + filenames[i], 100000)    
+        print(str(i) + ": " + filenames[i].split('.')[0])
+        executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0)    
 

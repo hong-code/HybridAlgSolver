@@ -193,7 +193,7 @@ namespace solverbin {
       }
     }
     if (RuneSet[l].max >= high){
-      if (RuneSet[l].min-1 <= high){
+      if (RuneSet[l].min == 0|| RuneSet[l].min-1 <= high){
         high_in = true;
         high_index = l;
         RC.max = RuneSet[l].max;
@@ -208,7 +208,7 @@ namespace solverbin {
       }
     }else{
       if ((l+1) < RuneSet.size())
-      if (RuneSet[l+1].min-1 <= high){
+      if (RuneSet[l].min == 0 || RuneSet[l+1].min-1 <= high){
         high_in = true;
         high_index = l + 1;
         RC.max = RuneSet[l+1].max;
