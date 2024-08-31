@@ -6,6 +6,8 @@
 #include <iostream>
 #include <fstream>
 #include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include "DetectAmbiguity.h"
 
 namespace solverbin{
@@ -19,7 +21,8 @@ namespace solverbin{
 
   bool DetectABTNFA_Lookaround::Writefile(){
     std::ofstream Outfile;
-    Outfile.open(Output);
+    NumberOfCandidates++;
+    Outfile.open(Output + "/" + std::to_string(NumberOfCandidates) + ".txt");
     if (!Outfile.is_open()) {
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
@@ -29,11 +32,13 @@ namespace solverbin{
       attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
     Outfile << attack_string << "@"; 
+    Suffix.clear();
     Outfile.close();
     return 1;
   }
 
-  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path){
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy){
+    isLazy = Is_Lazy;
     length = l;
     Output = Path;
     e1 = r;
@@ -42,6 +47,11 @@ namespace solverbin{
     e1.ComputeAlphabet(e1.ByteMap, Alphabet);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
     if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
+    if (mkdir(Path.c_str(), 0777) == 0) {
+        std::cout << "Directory created successfully: " << Path << std::endl;
+    } else {
+        std::cerr << "Error: Unable to create directory " << Path << std::endl;
+    }
   }
 
   void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState* TSS){
@@ -141,7 +151,10 @@ namespace solverbin{
                   InterStr = InterStr + WitnessStr;
                   if (F1.Complement(F1.NState, InterStr, Suffix)){
                     Writefile();
-                    return true;
+                    if (isLazy)
+                      return true;
+                    else
+                      continue;  
                   }
                   else {
                     SimulationCache.clear();

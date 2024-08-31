@@ -67,11 +67,13 @@ namespace solverbin{
         std::string attack_string;
         std::string Output;
         int length = 0;
+        int isLazy = 1;
+        int NumberOfCandidates = 0;
         std::multimap<FollowAtomata::State*, TernarySimulationState*> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState* TS);
         void DumpAlphabet(std::set<uint8_t>& A);
-        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path);
+        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy);
         DetectABTNFA_Lookaround() {};
         bool Writefile();
         bool Intersect();
