@@ -12,6 +12,19 @@ using namespace solverbin;
 
 
 namespace solverbin{
+  std::vector<RuneClass> RangeClass1 = {RuneClass(0, 127) };
+  std::vector<RuneClass> RangeClass2 = {RuneClass(194, 223), RuneClass(128, 191) };
+  std::vector<RuneClass> RangeClass3 = {RuneClass(224, 224), RuneClass(160, 191), RuneClass(128, 191) };
+  std::vector<RuneClass> RangeClass4 = {RuneClass(225, 239), RuneClass(128, 191), RuneClass(128, 191) };
+  std::vector<RuneClass> RangeClass5 = {RuneClass(240, 240), RuneClass(144, 191), RuneClass(128, 191), RuneClass(128, 191) };
+  std::vector<RuneClass> RangeClass6 = {RuneClass(241, 243), RuneClass(128, 191), RuneClass(128, 191), RuneClass(128, 191) };
+  std::vector<RuneClass> RangeClass7 = {RuneClass(244, 244), RuneClass(128, 143), RuneClass(128, 191), RuneClass(128, 191) };
+
+  bool CheckOneByte(std::vector<FollowAtomata::State*> DFAState, uint8_t c, RuneClass RC, std::string &suffix){
+    return false;
+  }
+
+
   bool FollowAtomata::Complement(FollowAtomata::State* Init_state, std::string Complement_str, std::string &suffix){
     std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
