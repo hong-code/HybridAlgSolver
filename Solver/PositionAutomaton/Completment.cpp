@@ -21,6 +21,7 @@ namespace solverbin{
   std::vector<RuneClass> RangeClass7 = {RuneClass(244, 244), RuneClass(128, 143), RuneClass(128, 191), RuneClass(128, 191) };
 
   bool CheckOneByte(std::vector<FollowAtomata::State*> DFAState, uint8_t c, RuneClass RC, std::string &suffix){
+    
     return false;
   }
 
