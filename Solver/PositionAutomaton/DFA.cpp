@@ -95,29 +95,32 @@ namespace solverbin{
     if (itc != s->Next.end()){
       return itc->second;
     }
-    DFAState* NextDFAState = (DFAState* )malloc(sizeof(DFAState));
-    for (auto i : s->NodeSequence){
-      if (c >= i->ValideRange.min && c <= i->ValideRange.max){
-        auto Tuple = FA->FirstNode(i->Ccontinuation);
-        // if (Tuple.second.size() == 0)
-        //   Mark = true;
-        i->FirstSet = Tuple.second;
-        i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
-        if (i->Ccontinuation->Isnullable){
-          i->DFlag = FollowAtomata::Match;
-          NextDFAState->DFlag = DFA::Match;
-        }else
-          i->DFlag = FollowAtomata::Normal;
-        NFAStateVec.insert(FA->FindInNFACache(FA->nfacache, i));
+    DFAState* NextDFAState = new DFAState();
+    for (auto j : s->NodeSequence){
+      for (auto i : j->FirstSet){
+        if (c >= i->ValideRange.min && c <= i->ValideRange.max){
+          auto Tuple = FA->FirstNode(i->Ccontinuation);
+          // if (Tuple.second.size() == 0)
+          //   Mark = true;
+          i->FirstSet = Tuple.second;
+          i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
+          if (i->Ccontinuation->Isnullable){
+            i->DFlag = FollowAtomata::Match;
+            NextDFAState->DFlag = DFA::Match;
+          }else
+            i->DFlag = FollowAtomata::Normal;
+          NFAStateVec.insert(FA->FindInNFACache(FA->nfacache, i));
+        }
+        else
+          continue;
       }
-      else
-        continue;
-      
     }
+    if (NFAStateVec.size() == 0)
+      return nullptr;
     MaintainNode2Index(NextDFAState, NFAStateVec);
     auto UniqueDFAState = FindInDFACache(dfacache, NextDFAState);
     if (UniqueDFAState != NextDFAState) {
-      free(NextDFAState);
+      delete NextDFAState;
       NextDFAState = nullptr;
     }
     s->Next.insert(std::make_pair(FA->REClass.ByteMap[c], UniqueDFAState));
@@ -128,8 +131,9 @@ namespace solverbin{
     FA = fa;
     DState = new DFAState();
     DState->IndexSequence.insert(0);
-    for (auto i : FA->NState->FirstSet)
-      DState->NodeSequence.insert(i);
+    DState->NodeSequence.insert(FA->NState);
+    // for (auto i : FA->NState->FirstSet)
+    //   DState->NodeSequence.insert(i);
     if (FA->NState->Ccontinuation->Isnullable)
       DState->DFlag = DFA::Match;
     else  

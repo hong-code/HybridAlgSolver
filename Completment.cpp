@@ -41,7 +41,8 @@ int main(int argc, char* argv[]) {
     auto initState = solverbin::FollowAtomata(ren.Re);
     std::string Suffix;
     auto dfa = solverbin::DFA(&initState);
-    dfa.Complement(dfa.DState, "aaaaaaaaaaaa", Suffix);
+    dfa.Complement(dfa.DState, "", Suffix);
+    std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
   }
 
 }

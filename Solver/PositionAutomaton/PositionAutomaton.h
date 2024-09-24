@@ -111,6 +111,7 @@ namespace solverbin{
     DFACache* Step2Right(DFACache* DC, int c); // step to the left 
     DFAState* FindInDFACache(DFACache* DC, DFAState* s);
     DFAState* StepOneByte(DFAState* s, uint8_t c);
+    bool CheckOneByte(DFAState* DFAState, uint8_t Position, uint8_t Kind, RuneClass RC, std::string &suffix);
     bool Complement(DFAState* InitState, std::string preffix, std::string &suffix);
     void MaintainNode2Index(DFAState* s, std::set<FollowAtomata::State*> RS1);
     void DumpState(DFAState* s);
