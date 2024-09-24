@@ -90,14 +90,14 @@ namespace solverbin{
         {
           DFAStateFlag DFlag;
           std::set<int> IndexSequence;
-          std::map<REnode*, REnode*> NodeSequence;
+          std::set<FollowAtomata::State*> NodeSequence;
           std::map<uint8_t, DFAState*> Next;
           DFAState() : DFlag(), NodeSequence(){};
-          DFAState(DFAStateFlag F,std::map<REnode*, REnode*> NS) : DFlag(F), NodeSequence(NS){};
+          DFAState(DFAStateFlag F,std::set<FollowAtomata::State*> NS) : DFlag(F), NodeSequence(NS){};
         };
 
         DFAState* DState;
-        REnodeClass REClass;
+        FollowAtomata FA;
         struct DFACache{
           DFACacheFlag DCFlage;
           DFACache* left;
@@ -112,10 +112,10 @@ namespace solverbin{
         DFACache* Step2Right(DFACache* DC, int c); // step to the left 
         DFAState* FindInDFACache(DFACache* DC, DFAState* s);
         DFAState* StepOneByte(DFAState* s, uint8_t c);
-        void MaintainNode2Index(DFAState* s, std::map<REnode*, REnode*> RS1);
+        void MaintainNode2Index(DFAState* s, std::set<FollowAtomata::State*> RS1);
         void DumpState(DFAState* s);
         bool Fullmatch(std::wstring Pattern, std::string str); 
-        std::map<REnode*, int> Node2Index; // map from the node to the index
+        std::map<FollowAtomata::State*, int> Node2Index; // map from the node to the index
         int IndexMax = 0;
         DFA();
         DFA(REnodeClass e);
