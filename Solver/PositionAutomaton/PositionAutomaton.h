@@ -72,7 +72,7 @@ namespace solverbin{
   };
 
 
-  class DFA{
+      class DFA{
       public:
         enum DFAStateFlag{
           Begin,
@@ -97,7 +97,7 @@ namespace solverbin{
         };
 
         DFAState* DState;
-        FollowAtomata FA;
+        FollowAtomata* FA;
         struct DFACache{
           DFACacheFlag DCFlage;
           DFACache* left;
@@ -118,7 +118,7 @@ namespace solverbin{
         std::map<FollowAtomata::State*, int> Node2Index; // map from the node to the index
         int IndexMax = 0;
         DFA();
-        DFA(REnodeClass e);
+        DFA(FollowAtomata* fa);
     };
 
 

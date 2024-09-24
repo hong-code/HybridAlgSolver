@@ -26,6 +26,7 @@ namespace solverbin{
 
 
   bool FollowAtomata::Complement(FollowAtomata::State* Init_state, std::string Complement_str, std::string &suffix){
+    // auto DFAClass = new DFA();
     std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
       std::vector<State*> DFA_NextState;

@@ -88,37 +88,47 @@ namespace solverbin{
 
     DFA::DFAState* DFA::StepOneByte(DFAState* s, uint8_t c){
     std::set<FollowAtomata::State*> NFAStateVec;
-    auto itc = s->Next.find(FA.REClass.ByteMap[c]);
+    auto itc = s->Next.find(FA->REClass.ByteMap[c]);
     if (itc != s->Next.end()){
       return itc->second;
     }
-    // bool Mark = false;
+    DFAState* NextDFAState = (DFAState* )malloc(sizeof(DFAState));
     for (auto i : s->NodeSequence){
       if (c >= i->ValideRange.min && c <= i->ValideRange.max){
-        auto Tuple = FA.FirstNode(i->Ccontinuation);
+        auto Tuple = FA->FirstNode(i->Ccontinuation);
         // if (Tuple.second.size() == 0)
         //   Mark = true;
         i->FirstSet = Tuple.second;
         i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
         if (i->Ccontinuation->Isnullable){
           i->DFlag = FollowAtomata::Match;
+          NextDFAState->DFlag = DFA::Match;
         }else
           i->DFlag = FollowAtomata::Normal;
-        NFAStateVec.insert(FA.FindInNFACache(FA.nfacache, i));
+        NFAStateVec.insert(FA->FindInNFACache(FA->nfacache, i));
       }
       else
         continue;
       
     }
-    DFAState* NextDFAState = (DFAState* )malloc(sizeof(DFAState));
     MaintainNode2Index(NextDFAState, NFAStateVec);
     auto UniqueDFAState = FindInDFACache(dfacache, NextDFAState);
     if (UniqueDFAState != NextDFAState) {
-      delete NextDFAState;
+      free(NextDFAState);
       NextDFAState = nullptr;
     }
-    s->Next.insert(std::make_pair(FA.REClass.ByteMap[c], NextDFAState));
-    return NextDFAState;
+    s->Next.insert(std::make_pair(FA->REClass.ByteMap[c], UniqueDFAState));
+    return UniqueDFAState;
+  }
+
+  DFA::DFA(FollowAtomata* fa){ 
+    FA = fa;
+    DState = new DFAState();
+    DState->IndexSequence.insert(0);
+    DState->NodeSequence.insert(FA->NState);
+    DState->DFlag = DFA::Begin;
+    IndexMax++;
+    FindInDFACache(dfacache, DState);
   }
 
 }
