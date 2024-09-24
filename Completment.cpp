@@ -27,8 +27,8 @@ int main(int argc, char* argv[]) {
     if (c == '\r'){
       unicodeStr.pop_back();
     }
-    if (unicodeStr[0] != '^')
-      unicodeStr.insert(0, L".*");
+    // if (unicodeStr[0] != '^')
+    //   unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }
 
@@ -40,7 +40,8 @@ int main(int argc, char* argv[]) {
     ReList.emplace_back(ren.Re);
     auto initState = solverbin::FollowAtomata(ren.Re);
     std::string Suffix;
-    initState.Complement(initState.NState, "aaaaaaaaaaaa", Suffix);
+    auto dfa = solverbin::DFA(&initState);
+    dfa.Complement(dfa.DState, "aaaaaaaaaaaa", Suffix);
   }
 
 }

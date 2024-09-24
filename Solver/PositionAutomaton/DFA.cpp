@@ -70,19 +70,22 @@ namespace solverbin{
 
   void DFA::MaintainNode2Index(DFAState* NS, std::set<FollowAtomata::State*> RS1){
     std::set<int> IndexSequence;
+    std::set<FollowAtomata::State*> NodeSequence;
     for (auto IT : RS1){
       auto Index = Node2Index.find(IT);
       if (Index == Node2Index.end()){
         Node2Index.insert(std::make_pair(IT, IndexMax));
-        NS->IndexSequence.insert(IndexMax);
-        NS->NodeSequence.insert(IT);
+        IndexSequence.insert(IndexMax);
+        NodeSequence.insert(IT);
         IndexMax++;
       }
       else {
-        NS->NodeSequence.insert(IT);
-        NS->IndexSequence.insert(Index->second);
+        NodeSequence.insert(IT);
+        IndexSequence.insert(Index->second);
       }
     }  
+    NS->IndexSequence = IndexSequence;
+    NS->NodeSequence = NodeSequence;
   }
 
 
@@ -125,10 +128,15 @@ namespace solverbin{
     FA = fa;
     DState = new DFAState();
     DState->IndexSequence.insert(0);
-    DState->NodeSequence.insert(FA->NState);
-    DState->DFlag = DFA::Begin;
+    for (auto i : FA->NState->FirstSet)
+      DState->NodeSequence.insert(i);
+    if (FA->NState->Ccontinuation->Isnullable)
+      DState->DFlag = DFA::Match;
+    else  
+      DState->DFlag = DFA::Begin;  
     IndexMax++;
     FindInDFACache(dfacache, DState);
   }
+  
 
 }

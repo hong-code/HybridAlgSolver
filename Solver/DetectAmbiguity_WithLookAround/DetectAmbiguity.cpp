@@ -149,7 +149,7 @@ namespace solverbin{
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
-                  if (F1.Complement(F1.NState, Preff, Suffix)){
+                  if (true){ /*F1.Complement(F1.NState, Preff, Suffix)*/ 
                     Writefile();
                     if (isLazy)
                       return true;
