@@ -72,4 +72,54 @@ namespace solverbin{
   };
 
 
+  class DFA{
+      public:
+        enum DFAStateFlag{
+          Begin,
+          Normal,
+          Match,
+          Unmatch
+        };
+
+        enum DFACacheFlag{
+          IsNULL,
+          IsNotNULL
+        };
+
+        struct DFAState
+        {
+          DFAStateFlag DFlag;
+          std::set<int> IndexSequence;
+          std::map<REnode*, REnode*> NodeSequence;
+          std::map<uint8_t, DFAState*> Next;
+          DFAState() : DFlag(), NodeSequence(){};
+          DFAState(DFAStateFlag F,std::map<REnode*, REnode*> NS) : DFlag(F), NodeSequence(NS){};
+        };
+
+        DFAState* DState;
+        REnodeClass REClass;
+        struct DFACache{
+          DFACacheFlag DCFlage;
+          DFACache* left;
+          DFACache* right;
+          DFAState* DS;
+          DFACache() : DCFlage(), left(), right(){};
+          DFACache(DFACacheFlag DCF, DFACache* d1, DFACache* d2) : DCFlage(DCF), left(d1), right(d2){};
+        };
+
+        DFACache* dfacache = new DFACache(IsNULL, nullptr, nullptr);
+        DFACache* Step2Left(DFACache* DC, int c); // step to the left 
+        DFACache* Step2Right(DFACache* DC, int c); // step to the left 
+        DFAState* FindInDFACache(DFACache* DC, DFAState* s);
+        DFAState* StepOneByte(DFAState* s, uint8_t c);
+        void MaintainNode2Index(DFAState* s, std::map<REnode*, REnode*> RS1);
+        void DumpState(DFAState* s);
+        bool Fullmatch(std::wstring Pattern, std::string str); 
+        std::map<REnode*, int> Node2Index; // map from the node to the index
+        int IndexMax = 0;
+        DFA();
+        DFA(REnodeClass e);
+    };
+
+
 }
