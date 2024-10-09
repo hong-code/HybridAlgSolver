@@ -43,6 +43,17 @@ int main(int argc, char* argv[]) {
     auto dfa = solverbin::DFA(&initState);
     dfa.Complement(dfa.DState, "", Suffix);
     std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
+    std::ofstream outfile;  // 创建ofstream对象
+
+    // 打开文件，如果文件不存在将创建，存在则覆盖
+    outfile.open("output.txt");
+
+    if (!outfile) {
+        std::cerr << "File could not be opened!" << std::endl;
+        return 1;
+    }
+    outfile << Suffix << std::endl;
+    outfile.close();
   }
 
 }
