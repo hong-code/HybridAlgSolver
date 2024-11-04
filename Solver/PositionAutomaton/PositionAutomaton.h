@@ -88,7 +88,7 @@ namespace solverbin{
     struct DFAState
     {
       DFAStateFlag DFlag;
-      std::set<int> IndexSequence;
+      std::set<int> IndexSequence; //vector<int> Index
       std::set<FollowAtomata::State*> NodeSequence;
       std::map<uint8_t, DFAState*> Next;
       DFAState() : DFlag(), NodeSequence(){};
