@@ -7,7 +7,8 @@ project (HYBRIDALGSOLVER)
 
 # 二进制
 add_executable(String_Solver main.cpp)
-
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0")
 # 添加子目录
 add_subdirectory(Solver)
 add_subdirectory(Parser)
@@ -27,5 +28,5 @@ target_link_libraries(Match Parserbin Solverbin MembershipBin)
 add_executable(DetectAmbiguity DetectAmbiguity.cpp)
 target_link_libraries(DetectAmbiguity Parserbin Solverbin)
 
-add_executable(Completment Completment.cpp)
+add_executable(Completment Completment_Main.cpp)
 target_link_libraries(Completment Parserbin Solverbin)
