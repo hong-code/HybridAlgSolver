@@ -11,6 +11,24 @@
 #include "DetectAmbiguity.h"
 
 namespace solverbin{
+
+  void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap){
+    std::set<uint8_t> color_set;
+
+		color_set.insert(ByteMap[0]);
+		if (ByteMap[0] != 0)
+			Alphabet.insert(0);
+		for (int i = 0; i < 256; i++){
+			if (color_set.find(ByteMap[i]) != color_set.end()) 
+				continue;
+			else{
+				color_set.insert(ByteMap[i]);
+				if (ByteMap[i] != 0)
+					Alphabet.insert(i);
+			}
+		}
+  }
+
   void DetectABTNFA_Lookaround::DumpAlphabet(std::set<uint8_t>& A){
     std::cout << "The alphabet: ";
     for (auto it : A){
