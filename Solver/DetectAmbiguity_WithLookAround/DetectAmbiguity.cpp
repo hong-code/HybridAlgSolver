@@ -20,6 +20,11 @@ namespace solverbin{
   }
 
   bool DetectABTNFA_Lookaround::Writefile(){
+    attack_string = InterStr + WitnessStr;
+    auto initState = solverbin::FollowAtomata(this->e1);
+    auto dfa = solverbin::DFA(&initState);
+    if (!dfa.Complement(dfa.DState, attack_string, Suffix)) 
+      return false;
     std::ofstream Outfile;
     NumberOfCandidates++;
     if (mkdir(Output.c_str(), 0777) == 0) {
@@ -32,14 +37,15 @@ namespace solverbin{
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
     }
-    attack_string = InterStr;
+    std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
+    std::ofstream outfile;  // 创建ofstream对象
     while (attack_string.size() <= length)
       attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
-    Outfile << attack_string << "@"; 
+    // Outfile << attack_string << "@"; 
     Suffix.clear();
     Outfile.close();
-    return 1;
+    return true;
   }
 
   DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy){
@@ -150,9 +156,10 @@ namespace solverbin{
                 if (DetectABTOFS(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
                   if (true){ /*F1.Complement(F1.NState, Preff, Suffix)*/ 
-                    Writefile();
-                    if (isLazy)
-                      return true;
+                    if (Writefile()){
+                      if (isLazy)
+                        return true;
+                    }
                   }
                   else {
                     SimulationCache.clear();

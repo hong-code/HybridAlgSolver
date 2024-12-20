@@ -274,6 +274,7 @@ namespace solverbin{
     // std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
       NState = StepOneByte(CurrState, c);
+      DumpState(NState);
       CurrState = NState;
       if (NState->DFlag == DFA::Match){
         return false;
@@ -282,7 +283,7 @@ namespace solverbin{
         continue;
 
     }
-
-    return CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
+    return true;
+    // return CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
   }
 }

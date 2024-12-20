@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     auto initState = solverbin::FollowAtomata(ren.Re);
     std::string Suffix;
     auto dfa = solverbin::DFA(&initState);
-    dfa.Complement(dfa.DState, "", Suffix);
+    dfa.Complement(dfa.DState, "abcdaabcda", Suffix);
     std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
     std::ofstream outfile;  // 创建ofstream对象
 
