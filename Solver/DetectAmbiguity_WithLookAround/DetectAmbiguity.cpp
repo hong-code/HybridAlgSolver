@@ -9,8 +9,22 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include "DetectAmbiguity.h"
+#include <openssl/evp.h>
 
 namespace solverbin{
+
+  std::string base64_encode(const std::string &input) {
+    // 计算编码后的大小
+    int len = 4 * ((input.length() + 2) / 3);
+    char *encoded = new char[len + 1];
+
+    // 编码
+    EVP_EncodeBlock((unsigned char*)encoded, (const unsigned char*)input.c_str(), input.length());
+
+    std::string result(encoded);
+    delete[] encoded;
+    return result;
+}
 
   void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap){
     std::set<uint8_t> color_set;
@@ -61,6 +75,33 @@ namespace solverbin{
       attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
     // Outfile << attack_string << "@"; 
+    Suffix.clear();
+    Outfile.close();
+    return true;
+  }
+
+  bool DetectABTNFA_Lookaround::WriteInBase64() {
+    attack_string = InterStr + WitnessStr;
+    auto initState = solverbin::FollowAtomata(this->e1);
+    auto dfa = solverbin::DFA(&initState);
+    if (!dfa.Complement(dfa.DState, attack_string, Suffix))
+      std::cout <<  "no match" << std::endl;
+    std::ofstream Outfile;
+    NumberOfCandidates++;
+    if (mkdir(Output.c_str(), 0777) == 0) {
+      std::cout << "Directory created successfully: " << Output << std::endl;
+    } else {
+      std::cerr << "Error: Unable to create directory " << Output << std::endl;
+    }
+    Outfile.open(Output + "/" + std::to_string(NumberOfCandidates) + ".txt");
+    if (!Outfile.is_open()) {
+      std::cerr << "Failed to open the file." << std::endl;
+      return 0;
+    }
+    Outfile << base64_encode(InterStr) << '\n';
+    Outfile << base64_encode(WitnessStr) << '\n';
+    Outfile << base64_encode(Suffix);
+    std::cout << "file is closed" << std::endl;
     Suffix.clear();
     Outfile.close();
     return true;
@@ -173,15 +214,13 @@ namespace solverbin{
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
-                  if (true){ /*F1.Complement(F1.NState, Preff, Suffix)*/ 
-                    if (Writefile()){
-                      if (isLazy)
-                        return true;
+                  if (WriteInBase64()){  
+                    if (isLazy)
+                      return true;
+                    else{
+                      SimulationCache.clear();
+                      WitnessStr = "";
                     }
-                  }
-                  else {
-                    SimulationCache.clear();
-                    WitnessStr = "";
                   }
                 }
                 else {
