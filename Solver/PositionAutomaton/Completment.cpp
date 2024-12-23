@@ -271,18 +271,24 @@ namespace solverbin{
     // auto DFAClass = new DFA();
     DFAState* CurrState = Init_state;
     DFAState* NState;
+    bool IsPrefixMatch = false;
     // std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
       NState = StepOneByte(CurrState, c);
       CurrState = NState;
-      if (NState->DFlag == DFA::Match){
+      if (NState == nullptr)
         return false;
+      // DumpState(NState);
+      if (NState->DFlag == DFA::Match){
+        IsPrefixMatch = true;
       }
       else
         continue;
 
     }
-    return true;
-    // return CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
+    // return true;
+    if (IsPrefixMatch)
+      CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
+    return IsPrefixMatch;
   }
 }

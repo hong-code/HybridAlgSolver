@@ -34,7 +34,6 @@ int main(int argc, char* argv[]){
       unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }
-
   std::vector<solverbin::REnodeClass> ReList;
   std::wcout.sync_with_stdio(true);
   for (auto str : Regex_list){

@@ -79,6 +79,7 @@ namespace solverbin{
         DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy);
         DetectABTNFA_Lookaround() {};
         bool Writefile();
+        bool WriteInBase64();
         bool Intersect();
         bool IsABT(TernarySimulationState* s);
         bool DetectABTOFS(TernarySimulationState* s, std::set<TernarySimulationState> TSSET);
