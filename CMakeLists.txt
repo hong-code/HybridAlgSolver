@@ -16,6 +16,9 @@ add_subdirectory(Membership)
 # target_link_libraries(String1_Solver Solverbin Parserbin)
 target_link_libraries(String_Solver Parserbin Solverbin)
 
+# 查找 OpenSSL
+find_package(OpenSSL REQUIRED)
+
 add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
 
@@ -26,7 +29,7 @@ add_executable(Match Match.cpp)
 target_link_libraries(Match Parserbin Solverbin MembershipBin)
 
 add_executable(DetectAmbiguity DetectAmbiguity.cpp)
-target_link_libraries(DetectAmbiguity Parserbin Solverbin)
+target_link_libraries(DetectAmbiguity Parserbin Solverbin OpenSSL::SSL OpenSSL::Crypto)
 
 add_executable(Completment Completment_Main.cpp)
 target_link_libraries(Completment Parserbin Solverbin)
