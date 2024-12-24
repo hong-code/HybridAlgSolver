@@ -466,6 +466,38 @@ namespace solverbin{
     Node2NFAState.insert(std::make_pair(NState->Node2Continuation.first, NState));
   }
 
+  void RegExpSymbolic::FollowAtomata::CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec){
+    std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStates = NFAStateVec;
+    for (auto node : NFAStates){
+      NFAStates.erase(node);
+      if (NFAStates.empty())
+        break;
+      for (auto Tnode : NFAStates){
+        bool mark = true; 
+        if (node->NodeSequence.size() != Tnode->NodeSequence.size())
+          mark = false;
+        for (auto First : node->NodeSequence){
+          if (!mark)
+            break;
+          if (Tnode->NodeSequence.find(First.first) != Tnode->NodeSequence.end())
+            continue;
+          else {
+            mark = false;
+            break;
+          }
+        }
+        if (mark){
+          NFAStates.erase(Tnode);
+          NFAStateVec.erase(Tnode);
+          if (NFAStates.empty())
+            break;
+        }    
+      }
+      if (NFAStates.empty())
+        break;
+    }
+  }
+
   std::set<RegExpSymbolic::FollowAtomata::NFAState*> RegExpSymbolic::FollowAtomata::StepOneByte(NFAState* s, uint8_t c){
     std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStateVec;
     auto itc = s->Next.find(REClass.ByteMap[c]);
@@ -501,6 +533,7 @@ namespace solverbin{
         continue;
       
     }
+    CheckingFollow(NFAStateVec);
     s->Next.insert(std::make_pair(REClass.ByteMap[c], NFAStateVec));
     return NFAStateVec;
   }
