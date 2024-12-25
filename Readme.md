@@ -53,17 +53,3 @@ hostname[2024]+
 sat
 witness string: hostname:2024
 ```
-
-
-# Detect Ambiguity of Regex
-Online Algorithms for Detecting Ambiguity of Regex and Generating an Effective Attack String.
-
-# Running Commands
-
-```bash
-cd HybridAlgSolver # Enter the root directory of the project
-mkdir build && cd build # create build directory
-cmake .. # load cmakelist file
-make # compile into .exe file
-./DetectAmbiguity [Path of Regex File] [Path of Output File] # runnning command
-```
