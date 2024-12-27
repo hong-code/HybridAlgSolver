@@ -56,7 +56,7 @@ namespace solverbin{
     auto initState = solverbin::FollowAtomata(this->e1);
     auto dfa = solverbin::DFA(&initState);
     if (!dfa.Complement(dfa.DState, attack_string, Suffix)) 
-      return false;
+      std::cout <<  "no match" << std::endl;
     std::ofstream Outfile;
     NumberOfCandidates++;
     if (mkdir(Output.c_str(), 0777) == 0) {
@@ -69,12 +69,11 @@ namespace solverbin{
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
     }
-    std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
-    std::ofstream outfile;  // 创建ofstream对象
     while (attack_string.size() <= length)
       attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
-    // Outfile << attack_string << "@"; 
+    Outfile << attack_string;
+    std::cout << "file is closed" << std::endl;
     Suffix.clear();
     Outfile.close();
     return true;
@@ -172,6 +171,7 @@ namespace solverbin{
               SimulationCache.insert(std::make_pair(*ns, ns));
               WitnessStr.push_back(c);
               if (TSSET.find(*ns) != TSSET.end()){
+                DumpTernarySimulationState(ns);
                 return true;
               }
               if (DetectABTOFS(ns, TSSET)){
