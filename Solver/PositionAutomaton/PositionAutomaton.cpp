@@ -430,7 +430,7 @@ namespace solverbin{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  e2 = e1;
+                  e2 = e1Copy;
                   e2->Counting = Counting;
                 }
               }
@@ -438,9 +438,9 @@ namespace solverbin{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  e1->Counting = Counting;
+                  e1Copy->Counting = Counting;
                   e2->Children.emplace_back(it->Ccontinuation);
-                  e2->Children.emplace_back(e1);
+                  e2->Children.emplace_back(e1Copy);
                 }
               }        
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
