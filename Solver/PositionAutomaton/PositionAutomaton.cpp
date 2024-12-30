@@ -420,6 +420,7 @@ namespace solverbin{
         e1->Isnullable = true;
         while (Counting.max > 0){
           auto node_new = REClass.CopyREnode(e1->Children[0]);
+          auto e1Copy = REClass.CopyREnode(e1);
           auto RSA = FirstNode(node_new);
           ProcessCounting(Counting);
           auto RS1 = RSA.second;
