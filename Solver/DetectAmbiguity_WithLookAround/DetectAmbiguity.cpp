@@ -171,7 +171,6 @@ namespace solverbin{
               SimulationCache.insert(std::make_pair(*ns, ns));
               WitnessStr.push_back(c);
               if (TSSET.find(*ns) != TSSET.end()){
-                DumpTernarySimulationState(ns);
                 return true;
               }
               if (DetectABTOFS(ns, TSSET)){

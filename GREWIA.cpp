@@ -27,11 +27,22 @@ int main(int argc, char* argv[]){
     if (c == '\r'){
       unicodeStr.pop_back();
     }
+    // if (unicodeStr[0] == '/'){
+    //   for (int j = unicodeStr.length()-1; j > 1; j--){
+    //     if (unicodeStr[j] == '/' ){
+    //       unicodeStr.erase(j, unicodeStr.length());
+    //       unicodeStr.erase(0, 1);
+    //       break;
+    //     }
+    //   }
+    // }
     int i = 0;
     while (unicodeStr[i] == '(')
       i++;
-    if (unicodeStr[i] != '^')
-      unicodeStr.insert(0, L".*");
+    if (unicodeStr[i] != '^'){
+      unicodeStr.insert(0, L".*(");
+      unicodeStr.insert(unicodeStr.size(), L")");
+    }
     Regex_list.emplace_back(unicodeStr);
   }
   std::vector<solverbin::REnodeClass> ReList;
