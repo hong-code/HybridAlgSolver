@@ -618,6 +618,7 @@ namespace solverbin {
         }
         if (!solverbin::isInteger(lo) && lo.size() != 0 || !solverbin::isInteger(hi) && hi.size() != 0){
           REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'{', '{'});
+          Re.BytemapRange.insert({'{', '{'});
           r->Children.emplace_back(REnodeRune);
           RegexString.insert(0, Prefix_string);
           break;
