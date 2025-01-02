@@ -191,14 +191,14 @@ namespace solverbin{
       if (nextns1.empty() || nextns2.empty() || nextns3.empty())
         continue;
       for (auto nextns1_it : nextns1){
-        if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match)
-          continue;
+        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match)
+        //   continue;
         for (auto nextns2_it : nextns2){
-          if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match)
-            continue;
+          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match)
+          //   continue;
           for (auto nextns3_it : nextns3){
-            if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match)
-              continue;
+            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match)
+            //   continue;
             auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
             if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
             auto itc = SimulationCache.find(*ns);
