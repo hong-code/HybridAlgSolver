@@ -296,22 +296,22 @@ namespace solverbin {
           r->Children.emplace_back(REnodeLookahead);
           break;
         }
-        else if (RegexString.substr(0, 2) == L"?<="){
+        else if (RegexString.substr(0, 3) == L"?<="){
           RegexString.erase(0,3);
-          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_Lookbehind, {0, 0});
+          REnode* REnodeLookbehind = Re.initREnode(Kind::REGEXP_Lookbehind, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
           REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
-          REnodeLookahead->Children[0] = REnodeCONCAT;
-          r->Children.emplace_back(REnodeLookahead);
+          REnodeLookbehind->Children.emplace_back(REnodeCONCAT);
+          // r->Children.emplace_back(REnodeLookahead);
           break;
         }
-        else if (RegexString.substr(0, 2) == L"?<!"){
+        else if (RegexString.substr(0, 3) == L"?<!"){
           RegexString.erase(0,3);
-          REnode* REnodeLookahead = Re.initREnode(Kind::REGEXP_NLookbehind, {0, 0});
+          REnode* REnodeNLookbehind = Re.initREnode(Kind::REGEXP_NLookbehind, {0, 0});
           REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
           REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
-          REnodeLookahead->Children[0] = REnodeCONCAT;
-          r->Children.emplace_back(REnodeLookahead);
+          REnodeNLookbehind->Children.emplace_back(REnodeCONCAT);
+          // r->Children.emplace_back(REnodeLookahead);
           break;
         }
         else{
@@ -618,6 +618,7 @@ namespace solverbin {
         }
         if (!solverbin::isInteger(lo) && lo.size() != 0 || !solverbin::isInteger(hi) && hi.size() != 0){
           REnode* REnodeRune = Re.initREnode(Kind::REGEXP_RUNE, {'{', '{'});
+          Re.BytemapRange.insert({'{', '{'});
           r->Children.emplace_back(REnodeRune);
           RegexString.insert(0, Prefix_string);
           break;
@@ -904,15 +905,6 @@ namespace solverbin {
 
 
 Parer::Parer(std::wstring regex_string){
-  if (regex_string[0] == '/'){
-    for (int j = regex_string.length()-1; j > 1; j--){
-      if (regex_string[j] == '/' ){
-        regex_string.erase(j, regex_string.length());
-        regex_string.erase(0, 1);
-        break;
-      }
-    }
-  }
   
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);

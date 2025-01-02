@@ -19,6 +19,9 @@ namespace solverbin{
     for (auto i : s->IndexSequence){
       std::cout << i << " ";
     }
+    for (auto i : s->NodeSequence){
+      std::cout << FA->REClass.REnodeToString(i->Ccontinuation) << std::endl;
+    }
     std::cout << "" << std::endl;
   }
 

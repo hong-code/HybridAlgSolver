@@ -115,6 +115,7 @@ namespace solverbin {
         NFACache* Step2Left(NFACache* DC, int c); // step to the left 
         NFACache* Step2Right(NFACache* DC, int c); // step to the left 
         NFAState* FindInNFACache(NFACache* DC, NFAState* s);
+        void CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec);
         std::set<NFAState*> StepOneByte(NFAState* s, uint8_t c);
         static void DumpState(NFAState* s);
         FollowAtomata();

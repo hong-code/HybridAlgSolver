@@ -243,6 +243,8 @@ namespace solverbin{
       if (RC.min == 0 && RC.max == 244 && c == 128) {
         c = 194;
       }
+      // if (c == 10)
+      //   continue;
       auto NState = StepOneByte(DFAState, c);
       if (NState == nullptr){
         suffix.push_back(c);
@@ -255,13 +257,14 @@ namespace solverbin{
       DFAStateSet.insert(NState);
       auto Attr = ComputeAttribute(Position, Kind, c);
       suffix.push_back(c);
-      if (CheckOneByte(NState, Attr.first, Attr.second.first, Attr.second.second, suffix)) {
-        return true;
-      }
-      else {
-        suffix.pop_back();
-        continue;
-      }
+      return true;
+      // if (CheckOneByte(NState, Attr.first, Attr.second.first, Attr.second.second, suffix)) {
+      //   return true;
+      // }
+      // else {
+      //   suffix.pop_back();
+      //   continue;
+      // }
     }
     return false;
   }
@@ -271,18 +274,24 @@ namespace solverbin{
     // auto DFAClass = new DFA();
     DFAState* CurrState = Init_state;
     DFAState* NState;
+    bool IsPrefixMatch = false;
     // std::vector<State*> DFA_State = Init_state->FirstSet;
     for (auto c : Complement_str){
       NState = StepOneByte(CurrState, c);
       CurrState = NState;
-      if (NState->DFlag == DFA::Match){
+      if (NState == nullptr)
         return false;
+      // DumpState(NState);
+      if (NState->DFlag == DFA::Match){
+        IsPrefixMatch = true;
       }
       else
         continue;
 
     }
-    return true;
-    // return CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
+    // return true;
+    if (IsPrefixMatch)
+      CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
+    return IsPrefixMatch;
   }
 }

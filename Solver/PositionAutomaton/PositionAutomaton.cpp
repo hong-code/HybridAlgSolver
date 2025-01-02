@@ -420,6 +420,7 @@ namespace solverbin{
         e1->Isnullable = true;
         while (Counting.max > 0){
           auto node_new = REClass.CopyREnode(e1->Children[0]);
+          auto e1Copy = REClass.CopyREnode(e1);
           auto RSA = FirstNode(node_new);
           ProcessCounting(Counting);
           auto RS1 = RSA.second;
@@ -430,7 +431,7 @@ namespace solverbin{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  e2 = e1;
+                  e2 = e1Copy;
                   e2->Counting = Counting;
                 }
               }
@@ -438,9 +439,9 @@ namespace solverbin{
                 if (Counting.max == 0)
                   e2 = it->Ccontinuation;
                 else{
-                  e1->Counting = Counting;
+                  e1Copy->Counting = Counting;
                   e2->Children.emplace_back(it->Ccontinuation);
-                  e2->Children.emplace_back(e1);
+                  e2->Children.emplace_back(e1Copy);
                 }
               }        
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
@@ -474,6 +475,8 @@ namespace solverbin{
             break;
           }
         }
+        Node2NFAState.insert(std::make_pair(e1, RSVec2));
+        Node2LookAState.insert(std::make_pair(e1, RSVec1));
       }  
       else {
         return std::make_pair(Vec1->second, Vec2->second);
