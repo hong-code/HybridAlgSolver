@@ -243,6 +243,8 @@ namespace solverbin{
       if (RC.min == 0 && RC.max == 244 && c == 128) {
         c = 194;
       }
+      // if (c == 10)
+      //   continue;
       auto NState = StepOneByte(DFAState, c);
       if (NState == nullptr){
         suffix.push_back(c);
@@ -255,13 +257,14 @@ namespace solverbin{
       DFAStateSet.insert(NState);
       auto Attr = ComputeAttribute(Position, Kind, c);
       suffix.push_back(c);
-      if (CheckOneByte(NState, Attr.first, Attr.second.first, Attr.second.second, suffix)) {
-        return true;
-      }
-      else {
-        suffix.pop_back();
-        continue;
-      }
+      return true;
+      // if (CheckOneByte(NState, Attr.first, Attr.second.first, Attr.second.second, suffix)) {
+      //   return true;
+      // }
+      // else {
+      //   suffix.pop_back();
+      //   continue;
+      // }
     }
     return false;
   }
