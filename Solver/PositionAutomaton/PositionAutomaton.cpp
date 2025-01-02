@@ -475,6 +475,8 @@ namespace solverbin{
             break;
           }
         }
+        Node2NFAState.insert(std::make_pair(e1, RSVec2));
+        Node2LookAState.insert(std::make_pair(e1, RSVec1));
       }  
       else {
         return std::make_pair(Vec1->second, Vec2->second);

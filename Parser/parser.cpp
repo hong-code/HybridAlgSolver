@@ -905,15 +905,6 @@ namespace solverbin {
 
 
 Parer::Parer(std::wstring regex_string){
-  if (regex_string[0] == '/'){
-    for (int j = regex_string.length()-1; j > 1; j--){
-      if (regex_string[j] == '/' ){
-        regex_string.erase(j, regex_string.length());
-        regex_string.erase(0, 1);
-        break;
-      }
-    }
-  }
   
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);

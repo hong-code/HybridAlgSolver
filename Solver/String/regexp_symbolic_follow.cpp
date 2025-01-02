@@ -468,10 +468,9 @@ namespace solverbin{
 
   void RegExpSymbolic::FollowAtomata::CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec){
     std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStates = NFAStateVec;
-    for (auto node : NFAStates){
+    while (!NFAStates.empty()){
+      auto node = *NFAStates.begin();
       NFAStates.erase(node);
-      if (NFAStates.empty())
-        break;
       for (auto Tnode : NFAStates){
         bool mark = true; 
         if (node->NodeSequence.size() != Tnode->NodeSequence.size())
@@ -489,12 +488,8 @@ namespace solverbin{
         if (mark){
           NFAStates.erase(Tnode);
           NFAStateVec.erase(Tnode);
-          if (NFAStates.empty())
-            break;
         }    
       }
-      if (NFAStates.empty())
-        break;
     }
   }
 
