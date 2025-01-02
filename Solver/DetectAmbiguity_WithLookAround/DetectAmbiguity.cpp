@@ -13,6 +13,27 @@
 
 namespace solverbin{
 
+
+  	void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap){
+		std::set<uint8_t> color_set;
+		color_set.insert(ByteMap[0]);
+    std::vector<uint8_t> RuneRange;
+    ColorMap.insert(std::make_pair(ByteMap[0], RuneRange));
+		if (ByteMap[0] != 0){
+
+    }
+			Alphabet.insert(0);
+		for (int i = 0; i < 256; i++){
+			if (color_set.find(ByteMap[i]) != color_set.end()) 
+				continue;
+			else{
+				color_set.insert(ByteMap[i]);
+				if (ByteMap[i] != 0)
+					Alphabet.insert(i);
+			}
+		}
+	}
+
   std::string base64_encode(const std::string &input) {
     // 计算编码后的大小
     int len = 4 * ((input.length() + 2) / 3);
@@ -25,23 +46,6 @@ namespace solverbin{
     delete[] encoded;
     return result;
 }
-
-  void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap){
-    std::set<uint8_t> color_set;
-
-		color_set.insert(ByteMap[0]);
-		if (ByteMap[0] != 0)
-			Alphabet.insert(0);
-		for (int i = 0; i < 256; i++){
-			if (color_set.find(ByteMap[i]) != color_set.end()) 
-				continue;
-			else{
-				color_set.insert(ByteMap[i]);
-				if (ByteMap[i] != 0)
-					Alphabet.insert(i);
-			}
-		}
-  }
 
   void DetectABTNFA_Lookaround::DumpAlphabet(std::set<uint8_t>& A){
     std::cout << "The alphabet: ";
@@ -213,7 +217,7 @@ namespace solverbin{
               if (!TSSET.empty()){
                 if (DetectABTOFS(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
-                  if (WriteInBase64()){  
+                  if (Writefile()){  
                     if (isLazy)
                       return true;
                     else{
