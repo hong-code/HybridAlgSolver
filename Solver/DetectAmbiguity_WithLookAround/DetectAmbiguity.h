@@ -70,13 +70,15 @@ namespace solverbin{
         std::map<uint8_t, std::vector<uint8_t>> ColorMap;
         int length = 0;
         int isLazy = 1;
+        int IsRandom = 0;
         int NumberOfCandidates = 0;
         std::multimap<FollowAtomata::State*, TernarySimulationState*> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState* TS);
-        void ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap);
+        void ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet);
+        std::string GenerateRandomWitness(std::string& WitnessStr);
         void DumpAlphabet(std::set<uint8_t>& A);
-        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy);
+        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom);
         DetectABTNFA_Lookaround() {};
         bool Writefile();
         bool WriteInBase64();

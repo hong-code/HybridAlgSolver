@@ -8,26 +8,34 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include "DetectAmbiguity.h"
+#include <random>
 #include <openssl/evp.h>
+
+#include "DetectAmbiguity.h"
+
 
 namespace solverbin{
 
 
-  	void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet, std::map<uint8_t, std::vector<uint8_t>> ColorMap){
+  	void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabetp){
 		std::set<uint8_t> color_set;
 		color_set.insert(ByteMap[0]);
     std::vector<uint8_t> RuneRange;
     ColorMap.insert(std::make_pair(ByteMap[0], RuneRange));
 		if (ByteMap[0] != 0){
-
+      Alphabet.insert(0);
+      RuneRange.emplace_back(0);
     }
-			Alphabet.insert(0);
 		for (int i = 0; i < 256; i++){
-			if (color_set.find(ByteMap[i]) != color_set.end()) 
-				continue;
+      auto Color2Range = ColorMap.find(ByteMap[i]);
+			if (color_set.find(ByteMap[i]) != color_set.end()){
+        Color2Range->second.emplace_back(i);
+      }
 			else{
+        std::vector<uint8_t> Range;
 				color_set.insert(ByteMap[i]);
+        Range.emplace_back(i);
+        ColorMap.insert(std::make_pair(ByteMap[i], Range));
 				if (ByteMap[i] != 0)
 					Alphabet.insert(i);
 			}
@@ -55,6 +63,20 @@ namespace solverbin{
     std::cout << "" << std::endl;
   }
 
+
+  std::string DetectABTNFA_Lookaround::GenerateRandomWitness(std::string& WitnessStr){
+    std::string WritenStr;
+    for (auto color : WitnessStr){
+      std::random_device rd;                                // 随机设备
+      std::mt19937 gen(rd());                               // 随机数生成器
+      auto Range = ColorMap.find(e1.ByteMap[color])->second;
+      std::uniform_int_distribution<> dis(0, Range.size() - 1); // 均匀分布
+      int randomIndex = dis(gen);
+      WritenStr.push_back(Range[randomIndex]);
+    }
+    return WritenStr;
+  }
+
   bool DetectABTNFA_Lookaround::Writefile(){
     attack_string = InterStr + WitnessStr;
     auto initState = solverbin::FollowAtomata(this->e1);
@@ -73,8 +95,13 @@ namespace solverbin{
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
     }
-    while (attack_string.size() <= length)
-      attack_string.append(WitnessStr);
+    if (IsRandom){
+      while (attack_string.size() <= length)
+        attack_string.append(GenerateRandomWitness(WitnessStr));
+    }
+    else
+      while (attack_string.size() <= length)
+        attack_string.append(WitnessStr);
     attack_string.append(Suffix);  
     Outfile << attack_string;
     std::cout << "file is closed" << std::endl;
@@ -110,14 +137,15 @@ namespace solverbin{
     return true;
   }
 
-  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy){
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy, int Is_Random){
     isLazy = Is_Lazy;
     length = l;
     Output = Path;
+    IsRandom = Is_Random;
     e1 = r;
     F1 = FollowAtomata(e1);
     SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
-    e1.ComputeAlphabet(e1.ByteMap, Alphabet);
+    ComputeAlphabet_Colormap(e1.ByteMap, Alphabet);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
     if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
   }
@@ -163,8 +191,14 @@ namespace solverbin{
       if (nextns1.empty() || nextns2.empty() || nextns3.empty())
         continue;
       for (auto nextns1_it : nextns1){
+        if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match)
+          continue;
         for (auto nextns2_it : nextns2){
+          if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match)
+            continue;
           for (auto nextns3_it : nextns3){
+            if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match)
+              continue;
             auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
             if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
             auto itc = SimulationCache.find(*ns);
