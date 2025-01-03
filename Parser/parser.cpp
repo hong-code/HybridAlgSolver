@@ -414,9 +414,10 @@ namespace solverbin {
 
       case '$':  {
         //todo
+        Re.matchFlag = REnodeClass::MatchFlag::dollarEnd;
         RegexString.erase(0, 1);
         break;
-      }// End of line.
+      }// End of line
         
 
       case '.':  {
