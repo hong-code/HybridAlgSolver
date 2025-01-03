@@ -599,6 +599,8 @@ namespace solverbin{
         i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
         if (i->Ccontinuation->Isnullable){
           i->DFlag = Match;
+          if (REClass.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+            return {};
         }else
           i->DFlag = Normal;
         NFAStateVec.emplace_back(FindInNFACache(nfacache, i));
