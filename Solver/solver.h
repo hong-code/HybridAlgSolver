@@ -101,6 +101,11 @@ class REnodeClass{
 
     };
 
+    enum MatchFlag{
+      dollarEnd,
+      NdollarEnd,
+    };
+
     #ifndef RuneSequence
       typedef std::vector<REnode*> RuneSequence;
     #endif  
@@ -115,6 +120,7 @@ class REnodeClass{
 
     REnode* Renode;
     int color_max = 0;
+    MatchFlag matchFlag = NdollarEnd;
 
     REnodeClass(std::string e);
     REnodeClass();
