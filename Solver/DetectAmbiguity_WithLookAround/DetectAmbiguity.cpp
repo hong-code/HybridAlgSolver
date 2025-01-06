@@ -66,7 +66,7 @@ namespace solverbin{
 
   std::string DetectABTNFA_Lookaround::GenerateRandomWitness(std::string& WitnessStr){
     std::string WritenStr;
-    for (auto color : WitnessStr){
+    for (uint8_t color : WitnessStr){
       std::random_device rd;                                // 随机设备
       std::mt19937 gen(rd());                               // 随机数生成器
       auto Range = ColorMap.find(e1.ByteMap[color])->second;
@@ -144,71 +144,67 @@ namespace solverbin{
     IsRandom = Is_Random;
     e1 = r;
     F1 = FollowAtomata(e1);
-    SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
+    SSBegin = {F1.NState, F1.NState, F1.NState};
     ComputeAlphabet_Colormap(e1.ByteMap, Alphabet);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
     if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
   }
 
-  void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState* TSS){
-    std::cout << "SimulationState: " << TSS << " IFlag: " << TSS->IFlag << " IsIntersect: " << TSS->IsSat << 
-    " IsDone" << TSS->IsDone << std::endl;
-    std::cout << "continuation" << e1.REnodeToString(TSS->NS1->Ccontinuation) << std::endl;
-    std::cout << ": continuation" << e1.REnodeToString(TSS->NS2->NS1->Ccontinuation) << std::endl;
-    std::cout << ": continuation" << e1.REnodeToString(TSS->NS2->NS2->Ccontinuation) << std::endl;
-    F1.DumpState(TSS->NS1);
-    F1.DumpState(TSS->NS2->NS1);
-    F1.DumpState(TSS->NS2->NS2);
+  void DetectABTNFA_Lookaround::DumpTernarySimulationState(TernarySimulationState TSS){
+    // std::cout << "SimulationState: " << TSS << " IFlag: " << TSS->IFlag << " IsIntersect: " << TSS->IsSat << 
+    // " IsDone" << TSS->IsDone << std::endl;
+    std::cout << "continuation" << e1.REnodeToString(TSS[0]->Ccontinuation) << std::endl;
+    std::cout << "continuation" << e1.REnodeToString(TSS[1]->Ccontinuation) << std::endl;
+    std::cout << "continuation" << e1.REnodeToString(TSS[2]->Ccontinuation) << std::endl;
+    // F1.DumpState(TSS->NS1);
+    // F1.DumpState(TSS->NS2->NS1);
+    // F1.DumpState(TSS->NS2->NS2);
   }
 
-  std::set<DetectABTNFA_Lookaround::TernarySimulationState> DetectABTNFA_Lookaround::DTSimulationState(TernarySimulationState* TS){
+  std::set<DetectABTNFA_Lookaround::TernarySimulationState> DetectABTNFA_Lookaround::DTSimulationState(TernarySimulationState TS){
     std::set<DetectABTNFA_Lookaround::TernarySimulationState> TSSSet;
-    if (TS->NS1->Ccontinuation == TS->NS2->NS1->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS2->Ccontinuation){
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS2, TS->NS2->NS2));
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS2->NS2, TS->NS1, TS->NS2->NS2));
+    if (TS[0] == TS[1] && TS[0] != TS[2]){
+      TSSSet.insert({TS[0], TS[2], TS[2]});
+      TSSSet.insert({TS[2], TS[0], TS[1]});
     }
-    else if (TS->NS1->Ccontinuation == TS->NS2->NS2->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS1->Ccontinuation){
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS1, TS->NS2->NS1));
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS2->NS1, TS->NS2->NS1, TS->NS1));
-    }
-    else if (TS->NS2->NS1->Ccontinuation == TS->NS2->NS2->Ccontinuation && TS->NS1->Ccontinuation != TS->NS2->NS1->Ccontinuation){
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS1, TS->NS2->NS1));
-      TSSSet.insert(TernarySimulationState(Normal, TS->NS1, TS->NS2->NS1, TS->NS1));
+    else if (TS[1] == TS[2] && TS[0] != TS[1]){
+      TSSSet.insert({TS[0], TS[0], TS[1]});
+      TSSSet.insert({TS[0], TS[1], TS[0]});
     }
     return TSSSet;
   }
 
-  bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState* TSS, std::set<TernarySimulationState> TSSET){
+  bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState TSS, std::set<TernarySimulationState> TSSET){
     if (debug.PrintSimulation){
       std::cout << "witness str: " << WitnessStr << std::endl;
       DumpTernarySimulationState(TSS);
     }
     for (auto c : Alphabet){
       if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-      auto nextns1 = F1.StepOneByte(TSS->NS1, c);
-      auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
-      auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
+      auto nextns1 = F1.StepOneByte(TSS[0], c);
+      auto nextns2 = F1.StepOneByte(TSS[1], c);
+      auto nextns3 = F1.StepOneByte(TSS[2], c);
       if (nextns1.empty() || nextns2.empty() || nextns3.empty())
         continue;
       for (auto nextns1_it : nextns1){
-        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match)
+        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
         //   continue;
         for (auto nextns2_it : nextns2){
-          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match)
+          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
           //   continue;
           for (auto nextns3_it : nextns3){
-            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match)
+            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
             //   continue;
-            auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
+            TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
             if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
-            auto itc = SimulationCache.find(*ns);
+            auto itc = SimulationCache.find(ns);
             if (itc != SimulationCache.end()){
               
             }
             else{
-              SimulationCache.insert(std::make_pair(*ns, ns));
+              SimulationCache.insert(ns);
               WitnessStr.push_back(c);
-              if (TSSET.find(*ns) != TSSET.end()){
+              if (TSSET.find(ns) != TSSET.end()){
                 return true;
               }
               if (DetectABTOFS(ns, TSSET)){
@@ -224,28 +220,28 @@ namespace solverbin{
     return false;
   }
 
-  bool DetectABTNFA_Lookaround::IsABT(TernarySimulationState* TSS){
+  bool DetectABTNFA_Lookaround::IsABT(TernarySimulationState TSS){
     if (debug.PrintSimulation){
       std::cout << "witness str: " << WitnessStr << std::endl;
       DumpTernarySimulationState(TSS);
     }
     for (auto c : Alphabet){
       if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-      auto nextns1 = F1.StepOneByte(TSS->NS1, c);
-      auto nextns2 = F1.StepOneByte(TSS->NS2->NS1, c);
-      auto nextns3 = F1.StepOneByte(TSS->NS2->NS2, c);
+      auto nextns1 = F1.StepOneByte(TSS[0], c);
+      auto nextns2 = F1.StepOneByte(TSS[1], c);
+      auto nextns3 = F1.StepOneByte(TSS[2], c);
       if (nextns1.empty() || nextns2.empty() || nextns3.empty())
         continue;
       for (auto nextns1_it : nextns1){
         for (auto nextns2_it : nextns2){
           for (auto nextns3_it : nextns3){
-            auto ns = new TernarySimulationState(Normal, nextns1_it, nextns2_it, nextns3_it);
+            TernarySimulationState ns =  getSorted({nextns1_it, nextns2_it, nextns3_it});
             if (debug.PrintSimulation) DumpTernarySimulationState(ns);
-            auto itc = DoneCache.find(*ns);
+            auto itc = DoneCache.find(ns);
             if (itc != DoneCache.end()){
             }
             else{
-              DoneCache.insert(std::make_pair(*ns, ns));
+              DoneCache.insert(ns);
               auto TSSET = DTSimulationState(ns);
               InterStr.push_back(c);
               if (!TSSET.empty()){
