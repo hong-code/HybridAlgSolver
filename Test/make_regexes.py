@@ -16,13 +16,13 @@ import base64
 
 # print(rows)
 
-# # 创建文件夹regexes
-# if not os.path.exists('regexes'):
-#     os.makedirs('regexes')
+# 创建文件夹regexes
+if not os.path.exists('regexes'):
+    os.makedirs('regexes')
 
 
 # 打开文件并按行读取
-file_path = '/home/HybridAlgSolver/Datasets/perl_hunter_better.txt'  # 替换为你的文件路径
+file_path = '/home/HybridAlgSolver/Datasets/pcre_hunter_better.txt'  # 替换为你的文件路径
 
 with open(file_path, 'r') as file:
     rows = file.readlines()  # 读取所有行并存入列表

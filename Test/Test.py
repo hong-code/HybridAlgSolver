@@ -22,6 +22,7 @@ path = 'regexes'
 Output = '../Output'
 count = 0
 Islazy = 1
+IsRandom = 0
 
 
 
@@ -31,7 +32,7 @@ Islazy = 1
     # 使用线程池执行任务
     # 编译文件
 def dotask(id, Output, Length, Islazy):
-    command = "timeout 600s /home/HybridAlgSolver/build/GREWIA %s %s %s %s" % (path + '/'+ id, Output, Length, Islazy)
+    command = "timeout 600s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s" % (path + '/'+ id, Output, Length, Islazy, IsRandom)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
