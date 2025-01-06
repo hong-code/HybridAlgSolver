@@ -10,6 +10,7 @@
 #include <sys/types.h>
 #include <random>
 #include <openssl/evp.h>
+#include <queue>
 
 #include "DetectAmbiguity.h"
 
@@ -174,44 +175,51 @@ namespace solverbin{
     return TSSSet;
   }
 
-  bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState TSS, std::set<TernarySimulationState> TSSET){
+  bool DetectABTNFA_Lookaround::DetectABTOFS(TernarySimulationState TSS_Ex, std::set<TernarySimulationState> TSSET){
     if (debug.PrintSimulation){
       std::cout << "witness str: " << WitnessStr << std::endl;
-      DumpTernarySimulationState(TSS);
+      DumpTernarySimulationState(TSS_Ex);
     }
-    for (auto c : Alphabet){
-      if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
-      auto nextns1 = F1.StepOneByte(TSS[0], c);
-      auto nextns2 = F1.StepOneByte(TSS[1], c);
-      auto nextns3 = F1.StepOneByte(TSS[2], c);
-      if (nextns1.empty() || nextns2.empty() || nextns3.empty())
-        continue;
-      for (auto nextns1_it : nextns1){
-        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
-        //   continue;
-        for (auto nextns2_it : nextns2){
-          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+    std::queue<std::pair <TernarySimulationState, std::string>> Q;
+    Q.push({TSS_Ex, ""});
+    while (Q.size() > 0){
+      std::pair <TernarySimulationState, std::string> TSS = Q.front();
+      Q.pop();
+      SimulationCache.insert(TSS.first);
+      for (auto c : Alphabet){
+        if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
+        WitnessStr = TSS.second;
+        auto nextns1 = F1.StepOneByte(TSS.first[0], c);
+        auto nextns2 = F1.StepOneByte(TSS.first[1], c);
+        auto nextns3 = F1.StepOneByte(TSS.first[2], c);
+        if (nextns1.empty() || nextns2.empty() || nextns3.empty())
+          continue;
+        for (auto nextns1_it : nextns1){
+          // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
           //   continue;
-          for (auto nextns3_it : nextns3){
-            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+          for (auto nextns2_it : nextns2){
+            // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
             //   continue;
-            TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
-            if (debug.PrintSimulation) DumpTernarySimulationState(TSS);
-            auto itc = SimulationCache.find(ns);
-            if (itc != SimulationCache.end()){
-              
-            }
-            else{
-              SimulationCache.insert(ns);
+            for (auto nextns3_it : nextns3){
+              // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+              //   continue;
+              TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
+              auto itc = SimulationCache.find(ns);
+              if (itc != SimulationCache.end()){
+                continue;
+              }
+              if (debug.PrintSimulation) DumpTernarySimulationState(ns);
               WitnessStr.push_back(c);
+              Q.push(std::make_pair(ns, WitnessStr));
               if (TSSET.find(ns) != TSSET.end()){
                 return true;
               }
-              if (DetectABTOFS(ns, TSSET)){
-                return true;
-              }
-              else
-                WitnessStr.pop_back();
+              // if (DetectABTOFS(ns, TSSET)){
+              //   return true;
+              // }
+              // else
+              //   WitnessStr.pop_back();
+            
             }
           }
         }
