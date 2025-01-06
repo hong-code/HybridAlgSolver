@@ -152,6 +152,8 @@ class REnodeClass{
     void isNullable(REnode* e); // check if the node is nullable
 
     REnode* CopyREnode(REnode* e);
+
+    REnode* ReverseNode(REnode* e); // reverse the node
     
 }; // the definition of node in Regex
 

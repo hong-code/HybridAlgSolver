@@ -397,6 +397,99 @@ void REnodeClass::RuneSequenceToString(std::map<REnode*, REnode*>& RS){
   }
 }
 
+REnode*  REnodeClass::ReverseNode(REnode* e) {
+  REnode* r = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+  switch (e->KindReturn()){
+    case Kind::REGEXP_NONE:{
+      *r = *e;
+      break;
+    }
+    case Kind::REGEXP_RUNE:{
+      *r = *e;
+      break;
+    }
+    case Kind::REGEXP_CONCAT:{
+      r->kind = e->kind;
+      r->Status = e->Status;
+      for (auto node = e->Children.rbegin(); node!= e->Children.rend(); node++){
+        REnode* e2 = CopyREnode(*node);
+        r->Children.emplace_back(e2);
+      }
+      break;
+    }
+    case Kind::REGEXP_UNION:{
+      r->kind = e->kind;
+      r->Status = e->Status;
+      for (auto node = e->Children.rbegin(); node!= e->Children.rend(); node++){
+        REnode* e2 = CopyREnode(*node);
+        r->Children.emplace_back(e2);
+      }
+      break;
+    }
+    case Kind::REGEXP_STAR:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      r->kind = e->kind;
+      r->Status = e->Status;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    }
+    case Kind::REGEXP_PLUS:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      r->kind = e->kind;
+      r->Status = e->Status;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    }
+    case Kind::REGEXP_OPT:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      r->kind = e->kind;
+      r->Status = e->Status;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    }
+    case Kind::REGEXP_CHARCLASS:{
+      *r = *e;
+      break;
+    }
+    case Kind::REGEXP_DIFF:
+      break;
+    case Kind::REGEXP_COMPLEMENT:
+      break;
+    case Kind::REGEXP_STRING:
+      break;
+    case Kind::REGEXP_LOOP:{
+      r->kind = e->kind;
+      r->Status = e->Status;
+      r->Counting = e->Counting;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    }  
+    case Kind::REGEXP_REPEAT:{
+      r->kind = e->kind;
+      r->Status = e->Status;
+      r->Counting = e->Counting;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    }  
+    case Kind::REGEXP_Lookbehind:{
+      r->kind = Kind::REGEXP_Lookbehind;
+      r->Status = e->Status;
+      r->Counting = e->Counting;
+      REnode* e2 = CopyREnode(e->Children[0]);
+      r->Children.emplace_back(e2);
+      break;
+    } 
+    default:
+      break;
+  }
+  return e;  
+}
+
 REnode* REnodeClass::CopyREnode(REnode* e1){
   REnode* e = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
   switch (e1->KindReturn())
