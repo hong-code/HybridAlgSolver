@@ -103,7 +103,9 @@ namespace solverbin{
     else
       while (attack_string.size() <= length)
         attack_string.append(WitnessStr);
-    attack_string.append(Suffix);  
+    attack_string.append(Suffix); 
+    if (ConsiderReverse == 1)
+      attack_string.append(LastWord); 
     Outfile << attack_string;
     std::cout << "file is closed" << std::endl;
     Suffix.clear();
@@ -138,12 +140,19 @@ namespace solverbin{
     return true;
   }
 
-  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy, int Is_Random){
+  DetectABTNFA_Lookaround::DetectABTNFA_Lookaround(REnodeClass r, int l, std::string Path, int Is_Lazy, int Is_Random, int Is_FullMatch, int Consider_Reverse ){
     isLazy = Is_Lazy;
     length = l;
     Output = Path;
     IsRandom = Is_Random;
+    ConsiderReverse = Consider_Reverse;
     e1 = r;
+    if (ConsiderReverse == 1) {
+      LastWord = e1.ReturnLastWord(e1.Renode);
+      // std::cout << "reverse: " << e1.REnodeToString(e1.Renode) << std::endl;
+    }
+    if (Is_FullMatch == 1)
+      e1.matchFlag = REnodeClass::MatchFlag::dollarEnd;
     F1 = FollowAtomata(e1);
     SSBegin = {F1.NState, F1.NState, F1.NState};
     ComputeAlphabet_Colormap(e1.ByteMap, Alphabet);

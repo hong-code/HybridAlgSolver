@@ -10,7 +10,7 @@
 
 int main(int argc, char* argv[]){
 
-  if (argc != 6){
+  if (argc != 8){
     std::cout << "parameter error" << std::endl;
   }
   std::ifstream infile;
@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
     if (solverbin::debug.PrintRegexString) std::wcout << L"Regex: " << str << std::endl;
     auto ren = solverbin::Parer(str);
     ReList.emplace_back(ren.Re);
-    auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re, std::stoi(argv[3]), argv[2], std::stoi(argv[4]), std::stoi(argv[5]));
+    auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re, std::stoi(argv[3]), argv[2], std::stoi(argv[4]), std::stoi(argv[5]), std::stoi(argv[6]), std::stoi(argv[7]));
     auto k1 = kk.IsABT(kk.SSBegin);
     if (k1){
       std::cout <<  "prefix: " << kk.InterStr << std::endl;

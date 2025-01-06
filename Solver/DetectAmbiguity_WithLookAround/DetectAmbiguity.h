@@ -75,6 +75,7 @@ namespace solverbin{
         std::string InterStr;
         std::string WitnessStr;
         std::string Suffix;
+        std::string LastWord;
         std::string attack_string;
         std::string Output;
         std::vector<uint8_t> WitnessStrColor;
@@ -83,13 +84,15 @@ namespace solverbin{
         int isLazy = 1;
         int IsRandom = 0;
         int NumberOfCandidates = 0;
+        int IsFullMatch = 0;
+        int ConsiderReverse = 0;
         std::multimap<FollowAtomata::State*, TernarySimulationState> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState TS);
         void ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet);
         std::string GenerateRandomWitness(std::string& WitnessStr);
         void DumpAlphabet(std::set<uint8_t>& A);
-        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom);
+        DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom, int IsFullMatch, int ConsiderReverse);
         DetectABTNFA_Lookaround() {};
         bool Writefile();
         bool WriteInBase64();

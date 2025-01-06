@@ -154,6 +154,8 @@ class REnodeClass{
     REnode* CopyREnode(REnode* e);
 
     REnode* ReverseNode(REnode* e); // reverse the node
+
+    std::string ReturnLastWord(REnode* e); // return the last word of the node
     
 }; // the definition of node in Regex
 

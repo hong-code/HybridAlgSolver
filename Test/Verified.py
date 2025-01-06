@@ -33,50 +33,59 @@ IsRandom = 0
     # 使用线程池执行任务
     # 编译文件
 def dotask(id, Output, Length, Islazy):
-
+    if not os.path.exists(Output):
+        return
     filenames = os.listdir(Output)
 
     for filename in filenames:
-        command = "timeout 2s /home/HybridAlgSolver/PCRE2/PCREMatch %s %s" % (path + '/'+ id, Output + '/' + filename)
+        command = "timeout 2s /home/HybridAlgSolver/PCRE2/PCREMatch %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
         print(command)
-        output = subprocess.Popen(command,  stdout=subprocess.PIPE,
+        process = subprocess.Popen(command,  stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 shell=True,
                 text=True)
         # if len(output.read()) == 0:
         #     print("-"*20, "\ntask {} is done".format(id),"\n", output.read(), "\n", "-"*20)
-        stdout, stderr = output.communicate()
+        # 获取该进程的 PID
+        pid = process.pid
+        try:
+            # 获取进程的 psutil 对象
+            p = psutil.Process(pid)
 
-        # 获取启动的子进程的 pid
-        pid = output.pid
+            # 获取启动前的 CPU 时间
+            start_cpu_times = time.time()
 
-        # 获取 psutil 的进程对象
-        proc = psutil.Process(pid)
+            # 等待命令执行完毕并获取输出
+            stdout, stderr = process.communicate()
 
-        # 获取子进程开始时的用户时间
-        start_time = time.time()
-        start_cpu_time = proc.cpu_times().user  # 获取用户 CPU 时间（单位：秒）
+            # 获取命令执行结束后的 CPU 时间
+            end_cpu_times = time.time()
 
-        # 等待子进程完成
-        Output.wait()
-
-        # 获取子进程完成时的用户时间
-        end_cpu_time = proc.cpu_times().user
-
-        # 计算总的用户 CPU 时间
-        total_cpu_time = end_cpu_time - start_cpu_time
-        if total_cpu_time >= 1:
-            print("task {} is done".format(id))
-            break
-        if output.returncode == -11:  # -11 is the typical exit code for segmentation fault on Unix systems
-            print("Segmentation fault (core dumped)")
-        print("Standard Output:\n", stdout)
+            # 计算用户时间和系统时间
+            # print(f"用户时间: {end_cpu_times:.2f} 秒，大于 1 秒，输出结果。")
+            user_time = end_cpu_times - start_cpu_times
+            # 判断用户时间是否大于 1 秒
+            if user_time >= 1.0:
+                # count = count + 1
+                print(f"用户时间: {user_time:.2f} 秒，大于 1 秒，输出结果。")
+                # print(f"count: {count}")
+                # if stdout:
+                #     print(f"标准输出: {stdout}")
+                # if stderr:
+                #     print(f"错误输出: {stderr}")
+        except psutil.NoSuchProcess:
+            print("进程已结束，无法获取 CPU 时间")
+        except psutil.AccessDenied:
+            print("权限不足，无法访问进程信息")
+        except Exception as e:
+            print(f"出现其他错误: {e}")           
     # print("Standard Error:\n", stderr)    
 
-filenames=os.listdir(path)
-thread_num = 32
+filenames=os.listdir(Output)
+thread_num = 10
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i].split('.')[0])
+        # dotask(filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0)
         executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0)    
 
