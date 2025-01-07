@@ -1,0 +1,346 @@
+%[^\x0d\x0a]{1000}
+PresetFields=[^\x26]*?(s_viewname|Foldername)\x3b\x28[^\x29]{100}
+TIME_ZONE\s*=\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))
+\(\s*TIMESTAMP\s*(\s*(\x27[^\x27]+'|\x22[^\x22]+\x22)\s*,)\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))
+NUMTO(DS|YM)INTERVAL\s*\(\s*\d+\s*,\s*((\x27[^\x27]{1000,})|(\x22[^\x22]{1000,}))
+\x5B(OPTIONS|WINDOWS|MERGE FILES|MAP|ALIAS|TEXT\x20POPUPS|INFOTYPES|SUBSETS)\x5D.*?(Contents|Index|Compiled|Sample List|Full text search stop list)\x20file\s*\x3D[^\r\n]{200}
+(src|href)\s*=\s*(\x22|\x27|)file\x3a\x2f\x2f[^\s\x22\x27]{900}
+filename\x3d[^\r\n]*(\x2e[^\x22\x27\r\n]{18,}[\x22\x27])
+\x3c\x21\x2d\x2d\x23include\s+file\s*=\s*.{250,}-->
+CiWebHitsFile=\/?([^\r\n\x3b\&]*\.\.\/)?
+(\r\nContent-Disposition\x3a\s+form-data\x3b[^\r\n]+\r\n\r\n.+?){250}
+<\?(php)?.{1,256}define\s*\x28\s*str_repeat\s*\x28\s*[\x22\x27][^\x22\x27]+[\x22\x27]\s*\x2c\s*\x24argv
+php.*\x3f[^\n]{256}
+HTTP\/1\.[01].*?\n([^\r\n]+?\r?\n){32}
+<a\s+[^>]*href=[^>]{500}
+\x3C[^\s]+\s[^\x3c\x3E]{80}
+<input\s+[^>]*?name\s*=\s*(3D=)?[^\x20]{128}
+Subject\x3a\x20[^\n]*\x3fQ\x3f[^\n]{512}
+Authorization\s*\x3A\s*Basic\s*[^\n]{437}
+sel\x3d[^\x26\x0a]{73}
+Date\x3a\s+[^\x0d\x0a]{290}
+nim:import\?[^\x22\x27>\s]*?filename=[^\x22\x27>\s]{485}
+<svg .{0,1000}transform\s*=\s*[\x22\x27][^\x22\x27]{500}
+\x2FaedatingCMS\.php?[^\r\n]*?dir\[inc\]=(https?|ftps?)
+\x2FaedatingCMS2\.php?[^\r\n]*?dir\[inc\]=(https?|ftps?)
+\/OvCgi\/(jovgraph|webappmon)\.exe.*?-textFile+[^+]{201}
+\s*\"(.*?)"\,
+(http|https)?\s*(:)?(//)?\s*([a-z]{2,30}\s*)[.]*\s*([a-z]{2,30})\s*[.]\s*([a-z]{2,10})([/]{0,1})
+^TCL TT: \"+(?P<id>CHGP\d+)\".*"
+(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)
+([(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=-]{2,256}\.[a-z]{2,6}|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))\b([-a-zA-Z0-9@:%_\+~#?&\/\/=]*)|(http(s)?:\/\/\/?)
+(\".*?[^\\\"]\"\:)
+\w+@\w{1,63}\.[a-z]{3}
+(([\+]?[ 0-9]{1,6}([ \.\-])?)?([\(]{1}[ +0-9]{2,6}[\)])?([ 0-9A-Z\.\-]{1,32})([0-9]+))|((e|x|ex|ext|extension)(\.|\:)?([ ]{1})?[0-9]+)
+^((([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9])\.?)+$
+(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+^([^,]*,){39}"
+(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9%_:?\+.~#&//=]*)
+^([a-z]+)([A-Z]?[a-z]+)+$
+((?:https?:\/\/(?:www\.)?)?(?:[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b)\/?)+([\/\d\w\.-]*)*(?:[\?])*(.+)*
+(\/\*([^*]|[\r\n]|(\*+([^*\/]|[\r\n])))*\*+\/)|(\/.*)
+(?:(\+?\d{1,3}) )?(?:([\(]?\d+[\)]?)[ -])?(\d{1,5}[\- ]?\d{1,5})
+(\[((\/.*\/)*\w{0,3}[^\]]+|[^\]]+)\])([\n|\s]*)({{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{(?:[^}{]+(\/.*\/)*[^}{]+|{{[^}{]*(\/.*\/)*[^}{]*}})*}})*}})*}})*}})*}})*}})*}})*}})*}})*}})*}})*
+Sys.Process\(\"axium\"\)(\.Window\((\"{0,1}(\&*\#*\d*\w*\:*\s*\.*\w*){1,10}\"{0,1}\,{0,1}\s{0,2}){1,3}\)){1,10}\.\w*\(*(\"*\^*\[*\]*\w*\d*\x81*\d*\"*\,*\s*){1,10}\)*
+([^ ]*) ([^ ]*) ([^ ]*) (\[(.*)\]) (\"(.*)\") ([0-9]*) ([0-9]*) (\"(.*)\") (\"(.*))
+(?:(?i)(javascript|longdesc|src|alt|style|class|title|data\-[\w\-]+)\=\"([\w\s\#]+)?\")?
+Data Source\s*=\s*|Server=tcp:(.*?),|;
+(\/\*(?:[^*]|[\r\n]|(\*+([^*\/]|[\r\n])))*\*\/+)*(\/\/.*)*
+^((([A-Za-z][A-Za-z0-9]*[\.\_]*[A-Za-z0-9]+){0,30}@[a-z]{3,15}\.[a-z]{2,5})|(([A-Za-z][A-Za-z0-9]*[._]*[A-Za-z0-9]+){0,30}@[a-z]{3,15}\.[a-z]{2}\.[a-z]{2,5}))$
+\s*<Title\svodBackOfficeId=\"([^\s]*)">
+<trclass="odd"><tdalign="left"><ahref="https:\/\/3x\.projectnet\.de\/.{0,50}\/"target="_blank">(.{0,50})<\/a><\/td><td>(.{0,50})<\/td><tdalign="left">.{0,50}<\/td><td><spanstyle="color:.{2,9};">(.{2,10})<\/span><\/td><td>.{0,12}<\/td><td>.{0,12}<\/td><\/tr>
+^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+)*$
+((?:[Gg]{3,}\w{1,7}){3,}[Gg]{3,})
+((<(.)*\\>)|( |\t)|(\n))*
+(?P<tag>\<(.)*\>)|(?P<whitespace>[' '])|(?P<linha>[\n])
+.{10,20}?([\w.]+).{10,20}word_to_match.{0,15}
+(((?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e])+(?:\x2e(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e])+)*)(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))|((?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?\x22(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21\x23-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))+(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x22(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))|((?:(?:(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e]))+(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?)|(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?\x22(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21\x23-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))+(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x22(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))(?:\x2e(?:(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e]))+(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?)|(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?\x22(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21\x23-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))+(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x22(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?)))*)))\x40(((?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e])+(?:\x2e(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e])+)*)(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))|((?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?\x5b(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x5a\x5e-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x5d(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))|((?:(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e]))+(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?)(?:\x2e(?:(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?(?:(?:[\x41-\x5a\x61-\x7a]|[\x30-\x39]|[\x21\x23-\x27\x2a\x2b\x2d\x2f\x3d\x3f\x5e\x5f\x60\x7b-\x7e]))+(?:(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29))*(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:\x28(?:(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?(?:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|[\x21-\x27\x2A-\x5b\x5d-\x7e])|(?:\x5c(?:\x0a*\x0d*[\x00-\x09\x0b\x0c\x0e-\x7f]\x0a*\x0d*)|(?:\x5c[\x00-\x7f]))))*(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))?\x29)|(?:(?:(?:[\x20\x09]*(?:\x0d\x0a))?[\x20\x09]+)|(?:[\x20\x09]+(?:(?:\x0d\x0a)[\x20\x09]+)*))))?))*)))
+(https?:\/\/)?(w{3}\.)?(\w+\.\w{2,3}\.\w{2}?)?(\w+-)?(:?%?\w{2,}\/?\.\w{2,3})?(\/\w+)?(\/[\d\w].+\s$)?(:\d+)?
+^(([a-z0-9][a-z0-9\-]*[a-z0-9])|[a-z0-9]+\.)*([a-z]+|xn\-\-[a-z0-9]+)\.?$
+\b(?:G,C,D|A,B,C|E,C,D)|(?:[ABCDEFG](?:#|b)?)(?:\/[ABCDEFG]b)?(?:(?:(?:maj|min|sus|add|aug|dim)(?:\d{0,2}(?:#\d{1,2}|sus\d)?)?)|(?:m\d{0,2}(?:(?:maj|add|#)\d{0,2})?)|(?:-?\d{0,2}(?:\([^)]*\)|#\d{1,2})?))?
+(?:\d+h)?(?:\d+m)?(?:\d+s)?
+((.+)\n)*
+^.*[tT][rR][aA][cC][eE][rR][oO][uU][tT][eE]%20
+^[nN][aA][mM][eE]=s*[^\r\n\x3b\x20\x09\x0b\x2c]{300}
+.{31}[sS]\x00[pP]\x00_\x00[aA]\x00[dD]\x00[dD]\x00[uU]\x00[sS]\x00[eE]\x00[rR]\x00
+.*[cC][eE][lL] [^\x0a]{100}
+.{0}\x05.{1}\x0b.{29}\xB8\x4A\x9F\x4D\x1C\x7D\xCF\x11\x86\x1E\x00\x20\xAF\x6E\x7C\x57
+.*[pP][aA][sS][sS] [^\x0a]{100}
+.*[rR][eE][sS][tT] [^\x0a]{100}
+.*[sS][iI][tT][eE] [^\x0a]{100}
+\x01.{240}.*\x0C.*.{0}.*%.{1}.{0,7}%.{1}.{0,7}%
+.*[\/\\]admin_[\/\\]
+.*\\|00|
+.*\\|0A|.pl
+.*\\|3A|\/\[
+.*\/eshop.pl?seite=|3B|
+(?P<NAME>\(:[^\)]+\)|:[^/]+)|^.+@([^.@][^@]+)$
+(^\n)|(\n$)|(?P<n>&|\t.*$)
+\b$name.*\.tar|(?P<name>\"\S.*?\S\")
+(?P<NAME>\(:[^\)]+\)|:[^/]+)|(\[\*\])|(\[\d\])
+(?P<NAME>\(:[^\)]+\)|:[^/]+)|\[[^\[\]]+\]
+gcc.*(?P<name>[0-9][\+0-9]+)|t=([0-9]+)
+:([a-z0-9_\+\-]+):|gcc.*(?P<name>[0-9][\+0-9]+)
+(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\[?[A-F0-9]*:[A-F0-9:]+\]?)(?::\d+)?(?:/?|[/?]\S+)$
+^.{0,512}?[^\s\x20-\x7F]|(?P<name>.{240}[^\\])
+\r([^\n])|\[(?P<c>[^]]*)]$
+\*(.*?)|/\*(?P<comment>.*?)\*/
+(?P<body>%z|[ A-Za-z]+)$|%([a-z|0-9])([A-Z])%
+^(?P<t>\s+)|\s+$|[\r?\n]+|^ns\s+=\s+
+src=[\\"']([^/]+?)[\\"']
+@$subdir/(.*?)\.([a-z]{1,})$@|@/(?P<body>.*?)(/|$)@
+(ridge)|(surface)
+^(?:([^:]*):)?(?P<NAME>[^-]*)(?:-(.*))?$|^(\d+) (\d+) (\d+) (\d+)(?: (\d))?$
+[a-z0-9][a-z0-9\._-]{2,254}$
+[a-z0-9]+
+ID=\"(?P<id>.*?)\" |=\"([^\"]+)\"
+\\\(([^\\\)]*)\\\)|\`([^\`]*)\`|href=\"(?P<start>(\{\{[^\}]+\}\}|[^\"<>])+)\"
+\\o\s+
+[\(\)\[\]\{\}\\"\']|\w+|[^\w\s\(\)\[\]\{\}\\"\']+|\s+
+\t|[ \t]{2,}
+^[0-9A-Za-z_.-]+:| (?P<body>%z|[ A-Za-z]+)$
+\n([\s]*\n)|\+(?P<name>[^,]*),
+(?P<NAME>[0-9])0+$|([0-9a-f]{2})
+(?P<name>[^\s^]+[^\s+])|([^\w.\-\/])
+((?:[<\[](?:.+?)[>\]])|.)
+<[^>]*>|\n
+\{([\w\d]+)\}|\((?P<body>\+[^\)]+)\)
+#(\w+)(?:\((reverse)\))?|\+CLIP: \((?P<c>.*)\)
+.(?P<name>[A-Za-z]*)$|[A-Za-z0-9/+=]{40}
+(?P<body>%z|[ A-Za-z]+)$|^\.([A-Za-z]+)$
+^[a-z][a-z0-9-]*[a-z0-9]$|^(?P<name>[0-9]+)|([a-z][0-9A-Z_a-z]*)$
+([A-Z]\[[^\]]*\]|[A-Z])
+(?P<body>%z|[ A-Za-z]+)$|([a-zA-Z0-9])
+\*(.*?)|/\*(?P<comment>.*)\*/
+\+(?P<content>[^\t-\r ]*[0-9A-Z_a-z])|[^\.0-9a-zA-Z()_-]
+<.+?>|[^<>]*
+\*(.*?)|/\*(?P<NAME>.*?)\*/
+\+(?P<body>.+?\))|`(.+?)`
+[A-Za-z][A-Za-z0-9+\.-]{1,32}:[^<> ]*$
+[^\w\s\-]|[\r\n\s].*$(?-s)
+Dynamic-Pattern ApiPath
+(([abc]{3,30})b{1,}c){2}
+a{1,2147483647}
+Dynamic-Pattern argument,$"CommandSettings.Delimiter\S+|CommandSettings.ShortDelimiter\S+"
+(.*)#(.*)#(.*)#(.*)#(.*)#(.*)
+#(^[a-z]:)?/.{1,50}$#i(?-i)|^([0-9a-fA-F]){8}$
+\[\[(?:[^\|]+\|)?(million|billion)\]\]
+(?-i)\:[^\/]+\/?$||(:[^/]*)|
+([> ])|[^ -~].*$(?-m)
+(^.*$)|^RCS: |,.*$(?-s)
+<(.|\n){0,1000}?>
+^[\p{L}_][\p{L}\p{N}@$#_]{0,127}$
+(?s)^\s+|\s+$|[^\w\s\-\#\&]|\s.+[^\d\.\:\/]
+["'].*?["']|[+].*$(?-s)
+(\s*\(?(0|\+44)(\s*|-)\d{4}\)?(\s*|-)\d{3}(\s*|-)\d{3}\s*)|(\s*\(?(0|\+44)(\s*|-)\d{3}\)?(\s*|-)\d{3}(\s*|-)\d{4}\s*)|(\s*\(?(0|\+44)(\s*|-)\d{2}\)?(\s*|-)\d{4}(\s*|-)\d{4}\s*)|(\s*(7|8)(\d{7}|\d{3}(\-|\s{1})\d{4})\s*)|(\s*\(?(0|\+44)(\s*|-)\d{3}\s\d{2}\)?(\s*|-)\d{4,5}\s*)
+(.*)#(.*)#(.*)#(.*)#(.*)#(.*)#(.*)#(.*)
+((ac){10}|(ab){20}){50}
+.*a.{300}
+(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+^\+/v(8|9)|\b(and|or)\b.{1,6}?(=|>|<|\bin\b|\blike\b)|/\*.+?\*/|<\s*script\b|<\s*img\b|\bEXEC\b|UNION.+?SELECT|UPDATE.+?SET|INSERT\s+INTO.+?VALUES|(SELECT|DELETE).+?FROM|(CREATE|ALTER|DROP|TRUNCATE)\s+(TABLE|DATABASE)
+Dynamic-Pattern connectionString,$";[/s]*$",string.Empty,RegexOptions.IgnoreCase
+#\s+"\|#|(?-m)#\`.+\`#
+([\\w ]{6}?) ([-\\d\\. ]{5}) ([\\d\\/ ]{10}) ([\\w ]{4}) (.*?)\\s*$
+hiera(?:.*data)?
+(|https?://)(|\\s|(?:(?:\\d{1,3}\\.){3}\\d{1,3})|(?:(?:[a-zA-Z0-9-]{1,20}\\.){0,10}(?:[a-zA-Z]{2}[a-zA-Z0-9-]{0,18})))(|:\\d{1,5})?/t/[a-z0-9A-Z-]+/
+([A-Z\\\\d]+)([A-Z][a-z])
+(.*)style=\"([^\"]+)(.*)
+([\\.\\d]+)\\s+([\\.\\d]+)\\s+([\\.\\d]+)
+.*-c\\s+(\\S+).*
+(\\w+)\\s+(.+)
+[^&=]+=[^&=]+
+([^A-Z]+)([A-Z]+)
+([a-z]+[^zm])(z?)(m?)
+((\\w+)\\s*=\\s*(['\"]?)(.*?)(\\3)?(\\s+|$))
+((.+)\\s+to\\s+(.+))
+\\x{0632}\\x{0651}
+[^\\/\\\\]+[\\/\\\\]{0,2}$
+.*?([a-z0-9\\-]+\\.[a-z]+)$
+\\G(.*[^\\s])\\s*$
+([a-z][a-z0-9]*)-([A-Z][a-z0-0\\-]*)
+#(.+?)\\s
+.*?([^\\/]+)$
+[^a-z0-9]+$
+^<span id=\"(sanitizer-\\w+)\"><style>#\\1 a{color: red;}<\\/style><\\/span>$
+\\x{0622}
+.*/config/([\\w]+[^\\/])/.*
+<[^>]*>|<\\/[^>]*> |\\s
+## Screenshots (.*?)## [a-z]+
+_[.=_a-zA-Z0-9]*$
+rv\\:([\\w\\.]{1,9}).+(gecko)
+(.*)\\s+(.).*\\s+(.).*
+(<link[^>]+rel=\"[^\"]*stylesheet\"[^>]*>|style=\"[^\"]*\")|<script[^>]*>.*?<\\/script>|<style[^>]*>.*?<\\/style>|<!--.*?-->
+\\S+\\s+\\S+\\s+(.+)$
+(^|(.*\\s)?)%{?run_ldconfig}?(\\s.*|)$
+.+?:\\s+([\\/\\d\\w-]+\\/[\\/\\d\\w-]+)
+.*[\\/:]([a-zA-Z0-9\\-_]+)\\/([a-zA-Z0-9\\-_\\.]+)
+(\\s*(/\\*(.*\\s+)*\\*/)*([ \\t]*//.*\\s+)*)*
+[a-z][a-z0-9_]*$
+([\\\"\\'])(.+)\\1
+(/.*/[^eE]*)$
+\\.([a-z0-9]{2,4})[\\.\\-_0-9~]*$
+\\Gfunction$S
+(?:.*,)*\\s*NTLM\\s*([^,]*),?
+\\A\\s*\\[(?<name>.{1,4096})\\]\\s*\\Z
+[-a-zA-Z0-9@:%._\\\\+~#=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%_\\\\+.~#?&//=]*)
+\\s*([\\w\\-]*)$
+\\{(.*)\\}\\s*,\\s*\\{(.*)\\}
+.*__AS([a-z0-9]+)\\.[^.]*$
+(\\S*)\\s*[,\\|]\\s*([0-9\\.]+)\\s*[,\\|]\\s*([0-9\\.]+)\\s*
+([A-Z][A-Z0-9_]*)$
+.*?([^\\\\]+)$
+^(([a-zA-Z0-9-\\p{L}]{1,63}\\.)?(xn--)?[a-zA-Z0-9\\p{L}]+(-[a-zA-Z0-9\\p{L}]+)*\\.)+[a-zA-Z\\p{L}]{2,63}$
+\"(.*)\"\\s+\"(.*)\"
+\\d+|[A-Za-z][0-9A-Za-z-]*$
+(.*?)([^\\\\]+)$
+(\\s|\\.|^)(?:SCIENTIFIC_WITH_LEADING_ZERO|SCALE_PRESERVING_SCIENTIFIC|RMC_COMMUNICATION_FAILURE|END-ENHANCEMENT-SECTION|MULTIPLY-CORRESPONDING|SUBTRACT-CORRESPONDING|VERIFICATION-MESSAGE|DIVIDE-CORRESPONDING|ENHANCEMENT-SECTION|CURRENCY_CONVERSION|RMC_SYSTEM_FAILURE|START-OF-SELECTION|MOVE-CORRESPONDING|RMC_INVALID_STATUS|CUSTOMER-FUNCTION|END-OF-DEFINITION|ENHANCEMENT-POINT|SYSTEM-EXCEPTIONS|ADD-CORRESPONDING|SCALE_PRESERVING|SELECTION-SCREEN|CURSOR-SELECTION|END-OF-SELECTION|LOAD-OF-PROGRAM|SCROLL-BOUNDARY|SELECTION-TABLE|EXCEPTION-TABLE|IMPLEMENTATIONS|PARAMETER-TABLE|RIGHT-JUSTIFIED|UNIT_CONVERSION|AUTHORITY-CHECK|LIST-PROCESSING|SIGN_AS_POSTFIX|COL_BACKGROUND|IMPLEMENTATION|INTERFACE-POOL|TRANSFORMATION|IDENTIFICATION|ENDENHANCEMENT|LINE-SELECTION|INITIALIZATION|LEFT-JUSTIFIED|SELECT-OPTIONS|SELECTION-SETS|COMMUNICATION|CORRESPONDING|DECIMAL_SHIFT|PRINT-CONTROL|VALUE-REQUEST|CHAIN-REQUEST|FUNCTION-POOL|FIELD-SYMBOLS|FUNCTIONALITY|INVERTED-DATE|SELECTION-SET|CLASS-METHODS|OUTPUT-LENGTH|CLASS-CODING|COL_NEGATIVE|ERRORMESSAGE|FIELD-GROUPS|HELP-REQUEST|NO-EXTENSION|NO-TOPOFPAGE|REDEFINITION|DISPLAY-MODE|ENDINTERFACE|EXIT-COMMAND|FIELD-SYMBOL|NO-SCROLLING|SHORTDUMP-ID|ACCESSPOLICY|CLASS-EVENTS|COL_POSITIVE|DECLARATIONS|ENHANCEMENTS|FILTER-TABLE|SWITCHSTATES|SYNTAX-CHECK|TRANSPORTING|ASYNCHRONOUS|SYNTAX-TRACE|TOKENIZATION|USER-COMMAND|WITH-HEADING|ABAP-SOURCE|BREAK-POINT|CHAIN-INPUT|COMPRESSION|FIXED-POINT|NEW-SECTION|NON-UNICODE|OCCURRENCES|RESPONSIBLE|SYSTEM-CALL|TRACE-TABLE|ABBREVIATED|CHAR-TO-HEX|END-OF-FILE|ENDFUNCTION|ENVIRONMENT|ASSOCIATION|COL_HEADING|EDITOR-CALL|END-OF-PAGE|ENGINEERING|IMPLEMENTED|INTENSIFIED|RADIOBUTTON|SYSTEM-EXIT|TOP-OF-PAGE|TRANSACTION|APPLICATION|CONCATENATE|DESTINATION|ENHANCEMENT|IMMEDIATELY|NO-GROUPING|PRECOMPILED|REPLACEMENT|TITLE-LINES|ACTIVATION|BYTE-ORDER|CLASS-POOL|CONNECTION|CONVERSION|DEFINITION|DEPARTMENT|EXPIRATION|INHERITING|MESSAGE-ID|NO-HEADING|PERFORMING|QUEUE-ONLY|RIGHTSPACE|SCIENTIFIC|STATUSINFO|STRUCTURES|SYNCPOINTS|WITH-TITLE|ATTRIBUTES|BOUNDARIES|CLASS-DATA|COL_NORMAL|DD\\/MM\\/YYYY|DESCENDING|INTERFACES|LINE-COUNT|MM\\/DD\\/YYYY|NON-UNIQUE|PRESERVING|SELECTIONS|STATEMENTS|SUBROUTINE|TRUNCATION|TYPE-POOLS|ARITHMETIC|BACKGROUND|ENDPROVIDE|EXCEPTIONS|IDENTIFIER|INDEX-LINE|OBLIGATORY|PARAMETERS|PERCENTAGE|PUSHBUTTON|RESOLUTION|COMPONENTS|DEALLOCATE|DISCONNECT|DUPLICATES|FIRST-LINE|HEAD-LINES|NO-DISPLAY|OCCURRENCE|RESPECTING|RETURNCODE|SUBMATCHES|TRACE-FILE|ASCENDING|BYPASSING|ENDMODULE|EXCEPTION|EXCLUDING|EXPORTING|INCREMENT|MATCHCODE|PARAMETER|PARTIALLY|PREFERRED|REFERENCE|REPLACING|RETURNING|SELECTION|SEPARATED|SPECIFIED|STATEMENT|TIMESTAMP|TYPE-POOL|ACCEPTING|APPENDAGE|ASSIGNING|COL_GROUP|COMPARING|CONSTANTS|DANGEROUS|IMPORTING|INSTANCES|LEFTSPACE|LOG-POINT|QUICKINFO|READ-ONLY|SCROLLING|SQLSCRIPT|STEP-LOOP|TOP-LINES|TRANSLATE|APPENDING|AUTHORITY|CHARACTER|COMPONENT|CONDITION|DIRECTORY|DUPLICATE|MESSAGING|RECEIVING|SUBSCREEN|ACCORDING|COL_TOTAL|END-LINES|ENDMETHOD|ENDSELECT|EXPANDING|EXTENSION|INCLUDING|INFOTYPES|INTERFACE|INTERVALS|LINE-SIZE|PF-STATUS|PROCEDURE|PROTECTED|REQUESTED|RESUMABLE|RIGHTPLUS|SAP-SPOOL|SECONDARY|STRUCTURE|SUBSTRING|TABLEVIEW|NUMOFCHAR|ADJACENT|ANALYSIS|ASSIGNED|BACKWARD|CHANNELS|CHECKBOX|CONTINUE|CRITICAL|DATAINFO|DD\\/MM\\/YY|DURATION|ENCODING|ENDCLASS|FUNCTION|LEFTPLUS|LINEFEED|MM\\/DD\\/YY|OVERFLOW|RECEIVED|SKIPPING|SORTABLE|STANDARD|SUBTRACT|SUPPRESS|TABSTRIP|TITLEBAR|TRUNCATE|UNASSIGN|WHENEVER|ANALYZER|COALESCE|COMMENTS|CONDENSE|DECIMALS|DEFERRED|ENDWHILE|EXPLICIT|KEYWORDS|MESSAGES|POSITION|PRIORITY|RECEIVER|RENAMING|TIMEZONE|TRAILING|ALLOCATE|CENTERED|CIRCULAR|CONTROLS|CURRENCY|DELETING|DESCRIBE|DISTANCE|ENDCATCH|EXPONENT|EXTENDED|GENERATE|IGNORING|INCLUDES|INTERNAL|MAJOR-ID|MODIFIER|NEW-LINE|OPTIONAL|PROPERTY|ROLLBACK|STARTING|SUPPLIED|ABSTRACT|CHANGING|CONTEXTS|CREATING|CUSTOMER|DATABASE|DAYLIGHT|DEFINING|DISTINCT|DIVISION|ENABLING|ENDCHAIN|ESCAPING|HARMLESS|IMPLICIT|INACTIVE|LANGUAGE|MINOR-ID|MULTIPLY|NEW-PAGE|NO-TITLE|POS_HIGH|SEPARATE|TEXTPOOL|TRANSFER|SELECTOR|DBMAXLEN|ITERATOR|SELECTOR|ARCHIVE|BIT-XOR|BYTE-CO|COLLECT|COMMENT|CURRENT|DEFAULT|DISPLAY|ENDFORM|EXTRACT|LEADING|LISTBOX|LOCATOR|MEMBERS|METHODS|NESTING|POS_LOW|PROCESS|PROVIDE|RAISING|RESERVE|SECONDS|SUMMARY|VISIBLE|BETWEEN|BIT-AND|BYTE-CS|CLEANUP|COMPUTE|CONTROL|CONVERT|DATASET|ENDCASE|FORWARD|HEADERS|HOTSPOT|INCLUDE|INVERSE|KEEPING|NO-ZERO|OBJECTS|OVERLAY|PADDING|PATTERN|PROGRAM|REFRESH|SECTION|SUMMING|TESTING|VERSION|WINDOWS|WITHOUT|BIT-NOT|BYTE-CA|BYTE-NA|CASTING|CONTEXT|COUNTRY|DYNAMIC|ENABLED|ENDLOOP|EXECUTE|FRIENDS|HANDLER|HEADING|INITIAL|\\*-INPUT|LOGFILE|MAXIMUM|MINIMUM|NO-GAPS|NO-SIGN|PRAGMAS|PRIMARY|PRIVATE|REDUCED|REPLACE|REQUEST|RESULTS|UNICODE|WARNING|ALIASES|BYTE-CN|BYTE-NS|CALLING|COL_KEY|COLUMNS|CONNECT|ENDEXEC|ENTRIES|EXCLUDE|FILTERS|FURTHER|HELP-ID|LOGICAL|MAPPING|MESSAGE|NAMETAB|OPTIONS|PACKAGE|PERFORM|RECEIVE|STATICS|VARYING|BINDING|CHARLEN|GREATER|XSTRLEN|ACCEPT|APPEND|DETAIL|ELSEIF|ENDING|ENDTRY|FORMAT|FRAMES|GIVING|HASHED|HEADER|IMPORT|INSERT|MARGIN|MODULE|NATIVE|OBJECT|OFFSET|REMOTE|RESUME|SAVING|SIMPLE|SUBMIT|TABBED|TOKENS|UNIQUE|UNPACK|UPDATE|WINDOW|YELLOW|ACTUAL|ASPECT|CENTER|CURSOR|DELETE|DIALOG|DIVIDE|DURING|ERRORS|EVENTS|EXTEND|FILTER|HANDLE|HAVING|IGNORE|LITTLE|MEMORY|NO-GAP|OCCURS|OPTION|PERSON|PLACES|PUBLIC|REDUCE|REPORT|RESULT|SINGLE|SORTED|SWITCH|SYNTAX|TARGET|VALUES|WRITER|ASSERT|BLOCKS|BOUNDS|BUFFER|CHANGE|COLUMN|COMMIT|CONCAT|COPIES|CREATE|DDMMYY|DEFINE|ENDIAN|ESCAPE|EXPAND|KERNEL|LAYOUT|LEGACY|LEVELS|MMDDYY|NUMBER|OUTPUT|RANGES|READER|RETURN|SCREEN|SEARCH|SELECT|SHARED|SOURCE|STABLE|STATIC|SUBKEY|SUFFIX|TABLES|UNWIND|YYMMDD|ASSIGN|BACKUP|BEFORE|BINARY|BIT-OR|BLANKS|CLIENT|CODING|COMMON|DEMAND|DYNPRO|EXCEPT|EXISTS|EXPORT|FIELDS|GLOBAL|GROUPS|LENGTH|LOCALE|MEDIUM|METHOD|MODIFY|NESTED|OTHERS|REJECT|SCROLL|SUPPLY|SYMBOL|ENDFOR|STRLEN|ALIGN|BEGIN|BOUND|ENDAT|ENTRY|EVENT|FINAL|FLUSH|GRANT|INNER|SHORT|USING|WRITE|AFTER|BLACK|BLOCK|CLOCK|COLOR|COUNT|DUMMY|EMPTY|ENDDO|ENDON|GREEN|INDEX|INOUT|LEAVE|LEVEL|LINES|MODIF|ORDER|OUTER|RANGE|RESET|RETRY|RIGHT|SMART|SPLIT|STYLE|TABLE|THROW|UNDER|UNTIL|UPPER|UTF-8|WHERE|ALIAS|BLANK|CLEAR|CLOSE|EXACT|FETCH|FIRST|FOUND|GROUP|LLANG|LOCAL|OTHER|REGEX|SPOOL|TITLE|TYPES|VALID|WHILE|ALPHA|BOXED|CATCH|CHAIN|CHECK|CLASS|COVER|ENDIF|EQUIV|FIELD|FLOOR|FRAME|INPUT|LOWER|MATCH|NODES|PAGES|PRINT|RAISE|ROUND|SHIFT|SPACE|SPOTS|STAMP|STATE|TASKS|TIMES|TRMAC|ULINE|UNION|VALUE|WIDTH|EQUAL|LOG10|TRUNC|BLOB|CASE|CEIL|CLOB|COND|EXIT|FILE|GAPS|HOLD|INCL|INTO|KEEP|KEYS|LAST|LINE|LONG|LPAD|MAIL|MODE|OPEN|PINK|READ|ROWS|TEST|THEN|ZERO|AREA|BACK|BADI|BYTE|CAST|EDIT|EXEC|FAIL|FIND|FKEQ|FONT|FREE|GKEQ|HIDE|INIT|ITNO|LATE|LOOP|MAIN|MARK|MOVE|NEXT|NULL|RISK|ROLE|UNIT|WAIT|ZONE|BASE|CALL|CODE|DATA|DATE|FKGE|GKGE|HIGH|KIND|LEFT|LIST|MASK|MESH|NAME|NODE|PACK|PAGE|POOL|SEND|SIGN|SIZE|SOME|STOP|TASK|TEXT|TIME|USER|VARY|WITH|WORD|BLUE|CONV|COPY|DEEP|ELSE|FORM|FROM|HINT|ICON|JOIN|LIKE|LOAD|ONLY|PART|SCAN|SKIP|SORT|TYPE|UNIX|VIEW|WHEN|WORK|ACOS|ASIN|ATAN|COSH|EACH|FRAC|LESS|RTTI|SINH|SQRT|TANH|AVG|BIT|DIV|ISO|LET|OUT|PAD|SQL|ALL|CI_|CPI|END|LOB|LPI|MAX|MIN|NEW|OLE|RUN|SET|\\?TO|YES|ABS|ADD|AND|BIG|FOR|HDB|JOB|LOW|NOT|SAP|TRY|VIA|XML|ANY|GET|IDS|KEY|MOD|OFF|PUT|RAW|RED|REF|SUM|TAB|XSD|CNT|COS|EXP|LOG|SIN|TAN|XOR|AT|CO|CP|DO|GT|ID|IF|NS|OR|BT|CA|CS|GE|NA|NB|EQ|IN|LT|NE|NO|OF|ON|PF|TO|AS|BY|CN|IS|LE|NP|UP|E|I|M|O|Z|C|X)\\b
+^ \\$ \\/? <(\\d+)> $
+^[\\w\\-~\\/\\.+]{1,600}
+a{1,21474836471}
+''(.{0,200}?)''
+(href|src)\\s*=[\"']([^(http|mailto|javascript|data:|#)].*?(css|jpe?g|gif|png)?)[\"']
+(?s)((<!--.*?-->)|(<[ \\n\\r]*pre[^>]*>.*?<[ \\n\\r]*\\/pre[^>]*>)|(<[ \\n\\r]*textarea[^>]*>.*?<[ \\n\\r]*\\/textarea[^>]*>)|(<[ \\n\\r]*style[^>]*>.*?<[ \\n\\r]*\\/style[^>]*>)|(<[ \\n\\r]*script[^>]*>.*?<[ \\n\\r]*\\/script[^>]*>))
+\\x{0632}
+[^\\n]{990}
+'''(.{0,200}?)'''
+a{1,999999999999999999999999999999999999999999999}
+a{2147483647,2147483647}
+a{21474836471}
+^(.{0,256}):?[a-zA-Z][-_a-zA-Z0-9]{0,255}$
+<(p|h[1-6]|blockquote|hr|div|table|tbody|tr|td|body|head|html|title|meta|style|pre|script|link|object) ([^>]+)>\\s+
+(.{40}[[:alnum:]]*).+$
+([^\\s\\u0080-\\uFFFF]*[\\u0080-\\uFFFF]+[^\\s\\u0080-\\uFFFF]*(?:\\s+[^\\s\\u0080-\\uFFFF]*[\\u0080-\\uFFFF]+[^\\s\\u0080-\\uFFFF]*\\s*)?)+
+^(ssh-rsa|ssh-dss|ecdsa-sha2-nistp256|ssh-ed25519) [a-zA-Z0-9/+]+=?=? ?.{0,512}\\n?$
+(.{25}) ([^\\(]+)( \\(.+\\))?$
+(.*)stop-color\\s*[:]\\s*([^;]*)(.*)
+(\\S.{0,30}\\S)\\s*#(\\d{4})
+:files=>\\[\"one\", \"two\"\\]
+[\\s\\n]*\"?([a-z0-9_-]+)\"?\\s*:\\s*([^\\n]+)[\\s\\n]*,?[\\s\\n]*
+^[a-zA-Z][[:alnum:]-]{1,62}
+([A-z]+)\\s+(.+){0,}
+(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\\.)+(?:[A-Z]{2,6}\\.?|[A-Z0-9-]{2,}\\.?)|localhost|\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|\\[?[A-F0-9]*:[A-F0-9:]+\\]?)(?::\\d+)?(?:/?|[/?]\\S+)$
+(.{1000,}[^>]*>)<
+(?:^|[^\\w\\/.-])(?:volume|vol\\.?|v\\.?)?\\s*([a-z]*\\d+[a-z]*) # volume\n           [^\\w\\/.-]+(?:pages|page|pp|p)?\\.?\n             \\s*([a-z]?\\d+[a-z]?)(?:\\s*-\\s*[a-z]?\\d+[a-z]?)?\n             \\W*\\(((19|20)\\d\\d)[a-z]?\\)(\\W|$)
+\\S+\\(\\S{20}\\)\\|\\S+
+filename not matched
+(@(.+))*\\s+(.+)
+-\\w|--[a-z0-9-]+
+%?([0-9]{1})([0-9]{1})([A-Z0-9 ]{11})([A-Z0-9 ]{2})([A-Z0-9 ]{10})([A-Z0-9 ]{4})([1-2]{1})([0-9]{3})([0-9]{3})([A-Z ]{3})([A-Z ]{3})(.*)\\?
+\\A[A-Za-z0-9\\+\\/]{342}==\\z
+(.*)stroke\\s*[:]\\s*([^;]*)(.*)
+(A{9999999999}B|C*)*
+\\s*(\\S+\\.)?([\\w-]+)\\s*
+([a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9])\\\\.[a-zA-Z]{2,}
+(.{1,980}[;,])\\s+(\\S)
+^(.{2,250}) ([0-9]{4,10}) ([^,]{2,80}) *(,.+)?$
+^\\s* \\[ \\s+ ( (?: (?: 0|1 ) \\s+ )+ ) \\] \\s*? \\n
+[A-Za-z0-9\\+/]{342}==
+(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)\\^(.*)
+[a-zA-Z_][a-z-A-Z_0-9]{0,254}
+(?m)^Features.*neon.*$
+.*/schools/
+\\G\"(([^\"\\\\]*(\\\\.)*[^\\\\\"]*)*)\"
+(\\((?:[^\\(\\)]|\\([^\\(\\)]*\\)){0,250})\\n((?:[^\\(\\)]|\\([^\\(\\)]*\\)){0,250}\\))
+([\\n\\s]+|%[^\\n]*\\n)*(.)
+\\A\\s*(([-\\p{L}\\d+._]{1,64})@((?:[-\\p{L}\\d]+\\.)+\\p{L}{2,}))\\s*\\z
+a{2147483647}
+(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)
+^<\n                    (?:!--\\s*)?\n                    (\n                      \\/?[Tt][Mm][Pp][Ll]_\n                      (?:\n                         (?:[Vv][Aa][Rr])\n                         |\n                         (?:[Ll][Oo][Oo][Pp])\n                         |\n                         (?:[Ii][Ff])\n                         |\n                         (?:[Ee][Ll][Ss][Ee])\n                         |\n                         (?:[Uu][Nn][Ll][Ee][Ss][Ss])\n                         |\n                         (?:[Ii][Nn][Cc][Ll][Uu][Dd][Ee])\n                      )\n                    ) # $1 => $which - start of the tag\n\n                    \\s* \n\n                    # DEFAULT attribute\n                    (?:\n                      [Dd][Ee][Ff][Aa][Uu][Ll][Tt]\n                      \\s*=\\s*\n                      (?:\n                        \"([^\">]*)\"  # $2 => double-quoted DEFAULT value \"\n                        |\n                        '([^'>]*)'  # $3 => single-quoted DEFAULT value\n                        |\n                        ([^\\s=>]*)  # $4 => unquoted DEFAULT value\n                      )\n                    )?\n\n                    \\s*\n\n                    # ESCAPE attribute\n                    (?:\n                      [Ee][Ss][Cc][Aa][Pp][Ee]\n                      \\s*=\\s*\n                      (?:\n                        (\n                           (?:[\"']?0[\"']?)|\n                           (?:[\"']?1[\"']?)|\n                           (?:[\"']?[Hh][Tt][Mm][Ll][\"']?) |\n                           (?:[\"']?[Uu][Rr][Ll][\"']?) |\n                           (?:[\"']?[Jj][Ss][\"']?) |\n                           (?:[\"']?[Nn][Oo][Nn][Ee][\"']?)\n                         )                         # $5 => ESCAPE on\n                       )\n                    )* # allow multiple ESCAPEs\n\n                    \\s*\n\n                    # DEFAULT attribute\n                    (?:\n                      [Dd][Ee][Ff][Aa][Uu][Ll][Tt]\n                      \\s*=\\s*\n                      (?:\n                        \"([^\">]*)\"  # $6 => double-quoted DEFAULT value \"\n                        |\n                        '([^'>]*)'  # $7 => single-quoted DEFAULT value\n                        |\n                        ([^\\s=>]*)  # $8 => unquoted DEFAULT value\n                      )\n                    )?\n\n                    \\s*                    \n\n                    # NAME attribute\n                    (?:\n                      (?:\n                        [Nn][Aa][Mm][Ee]\n                        \\s*=\\s*\n                      )?\n                      (?:\n                        \"([^\">]*)\"  # $9 => double-quoted NAME value \"\n                        |\n                        '([^'>]*)'  # $10 => single-quoted NAME value\n                        |\n                        ([^\\s=>]*)  # $11 => unquoted NAME value\n                      )\n                    )? \n                    \n                    \\s*\n\n                    # DEFAULT attribute\n                    (?:\n                      [Dd][Ee][Ff][Aa][Uu][Ll][Tt]\n                      \\s*=\\s*\n                      (?:\n                        \"([^\">]*)\"  # $12 => double-quoted DEFAULT value \"\n                        |\n                        '([^'>]*)'  # $13 => single-quoted DEFAULT value\n                        |\n                        ([^\\s=>]*)  # $14 => unquoted DEFAULT value\n                      )\n                    )?\n\n                    \\s*\n\n                    # ESCAPE attribute\n                    (?:\n                      [Ee][Ss][Cc][Aa][Pp][Ee]\n                      \\s*=\\s*\n                      (?:\n                        (\n                           (?:[\"']?0[\"']?)|\n                           (?:[\"']?1[\"']?)|\n                           (?:[\"']?[Hh][Tt][Mm][Ll][\"']?) |\n                           (?:[\"']?[Uu][Rr][Ll][\"']?) |\n                           (?:[\"']?[Jj][Ss][\"']?) |\n                           (?:[\"']?[Nn][Oo][Nn][Ee][\"']?)\n                         )                         # $15 => ESCAPE on\n                       )\n                    )* # allow multiple ESCAPEs\n\n                    \\s*\n\n                    # DEFAULT attribute\n                    (?:\n                      [Dd][Ee][Ff][Aa][Uu][Ll][Tt]\n                      \\s*=\\s*\n                      (?:\n                        \"([^\">]*)\"  # $16 => double-quoted DEFAULT value \"\n                        |\n                        '([^'>]*)'  # $17 => single-quoted DEFAULT value\n                        |\n                        ([^\\s=>]*)  # $18 => unquoted DEFAULT value\n                      )\n                    )?\n\n                    \\s*\n\n                    (?:--)?>                    \n                    (.*) # $19 => $post - text that comes after the tag\n                   $
+^(([0-9]+\\s*){1,255})(.*)?$
+[-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]{2,256}\\.[a-z]{2,4}\\b(\\/[-a-zA-Z0-9@:%_\\+.~#?&\\/\\/=]*)?
+(?:.*,)*\\s*CredSSP\\s*([^,]*),?
+(?:\".+?\" )?(?:<.+?>|[^ ,]+)
+\\n(X-Habeas-SWE-1:.{0,512}X-Habeas-SWE-9:[^\\n]{0,64}\\n)
+^g(e.*)
+url\\((.+?)\\)
+TEMPORARY_ABI_VERSION\\s*=\\s*null
+[(http(s)?):\\/\\/(www\\.)?a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)
+\\{\\{(.+?)}}
+\\<([A-Z]+)\\>(.{1,1000}?)\\</\\1\\>
+((4(\d{12}|\d{15}))|(5\d{15})|(6011\d{12})|(3(4|7)\d{13}))
+<xsl:[^>]*(apply-templates|choose|copy-of|for-each|if|number|for-each|value-of|variable).{0,255}(select|value|test)\s*\x3d\s*\x5c?\x22substring-after\s*\x28(\s*\x27[^\x22]\x27\s*|\s*[^\x27\x22\x2c]\s*)\x29
+A{1000}
+[a-z0-9]{350,850}$
+%[^\x20\x20]{1000}
+Host\x3a\s+[^\r\n]{253}
+WebAdmin\x2Edll\x3F[^\r\n]*View=Logon.*[^\r\n\x26]*User=[^\r\n\x26]{100}
+[^\x20]{512}
+^[nN][aA][mM][eE]=s*[^\r\n\x3b\x20\x20\x20\x2c]{300}
+User-Agent\x3a[^\n]{216}
+[0-9A-Za-z][0-9A-Za-z-]{3,498}[0-9A-Za-z]
+\w*.{0,250}#{keywords.join('|')}.{0,250}\w*
+(0(\.\d{1,2})?|[1-9](\d{0,63}|\d{0,61}\.\d|\d{0,60}\.\d\d))
+<body><table[^>]{0,80}><tr.{50,100}<\/tr><tr.{50,100}<\/tr><tr.{5,30}<hr[^>]{0,20}><a href="http:\/\/[-.a-z0-9]{1,40}\.[a-z]{2,4}">.{3,40}<\/a><hr[^>]{0,20}>.{0,10}<\/tr><tr.{50,100}<\/tr><\/table><\/body>
+%?([0-9]{1})([0-9]{1})([A-Z0-9 ]{11})([A-Z0-9 ]{2})([A-Z0-9 ]{10})([A-Z0-9 ]{4})([1-2]{1})([0-9]{3})([0-9]{3})([A-Z ]{3})([A-Z ]{3})(.*)\?
+(.{1,16})-.*([\d\.]{2,8})
+\^.{29}\w*
+^(([0-9]+\s*){1,255})(.*)?$
+(\s+$| +\t)
+.*\s.*
+VERSION\s*=\s["\\'](.*?)["\\']
+[^#]*\s+\bdo\b(\s*|(\s+\|.+\|\s*))|\s*(\bif\b\s+.*|\belsif\b.*|\belse\b.*|\bdo\b(\s*|\s+.*)|\bcase\b\s+.*|\bwhen\b\s+.*|\bwhile\b\s+.*|\bfor\b\s+.*|\buntil\b\s+.*|\bloop\b\s+.*|\bdef\b\s+.*|\bclass\b\s+.*|\bmodule\b\s+.*|\bbegin\b.*|\bunless\b\s+.*|\brescue\b.*|\bensure\b.*)+
+^/?(?P<a>\w+)(/(?P<c>\w+)(/(?P<f>\w+))?)?$
+((http|https|ftp|telnet|gopher|ms\-help|file|notes)://)?(([a-z][\w~%!&amp;',;=\-\.$\(\)\*\+]*)(:.*)?@)?(([a-z0-9][\w\-]*[a-z0-9]*\.)*(((([a-z0-9][\w\-]*[a-z0-9]*)(\.[a-z0-9]+)?)|(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)))(:[0-9]+)?))?(((/([\w`~!$=;\-\+\.\^\(\)\|\{\}\[\]]|(%\d\d))+)*/([\w`~!$=;\-\+\.\^\(\)\|\{\}\[\]]|(%\d\d))*)(\?[^#]+)?(#[a-z0-9]\w*)?)?
+(([\w]+:)?//)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,4}(:[\d]+)?(/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?
+([a-zA-Z0-9\_\-\.]+[a-zA-Z0-9\_\-\.]+[a-zA-Z0-9\_\-\.]+)+@([a-zA-z0-9][a-zA-z0-9][a-zA-z0-9]*)+(\.[a-zA-z0-9][a-zA-z0-9][a-zA-z0-9]*)(\.[a-zA-z0-9]+)*
+^\s*?include_file:?[^ ]+ (.*?)$
+((([a-zA-Z0-9_]([a-zA-Z0-9\-_]){0,61})?[a-zA-Z0-9]\.)*([a-zA-Z0-9_]([a-zA-Z0-9\-_]){0,61})?[a-zA-Z0-9]\.?)|\.
+^(http|www|ftp)://(\w+(-\w+)*)(\.(\w+(-\w+)*))*((:\d+)?)(/(\w+(-\w+)*))*(\.?(\w)*)(\?)?(((\w*%)*(\w*\?)*(\w*:)*(\w*\+)*(\w*\.)*(\w*&)*(\w*-)*(\w*=)*(\w*%)*(\w*\?)*(\w*:)*(\w*\+)*(\w*\.)*(\w*&)*(\w*-)*(\w*=)*)*(\w*)*)$
+/&.+?;|[^%a-z0-9_-]/(?-s)|([a-zA-Z:_\d]+)
+(?:(?:\d[0-9_]*)(?:(?:[Ee][+-]?[0-9_]{1,})|\.[0-9_]+(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]{1,}|(?:o[0-7_]*)|(?:x[0-9a-fA-F_]+?))|(?:[^\D][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+\QDynamic-Pattern listKey\E
+(?:(?:[\d][0-9_]+)(?:(?:[Ee][+-]?[0-9_]*)|\.[0-9_]+(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]+?)|(?:x[0-9a-fA-F_]{1,}))|(?:\d[0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+:[-\w]+(?:\(.*\))?
+(?:(?:[^\D][0-9_]*?)(?:(?:[Ee][+-]?[0-9_]+?)|\.[0-9_]+(?:[Ee][+-]?[0-9_]+?)?)(?:f32|f64)?)|(?:0(?:b[01_]{1,}|(?:o[0-7_]+)|(?:x[0-9a-fA-F_]+?))|(?:\d[0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+^([^\.]*)\.(.*)|/(?-i)(&[^;]*;)|\W/
+/(?-i)(&[^;]*;)|\W/|url\(([^()]+)\)
+[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?
+(?:(?:([\d]{1,})\s*)?($months_short)[a-zA-Z0-9_]*?\.?\s+)?(\d{4})(?:-([^\D]{1,4}))?
+\/?settings(\/(hosted|group|remote)(\/settings-(.+).xml)?)?
+@([a-zA-Z_]+)@|/&.+?;|[^%a-z0-9_-]/(?-s)
+(?:(?:([0-9]*)\s+?)?($months_short)\w*\.?\s+)?(\d{4})(?:-([0-9]{1,4}))?
+(?:(?:[0-9][0-9_]*)(?:(?:[Ee][+-]?[0-9_]{1,})|\.[0-9_]*(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]*)|(?:x[0-9a-fA-F_]+?))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+:([\-\w]{1,}(?:\(?:['\"]?(.{1,})['\"]?\))){0,}
+(?:(?:\d[0-9_]{0,})(?:(?:[Ee][+-]?[0-9_]+?)|\.[0-9_]+(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]{1,})|(?:x[0-9a-fA-F_]+?))|(?:[0-9][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+(?:(?:([0-9]+?)\s{1,})?($months_short)\w+\.?\s+?)?(\d{4})(?:-([^\D]{1,4}))?
+/&.+?;|[^%a-z0-9_-]/(?-s)|\{[_a-z A-Z 0-9]*(\?)*\}
+(?:(?:\d[0-9_]*?)(?:(?:[Ee][+-]?[0-9_]*)|\.[0-9_]*(?:[Ee][+-]?[0-9_]+?)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]+?)|(?:x[0-9a-fA-F_]{1,}))|(?:[^\D][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+^((https|http)?://)(([0-9]{1,3}.){3}[0-9]{1,3}|([0-9a-z_!~*'()-]+.)*([0-9a-z][0-9a-z-]{0,61})?[0-9a-z].[a-z]{2,6})(:[0-9]{1,4})?((/?)|(/[0-9a-z_!~*'().;?:@&=+$,%#-]+)+/?)$
+(?:(?:([\d]+?)\s*)?($months_short)[\w]*?\.?\s+)?(\d{4})(?:-([\d]{1,4}))?
+([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}
+(?-s)(.{240}[^\\])|(http(?:s)?://[^/]\S*)
+(?:(?:([^\D]+)\s+)?($months_short)[a-zA-Z0-9_]+\.?\s+?)?(\d{4})(?:-([0-9]{1,4}))?
+(?:(?:[0-9][0-9_]*)(?:(?:[Ee][+-]?[0-9_]+?)|\.[0-9_]+?(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]{1,})|(?:x[0-9a-fA-F_]+?))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+git\+.*#[0-9a-f]*$(?-s)|[^0-9abcdef]
+(?:(?:[^\D][0-9_]*?)(?:(?:[Ee][+-]?[0-9_]+?)|\.[0-9_]+?(?:[Ee][+-]?[0-9_]+?)?)(?:f32|f64)?)|(?:0(?:b[01_]*|(?:o[0-7_]{1,})|(?:x[0-9a-fA-F_]+?))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+(.*?)(?:\s+\((S|U|S\+U)\))?
+Auth=([A-z0-9_-]+)|/&.+?;|[^%a-z0-9_-]/(?-s)
+(?-s)/&.+?;|[^%a-z0-9_-]/|term=([a-z0-9]+)
+(?:(?:[^\D][0-9_]{0,})(?:(?:[Ee][+-]?[0-9_]{1,})|\.[0-9_]+(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+?|(?:o[0-7_]*)|(?:x[0-9a-fA-F_]{1,}))|(?:[0-9][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+\?|\*|\{((?:\{[^/]+?}|[^/{}]|\\[{}])+?)}
+(?:(?:[^\D][0-9_]*?)(?:(?:[Ee][+-]?[0-9_]*)|\.[0-9_]{1,}(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]+)|(?:x[0-9a-fA-F_]+))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+(?-s)(.{1,500}\W)|^(TP)(\d{2})$
+(?:(?:([\d]{1,})\s*)?($months_short)[^\W]+\.?\s+?)?([0-9]{4})(?:-([^\D]{1,4}))?
+(.*?)(\(.*?\))?
+\s+|\D+
+^([一-龥]*[a-zA-Z0-9]+){6,}$
+[a-z0-9]+([._\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+
+^(\w+\s+)|(?-s)\/(.+\/[^/|^']+)
+^[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+.?$
+(?:(?:\d[0-9_]*?)(?:(?:[Ee][+-]?[0-9_]+?)|\.[0-9_]+(?:[Ee][+-]?[0-9_]+)?)(?:f32|f64)?)|(?:0(?:b[01_]+?|(?:o[0-7_]*)|(?:x[0-9a-fA-F_]*))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+([a-f0-9])([a-f0-9])([a-f0-9])|/&.+?;|[^%a-z0-9_-]/(?-s)
+/(?-i)(&[^;]*;)|\W/|(\.)([.?!])
+[a-zA-Z0-9][-_.a-zA-Z0-9]{1,98}[a-zA-Z0-9]
+((.+):(.*)@)?([^:]+)(:([0-9]+))?
+([A-Za-z][A-Za-z0-9+.-]{1,120}:[A-Za-z0-9/](([A-Za-z0-9$_.+!*,;/?:@&~=-])|%[A-Fa-f0-9]{2}){1,333}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*,;/?:@&~=%-]{0,1000}))?)
+manifest(\(.+\))?
+(?:(?:[^\D][0-9_]*?)(?:(?:[Ee][+-]?[0-9_]{1,})|\.[0-9_]{1,}(?:[Ee][+-]?[0-9_]{1,})?)(?:f32|f64)?)|(?:0(?:b[01_]+|(?:o[0-7_]+)|(?:x[0-9a-fA-F_]+?))|(?:[\d][0-9_]*?))(?:u8|u16|u32|u64|i8|i16|i32|i64|isize|usize)?
+[\p{L}\p{N}- ]{1,255}
+\{([A-Za-z][A-Za-z0-9_]*)\}
+(?i)\bidentity\s*(\(.*\))?
+\?|\*|\{((?:\{[^/]+?\}|[^/{}]|\\[{}])+?)\}|/
+(.*?)(\((.*)\))?
+(<style>.*</style>)|<[^<>]*>
+(?:(?:([\d]+?)\s{1,})?($months_short)[\w]+\.?\s+)?([\d]{4})(?:-([^\D]{1,4}))?
+\\\\([^\\]+)[\\](.+)|\/?\*[^\/]*$(?-s)
+(?:(?:([\d]+)\s*)?($months_short)[\w]*\.?\s{1,})?([\d]{4})(?:-([^\D]{1,4}))?

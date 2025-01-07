@@ -18,11 +18,13 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 
 
 # 读取/home/supermaxine/Documents/USENIX24/AttackStringGen/regex_set/regexes下1.txt到736535.txt
-path = 'regexes'
-Output = '../Output'
+path = '/home/HybridAlgSolver/Test/regexes'
+Output = '/home/HybridAlgSolver/Output'
 count = 0
-Islazy = 1
-IsRandom = 0
+# Islazy = 0
+# IsRandom = 0
+# IsFull = 0
+# IsRever = 1
 
 
 
@@ -31,8 +33,9 @@ IsRandom = 0
 
     # 使用线程池执行任务
     # 编译文件
-def dotask(id, Output, Length, Islazy):
-    command = "timeout 600s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s" % (path + '/'+ id, Output, Length, Islazy, IsRandom)
+def dotask(id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse):
+    command = "timeout 6s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s %s %s"  % (path + '/'+ id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse)
+    print(command)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             shell=True,
@@ -46,9 +49,9 @@ def dotask(id, Output, Length, Islazy):
     # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(path)
-thread_num = 32
+thread_num = 16
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i].split('.')[0])
-        executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0)    
+        executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0, 0, 0, 0)    
 

@@ -38,7 +38,8 @@ def dotask(id, Output, Length, Islazy):
     filenames = os.listdir(Output)
 
     for filename in filenames:
-        command = "timeout 2s /home/HybridAlgSolver/PCRE2/PCREMatch %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
+        # command = "timeout 2s /home/HybridAlgSolver/PCRE2/PCREMatch %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
+        command = "timeout 2s python3 /home/HybridAlgSolver/PythonMatch/match.py %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
         print(command)
         process = subprocess.Popen(command,  stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
@@ -68,6 +69,7 @@ def dotask(id, Output, Length, Islazy):
             if user_time >= 1.0:
                 # count = count + 1
                 print(f"用户时间: {user_time:.2f} 秒，大于 1 秒，输出结果。")
+                break
                 # print(f"count: {count}")
                 # if stdout:
                 #     print(f"标准输出: {stdout}")

@@ -1,39 +1,33 @@
-import base64
 import re
 import sys
 
-def main():
-    # 检查是否提供了两个命令行参数
-    if len(sys.argv) != 3:
-        print("Usage: python regex_file_matcher.py <base64_regex> <file_path>")
-        return
+# 获取命令行输入的文件路径
+if len(sys.argv) != 3:
+    print("请提供两个文件路径：正则表达式文件和匹配串文件")
+    sys.exit(1)
 
-    # 获取命令行参数
-    base64_regex = sys.argv[1]
-    file_path = sys.argv[2]
+regex_file_path = sys.argv[1]  # 第一个参数：正则表达式文件
+string_file_path = sys.argv[2]  # 第二个参数：待匹配串文件
 
-    try:
-        # 解码 Base64 编码的正则表达式
-        regex = base64.b64decode(base64_regex).decode('utf-8')
+# 读取正则表达式文件
+try:
+    with open(regex_file_path, 'r', encoding='utf-8') as regex_file:
+        regex_content = regex_file.read().strip()
+        regex = re.compile(regex_content)  # 编译正则表达式
+except Exception as e:
+    print(f"读取正则文件出错: {e}")
+    sys.exit(1)
 
-        # 编译正则表达式
-        pattern = re.compile(regex)
+# 读取待匹配串文件
+try:
+    with open(string_file_path, 'r', encoding='utf-8') as string_file:
+        string_content = string_file.read()  # 读取整个文件内容
+except Exception as e:
+    print(f"读取匹配串文件出错: {e}")
+    sys.exit(1)
 
-        # 读取整个文件内容
-        try:
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
-
-            # 查找匹配项
-            matches = pattern.finditer(content)
-            for match in matches:
-                print(f"Found match: {match.group()} at position {match.start()}")
-
-        except IOError as e:
-            print(f"Error reading file: {e}")
-
-    except base64.binascii.Error as e:
-        print(f"Error decoding Base64 regex: {e}")
-
-if __name__ == "__main__":
-    main()
+# 对整个文件进行匹配
+if regex.search(string_content):
+    print("文件内容匹配成功")
+else:
+    print("文件内容未匹配")
