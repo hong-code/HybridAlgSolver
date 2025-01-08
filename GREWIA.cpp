@@ -49,7 +49,7 @@ int main(int argc, char* argv[]){
   std::wcout.sync_with_stdio(true);
   for (auto str : Regex_list){
     if (solverbin::debug.PrintRegexString) std::wcout << L"Regex: " << str << std::endl;
-    auto ren = solverbin::Parer(str);
+    auto ren = solverbin::Parer(str, true);
     ReList.emplace_back(ren.Re);
     auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re, std::stoi(argv[3]), argv[2], std::stoi(argv[4]), std::stoi(argv[5]), std::stoi(argv[6]), std::stoi(argv[7]));
     auto k1 = kk.IsABT(kk.SSBegin);

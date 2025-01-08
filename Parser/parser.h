@@ -11,7 +11,8 @@ namespace solverbin {
       #endif  
       std::string regex_string;
       REnodeClass Re;
-      Parer(std::wstring regex_string);
+      bool GREWIA = false;
+      Parer(std::wstring regex_string, bool GREWIA);
       Parer();
       REnode* Parse(REnode* r, std::wstring &RegexString);
       signed int getcharacter(std::wstring &RegexString);

@@ -32,7 +32,7 @@ int main(int argc, char* argv[]){
   // Regex_list[Regex_list.size() - 1].push_back(c);
   std::vector<solverbin::REnodeClass> ReList;
   for (auto str : Regex_list){
-    auto ren = solverbin::Parer(str);
+    auto ren = solverbin::Parer(str, 0);
     ReList.emplace_back(ren.Re);
   }
   auto InK = solverbin::IntersectionK(ReList);

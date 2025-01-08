@@ -638,7 +638,8 @@ namespace solverbin {
               REnode* REnodeLOOP = Re.initREnode(Kind::REGEXP_LOOP, {0, 0});
               REnodeLOOP->Children.emplace_back(r->Children.back());
               r->Children.pop_back();
-              r->Children.emplace_back(REnodeLOOP);
+              if (!GREWIA)
+                r->Children.emplace_back(REnodeLOOP);
               REnodeLOOP->Counting = RuneClass(0, hi_int);
             }
           }
@@ -651,7 +652,8 @@ namespace solverbin {
             REnodeLOOP->Children.emplace_back(r->Children.back());
             REnodeStar->Children.emplace_back(r->Children.back());
             r->Children.pop_back();
-            r->Children.emplace_back(REnodeLOOP);
+            if (!GREWIA)
+              r->Children.emplace_back(REnodeLOOP);
             r->Children.emplace_back(REnodeStar);
             REnodeLOOP->Counting = RuneClass(lo_int, lo_int);
           }
@@ -667,7 +669,15 @@ namespace solverbin {
             REnodeLOOP->Children.emplace_back(r->Children.back());
             r->Children.pop_back();
             r->Children.emplace_back(REnodeLOOP);
-            REnodeLOOP->Counting = RuneClass(lo_int, hi_int);
+            if (GREWIA){
+              REnodeLOOP->Counting = RuneClass(lo_int, lo_int);
+              r->Children.pop_back();
+              REnodeLOOP->kind = Kind::REGEXP_STAR;
+              r->Children.emplace_back(REnodeLOOP);
+            }
+              
+            else  
+              REnodeLOOP->Counting = RuneClass(lo_int, hi_int);
           }
         }
         break;
@@ -905,8 +915,8 @@ namespace solverbin {
 }
 
 
-Parer::Parer(std::wstring regex_string){
-  
+Parer::Parer(std::wstring regex_string, bool GREWIA_){
+  GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
   if (Re.Renode->Children.size() == 1)
