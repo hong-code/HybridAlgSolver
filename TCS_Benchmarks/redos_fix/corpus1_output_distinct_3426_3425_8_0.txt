@@ -1,0 +1,2 @@
+(.*)([0-9]+)
+(.*)(Received new cluster view.*\|)([0-9]+)

@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.union (re.range "\u{41}" "\u{46}") (re.union (re.range "\u{61}" "\u{66}") (re.range "\u{30}" "\u{39}"))) (re.*  (re.union (re.+  (re.union  (str.to.re "\u{21}") (re.union  (str.to.re "\u{40}") (re.union  (str.to.re "\u{26}") (re.union  (str.to.re "\u{27}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{24}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2a}") (re.union  (str.to.re "\u{2b}") (re.union  (str.to.re "\u{2c}") (re.union (re.range "\u{41}" "\u{5a}") (re.union  (str.to.re "\u{2e}") (re.union (re.range "\u{61}" "\u{7a}") (re.union (re.range "\u{5c}" "\u{5f}") (re.union  (str.to.re "\u{3a}") (re.union (re.range "\u{30}" "\u{39}") (re.union  (str.to.re "\u{3d}")  (str.to.re "\u{7e}")))))))))))))))))) )  (re.++  (str.to.re "\u{25}") (re.++  (re.union (re.range "\u{41}" "\u{46}") (re.union (re.range "\u{61}" "\u{66}") (re.range "\u{30}" "\u{39}")))  (re.union (re.range "\u{41}" "\u{46}") (re.union (re.range "\u{61}" "\u{66}") (re.range "\u{30}" "\u{39}")))))) ) )))
+(check-sat)
+(get-model)

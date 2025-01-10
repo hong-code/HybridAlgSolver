@@ -1,0 +1,3 @@
+(static|private|protected)+(static|private|public)+
+(static|private|public)+
+p.*

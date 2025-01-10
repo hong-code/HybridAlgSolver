@@ -1,0 +1,2 @@
+(.+)(\d+)
+(.+)(_(\d+)_job_(\d+)_(\d+)_hadoop_streamjob)(\d+)

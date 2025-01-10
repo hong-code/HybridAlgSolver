@@ -1,0 +1,2 @@
+(.*)(\w+)
+(.*)( \{__pyx_filename = .*goto __pyx_L)(\w+)

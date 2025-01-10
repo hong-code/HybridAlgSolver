@@ -1,0 +1,3 @@
+(width|height|style|align)+(width|height|style|alt)+
+(width|height|style|align)+
+a.*

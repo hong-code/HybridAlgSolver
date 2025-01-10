@@ -1,0 +1,3 @@
+.*
+(.*)("\s+VR="[A-Z][A-Z]"\s+VM=".*"\s+Owner=".*"\s+Keyword=".*"\s+Name=")(.*)
+.*

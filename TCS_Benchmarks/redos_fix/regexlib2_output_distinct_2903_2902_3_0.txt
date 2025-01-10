@@ -1,0 +1,3 @@
+((rp|si)a|ero)+((rp|si)a|[cdefgilmnoqrstuwxz])+
+((rp|si)a|[cdefgilmnoqrstuwxz])+
+e.*

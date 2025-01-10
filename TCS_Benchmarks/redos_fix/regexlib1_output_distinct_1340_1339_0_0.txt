@@ -1,0 +1,2 @@
+([\d\w]+)((Not|In\(|Between){1,2})
+([\d\w]+)(\]?\s*)((Not|In\(|Between){1,2})

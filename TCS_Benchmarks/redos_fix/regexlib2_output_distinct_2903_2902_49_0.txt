@@ -1,0 +1,3 @@
+(o(m|op)|[acdfghiklmnoruvxyz])+(o(m|op)|at)+
+(o(m|op)|[acdfghiklmnoruvxyz])+
+a.*

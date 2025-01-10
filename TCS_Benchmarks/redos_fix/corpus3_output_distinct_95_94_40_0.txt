@@ -1,0 +1,2 @@
+(.+)(.+)
+(.+)(, plugin (.+)( \(instance (.+)\))? type (.+)( \(instance (.+)\))?: Data source "(.+)" is currently )(.+)

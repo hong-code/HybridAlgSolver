@@ -1,0 +1,2 @@
+(.*)(\d+)
+(.*)(application\/vnd.openstack.reddwarf(\+.+)?;version=)(\d+)

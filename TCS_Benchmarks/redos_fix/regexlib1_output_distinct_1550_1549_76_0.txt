@@ -1,0 +1,3 @@
+([A-Z]+\.|of|the|von|der|van|de|bin|and|on)+([A-Z]+\.|of|the|von|der|van|de|bin|and|([A-Za-z]+-?)?[A-Z][A-Za-z]+)+
+([A-Z]+\.|of|the|von|der|van|de|bin|and|([A-Za-z]+-?)?[A-Z][A-Za-z]+)+
+o.*

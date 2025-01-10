@@ -1,0 +1,2 @@
+([^>]*)(\s*)
+([^>]*)(content\s*=\s*["\']?text\/html;\s*charset)(\s*)

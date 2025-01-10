@@ -1,0 +1,2 @@
+((((file|gopher|news|nntp|telnet|http|ftp|https|ftps|sftp):\/\/)|(www\.))+)([a%\&m\-A-Z\/-~a-zp\.;0-9_]*)
+((((file|gopher|news|nntp|telnet|http|ftp|https|ftps|sftp):\/\/)|(www\.))+)((([\.0-9\-A-Za-z_]+\.[A-Za-z]{2,6})|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))\/)([a%\&m\-A-Z\/-~a-zp\.;0-9_]*)

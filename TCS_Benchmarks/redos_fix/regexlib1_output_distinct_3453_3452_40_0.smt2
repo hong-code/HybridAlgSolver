@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter (re.opt  (str.to.re "\u{3f}") ) (re.opt  (str.to.re "\u{26}") ) )))
+(check-sat)
+(get-model)

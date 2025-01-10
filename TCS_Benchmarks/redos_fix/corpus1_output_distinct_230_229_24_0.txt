@@ -1,0 +1,2 @@
+(.+)(\d+)
+(.+)((Syntax error at \'(.+)\'; expected \'.+\') at \/.+:)(\d+)

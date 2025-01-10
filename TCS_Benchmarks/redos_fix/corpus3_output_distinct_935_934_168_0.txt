@@ -1,0 +1,2 @@
+(((public|private|protected|static)\s+)+)([\]\.0-9A-Za-z_\[]*)
+(((public|private|protected|static)\s+)+)([A-Za-z_])([\]\.0-9A-Za-z_\[]*)

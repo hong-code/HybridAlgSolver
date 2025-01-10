@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(<\/genre><studio>(.*)<\/studio><director>)(.*)

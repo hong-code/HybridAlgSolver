@@ -1,0 +1,3 @@
+.*
+(.*)(Received new cluster view.*\|([0-9]+). \[)(.*)
+.*

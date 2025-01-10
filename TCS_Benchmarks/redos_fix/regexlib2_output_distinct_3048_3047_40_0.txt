@@ -1,0 +1,3 @@
+(\.(\w|-)+)*
+((\.(\w|-)+)*)(((\.[A-Za-z]{2,3})|\.(aero|coop|info|museum|name))+)
+((\.[A-Za-z]{2,3})|\.(aero|coop|info|museum|name))+

@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter (re.+  (re.union (re.range "\u{26}" "\u{27}") (re.union  (str.to.re "\u{5c}") (re.union (re.range "\u{21}" "\u{22}") (re.union  (str.to.re "\u{3c}")  (str.to.re "\u{3e}"))))) ) (re.*  (re.union (re.range "\u{21}" "\u{2c}") (re.union  (str.to.re "\u{5c}") (re.union (re.range "\u{61}" "\u{7d}") (re.union (re.range "\u{2e}" "\u{5a}")  (str.to.re "\u{5e}"))))) ) )))
+(check-sat)
+(get-model)

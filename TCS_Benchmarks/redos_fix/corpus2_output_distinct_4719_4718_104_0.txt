@@ -1,0 +1,3 @@
+.+
+(.+)(\schanged\sthe\sgroup\sicon)(.*)
+.*

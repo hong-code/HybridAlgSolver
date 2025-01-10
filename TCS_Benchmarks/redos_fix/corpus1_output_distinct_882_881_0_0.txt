@@ -1,0 +1,3 @@
+\w+
+(\w+)((implements|extends))(\w+)
+\w+

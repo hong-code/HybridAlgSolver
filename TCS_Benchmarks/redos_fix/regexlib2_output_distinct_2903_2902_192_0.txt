@@ -1,0 +1,3 @@
+(ame|et)+(ame|[parceufgizlo])+
+(ame|et)+
+e.*

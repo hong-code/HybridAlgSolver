@@ -1,0 +1,3 @@
+(hr|mins|min|hrs)+(hr|mins|min|h)+
+(hr|mins|min|h)+
+h.*

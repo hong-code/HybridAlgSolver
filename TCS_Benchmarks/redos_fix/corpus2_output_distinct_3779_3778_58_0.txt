@@ -1,0 +1,2 @@
+((\stime\selapsed:\s*).*)(\s*)
+((\stime\selapsed:\s*).*)(\s*)

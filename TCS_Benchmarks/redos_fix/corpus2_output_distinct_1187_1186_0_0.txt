@@ -1,0 +1,3 @@
+[\s\S]*
+([\s\S]*)((exception|error))([\s\S]*)
+[\s\S]*

@@ -1,0 +1,3 @@
+((en)|(wo)|(welve)|(hree))+((en)|(wo)|(welve)|(hirteen))+
+((en)|(wo)|(welve)|(hree))+
+h.*

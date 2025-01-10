@@ -1,0 +1,2 @@
+(\d*)((h|hr|hrs|mins|min)+)
+(\d*)(.?\d+.)((h|hr|hrs|mins|min)+)

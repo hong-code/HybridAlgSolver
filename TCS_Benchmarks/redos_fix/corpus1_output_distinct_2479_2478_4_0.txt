@@ -1,0 +1,2 @@
+(\d*)((sec|hour|day|week|month|year)+)
+(\d*)(.?\d+.)((sec|hour|day|week|month|year)+)

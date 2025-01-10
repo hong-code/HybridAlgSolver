@@ -1,0 +1,3 @@
+(gdb|sde|mdb)+(gdb|sde|mdf)+
+(gdb|sde|mdb)+
+m.*

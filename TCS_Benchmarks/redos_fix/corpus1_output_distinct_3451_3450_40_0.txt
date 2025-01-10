@@ -1,0 +1,2 @@
+(.*)([\d.]+)
+(.*)(Video codec ([\w\-]+) width (\d+) height (\d+) profile (\d+) fps )([\d.]+)

@@ -1,0 +1,2 @@
+((((\s?style=&quot;?).*((\s?font-size:.+\s*((;|,)?)+)|(\s?color:.+\s*((;|,)?)+))[^qtu&;o]*((\s?font-size:.+\s*((;|,)?)+)|(\s?color:.+\s*((;|,)?)+))[^qtu&;o]*(&quot;?)|(\s?size=&quot;?.*((&quot;)?))|(\s?color=&quot;?.*((&quot;)?)))?).*){3}
+.*

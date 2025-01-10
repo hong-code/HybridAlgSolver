@@ -1,0 +1,3 @@
+(((file|gopher|news|nntp|telnet|http|ftp|https|ftps|sftp):\/\/)|(www\.))+
+((((file|gopher|news|nntp|telnet|http|ftp|https|ftps|sftp):\/\/)|(www\.))+)([\.0-9\-A-Za-z_]+)
+[\.0-9\-A-Za-z_]+

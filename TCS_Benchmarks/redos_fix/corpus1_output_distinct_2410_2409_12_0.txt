@@ -1,0 +1,2 @@
+(\S+)(\s*)
+(\S+)(\s*[.]\s*togglebyteorder)(\s*)

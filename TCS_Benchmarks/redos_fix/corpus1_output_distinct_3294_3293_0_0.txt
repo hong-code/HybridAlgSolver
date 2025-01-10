@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(\/discovery\/v1\/apis\/analytics\/)(.*)

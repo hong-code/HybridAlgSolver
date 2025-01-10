@@ -1,0 +1,2 @@
+(.+)(\d+)
+(.+)(\/themes\/update-check\/)(\d+)

@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (str.to.re "\u{26}")  (re.*  (re.union  (re.union  (str.to.re "\u{40}") (re.union (re.range "\u{41}" "\u{5a}") (re.union (re.range "\u{61}" "\u{7a}") (re.union  (str.to.re "\u{2f}") (re.union (re.range "\u{30}" "\u{39}") (re.union  (str.to.re "\u{5f}") (re.union  (str.to.re "\u{20}") (re.union  (str.to.re "\u{21}") (re.union  (str.to.re "\u{61}") (re.union  (str.to.re "\u{24}") (re.union  (str.to.re "\u{25}") (re.union  (str.to.re "\u{26}") (re.union  (str.to.re "\u{27}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2c}") (re.union  (str.to.re "\u{6d}") (re.union  (str.to.re "\u{2e}") (re.union  (str.to.re "\u{6f}") (re.union  (str.to.re "\u{70}") (re.union  (str.to.re "\u{71}") (re.union  (str.to.re "\u{74}") (re.union  (str.to.re "\u{75}") (re.union  (str.to.re "\u{3a}") (re.union  (str.to.re "\u{3b}") (re.union  (str.to.re "\u{3d}")  (str.to.re "\u{3f}"))))))))))))))))))))))))))) (re.union  (str.to.re "\u{2d}")  (re.union  (str.to.re "\u{09}")  (str.to.re "\u{66}")))) ) )))
+(check-sat)
+(get-model)

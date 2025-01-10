@@ -1,0 +1,3 @@
+.*
+(.*)(https:\/\/aus2.mozilla.org)(.*)
+.*

@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(<font face="arial,helvetica" size=2>(<[BI]>)?)(.*)

@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.++ (re.+  (re.union  (re.++  (str.to.re "\u{2f}")  (str.to.re "\u{77}")) (re.comp  (re.union  (str.to.re "\u{24}") (re.union  (str.to.re "\u{25}") (re.union  (str.to.re "\u{26}") (re.union  (str.to.re "\u{2b}") (re.union  (str.to.re "\u{3c}") (re.union  (str.to.re "\u{7d}") (re.union  (str.to.re "\u{3e}") (re.union  (str.to.re "\u{3f}")  (str.to.re "\u{7b}"))))))))))) ) (re.+  (re.union  (re.++  (str.to.re "\u{2f}")  (str.to.re "\u{77}"))  (re.++  (str.to.re "\u{2f}")  (str.to.re "\u{57}"))) )) (re.+  (re.union  (re.++  (str.to.re "\u{2f}")  (str.to.re "\u{77}")) (re.comp  (re.union  (str.to.re "\u{24}") (re.union  (str.to.re "\u{25}") (re.union  (str.to.re "\u{26}") (re.union  (str.to.re "\u{2b}") (re.union  (str.to.re "\u{3c}") (re.union  (str.to.re "\u{7d}") (re.union  (str.to.re "\u{3e}") (re.union  (str.to.re "\u{3f}")  (str.to.re "\u{7b}"))))))))))) )  (re.++  (str.to.re "\u{2f}") (re.* (re.union (re.range "\u{00}" "\u{09}") (re.range "\u{0b}" "\u{0c}") (re.range "\u{0e}" "\u{84}") (re.range "\u{86}" "\u{ff}")) )) )))
+(check-sat)
+(get-model)

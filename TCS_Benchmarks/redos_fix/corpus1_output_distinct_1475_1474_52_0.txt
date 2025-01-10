@@ -1,0 +1,2 @@
+(((class|module|def)\s+).*)(\s*)
+(((class|module|def)\s+).*)(\s*)

@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)("(\s?target="(_(blank|new|parent|self|top))")?(\s?class="(.*)")?(\s?style="(.*)")?>)(.*)

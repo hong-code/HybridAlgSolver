@@ -1,0 +1,2 @@
+(.+)(.*)
+(.+)(\schanged\sthe\ssubject\sto\s)(.*)

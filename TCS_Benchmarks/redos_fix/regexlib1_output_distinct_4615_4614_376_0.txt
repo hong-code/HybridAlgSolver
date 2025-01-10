@@ -1,0 +1,2 @@
+\S+
+&amp;quot;[^paqtu&;mo]{0,1024}&amp;quot;

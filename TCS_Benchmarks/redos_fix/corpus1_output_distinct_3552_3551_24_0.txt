@@ -1,0 +1,2 @@
+(.*)(\d+)
+(.*)(audio streams (\d+) video streams (\d+) chapters (\d+) subtitles )(\d+)

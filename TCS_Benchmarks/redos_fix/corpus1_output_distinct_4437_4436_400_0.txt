@@ -1,0 +1,3 @@
+.*
+(.*)(<\/mpaa><genre>(.*)<\/genre><studio>(.*)<\/studio><director>(.*)<\/director><cast>(.*)<\/cast><plot>(.*)<\/plot><thumb>)(.*)
+.*

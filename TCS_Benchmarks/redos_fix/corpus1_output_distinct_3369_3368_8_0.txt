@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(TASK_STATUS="FAILED".*ERROR=")(.*)

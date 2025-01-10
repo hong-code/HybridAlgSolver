@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(<\/mpaa><genre>(.*)<\/genre><studio>(.*)<\/studio><director>(.*)<\/director><cast>)(.*)

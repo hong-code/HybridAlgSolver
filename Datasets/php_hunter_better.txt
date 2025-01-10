@@ -1,0 +1,229 @@
+&lt;[^&gt;]*\n?.*=(&quot;|')?(.*\.jpg)(&quot;|')?.*\n?[^&lt;]*&gt;
+(\d{6}\_\d{9})\.*(?=.*licuta)(?=.*gurlan)
+(?<AspectName>\w+)\/((?<BindingName>\w+)?)((::(?<BindingVersion>\d+.\d+)?)?)\/(?<EntityName>\w+)(::((?<EntityVersion>\d+.\d+)?))?
+^(\#{1,6})[ \t]*(.+?)[ \t]*\#*\n+
+(?m)^([^A-Za-z0-9]+)([0-9_]+)([A-Za-z]+)([0-9_]+)([^A-Za-z0-9]+)$
+\<div id\=\"cats\"\>.*\?cat\=(\w{1,2}).*\>(.*)\<\/a\>\<\/label\>\<\/div\>
+((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{6,50})
+(.*(\s+|[*]))(\w+)$
+(((ftp|https?):\/\/)[\-\w@:%_\+.~#?,&\/\/=]+)|((mailto:)?[_.\w-]+@([\w][\w\-]+\.)+[a-zA-Z]{2,3})
+t=.*(\d+) +to +(\d+)
+^DEFECTS,\s*[0-9A-Za-z_.]{1,50}\s*,\s*[0-9A-Za-z_.-]{1,50}\s*,\s*[0-9A-Za-z_. -]{1,50}\s*,\s*[0-9A-Za-z_. ()-]{1,50}\s*,\s*\d+\/\d+\/\d+\s+\d+[:.]\d+[:.]\d+\s*,\s*\d+\/\d+\/\d+\s+\d+[:.]\d+[:.]\d+\s*,\s*[0-9A-Za-z_. ()-]{1,50}\s*,\s*[^,]*,\s*[^,]*,\s*[0-9A-Za-z_. ()-]{1,50}\s*,(\s*|\s*[0-9A-Za-z_.-]{1,50}\s*),\s*[0-9A-Za-z_.]{1,50}\s*,[^,]*
+\"_id\": {\n[\s]+.+\n\s+},\n
+^(\/)([\w\/\[\]\{\}]*)(\??[\w\/\[\]\{\}]+\=[\w\/\[\]\{\}]+)*(\&?[\w\/\[\]\{\}]+\=[\w\/\[\]\{\}]+)*$
+\d+-\d+-\d+([\s|T|t]\d+:\d+:\d+.\d+(Z|(\s?[\-|\+]\d+:\d+)))?
+((ftp|http):\/\/)?(w{3})?\.([a-zA-Z0-9.-]+)\.([a-z]{2}|([a-z]{2,3}\.[a-z]{2}))
+.*note:.*is clipping its content
+const\s+([a-zA-Z0-9_]+)\s*=\s*([^;\n]+)[;\n]
+call.*mount.*first
+(?:set\s*v?a?l?u?e?)\s+((?:\d+)|(?:(?:(?:[a-z]|[A-Z]|[0-9]|_)+)\/)+(?:[a-z]|[A-Z]|[0-9]|_)+)\s*((?:\d+\.*\d*)|(?:.+))
+(([a-zÃ¡-Ãº]+)[\.,]?\s[A-ZÃ-Ãša-zÃ¡-Ãº]){3,}\1
+<([A-Z][A-Z0-9]*)\b[^>]*>(.*?)<\/\1>
+^\(\s*[0-9]+\)\[[a-zA-Z0-9\s:]*\|\s*[0-9]{1,5}\:[0-9]{3}\s*(?:\[[0-9]{1,3}\:[0-9]{1,3}\])?\]\{[0-9]{1,4}\}[a-zA-Z0-9\s:@\/~]+\(?:.+\)[\$|#]\s{1}(?<!\n)(.+)$
+(?P<indent>^\s*)(?P<visibility>(final|abstract)?\s?(public|private|protected)?\s?(static)?\s*)(?P<entity>(function|class|interface)\s+)(?P<name>[^$]+[&a-zA-Z0-9_]+)(?P<args>.*$)
+<h([1-6]).*>.*<\/h\1>
+Change \d+ by (?P<who>\S+)@\S+ on (?P<when>.+)$
+(?:4\s*(?:\d\s*){3}[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4})|[25]\s*[1-7]\s*(?:\d\s*){2}[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4}|6\s*(?:0\s*1\s*1|5\s*[0-9]\s*[0-9])[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4}[- ]*(\d\s*){4}|3\s*[47]\s*(?:\d\s*){2}[- ]*(?:\d\s*){6}[- ]*(?:\d\s*){5}|3\s*(?:0\s*[0-5]|[68]\s*[0-9])\s*\d{1}[- ]*(?:\d\s*){6}[- ]*(?:\d\s*){4}|(?:2\s*1\s*3\s*1|1\s*8\s*0\s*0|3\s*5\s*\d{2})[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){4}[- ]*(?:\d\s*){3,4}
+([-+]?\d\d+[.]\d+)\s?,?([-+]?\d+[.]\d+)
+(?<![A-Z]{1}[a-z]{1})(?=[A-Z](?![a-z]{1}))([a-zA-Z]{2,4})(?![a-z]{1})(?![A-Z]+[_])
+^raw_data\.(?!((event_record_string|event_record_binary|event_record_binary\.event_record_binary)\.prod\.(18477|18478|5416|5454|5455)|storage\.aw|codo)\.)(?!.*(failure_permanent|failure_\d+_\w+)$).*
+([0-9.]+)(\S*)$
+\S+\s\d+\s_HOS_EXTENDED_\s(\d+\.\d+\.\d+\.\d+)\s-\s-\s\[\S+\s\S+\]\s\"(?:GET|POST)\s\S+url=http[s]?\S+\.\S+=\S+(?:SELECT|CASE|WHEN|THEN)\S+\sHTTP\/\d+\.\d+\"
+[A-Z][a-z]+[,;\s\&]*(?:[A-Z][a-z]|\s*et al\.\s*)*(?:, \d{4};?)+
+([A-Za-z0-9]\w+\s\w+)+
+\d+ failur.*\d+ librar
+(52.\d{3}(-\d*)?)(\s?)((([\w\W]*\.)([\s\S]*)(\(End of (clause|provision)\)))|(\[Reserved\]))
+((?<User>[a-zA-Z0-9-_+]+)\s+(?<PID>\d{1,10000}+)\s+(?<CPU>\d+\.\d+)\s+(?<Memory>\d+\.\d+)\s+(?<VSZ>\d{1,10000})\s+(?<RSS>\d{1,10000}+)\s+(?<TTY>[a-zA-Z0-9\/\?]+)\s+(?<Stat>[a-zA-Z0-9\+\-\<\>]+)\s+(?<START>(?<StartDate>(?<StartMonth>[a-zA-Z]+)(?<StartDay>\d+))|(?<StartTime>(?<StartHour>\d+)\:(?<StartMinute>\d+)))\s+(?<TIME>(?<Hours>\d+)\:(?<Minutes>\d+))\s+(?<Command>.*\R+))
+(?P<prefix>^[\s]*)(?P<main>([\*\s]+(html|body)\s+)?[a-zA-Z_\.,#]+[\sa-zA-Z_\.,#\{:]*)(?P<suffix>[^;]+)$
+(?:https?:\/\/)?(?:[-\w_\.]{2,}\.)?([-\w_]{2,}\.[a-z]{2,4})(?:\/\S*)?
+\b(?<rozkaz>STP|SOB|SOM|SOZ|DOD|POB|ODE|RST|RPA|stp|sob|som|soz|dod|pob|ode|rst|rpa)\b|(\Bład\b|\BŁAD\b)|(?<comment>\/\/.*)|(?<etykieta>\S*:)|(?P=etykieta)
+(\d+\.?\/?\d*)\s*(?:می?لیون|می?لیارد|توما?ن|م)
+(.{1,})([FGHJKMNQUVXZ])[A-Za-z]*([0-9]?)([0-9]{1,4})
+^\/_TESTSUITE\/TESTS\/([a-z0-9][a-z0-9\-]*.[a-z0-9][a-z0-9\-]*_[A-Z0-9][A-Z0-9_\-]*)\/(.*\.fmp4)\/(.*)
+lat(itude)?\W+(\d{1,2}\.[0-9]+).+long?(itude)?\W*(-\d{1,2}\d\.[0-9]+)
+^STATEMENT:\s*(?<statement>[^\n]*)(\nERROR:\s*(?<error>[^\n]*))(\nDETAIL:\s*(?<detail>[^\n]*))
+(?<=.).(?=[^@]*?.@)|(?:(?<=@.)|(?!^)\G(?=[^@]*$)).(?=.*\.)
+http:\/\/(www\.[a-z0-9]+([\-\.][a-z0-9]+)*\.[a-z]{2,5})(:[0-9]{1,5})?(\/.*)?$|^(\/.*)
+.*ri\/.*\.ri$
+(From:[^\n\r]*)\s*(Sent:[\r\s](Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),[\r\s\S]*(AM|PM))\s*(To:[^\n\r]*)\s*(Cc:[^\r\n]*[\\r\\n])?(Subject:[\s]*[^\n\r]*\s*)
+(\d+)\s+(\w{2})\s*(\w{2,5})\s+(\w{5})(\s+|\s+.\s+)(\w{3})(\w{3})(\s+|(\s|\*)\w{3}\s+)(\w{4,5})\s+(\w{4,5})\s+(\w{5})?(\s|.)*(?:\n|$){1}
+(?<Address>(?<Protocol>https?:\/\/)?(?<Subdomain>\w*\.)?(?<Domain>(?:[a-z0-9\-]{2,})\.(?:[^\s\/\.]{2,}))(?<Path>\/[^\s\?]*)?(?<Params>(?:\?|\#)[^\s\/\?\:]*)?)
+.*([-.*?]|\[.+\]).
+(\d+\.?\d*)\s*(second|minute|hour|day|week|month|year|[hdwmy])s?\s*(?:ago)?$
+(".+"\s)?<?[a-z\._0-9]+[^\._]@([a-z0-9]+\.)+[a-z0-9]{2,6}>?;?
+(\w+),\s+(\w+)\s+ (\((\w+)\)\s+)? (\w+),\s+(\w+)[^\d]+ (\d+)\s+(\w+)
+wg_hcyl_pin_(\d*).*_h(\d*).*
+((http(s)?[:\/\/]{1,}))?([a-z0-9\-]{1,}[.])([a-z0-9\-]{1,}[.])?([a-z]{2,3})(.{1,})?
+disable.*=.*yes
+(((ftp|http|https):\/\/)|(\/)|(..\/))(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?
+({Block:(\w*)}.*?{\/Block:\2}|{\w+})
+^Vorgänger.*(\d+)$
+(youtube\.com|youtu\.be|youtube-nocookie\.com)\/(?:embed\/|v\/|watch\?v=|watch\?list=(.*)&v=)?((\w|-){11})(&list=(\w+)&?)?
+(?'DateTime'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}).*INFO *....(?'TaskName'\w+).*KMR200_(?'MR'\d).*Target Name: (?'TargetName'\w+\-\w+)\n.*Target Type\: (?'TargetType'\w+)\n.*Cycle Time: (?'CycleTime'\d+.\d+)
+((.+)\@)?([^:]+):(\d+)
+^(подрост:?[ ]*)(?<COMPOSITION>[0-9А-Яа-я]+){1}([ ]*\((?<AGE>\d+)\))?([ ]*(?<HEIGHT>[\d,\.]+) +м)?[ ,]*((?<STEMCOUNT>[\d,\.]+)[ ]+тыс\.шт\/га)?[ ,]*(?<GRADE>[А-Яа-я]+)?$
+\(*(\w{3})[-_~\s*\.]*?(\d{1,}|\d*.\d*.\d*)[-_\s.~]*?(FTP|IMG|SCR|LIV|TVU).?-?\s?(\w{3}).\s?-?_?~?\.?(\d*).\s?-?~?_?\.?(.*)
+<([^>]+)>([^<]+)<(\/\1)>
+((P\.?O\.?\s*(STAL)?\s*BOX)|(P\.?O\.?\s*(STAL)?\s*)|BOX)(\s*)(#?\s*)(\w*)
+<(\w+\b)[^>]*>([\S\s]*?)<\/\1>
+(<(tag1|tag2)[^>]*\/?>)[\w\S\s]*?(<\/(?:\2)>)
+^(?P<filetype>.)(?P<perms>.{9})\s+(?P<nlinks>\d*)\s*(?P<owner>\S+)\s+(?P<group>\S+)\s+(?P<size>\d+)\s+(?P<date>...\s+\d+\s+[\d:]+)\s+(?P<filename>([^ ]|\\ )*?)( -> (?P<linktarget>[^\r]*))?\r?$
+(?:\{.+\})?(?:\([:, \w]+\))?$
+((?<raute>#(?<raute_content>[^\n]*))|(?<doubleslashes>\/\/(?<doubleslashes_content>[^\n]*))|(?<block>\/\*(?<block_content>[^*]+|\*(?!\/))*+\*\/))
+\s+TRN\s+[a-z\d]+\s+\d+\s+(\s+\d+\s+)\w+(\s+\d{2}\w{3}\s+)\d\s([a-z]{5})\s+([a-z]{5})\s[a-z\d]+\s+[\D]+(\d{4}|\d{0})\s+(\d{4}|\d{0})
+([A-Z]{3}_ERROR_[A-Z_0-9]+)\s+=?\s*\(?([A-Z_0-9-][A-Z_0-9-+ ]+[A-Z_0-9])
+((?=[^147]*([147][^147]*[147][^147]*[147][^147]*)*$)[^258]*([258][^258]*[258][^258]*[258][^258]*)*)|((?=[^147]*([147][^147]*[147][^147]*[147][^147]*)*[147][^147]*$)[^258]*([258][^258]*[258][^258]*[258][^258]*)*[258][^258]*)|((?=[^147]*([147][^147]*[147][^147]*[147][^147]*)*[147][^147]*[147][^147]*$)[^258]*([258][^258]*[258][^258]*[258][^258]*)*[258][^258]*[258][^258]*)
+Last in.* {10,}w|(Last in.*[0-9][0-9]w[0-7]d|[0-9]y|outp.*[0-9][0-9]w[0-7]d|[0-9]y)|disabled|Last input never, output never, output hang never
+(?P<Timestamp>\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\b[\s+\w+]+[\w+:?]+)\s+(?<SourceIP>[\d+\.?]+)\s+(?P<EventID>%PIX-6-\d+):\s+(?P<EventMessage>Built (inbound|outbound) UDP connection\s+\d+) for (?P<OutsideIP>.*?) to (?P<InternalIP>.*)
+((?<=The|\s)(?:\s+?\w+)+|([\w\s-]*[^\d(HD, 1080p\)|\(HD, 720p\)|\(SD, 480p\)][^.flv|gif|mkv|mpeg|mpg|mov][^)(])+)
+(?<=[\s\'\{])(page(?![\'\\s])(?!\:?[cC]hildren)(?!Id)(?:Title)?(?:Parent)?:?\s?)(.*?)((\,+?)|(v\.\\d+)|}|$)
+\s*(\d+)\s*(\d+)\s*$
+<(.+)>([^<]+)<\/\1>
+(?<=\()(?:[^()]+|\([^)]+\))+(?=\))
+addr:(.*)\ *Bcast:(.*)\ *Mask:(.*)
+((v|[\\/])\W*[i1]\W*[a@]\W*g\W*r\W*[a@]|v\W*[i1]\W*[c]\W*[o0]\W*d\W*[i1]\W*n)
+(?<=\/\/:)[\r\n]*(.*?)(?=[\r\n]*\/\/\~[\r\n]*\*)
+(.*?)(\(.*\))?$
+(__libc_init)|(GLIBC_([0-9.]+))|(libc(_\w+)?\.so(?:\.(\d[0-9.]*))?)
+(?<=def.)\w+|\b((?!if)\w*(?!\s*[+])(?!.*==)(?=.*[=]))\b
+(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?
+Representative ([\w\s\.\,\"\-]+)\s*<br
+(.*\n)*:values: (.*)(\n.*)*:modal_name: (.*)
+^(\$|)([1-9]+\d{0,2}(\,\d{3})*|([1-9]+\d*))(\.\d{2})?$
+\s*(?:(?:thin|medium|thick|(?:(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))(?:in|cm|mm|pt|pc|px|em|ex)|0(?:(?:in|cm|mm|pt|pc|px|em|ex))))\s+(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)\s+(?:(?:(?:black|silver|gray|white|maroon|red|purple|fuchsia|green|lime|olive|yellow|navy|blue|teal|aqua|orange|aliceblue|antiquewhite|aquamarine|azure|beige|bisque|blanchedalmond|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|gainsboro|ghostwhite|gold|goldenrod|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|limegreen|linen|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|oldlace|olivedrab|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|thistle|tomato|turquoise|violet|wheat|whitesmoke|yellowgreen|rebeccapurple)|transparent|currentcolor|(?:#(?:(?:\d|[a-f]){6}|(?:\d|[a-f]){3}))|(?:rgb\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\))|(?:hsl\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\))|(?:rgba\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\))|(?:hsla\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\)))|transparent|inherit)|(?:thin|medium|thick|(?:(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))(?:in|cm|mm|pt|pc|px|em|ex)|0(?:(?:in|cm|mm|pt|pc|px|em|ex))))\s+(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)|(?:thin|medium|thick|(?:(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))(?:in|cm|mm|pt|pc|px|em|ex)|0(?:(?:in|cm|mm|pt|pc|px|em|ex))))\s+(?:(?:(?:black|silver|gray|white|maroon|red|purple|fuchsia|green|lime|olive|yellow|navy|blue|teal|aqua|orange|aliceblue|antiquewhite|aquamarine|azure|beige|bisque|blanchedalmond|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|gainsboro|ghostwhite|gold|goldenrod|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|limegreen|linen|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|oldlace|olivedrab|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|thistle|tomato|turquoise|violet|wheat|whitesmoke|yellowgreen|rebeccapurple)|transparent|currentcolor|(?:#(?:(?:\d|[a-f]){6}|(?:\d|[a-f]){3}))|(?:rgb\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\))|(?:hsl\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\))|(?:rgba\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\))|(?:hsla\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\)))|transparent|inherit)|(?:thin|medium|thick|(?:(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))(?:in|cm|mm|pt|pc|px|em|ex)|0(?:(?:in|cm|mm|pt|pc|px|em|ex))))|(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)\s+(?:(?:(?:black|silver|gray|white|maroon|red|purple|fuchsia|green|lime|olive|yellow|navy|blue|teal|aqua|orange|aliceblue|antiquewhite|aquamarine|azure|beige|bisque|blanchedalmond|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|gainsboro|ghostwhite|gold|goldenrod|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|limegreen|linen|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|oldlace|olivedrab|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|thistle|tomato|turquoise|violet|wheat|whitesmoke|yellowgreen|rebeccapurple)|transparent|currentcolor|(?:#(?:(?:\d|[a-f]){6}|(?:\d|[a-f]){3}))|(?:rgb\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\))|(?:hsl\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\))|(?:rgba\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\))|(?:hsla\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\)))|transparent|inherit)|(?:none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset)|(?:(?:(?:black|silver|gray|white|maroon|red|purple|fuchsia|green|lime|olive|yellow|navy|blue|teal|aqua|orange|aliceblue|antiquewhite|aquamarine|azure|beige|bisque|blanchedalmond|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|gainsboro|ghostwhite|gold|goldenrod|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|limegreen|linen|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|oldlace|olivedrab|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|thistle|tomato|turquoise|violet|wheat|whitesmoke|yellowgreen|rebeccapurple)|transparent|currentcolor|(?:#(?:(?:\d|[a-f]){6}|(?:\d|[a-f]){3}))|(?:rgb\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\))|(?:hsl\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\))|(?:rgba\((?:\s*\d{1,3}\s*\,){2}(?:\s*\d{1,3}\s*)\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\))|(?:hsla\(\s*\d{1,3}\s*\,\s*\s*\d{1,3}%\s*\,\s*\d{1,3}%\s*\,\s*(?:(?:\-?|\+?)(?:(?:\d+)?\.\d+|\d+))\s*\)))|transparent|inherit))|inherit\s*
+<groupId>org\.springframework<\/groupId>\s*<artifactId>.*\s*<version>
+[^.?!]*(?<=[.?\s!])was exactly(?=[\s.?!])[^.?!]*[.?!]
+\n(.+\S+)\ +\S+
+(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}
+(^\-|\+)?([1-9]{1}[0-9]{0,2}(\,\d{3})*|[1-9]{1}\d{0,})$|^0?$
+(?<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) (?<level>[^ ]*)\s+\[(?<method>.*?)\] \((?<thread>.*?)\) (?<message>.*)$
+<(tag1|tag2)[^>]*\/?>.*<\/(?:\1)>
+(?<email>(?<username>[\w\W]+)@(?<domain>[\w\W]+\.[\w\W]+|localhost))
+([\w-]+[\w]+)\s+(\w+)\s+(\w+)
+\[.*\d+ tests.*\n
+(?P<group>(?P<starttag><(?P<tagname>p)[^>]*>)(?P<data>.*)(?P<endtag><\/\3>))
+\A(.*?)\s+(\d+[a-zA-Z]{0,1}\s{0,1}[-]{1}\s{0,1}\d*[a-zA-Z]{0,1}|\d+[a-zA-Z-]{0,1}\d*[a-zA-Z]{0,1})
+(?:(?:dictad|pronunciad)(?:a|o)) por (?:don |doña )?([\w\s]+), juez(?:a?) (?:suplente)?
+(^.*btn.*clickable.*$)|(^.*clickable.*btn.*$)
+(?!.*([abcde]).*\1)^[abcde]{5}$
+([A-Za-z]+) +\1
+^\s*(?P<word>\S+)\_(?P<tag>\S+)\s*$
+^(|([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+|([\w\s]+)<[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+>)((\s*\,\s*)([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+|([\w\s]+)<[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+>))*)$
+(\/?[S])|(\,)|([A-Z]\~[A-Z])|([A-Z]\-[A-Z]$)|([A-Z]\/[A-Z])|([A-Z]{2,}$)
+(exit|quit)(\s*\(.*\))?$
+(?:(www\.))|(?:(?:^https:\/\/www\.)|(?:^https:\/\/)?)([\w]+){1}(?:\.[\w]+){2,}
+(?<=\()(?:[^()]+|\([^)]+\))*(?=\))
+^(\S+)\s+(\S+)\s+(\S+)\s+(\d+.\d+\s\S+)\s+(\d+.\d+.*)
+(\d{2}\/\d{2}\/\d{4}),\s(\d(?:\d)?:\d{2})\s-\s([^:]*):\s(.*?)(?=\s*\d{2}\/|$)
+(^[-+]??\d+?[.]??\d*?$)|(^[.]??\d+?$)|(^[-+]??\d+?[.]?\d*?[eE][+-]?\d+?$)
+^(.+)(\[ *)(\d+)(\] *)(.+ )(.+)$
+((\w+)\.(\w+) as \3(\d_\d)_)(, \2\.\w+ as \w+)*
+<(.+?)>([^<>]+)<\/\1>
+(\/+[^\/\[\]]+(?:\[[^\]']*(?:'[^']*')\])?)+
+^((?<AddressType>\w+\s*)?(?<Unit>\d+\s*)\/)?(?<StreetNumber>(\s*(\d+\w+)+)|((\s*\d+\s*\-\s*\d+)))(?<StreetNameAndType>(?<StreetType>\s+\w+)+)\s*[,|.]?\s*(?<Suburb>[\w\s]+)\s+(?<PostCode>\d{4})$
+(\w+)_(\d+)_(\d+)_(\w+)$
+Password=(?<Password>.*);.*=(?<Info>.*);.*=(?<User>.*);.*=(?<Catalog>.*);.*=(?<Data>.*)
+Senator ([\w\s\.\,\"\-]+)\s*\-\s*District
+^(?'Username'[-\w\d\.]+?)(?:\s+at\s+|\s+\[at\]\s+|\s*@\s*|\s*(?:[\[\]@]){3}\s*)(?'Domain'[-\w\d\.]*?)\s*(?:dot|\.|(?:[\[\]dot\.]){3,5})\s*(?'TLD'\w+)$
+<(?<key>[^>]+)>(?<value>[^<]+)<\/\1>
+(?:(?:\/\/)|(?:\/\*)|(?:<!--))?(?:[\s]*?#region)(?:([\s\S]*?)(?:(?:[\s]*?\*\/)|(?:-->))?[\n\r])([\s\S]*?)(?:(?:\/\/\s*?)|(?:\/\*)|(?:<!--))?(?:[\s]*?#endregion)(?:[\s\S]*?[\n\r])(?:[\s\S]*?)(?:(?:-->)|(?:\*\/)?)
+((\d+) (C\.F\.R|U\.S\.C). (§) ((\d+\.?\d+)(\(\w+\))?(\(\d+\))?(\(\w+\))?( \w+ )(\(\w+\))?(;)))|(\d+) (U\.S\.C)\. (§) (\d+)(\W+)(\w+)(\W+)(\d+)(\W+)(\w+)(\W+)|((\d+) (C\.F\.R|U\.S\.C). (§) (\d+.\.?\d+))
+(?:https?:)?\/\/(?:www\.|m\.)?twitter\.com\/(\w{2,15})\/?(?:\?\S+)?(?:\#\S+)?$
+frame_\d+_time_\d+(_\d\d){5}\.\d+_exp_-?\d+_ag_-?\d+\.\d+_dg_-?\d+\.?\d+_exp_st_\d+_wb_st_\d+_foc_\d+_o[lr]t_dgRGGB_\d+.\d+.\d+.\d+_rFix_-?\d+_bFix_-?\d+[.](pgm|jpg)
+(\"(?P<filename>[\p{L}\d\s\[\]_,.\-\(\)\+]+\.(?P<extension>\w{1,5}))\"(?!.*\"([\p{L}\d\s\.\[\]_,.\-\(\)\+]+\.\w{1,5})\"))
+^([A-Za-z0-9]+[A-Za-z0-9-_]*\.)*(([A-Za-z0-9]+[A-Za-z0-9-_]*){3,}\.)+([A-Za-z0-9]{2,4}\.?)+$
+Winamax Poker.*\((?P<id>\d+)\).*Player : (?P<player>\w+).*Registered players : (?P<playersNb>\d+).*Prizepool : (?P<prizepool>[0-9]*\.[0-9]+|[0-9]+).*Tournament started (?P<startTime>(?:\d|[A-Z]|\/|\:| )*).*You played (?P<timePlayed>(?:\d|\w| )*)You finished in.*(?P<finalPlace>\d).*You won (?P<amountWon>[0-9]*\.[0-9]+|[0-9]+)
+(?:([\w ]+) ([\w.]+) .*Version ([\d.]+))
+\s*\(\s*(?:'[-\/a-zA-Z 0-9]{1,40}')\,\s*\s*(?:'[-\/a-zA-Z 0-9]{1,40}')\,\s*(?:'[ifbIFB]{1}')\,\s*(?:'[0-9]{8}')\,\s*(?:'[0-9]{8}')\)\s*\,\s*\n*
+(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9].*[0-9])(?=.*[^a-zA-Z0-9]).{8,}
+^(?'Username'[-\w\d\.]+?)(?:\s+at\s+|\s*@\s*|\s*(?:[\[\]@]){3}\s*)(?'Domain'[-\w\d\.]*?)\s*(?:dot|\.|(?:[\[\]dot\.]){3,5})\s*(?'TLD'\w+)$
+([+-]?\d*\.?\d+)$
+(\d+[^(a-z)]*)(year|yr|month|mon)
+((http(s)?:\/\/)?[a-z0-9-]{3,}(\.[a-z0-9-]{2,})+(:[0-9]+)?((\/[^\/\s.]+\.[^\/\s.,!]+)|(\/[^\/\s.,!]*))*)
+(warning:)?(?:.*:)?\s*([-0-9]+)\s*:\s*([-0-9]+)\s*:\s*(.*)
+font-family\s*:\s*([^;\n]+)[;\n]
+h(e)l[A-Z]lo.*th[^e]*e(r)e
+([A-Za-z]{0,}[\.\,\s]{0,}[A-Za-z]{1,}[\.\s]{1,}[0-9]{1,2}[\,\s]{0,}[0-9]{4})| ([0-9]{0,4}[-,\s]{0,}[A-Za-z]{3,9}[-,\s]{0,}[0-9]{1,2}[-,\s]{0,}[A-Za-z]{0,8})| ([0-9]{1,4}[\/\.\-][0-9]{1,4}[\/\.\-][0-9]{1,4})
+.*(?P<line>\d+)\) (?P<file>.*)
+上市日期：<\/td>\s*.*>(.*)<\/a>
+^.*\s+mail exchanger = (?P<priority>\d+) (?P<host>\S+)\s*$
+([NY|80]{2}[0-9]{5,6})_([a-zA-Z_]*)[^0-9]*_SFTP_([0-9]{4})([0-9]{2})([0-9]{2})
+\n(.+\S+)\ +\S+\ +(.+\S+)
+(?:[a-zA-Z]*\.)+([a-zA-Z]+)(?:\/.*)?
+(?P<fence>^~{3,})[ ]*\n(?P<code>.*?)(?P=fence)[ ]*(\{\.(?P<lang>[a-zA-Z0-9_-]*)\})?[ ]*$
+[a-zA-Z]+-?[a-zA-Z]+\s[a-zA-Z]+\s[a-zA-Z]+-?[a-zA-Z]+
+(?:int|char)(?:\s+\*?\s*|\s*\*?\s+)([a-zA-Z_].*)
+([\w.+]+)\s*\(#?([^,]+),\s*([\w ]+),\s*([\w :]+)\)\s*\[PyPy [^\]]+\]?
+.*Video: .+, (.+) (?:fps|tb).*
+(?<!^)((?:[A-Z](?=[a-z]))|(?:[A-Z]{2,}(?=[A-Z][a-z])))
+(^type=AVC msg=audit\((?<time>\w+).*: apparmor=\"(?<resolution>\w+)\" operation=\"(?<operation>\w+)\"( profile=\"(?<profile>[^ ]+)\"){0,1}( name=\"(?<name>[^ ]+)\"){0,1} pid=(?<pid>\d+) comm=\"{0,1}(?<comm>[^ ]+)\"{0,1}( requested_mask=\"(?<requested_mask>\w+)\" denied_mask=\"(?<denied_mask>\w+)\" fsuid=(?<fsuid>\d+))?|^type=(?<type>\w+) msg=audit\((?<time1>\w+).*: pid=(?<pid1>\d+) uid=(?<uid>\d+) .* msg='(?<message>.*)'|type=NETFILTER_CFG msg=audit\((?<time2>\w+).*: table=(?<table>[^ ]+) family=(?<family>\d+) entries=(?<entries>\d+)|type=ANOM_PROMISCUOUS msg=audit\((?<time3>\w+).*: dev=(?<device>[^ ]+) prom=(?<prom>\d+) old_prom=(?<old_prom>\d+).*)|type=DAEMON\w+ msg=audit\((?<time4>\w+).*: (?<message1>.*)|type=CONFIG_CHANGE msg=audit\((?<time5>\w+).*: (?<message2>.*)
+[\D]*(\d+)\w*$
+Volume\s+\d+\s+(\w).*?(\d+)\s+\w+
+[.]*[.]*([0-9$|\[\]\-\(\)]*)$
+(?=([\W]*[\w][\W]*\b))\s(?=\d\.|\d\b)
+(?:get\s*v?a?l?u?e?)\s+((?:\d+)|(?:(?:(?:[a-z]|[A-Z]|[0-9]|_)+)\/)+(?:[a-z]|[A-Z]|[0-9]|_)+)\s*(\d*)\s*(true|false)?
+\((\w{0,3})\)\s([A-Z,a-z,\s]+)\((.*)\)?\s+([\d,.].*)
+%X?INCLUDE (\w+).\1$
+((?<raute>#(?<raute_content>.*))|(?<doubleslashes>\/\/(?<doubleslashes_content>.*))|(?<block>\/\*(?<block_content>[^*]+|\*(?!\/))*+\*\/))
+(?:py.*-)?([\d\.]+)(?:-(\w+))?
+.*<([^@]+)@[^@]+>\s*|([^@]+)@[^@]+
+<tr[^>]*>[^<]*<td[^>]*>(?<No>[^<]*)<[^>]*>[^>]*>(?<ID_dist>[^<]*)<\/td>[^>]*>(?<Jmeno>[^<]*)<\/td>[^>]*>(?<Tel_Home>[^<]*)<\/td>[^>]*>(?<Tel_Buss>[^<]*)<\/td>[^>]*>(?<Tel_mob>[^<]*)<\/td>[^>]*>(?<Country>[^<]*)<\/td>[^>]*><a[^>]*>(?<Email>[^<]*)[^<]*<\/a>[^<]*<\/td>[^>]*>(?<Levels>[^<]*)<\/td>[^>]*>(?<Pozice>[^<]*)<\/td>[^>]*>(?<Sponzor_ID>[^<]*)<\/td>
+(^(.*)(?P<host>\S+) \- )
+(\d{2}\/\d{2}\/\d{4}),\s(\d(?:\d)?:\d{2})\s-\s([^:]*):\s(.*?)(?=\s*\d{2}\/|\$)
+(^.+?)\s+(\w{2})\s+(\w{3})\s+(\d{3})
+.*([A-Z][\w-]*(\s+[A-Z][\w]*)+).*
+released on (\w+\s+\d+\w+\s+\d+)(?:, codename (.*))?(?i)
+(?:https?:[^\s]+)|\(?(\+?[0-9]{0,4}\)?[-. ]*\(?[0-9]\d{0,3}\)?[-. ]*\d{0,3}[-. ]*\d{4,5})([ \t]*[-,:#\/ ]*[ \t]*(\s*Access[- \t]*Code[ \t]*:[ \t]*|\s*Conference[- \t]*ID[ \t]*:[ \t]*|\s*Pass[- \t]*code[ \t]*:[ \t]*|\s*Participant[- \t]*PIN[ \t]*:[ \t]*|[,:#\/ ]?))(\d{0,3}[- ]*\d{0,3}[- ]*\d{0,3})?
+(?P<repeat>\d+)?P(?P<dtype>[A-Z])(?:\((?P<max>\d*)\))?
+^(?:\+)?(?=(\d[\(\)\s\-\.]*){7,})([0-9\(\)\s\-\.]{5,})(?:\s*(?:#|x\.?|ext\.?|extension)\s*([0-9\(\)\s\-\.]{2,}))?$
+(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*(-?\d+\.\d+)(.)\s*
+((?!\[)\w+(?=\]))
+<(\w*?)>.*<.*>
+,(?=(?:[^\']*\'[^\']*\')*[^\']*$)
+.*Video: .+PAR ([0-9]+):([0-9]+) DAR [0-9:]+.*
+\s+(?P<tst_dvc>[^\s]+)\s+\w{3}\s+\d{1,2}\s+\d{2}\:\d{2}\:\d{2}\s(?P<tst_cmd>[^:]+):\s+(?P<tst_action>[^\s]+)\s+<\d>(?P<tst_action2>[^\s]+)\s+IN=(?P<tst_in_if>[^\s]+)\s+OUT=(?P<tst_out_if>[^\s]+)\s+<\d>(?P<tst_src_ip>[^\s]+)\s+DST=(?P<tst_dest_ip>[^\s]+)\s+<\d>LEN=(?P<tst_len>[^\s]+)\s+TOS=(?P<tst_tos>[^\s]+)\s+PREC=(?P<tst_prec>[^\s]+)\s+TTL=(?P<tst_ttl>[^\s]+)\s+ID=(?P<tst_id>[^\s]+)\s+(DF\s+|\s+)PROTO=(?P<tst_proto>[^\s]+)\s+<\d>SPT=(?P<tst_src_port>[^\s]+)\s+DPT=(?P<tst_dest_port>[^\s]+)\s+
+e(?!.*e)
+^(?P<filetype>.)(?P<perms>.{9})\s+(?P<nlinks>\d*)\s*(?P<owner>\S+)\s+(?P<group>\S+)\s+(?P<size>\d+)\s+(?P<date>...\s+\d+\s+[\d:]+)\s+(?P<filename>.{1,}?)( -> (?P<linktarget>[^\r]*))?\r?$
+(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,15}
+({[^}]+})?(\w+)
+\(?\s*(?<area>\d{3})\s*[\)\.\-]?\s*(?<first>\d{3})\s*[\-\.]?\s*(?<second>\d{4})\D*(?<ext>\d*)
+\S* *\d*-\d*-\d* \d*:\d*:\d* [+-]\d* \w*
+(\w+\d+-cd\d+): .*
+<(\w+)(\s[^>]*)?>\s*([^\s<].*?)(<\/\1>)
+@(\w+)\s([^#\n]*)(\s+#\s*([^\n]*)|$)
+\w+\S?\w+\s?(@|\W(at)\W)\s?\w+\s?(\.|\W(dot)\W)\s?\w+\.?\w+
+\w+.\w+$
+^(.*)\) (\S*)\s*\| (.\[.*m(.*).\[0m|(NotTested))
+(?<!:)(\/\/).+$|\/\*[\s\S]+\*\/
+(?:[\-a-z]+\.)+(dev|laravel)
+(&mdash;)(?!.*\&mdash;).*
+(?<!\.)\d+\.\d+
+(^.+\|+[A-Za-z])
+\b(?:https?:\/\/)?[^\/:]+\/.*?checkout\/b\?bag=?([A-Za-z0-9]*)$
+^ *(([\.\-\+\w]{2,}[a-z0-9])@([\.\-\w]+[a-z0-9])\.([a-z]{2,3})) *(; *(([\.\-\+\w]{2,}[a-z0-9])@([\.\-\w]+[a-z0-9])\.([a-z]{2,3})) *)* *$
+^(.*?)\.?(([^.]*)(?:(?:\..{2,3})|(?:(?:\..{2,3})(?:\..{2}))))$
+((\([^\)]+\))?([\d\.]+)?[a-zA-Z])(.*)
+SMS_TRIGGER:\s([a-zA-Z0-9\-]+).*SOURCE:\s?([a-zA-Z]+).*
+(?=(?!Sf\.\sTreime))(?=(?!Sf\.\sVineri))(?=(Sf\.\s.*[^a]$|Sf\.\sMina|Sf\.\sLuca|Sf\.\sBoca|Sf\.\sToma))
+(https?\:\/\/)?(www\.)?([a-z0-9]+\.)+([a-z]{2,})(\/[a-zA-Z0-9\-_]+)+(\.)+(jpg|png|bmp|jpeg){1}
+(?<=.).(?=[^@]*?.@)|(?:(?<=@.)|(?!^)\G(?=[^@]*$))(.)(?=.*\.)|(?:(?<=\.)(?=[^.]+$)|(?!^)\G(?=[^@.]*$))[^.](?!$)
+^(?'countryCode'\+?1)?[-.\s]?\(?(?'areaCode'\d{3,3})[)-.\s]{0,2}(?'phone1'\d{3,3})[-.\s]?(?'phone2'\d{4,4})\s*(?'extension'(?:x|ex|ext|extension|\s)\s*\d+)?$
+([a-zA-Z]+\s)+[a-zA-Z]+
+(\d+)[\.]?(\d+)[\s]?(W|w)
+(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?
+\s*(((if|while|else\s*(if)?|for(each)?|switch|declare)\s*\(.*\)[^{:;]*)|(do\s*[^\({:;]*))
+(\d+)\s+(\w{2})\s*(\w{2,5})\s+(\w{5})(?:\s+|\s+(.)\s+)(\w{3})(\w{3})(?:\s+|(?:\s|\*)(\w{3})\s+)(\w{4,5})\s+(\w{4,5})(?: (.*)| (\w{5})(.*))?(?:\n|$){1}
+():\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?
+\b[P|p]?(OST|ost)?\.?\s*[O|o|0]?(ffice|FFICE)?\.?\s*[B|b][O|o|0]?[X|x]?\.?\s+[#]?(\d+)\b
+^(\d*\s*\-?\s*\d*)$
+(?:<(strong|em|a|div|span)[^>]*?>(?P<txt>.*?)<\/\1>|<(hr|img)[^>]*?\/>)
+(?<=\(|\))?[a-z|A-Z|0-9]*(?=\()
+(.+[a-z]+[\s,]+[n\.\°\s]*)([\d]+[-\/\._]?[\d]*[a-z]*[\d]*|[s][n][c])[ ,]*.*
+(?<Element>((\*|\w+)?)) (?<Complement>((\.|\#|\-|\w|\:)*)) (?<FamilySeparator>([\s\>\+\~]|[\,\{]))
+\n(\s*\*\s*\n)+
+(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^[\w!@$#.+-]{8,64}$
+graph(?P<graphNumber>\d+)_(?P<res>.*?)_?(?P<optNumber>\d+)?$
+(%(\([^\)]+\))?([\d\.]+)?[a-zA-Z])
+^(http|https):\/\/www.biologiatotal.com.br\/areas-da-biologia\/[^\/]+\/?([?r=]+[0-9]+)?$
+(\d[\w\W]*?(?=(?:\d\d*\. )|$))
+^\s*(?<text>.*?)\s*((?<format>\([^)]*\))*\s*)*$

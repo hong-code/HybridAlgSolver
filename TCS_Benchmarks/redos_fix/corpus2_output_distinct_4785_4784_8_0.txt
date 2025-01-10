@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(postfix\/smtpd.*connect from unknown)(.*)

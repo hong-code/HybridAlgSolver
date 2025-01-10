@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.++ (re.* (re.comp  (str.to.re "\u{5d}")) ) (re.+ (re.range "\u{30}" "\u{39}") ))  (re.++ (re.* (re.comp  (str.to.re "\u{5d}")) ) (re.++  (re.++ (re.+  (str.to.re "\u{20}") ) (re.++ (re.+ (re.union (re.range "\u{00}" "\u{08}") (re.range "\u{0e}" "\u{1f}") (re.range "\u{21}" "\u{84}") (re.range "\u{86}" "\u{9f}") (re.range "\u{a1}" "\u{ff}")) ) (re.++ (re.+  (str.to.re "\u{20}") ) (re.++  (re.union  (re.++  (str.to.re "\u{6c}") (re.++  (str.to.re "\u{65}") (re.++  (str.to.re "\u{66}")  (str.to.re "\u{74}")))) (re.union  (re.++  (str.to.re "\u{72}") (re.++  (str.to.re "\u{69}") (re.++  (str.to.re "\u{67}") (re.++  (str.to.re "\u{68}")  (str.to.re "\u{74}")))))  (re.++  (str.to.re "\u{63}") (re.++  (str.to.re "\u{65}") (re.++  (str.to.re "\u{6e}") (re.++  (str.to.re "\u{74}") (re.++  (str.to.re "\u{65}")  (str.to.re "\u{72}")))))))) (re.+  (str.to.re "\u{20}") ))))) (re.+ (re.range "\u{30}" "\u{39}") ))) )))
+(check-sat)
+(get-model)

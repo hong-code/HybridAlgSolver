@@ -1,0 +1,3 @@
+(n(fo|t))+([qrsdtelmno])+
+([qrsdtelmno])+
+n.*

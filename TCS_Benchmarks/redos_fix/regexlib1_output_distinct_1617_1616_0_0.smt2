@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.++ (re.+ (re.comp  (re.union  (str.to.re "\u{70}") (re.union  (str.to.re "\u{61}") (re.union  (str.to.re "\u{63}") (re.union  (str.to.re "\u{73}") (re.union  (str.to.re "\u{65}")  (str.to.re "\u{3a}"))))))) ) (re.+ (re.comp  (str.to.re "\u{23}")) ))  (re.++ (re.+ (re.comp  (re.union  (str.to.re "\u{70}") (re.union  (str.to.re "\u{61}") (re.union  (str.to.re "\u{63}") (re.union  (str.to.re "\u{73}") (re.union  (str.to.re "\u{65}")  (str.to.re "\u{3a}"))))))) ) (re.++  (re.++  (str.to.re "\u{20}")  (str.to.re "\u{23}")) (re.+ (re.comp  (str.to.re "\u{23}")) ))) )))
+(check-sat)
+(get-model)

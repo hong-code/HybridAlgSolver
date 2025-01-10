@@ -1,0 +1,2 @@
+(.*)(\d+)
+(.*)(failed to report status for )(\d+)

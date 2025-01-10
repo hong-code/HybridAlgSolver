@@ -1,0 +1,2 @@
+(.*)((\s*\/\/\s*!?\s*__cplusplus)*)
+(.*)(#endif)((\s*\/\/\s*!?\s*__cplusplus)*)

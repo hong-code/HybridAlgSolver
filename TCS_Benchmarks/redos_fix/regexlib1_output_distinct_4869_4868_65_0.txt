@@ -1,0 +1,3 @@
+(file|gopher|telnet|http|ftp|https|ftps|sftp|nntp)+(file|gopher|telnet|http|ftp|https|ftps|sftp|news)+
+(file|gopher|telnet|http|ftp|https|ftps|sftp|nntp)+
+n.*

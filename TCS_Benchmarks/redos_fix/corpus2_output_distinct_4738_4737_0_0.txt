@@ -1,0 +1,3 @@
+.*
+(.*)(ERROR org\.apache\.hadoop\.streaming\.StreamJob \(main\): )(.*)
+.*

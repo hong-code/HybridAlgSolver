@@ -1,0 +1,3 @@
+.*
+(.*)(<\/title><quality>(.*)<\/quality><runtime>(.*)<\/runtime><releasedate>(.*)<\/releasedate><mpaa>(.*)<\/mpaa><genre>(.*)<\/genre><studio>(.*)<\/studio><director>(.*)<\/director><cast>(.*)<\/cast><plot>(.*)<\/plot><thumb>)(.*)
+.*

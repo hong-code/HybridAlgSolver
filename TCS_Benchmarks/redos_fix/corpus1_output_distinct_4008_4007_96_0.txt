@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(<font face="arial,helvetica" size=2>(<[BI]>)?(.*)<\/FONT>.*<!-- \*\*\* Motion title \*\*\* -->.*<A HREF="(.*)" TARGET="_parent">\s*<font face="arial,helvetica" size=2>(<[BI]>)?([^<]*)<\/font><\/A>\s*<\/TD>\s*<!-- \*\*\* Signatures -->.*(<font face="arial,helvetica" size=2>(<[BI]>)?(\d+) &nbsp;&nbsp;<\/font>\s*)?<\/TD>\s*<!-- \*\*\* Motion date \*\*\* -->)(.*)

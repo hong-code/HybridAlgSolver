@@ -1,0 +1,3 @@
+(&quot;[^qtu&;o]*&quot;|[^t&g;]*)+(&quot;[^qtu&;o]*&quot;|'[^']')+
+(&quot;[^qtu&;o]*&quot;|'[^']')+
+'.*

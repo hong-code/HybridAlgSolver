@@ -1,0 +1,3 @@
+.*
+(.*)((NONRPM_DB_PREFIX="\$HOME\/)intel)(.*)
+.*

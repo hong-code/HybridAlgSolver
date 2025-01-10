@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(", line (.*)\W+(.*)\W+\^\W+Syntax(Error|Warning): )(.*)

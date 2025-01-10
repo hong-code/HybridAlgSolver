@@ -1,0 +1,2 @@
+(.*)((@2x|~iphone|~ipad)*)
+(.*)((@2x|~iphone|~ipad)*)

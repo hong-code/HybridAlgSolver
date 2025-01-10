@@ -1,0 +1,3 @@
+(hundred|((([bm]|(t|quad)r))illion))+(hundred|thousand)+
+(hundred|((([bm]|(t|quad)r))illion))+
+t.*

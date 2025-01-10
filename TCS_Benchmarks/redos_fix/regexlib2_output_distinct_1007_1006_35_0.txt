@@ -1,0 +1,3 @@
+(one|t((en)|(wo)|(hree)|(welve)|(hirteen))|(evelen))+(one|t((en)|(wo)|(hree)|(welve)|(hirteen))|(f((our)|(ive))|s((ix)|(even))|eight|nine)(teen)?)+
+(one|t((en)|(wo)|(hree)|(welve)|(hirteen))|(evelen))+
+e.*

@@ -1,0 +1,2 @@
+(.*)(.*)
+(.*)(([^0-9A-Za-z_]\s*\(|vtkGet.*Macro\s*\(\s*\s*,|vtkSet.*Macro\s*\(\s*\s*,))(.*)

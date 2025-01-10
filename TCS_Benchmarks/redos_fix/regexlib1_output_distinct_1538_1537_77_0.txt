@@ -1,0 +1,2 @@
+((OST|ost)*)((ffice|FFICE)*)
+((OST|ost)*)(\.*\s*[0|Oo]*)((ffice|FFICE)*)

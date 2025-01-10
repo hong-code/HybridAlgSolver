@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.++   (re.union  (str.to.re "\u{20}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2b}") (re.union (re.range "\u{30}" "\u{39}")  (str.to.re "\u{2c}")))))) (re.*   (re.union  (str.to.re "\u{20}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2b}") (re.union (re.range "\u{30}" "\u{39}")  (str.to.re "\u{2c}")))))) ))  (re.++  (re.++   (re.union  (str.to.re "\u{20}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2b}") (re.union (re.range "\u{30}" "\u{39}")  (str.to.re "\u{2c}")))))) (re.*   (re.union  (str.to.re "\u{20}") (re.union  (str.to.re "\u{28}") (re.union  (str.to.re "\u{29}") (re.union  (str.to.re "\u{2b}") (re.union (re.range "\u{30}" "\u{39}")  (str.to.re "\u{2c}")))))) ))  (re.*  (re.++  (str.to.re "\u{2c}") (re.+ (re.range "\u{30}" "\u{39}") )) ))  (re.*  (re.++  (str.to.re "\u{2c}") (re.+ (re.range "\u{30}" "\u{39}") )) ) )))
+(check-sat)
+(get-model)

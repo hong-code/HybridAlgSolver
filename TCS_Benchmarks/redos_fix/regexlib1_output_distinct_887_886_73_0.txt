@@ -1,0 +1,3 @@
+([A-Z][A-Za-z]+|Song of Solomon)+([A-Z][A-Za-z]+|Song of Songs)+
+([A-Z][A-Za-z]+|Song of Songs)+
+S.*

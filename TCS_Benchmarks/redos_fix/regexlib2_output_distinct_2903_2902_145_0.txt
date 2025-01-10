@@ -1,0 +1,3 @@
+(il|obi|[acdeghklmnopqrstuvwxyz])+(il|obi|useum)+
+(il|obi|useum)+
+u.*

@@ -1,0 +1,3 @@
+(Cookie: [^\r]*\r\n)*
+((Cookie: [^\r]*\r\n)*)((Cookie2: [^\r]*\r\n)?)((Cookie: [^\r]*\r\n)*)
+(Cookie: [^\r]*\r\n)*

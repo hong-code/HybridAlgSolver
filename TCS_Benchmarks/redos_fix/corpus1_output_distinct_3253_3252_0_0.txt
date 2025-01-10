@@ -1,0 +1,2 @@
+(.*)(\d+)
+(.*)( \(based on bleeding_edge revision r)(\d+)

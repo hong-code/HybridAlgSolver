@@ -1,0 +1,2 @@
+(.*)([^ \n]*)
+(.*)((HEAD|GET|POST|PATCH|PUT|DELETE)\s+\/)([^ \n]*)

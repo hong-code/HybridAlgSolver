@@ -1,0 +1,2 @@
+(.*)([0-9]+)
+(.*)((<b>)([0-9]+)(<\/b> bytes, current sessions: <b>)([0-9]+)(<\/b><br>subcaches: <b>))([0-9]+)

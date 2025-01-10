@@ -1,0 +1,2 @@
+(.*)([0-9]+)
+(.*)((<b>)([0-9]+)(<\/b> bytes, current sessions: <b>)([0-9]+)(<\/b><br>subcaches: <b>)([0-9]+)(<\/b>, indexes per subcache: <b>)([0-9]+)(<\/b><br>)(.*)(<br>index usage: <b>)([0-9]+)(%<\/b>, cache usage: <b>)([0-9]+)(%<\/b><br>total sessions stored since starting: <b>)([0-9]+)(<\/b><br>total sessions expired since starting: <b>)([0-9]+)(<\/b><br>total \(pre-expiry\) sessions scrolled out of the cache: <b>))([0-9]+)

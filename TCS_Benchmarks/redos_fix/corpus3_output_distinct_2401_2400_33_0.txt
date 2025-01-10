@@ -1,0 +1,2 @@
+(.*)([A-Fa-f0-9]+)
+(.*)(\.xvideos.com\/videos\/thumbs\/[A-Fa-f0-9]+\/[A-Fa-f0-9]+\/)([A-Fa-f0-9]+)
