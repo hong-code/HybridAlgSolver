@@ -1,1 +1,1 @@
-/WARN: [\w.]+/\w+/[0-9.]+[ab][0-9]+/.*release.* exists/gm
+^index ([0-9A-Fa-f]+)\.\.([0-9A-Fa-f]+) ?(.+)?ADS$

@@ -104,6 +104,7 @@ namespace solverbin{
       while (attack_string.size() <= length)
         attack_string.append(WitnessStr);
     attack_string.append(Suffix); 
+    attack_string.append("\n");
     if (ConsiderReverse == 1)
       attack_string.append(LastWord); 
     Outfile << attack_string;

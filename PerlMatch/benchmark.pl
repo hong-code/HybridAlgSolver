@@ -1,4 +1,5 @@
 use Time::HiRes qw(gettimeofday);
+use Encode;
 
 sub measure {
     my ($data, $pattern) = @_;
@@ -26,9 +27,14 @@ close $regex_fh;
 
 # 读取文本文件
 open my $data_fh, '<', $data_file or die "Could not open data file: $!";
+
 my $data;
 read $data_fh, $data, -s $data_file;  # 读取整个文件内容
-close $data_fh;
+if ($data =~ /\n/) {
+    print "File ends with a newline.\n";
+} else {
+    print "No newline at the end of the file.\n";
+}
 
 # 测试正则表达式
 print "Testing pattern: $pattern\n";

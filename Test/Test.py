@@ -34,7 +34,7 @@ count = 0
     # 使用线程池执行任务
     # 编译文件
 def dotask(id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse):
-    command = "timeout 20s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s %s %s"  % (path + '/'+ id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse)
+    command = "timeout 40s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s %s %s"  % (path + '/'+ id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse)
     print(command)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
