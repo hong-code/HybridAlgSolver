@@ -99,5 +99,6 @@ namespace solverbin{
         bool Intersect();
         bool IsABT(TernarySimulationState s);
         bool DetectABTOFS(TernarySimulationState s, std::set<TernarySimulationState> TSSET);
+        bool DetectABTOFSDeepFirst(TernarySimulationState TSS_Ex, std::set<TernarySimulationState> TSSET);
     };
 }

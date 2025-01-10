@@ -22,7 +22,7 @@ if not os.path.exists('regexes'):
 
 
 # 打开文件并按行读取
-file_path = '/home/HybridAlgSolver/Datasets/basic.txt'  # 替换为你的文件路径
+file_path = '/home/HybridAlgSolver/Datasets/perl_hunter_better(1).txt'  # 替换为你的文件路径
 
 with open(file_path, 'r') as file:
     rows = file.readlines()  # 读取所有行并存入列表

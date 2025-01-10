@@ -20,7 +20,7 @@ except Exception as e:
 
 # 读取待匹配串文件
 try:
-    with open(string_file_path, 'r', encoding='utf-8') as string_file:
+    with open(string_file_path, 'r', encoding='utf-8', errors='ignore') as string_file:
         string_content = string_file.read()  # 读取整个文件内容
 except Exception as e:
     print(f"读取匹配串文件出错: {e}")

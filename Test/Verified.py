@@ -39,7 +39,7 @@ def dotask(id, Output, Length, Islazy):
 
     for filename in filenames:
         # command = "timeout 2s /home/HybridAlgSolver/PCRE2/PCREMatch %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
-        command = "timeout 2s python3 /home/HybridAlgSolver/PythonMatch/match.py %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
+        command = "timeout 2s perl /home/HybridAlgSolver/PerlMatch/benchmark.pl %s %s" % (path + '/'+ id + '.txt', Output + '/' + filename)
         print(command)
         process = subprocess.Popen(command,  stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,

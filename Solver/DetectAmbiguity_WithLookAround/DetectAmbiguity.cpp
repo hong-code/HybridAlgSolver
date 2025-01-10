@@ -237,6 +237,58 @@ namespace solverbin{
     return false;
   }
 
+  bool DetectABTNFA_Lookaround::DetectABTOFSDeepFirst(TernarySimulationState TSS_Ex, std::set<TernarySimulationState> TSSET){
+    if (debug.PrintSimulation){
+      std::cout << "witness str: " << WitnessStr << std::endl;
+      DumpTernarySimulationState(TSS_Ex);
+    }
+    // std::queue<std::pair <TernarySimulationState, std::string>> Q;
+    // Q.push({TSS_Ex, ""});
+    // while (Q.size() > 0){
+    // std::pair <TernarySimulationState, std::string> TSS = Q.front();
+    // Q.pop();
+    // std::pair <TernarySimulationState, std::string> TSS = {TSS_Ex, ""};
+    SimulationCache.insert(TSS_Ex);
+    for (auto c : Alphabet){
+      if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
+      auto nextns1 = F1.StepOneByte(TSS_Ex[0], c);
+      auto nextns2 = F1.StepOneByte(TSS_Ex[1], c);
+      auto nextns3 = F1.StepOneByte(TSS_Ex[2], c);
+      if (nextns1.empty() || nextns2.empty() || nextns3.empty())
+        continue;
+      for (auto nextns1_it : nextns1){
+        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+        //   continue;
+        for (auto nextns2_it : nextns2){
+          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+          //   continue;
+          for (auto nextns3_it : nextns3){
+            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+            //   continue;
+            TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
+            auto itc = SimulationCache.find(ns);
+            if (itc != SimulationCache.end()){
+              continue;
+            }
+            if (debug.PrintSimulation) DumpTernarySimulationState(ns);
+            WitnessStr.push_back(c);
+            if (TSSET.find(ns) != TSSET.end()){
+              return true;
+            }
+            if (DetectABTOFSDeepFirst(ns, TSSET)){
+              return true;
+            }
+            else
+              WitnessStr.pop_back();
+          
+          }
+        }
+      }
+    }
+    // }
+    return false;
+  }
+
   bool DetectABTNFA_Lookaround::IsABT(TernarySimulationState TSS){
     if (debug.PrintSimulation){
       std::cout << "witness str: " << WitnessStr << std::endl;
@@ -256,13 +308,14 @@ namespace solverbin{
             if (debug.PrintSimulation) DumpTernarySimulationState(ns);
             auto itc = DoneCache.find(ns);
             if (itc != DoneCache.end()){
+              continue;
             }
             else{
               DoneCache.insert(ns);
               auto TSSET = DTSimulationState(ns);
               InterStr.push_back(c);
               if (!TSSET.empty()){
-                if (DetectABTOFS(ns, TSSET)){
+                if (DetectABTOFSDeepFirst(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
                   if (Writefile()){  
                     if (isLazy)

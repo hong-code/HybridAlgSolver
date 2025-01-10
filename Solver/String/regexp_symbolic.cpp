@@ -1076,7 +1076,7 @@ bool RegExpSymbolic::AC_include(Node e1, Node e2) {
 }
 
 bool RegExpSymbolic::FULLMATCH(std::wstring r, std::string str) {
-  auto Pa = Parer(r);
+  auto Pa = Parer(r, 0);
   REnodeClass REClass = Pa.Re;
   auto e1 = REClass.Renode;
   std::vector<uint8_t> uvec;
