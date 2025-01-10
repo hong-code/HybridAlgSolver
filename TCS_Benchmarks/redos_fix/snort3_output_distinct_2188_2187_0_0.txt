@@ -1,0 +1,2 @@
+([^\n\r]*)([^\n\r]*)
+([^\n\r]*)([nN][iI][cC][kK]_[nN][aA][mM][eE]=[cC][iI][aA]-[tT][eE][sS][tT])([^\n\r]*)

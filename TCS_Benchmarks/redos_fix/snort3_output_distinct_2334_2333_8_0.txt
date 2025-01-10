@@ -1,0 +1,2 @@
+((.|\n|\r)*)(\-{2})
+((.|\n|\r)*)((loginTimeStamp|dbo|dateDiffParam|whereClause)=[^&]*)(\-{2})

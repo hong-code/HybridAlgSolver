@@ -1,0 +1,3 @@
+[^\n]*
+([^\n]*)(\(\s*["']\s*([vV][iI][eE][wW]-[sS][oO][uU][rR][cC][eE]|[mM][mM][sS]|[rR][lL][oO][gG][iI][nN]))([^\n]*)
+[^\n]*

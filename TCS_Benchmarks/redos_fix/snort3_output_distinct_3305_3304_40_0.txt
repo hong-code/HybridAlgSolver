@@ -1,0 +1,2 @@
+([^>]*)(\s*)
+([^>]*)(embed[^>]*type\s*=\s*["']\s*application\/java-deployment-toolkit)(\s*)

@@ -1,0 +1,2 @@
+([^}]*)([^}]*)
+([^}]*)([dD][oO][cC][uU][mM][eE][nN][tT]\.[cC][rR][eE][aA][tT][eE][eE][lL][eE][mM][eE][nN][tT]\('[iI][nN][pP][uU][tT]'\))([^}]*)

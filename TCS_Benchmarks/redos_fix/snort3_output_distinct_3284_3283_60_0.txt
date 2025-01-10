@@ -1,0 +1,2 @@
+([^}]{0,50})(\s*)
+([^}]{0,50})(\.[bB][oO][dD][yY]\.[iI][nN][nN][eE][rR][hH][tT][mM][lL]\s*=\s*["']{2}[^}]{0,50}[cC][oO][lL][lL][eE][cC][tT][gG][aA][rR][bB][aA][gG][eE]\(\s*\)[^}]{0,250}[dD][oO][cC][uU][mM][eE][nN][tT]\.[wW][rR][iI][tT][eE]\()(\s*)

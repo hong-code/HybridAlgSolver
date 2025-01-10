@@ -1,0 +1,2 @@
+([^\n\r]*)([^\n\r&]*)
+([^\n\r]*)([mM][oO][dD][eE]\s*=\s*([dD][eE][lL][eE][tT][eE]|[eE][dD][iI][tT])[^\n\r]*[iI][dD]\s*=\s*)([^\n\r&]*)

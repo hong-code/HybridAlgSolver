@@ -1,0 +1,3 @@
+[^}]*
+([^}]*)(([^}\s]*)\s*=\s*[wW][iI][nN][dD][oO][wW]\.[eE][vV][eE][nN][tT]\.[sS][rR][cC][eE][lL][eE][mM][eE][nN][tT])([^}]*)
+[^}]*

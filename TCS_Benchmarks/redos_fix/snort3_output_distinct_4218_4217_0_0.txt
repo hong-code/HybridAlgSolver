@@ -1,0 +1,2 @@
+(.{13,29})([B-DF-HJ-NP-TV-XZb-df-hj-np-tv-xz]{5})
+(.{13,29})([B-DF-HJ-NP-TV-XZb-df-hj-np-tv-xz]{5})

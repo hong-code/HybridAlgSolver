@@ -1,0 +1,2 @@
+((.|\n|\r)*)([\n\r\s]*)
+((.|\n|\r)*)([nN][eE][wW][\n\r\s]*[aA][cC][tT][iI][vV][eE][xX][oO][bB][jJ][eE][cC][tT][\n\r\s]*\([\n\r\s]*("[dD][iI][rR][eE][cC][tT][aA][nN][iI][mM][aA][tT][iI][oO][nN]\.[sS][tT][rR][uU][cC][tT][uU][rR][eE][dD][gG][rR][aA][pP][hH][iI][cC][sS][cC][oO][nN][tT][rR][oO][lL]"|'[dD][iI][rR][eE][cC][tT][aA][nN][iI][mM][aA][tT][iI][oO][nN]\.[sS][tT][rR][uU][cC][tT][uU][rR][eE][dD][gG][rR][aA][pP][hH][iI][cC][sS][cC][oO][nN][tT][rR][oO][lL]'))([\n\r\s]*)

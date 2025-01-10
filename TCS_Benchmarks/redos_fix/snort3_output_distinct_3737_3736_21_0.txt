@@ -1,0 +1,3 @@
+.*
+(.*)((\w+)\.[sS][tT][yY][lL][eE]\.[vV][iI][sS][iI][bB][iI][lL][iI][tT][yY])(.*)
+.*

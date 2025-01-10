@@ -1,0 +1,2 @@
+((.|\n|\r)*)([^\n\r]{200})
+((.|\n|\r)*)(([cC][oO][nN][tT][eE][nN][tT][sS]|[iI][nN][dD][eE][xX]|[cC][oO][mM][pP][iI][lL][eE][dD]|[sS][aA][mM][pP][lL][eE] [lL][iI][sS][tT]|[fF][uU][lL][lL] [tT][eE][xX][tT] [sS][eE][aA][rR][cC][hH] [sS][tT][oO][pP] [lL][iI][sS][tT]) [fF][iI][lL][eE]\s*=)([^\n\r]{200})

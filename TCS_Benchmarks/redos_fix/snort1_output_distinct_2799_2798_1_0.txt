@@ -1,0 +1,3 @@
+[^\n\r]*
+([^\n\r]*)([cC][iI][rR][eE][sS][tT][rR][iI][cC][tT][iI][oO][nN])([^\n\r]*)
+[^\n\r]*

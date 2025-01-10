@@ -1,0 +1,2 @@
+((.|\n|\r)*)(\w+)
+((.|\n|\r)*)([cC][hH][aA][nN][gG][eE]_[tT][aA][bB][lL][eE]_[nN][aA][mM][eE][\n\r\s]*=>[\n\r\s]*)(\w+)

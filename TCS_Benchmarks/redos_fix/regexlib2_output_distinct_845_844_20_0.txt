@@ -1,0 +1,3 @@
+(asia|coop|info|jobs|mobi|museum|name|travel|aero)+(asia|coop|info|jobs|mobi|museum|name|travel|arpa)+
+(asia|coop|info|jobs|mobi|museum|name|travel|arpa)+
+a.*

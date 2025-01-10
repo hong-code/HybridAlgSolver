@@ -1,0 +1,2 @@
+(\s+)([B-DF-HJ-NP-TV-Zb-df-hj-np-tv-z]{5,})
+(\s+)([^\n\r]*)([B-DF-HJ-NP-TV-Zb-df-hj-np-tv-z]{5,})

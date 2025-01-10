@@ -1,0 +1,3 @@
+.*
+(.*)(\/[tT][pP][mM][xX]\/[gG][eE][tT][aA][tT][tT][aA][cC][hH][mM][eE][nN][tT])(.*)
+.*

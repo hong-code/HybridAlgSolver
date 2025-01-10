@@ -1,0 +1,3 @@
+[^>]*
+([^>]*)([aA][cC][tT][iI][oO][nN]\s*=\s*["'][^"']+[oO][cC][pP][oO][rR][tT][aA][lL]\/[aA][dD][mM][iI][nN][zZ][oO][nN][eE]\/[iI][nN][dD][eE][xX]\.[pP][hH][pP]\?[pP][aA][gG][eE]=[aA][dD][mM][iI][nN]_[oO][cC][fF]_[jJ][oO][iI][nN]&[tT][yY][pP][eE]=[sS][tT][eE][pP]2["'])([^>]*)
+[^>]*

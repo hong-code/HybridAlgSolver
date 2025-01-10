@@ -1,0 +1,2 @@
+((.|\n|\r)*)(\s+)
+((.|\n|\r)*)([fF][iI][lL][eE]\s+([aA][sS]|[mM][eE][mM][bB][eE][rR]|[tT][oO]))(\s+)

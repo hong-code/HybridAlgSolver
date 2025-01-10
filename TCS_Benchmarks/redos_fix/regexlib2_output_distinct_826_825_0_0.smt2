@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter (re.* (re.comp  (re.union  (str.to.re "\u{31}") (re.union  (str.to.re "\u{34}")  (str.to.re "\u{37}")))) ) (re.* (re.comp  (re.union  (str.to.re "\u{31}") (re.union  (str.to.re "\u{34}")  (str.to.re "\u{37}")))) ) )))
+(check-sat)
+(get-model)

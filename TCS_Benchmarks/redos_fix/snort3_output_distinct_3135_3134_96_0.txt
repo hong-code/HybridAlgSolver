@@ -1,0 +1,2 @@
+[nN][aA][mM][eE]|[hH][eE][iI][gG][hH][tT]|[wW][iI][dD][tT][hH]
+\w+

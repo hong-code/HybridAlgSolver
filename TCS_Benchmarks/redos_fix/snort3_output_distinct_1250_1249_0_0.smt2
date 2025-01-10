@@ -1,0 +1,5 @@
+(set-logic QF_S)
+(declare-const x String)
+(assert (str.in.re x (re.inter  (re.++ (re.+ (re.comp  (str.to.re "\u{22}")) )  (re.++  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}")))) (re.++  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}"))))  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}")))))))  (re.++ (re.+ (re.comp  (str.to.re "\u{22}")) )  (re.++  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}")))) (re.++  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}"))))  (re.++  (str.to.re "\u{2e}") (re.++  (str.to.re "\u{2e}")  (re.union  (str.to.re "\u{2f}")  (str.to.re "\u{5c}"))))))) )))
+(check-sat)
+(get-model)

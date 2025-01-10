@@ -1,0 +1,2 @@
+([^\n\r]*)(\s+)
+([^\n\r]*)([cC][yY][bB][eE][rR][sS][iI][tT][tT][eE][rR])(\s+)
