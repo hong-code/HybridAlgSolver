@@ -1,0 +1,4 @@
+My\x2Fdesktop\x2FWinSessionHost\x3aOnlineTPSystem\x7D\x7C
+[-'a-zA-Z]
+/poc\/(Exploit|myClassLoader|pocMain|runCmd)\.class/ims
+zopabora\x2Einfo\s+Inside.*User-Agent\x3A\s+SystemSleuthserverUser-Agent\x3a\x2Fnewsurfer4\x2FMicrosoft

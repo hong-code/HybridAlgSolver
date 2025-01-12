@@ -1,0 +1,4 @@
+Host\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+^\$[+-]?([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(\.[0-9]{1,2})?$
+/(A|B|AB|O)[+-]/
+Host\x3A\s+Boss\s+media\x2Etop-banners\x2Ecom

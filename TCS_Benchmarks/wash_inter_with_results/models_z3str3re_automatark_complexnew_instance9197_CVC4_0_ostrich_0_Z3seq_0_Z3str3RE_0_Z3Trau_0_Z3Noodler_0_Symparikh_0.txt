@@ -1,0 +1,5 @@
+^[1-9]{1}[0-9]{3}$
+www\x2Eserverlogic3\x2Ecom\d+ToolBar\s+HWAEUser-Agent\x3A
+^[a-zA-z0-9]+[@]{1}[a-zA-Z]+[.]{1}[a-zA-Z]+$
+^[A-Z]{2,4}[0-9][A-Z0-9]+$
+media\x2Etop-banners\x2Ecom

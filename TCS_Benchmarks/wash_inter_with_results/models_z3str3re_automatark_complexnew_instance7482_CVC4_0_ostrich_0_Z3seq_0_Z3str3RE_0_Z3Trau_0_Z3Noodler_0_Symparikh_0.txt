@@ -1,0 +1,3 @@
+ovplEchelonUser-Agent\x3AUser-Agent\x3AHost\x3a
+Port.*Pro.*www\x2eproventactics\x2ecomwv=update\.cgidrivesDays
+PASSW=\s+\x2Fta\x2FNEWS\x2F.*loomcompany\x2Ecom

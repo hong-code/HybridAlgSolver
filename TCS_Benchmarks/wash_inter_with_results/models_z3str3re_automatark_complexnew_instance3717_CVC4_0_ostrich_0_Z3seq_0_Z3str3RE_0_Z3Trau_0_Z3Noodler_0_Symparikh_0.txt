@@ -1,0 +1,4 @@
+/\x2eexe([\?\x5c\x2f]|$)/smiU
+^[a-zA-Z]$
+^[0-9]{8}$
+cyber@yahoo\x2Ecomconfig\x2E180solutions\x2Ecom

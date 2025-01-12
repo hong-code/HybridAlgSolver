@@ -1,0 +1,5 @@
+seqepagqfphv\x2fsfdX-Mailer\x3A
+/^router=.*?arg=[a-z\d\.]*[^a-z\d\.&]/iP
+/\/bin\.exe$/U
+^([0-9]{2})?((\([0-9]{2})\)|[0-9]{2})?([0-9]{3}|[0-9]{4})(\-)?[0-9]{4}$
+Toolbar\dcount\x2Eyok\x2EcomweatherHost\x3AUser-Agent\x3A

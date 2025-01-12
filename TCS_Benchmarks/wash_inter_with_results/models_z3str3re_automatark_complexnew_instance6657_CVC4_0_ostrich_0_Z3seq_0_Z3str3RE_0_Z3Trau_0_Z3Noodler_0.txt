@@ -1,0 +1,3 @@
+Peer\s+CodeguruBrowser.*UNSEEN\x22Host\x3Ahirmvtg\x2fggqh\.kqh
+Spy\dccecaedbebfcaf\x2Ecom
+(</?\w*[^<>]*>)

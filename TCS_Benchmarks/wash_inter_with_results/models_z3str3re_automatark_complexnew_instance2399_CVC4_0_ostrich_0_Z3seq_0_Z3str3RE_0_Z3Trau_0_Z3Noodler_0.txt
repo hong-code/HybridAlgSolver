@@ -1,0 +1,5 @@
+^((0[1-9])|(1[0-2]))$
+^(A[A-HJ-M]|[BR][A-Y]|C[A-HJ-PR-V]|[EMOV][A-Y]|G[A-HJ-O]|[DFHKLPSWY][A-HJ-PR-Y]|MAN|N[A-EGHJ-PR-Y]|X[A-F]|)(0[02-9]|[1-9][0-9])[A-HJ-P-R-Z]{3}$
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+(^3[47])((\d{11}$)|(\d{13}$))
+/\/AES\d+O\d+\.jsp\?[a-z0-9=\x2b\x2f]{20}/iU

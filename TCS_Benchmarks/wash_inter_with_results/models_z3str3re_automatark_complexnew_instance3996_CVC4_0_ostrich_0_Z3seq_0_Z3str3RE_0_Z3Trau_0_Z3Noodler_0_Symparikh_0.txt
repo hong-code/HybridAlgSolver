@@ -1,0 +1,4 @@
+Host\x3a\s+www\s+Host\x3AHost\x3AIPAsynchaveAdToolszopabora\x2EinfoHost\x3a
+/\x2eani([\?\x5c\x2f]|$)/smiU
+iebar\s+Referer\x3aThis
+www\x2Erichfind\x2Ecom\d+UI2

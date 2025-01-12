@@ -1,0 +1,3 @@
+Host\x3aSubject\x3AClientnamedFrom\x3A
+User-Agent\x3AreadyHost\x3AHost\x3ASubject\x3Awininetproducts
+filename=\x22Subject\x3awww\x2Eadoptim\x2Ecomreport\x2Fbar_pl\x2Fchk\.fcgi

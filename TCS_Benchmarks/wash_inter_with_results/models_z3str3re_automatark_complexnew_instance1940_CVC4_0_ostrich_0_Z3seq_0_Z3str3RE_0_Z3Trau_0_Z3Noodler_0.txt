@@ -1,0 +1,4 @@
+^[1-9]{1}[0-9]{0,2}([\.\,]?[0-9]{3})*$
+seqepagqfphv\x2fsfdX-Mailer\x3A
+WindowsAcmeReferer\x3A
+/\x2etorrent([\?\x5c\x2f]|$)/smiU

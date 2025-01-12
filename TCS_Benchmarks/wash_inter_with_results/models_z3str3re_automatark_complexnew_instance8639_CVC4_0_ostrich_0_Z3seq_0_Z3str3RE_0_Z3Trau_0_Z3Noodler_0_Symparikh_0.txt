@@ -1,0 +1,5 @@
+/^USER\x20(XP|98|95|NT|ME|WIN|2K3)\x2d\d+\x20\x2a\x20\x30\x20\x3a/mi
+/&q=[a-f0-9]{32},[a-f0-9]{16}&kgs=/U
+^[a-zA-Z0-9]+(([_][a-zA-Z0-9])?[a-zA-Z0-9]*)*$
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22
+track\s+community\d+4\x2e8\x2e4www\x2Emaxifiles\x2Ecom

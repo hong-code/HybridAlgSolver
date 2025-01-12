@@ -1,0 +1,4 @@
+Word\w+My\s+\x22TheZC-BridgeUser-Agent\x3AserverUSER-Attached
+^\d{5}$|^\d{5}-\d{4}$
+Last.*?(\d+.?\d*)
+^\s*([\(]?)\[?\s*\d{3}\s*\]?[\)]?\s*[\-]?[\.]?\s*\d{3}\s*[\-]?[\.]?\s*\d{4}$

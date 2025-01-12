@@ -1,0 +1,5 @@
+^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$
+Handyst=ClassStopperHost\x3ASpamBlockerUtility
+SecureNet\sHost\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+\x7D\x7BPort\x3AHost\x3Amqnqgijmng\x2fojNavhelperUser-Agent\x3A
+Theef2\sHost\x3A\s+User-Agent\x3awww\x2Esogou\x2EcomUser-Agent\x3AMyPostToolbar

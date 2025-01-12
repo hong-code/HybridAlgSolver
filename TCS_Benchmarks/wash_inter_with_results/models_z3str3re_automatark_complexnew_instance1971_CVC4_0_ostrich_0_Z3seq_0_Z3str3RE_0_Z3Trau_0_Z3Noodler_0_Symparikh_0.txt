@@ -1,0 +1,4 @@
+^([+]39)?((38[{8,9}|0])|(34[{7-9}|0])|(36[6|8|0])|(33[{3-9}|0])|(32[{8,9}]))([\d]{7})$
+\x2Ehtml.*cm.*www\x2Epeer2mail\x2EcomConnectedStubbyawbeta\.net-nucleus\.com
+vb\s+Host\x3ASubject\x3Aonline-casino-searcher\.com
+url\(['"]?([\w\d_\-\. ]+)['"]?\)

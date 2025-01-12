@@ -1,0 +1,5 @@
+version\s+error\*\-\*WrongUser-Agent\x3Acom\x2Findex\.php\?tpid=
+/^POST\x20\x2f[A-F\d]{42}\x20HTTP/
+^([012346789][0-9]{4})$
+X-OSSproxy\x3a\dMicrosoft\x2APORT3\x2AProLive\+Version\+3A
+^([0-9]{3,4})$

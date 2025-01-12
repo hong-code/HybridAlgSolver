@@ -1,0 +1,3 @@
+^(((ht|f)tp(s?))\://).*$
+StarLoggerCookie\x3aHost\x3APRODUCEDwebsearch\.getmirar\.com
+^((\d)?(\d{1})(\.{1})(\d)?(\d{1})){1}$

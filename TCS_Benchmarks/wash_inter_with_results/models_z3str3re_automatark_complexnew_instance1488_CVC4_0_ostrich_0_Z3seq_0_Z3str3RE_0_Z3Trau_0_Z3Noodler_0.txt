@@ -1,0 +1,4 @@
+from\s+\x2Fdss\x2Fcc\.2_0_0\.[^\n\r]*uploadServer
+Keylogger[^\n\r]*dll\x3F\w+www2\x2einstantbuzz\x2ecom\s+Online100013Agentsvr\x5E\x5EMerlinHost\x3AHost\x3Aport
+/^\/jmx.jar?r=\d+/Ui
+MyAgentprotocolprotocolHost\x3A\x2Fs\x28robert\x40blackcastlesoft\x2Ecom\x29data2\.activshopper\.com

@@ -1,0 +1,4 @@
+Host\x3Abacktrust\x2EcomconfigINTERNAL\.iniTrojanCurrentDaemonresultsmaster\x2EcomReportMyuntil
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi
+Host\x3A[^\n\r]*cache\x2Eeverer\x2Ecom\s+from\.myway\.comToolbar
+forum=related\x2Eyok\x2Ecom\sStarted\!$3

@@ -1,0 +1,4 @@
+on\dName=Your\+Host\+is\x3AcdpViewHost\x3AUser-Agent\x3A
+Test\d+DesktopAddressIDENTIFY666User-Agent\x3A\x5BStatic
+^[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}$
+(^\d*\.?\d*[0-9]+\d*$)|(^[0-9]+\d*\.\d*$)

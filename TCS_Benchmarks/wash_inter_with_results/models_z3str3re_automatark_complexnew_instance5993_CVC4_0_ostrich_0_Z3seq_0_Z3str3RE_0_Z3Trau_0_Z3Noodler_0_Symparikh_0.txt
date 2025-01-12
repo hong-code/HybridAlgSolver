@@ -1,0 +1,4 @@
+/^\x2f[A-Z\d]{83}\x3d[A-Z\d]{10}$/Ui
+[ \t]+$
+search\x2eimesh\x2ecom\s+WatchDogupwww\.klikvipsearch\.com
+eveocczmthmmq\x2fomzlHello\x2E\x2Fasp\x2Foffers\.asp\?

@@ -1,0 +1,5 @@
+^((http|https|ftp):\/\/(www\.)?|www\.)[a-zA-Z0-9\_\-]+\.([a-zA-Z]{2,4}|[a-zA-Z]{2}\.[a-zA-Z]{2})(\/[a-zA-Z0-9\-\._\?\&=,'\+%\$#~]*)*$
+Host\x3AUser-Agent\x3Awww\.raxsearch\.com
+([\r\n ]*//[^\r\n]*)+
+(\w(\s)?)+
+eveocczmthmmq\x2fomzl\d\x2Fasp\x2Foffers\.asp\?

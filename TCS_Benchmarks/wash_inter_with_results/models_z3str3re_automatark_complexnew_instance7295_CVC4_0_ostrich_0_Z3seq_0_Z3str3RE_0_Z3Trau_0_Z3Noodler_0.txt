@@ -1,0 +1,3 @@
+too[^\n\r]*User-Agent\x3A\sHost\x3A.*IP-WindowsAttachedPalas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=
+IDENTIFY.*\x2Fezsb\d+X-Mailer\x3A
+versionIDENTIFYstarted\x2EUser-Agent\x3A

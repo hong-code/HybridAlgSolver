@@ -1,0 +1,2 @@
+Host\x3A\w+installs\x2Eseekmo\x2Ecom\swww\.fast-finder\.com
+name.matches("a-z")

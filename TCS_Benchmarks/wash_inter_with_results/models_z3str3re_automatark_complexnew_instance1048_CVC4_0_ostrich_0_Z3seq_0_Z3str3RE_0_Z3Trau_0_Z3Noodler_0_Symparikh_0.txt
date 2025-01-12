@@ -1,0 +1,4 @@
+\\[\\w{2}\\]
+/\/AES\d+O\d+\.jsp\?[a-z0-9=\x2b\x2f]{20}/iU
+traffbest\x2Ebiz\d+\.compress.*sidebar\.activeshopper\.comaresflashdownloader\x2Ecom
+Apofis.*Port\x2E\s+\x2FNFO\x2CRegistered

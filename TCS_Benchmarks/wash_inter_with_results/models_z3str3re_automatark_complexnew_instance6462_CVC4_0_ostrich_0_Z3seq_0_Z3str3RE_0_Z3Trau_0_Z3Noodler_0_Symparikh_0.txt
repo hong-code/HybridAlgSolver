@@ -1,0 +1,4 @@
+^[SC]{2}[0-9]{6}$
+^(\w+)s?[:]\/\/(\w+)?[.]?(\w+)[.](\w+)$
+\x7D\x7BSysuptime\x3A\d+\x2Fcommunicatortb
+\x2APORT1\x2AWarezX-Mailer\x3ASnake\x2Fbonzibuddy\x2F

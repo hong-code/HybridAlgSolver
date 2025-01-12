@@ -1,0 +1,5 @@
+(Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|(Nov|Dec)(ember)?)
+/\/[a-zA-Z_-]+\.ee$/U
+/\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B(\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B){500}/m
+^((0?[1-9]|1[012])(\s*:\s*([0-5]\d))?(\s*:\s*([0-5]\d))?(\s*([AaPp])[Mm]?)$|(2[0-3]|[1]\d|0?\d)(\s*:\s*([0-5]\d))(\s*:\s*([0-5]\d))?)$
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi

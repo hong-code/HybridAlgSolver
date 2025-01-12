@@ -1,0 +1,4 @@
+^\s*[a-zA-Z0-9&\-\./,\s]+\s*$
+/^\x2f[0-9A-F]{42}$/Um
+/[a-zA-Z]/
+www\x2Efreescratchandwin\x2Ecom\w+Port.*User-Agent\x3AToolbarkit

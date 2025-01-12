@@ -1,0 +1,3 @@
+/\/[a-zA-Z_-]+\.ee$/U
+User-Agent\x3A\w+Owner\x3A\w+Wordixqshv\x2fqzccsServer\x00MyBYReferer\x3Awww\x2Eccnnlc\x2Ecom\x04\x00
+search\.dropspam\.com.*SupportFiles.*Referer\x3A

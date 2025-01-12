@@ -1,0 +1,2 @@
+pass=Referer\x3ASurveillance
+User-Agent\x3A.*Host\x3A\dName=Your\+Host\+is\x3A

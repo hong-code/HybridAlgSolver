@@ -1,0 +1,4 @@
+frame_ver2\s+www\x2eurlblaze\x2enet\s+source\=IncrediFind\s+AgentHost\x3AHost\x3AHost\x3A\x2FGRSpynova3AFrom\x3A
+\x7D\x7BTrojan\x3A\w+Host\x3Arprpgbnrppb\x2fci
+(antifraud\.ref\.num)[0-9]*(@citibank\.com)
+^(GIR|[A-Z]\d[A-Z\d]??|[A-Z]{2}\d[A-Z\d]??)[ ]??(\d[A-Z]{2})$

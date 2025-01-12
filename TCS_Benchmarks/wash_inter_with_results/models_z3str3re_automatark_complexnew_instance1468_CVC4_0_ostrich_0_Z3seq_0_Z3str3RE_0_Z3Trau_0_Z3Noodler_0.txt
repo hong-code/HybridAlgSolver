@@ -1,0 +1,5 @@
+/\/download\.asp\?p\=\d$/Ui
+/^\x2f[a-z\d]{1,8}\.exe$/Ui
+(^(6334)[5-9](\d{11}$|\d{13,14}$))
+www\.searchinweb\.com\s+User-Agent\x3Abindmqnqgijmng\x2foj
+/click.php\?c=\w{160}/Ui

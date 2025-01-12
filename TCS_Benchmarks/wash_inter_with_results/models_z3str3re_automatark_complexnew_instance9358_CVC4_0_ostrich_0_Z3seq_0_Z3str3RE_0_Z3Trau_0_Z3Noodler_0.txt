@@ -1,0 +1,5 @@
+www\x2Erichfind\x2EcomHost\x3A
+((0[13-7]|1[1235789]|[257][0-9]|3[0-35-9]|4[0124-9]|6[013-79]|8[0124-9]|9[0-5789])[0-9]{3}|10([2-9][0-9]{2}|1([2-9][0-9]|11[5-9]))|14([01][0-9]{2}|715))
+http://www.mail-password-recovery.com/
+/\x2ewrf([\?\x5c\x2f]|$)/smiU
+Reporter\s+Host\x3A.*search\x2econduit\x2ecomTM_SEARCH3

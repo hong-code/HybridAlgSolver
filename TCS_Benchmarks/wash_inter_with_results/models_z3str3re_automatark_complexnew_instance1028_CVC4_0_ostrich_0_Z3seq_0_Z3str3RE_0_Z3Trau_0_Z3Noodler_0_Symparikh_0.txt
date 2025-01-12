@@ -1,0 +1,2 @@
+wwwHost\x3aRobertVersionspyblini\x2Eini
+\swww\.fast-finder\.com[^\n\r]*\x2Fbar_pl\x2Fchk\.fcgi\d+Toolbar

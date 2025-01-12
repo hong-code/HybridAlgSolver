@@ -1,0 +1,3 @@
+Anal\s+news.*User-Agent\x3A
+ShadowNet\dsearchreslt\sTROJAN-Host\x3AYWRtaW46cGFzc3dvcmQ
+/\?new\=.*?\:.*?\&v\=\d\.\d\.\d\&av\=/U

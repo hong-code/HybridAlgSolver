@@ -1,0 +1,4 @@
+^[-+]?\d*$
+toolbarplace\x2Ecom.*Host\x3A\dgpstool\x2eglobaladserver\x2ecom
+\x2Fcbn\x2F\s+Host\x3Abinde2give\.com
+body=\x2521\x2521\x2521Optix\s+Host\x3a

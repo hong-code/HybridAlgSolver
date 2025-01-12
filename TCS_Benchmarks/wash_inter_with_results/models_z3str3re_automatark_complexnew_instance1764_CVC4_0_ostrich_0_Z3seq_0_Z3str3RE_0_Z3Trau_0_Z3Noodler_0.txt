@@ -1,0 +1,4 @@
+www\.123mania\.com\x2F0409areZC-Bridge
+^\+?\(?\d+\)?(\s|\-|\.)?\d{1,3}(\s|\-|\.)?\d{4}$
+Google\s+-~-GREATHost\x3aFILESIZE\x3E
+/\x2esami([\?\x5c\x2f]|$)/smiU

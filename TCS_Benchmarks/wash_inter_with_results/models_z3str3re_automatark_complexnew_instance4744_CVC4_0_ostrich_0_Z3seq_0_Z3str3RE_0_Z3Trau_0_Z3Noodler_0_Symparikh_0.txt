@@ -1,0 +1,3 @@
+Host\x3A\s+\x2Ftoolbar\x2Fico\x2F\dencoderserverreport\<\x2Ftitle\>
+search\.dropspam\.com.*SupportFiles.*Referer\x3A
+/^\/cnt\.php\?id=\d+$/U

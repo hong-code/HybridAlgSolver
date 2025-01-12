@@ -1,0 +1,4 @@
+/^simple\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+\x2Frss\d+Host\x3aTCP\x2FAD\x2FULOGNetBusCookie\x3a
+/^\/f\/1\d{9}\/\d{9,10}(\/\d)+$/U
+/\x2eoga([\?\x5c\x2f]|$)/smiU

@@ -1,0 +1,4 @@
+^\s*[a-zA-Z,\s]+\s*$
+at\w+Pre\s+adfsgecoiwnfhirmvtg\x2fggqh\.kqhSurveillanceHost\x3A
+Toolbar[^\n\r]*User-Agent\x3A\w+Host\x3A.*toX-Mailer\x3aLogsmax-Cookie\x3aAppName
+/\/[a-z]{4}\.html\?j\=\d{6,7}$/Ui

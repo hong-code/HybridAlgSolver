@@ -1,0 +1,5 @@
+\x5Chome\/lordofsearchToolbar\x22StarLogger\x22
+\.?[a-zA-Z0-9]{1,}$
+^[a-zA-Z]:(\\|(\\[^\\/\s:*"<>|]+)+)>
+Host\x3ATest\x3C\x2Fchat\x3EResultsSubject\x3A
+wlpgskmv\x2flwzo\.qv#www\x2Ekliksearch\x2Ecom

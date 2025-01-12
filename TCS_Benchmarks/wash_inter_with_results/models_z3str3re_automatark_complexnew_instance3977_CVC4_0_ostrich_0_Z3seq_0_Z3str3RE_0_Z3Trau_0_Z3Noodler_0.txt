@@ -1,0 +1,4 @@
+^[http|ftp|wap|https]{3,5}:\//\www\.\w*\.[com|net]{2,3}$
+\(([0-9]{2}|0{1}((x|[0-9]){2}[0-9]{2}))\)\s*[0-9]{3,4}[- ]*[0-9]{4}
+^((Fred|Wilma)\s+Flintstone|(Barney|Betty)\s+Rubble)$
+Version\s+User-Agent\x3Abindmqnqgijmng\x2foj

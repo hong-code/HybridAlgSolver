@@ -1,0 +1,3 @@
+^
+^[2-7]{1}[0-9]{3}$
+hotbar\s+ocllceclbhs\x2fgthftpquickbruteUser-Agent\x3A

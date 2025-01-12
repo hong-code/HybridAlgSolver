@@ -1,0 +1,3 @@
+TOOLBAR\s+dist\x2Eatlas\x2Dia\x2Ecom
+/\x2edocx([\?\x5c\x2f]|$)/smiU
+Spy\s+\x0d\x0a.*YAHOOdestroyed\x21Host\x3a

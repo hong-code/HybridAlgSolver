@@ -1,0 +1,5 @@
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi
+^([1-9]+)?[13579]$
+((\bm_[a-zA-Z\d]*\b)|(\bin_[a-zA-Z\d]*\b)|(\bin _[a-zA-Z\d]*\b))
+[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+software.*com\x2Findex\.php\?tpid=\s+Host\x3A\x2Ftoolbar\x2Fsupremetb

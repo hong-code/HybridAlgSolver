@@ -1,0 +1,5 @@
+/\x2Fupdate\w\x2Ephp\x3Fp\x3D\d+.*User\x2DAgent\x3A\s+Mozilla\x2F4\x2E75\s\x5Ben\x5D\s\x28X11\x3B\sU\x3B\sLinux\s2\x2E2\x2E16\x2D3\si686\x29/smiH
+/<script>.*?\x2f\x2a\w+\s\x2a\x2f\s*\x22\w+\x22\x2b\x22\w+\x22\x2esubstr\x28\d{2},\d{2}\x29\x2f\x2a\w+\s\x2a\x2f\s\x3b/
+Port\s+AgentHost\x3Ainsertkeys\x3Ckeys\x40hotpop
+[a-zA-Z_:][a-zA-Z0-9_,\.\-]*?
+Software\s+User-Agent\x3A.*FictionalUser-Agent\x3AUser-Agent\x3a

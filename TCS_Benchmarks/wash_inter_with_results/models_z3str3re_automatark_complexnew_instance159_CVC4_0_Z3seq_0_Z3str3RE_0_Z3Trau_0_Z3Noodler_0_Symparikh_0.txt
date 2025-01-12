@@ -1,0 +1,2 @@
+/\x2eappendChild.*?\x2eid.{0,200}?(offset|client)(Height|Left|Parent|Top|Width).{0,200}?(offset|client)(Height|Left|Parent|Top|Width)/is
+dialup\x5fvpn\x40hermangroup\x2EorgUser-Agent\x3A

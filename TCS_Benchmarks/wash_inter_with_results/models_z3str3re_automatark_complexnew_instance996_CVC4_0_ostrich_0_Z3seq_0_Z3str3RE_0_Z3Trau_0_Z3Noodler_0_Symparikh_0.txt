@@ -1,0 +1,5 @@
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch
+^\d$|^[1][0]$
+HTTPwwwProbnymomspyo\x2fzowy
+\xA9
+^(ac|AC|al|AL|am|AM|ap|AP|ba|BA|ce|CE|df|DF|es|ES|go|GO|ma|MA|mg|MG|ms|MS|mt|MT|pa|PA|pb|PB|pe|PE|pi|PI|pr|PR|rj|RJ|rn|RN|ro|RO|rr|RR|rs|RS|sc|SC|se|SE|sp|SP|to|TO)$

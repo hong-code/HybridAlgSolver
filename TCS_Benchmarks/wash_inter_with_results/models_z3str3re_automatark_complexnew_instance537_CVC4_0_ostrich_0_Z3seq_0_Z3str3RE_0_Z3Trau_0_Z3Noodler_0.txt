@@ -1,0 +1,5 @@
+http://www.scribd.com/doc/2569355/Geo-Distance-Search-with-MySQL
+/User-Agent\x3a\x20Agent\d{5,9}/Hi
+^(19|20)\d\d[-/.]([1-9]|0[1-9]|1[012])[- /.]([1-9]|0[1-9]|[12][0-9]|3[01])$
+\x5BStatic\w+www\.iggsey\.comUser-Agent\x3AX-Mailer\x3aComputer
+Fen\xeatreEye\x2Fdss\x2Fcc\.2_0_0\.TROJAN-

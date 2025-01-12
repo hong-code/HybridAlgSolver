@@ -1,0 +1,4 @@
+/\x2emp3([\?\x5c\x2f]|$)/smiU
+clvompycem\x2fcen\.vcnHost\x3AUser-Agent\x3A\x0d\x0a
+([0-9]+:)?[0-9]+\s*(am|pm)|[0-9]+:[0-9]+\s*(am|pm)?
+([a-z\s.\-_'])*<\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\>

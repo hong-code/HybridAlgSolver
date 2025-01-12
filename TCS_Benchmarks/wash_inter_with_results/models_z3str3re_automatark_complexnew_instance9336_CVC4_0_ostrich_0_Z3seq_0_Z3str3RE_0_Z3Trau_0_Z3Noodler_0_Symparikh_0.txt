@@ -1,0 +1,4 @@
+(([1-9]|[0][1-9])|1[012])[- /.](([1-9]|[0][1-9])|[12][0-9]|3[01])[- /.](19|20)\d\d
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN
+User-Agent\x3AUser-Agent\x3AHost\x3a
+^([GB])*(([1-9]\d{8})|([1-9]\d{11}))$

@@ -1,0 +1,3 @@
+Strip-Player.*MyAgent.*\x2Fnewsurfer4\x2F
+/(Windows Phone|iPhone|BlackBerry|Mobile|Android|Opera Mini|Opera Mobile|SymbianOS)/
+myInstance\.myMethod(.*)\(.*myParam.*\)

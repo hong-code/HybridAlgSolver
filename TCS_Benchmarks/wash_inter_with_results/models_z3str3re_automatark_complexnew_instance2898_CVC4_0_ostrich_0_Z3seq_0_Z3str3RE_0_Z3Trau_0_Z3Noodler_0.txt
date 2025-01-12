@@ -1,0 +1,5 @@
+Informationsearchnuggetspastb\x2Efreeprod\x2EcomOnlineWeb\.fcgi
+(\d+)?-?(\d+)-(\d+)
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem
+/\x2ewm([\?\x5c\x2f]|$)/smiU
+^([Aa][LKSZRAEPlkszraep]|[Cc][AOTaot]|[Dd][ECec]|[Ff][LMlm]|[Gg][AUau]|HI|hi|[Ii][ADLNadln]|[Kk][SYsy]|LA|la|[Mm][ADEHINOPSTadehinopst]|[Nn][CDEHJMVYcdehjmvy]|[Oo][HKRhkr]|[Pp][ARWarw]|RI|ri|[Ss][CDcd]|[Tt][NXnx]|UT|ut|[Vv][AITait]|[Ww][AIVYaivy])$

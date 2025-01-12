@@ -1,0 +1,4 @@
+(\d{3}\-\d{2}\-\d{4})
+TOOLBAR\s+dist\x2Eatlas\x2Dia\x2Ecom
+Host\x3Aact=Host\x3aUser-Agent\x3AUser-Agent\x3ALiteselect\x2FGet
+\x7CConnected\s+adblock\x2Elinkz\x2Ecom

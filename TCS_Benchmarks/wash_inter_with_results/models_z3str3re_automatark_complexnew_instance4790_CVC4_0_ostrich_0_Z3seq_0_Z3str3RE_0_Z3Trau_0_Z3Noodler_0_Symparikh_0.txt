@@ -1,0 +1,5 @@
+/\x2ehpj([\?\x5c\x2f]|$)/smiU
+for.*www\x2Eeblocs\x2Ecom\d\x2Fiis2ebs\.asp\d\<title\>Actual\x2Fpagead\x2Fads\?search2\.ad\.shopnav\.com\x2F9899\x2Fsearch\x2Fresults\.php
+/\x2edir([\?\x5c\x2f]|$)/smiU
+^([1-9]\d{0,3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$
+^([A-Z]{2}|[A-Z]\d|\d[A-Z])[1-9](\d{1,3})?$

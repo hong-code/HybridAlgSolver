@@ -1,0 +1,3 @@
+%3f\s+url=[^\n\r]*httpUser-Agent\x3A
+[-'a-zA-Z]
+/^\/info\.php\?act\x3d(list|online)/U

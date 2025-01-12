@@ -1,0 +1,4 @@
+^http[s]?://twitter\.com/(#!/)?[a-zA-Z0-9]{1,15}[/]?$
+/^[0-9]+\.d{3}? *$/
+/^\s*?RCPT\s+?TO\x3a[^\r\n]*?\x28\x29\s\x7b/i
+/^\d{0,10}_passes_\d{1,10}\.xm/iR

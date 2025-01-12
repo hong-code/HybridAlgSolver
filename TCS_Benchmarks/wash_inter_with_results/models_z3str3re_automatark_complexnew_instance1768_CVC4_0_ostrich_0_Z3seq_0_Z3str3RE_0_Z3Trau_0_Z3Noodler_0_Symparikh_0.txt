@@ -1,0 +1,3 @@
+iz=Referer\x3Aoffers\x2Ebullseye-network\x2Ecom
+((([7-9])(\d{3})([-])(\d{4}))|(([7-9])(\d{7})))
+^(b|B)(f|F)(p|P)(o|O)(\s*||\s*C(/|)O\s*)[0-9]{1,4}

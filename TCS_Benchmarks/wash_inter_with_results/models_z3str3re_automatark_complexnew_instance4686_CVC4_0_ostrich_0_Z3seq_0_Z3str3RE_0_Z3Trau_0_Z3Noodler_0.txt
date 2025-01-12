@@ -1,0 +1,5 @@
+^([a-zA-Z][a-zA-Z\&\-\.\'\s]*|)$
+^\d{2}\-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\-\d{4}$
+^([1-9]|1[0-2]|0[1-9]){1}(:[0-5][0-9][aApP][mM]){1}$
+/\/[a-z]{1,4}\x2ehtml\x3f0\x2e[0-9]{15,}$/U
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A

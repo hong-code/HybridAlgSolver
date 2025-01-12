@@ -1,0 +1,2 @@
+<!--[\\.|\\W|\\w]*?-->
+cyber@yahoo\x2Ecom\s+Host\x3a\x7D\x7Crichfind\x2Ecom

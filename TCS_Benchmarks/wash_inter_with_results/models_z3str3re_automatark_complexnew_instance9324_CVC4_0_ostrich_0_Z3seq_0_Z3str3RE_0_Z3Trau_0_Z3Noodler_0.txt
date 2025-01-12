@@ -1,0 +1,5 @@
+/\/[a-z]+\?[a-z]+\=[a-z]+$/U
+^([0-9]*|\d*\.\d{1}?\d*)$
+Google\s+-~-GREATHost\x3aFILESIZE\x3E
+Host\x3A\s+offers\x2Ebullseye-network\x2Ecom
+^(\+65)?\d{8}$

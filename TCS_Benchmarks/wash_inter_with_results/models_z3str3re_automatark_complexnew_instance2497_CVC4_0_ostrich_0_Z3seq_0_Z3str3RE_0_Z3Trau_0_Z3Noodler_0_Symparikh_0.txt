@@ -1,0 +1,2 @@
+<textarea(.|\n)*?>((.|\n)*?)</textarea>
+sponsor2\.ucmore\.com\s+informationHost\x3A\x2Fezsb

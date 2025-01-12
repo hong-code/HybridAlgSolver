@@ -1,0 +1,5 @@
+HXLogOnlyDaemonactivityIterenetFrom\x3AClass
+\x2Fta\x2FNEWS\x2F\d+Toolbarwww\x2Eonlinecasinoextra\x2Ecom
+^[1]?[-\.\s]?(\(\d{3}\)|\d{3}){1}[-\.\s]?\d{3}[-\.\s]?\d{4}(\s+|\s*[-\.x]{1}\d{1,6})?$
+\b(0?[1-9]|1[0-2])(\-)(0?[1-9]|1[0-9]|2[0-9]|3[0-1])(\-)(0[0-8])\b
+/(00356)?(99|79|77|21|27|22|25)[0-9]{6}/g

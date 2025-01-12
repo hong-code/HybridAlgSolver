@@ -1,0 +1,5 @@
+/\/modules\/\d\.jar$/U
+/^Content-Disposition\x3A\s*attachment/smi
+^\{[A-Fa-f\d]{8}-[A-Fa-f\d]{4}-[A-Fa-f0\d]{4}-[A-Fa-f\d]{4}-[A-Fa-f\d]{12}\}$
+^(\d{1}|\d{2}|\d{3})(\.\d{3})*?$
+var phonePattern = /^(([^\.\-\,a-wy-z]([\(]?(\+|[x])?\d+[\)]?)?[\s\.\-\,]?([\(]?\d+[\)]?)?[\s\.\-\,]?(\d+[\s\.\-\,]?)+[^\.\-\,a-z])|((\+|[x])?\d+))$/i

@@ -1,0 +1,2 @@
+welcome\s+Host\x3A\s+ThistoIpHost\x3Abadurl\x2Egrandstreetinteractive\x2Ecom
+/(bot|spider|crawler|google)/

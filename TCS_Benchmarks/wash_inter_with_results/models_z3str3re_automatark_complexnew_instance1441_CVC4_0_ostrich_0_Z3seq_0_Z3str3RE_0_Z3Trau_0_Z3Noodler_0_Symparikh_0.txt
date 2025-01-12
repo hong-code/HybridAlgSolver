@@ -1,0 +1,5 @@
+/\.background\s*=\s*[\x22\x27]{2}/i
+/\x2eqt([\?\x5c\x2f]|$)/smiU
+Referer\x3A\s+www\x2eproventactics\x2ecom
+vb\s+Host\x3ASubject\x3Aonline-casino-searcher\.com
+((\(\d{2}\) ?)|(\d{2}/))?\d{2}/\d{4} ([0-2][0-9]\:[0-6][0-9])

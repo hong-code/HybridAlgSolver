@@ -1,0 +1,3 @@
+ad\x2Esearchsquire\x2Ecom[^\n\r]*User-Agent\x3A
+e2give\.comConnectionSpywww\x2Eslinkyslate
+^[1-9][0-9][0-9][0-9]$

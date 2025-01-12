@@ -1,0 +1,2 @@
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+Box\d+GENERAL_PARAM2FTA-SpyLoggerHost\x3A\.exePass-On

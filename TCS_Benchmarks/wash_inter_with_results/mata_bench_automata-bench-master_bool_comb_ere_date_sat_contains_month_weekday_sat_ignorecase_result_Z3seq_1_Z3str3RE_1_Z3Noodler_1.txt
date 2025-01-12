@@ -1,0 +1,2 @@
+(?i:.*(monday|tuesday|wednesday|thursday|friday|saturday|sunday).*)
+(?i:.*(january|february|march|april|may|june|july|august|september|october|november|december).*) 

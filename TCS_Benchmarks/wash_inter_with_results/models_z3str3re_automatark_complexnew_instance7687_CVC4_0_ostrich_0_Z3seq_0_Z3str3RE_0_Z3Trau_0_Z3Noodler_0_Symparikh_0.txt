@@ -1,0 +1,4 @@
+^(([a-zA-Z0-9]+([\-])?[a-zA-Z0-9]+)+(\.)?)+[a-zA-Z]{2,6}$
+Authorization\x3a\d+lnzzlnbk\x2fpkrm\.fin
+^(([0-9]{3})[-]?)*[0-9]{6,7}$
+/\/app\/\?prj=\d\x26pid=[^\r\n]+\x26mac=/Ui

@@ -1,0 +1,3 @@
+^[-\w\s"'=/!@#%&,;:`~\.\$\^\{\[\(\|\)\]\}\*\+\?\\]*$
+Host\x3A\s+A-311Servert=form-data\x3B\x20name=\x22pid\x22
+<a\s*href=(.*?)[\s|>]

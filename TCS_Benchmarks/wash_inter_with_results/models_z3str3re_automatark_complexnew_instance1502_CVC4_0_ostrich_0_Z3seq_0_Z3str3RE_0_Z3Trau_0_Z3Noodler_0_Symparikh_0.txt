@@ -1,0 +1,4 @@
+^[a-zA-Z]\w{0,30}$
+Host\x3A\s+www\.iggsey\.comcs\x2Esmartshopper\x2Ecom
+/setup=[a-z]$/Ui
+NETObserve\d+Host\x3aohgdhkzfhdzo\x2fuwpOK\r\nHost\x3AHWAEname\x2ecnnic\x2ecn

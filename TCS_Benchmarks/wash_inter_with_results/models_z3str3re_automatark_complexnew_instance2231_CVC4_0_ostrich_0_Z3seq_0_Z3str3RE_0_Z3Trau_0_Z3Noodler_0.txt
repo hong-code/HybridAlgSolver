@@ -1,0 +1,5 @@
+/HTTP\/1.[01]\r\nUser\x2dAgent\x3a\x20[ -~]+\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.info\r\n/
+^.+\@.+\..+$
+www\x2e2-seek\x2ecom\x2fsearch\s+TPSystem
+^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$
+[0-7]+

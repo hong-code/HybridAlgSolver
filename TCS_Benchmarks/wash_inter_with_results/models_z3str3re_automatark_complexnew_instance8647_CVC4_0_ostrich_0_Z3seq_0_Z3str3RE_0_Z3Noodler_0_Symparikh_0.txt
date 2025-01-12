@@ -1,0 +1,3 @@
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2
+0{3,}|1{3,}|2{3,}|3{3,}|4{3,}|5{3,}|6{3,}|7{3,}|8{3,}|9{3,}
+/\/[a-zA-Z_-]+\.ee$/U

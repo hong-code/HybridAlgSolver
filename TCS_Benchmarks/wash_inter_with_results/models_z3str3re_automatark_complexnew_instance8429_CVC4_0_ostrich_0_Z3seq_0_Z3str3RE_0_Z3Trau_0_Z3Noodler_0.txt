@@ -1,0 +1,4 @@
+/\x2exsl([\?\x5c\x2f]|$)/smiU
+^N[1-9][0-9]{0,4}$|^N[1-9][0-9]{0,3}[A-Z]$|^N[1-9][0-9]{0,2}[A-Z]{2}$
+User-Agent\x3A\d+Desktop\sIDENTIFY666User-Agent\x3A\x5BStatic
+FreeAccessBar\s+hostie[^\n\r]*CodeguruBrowser\dStableWeb-MailUser-Agent\x3A195\.225\.Subject\x3A

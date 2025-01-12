@@ -1,0 +1,3 @@
+HXLogOnlyDaemonactivityIterenetFrom\x3AClass
+/\/docushare\/dsweb\/ResultBackgroundJobMultiple\/\d*[^\d]/U
+/listoverridecount([2345678]|[019][0-9])/i

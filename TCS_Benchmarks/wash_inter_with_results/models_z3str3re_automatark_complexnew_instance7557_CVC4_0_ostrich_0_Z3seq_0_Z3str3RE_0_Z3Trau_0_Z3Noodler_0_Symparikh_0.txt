@@ -1,0 +1,4 @@
+sponsor2\.ucmore\.com\s+informationHost\x3A\x2Fezsb
+User-Agent\x3AUser-Agent\x3Awp-includes\x2Ftheme\x2Ephp\x3Fframe_ver2
+(\d{1,2}(\:|\s)\d{1,2}(\:|\s)\d{1,2}\s*(AM|PM|A|P))
+SI\|Server\|\s+OSSProxy\x5Chome\/lordofsearch%3fAuthorization\x3a

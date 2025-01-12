@@ -1,0 +1,4 @@
+\.exe\s+ZC-Bridge\s+TPSystemHost\x3AHost\x3a
+ContactHost\x3aHost\x3AFloodedFictionalUser-Agent\x3AHost\x3a
+^[-+]?\d+(\.\d+)?$
+^[-]?[0-9]*\.?[0-9]?[0-9]?[0-9]?[0-9]?

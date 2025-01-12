@@ -1,0 +1,5 @@
+Remote\x3Cchat\x3EX-Mailer\x3awww\x2eproventactics\x2ecom
+^(\$?)((\d{1,20})|(\d{1,2}((,?\d{3}){0,6}))|(\d{3}((,?\d{3}){0,5})))$
+Host\x3a\w+Pre\x2Fta\x2FNEWS\x2FKeyloggeradfsgecoiwnfhirmvtg\x2fggqh\.kqh
+^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$
+/\x2emswmm([\?\x5c\x2f]|$)/smiU

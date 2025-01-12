@@ -1,0 +1,4 @@
+/^\/\?[A-Za-z0-9_-]{15}=l3S/U
+\x2Fcs\x2Fpop4\x2FUser-Agent\x3Akitwww\x2Eborlander\x2Ecom\x2Ecn
+/\.jpg\x20HTTP\/1\.[01]\r\nUser\x2dAgent\x3a\x20[a-z]+\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.com\.br\r\n\r\n$/
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A

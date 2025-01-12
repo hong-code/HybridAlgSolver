@@ -1,0 +1,3 @@
+Information.*Firewall\s+ised2k\xc0STATUS\xc0Server
+MyHost\x3AtoHost\x3AWinSessionwww\x2eurlblaze\x2enetResultHost\x3A
+^(([0-2])?([0-9]))$

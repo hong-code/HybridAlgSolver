@@ -1,0 +1,5 @@
+^[-+]?\d*$
+/^[A-Z0-9._-]+@[A-Z0-9.-]+\.[A-Z0-9.-]+$/i
+SI\|Server\|\d+informationWinInetEvilFTPOSSProxy\x5Chome\/lordofsearch
+\x2Fbar_pl\x2Fchk_bar\.fcgiTrojanHost\x3A
+on\w+Host\x3AComputerKeylogger\x2EcomHost\x3AUser-Agent\x3A

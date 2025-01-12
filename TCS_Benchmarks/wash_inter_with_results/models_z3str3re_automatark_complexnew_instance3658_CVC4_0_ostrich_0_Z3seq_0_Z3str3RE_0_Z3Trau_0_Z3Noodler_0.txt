@@ -1,0 +1,4 @@
+^([^\s]){5,12}$
+/^User\x2DAgent\x3A\s*Mozilla\x0d?$/smiH
+c\.goclick\.com\s+URLBlaze\s+Host\x3A
+updates\x5D\x2520\x5BPort_NETObserve

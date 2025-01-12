@@ -1,0 +1,5 @@
+^(\+65)?\d{8}$
+(^\d{1,9})+(,\d{1,9})*$
+DaysLOGHost\x3aHost\x3a\x7D\x7BOS\x3AHost\x3A
+/appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/smi
+^\d{5}$

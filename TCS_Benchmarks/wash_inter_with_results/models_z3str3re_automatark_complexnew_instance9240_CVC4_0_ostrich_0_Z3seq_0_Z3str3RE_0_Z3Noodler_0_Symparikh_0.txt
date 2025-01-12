@@ -1,0 +1,5 @@
+Referer\x3A\s+HXDownload.*Referer\x3AGREATDripline
+/\x2epmd([\?\x5c\x2f]|$)/smiU
+^(\d{5}-\d{4}|\d{5}|\d{9})$|^([a-zA-Z]\d[a-zA-Z]( )?\d[a-zA-Z]\d)$
+httphost[^\n\r]*www\x2Emaxifiles\x2Ecom
+^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$

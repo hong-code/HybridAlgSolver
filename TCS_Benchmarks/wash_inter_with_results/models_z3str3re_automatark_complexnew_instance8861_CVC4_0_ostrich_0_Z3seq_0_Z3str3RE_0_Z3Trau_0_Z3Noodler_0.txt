@@ -1,0 +1,5 @@
+PASSW=\w+www2\x2einstantbuzz\x2ecom\x2Fbar_pl\x2Fchk_bar\.fcgi
+/\x2edmg([\?\x5c\x2f]|$)/smiU
+Host\x3A\w+Host\x3AUser-Agent\x3ATPSystemad\x2Esearchsquire\x2Ecom
+/^[A-Z]{3}[G|A|F|C|T|H|P]{1}[A-Z]{1}\d{4}[A-Z]{1}$/;
+^((\d{1,3}((,\d{3})*|\d*)(\.{0,1})\d+)|\d+)$

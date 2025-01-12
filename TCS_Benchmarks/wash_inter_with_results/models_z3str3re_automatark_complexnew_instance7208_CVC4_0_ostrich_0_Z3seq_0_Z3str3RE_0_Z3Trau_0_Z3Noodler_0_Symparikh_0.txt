@@ -1,0 +1,3 @@
+Client.*Peer\s+ThistoIpHost\x3Abadurl\x2Egrandstreetinteractive\x2Ecom
+stats\x2edrivecleaner\x2ecomExciteasdbiz\x2Ebiz
+/\?inf\=[0-9a-f]{8}\x2Ex\d{2}\x2E\d{8}\x2E/Ui

@@ -1,0 +1,4 @@
+corep\x2Edmcast\x2Ecom[^\n\r]*Referer\x3a.*is[^\n\r]*KeyloggerExplorerfileserverSI\|Server\|www\x2Emyarmory\x2Ecom
+%3fc=UI2GmbHbacktrust\x2EcomSpediaReferer\x3ASubject\x3aHost\x3apasscorrect\x3B
+/\/ddd\/[a-z]{2}.gif/iU
+Host\x3A\dwww\x2Etrustedsearch\x2Ecom

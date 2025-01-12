@@ -1,0 +1,5 @@
+^[ \t]+|[ \t]+$
+logs\s+TCP.*Toolbarads\.grokads\.com
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs
+www\x2Ericercadoppia\x2Ecom\w+TPSystem\s+User-Agent\x3A
+^((A(((H[MX])|(M(P|SN))|(X((D[ACH])|(M[DS]))?)))?)|(K7(A)?)|(D(H[DLM])?))(\d{3,4})[ABD-G][CHJK-NPQT-Y][Q-TV][1-4][B-E]$

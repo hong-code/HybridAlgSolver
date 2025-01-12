@@ -1,0 +1,4 @@
+/\x2exspf([\?\x5c\x2f]|$)/smiU
+\x7D\x7BUser\x3A\d+Host\x3AUser-Agent\x3Aadblock\x2Elinkz\x2Ecom
+^[a-zA-Z]{3}[uU]{1}[0-9]{7}$
+^\d+(\.\d{2})?$

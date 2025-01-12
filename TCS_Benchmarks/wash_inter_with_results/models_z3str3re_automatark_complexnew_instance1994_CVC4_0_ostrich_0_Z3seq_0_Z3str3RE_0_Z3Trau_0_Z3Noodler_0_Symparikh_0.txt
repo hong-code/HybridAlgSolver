@@ -1,0 +1,3 @@
+/\/[a-zA-Z_-]+\.rtf$/U
+\x2Fcbn\x2F\s+Host\x3Abinde2give\.com
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym

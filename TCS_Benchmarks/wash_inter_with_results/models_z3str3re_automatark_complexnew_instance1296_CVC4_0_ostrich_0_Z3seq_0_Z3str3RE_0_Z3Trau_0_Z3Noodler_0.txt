@@ -1,0 +1,5 @@
+^[a-zA-Z0-9]+$
+welcomeforToolbarHost\x3A
+\b([0-1]?\d{1,2}|2[0-4]\d|25[0-5])(\.([0-1]?\d{1,2}|2[0-4]\d|25[0-5])){3}\b
+Host\x3A\s+Agentbody=\x2521\x2521\x2521Optix
+on\dName=Your\+Host\+is\x3AcdpViewHost\x3AUser-Agent\x3A

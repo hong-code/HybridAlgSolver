@@ -1,0 +1,4 @@
+aohobygi\x2fzwiw\s+\+The\+password\+is\x3A
+^([0]?[1-9]|[1][0-2]):([0-5][0-9]|[1-9]) [aApP][mM]$
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2
+PASSW=\w+www2\x2einstantbuzz\x2ecom\x2Fbar_pl\x2Fchk_bar\.fcgi

@@ -1,0 +1,5 @@
+protocol\s+3A\s+data2\.activshopper\.comUser-Agent\x3A
+/\x2easx([\?\x5c\x2f]|$)/smiU
+[0-7]+
+^((\d{3}[- ]\d{3}[- ]\d{2}[- ]\d{2})|(\d{3}[- ]\d{2}[- ]\d{2}[- ]\d{3}))$
+\x2FNFO\x2CRegistered.*Host\x3A\s+TPSystemHost\x3A

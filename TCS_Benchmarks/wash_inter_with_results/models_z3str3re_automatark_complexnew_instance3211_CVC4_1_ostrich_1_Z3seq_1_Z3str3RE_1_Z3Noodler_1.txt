@@ -1,0 +1,5 @@
+^(http(s?)\:\/\/)*[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$
+http://www.9lessons.info/2008/08/most-popular-articles.html
+^[D-d][K-k]( |-)[1-9]{1}[0-9]{3}$
+^((CN=['\w\d\s\-\&]+,)+(OU=['\w\d\s\-\&]+,)*(DC=['\w\d\s\-\&]+[,]*){2,})$
+/\x2esearch\x2dms([\?\x5c\x2f]|$)/smiU

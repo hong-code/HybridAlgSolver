@@ -1,0 +1,5 @@
+/^.{27}/sR
+^[a-zA-Z0-9\s]+$
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin
+/^\x2f[a-z\x2d\x5f]{90,97}\.php$/U
+YWRtaW46cGFzc3dvcmQ\s+www\x2Ealfacleaner\x2Ecom

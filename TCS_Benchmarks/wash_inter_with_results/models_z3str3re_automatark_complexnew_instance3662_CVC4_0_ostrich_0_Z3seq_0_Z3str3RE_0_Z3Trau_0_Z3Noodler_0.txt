@@ -1,0 +1,4 @@
+^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\,*\s\s*\d{4}$|^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\,*\s\d{4}$|^(January|February|March|April|May|June|July|August|September|October|November|December)\,*\s\d{4}$|^(january|february|march|april|may|june|july|august|september|october|november|december)\,*\s\d{4}$
+/^dir=[0-9A-F]{8}(-[0-9A-F]{4}){4}[0-9A-F]{8}&data=/Pi
+^(([1-9])|(0[1-9])|(1[0-2]))\/(([0-9])|([0-2][0-9])|(3[0-1]))\/(([0-9][0-9])|([1-2][0,9][0-9][0-9]))$
+^\d{4,4}[A-Z0-9](, *\d{4,4})[A-Z0-9]*$

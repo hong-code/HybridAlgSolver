@@ -1,0 +1,4 @@
+^[0-9a-zA-z]{3}$
+User-Agent\x3a\s+sErver\s+-~-GREATHost\x3a
+^(N[BLSTU]|[AMN]B|[BQ]C|ON|PE|SK)$
+/\x2emkv([\?\x5c\x2f]|$)/smiU

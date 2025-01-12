@@ -1,0 +1,5 @@
+myInstance\.myMethod(.*)\(.*myParam.*\)
+Norton customer service is a type of method used to care your personal or business computer system from any virus or spyware.
+RootviewNetControl\x2EServerdata2\.activshopper\.com
+/(\x13\x00|\x00\x5C)\x00m\x00q\x00r\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+are\d+X-Mailer\x3a+\d+v=User-Agent\x3a

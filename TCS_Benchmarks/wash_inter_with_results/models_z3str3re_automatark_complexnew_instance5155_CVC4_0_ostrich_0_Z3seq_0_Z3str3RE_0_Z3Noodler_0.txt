@@ -1,0 +1,5 @@
+/[^\n -~\r]{4}/P
+/\x2ejar([\?\x5c\x2f]|$)/smiU
+^(http\://){1}(((www\.){1}([a-zA-Z0-9\-]*\.){1,}){1}|([a-zA-Z0-9\-]*\.){1,10}){1}([a-zA-Z]{2,6}\.){1}([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*
+3A\s+URLBlazeHost\x3Atrackhjhgquqssq\x2fpjm
+User-Agent\x3A[^\n\r]*HTTP_RAT_

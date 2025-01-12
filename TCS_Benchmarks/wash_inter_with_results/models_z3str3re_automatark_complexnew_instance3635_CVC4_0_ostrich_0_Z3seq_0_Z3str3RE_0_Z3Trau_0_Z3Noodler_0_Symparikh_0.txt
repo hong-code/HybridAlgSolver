@@ -1,0 +1,5 @@
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2
+Host\x3A\d+zmnjgmomgbdz\x2fzzmw\.gzt%3ftoolbar\x2Ei-lookup\x2Ecom
+^([A-Z\d]{3})[A-Z]{2}\d{2}([A-Z\d]{1})([X\d]{1})([A-Z\d]{3})\d{5}$
+Cookie\x3A\x2Fimages\x2Fnocache\x2Ftr\x2Fgca\x2Fm\.gif\?
+\.exe\s+v2\x2E0\s+smrtshpr-cs-

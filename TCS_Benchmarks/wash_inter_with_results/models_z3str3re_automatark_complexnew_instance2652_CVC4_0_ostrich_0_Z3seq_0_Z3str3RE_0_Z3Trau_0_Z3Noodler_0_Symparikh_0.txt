@@ -1,0 +1,3 @@
+\stoolbar\.anwb\.nl\s+A-311\s+newsSoftActivitypassword\x3B1\x3BOptix
+/[a-f0-9]{32}=[a-f0-9]{32}/C
+@"^\d[a-zA-Z0-9]+$"

@@ -1,0 +1,5 @@
+www\.trackhits\.cc\s+wwwHost\x3aRobertVersionspyblini\x2Eini
+www\x2e2-seek\x2ecom\x2fsearch\s+TPSystem
+^((\+)?(\d{2}[-]))?(\d{10}){1}?$
+www\x2Eserverlogic3\x2Ecom\d+ToolBar\s+HWAEUser-Agent\x3A
+/^hello\/[0-9]\.[0-9]\/[0-9]{3}\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i

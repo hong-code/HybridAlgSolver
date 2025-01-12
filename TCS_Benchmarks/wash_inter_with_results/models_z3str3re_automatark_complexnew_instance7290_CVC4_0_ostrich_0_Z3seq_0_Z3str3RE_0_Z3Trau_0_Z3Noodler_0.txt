@@ -1,0 +1,5 @@
+^[0-9]+[NnSs] [0-9]+[WwEe]$
+/filename\s*=\s*[^\r\n]*?\x2emcl[\x22\x27\x3b\s\r\n]/i
+^1[34][0-9][0-9]\/((1[0-2])|([1-9]))\/(([12][0-9])|(3[01])|[1-9])$
+^([0][1-9]|[1][0-2]):[0-5][0-9] {1}(AM|PM|am|pm)$
+Everyware.*Email.*Host\x3Astepwww\x2Ekornputers\x2Ecom

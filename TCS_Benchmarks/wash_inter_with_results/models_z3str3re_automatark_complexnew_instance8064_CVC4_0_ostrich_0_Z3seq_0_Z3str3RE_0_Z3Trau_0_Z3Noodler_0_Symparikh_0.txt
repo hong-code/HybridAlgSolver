@@ -1,0 +1,4 @@
+User-Agent\x3a\s+Host\x3A\s+Referer\x3a
+toolbarplace\x2Ecom[^\n\r]*Server[^\n\r]*X-Mailer\x3a\sUser-Agent\x3aHost\x3ABar\x2Fnewsurfer4\x2F
+WinSession\w+asdbiz\x2Ebizfrom\x7croogoo\x7cCurrentiOpus
+From\x3A\<title\>ActualUser-Agent\x3A\x2Fbar_pl\x2Ffav\.fcgi

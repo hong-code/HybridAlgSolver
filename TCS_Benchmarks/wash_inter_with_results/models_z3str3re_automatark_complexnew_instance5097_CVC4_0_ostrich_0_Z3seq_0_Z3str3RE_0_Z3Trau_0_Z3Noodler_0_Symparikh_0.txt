@@ -1,0 +1,4 @@
+([0]|[-]?[0]\.[0-9]+)|([-]?([1-9]+\.[0-9]+))|([-]?[1-9]+)
+Informationsearchnuggetspastb\x2Efreeprod\x2EcomOnlineWeb\.fcgi
+www\x2Esogou\x2Ecom\s+HWAE\+The\+password\+is\x3A
+FreeAccessBar\s+hostie[^\n\r]*CodeguruBrowser\dStableWeb-MailUser-Agent\x3A195\.225\.Subject\x3A

@@ -1,0 +1,4 @@
+OSSProxy\d+X-Mailer\x3Abacktrust\x2Ecom
+/\x2efdf([\?\x5c\x2f]|$)/smiU
+(.*\.jpe?g|.*\.JPE?G)
+^((http|https|ftp):\/\/(www\.)?|www\.)[a-zA-Z0-9\_\-]+\.([a-zA-Z]{2,4}|[a-zA-Z]{2}\.[a-zA-Z]{2})(\/[a-zA-Z0-9\-\._\?\&=,'\+%\$#~]*)*$

@@ -1,0 +1,4 @@
+^([a-zA-Z0-9!@#$%^&*()-_=+;:'"|~`<>?/{}]{1,5})$
+User-Agent\x3aHost\x3AHost\x3ASpyBuddy
+/\x2exfdl([\?\x5c\x2f]|$)/miU
+([Cc][Hh][Aa][Nn][Dd][Aa][Nn].*?)

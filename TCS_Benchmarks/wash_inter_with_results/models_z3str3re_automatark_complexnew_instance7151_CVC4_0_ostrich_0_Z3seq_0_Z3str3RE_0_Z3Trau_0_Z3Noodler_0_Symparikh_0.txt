@@ -1,0 +1,5 @@
+HWAE[^\n\r]*Email[^\n\r]*User-Agent\x3AUser-Agent\x3awowokayHost\x3A
+YAHOODesktopHost\x3aLOGHost\x3AtvshowticketsResultsFROM\x3A
+^\d*(\.\d*)$
+/poc\/(Exploit|myClassLoader|pocMain|runCmd)\.class/ims
+Address\x3A\s+SbAtsHTTP_RAT_Subject\x3A

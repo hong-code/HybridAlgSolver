@@ -1,0 +1,4 @@
+AgentCSmtpsidebar\.activeshopper\.comTry2Find
+/[0-9]+[stndrh]*\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*([0-9][0-9][0-9][0-9])?|(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*[0-9]+[stndrh]*|[0-9]+[\/.-][0-9]+[\/.-][0-9]+[0-9]+|[saturnmoewdhfi]*day/i
+(\<\?php\s+.*?((\?\>)|$))
+/\/[a-z]{4}\.html\?i\=\d{6,7}$/Ui

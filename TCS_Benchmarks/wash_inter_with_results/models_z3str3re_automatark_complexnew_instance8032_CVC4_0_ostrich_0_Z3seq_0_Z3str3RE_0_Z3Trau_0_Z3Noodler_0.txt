@@ -1,0 +1,3 @@
+^[a-zA-Z]\w{3,14}$
+daosearch\x2EcomSubject\x3A
+Remote\x3Cchat\x3EX-Mailer\x3awww\x2eproventactics\x2ecom

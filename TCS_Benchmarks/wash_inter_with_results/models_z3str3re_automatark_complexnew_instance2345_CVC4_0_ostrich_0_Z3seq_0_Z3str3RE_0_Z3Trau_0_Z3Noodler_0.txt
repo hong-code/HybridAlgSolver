@@ -1,0 +1,4 @@
+pjpoptwql\x2frlnjsportsHost\x3ASubject\x3aYAHOOdestroyed\x21
+((&#[0-9]+|&[a-zA-Z]+[0-9]*?);)
+User-Agent\x3A\dBarwww\x2Eaccoona\x2Ecom
+([A-Z]|[a-z])|\/|\?|\-|\+|\=|\&|\%|\$|\#|\@|\!|\||\\|\}|\]|\[|\{|\;|\:|\'|\"|\,|\.|\>|\<|\*|([0-9])|\(|\)|\s

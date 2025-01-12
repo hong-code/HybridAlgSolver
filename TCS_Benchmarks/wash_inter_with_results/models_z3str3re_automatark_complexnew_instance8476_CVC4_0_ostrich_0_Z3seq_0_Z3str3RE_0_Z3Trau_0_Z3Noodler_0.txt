@@ -1,0 +1,4 @@
+SpyBuddySubject\x3Astats\x2edrivecleaner\x2ecom
+^([\(]{1}[0-9]{3}[\)]{1}[\.| |\-]{0,1}|^[0-9]{3}[\.|\-| ]?)?[0-9]{3}(\.|\-| )?[0-9]{4}$
+/\x2emp3([\?\x5c\x2f]|$)/smiU
+filename=\x22Subject\x3awww\x2Eadoptim\x2Ecomreport\x2Fbar_pl\x2Fchk\.fcgi

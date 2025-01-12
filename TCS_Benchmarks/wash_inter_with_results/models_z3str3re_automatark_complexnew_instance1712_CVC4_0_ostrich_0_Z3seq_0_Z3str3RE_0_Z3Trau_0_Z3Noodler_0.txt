@@ -1,0 +1,5 @@
+\x2Fbar_pl\x2Fchk\.fcgiHWAEcom\x2Findex\.php\?tpid=
+nick_name=CIA-Test\s+User-Agent\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddywww\x2Eeasymessage\x2Enet
+^\s*[a-zA-Z0-9,\s]+\s*$
+\x2Fxml\x2Ftoolbar\x2FExploiter
+/\?a=dw[a-z]$/U

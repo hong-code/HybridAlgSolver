@@ -1,0 +1,3 @@
+/\x2ef4a([\?\x5c\x2f]|$)/smiU
+ver.*Black\s+CD\x2Furl=Host\x3anotification
+Spy\s+\x0d\x0a.*YAHOOdestroyed\x21Host\x3a

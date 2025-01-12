@@ -1,0 +1,5 @@
+e2give\.com.*Host\x3A.*Host\x3a
+\binterface\b.*(\bI[_]\w*\b)
+/\x00hide hide\x22\x09\x22([a-z0-9\x5c\x2e\x3a]+\x2eexe|sh)/
+^[F][O][\s]?[0-9]{3}$
+^(\d){7,8}$

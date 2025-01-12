@@ -1,0 +1,4 @@
+EFError.*\x2Fcs\x2Fpop4\x2F\s+
+User-Agent\x3AHost\x3a\x22The
+(vi(v))?d
+^\s*([A-Za-z]{2,4}\.?\s*)?(['\-A-Za-z]+\s*){1,2}([A-Za-z]+\.?\s*)?(['\-A-Za-z]+\s*){1,2}(([jJsSrR]{2}\.)|([XIV]{1,6}))?\s*$

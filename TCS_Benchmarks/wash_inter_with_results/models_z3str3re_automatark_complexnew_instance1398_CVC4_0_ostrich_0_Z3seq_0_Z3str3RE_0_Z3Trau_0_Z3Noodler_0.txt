@@ -1,0 +1,4 @@
+on\w+Host\x3AComputerKeylogger\x2EcomHost\x3AUser-Agent\x3A
+User-Agent\x3A.*Host\x3A\dName=Your\+Host\+is\x3A
+logs\s+TCP.*Toolbarads\.grokads\.com
+/\x2erm([\?\x5c\x2f]|$)/smiU

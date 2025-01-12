@@ -1,0 +1,2 @@
+(\s(\bon[a-zA-Z][a-z]+)\s?\=\s?[\'\"]?(javascript\:)?[\w\(\),\' ]*;?[\'\"]?)+
+Host\x3A\s+www\.iggsey\.comcs\x2Esmartshopper\x2Ecom

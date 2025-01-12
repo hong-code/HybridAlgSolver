@@ -1,0 +1,5 @@
+DA\dwww\x2Ee-finder\x2Ecc.*User-Agent\x3A
+^[+][0-9]\d{2}-\d{3}-\d{4}$
+http://www.mail-password-recovery.com/
+Host\x3a\dATTENTION\x3A.*User-Agent\x3A
+Authorization\x3a\s+Host\x3a

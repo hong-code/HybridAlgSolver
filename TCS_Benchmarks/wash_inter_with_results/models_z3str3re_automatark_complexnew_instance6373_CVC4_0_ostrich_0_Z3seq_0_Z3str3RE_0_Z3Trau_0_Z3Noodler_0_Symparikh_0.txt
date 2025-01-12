@@ -1,0 +1,3 @@
+/\x2epfb([\?\x5c\x2f]|$)/smiU
+^[B|K|T|P][A-Z][0-9]{4}$
+IPUSER-Host\x3AUser-Agent\x3A\x2Fsearchfast\x2F

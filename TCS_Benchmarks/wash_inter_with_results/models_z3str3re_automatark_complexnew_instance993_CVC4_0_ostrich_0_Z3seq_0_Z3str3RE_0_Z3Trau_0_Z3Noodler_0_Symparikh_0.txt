@@ -1,0 +1,4 @@
+/\x2ejmh([\?\x5c\x2f]|$)/smiU
+^[0-9]{8}$
+/User-Agent\x3a[^\x0d\x0a]*Java\/1\./H
+Host\x3A\w+www.*ToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom

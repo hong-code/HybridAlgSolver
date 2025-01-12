@@ -1,0 +1,4 @@
+/\/jlnp\.html$/U
+\x2Fcs\x2Fpop4\x2FA-Spywww\x2Eyoogee\x2Ecom
+^(20|23|27|30|33)-[0-9]{8}-[0-9]$
+^[a-zA-Z_:]+[a-zA-Z_:\-\.\d]*$

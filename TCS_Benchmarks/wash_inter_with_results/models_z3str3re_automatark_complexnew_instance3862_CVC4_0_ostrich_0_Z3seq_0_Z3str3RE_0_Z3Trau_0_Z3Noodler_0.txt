@@ -1,0 +1,5 @@
+^[A-Za-z0-9_]+$
+/\x2em4b([\?\x5c\x2f]|$)/smiU
+^([A-Z]+[a-zA-Z]*)(\s|\-)?([A-Z]+[a-zA-Z]*)?(\s|\-)?([A-Z]+[a-zA-Z]*)?$
+GmbH\d+Host\x3A\w+adblock\x2Elinkz\x2EcomUser-Agent\x3Aemail
+^([0-1]?\d|2[0-3]):([0-5]\d)$

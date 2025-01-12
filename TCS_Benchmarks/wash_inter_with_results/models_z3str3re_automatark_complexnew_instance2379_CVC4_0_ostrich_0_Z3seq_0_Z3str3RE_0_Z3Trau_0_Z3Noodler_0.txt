@@ -1,0 +1,3 @@
+/\x2fkills\x2etxt\x3f(t\d|p)\x3d\d{6}$/U
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F

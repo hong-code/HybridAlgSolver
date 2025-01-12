@@ -1,0 +1,4 @@
+^[a-zA-Z]\w{0,30}$
+^(\d{4}[- ]){3}\d{4}|\d{16}$
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A
+\.myway\.comToolbarUI2Host\x3ASubject\x3Atoxbqyosoe\x2fcpvm

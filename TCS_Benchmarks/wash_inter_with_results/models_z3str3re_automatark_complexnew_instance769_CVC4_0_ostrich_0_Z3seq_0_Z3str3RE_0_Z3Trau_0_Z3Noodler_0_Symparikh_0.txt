@@ -1,0 +1,5 @@
+Version\s+User-Agent\x3Abindmqnqgijmng\x2foj
+([0-9]{6}|[0-9]{3}\s[0-9]{3})
+^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$
+User-Agent\x3A\s+GETwww\x2Eoemji\x2Ecom
+toolbarplace\x2Ecom[^\n\r]*Server[^\n\r]*X-Mailer\x3a\sUser-Agent\x3aHost\x3ABar\x2Fnewsurfer4\x2F

@@ -1,0 +1,4 @@
+^((\(?0\d{4}\)?\s?\d{3}\s?\d{3})|(\(?0\d{3}\)?\s?\d{3}\s?\d{4})|(\(?0\d{2}\)?\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$
+Host\x3AIPAsynchaveAdToolszopabora\x2Einfo
+kl\x2Esearch\x2Eneed2find\x2Ecom\ssource%3Dultrasearch136%26campaign%3Dsnap
+(\<!--\s*.*?((--\>)|$))

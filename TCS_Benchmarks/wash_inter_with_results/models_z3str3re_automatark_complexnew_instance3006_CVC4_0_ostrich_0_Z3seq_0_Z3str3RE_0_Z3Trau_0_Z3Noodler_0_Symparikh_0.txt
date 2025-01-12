@@ -1,0 +1,4 @@
+\+44\s\(0\)\s\d{2}\s\d{4}\s\d{4}
+^[A-Za-z0-9_]+$
+\x2Fimages\x2Fnocache\x2Ftr\x2Fgca\x2Fm\.gif\?
+/\x2evwr([\?\x5c\x2f]|$)/smiU

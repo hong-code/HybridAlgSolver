@@ -1,0 +1,4 @@
+/^\x01\x02.{0,50}[a-zA-Z]{10}\x2fPK.{0,50}[a-zA-Z]{10}\x2f[a-zA-Z]{7}\.classPK/sR
+/((\d){2})?(\s|-)?((\d){2,4})?(\s|-){1}((\d){8})$/
+Host\x3aOnlineUser-Agent\x3Awww\x2Evip-se\x2Ecom
+OSSProxy\d+X-Mailer\x3Abacktrust\x2Ecom

@@ -1,0 +1,5 @@
+GmbH\d+Host\x3A\w+adblock\x2Elinkz\x2EcomUser-Agent\x3Aemail
+^09(73|74|05|06|15|16|17|26|27|35|36|37|79|38|07|08|09|10|12|18|19|20|21|28|29|30|38|39|89|99|22|23|32|33)\d{3}\s?\d{4}
+Ts2\x2F\s+insertinfoSnakeUser-Agent\x3A
+X-OSSproxy\x3a\dMicrosoft\x2APORT3\x2AProLive\+Version\+3A
+www\x2EZSearchResults\x2Ecom\dBar.*sponsor2\.ucmore\.com

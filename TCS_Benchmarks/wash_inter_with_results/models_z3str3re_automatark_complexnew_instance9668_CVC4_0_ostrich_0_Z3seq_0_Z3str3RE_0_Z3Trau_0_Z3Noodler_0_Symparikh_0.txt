@@ -1,0 +1,4 @@
+www\x2Emaxifiles\x2EcomServidor\x2E
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET
+passcorrect\x3B\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3Dversion
+^[0-9]{5}([- /]?[0-9]{4})?$

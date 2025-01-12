@@ -1,0 +1,4 @@
+^[13][a-zA-Z0-9]{26,33}$
+/\x2eram?([\?\x5c\x2f]|$)/smiU
+nick_name=CIA-Testsearchnuggetprotocolframe_ver2MailerToolbarUser-Agent\x3afromEnTrY
+<!*[^<>]*>

@@ -1,0 +1,2 @@
+from\s+\x2Fdss\x2Fcc\.2_0_0\.[^\n\r]*uploadServer
+/gate\x2ephp\x3freg=[a-zA-Z]{15}/U

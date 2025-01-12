@@ -1,0 +1,5 @@
+Pattern that matches all DVLA Vehicle Registration Marks (VRM). Allows for an optional single space between segments.
+^((\+989)|(989)|(00989)|(09|9))([1|2|3][0-9]\d{7}$)
+Host\x3A\s+www\x2Ewebfringe\x2Ecom\d+Version\d\x2ElSpywww\x2Elookquick\x2EcomSubject\x3A\x3a\x29\r\n
+/^slowhttp\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+/\x2Fmrow\x5Fpin\x2F\x3Fid\d+[a-z]{5,}\d{5}\x26rnd\x3D\d+/smi

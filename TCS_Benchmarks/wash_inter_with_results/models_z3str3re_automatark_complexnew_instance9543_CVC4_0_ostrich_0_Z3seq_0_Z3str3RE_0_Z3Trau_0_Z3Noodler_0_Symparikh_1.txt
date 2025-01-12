@@ -1,0 +1,2 @@
+<(\/{0,1})img(.*?)(\/{0,1})\>
+Host\x3A.*c=[^\n\r]*KeyloggerHost\x3Awww\.trackhits\.cc

@@ -1,0 +1,3 @@
+/\x2fkills\x2etxt\x3f(t\d|p)\x3d\d{6}$/U
+Host\x3A\s+Host\x3A.*c=MicrosoftStartupStarLoggerServerX-Mailer\x3a
+<[ \t]*[iI][mM][gG][ \t]*[sS][rR][cC][ \t]*=[ \t]*['\"]([^'\"]+)

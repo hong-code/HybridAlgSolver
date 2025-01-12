@@ -1,0 +1,4 @@
+for[^\n\r]*Host\x3A\sinternalcyber@yahoo\x2EcomHeadersRedirection
+^\\\\[\w-]+\\(([\w()-][\w\s()-]*[\w()-]+)|([\w()-]+))\$?(\\(([\w()-][\w\s()-]*[\w()-]+)|([\w()-]+)))*\\?$
+\b[A-z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b
+/^http\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

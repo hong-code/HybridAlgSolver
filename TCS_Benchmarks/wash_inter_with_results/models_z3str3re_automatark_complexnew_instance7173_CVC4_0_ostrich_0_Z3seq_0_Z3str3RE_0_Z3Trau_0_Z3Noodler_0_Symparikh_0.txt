@@ -1,0 +1,3 @@
+client\x2Ebaigoo\x2EcomUser\x3A
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom
+/filename\s*=\s*[^\r\n]*?\x2eapplication[\x22\x27\x3b\s\r\n]/i

@@ -1,0 +1,4 @@
+[:]{1}[-~+o]?[)>]+
+/^From\x3a[^\r\n]*SpyBuddy/smi
+IPOblivionhoroscopefowclxccdxn\x2fuxwn\.ddy
+Subject\x3areportGatorNavExcel

@@ -1,0 +1,4 @@
+replace(MobileNo,' ',''),'^(\+44|0044|0)(7)[4-9][0-9]{8}$'
+/\x2Ermf([\?\x5c\x2f]|$)/smiU
+Host\x3Ahirmvtg\x2fggqh\.kqhverA-Spy
+Referer\x3Awww\x2Eccnnlc\x2Ecom\x04\x00User-Agent\x3A\x22The

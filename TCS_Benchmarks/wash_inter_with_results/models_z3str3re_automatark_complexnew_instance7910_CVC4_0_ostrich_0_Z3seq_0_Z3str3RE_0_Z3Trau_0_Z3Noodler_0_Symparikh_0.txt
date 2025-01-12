@@ -1,0 +1,4 @@
+\.cfg\d+stale\d+GmbHPG=SPEEDBARcuReferer\x3ASpediazmnjgmomgbdz\x2fzzmw\.gztHost\x3AHost\x3Azopabora\x2Einfo
+\w*$
+/\?java\=[0-9]{2,6}$/U
+snprtz\x7Cdialnoref\x3D\x25user\x5FidPG=SPEEDBAR

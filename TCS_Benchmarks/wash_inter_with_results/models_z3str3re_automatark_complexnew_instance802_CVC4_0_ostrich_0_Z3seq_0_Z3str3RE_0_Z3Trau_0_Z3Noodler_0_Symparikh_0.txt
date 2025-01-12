@@ -1,0 +1,2 @@
+/\x2ejfif?([\?\x5c\x2f]|$)/smiU
+CUSTOM\swww\x2Elocators\x2Ecomas\x2Estarware\x2Ecom

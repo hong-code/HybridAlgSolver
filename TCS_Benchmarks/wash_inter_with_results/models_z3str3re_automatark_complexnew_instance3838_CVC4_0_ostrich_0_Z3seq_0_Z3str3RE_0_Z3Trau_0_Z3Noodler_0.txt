@@ -1,0 +1,5 @@
+/u=[\dA-Fa-f]{8}/smiU
+/^\x2fnosignal\.jpg\?\d\.\d+$/U
+^[a-z0-9_.-]*@[a-z0-9-]+(.[a-z]{2,4})+$
+^[0-9]{8}R[A-HJ-NP-TV-Z]$
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN

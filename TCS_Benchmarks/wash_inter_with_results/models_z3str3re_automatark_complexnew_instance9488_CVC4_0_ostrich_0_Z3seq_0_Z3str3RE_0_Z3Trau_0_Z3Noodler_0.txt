@@ -1,0 +1,5 @@
+Host\x3A.*Basic.*ProtoUser-Agent\x3A
+^-?\d*(\.\d+)?$
+[-+]((0[0-9]|1[0-3]):([03]0|45)|14:00)
+xpsp2-\s+spyblpat.*is\x2EphpBarFrom\x3A
+/\.gif\x3f[a-f0-9]{4,7}\x3d\d{6,8}$/U

@@ -1,0 +1,5 @@
+/onload\s*\x3D\s*[\x22\x27]?location\.reload\s*\x28/smi
+^((\+){1}[1-9]{1}[0-9]{0,1}[0-9]{0,1}(\s){1}[\(]{1}[1-9]{1}[0-9]{1,5}[\)]{1}[\s]{1})[1-9]{1}[0-9]{4,9}$
+Host\x3asearchresltwww\x2Ewordiq\x2Ecomwww2\x2einstantbuzz\x2ecom
+CUSTOM\swww\x2Elocators\x2Ecom\d+Seconds\-
+[A-Za-z_.0-9-]+@{1}[a-z]+([.]{1}[a-z]{2,4})+

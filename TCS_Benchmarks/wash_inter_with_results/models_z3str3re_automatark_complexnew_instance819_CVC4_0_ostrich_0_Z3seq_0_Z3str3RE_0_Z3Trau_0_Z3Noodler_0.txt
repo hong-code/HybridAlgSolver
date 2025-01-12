@@ -1,0 +1,5 @@
+/\x2ecis([\?\x5c\x2f]|$)/smiU
+^[0-9]{4}((0[1-9])|(1[0-2]))$
+\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}
+pjpoptwql\x2frlnjsportsHost\x3ASubject\x3aYAHOOdestroyed\x21
+^[^\\\/\?\*\"\'\>\<\:\|]*$

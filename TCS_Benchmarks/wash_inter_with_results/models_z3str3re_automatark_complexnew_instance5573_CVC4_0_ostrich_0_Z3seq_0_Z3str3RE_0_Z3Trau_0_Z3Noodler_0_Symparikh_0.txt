@@ -1,0 +1,2 @@
+tv\x2E180solutions\x2Ecom\s+have\s+Dayspassword\x3B0\x3BIncorrect
+www\x2Ealtnet\x2Ecom[^\n\r]*Host\x3A

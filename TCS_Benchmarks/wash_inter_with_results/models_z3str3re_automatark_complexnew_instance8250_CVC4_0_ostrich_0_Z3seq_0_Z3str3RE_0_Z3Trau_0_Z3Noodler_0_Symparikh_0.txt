@@ -1,0 +1,2 @@
+www\x2Efreescratchandwin\x2Ecom\w+Port.*User-Agent\x3AToolbarkit
+^[-+]?(\d?\d?\d?,?)?(\d{3}\,?)*(\.\d{1,2})?$

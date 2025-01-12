@@ -1,0 +1,5 @@
+Host\x3AUser-Agent\x3aHost\x3APortScaner
+www\x2Emakemesearch\x2EcomLOGOnevclxatmlhavj\x2fvsy
+/\.php\?hgfc\=[a-f0-9]+$/U
+/\x2ewmx([\?\x5c\x2f]|$)/smiU
+Host\x3a\dgpstool\x2eglobaladserver\x2ecomdesksearch\.dropspam\.com

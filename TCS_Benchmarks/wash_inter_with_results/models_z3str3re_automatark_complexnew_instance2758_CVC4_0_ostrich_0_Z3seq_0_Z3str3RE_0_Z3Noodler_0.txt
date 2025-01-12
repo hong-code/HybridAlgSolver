@@ -1,0 +1,5 @@
+^[+-]?[0-9]+$
+www\x2Eserverlogic3\x2Ecom\d+ToolBar\s+HWAEUser-Agent\x3A
+[\w!#$%&&apos;*+./=?`{|}~^-]+@[\d.A-Za-z-]+
+www\x2Elookster\x2Enet\s+Host\x3ADesktopBlade
+^[a-zA-Z]\w{3,14}$

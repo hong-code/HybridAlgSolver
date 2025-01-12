@@ -1,0 +1,5 @@
+comLOGUser-Agent\x3Aistsvcwww\x2Eoemji\x2EcomSystemSleuth
+are\d+Version\d+JMailBoxHostGENERAL_PARAM2
+/\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B(\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B){500}/m
+<textarea(.|\n)*?>((.|\n)*?)</textarea>
+<[ \t]*[iI][mM][gG][ \t]*[sS][rR][cC][ \t]*=[ \t]*['\"]([^'\"]+)

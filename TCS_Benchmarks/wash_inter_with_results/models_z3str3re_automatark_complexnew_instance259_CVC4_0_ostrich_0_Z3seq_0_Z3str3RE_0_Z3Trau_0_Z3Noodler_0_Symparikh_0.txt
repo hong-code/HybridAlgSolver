@@ -1,0 +1,3 @@
+(?s)/\*.*\*/
+\b[A-Z-[DFIOQUWZ]]\d[A-Z-[DFIOQU]]\ +\d[A-Z-[DFIOQU]]\d\b
+\w+@\w+\.\w+

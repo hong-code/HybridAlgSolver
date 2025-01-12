@@ -1,0 +1,3 @@
+Handyst=ClassStopperHost\x3ASpamBlockerUtility
+messages.*Windows.*From\x3AX-Mailer\x3a+\x2Fcbn\x2FearchSchwindler
+TPSystemHost\x3a\x7D\x7BUser\x3AAlert\x2Fcgi-bin\x2FX-Mailer\x3A

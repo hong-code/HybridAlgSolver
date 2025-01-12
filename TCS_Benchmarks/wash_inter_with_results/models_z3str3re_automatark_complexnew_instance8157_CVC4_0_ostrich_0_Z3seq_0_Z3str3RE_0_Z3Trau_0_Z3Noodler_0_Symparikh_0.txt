@@ -1,0 +1,5 @@
+/\x2eani([\?\x5c\x2f]|$)/smiU
+AD\s+c\.goclick\.com\w+asdbiz\x2Ebizfrom\x7croogoo\x7cCurrent
+/^\/[a-f0-9]{8}\.js\?cp\x3d/Umi
+(a|A)
+(^13((\ )?\d){4}$)|(^1[38]00((\ )?\d){6}$)|(^(((\(0[23478]\))|(0[23478]))(\ )?)?\d((\ )?\d){7}$)

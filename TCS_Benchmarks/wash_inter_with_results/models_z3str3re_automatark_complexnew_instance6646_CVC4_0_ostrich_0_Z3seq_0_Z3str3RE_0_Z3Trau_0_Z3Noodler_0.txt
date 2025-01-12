@@ -1,0 +1,5 @@
+/\/DES\d{9}O\d{4,5}\x2ejsp/Ui
+Apofis.*Port\x2E\s+\x2FNFO\x2CRegistered
+Toolbar\d+Host\x3A\d+4\x2e8\x2e4\x7D\x7BTrojan\x3Aare
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+httphostHost\x3aAgent\x22

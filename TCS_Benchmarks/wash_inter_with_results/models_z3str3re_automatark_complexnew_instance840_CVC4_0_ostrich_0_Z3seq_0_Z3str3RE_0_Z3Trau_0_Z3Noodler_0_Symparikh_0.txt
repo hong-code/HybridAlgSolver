@@ -1,0 +1,4 @@
+Host\x3AuploadServer3AdapupdEFErrorSubject\x3a
+^(\d{1,4}?[.]{0,1}?\d{0,3}?)$
+(\w(\s)?)+
+Host\x3A\s+\x2Ftoolbar\x2Fico\x2F\dencoderserverreport\<\x2Ftitle\>

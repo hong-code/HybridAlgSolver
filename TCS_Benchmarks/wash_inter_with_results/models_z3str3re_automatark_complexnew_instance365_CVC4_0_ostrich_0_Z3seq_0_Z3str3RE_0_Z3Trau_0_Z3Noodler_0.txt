@@ -1,0 +1,5 @@
+^((((H|h)(T|t)|(F|f))(T|t)(P|p)((S|s)?))\://)?(www.|[a-zA-Z0-9].)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,6}(\:[0-9]{1,5})*(/($|[a-zA-Z0-9\.\,\;\?\'\\\+&%\$#\=~_\-]+))*$
+/\x2fn\.php\?h=[a-zA-Z0-9]*?\&s=[a-zA-Z0-9]{1,5}$/Ui
+Server\s+www\x2Epeer2mail\x2Ecom.*Subject\x3AReferer\x3A
+^(\d){2}-(\d){2}-(\d){2}$
+Host\x3A\s+\.ico\x2FsLogearch195\.225\.Referer\x3A

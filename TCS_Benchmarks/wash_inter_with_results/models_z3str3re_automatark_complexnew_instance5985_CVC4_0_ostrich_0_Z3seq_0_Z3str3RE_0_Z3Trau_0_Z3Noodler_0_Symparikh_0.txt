@@ -1,0 +1,5 @@
+filename=\x22\dDA\s+www\x2Epeer2mail\x2Ecom
+Logger.*aresflashdownloader\x2Ecom
+^[a-zA-Z0-9\s.\-_']+$
+^[^ ,0]*$
+/(sIda\/sId|urua\/uru)[abcd]\.classPK/ims

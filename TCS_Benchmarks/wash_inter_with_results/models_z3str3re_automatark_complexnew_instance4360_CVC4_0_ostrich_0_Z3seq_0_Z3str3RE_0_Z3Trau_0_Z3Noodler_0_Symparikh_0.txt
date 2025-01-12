@@ -1,0 +1,2 @@
+User-Agent\x3A\d+dll\x3F.*started\x2EfeedbackUser-Agent\x3A
+/\/[a-zA-Z0-9]{32}\.jar/U

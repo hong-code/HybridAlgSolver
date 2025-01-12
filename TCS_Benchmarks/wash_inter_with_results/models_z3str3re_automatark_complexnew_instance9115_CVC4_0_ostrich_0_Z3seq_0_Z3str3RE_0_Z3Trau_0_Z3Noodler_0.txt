@@ -1,0 +1,4 @@
+\x28robert\x40blackcastlesoft\x2Ecom\x29
+^[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+\.[a-zA-Z]{2,4}\s*$
+User-Agent\x3AUser-Agent\x3AHost\x3a
+\x7D\x7BOS\x3AsecurityUser-Agent\x3awww\x2Esogou\x2Ecom

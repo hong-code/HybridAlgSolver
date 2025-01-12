@@ -1,0 +1,2 @@
+^[-+]?\d*$
+ads\.grokads\.com\s+deskwizz\x2Ecom

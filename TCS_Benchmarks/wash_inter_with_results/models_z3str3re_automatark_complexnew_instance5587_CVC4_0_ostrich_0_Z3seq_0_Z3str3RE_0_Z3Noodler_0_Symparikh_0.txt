@@ -1,0 +1,4 @@
+^[A-Z]\d{2}(\.\d){0,1}$
+Version\s+User-Agent\x3Abindmqnqgijmng\x2foj
+([A-Za-z]{2}|[A-Za-z]\d|\d[A-Za-z])[A-Za-z]{0,1}\d(\d{0,3})[A-Za-z]{0,1}
+^(LV-)[0-9]{4}$

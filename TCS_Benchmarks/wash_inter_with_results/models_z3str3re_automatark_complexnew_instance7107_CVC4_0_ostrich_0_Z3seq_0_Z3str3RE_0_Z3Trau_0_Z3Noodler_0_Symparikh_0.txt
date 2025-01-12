@@ -1,0 +1,4 @@
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET
+dialup\x5fvpn\x40hermangroup\x2Eorg\s+www\x2Epeer2mail\x2Ecom
+https?://[\d.A-Za-z-]+\.[A-Za-z]{2,6}/?
+/^syn\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

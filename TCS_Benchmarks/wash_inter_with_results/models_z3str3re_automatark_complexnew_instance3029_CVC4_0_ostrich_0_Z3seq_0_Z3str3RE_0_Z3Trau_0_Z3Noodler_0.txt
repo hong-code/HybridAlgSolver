@@ -1,0 +1,3 @@
+http[s]?://(www.facebook|[a-zA-Z]{2}-[a-zA-Z]{2}.facebook|facebook)\.com/(pages/[a-zA-Z0-9\.-]+/[0-9]+|[a-zA-Z0-9\.-]+)[/]?$
+^[0]|[0-3]\.(\d?\d?)|[4].[0]$
+select\x2FGet\s+Host\x3A.*ppcdomain\x2Eco\x2Euk

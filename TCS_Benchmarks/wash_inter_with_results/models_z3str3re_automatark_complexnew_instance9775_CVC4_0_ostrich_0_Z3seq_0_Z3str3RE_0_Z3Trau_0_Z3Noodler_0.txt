@@ -1,0 +1,4 @@
+/\?id=[A-Z0-9]{20}&cmd=img/U
+Word\s+User-Agent\x3awww\x2Esogou\x2Ecom
+\x5D\x2520\x5BPort_\d+TM_SEARCH3engineto=\x2Fezsb\s\x3A
+Toolbar[^\n\r]*url=\d+Host\x3AWelcome\x2FcommunicatortbGateCrasher

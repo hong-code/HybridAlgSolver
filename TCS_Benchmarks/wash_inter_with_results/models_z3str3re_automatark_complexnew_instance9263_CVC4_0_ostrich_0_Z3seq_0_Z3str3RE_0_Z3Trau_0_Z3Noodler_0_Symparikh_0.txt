@@ -1,0 +1,3 @@
+\x2Ehtml\s+IDENTIFYwww\x2Eccnnlc\x2Ecomfilename=\x22Referer\x3A
+NETObserveSupervisorHost\x3Awebsearch\x2Edrsnsrch\x2Ecom
+^\s*

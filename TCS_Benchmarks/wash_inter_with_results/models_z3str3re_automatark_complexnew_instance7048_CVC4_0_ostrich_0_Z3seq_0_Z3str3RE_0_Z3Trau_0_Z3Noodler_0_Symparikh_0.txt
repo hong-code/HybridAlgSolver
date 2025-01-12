@@ -1,0 +1,2 @@
+trustyfiles\x2Ecom\d+lnzzlnbk\x2fpkrm\.fin\s+
+^(((0|((\+)?91(\-)?))|((\((\+)?91\)(\-)?)))?[7-9]\d{9})?$

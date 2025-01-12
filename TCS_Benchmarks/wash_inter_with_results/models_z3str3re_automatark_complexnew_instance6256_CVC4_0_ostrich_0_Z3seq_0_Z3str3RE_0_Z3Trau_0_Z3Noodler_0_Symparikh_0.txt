@@ -1,0 +1,3 @@
+tv\x2E180solutions\x2Ecom\s+have\s+Dayspassword\x3B0\x3BIncorrect
+/\x2f\{\x23[^\x2f{}]+?\}(\.action)?\x2f?$/miU
+^(([a-zA-Z]+\d+)|(\d+[a-zA-Z]+))[a-zA-Z0-9]*$

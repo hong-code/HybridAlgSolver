@@ -1,0 +1,4 @@
+AgentHWAEUser-Agent\x3A
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+^[-+]?[0-9]\d{0,2}(\.\d{1,2})?%?$
+AD\s+c\.goclick\.com\w+asdbiz\x2Ebizfrom\x7croogoo\x7cCurrent

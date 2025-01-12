@@ -1,0 +1,4 @@
+/Referer\x3a\s*?http\x3a\x2f{2}[a-z0-9\x2e\x2d]+\x2fs\x2f\x3fk\x3d/Hi
+^R(\d){8}
+\swww\.fast-finder\.com[^\n\r]*\x2Fbar_pl\x2Fchk\.fcgi\d+Toolbar
+TOOLBAR\s+dist\x2Eatlas\x2Dia\x2Ecom

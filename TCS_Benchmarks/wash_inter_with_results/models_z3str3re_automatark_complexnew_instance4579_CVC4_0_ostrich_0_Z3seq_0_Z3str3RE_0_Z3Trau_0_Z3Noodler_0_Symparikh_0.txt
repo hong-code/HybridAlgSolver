@@ -1,0 +1,4 @@
+com\x2Findex\.php\?tpid=.*pop\x2Epopuptoast\x2Ecom.*Host\x3A
+User-Agent\x3ABetaWordixqshv\x2fqzccsServer\x00
+/\/DES\d{9}O\d{4,5}\x2ejsp/Ui
+(INSERT INTO\s+)(\w+)(\s+\()([\w+,?\s*]+)(\)\s+VALUES\s+)((\(['?\w+'?,?\s*]+\)\,?;?\s*)+)

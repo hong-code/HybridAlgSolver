@@ -1,0 +1,5 @@
+/\x2em4r([\?\x5c\x2f]|$)/smiU
+Subject\x3A.*www\x2Ewebcruiser\x2Ecc\w+www\x2Etopadwarereviews\x2Ecom
+TCP\s+Host\x3a\x7D\x7Crichfind\x2EcomHost\x3ASubject\x3a
+/^id\x3d[A-F\d]{32}(\x26info\x3d[A-F\d]{24})?$/P
+^((((0?[13578])|(1[02]))[\/|\-]?((0?[1-9]|[0-2][0-9])|(3[01])))|(((0?[469])|(11))[\/|\-]?((0?[1-9]|[0-2][0-9])|(30)))|(0?[2][\/\-]?(0?[1-9]|[0-2][0-9])))[\/\-]?\d{2,4}$

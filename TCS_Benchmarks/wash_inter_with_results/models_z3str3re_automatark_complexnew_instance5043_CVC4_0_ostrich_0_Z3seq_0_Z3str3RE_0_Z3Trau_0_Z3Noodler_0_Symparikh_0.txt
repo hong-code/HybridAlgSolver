@@ -1,0 +1,5 @@
+^([-]?[0-9])$|^([-]?[1][0-2])$
+[\w\-_\+\(\)]{0,}[\.png|\.PNG]{4}
+Norton customer service is a type of method used to care your personal or business computer system from any virus or spyware.
+(^[1-9]$)|(^10$)
+adblock\x2Elinkz\x2Ecomwww\.iggsey\.comHost\x3A

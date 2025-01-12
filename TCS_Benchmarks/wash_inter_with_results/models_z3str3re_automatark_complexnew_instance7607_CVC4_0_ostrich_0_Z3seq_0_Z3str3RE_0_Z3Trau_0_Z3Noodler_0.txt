@@ -1,0 +1,5 @@
+X-FILTERED-BY-GHOST\x3a\d+yxegtd\x2fefcwgHost\x3ATPSystem
+/sid=[0-9A-F]{32}/U
+\d{2}[.]{1}\d{2}[.]{1}[0-9A-Za-z]{1}
+/php\?jnlp\=[a-f0-9]{10}($|\x2c)/U
+(^N/A$)|(^[-]?(\d+)(\.\d{0,3})?$)|(^[-]?(\d{1,3},(\d{3},)*\d{3}(\.\d{1,3})?|\d{1,3}(\.\d{1,3})?)$)

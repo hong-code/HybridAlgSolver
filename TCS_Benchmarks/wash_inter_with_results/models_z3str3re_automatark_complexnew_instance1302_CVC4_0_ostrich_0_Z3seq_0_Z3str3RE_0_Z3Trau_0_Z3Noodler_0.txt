@@ -1,0 +1,5 @@
+^((\\{2}\w+)\$?)((\\{1}\w+)*$)
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$
+\x7D\x7BTrojan\x3A\w+Host\x3A\s\d\x2El
+Host\x3A.*rt[^\n\r]*Host\x3AUser-Agent\x3A

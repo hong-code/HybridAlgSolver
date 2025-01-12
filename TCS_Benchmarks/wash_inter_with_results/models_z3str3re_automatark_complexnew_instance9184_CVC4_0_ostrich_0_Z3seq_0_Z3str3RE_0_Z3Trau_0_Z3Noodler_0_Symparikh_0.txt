@@ -1,0 +1,3 @@
+www\x2Efreescratchandwin\x2Ecom\w+Port.*User-Agent\x3AToolbarkit
+whenu\x2Ecom\d+Agent\stoWebupdate\.cgithisHost\x3aconnection
+User-Agent\x3A\d+moreKontikiHost\x3a

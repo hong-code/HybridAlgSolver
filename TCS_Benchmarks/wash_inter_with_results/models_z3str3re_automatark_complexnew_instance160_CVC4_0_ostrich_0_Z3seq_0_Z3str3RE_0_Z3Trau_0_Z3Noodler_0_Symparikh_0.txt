@@ -1,0 +1,2 @@
+/\x2emotn([\?\x5c\x2f]|$)/smiU
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc

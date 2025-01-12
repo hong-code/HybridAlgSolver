@@ -1,0 +1,4 @@
+Subject\x3A\s+www\x2eproventactics\x2ecomdownloads\x2Emorpheus\x2Ecom\x2Frotation
+User-Agent\x3Auuid=aadserverfowclxccdxn\x2fuxwn\.ddy
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET
+/^guid=[a-f0-9]{32}\x26state=(LOST|WORK|WAIT|RUN)/P

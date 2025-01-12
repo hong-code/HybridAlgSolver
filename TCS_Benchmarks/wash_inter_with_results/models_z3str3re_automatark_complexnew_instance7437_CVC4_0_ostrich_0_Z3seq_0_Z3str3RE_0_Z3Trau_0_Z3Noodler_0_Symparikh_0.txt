@@ -1,0 +1,5 @@
+(Mo(n(day)?)?|Tu(e(sday)?)?|We(d(nesday)?)?|Th(u(rsday)?)?|Fr(i(day)?)?|Sa(t(urday)?)?|Su(n(day)?)?)
+for\sinternalcyber@yahoo\x2EcomHeadersRedirectionHost\x3A
+^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}
+(\+?1[- .]?)?[.\(]?[\d^01]\d{2}\)?[- .]?\d{3}[- .]?\d{4}
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom

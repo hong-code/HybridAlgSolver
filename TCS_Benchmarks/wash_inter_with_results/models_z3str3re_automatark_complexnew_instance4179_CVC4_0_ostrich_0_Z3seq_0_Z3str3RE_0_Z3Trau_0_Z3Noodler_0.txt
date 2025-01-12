@@ -1,0 +1,4 @@
+\x5D\x2520\x5BPort_\d+TM_SEARCH3engineto=\x2Fezsb\s\x3A
+^\d{3}-\d{2}-\d{4}$
+URLUBAgent%3fSchwindlerurl=Host\x3ahttpUser-Agent\x3A
+DmInf\x5E\x0D\x0A\x0D\x0AAttached\x2Fbar_pl\x2Fchk\.fcgi

@@ -1,0 +1,5 @@
+YAHOODesktopHost\x3aLOGHost\x3AtvshowticketsResultsFROM\x3A
+^([a-zA-Z0-9]+([\.+_-][a-zA-Z0-9]+)*)@(([a-zA-Z0-9]+((\.|[-]{1,2})[a-zA-Z0-9]+)*)\.[a-zA-Z]{2,6})$
+^\([0-9]{3}\)\s?[0-9]{3}(-|\s)?[0-9]{4}$|^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$
+^[5,6]\d{7}|^$
+/\x2fAdmin\x2fFunctionsClient\x2f(check.txt|Select.php|Update.php)/iU

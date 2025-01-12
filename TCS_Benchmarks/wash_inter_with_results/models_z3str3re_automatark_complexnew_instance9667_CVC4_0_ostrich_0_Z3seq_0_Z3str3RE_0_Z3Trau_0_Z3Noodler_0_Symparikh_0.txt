@@ -1,0 +1,3 @@
+\x2Edat\x2EToolbar\x7D\x7BOS\x3Atoolsbar\x2Ekuaiso\x2Ecom
+([a-z\s.\-_'])*<\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\>|^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+User-Agent\x3Aconfig\x2E180solutions\x2Ecom

@@ -1,0 +1,5 @@
+http://www.mail-password-recovery.com/
+User-Agent\x3A\s+Robert
+\x2Fcgi\x2Flogurl\.cgi\s+Host\x3AUser-Agent\x3ASurveillancecom
+[0-9]+
+/\/pdfx\.html$/U

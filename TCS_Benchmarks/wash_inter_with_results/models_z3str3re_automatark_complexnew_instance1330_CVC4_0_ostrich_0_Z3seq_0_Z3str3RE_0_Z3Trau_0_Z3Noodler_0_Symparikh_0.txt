@@ -1,0 +1,5 @@
+/\x2Esum([\?\x5c\x2f]|$)/smiU
+\.exe\s+ZC-Bridge\s+TPSystemHost\x3AHost\x3a
+^1+0+$
+/^\x7b\x22[a-f0-9]{4}\x22\x3a\x22([a-f0-9]{32}|false)\x22,/smiP
+^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$

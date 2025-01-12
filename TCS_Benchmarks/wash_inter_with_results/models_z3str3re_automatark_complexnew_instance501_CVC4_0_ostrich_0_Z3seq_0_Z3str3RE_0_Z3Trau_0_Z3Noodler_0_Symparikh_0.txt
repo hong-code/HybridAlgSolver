@@ -1,0 +1,3 @@
+Cookie\x3aAppName\x2FGRSI\|Server\|Host\x3Aorigin\x3Dsidefind
+Cookie\x3a\s+\x2FGRSI\|Server\|Host\x3Aorigin\x3Dsidefind
+User-Agent\x3A\s+BossUser-Agent\x3ASpediaUser-Agent\x3A

@@ -1,0 +1,3 @@
+(^[0-9]{0,10}$)
+\d{1,2}d \d{1,2}h
+www\x2Emirarsearch\x2Ecom

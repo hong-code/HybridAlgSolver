@@ -1,0 +1,5 @@
+\x2Fta\x2FNEWS\x2Fpassword\x3B1\x3BOptix
+^((Fred|Wilma)\s+Flintstone|(Barney|Betty)\s+Rubble)$
+http[s]?://[a-zA-Z0-9.-/]+
+[a-zA-Z0-9]*
+Windows\s+haveFTUser-Agent\x3ADayspassword\x3B0\x3BIncorrect

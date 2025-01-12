@@ -1,0 +1,5 @@
+.*[a-zA-Z]$
+connection\sHost\x3aSubject\x3A\.bmp
+User-Agent\x3AUser-Agent\x3a
+\.cfg\x2Fsearchfast\x2F\x22007A-SpyWebsitehttp\x3A\x2F\x2Fsupremetoolbar\.com\x2Findex\.php\?tpid=
+Word\s+ExploiterSchwindler\x2Fr\x2Fkeys\x2Fkeys

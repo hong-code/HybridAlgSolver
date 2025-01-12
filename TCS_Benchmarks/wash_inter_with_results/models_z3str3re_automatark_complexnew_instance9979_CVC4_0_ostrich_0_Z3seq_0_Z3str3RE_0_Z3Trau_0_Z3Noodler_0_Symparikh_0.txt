@@ -1,0 +1,5 @@
+Host\x3AHost\x3AFrom\x3a\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furaxbnymomspyo\x2fzowy
+fsbuff\s+User-Agent\x3Afrom\x3A
+/^\x2f[a-z\d]{1,8}\.exe$/Ui
+(((\d{0,2})\(\d{3}\))|(\d{3}-))\d{3}-\d{4}\s{0,}((([Ee][xX][Tt])|([Pp][Oo][Ss][Tt][Ee])):\d{1,5}){0,1}
+body=wordHost\x3ASpediartaddrEverywareHost\x3AHost\x3A

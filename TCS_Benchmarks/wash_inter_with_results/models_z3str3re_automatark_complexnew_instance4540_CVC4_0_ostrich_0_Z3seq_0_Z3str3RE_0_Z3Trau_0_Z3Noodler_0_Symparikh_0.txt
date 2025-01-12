@@ -1,0 +1,3 @@
+/^\/[a-f0-9]{32}\/[a-f0-9]{32}\.swf$/Ui
+Computeron\x3Acom\x3E2\x2E41
+Kontiki\s+resultsmaster\x2Ecom\x7croogoo\x7c

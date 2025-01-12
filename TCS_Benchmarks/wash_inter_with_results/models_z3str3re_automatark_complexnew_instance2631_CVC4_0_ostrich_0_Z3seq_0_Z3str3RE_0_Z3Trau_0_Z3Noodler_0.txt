@@ -1,0 +1,4 @@
+Toolbar[^\n\r]*tvshowtickets\w+weatherHost\x3AUser-Agent\x3Atwfofrfzlugq\x2feve\.qd
+http[s]?://(www|[a-zA-Z]{2}-[a-zA-Z]{2})\.facebook\.com/(pages/[a-zA-Z0-9\.-]+/[0-9]+|[a-zA-Z0-9\.-]+)[/]?$
+UI2Host\x3ADesktopUser-Agent\x3a\x2Fnotifier\x2F
+<select(.|\n)*?selected(.|\n)*?>(.*?)</option>(.|\n)*?</select>

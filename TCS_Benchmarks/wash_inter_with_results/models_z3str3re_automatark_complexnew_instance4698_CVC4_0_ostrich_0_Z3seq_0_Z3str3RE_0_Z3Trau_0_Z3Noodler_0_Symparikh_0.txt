@@ -1,0 +1,3 @@
+\x2Fcgi\x2Flogurl\.cgi\s+Host\x3AUser-Agent\x3ASurveillancecom
+/\?a=dw[a-z]$/U
+\x7D\x7BTrojan\x3A\w+Host\x3Arprpgbnrppb\x2fci

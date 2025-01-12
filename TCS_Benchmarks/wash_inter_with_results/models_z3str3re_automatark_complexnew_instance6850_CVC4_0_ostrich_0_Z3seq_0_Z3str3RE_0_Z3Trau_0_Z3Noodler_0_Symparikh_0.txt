@@ -1,0 +1,3 @@
+passcorrect\x3B\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3Dversion
+\d{4}\s\d{4}\s\d{4}\s\d{4}$
+^([0-7]{3})$

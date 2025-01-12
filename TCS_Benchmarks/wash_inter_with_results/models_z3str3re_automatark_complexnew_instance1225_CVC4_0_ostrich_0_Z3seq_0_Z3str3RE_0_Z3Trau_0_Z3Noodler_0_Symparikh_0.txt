@@ -1,0 +1,5 @@
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$
+/\x2easx([\?\x5c\x2f]|$)/smiU
+on\s+dist\x2Eatlas\x2Dia\x2Ecom
+/\/flupdate\/\d\.html/iU

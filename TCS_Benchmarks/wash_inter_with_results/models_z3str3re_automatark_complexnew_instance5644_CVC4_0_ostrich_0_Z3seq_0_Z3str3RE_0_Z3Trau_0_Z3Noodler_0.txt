@@ -1,0 +1,5 @@
+^[1-9]0?$
+\x28\x29url=http\x3A1\x2E0b3\x2EaspxWatchDogupwww\.klikvipsearch\.comNetspyt=WeHost\x3A\x2Fcgi\x2Flogurl\.cgi
+Shell\x2FFileage\x7D\x7BPort\x3Aupd\x2Elop\x2Ecom
+dl\x2Eweb-nexus\x2Enet\d+www\x2Eonlinecasinoextra\x2Ecomsqlads\.grokads\.com
+/^\x2f[a-f0-9]{135}/Um

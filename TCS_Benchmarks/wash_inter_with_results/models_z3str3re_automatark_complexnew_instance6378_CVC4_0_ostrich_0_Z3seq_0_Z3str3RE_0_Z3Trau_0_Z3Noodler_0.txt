@@ -1,0 +1,5 @@
+^(.|\n){0,16}$
+dialup\x5fvpn\x40hermangroup\x2EorgUser-Agent\x3A
+^(([1-9]{1}[0-9]{0,5}([.]{1}[0-9]{0,2})?)|(([0]{1}))([.]{1}[0-9]{0,2})?)$
+FTP.*www\x2Ewordiq\x2Ecom
+frame_ver2\s+communityLibrarySoftwareWinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid

@@ -1,0 +1,3 @@
+addrwww\x2Etrustedsearch\x2EcomX-Mailer\x3A
+/^connected\x2e[^\x0D\x0A]*20\d\d[^\x0D\x0A]*ver\x3A\s+Legends\s2\x2e1/smi
+(^[1-9]$)|(^10$)

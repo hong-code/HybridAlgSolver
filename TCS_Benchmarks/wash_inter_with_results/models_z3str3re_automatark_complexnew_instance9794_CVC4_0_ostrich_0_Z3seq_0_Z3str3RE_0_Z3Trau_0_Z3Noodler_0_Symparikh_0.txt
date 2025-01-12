@@ -1,0 +1,2 @@
+devSoft\x27s\s+Host\x3AHost\x3A
+SpyAgent\d+nick_name=CIA-Test\d+url=http\x3A\d+\x2FNFO\x2CRegistered\x28BDLL\x29

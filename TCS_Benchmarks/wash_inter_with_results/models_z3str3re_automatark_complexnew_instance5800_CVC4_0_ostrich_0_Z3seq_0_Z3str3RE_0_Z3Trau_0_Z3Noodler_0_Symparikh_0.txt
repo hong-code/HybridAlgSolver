@@ -1,0 +1,3 @@
+\$(\d*)??,??(\d*)??,??(\d*)\.(\d*)
+User-Agent\x3AUser-Agent\x3Awww\.take5bingo\.comUser-Agent\x3A
+\x2Frss\d+answer\sHost\x3A

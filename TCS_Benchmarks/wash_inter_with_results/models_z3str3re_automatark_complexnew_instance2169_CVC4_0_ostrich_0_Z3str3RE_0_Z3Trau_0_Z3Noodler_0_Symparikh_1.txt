@@ -1,0 +1,2 @@
+^(.)+\.(jpg|jpeg|JPG|JPEG)$
+as\x2Estarware\x2Ecom.*Casino.*LOG.*FilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F

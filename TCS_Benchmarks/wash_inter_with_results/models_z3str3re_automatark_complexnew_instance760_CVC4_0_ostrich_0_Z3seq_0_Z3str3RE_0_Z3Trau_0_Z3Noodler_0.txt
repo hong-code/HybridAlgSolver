@@ -1,0 +1,4 @@
+Host\x3aOnlineUser-Agent\x3Awww\x2Evip-se\x2Ecom
+url=\d+Host\x3A.*backtrust\x2Ecomv\x2ELoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?
+^(\d{1,2})(\s?(H|h)?)(:([0-5]\d))?$
+Host\x3A\w+page=largePass-Onseqepagqfphv\x2fsfd

@@ -1,0 +1,4 @@
+\x2Ephp\s+Host\x3Aorigin\x3Dsidefind\x22The
+/\/docushare\/dsweb\/ResultBackgroundJobMultiple\/\d*[^\d]/U
+rprpgbnrppb\x2fci\d\x2ElStopperHost\x3AHost\x3aclvompycem\x2fcen\.vcn
+^0?[0-9]?[0-9]$|^(100)$

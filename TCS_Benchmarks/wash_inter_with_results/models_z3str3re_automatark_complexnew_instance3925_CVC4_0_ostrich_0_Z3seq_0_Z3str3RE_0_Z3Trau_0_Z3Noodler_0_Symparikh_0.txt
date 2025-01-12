@@ -1,0 +1,3 @@
+www\.iggsey\.com\sX-Mailer\x3aComputeron\x3Acom\x3E2\x2E41
+Host\x3Aact=Host\x3aUser-Agent\x3AUser-Agent\x3ALiteselect\x2FGet
+^[2-7]{1}[0-9]{3}$

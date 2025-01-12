@@ -1,0 +1,4 @@
+^([1-9]{0,1})([0-9]{1})((\.[0-9]{0,1})([0-9]{1})|(\,[0-9]{0,1})([0-9]{1}))?$
+^(\(\d{3}\)[- ]?|\d{3}[- ])?\d{3}[- ]\d{4}$
+ShadowNet\dsearchresltAID\x2FUser-Agent\x3AFen\xeatreEye\x2Fdss\x2Fcc\.2_0_0\.
+/\x2ewmf([\?\x5c\x2f]|$)/smiU

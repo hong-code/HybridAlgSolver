@@ -1,0 +1,5 @@
+^[+-]?\d*(([,.]\d{3})+)?([,.]\d+)?([eE][+-]?\d+)?$
+User-Agent\x3AFrom\x3Awww\x2Eonlinecasinoextra\x2EcomHost\x3A
+^\s*
+HWAE[^\n\r]*Email[^\n\r]*User-Agent\x3AUser-Agent\x3awowokayHost\x3A
+ClientsConnected-\d+online-casino-searcher\.com\s+Warezxmlns\x3A

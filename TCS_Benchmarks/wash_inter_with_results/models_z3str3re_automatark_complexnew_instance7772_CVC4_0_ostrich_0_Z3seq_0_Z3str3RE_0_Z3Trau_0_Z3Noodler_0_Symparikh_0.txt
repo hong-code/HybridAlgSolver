@@ -1,0 +1,4 @@
+^[0-9](\.[0-9]+)?$
+<asp:requiredfieldvalidator(\s*\w+\s*=\s*\"?\s*\w+\s*\"?\s*)+\s*>\s*<\/asp:requiredfieldvalidator>
+Host\x3a.*\x2Frss.*Desktopcargo=report\<\x2Ftitle\>
+Subject\x3areportGatorNavExcel

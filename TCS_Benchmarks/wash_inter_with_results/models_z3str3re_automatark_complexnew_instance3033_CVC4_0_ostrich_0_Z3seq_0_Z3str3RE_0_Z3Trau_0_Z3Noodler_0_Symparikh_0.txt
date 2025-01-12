@@ -1,0 +1,4 @@
+/[^\x20-\x7e\x0d\x0a]{4}/P
+^([A-Za-z]{5})([0-9]{4})([A-Za-z]{1})$
+awbeta\.net-nucleus\.com\d
+Host\x3APG=SPEEDBARReferer\x3a

@@ -1,0 +1,3 @@
+\x3Cchat\x3EHost\x3Atid\x3D\x7B
+^[0-9]{5}(-[0-9]{4})?$
+\x7D\x7BTrojan\x3A\w+Host\x3Arprpgbnrppb\x2fci

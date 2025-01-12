@@ -1,0 +1,5 @@
+\x2Fdesktop\x2FSystemwwwfromToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+/\x2em4b([\?\x5c\x2f]|$)/smiU
+/\x2eplp([\?\x5c\x2f]|$)/smiU
+\x22Thewebsearch\.getmirar\.com
+^([0]?[1-9]|[1|2][0-9]|[3][0|1])[/]([0]?[1-9]|[1][0-2])[/]([0-9]{4}|[0-9]{2}) ([0-1][0-9]|[2][0-3]):([0-5][0-9])$

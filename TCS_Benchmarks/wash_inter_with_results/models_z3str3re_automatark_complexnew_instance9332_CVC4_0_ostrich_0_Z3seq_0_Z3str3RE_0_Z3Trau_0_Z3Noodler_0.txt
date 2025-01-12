@@ -1,0 +1,5 @@
+/update\/barcab\/.*?tn=.*id=.*version=/smi
+Keylogger[^\n\r]*dll\x3F\w+www2\x2einstantbuzz\x2ecom\s+Online100013Agentsvr\x5E\x5EMerlinHost\x3AHost\x3Aport
+/\x2erm([\?\x5c\x2f]|$)/smiU
+The company delivers cakes and also online send mothers  day flowers to Delhi.
+version\s+error\*\-\*WrongUser-Agent\x3Acom\x2Findex\.php\?tpid=

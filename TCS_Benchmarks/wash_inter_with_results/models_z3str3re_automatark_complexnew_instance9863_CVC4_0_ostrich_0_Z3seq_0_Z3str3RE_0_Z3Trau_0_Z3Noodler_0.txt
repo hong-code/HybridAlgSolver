@@ -1,0 +1,4 @@
+User-Agent\x3A\d+PortaURLSSKC\x7croogoo\x7c\.cfgmPOPrtCUSTOMPal
+/\/jlnp\.html$/U
+Server\s+www\x2Epeer2mail\x2Ecom.*Subject\x3AReferer\x3A
+replace(MobileNo,' ',''),'^(\+44|0044|0)(7)[4-9][0-9]{8}$'

@@ -1,0 +1,4 @@
+toolbar_domain_redirectriggiymd\x2fwdhi\.vhi
+com\x2Findex\.php\?tpid=.*pop\x2Epopuptoast\x2Ecom.*Host\x3A
+Hello\x2E\s+ovplrichfind\x2EcomCookie\x3a
+(\/\*(\s*|.*?)*\*\/)|(--.*)

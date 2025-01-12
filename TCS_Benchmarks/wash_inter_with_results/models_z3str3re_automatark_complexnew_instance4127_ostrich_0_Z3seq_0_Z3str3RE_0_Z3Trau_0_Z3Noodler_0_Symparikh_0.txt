@@ -1,0 +1,3 @@
+(\s|\n|^)(\w+://[^\s\n]+)
+/\s\:Hello everyone,\s.*?\shere\sand\si'm\shere\sand\sready\sto\sDDoS\./
+^(([1-9]{1})|([0-1][1-2])|(0[1-9])|([1][0-2])):([0-5][0-9])(([aA])|([pP]))[mM]$

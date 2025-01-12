@@ -1,0 +1,2 @@
+User-Agent\x3AHost\x3ATeomaBarHost\x3AHoursHost\x3A
+/\?action=\w+gen&v=\d+/U

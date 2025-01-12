@@ -1,0 +1,5 @@
+^[-+]?\d+(\.\d)?\d*$
+Mirar_KeywordContent
+/\x2erv([\?\x5c\x2f]|$)/smiU
+couponbar\.coupons\.com\dOwner\x3A\s+Host\x3A
+^\s+|\s+$

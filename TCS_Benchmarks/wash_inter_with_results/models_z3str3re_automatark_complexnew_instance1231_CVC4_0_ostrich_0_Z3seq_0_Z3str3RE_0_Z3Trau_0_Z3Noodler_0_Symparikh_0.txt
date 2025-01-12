@@ -1,0 +1,3 @@
+^(\[a-zA-Z '\]+)$
+WebsiteUser-Agent\x3Ahttphostfast-look\x2Ecom
+^(FR)?\s?[A-Z0-9-[IO]]{2}[0-9]{9}$

@@ -1,0 +1,3 @@
+kl\x2Esearch\x2Eneed2find\x2Ecom\ssource%3Dultrasearch136%26campaign%3Dsnap
+User-Agent\x3A\s+Robert
+/^\/[\w-]{48}$/U

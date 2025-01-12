@@ -1,0 +1,4 @@
+corep\x2Edmcast\x2Ecom\s+FunWebProducts\w+searchreslt\x7D\x7BSysuptime\x3ASubject\x3AHANDY
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F
+http\s+Host\x3A[^\n\r]*WinInet3Azopabora\x2Einfo\x2Fnotifier\x2FUser-Agent\x3A
+^<\!\-\-(.*)+(\/){0,1}\-\->$

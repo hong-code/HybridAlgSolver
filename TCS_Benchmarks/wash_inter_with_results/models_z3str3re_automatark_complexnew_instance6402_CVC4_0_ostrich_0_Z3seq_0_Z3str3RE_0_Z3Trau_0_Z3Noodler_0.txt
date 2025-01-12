@@ -1,0 +1,5 @@
+^(ht|f)tp(s?)\:\/\/(([a-zA-Z0-9\-\._]+(\.[a-zA-Z0-9\-\._]+)+)|localhost)(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?([\d\w\.\/\%\+\-\=\&\?\:\\\"\'\,\|\~\;]*)$
+ProSpywww\x2Eemp3finder\x2Ecomwww
+([^\\"]|\\.)*
+/\x2erp([\?\x5c\x2f]|$)/smiU
+User-Agent\x3A\d+User-Agent\x3A\d+connectedNodes\/cgi-bin\/PopupV

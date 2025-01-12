@@ -1,0 +1,5 @@
+/^\/blog\/[a-zA-Z0-9]{3}\.(g(3|e)d|mm|vru|be|nut)$/U
+/^([a-z0-9])(([\-.]|[_]+)?([a-z0-9]+))*(@)([a-z0-9])((([-]+)?([a-z0-9]+))?)*((.[a-z]{2,3})?(.[a-z]{2,6}))$/i
+^(1[0-2]|0?[1-9]):([0-5]?[0-9])( AM| PM)$
+UBAgentwhenu\x2Ecomwp-includes\x2Ffeed\x2Ephp\x3F
+/\x2epcx([\x3f\x2f]|$)/Uim

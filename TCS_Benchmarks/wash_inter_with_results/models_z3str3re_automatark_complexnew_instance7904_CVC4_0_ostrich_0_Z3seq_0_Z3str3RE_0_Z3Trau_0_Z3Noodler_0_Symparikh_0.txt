@@ -1,0 +1,5 @@
+data\.warezclient\.comHost\x3AUser-Agent\x3A
+^([a-z|A-Z]{1}[0-9]{3})[-]([0-9]{3})[-]([0-9]{2})[-]([0-9]{3})[-]([0-9]{1})
+/\x2erjs([\?\x5c\x2f]|$)/smiU
+A-311www3\.addfreestats\.comAttachedX-Mailer\x3A
+is\x7D\x7BPort\x3A\x7D\x7BUser\x3A

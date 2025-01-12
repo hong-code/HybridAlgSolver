@@ -1,0 +1,5 @@
+\b([0]?[1-9]|[1,2]\d|3[0,1])[-/]([0]?[1-9]|[1][0,1,2])[-/](\d{1,2}|[1][9]\d\d|[2][0]\d\d)\b
+\x2Fbar_pl\x2Fchk_bar\.fcgiTrojanHost\x3A
+^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$
+^1?[1-2]$|^[1-9]$|^[1]0$
+forum=From\x3acomTencentTravelerBackAtTaCkExplorer

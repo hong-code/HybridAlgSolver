@@ -1,0 +1,5 @@
+^([1-9]|[1-9]\d|100)$
+Kontikidownloadfile\x2eorged2kcom\x3EHost\x3AWindows
+/\x2Esum([\?\x5c\x2f]|$)/smiU
+^#(\d{6})|^#([A-F]{6})|^#([A-F]|[0-9]){6}
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN

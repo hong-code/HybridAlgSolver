@@ -1,0 +1,5 @@
+http[s]?://[a-zA-Z0-9.-/]+
+/\x2ecsv([\?\x5c\x2f]|$)/smiU
+Toolbarwww\x2Eonlinecasinoextra\x2Ecom
+Host\x3A\s+Agentbody=\x2521\x2521\x2521Optix
+com\x2Findex\.php\?tpid=\x7D\x7BUser\x3A

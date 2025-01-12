@@ -1,0 +1,5 @@
+metaresults\.copernic\.comServer\x00
+/\x2exslt([\?\x5c\x2f]|$)/smiU
+xbqyosoe\x2fcpvmdll\x3F
+User-Agent\x3A\s+community\d+
+^[+-]?[0-9]+$

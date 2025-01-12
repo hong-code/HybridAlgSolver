@@ -1,0 +1,3 @@
+^((0[1-9])|(1[0-2]))\/*((2011)|(20[1-9][1-9]))$
+passcorrect\x3B\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3Dversion
+linkautomatici\x2Ecom\dBasic\d+Host\x3AFloodedFictionalUser-Agent\x3A

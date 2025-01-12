@@ -1,0 +1,5 @@
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi
+^(http(s?)\:\/\/)*[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$
+^(\(?[0-9]{3}[\)-\.]?\ ?)?[0-9]{3}[-\.]?[0-9]{4}$
+^\-?[0-9]{1,3}(\,[0-9]{3})*(\.[0-9]+)?$|^[0-9]+(\.[0-9]+)?$
+Computer\x7D\x7BSysuptime\x3Awww\x2Eezula\x2EcomanswerServerHost\x3Aserveradfsgecoiwnf

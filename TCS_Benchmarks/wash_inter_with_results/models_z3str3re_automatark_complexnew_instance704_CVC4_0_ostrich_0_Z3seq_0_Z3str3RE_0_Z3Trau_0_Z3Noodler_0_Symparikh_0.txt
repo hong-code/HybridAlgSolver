@@ -1,0 +1,5 @@
+62[0-9]{14,17}
+YWRtaW46cGFzc3dvcmQ[^\n\r]*DA[^\n\r]*Host\x3Awww\x2Ee-finder\x2Ecc
+Host\x3asearchresltwww\x2Ewordiq\x2Ecomwww2\x2einstantbuzz\x2ecom
+\x2Fxml\x2Ftoolbar\x2F
+Host\x3A\s+Agentbody=\x2521\x2521\x2521Optix

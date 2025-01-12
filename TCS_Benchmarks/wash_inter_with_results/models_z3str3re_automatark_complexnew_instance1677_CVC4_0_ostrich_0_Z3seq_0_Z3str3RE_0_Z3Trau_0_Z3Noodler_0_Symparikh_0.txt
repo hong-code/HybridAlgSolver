@@ -1,0 +1,5 @@
+^([0])([1])([1,2,3,4,6,7,8,9])([0-9][0-9][0-9][0-9][0-9][0-9][0-9])
+ProjectHost\x3AlogHost\x3Awww\x2Esnap\x2EcomGoogle-\>rtServidor\x2E
+^[a-zA-Z0-9!@#$&_]+$
+((EE|EL|DE|PT)-?)?[0-9]{9}
+/^\/[a-f0-9]{8}\/[a-f0-9]{7,8}\/$/U

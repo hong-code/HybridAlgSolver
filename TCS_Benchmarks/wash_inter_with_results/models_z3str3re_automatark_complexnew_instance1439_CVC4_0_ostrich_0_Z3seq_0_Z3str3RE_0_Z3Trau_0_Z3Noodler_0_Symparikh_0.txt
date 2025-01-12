@@ -1,0 +1,3 @@
+Host\x3a\s+e2give\.com\s+NETObservemedia\x2Edxcdirect\x2EcomSubject\x3Aquick\x2Eqsrch\x2Ecom
+^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$
+&[a-zA-Z]+\d{0,3};

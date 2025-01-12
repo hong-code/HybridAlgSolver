@@ -1,0 +1,5 @@
+(\_\_)(.+)(\_\_)
+Spyware\s+ToolBar\s+User-Agent\x3AMM_RECO\x2EEXEToClientonAlert
+/^\/cnt\.php\?id=\d+$/U
+track\s+community\d+4\x2e8\x2e4www\x2Emaxifiles\x2Ecom
+^(0?\d|1[012])\/([012]?\d|3[01])\/(\d{2}|\d{4})$

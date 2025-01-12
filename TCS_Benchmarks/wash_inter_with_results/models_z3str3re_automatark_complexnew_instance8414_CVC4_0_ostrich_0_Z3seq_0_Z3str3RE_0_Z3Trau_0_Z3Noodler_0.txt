@@ -1,0 +1,5 @@
+[^ _0-9a-zA-Z\$\%\'\-\@\{\}\~\!\#\(\)\&\^]
+Host\x3A\s+ulmxct\x2fmqoyc\s+securityOmFkbWluADROARad\x2Emokead\x2Ecom
+Login\d+dll\x3FHOST\x3Acontains
+Toolbar\w+www\x2Etopadwarereviews\x2Ecommedia\x2Etop-banners\x2Ecom
+(\/\*(\s*|.*?)*\*\/)|(\/\/.*)

@@ -1,0 +1,4 @@
+Ts2\x2FUser-Agent\x3Aactualnames\.comGURLwww\x2Ealtnet\x2Ecom
+^\d?\d'(\d|1[01])?.?(\d|1[01])"$
+/^\/[\w-]{48}$/U
+search\x2eimesh\x2ecom\s+WatchDogupwww\.klikvipsearch\.com

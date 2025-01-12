@@ -1,0 +1,3 @@
+\r\nSTATUS\x3A\dHost\x3aReferer\x3AServerSubject\x3a
+User-Agent\x3aUser-Agent\x3A
+/\x2ecnt([\?\x5c\x2f]|$)/smiU

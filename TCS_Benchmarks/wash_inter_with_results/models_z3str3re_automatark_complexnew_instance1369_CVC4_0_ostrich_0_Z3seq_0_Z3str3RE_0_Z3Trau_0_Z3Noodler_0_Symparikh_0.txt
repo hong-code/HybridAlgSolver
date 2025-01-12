@@ -1,0 +1,3 @@
+security\s+ad\x2Emokead\x2Ecom\x3C\x2Fchat\x3E
+5[12345]\d{14}
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom

@@ -1,0 +1,4 @@
+Host\x3A\s+\.ico\x2FsLogearch195\.225\.Referer\x3A
+/NICK A\[New\|(98|Me|NT4.0|2000|XP|Serv2003|Vis|7|Unk)\|x(86|64)\|[A-Z\-]{1,2}\|[0-9]{1,4}\]/
+HXDownload\s+Host\x3AArcadeHourspjpoptwql\x2frlnjFrom\x3A
+\x0D\x0ACurrent\x2EearthlinkSpyBuddy

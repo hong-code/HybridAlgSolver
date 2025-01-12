@@ -1,0 +1,3 @@
+/\x2ecpe([\?\x5c\x2f]|$)/smiU
+^L[a-zA-Z0-9]{26,33}$
+.*(\.[Jj][Pp][Gg]|\.[Gg][Ii][Ff]|\.[Jj][Pp][Ee][Gg]|\.[Pp][Nn][Gg])

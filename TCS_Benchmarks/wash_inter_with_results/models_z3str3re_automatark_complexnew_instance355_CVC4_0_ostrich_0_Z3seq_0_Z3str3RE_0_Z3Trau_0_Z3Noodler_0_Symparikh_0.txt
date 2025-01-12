@@ -1,0 +1,4 @@
+^((0[1-9])|(1[0-2]))[\/\.\-]*((0[8-9])|(1[1-9]))$
+/new (java|org)/Ui
+zopabora\x2EinfocomhoroscopeTravelInsidefromUser-Agent\x3AFrom\x3Awww\x2EZSearchResults\x2EcomExplorer
+^([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$

@@ -1,0 +1,2 @@
+/^GET \x2F3010[0-9A-F]{166}00000001/
+aohobygi\x2fzwiw\s+\+The\+password\+is\x3A

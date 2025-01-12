@@ -1,0 +1,5 @@
+TCP\s+Host\x3a\x7D\x7Crichfind\x2EcomHost\x3ASubject\x3a
+/Content-Disposition\x3a\x20inline\x3b[^\x0d\x0a]filename=[a-z]{5,8}\d{2,3}\.pdf\x0d\x0a/Hm
+%3f\s+url=[^\n\r]*httpUser-Agent\x3A
+/^\/\/?[a-z0-9_]{7,8}\/\??[0-9a-f]{60,68}[\x3b\x2c\d+]*$/U
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs

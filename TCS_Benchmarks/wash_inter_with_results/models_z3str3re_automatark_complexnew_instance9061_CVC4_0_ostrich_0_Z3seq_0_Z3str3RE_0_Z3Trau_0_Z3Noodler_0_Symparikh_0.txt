@@ -1,0 +1,4 @@
+^[1-9][0-9][0-9][0-9][0-9][0-9]$
+/\x2es3m([\?\x5c\x2f]|$)/smiU
+^(([0]([2|3|4|5|6|8|9|7])))\d{7,8}$
+^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(-?[a-z0-9]+)?(\.[a-z0-9]+(-?[a-z0-9]+)?)*\.([a-z]{2}|xn\-{2}[a-z0-9]{4,18}|arpa|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|xxx)$

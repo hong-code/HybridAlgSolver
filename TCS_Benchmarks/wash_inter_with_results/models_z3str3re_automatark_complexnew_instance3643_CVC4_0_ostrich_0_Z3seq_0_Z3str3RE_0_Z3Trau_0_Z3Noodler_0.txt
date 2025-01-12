@@ -1,0 +1,3 @@
+^[a-zA-Z]\w{3,14}$
+Subject\x3A.*User-Agent\x3A.*ResultATTENTION\x3A
+are\s+Toolbar\s+X-Mailer\x3AInformationsearchnuggetspastb\x2Efreeprod\x2Ecom

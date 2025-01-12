@@ -1,0 +1,5 @@
+^\d*\d?((5)|(0))\.?((0)|(00))?$
+sbRedirectionsHost\x3AHost\x3AUser-Agent\x3Ahotbar%3fwww\x2Einternetadvertisingcompany\x2Ebiz
+(02\d\s?\d{4}\s?\d{4})|(01\d{2}\s?\d{3}\s?\d{4})|(01\d{3}\s?\d{5,6})|(01\d{4}\s?\d{4,5})
+aohobygi\x2fzwiw\s+\+The\+password\+is\x3A
+^[a-zA-Z0-9]+[\s]*[a-zA-Z0-9.\-\,\#]+[\s]*[a-zA-Z0-9.\-\,\#]+[a-zA-Z0-9\s.\-\,\#]*$

@@ -1,0 +1,5 @@
+/\x2epng([\?\x5c\x2f]|$)/smiU
+^[-+]?[0-9]+[.]?[0-9]*([eE][-+]?[0-9]+)?$
+(^(09|9)[1][1-9]\\d{7}$)|(^(09|9)[3][12456]\\d{7}$)
+\b[A-z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b
+as\x2Estarware\x2Ecom.*Casino.*LOG.*FilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F

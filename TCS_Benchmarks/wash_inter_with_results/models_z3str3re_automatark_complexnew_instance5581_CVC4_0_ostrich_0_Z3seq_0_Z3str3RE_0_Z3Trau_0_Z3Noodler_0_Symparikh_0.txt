@@ -1,0 +1,2 @@
+^[-+]?\d+(\.\d)?\d*$
+to\s+User-Agent\x3Acid=tb\x2eCookie\x3A\x2Fimages\x2Fnocache\x2Ftr\x2Fgca\x2Fm\.gif\?

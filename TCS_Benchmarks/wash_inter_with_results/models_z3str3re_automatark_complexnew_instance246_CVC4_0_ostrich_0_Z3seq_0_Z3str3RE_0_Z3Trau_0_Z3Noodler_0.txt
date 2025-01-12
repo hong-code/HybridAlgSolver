@@ -1,0 +1,5 @@
+^[0-9,]+['][-](\d|1[01])"$
+\.cfg\d+stale\d+GmbHPG=SPEEDBARcuReferer\x3ASpediazmnjgmomgbdz\x2fzzmw\.gztHost\x3AHost\x3Azopabora\x2Einfo
+\d{2}.?\d{3}.?\d{3}/?\d{4}-?\d{2}
+Agent\s+\x2Ftoolbar\x2Fico\x2F
+^(.|\r|\n){1,10}$

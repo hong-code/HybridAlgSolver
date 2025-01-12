@@ -1,0 +1,5 @@
+Host\x3A\dwww\x2Etrustedsearch\x2Ecom
+^((http|HTTP|https|HTTPS|ftp|FTP?)\:\/\/)?((www|WWW)+\.)+(([0-9]{1,3}){3}[0-9]{1,3}\.|([\w!~*'()-]+\.)*([\w^-][\w-]{0,61})?[\w]\.[a-z]{2,6})(:[0-9]{1,4})?((\/*)|(\/+[\w!~*'().;?:@&=+$,%#-]+)+\/*)$
+^\d+([.,]?\d+)?$
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+pgwtjgxwthx\x2fbyb\.xkyLOGurl=enews\x2Eearthlink\x2Enet

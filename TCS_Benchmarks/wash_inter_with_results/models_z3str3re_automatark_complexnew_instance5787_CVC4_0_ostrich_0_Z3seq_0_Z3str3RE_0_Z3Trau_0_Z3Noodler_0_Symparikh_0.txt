@@ -1,0 +1,2 @@
+^[1-9]{1}[0-9]{0,2}([\.\,]?[0-9]{3})*$
+Host\x3A\s+Host\s+Host\x3aInformationX-OSSproxy\x3aas\x2Estarware\x2Ecom

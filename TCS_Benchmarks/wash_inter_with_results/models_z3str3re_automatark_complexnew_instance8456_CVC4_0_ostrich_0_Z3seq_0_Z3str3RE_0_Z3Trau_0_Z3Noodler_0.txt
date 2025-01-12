@@ -1,0 +1,4 @@
+/\/[a-z]{4}\.html\?j\=\d{6,7}$/Ui
+/\x2erm([\?\x5c\x2f]|$)/smiU
+spas\s+This\s+\x7D\x7BPassword\x3A\s+OSSProxy\x5Chome\/lordofsearch
+OVN\s+\x2APORT3\x2A\[DRIVEwww\.raxsearch\.com

@@ -1,0 +1,5 @@
+ProAgent\d+X-Mailer\x3Abacktrust\x2EcomReferer\x3aSupreme
+www\x2Eezula\x2Ecom.*com[^\n\r]*SpyBuddy
+User-Agent\x3A[^\n\r]*aadserver\dYOUR\x2Fxml\x2Ftoolbar\x2F
+/\/jdb\/inf\.php\?id=[a-f0-9]{32}$/Ui
+^[0-9]%?$|^1[0-9]%?$|^2[0-9]%?$|^3[0-5]%?$|^[0-9]\.\d{1,2}%?$|^1[0-9]\.\d{1,2}%?$|^2[0-9]\.\d{1,2}%?$|^3[0-4]\.\d{1,2}%?$|^35%?$

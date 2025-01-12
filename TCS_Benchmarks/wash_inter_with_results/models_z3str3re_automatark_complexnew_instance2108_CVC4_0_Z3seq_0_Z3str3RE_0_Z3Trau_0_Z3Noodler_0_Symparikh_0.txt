@@ -1,0 +1,5 @@
+X-Mailer\x3a\s+cyber@yahoo\x2EcomcuAgent
+^[/]*([^/\\ \:\*\?"\<\>\|\.][^/\\\:\*\?\"\<\>\|]{0,63}/)*[^/\\ \:\*\?"\<\>\|\.][^/\\\:\*\?\"\<\>\|]{0,63}$
+WindowsFrom\x3A\x2FCU1\-extreme\x2Ebiz
+^[+-]?\d+(\,\d{3})*\.?\d*\%?$
+/^USER\x20(XP|98|95|NT|ME|WIN|2K3)\x2d\d+\x20\x2a\x20\x30\x20\x3a/mi

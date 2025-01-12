@@ -1,0 +1,4 @@
+(\w+?@\w+?\x2E.+)
+User-Agent\x3A\x2FrssMinutesansweras\x2Estarware\x2EcomFictionalHost\x3AHost\x3A
+Xtra\s+Host\x3A\s+Referer\x3aThisSubject\x3a
+^(\d{4}[- ]){3}\d{4}|\d{16}$

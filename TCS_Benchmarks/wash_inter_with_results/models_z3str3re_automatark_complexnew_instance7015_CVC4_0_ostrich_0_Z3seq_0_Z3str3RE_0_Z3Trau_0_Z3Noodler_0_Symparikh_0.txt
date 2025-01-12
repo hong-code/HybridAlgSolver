@@ -1,0 +1,4 @@
+www\x2Eezula\x2Ecom.*com[^\n\r]*SpyBuddy
+/^\/\/?[a-z0-9_]{7,8}\/\??[0-9a-f]{60,68}[\x3b\x2c\d+]*$/U
+/filename=[a-z]{5,8}\d{2,3}\.swf\x0d\x0a/Hm
+actualnames\.comclient\x2Ebaigoo\x2Ecomzzzvmkituktgr\x2fetiexpsp2-InformationHost\x3A

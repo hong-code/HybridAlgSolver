@@ -1,0 +1,3 @@
+Host\x3a\s+Agentbody=\x2521\x2521\x2521OptixSubject\x3A
+areKeyloggerver=www\x2Esnap\x2Ecom
+RequestedLoggedtb\x2Efreeprod\x2EcomHWAESubject\x3aadserver\.warezclient\.com

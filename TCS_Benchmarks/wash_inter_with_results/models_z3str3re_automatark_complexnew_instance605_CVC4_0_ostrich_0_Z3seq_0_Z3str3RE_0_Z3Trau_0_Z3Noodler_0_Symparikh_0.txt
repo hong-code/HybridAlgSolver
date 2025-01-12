@@ -1,0 +1,5 @@
+(-\d{1,} | \d{1,} | \d{1,}-\d{1,} | \d{1,}-)(,(-\d{1,} | \d{1,} | \d{1,}-\d{1,} | \d{1,}))*
+User-Agent\x3A\s+Host\x3A[^\n\r]*Hourspjpoptwql\x2frlnjFrom\x3Asbver\x3aGhost
+/\/vic\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+/\/[a-zA-Z0-9]{4,10}\.jar$/U
+^((\d)?(\d{1})(\.{1})(\d)?(\d{1})){1}$

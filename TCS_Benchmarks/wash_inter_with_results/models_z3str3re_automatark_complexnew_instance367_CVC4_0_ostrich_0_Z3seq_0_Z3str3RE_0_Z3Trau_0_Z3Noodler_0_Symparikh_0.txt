@@ -1,0 +1,4 @@
+^(N[BLSTU]|[AMN]B|[BQ]C|ON|PE|SK)$
+/listoverridecount([2345678]|[019][0-9])/i
+^\<(\w){1,}\>(.){0,}([\</]|[\<])(\w){1,}\>$
+Host\x3Ahirmvtg\x2fggqh\.kqhverA-Spy

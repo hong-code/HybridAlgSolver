@@ -1,0 +1,4 @@
+cdpView.*protocol.*\x2Fs\x28robert\x40blackcastlesoft\x2Ecom\x29
+/\x2eani([\?\x5c\x2f]|$)/smiU
+^[a-zA-Z]+((((\-)|(\s))[a-zA-Z]+)?(,(\s)?(((j|J)|(s|S))(r|R)(\.)?|II|III|IV))?)?$
+/^\x2f[A-Za-z0-9+~=]{16,17}\x2f[A-Za-z0-9+~=]{35,40}\x2f[A-Za-z0-9+~=]{8}\x2f[A-Za-z0-9+~=]*?\x2f[A-Za-z0-9+~=]{12,30}$/I

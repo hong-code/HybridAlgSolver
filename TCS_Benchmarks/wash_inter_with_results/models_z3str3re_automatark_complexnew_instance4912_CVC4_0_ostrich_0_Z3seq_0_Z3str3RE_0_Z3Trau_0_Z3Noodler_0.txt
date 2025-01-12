@@ -1,0 +1,4 @@
+Subject\x3A[^\n\r]*Arrow[^\n\r]*whenu\x2Ecom
+\b((J(AN|UN|UL))|FEB|MAR|(A(PR|UG))|MAY|SEP|NOV|DEC|OCT)\s*(0?[1-9]|1[0-9]|2[0-9]|3[0-1])\s*(\,)\s*(0[0-9])\b
+/\x2eskm([\?\x5c\x2f]|$)/smiU
+/^SSID=[a-zA-Z\d]{43}\x3B\x20A=[0-3]$/C

@@ -1,0 +1,5 @@
+Hours\w+User-Agent\x3AChildWebGuardian
+/\x2emim([\?\x5c\x2f]|$)/smiU
+[a-z]{3,4}s?:\/\/[-\w.]+(\/[-.\w%&=?]+)*
+www\.thecommunicator\.net[^\n\r]*iufilfwulmfi\x2friuf\.lio
+TM_SEARCH3SearchUser-Agent\x3Aas\x2Estarware\x2EcomM\x2EzipCasinoResults_sq=aolsnssignin

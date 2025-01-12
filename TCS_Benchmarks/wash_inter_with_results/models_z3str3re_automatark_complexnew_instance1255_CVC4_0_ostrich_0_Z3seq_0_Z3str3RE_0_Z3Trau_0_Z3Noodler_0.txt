@@ -1,0 +1,5 @@
+^([\.\"\'-/ \(/)\s\[\]\\\,\<\>\;\:\{\}]?)([0-9]{3})([\.\"\'-/\(/)\s\[\]\\\,\<\>\;\:\{\}]?)([0-9]{3})([\,\.\"\'-/\(/)\s\[\]\\\<\>\;\:\{\}]?)([0-9]{4})$
+Try2Find\x23\x23\x23\x23ToolbarServerUser\x3A
+/^Content-Type\x3a[\x20\x09]+application\/x-msdos-program/smiH
+as\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=.*X-Mailer\x3A
+^((0[1-9])|(1[0-2]))$

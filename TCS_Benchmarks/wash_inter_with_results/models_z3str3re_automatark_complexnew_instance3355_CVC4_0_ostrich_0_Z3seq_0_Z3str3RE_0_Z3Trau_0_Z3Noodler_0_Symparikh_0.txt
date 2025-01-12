@@ -1,0 +1,3 @@
+trackwww\x2Ealfacleaner\x2Ecom
+/PRIVMSG #new :\x02\x5b(GOOGLE|SCAN)\x5d\x02\x20Scanning/
+[-+]?((\.[0-9]+|[0-9]+\.[0-9]+)([eE][-+][0-9]+)?|[0-9]+)

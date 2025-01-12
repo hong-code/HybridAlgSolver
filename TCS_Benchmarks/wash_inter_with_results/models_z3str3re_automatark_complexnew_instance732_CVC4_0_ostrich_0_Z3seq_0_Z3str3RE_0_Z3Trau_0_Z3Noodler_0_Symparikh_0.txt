@@ -1,0 +1,2 @@
+User-Agent\x3AX-Mailer\x3aHost\x3Adcww\x2Edmcast\x2Ecom
+^\d{1,2}\/\d{2,4}$

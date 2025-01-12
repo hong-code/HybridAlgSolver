@@ -1,0 +1,5 @@
+".*?"|".*$|'.*?'|'.*$
+Host\x3A\s+Host\x3A\x7croogoo\x7cTestiufilfwulmfi\x2friuf\.lio
+^([0-9]*|\d*\.\d{1}?\d*)$
+version\s+error\*\-\*WrongUser-Agent\x3Acom\x2Findex\.php\?tpid=
+^[1-9]{1}[0-9]{3}\s{0,1}?[a-zA-Z]{2}$

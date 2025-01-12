@@ -1,0 +1,4 @@
+\b([0-1]?\d{1,2}|2[0-4]\d|25[0-5])(\.([0-1]?\d{1,2}|2[0-4]\d|25[0-5])){3}\b
+/\x2ejfif?([\?\x5c\x2f]|$)/smiU
+upgrade\x2Eqsrch\x2Einfo[^\n\r]*dcww\x2Edmcast\x2Ecom
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym

@@ -1,0 +1,3 @@
+^[-+]?\d*$
+twfofrfzlugq\x2feve\.qd\d+
+/\x2Fmrow\x5Fpin\x2F\x3Fid\d+[a-z]{5,}\d{5}\x26rnd\x3D\d+/smi

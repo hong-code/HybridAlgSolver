@@ -1,0 +1,4 @@
+this\s+MyBrowser\d+Redirector\x22ServerHost\x3AX-Mailer\x3A
+/^[a-zA-Z\s]+$/
+www\x2Ecameup\x2Ecom\s+spyblini\x2Eini
+Host\x3AHost\x3Aalertseqepagqfphv\x2fsfd

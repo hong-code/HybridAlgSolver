@@ -1,0 +1,5 @@
+/nim:import\?[^\x22\x27>\s]*?filename=[^\x22\x27>\s]{485}/i
+Minutes\s+\x2Fcgi\x2Flogurl\.cgi\s+e2give\.com
+EI.*to\s+AppName\x2FGRSI\|Server\|Host\x3Aorigin\x3Dsidefind
+comLOGUser-Agent\x3Aistsvcwww\x2Eoemji\x2EcomSystemSleuth
+Host\x3A.*NETObserve\d+Host\x3aohgdhkzfhdzo\x2fuwpOK\r\n

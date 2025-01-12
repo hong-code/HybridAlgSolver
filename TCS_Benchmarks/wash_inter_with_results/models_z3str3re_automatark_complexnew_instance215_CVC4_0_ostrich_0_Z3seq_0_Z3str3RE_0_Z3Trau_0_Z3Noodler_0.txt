@@ -1,0 +1,5 @@
+^(10\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5]\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5]\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5])$
+((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}
+Host\x3A\s+Agentbody=\x2521\x2521\x2521Optix
+Port\x2E[^\n\r]*007\d+Logsdl\x2Eweb-nexus\x2Enet
+X-Mailer\x3a.*User-Agent\x3A[^\n\r]*ulmxct\x2fmqoyc

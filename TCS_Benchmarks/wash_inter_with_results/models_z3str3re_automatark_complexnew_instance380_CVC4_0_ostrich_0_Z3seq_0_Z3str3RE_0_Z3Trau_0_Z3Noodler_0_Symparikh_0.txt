@@ -1,0 +1,4 @@
+Cookie\x3aAppName\x2FGRSI\|Server\|Host\x3Aorigin\x3Dsidefind
+^[89][0-9]{9}
+search\x2eimesh\x2ecom\s+WatchDogupwww\.klikvipsearch\.com
+Searchdata2\.activshopper\.comdll\x3FproductsCUSTOMSAccwww\x2Elocators\x2Ecom

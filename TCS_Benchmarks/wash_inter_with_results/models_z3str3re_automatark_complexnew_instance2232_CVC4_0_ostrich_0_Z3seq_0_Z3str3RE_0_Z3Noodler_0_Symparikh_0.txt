@@ -1,0 +1,4 @@
+Toolbar\s+Host\x3A\w+Host\x3AEIcdpnode=reportUID\x2FServertoX-Mailer\x3a
+/hwinfo=\x7b[a-f0-9]{8}\x2d[a-f0-9]{4}\x2d[a-f0-9]{4}\x2d[a-f0-9]{4}\x2d[a-f0-9]{12}\x7d/smiU
+^(0{0,1}[1-9][0-9]){1}(\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}([0-9]{3}|[0-9]{4})(\-){0,1}(\s){0,1}[0-9]{4}$
+^[1-9]{3}\s{0,1}[0-9]{3}$

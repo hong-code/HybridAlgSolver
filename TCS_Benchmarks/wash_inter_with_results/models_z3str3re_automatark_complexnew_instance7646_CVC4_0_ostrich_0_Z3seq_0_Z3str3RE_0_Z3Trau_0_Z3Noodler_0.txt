@@ -1,0 +1,3 @@
+(\bprotected\b.*(public))|(\bprivate\b.*(protected))|(\bprivate\b.*(public))
+^[0-9]*\/{1}[1-9]{1}[0-9]*$
+/\x2Fupdate\w\x2Ephp\x3Fp\x3D\d+.*User\x2DAgent\x3A\s+Mozilla\x2F4\x2E75\s\x5Ben\x5D\s\x28X11\x3B\sU\x3B\sLinux\s2\x2E2\x2E16\x2D3\si686\x29/smiH

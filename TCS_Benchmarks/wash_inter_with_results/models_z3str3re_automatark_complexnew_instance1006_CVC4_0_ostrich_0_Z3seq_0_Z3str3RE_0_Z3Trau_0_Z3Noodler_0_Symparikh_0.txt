@@ -1,0 +1,4 @@
+This\s+\x7D\x7BPassword\x3A\d+
+bar\-navig\x2Eyandex\x2Eru\s+
+^0?(5[024])(\-)?\d{7}$
+^1+0+$

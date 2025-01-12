@@ -1,0 +1,5 @@
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+^[a-zA-Z]$
+\+353\(0\)\s\d\s\d{3}\s\d{4}
+User-Agent\x3a\s+Host\x3AnamediepluginHost\x3AX-Mailer\x3A
+Log[^\n\r]*Host\x3A\dHOST\x3AUser-Agent\x3A

@@ -1,0 +1,5 @@
+Host\x3a\dATTENTION\x3A.*User-Agent\x3A
+\x2Ehtml.*cm.*www\x2Epeer2mail\x2EcomConnectedStubbyawbeta\.net-nucleus\.com
+ATL\w+SoftActivitypassword\x3B0\x3BIncorrect
+^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$
+^[+-]?[0-9]+$

@@ -1,0 +1,4 @@
+\.cfg\d+stale\d+GmbHPG=SPEEDBARcuReferer\x3ASpediazmnjgmomgbdz\x2fzzmw\.gztHost\x3AHost\x3Azopabora\x2Einfo
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+A-311www3\.addfreestats\.comAttachedX-Mailer\x3A
+^100(\.0{0,2})? *%?$|^\d{1,2}(\.\d{1,2})? *%?$

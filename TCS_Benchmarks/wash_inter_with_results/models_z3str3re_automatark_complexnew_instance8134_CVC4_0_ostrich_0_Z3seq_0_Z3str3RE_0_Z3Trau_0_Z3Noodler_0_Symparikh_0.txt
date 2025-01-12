@@ -1,0 +1,2 @@
+/\x2ejpx([\?\x5c\x2f]|$)/smiU
+/\/click\?sid=\w{40}\&cid=/Ui

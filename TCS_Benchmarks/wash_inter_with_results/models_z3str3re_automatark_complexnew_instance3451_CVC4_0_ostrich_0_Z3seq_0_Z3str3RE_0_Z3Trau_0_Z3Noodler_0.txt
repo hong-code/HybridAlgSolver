@@ -1,0 +1,5 @@
+<img .+ src[ ]*=[ ]*\"(.+)\"
+weather2ResultX-Sender\x3A
+^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z_-]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$
+^[a-zA-Z0-9\s.\-_']+$
+IndyHost\x3AGirlFriendReferer\x3A

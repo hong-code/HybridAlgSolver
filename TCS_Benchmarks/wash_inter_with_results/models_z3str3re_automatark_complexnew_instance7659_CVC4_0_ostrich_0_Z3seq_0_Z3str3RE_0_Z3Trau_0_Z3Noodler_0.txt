@@ -1,0 +1,4 @@
+TPSystemHost\x3AHost\x3ashow\x2Eroogoo\x2EcomX-Mailer\x3A
+IP.*encoder\d+SAHPORT-User-Agent\x3A
+^((0?[1-9])|((1)[0-1]))?((\.[0-9]{0,2})?|0(\.[0-9]{0,2}))$
+X-Mailer\x3a.*User-Agent\x3A[^\n\r]*ulmxct\x2fmqoyc

@@ -1,0 +1,5 @@
+/\x2ejp2([\?\x5c\x2f]|$)/smiU
+Host\x3A\d+Subject\x3A[^\n\r]*Seconds\-ovplHost\x3AHost\x3ADownload
+SecureNet\sHost\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+Mirar_KeywordContent
+downloadfile\x2eorg\w+com\x3EHost\x3A

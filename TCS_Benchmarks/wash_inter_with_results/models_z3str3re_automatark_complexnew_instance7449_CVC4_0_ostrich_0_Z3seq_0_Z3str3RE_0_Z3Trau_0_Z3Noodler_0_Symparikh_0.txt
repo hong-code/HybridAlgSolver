@@ -1,0 +1,2 @@
+User-Agent\x3a\sRequestwww\x2Ealtnet\x2EcomSubject\x3A
+^[\w\s]+$

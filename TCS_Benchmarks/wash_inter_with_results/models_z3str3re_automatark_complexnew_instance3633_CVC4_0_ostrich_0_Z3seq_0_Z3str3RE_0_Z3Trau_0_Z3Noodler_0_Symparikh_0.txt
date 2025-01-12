@@ -1,0 +1,5 @@
+/mJKV[^\s\x0D\x0A]+1Q_fQ_fQ_fQ_fQ_fQ_fQ_fQ/U
+CUSTOM\swww\x2Elocators\x2Ecom\d+Seconds\-
+/^([a-z0-9])(([\-.]|[_]+)?([a-z0-9]+))*(@)([a-z0-9])((([-]+)?([a-z0-9]+))?)*((.[a-z]{2,3})?(.[a-z]{2,6}))$/i
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi
+/^\/blog\/[a-zA-Z0-9]{3}\.(g(3|e)d|mm|vru|be|nut)$/U

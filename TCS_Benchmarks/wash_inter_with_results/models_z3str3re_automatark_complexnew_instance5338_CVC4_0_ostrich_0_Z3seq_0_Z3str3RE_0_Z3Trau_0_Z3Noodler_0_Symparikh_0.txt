@@ -1,0 +1,3 @@
+^\d(\.\d{1,2})?$
+^[-+]?(\d?\d?\d?,?)?(\d{3}\,?)*$
+securityon\x3AHost\x3ARedirector\x22ServerHost\x3A

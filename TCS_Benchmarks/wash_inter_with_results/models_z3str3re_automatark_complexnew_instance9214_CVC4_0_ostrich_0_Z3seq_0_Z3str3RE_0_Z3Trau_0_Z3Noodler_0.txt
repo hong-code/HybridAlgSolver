@@ -1,0 +1,5 @@
+^[2-7]{1}[0-9]{3}$
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+^((192\.168\.0\.)(1[7-9]|2[0-9]|3[0-2]))$
+\+353\(0\)\s\d\s\d{3}\s\d{4}
+si=\s+ProAgentUI2Host\x3A00000www\x2Ezhongsou\x2Ecom

@@ -1,0 +1,2 @@
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F
+^[0-9,]+['][-](\d|1[01])"$

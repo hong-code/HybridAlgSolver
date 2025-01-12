@@ -1,0 +1,5 @@
+((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}
+url=\d+Host\x3A.*backtrust\x2Ecomv\x2ELoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?
+(\b(10|11|12|13|14|15|16|17|18|19)[0-9]\b)
+[+-](^0.*)
+/\x2epls([\?\x5c\x2f]|$)/smiU

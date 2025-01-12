@@ -1,0 +1,5 @@
+^[-+]?\d+(\.\d+)?|[-+]?\.\d+?$
+corep\x2Edmcast\x2EcomOwner\x3A
+<[ \t]*[iI][mM][gG][ \t]*[sS][rR][cC][ \t]*=[ \t]*['\"]([^'\"]+)
+www\x2Ealfacleaner\x2EcomHost\x3aLogs
+^([(][1-9]{2}[)] )?[0-9]{4}[-]?[0-9]{4}$

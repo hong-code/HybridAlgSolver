@@ -1,0 +1,5 @@
+/^(8-?|\+?7-?)?(\(?\d{3}\)?)-?(\d-?){6}\d$/
+www\x2Ealtnet\x2Ecom[^\n\r]*Host\x3A
+for[^\n\r]*Host\x3A\sinternalcyber@yahoo\x2EcomHeadersRedirection
+Days\s+HWAE\s+Host\x3APortawww\.thecommunicator\.net
+/\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.com\x2d[a-z0-9\x2d\x2e]+(\x3a\d{1,5})?\r\n/Hi

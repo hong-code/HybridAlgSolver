@@ -1,0 +1,3 @@
+(\$\s*[\d,]+\.\d{2})\b
+[a-zA-Z]*( [a-zA-Z]*)?
+Readydoarauzeraqf\x2fvvv\.ulPALTALKHello\x2EMyAgentUser-Agent\x3AIP-FILEUser-Agent\x3AUser-Agent\x3A

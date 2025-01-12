@@ -1,0 +1,5 @@
+/(DisableSandboxAndDrop|ConfusedClass|FieldAccessVerifierExpl)\.class/ims
+^([A-Z]{2}\s?(\d{2})?(-)?([A-Z]{1}|\d{1})?([A-Z]{1}|\d{1}))$
+/poc\/(Exploit|myClassLoader|pocMain|runCmd)\.class/ims
+www\x2Eslinkyslate.*Redirector\x22.*Host\x3Atoolbarplace\x2Ecom
+(.*\.jpe?g|.*\.JPE?G)

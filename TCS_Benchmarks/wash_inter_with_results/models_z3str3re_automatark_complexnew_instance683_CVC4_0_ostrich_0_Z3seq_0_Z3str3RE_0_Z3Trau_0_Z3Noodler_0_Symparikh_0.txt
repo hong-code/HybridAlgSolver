@@ -1,0 +1,4 @@
+StarLoggerCookie\x3aHost\x3APRODUCEDwebsearch\.getmirar\.com
+Ts2\x2F\s+insert.*Host\x3aHELOHourssurvey\.asp\?nUserId=
+/\/[a-f0-9]{32}\.jar/
+^1+0+$

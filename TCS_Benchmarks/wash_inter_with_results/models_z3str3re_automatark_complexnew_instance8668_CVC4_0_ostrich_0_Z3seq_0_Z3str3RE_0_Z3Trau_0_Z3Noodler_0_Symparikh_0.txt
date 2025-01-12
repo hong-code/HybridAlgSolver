@@ -1,0 +1,4 @@
+/^connected\x2e[^\x0D\x0A]*20\d\d[^\x0D\x0A]*ver\x3A\s+Legends\s2\x2e1/smi
+tv\x2E180solutions\x2Ecom\s+have\s+Dayspassword\x3B0\x3BIncorrect
+couponbar\.coupons\.com\dOwner\x3A\s+Host\x3A
+MyBrowserSbAtsHost\x3A

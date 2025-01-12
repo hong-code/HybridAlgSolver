@@ -1,0 +1,4 @@
+SpywareStrike.*Subject\x3A\s+Pcast\x2Edat\x2EToolbar
+^(FR)?\s?[A-Z0-9-[IO]]{2}[0-9]{9}$
+StarLoggerCookie\x3aHost\x3APRODUCEDwebsearch\.getmirar\.com
+this\w+c\.goclick\.com\d

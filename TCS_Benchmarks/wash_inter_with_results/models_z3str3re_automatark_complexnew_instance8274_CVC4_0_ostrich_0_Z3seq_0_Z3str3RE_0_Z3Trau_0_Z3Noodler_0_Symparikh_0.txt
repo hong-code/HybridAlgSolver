@@ -1,0 +1,2 @@
+protocolNetControl\x2EServerKEYLOGGERUser-Agent\x3A
+\x1f\x8b\x08\x00.+\x00\x00

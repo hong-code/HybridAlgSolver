@@ -1,0 +1,4 @@
+^[6]\d{7}$
+/\x2ejpx([\?\x5c\x2f]|$)/smiU
+onBetaHost\x3ayouRootReferer\x3A
+^(9|2{1})+([1-9]{1})+([0-9]{7})$

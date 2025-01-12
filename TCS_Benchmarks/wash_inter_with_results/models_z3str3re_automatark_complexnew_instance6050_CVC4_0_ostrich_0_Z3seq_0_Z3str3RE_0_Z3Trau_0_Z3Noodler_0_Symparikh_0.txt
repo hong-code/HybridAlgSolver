@@ -1,0 +1,4 @@
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+User-Agent\x3a\s+Host\x3A\s+Referer\x3a
+[A-Za-z]+
+/\x2ek3g([\?\x5c\x2f]|$)/smiU

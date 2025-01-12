@@ -1,0 +1,3 @@
+\x2Frss\d+answer\sHost\x3A
+^((A(((H[MX])|(M(P|SN))|(X((D[ACH])|(M[DS]))?)))?)|(K7(A)?)|(D(H[DLM])?))(\d{3,4})[ABD-G][CHJK-NPQT-Y][Q-TV][1-4][B-E]$
+fsbuff\s+User-Agent\x3Afrom\x3A

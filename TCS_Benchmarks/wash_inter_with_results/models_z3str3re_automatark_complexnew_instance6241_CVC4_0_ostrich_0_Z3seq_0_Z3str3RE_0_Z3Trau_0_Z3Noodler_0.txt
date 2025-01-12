@@ -1,0 +1,4 @@
+^((\(([1-9]{2})\))(\s)?(\.)?(\-)?([0-9]{0,1})?([0-9]{4})(\s)?(\.)?(\-)?([0-9]{4})|(([1-9]{2}))(\s)?(\.)?(\-)?([0-9]{0,1})?([0-9]{4})(\s)?(\.)?(\-)?([0-9]{4}))$
+YOURHost\x3Awww\x2Ealfacleaner\x2Ecom
+PromulGate\s+SbAts.*Uservclxatmlhavj\x2fvsywww\x2Evip-se\x2Ecom
+Server\s+www\x2Epeer2mail\x2Ecomsubject\x3AfileId\x3d\x5b

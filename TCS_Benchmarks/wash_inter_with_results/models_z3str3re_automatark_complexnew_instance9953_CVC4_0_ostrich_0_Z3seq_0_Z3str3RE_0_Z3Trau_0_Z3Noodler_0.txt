@@ -1,0 +1,5 @@
+^[1-9][0-9]{3}\s?[a-zA-Z]{2}$
+traffbest\x2Ebiz\d+\.compress.*sidebar\.activeshopper\.comaresflashdownloader\x2Ecom
+/^Host\x3a\s*(cache.dyndns.info|flashcenter.info|flashrider.org|webapp.serveftp.com|web.autoflash.info|webupdate.dyndns.info|webupdate.hopto.org|web.velocitycache.com)/smiH
+www\x2e2-seek\x2ecom\x2fsearch\s+TPSystem
+Daemonwww\x2Elookquick\x2EcomHost\x3A

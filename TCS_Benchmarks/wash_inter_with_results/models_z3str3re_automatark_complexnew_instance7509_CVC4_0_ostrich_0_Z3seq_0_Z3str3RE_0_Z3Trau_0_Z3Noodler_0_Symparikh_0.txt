@@ -1,0 +1,3 @@
+media\x2Edxcdirect\x2Ecom
+User-Agent\x3A\s+community\d+
+/\.gif\x3f[a-f0-9]{4,7}\x3d\d{6,8}$/U

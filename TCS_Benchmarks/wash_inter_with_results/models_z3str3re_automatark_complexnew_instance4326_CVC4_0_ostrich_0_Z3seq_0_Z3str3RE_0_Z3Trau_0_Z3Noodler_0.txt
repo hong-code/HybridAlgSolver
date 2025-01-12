@@ -1,0 +1,5 @@
+/\x2eram?([\?\x5c\x2f]|$)/smiU
+Host\x3A\s+Host\x3A.*c=MicrosoftStartupStarLoggerServerX-Mailer\x3a
+^[0-9]{10}GBR[0-9]{7}[U,M,F]{1}[0-9]{9}$
+ShadowNet\s+AID\x2FUser-Agent\x3AFen\xeatreEye\x2Fdss\x2Fcc\.2_0_0\.
+/[1-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}/H

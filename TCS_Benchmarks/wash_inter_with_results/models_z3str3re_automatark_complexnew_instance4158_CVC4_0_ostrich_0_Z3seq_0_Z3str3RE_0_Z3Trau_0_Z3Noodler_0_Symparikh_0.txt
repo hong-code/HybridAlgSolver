@@ -1,0 +1,3 @@
+jsp\d+Host\x3A\d+moreKontikiHost\x3aAcmeEvilFTP
+\r\nSTATUS\x3A\dHost\x3aReferer\x3AServerSubject\x3a
+/^\/\?[a-f0-9]{32}$/U

@@ -1,0 +1,5 @@
+SecureNet\sHost\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+(^[a-zA-Z0-9]+://)
+Subject\x3ALOGX-Mailer\x3a
+((079)|(078)|(077)){1}[0-9]{7}
+wjpropqmlpohj\x2flo\d+Host\x3AUser-Agent\x3A

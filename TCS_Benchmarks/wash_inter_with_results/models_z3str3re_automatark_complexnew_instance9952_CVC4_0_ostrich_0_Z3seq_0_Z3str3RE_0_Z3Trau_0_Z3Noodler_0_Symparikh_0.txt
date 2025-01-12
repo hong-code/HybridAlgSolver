@@ -1,0 +1,2 @@
+LOG\s+spyblpatHost\x3Ais\x2Ephp
+<textarea(.|\n)*?>((.|\n)*?)</textarea>

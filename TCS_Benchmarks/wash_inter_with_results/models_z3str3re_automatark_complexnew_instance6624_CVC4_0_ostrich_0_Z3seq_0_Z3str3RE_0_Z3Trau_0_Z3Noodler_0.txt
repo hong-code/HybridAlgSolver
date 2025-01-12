@@ -1,0 +1,5 @@
+/\/[a-z]{4}\.html\?j\=\d{6,7}$/Ui
+\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}
+/^\/\/?[a-z0-9_]{7,8}\/\??[0-9a-f]{60,68}[\x3b\x2c\d+]*$/U
+www\.trackhits\.cc\s+wwwHost\x3aRobertVersionspyblini\x2Eini
+/^\/[a-f0-9]{32}\/[a-z]{1,15}-[a-z]{1,15}\.php/U

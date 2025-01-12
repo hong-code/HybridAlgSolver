@@ -1,0 +1,3 @@
+^([4]{1})([0-9]{12,15})$
+User-Agent\x3aetbuviaebe\x2feqv\.bvv
+name\x2ecnnic\x2ecn\scom\x2Findex\.php\?tpid=\s\x5BStatic.*\x2Fbar_pl\x2Fb\.fcgi

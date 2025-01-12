@@ -1,0 +1,2 @@
+EvilFTP\s+%3f[^\n\r]*\.bmpfilename\x3D\x22
+Host\x3AfromZC-Bridgev\x2Exml\x2FNFO\x2CRegistered

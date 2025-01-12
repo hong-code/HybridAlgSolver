@@ -1,0 +1,4 @@
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22
+(Mo(n(day)?)?|Tu(e(sday)?)?|We(d(nesday)?)?|Th(u(rsday)?)?|Fr(i(day)?)?|Sa(t(urday)?)?|Su(n(day)?)?)
+/^\x2fwp-content\x2fthemes\x2f[A-Za-z0-9]\.php\?[A-Za-z0-9\x2B\x2F\x3D]{300}/Ui
+Pass-Onseqepagqfphv\x2fsfdcargo=dnsgpstool\x2eglobaladserver\x2ecom

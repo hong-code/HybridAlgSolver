@@ -1,0 +1,5 @@
+Word\w+My\s+\x22TheZC-BridgeUser-Agent\x3AserverUSER-Attached
+www\x2Emaxifiles\x2Ecom.*Host\x3A
+LIST\]SpamBlockerUtilityTry2FindBasicHost\x3AUser-Agent\x3AAcmeprotocolSpy
+frame_ver2www\.raxsearch\.comaboutGoogleyxegtd\x2fefcwgHost\x3ATPSystemwww\x2Ee-finder\x2Ecc
+^(\d{2,3}|\(\d{2,3}\))[ ]?\d{3,4}[-]?\d{3,4}$

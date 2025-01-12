@@ -1,0 +1,4 @@
+[0-9]{3}P[A-Z][0-9]{7}[0-9X]
+Host\x3a\w+Pre\x2Fta\x2FNEWS\x2FKeyloggeradfsgecoiwnfhirmvtg\x2fggqh\.kqh
+attachedEverywareHELOBasic
+^\(?([0-9]{3})\)?[\s\.\-]*([0-9]{3})[\s\.\-]*([0-9]{4})$

@@ -1,0 +1,3 @@
+^[0-9]{1,}(,[0-9]+){0,}$
+^[AHJ-NPR-UW-Z]{2}\s?[0-9]{3}\s?[AHJ-NPR-UW-Z]{2}$
+/filename\s*=\s*[^\r\n]*?\x2eswf[\x22\x27\x3b\s\r\n]/i

@@ -1,0 +1,4 @@
+search\.dropspam\.com.*SupportFiles.*Referer\x3A
+^([0-9A-Za-z@.]{1,255})$
+frame_ver2\s+communityLibrarySoftwareWinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid
+[0-3]{1}[0-9]{1}(jan|JAN|feb|FEB|mar|MAR|apr|APR|may|MAY|jun|JUN|jul|JUL|aug|AUG|sep|SEP|oct|OCT|nov|NOV|dec|DEC){1}

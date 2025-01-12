@@ -1,0 +1,2 @@
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/iR
+YAHOO.*Host\x3A.*\x2Fcs\x2Fpop4\x2F

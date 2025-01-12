@@ -1,0 +1,2 @@
+^[0-9]{5}(-[0-9]{4})?$
+www\.actualnames\.com\s+toolbar_domain_redirect\s+Contactfrom=GhostVoiceServer

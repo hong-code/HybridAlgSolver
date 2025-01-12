@@ -1,0 +1,4 @@
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+com\x2Findex\.php\?tpid=onspyblpatUser-Agent\x3ASurveillance
+^[a-zA-Z0-9!@#$&_]+$
+NetTracker.*Theef2[^\n\r]*versionA-311Subject\x3awww\x2Epcsentinelsoftware\x2Ecom

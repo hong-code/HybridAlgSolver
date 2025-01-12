@@ -1,0 +1,4 @@
+this\s+MyBrowser\d+Redirector\x22ServerHost\x3AX-Mailer\x3A
+Supervisor\s+User-Agent\x3A
+<\*?font              # Match start of Font Tag
+Address\x3A\s+SbAtsHTTP_RAT_Subject\x3A

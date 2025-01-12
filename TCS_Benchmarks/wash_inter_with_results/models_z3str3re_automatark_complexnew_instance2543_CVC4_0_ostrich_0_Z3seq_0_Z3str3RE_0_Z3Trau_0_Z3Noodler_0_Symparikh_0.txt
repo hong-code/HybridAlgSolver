@@ -1,0 +1,2 @@
+/User-Agent\x3A\s+?mus[\x0d\x0a]/iH
+YOUR.*\x2Fsearchfast\x2F\s+hostiedesksearch\.dropspam\.com\x2Fbi\x2Fservlet\x2FThinstall

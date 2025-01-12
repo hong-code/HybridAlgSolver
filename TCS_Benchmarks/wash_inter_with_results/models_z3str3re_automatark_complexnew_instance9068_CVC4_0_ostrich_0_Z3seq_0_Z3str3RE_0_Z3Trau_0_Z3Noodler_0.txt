@@ -1,0 +1,5 @@
+^http[s]?://twitter\.com/(#!/)?[a-zA-Z0-9]{1,15}[/]?$
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A
+HWAE[^\n\r]*Email[^\n\r]*User-Agent\x3AUser-Agent\x3awowokayHost\x3A
+^(1?)(-| ?)(\()?([0-9]{3})(\)|-| |\)-|\) )?([0-9]{3})(-| )?([0-9]{4}|[0-9]{4})$
+WinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid4\x2e8\x2e4

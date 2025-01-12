@@ -1,0 +1,4 @@
+/^\x2F40e800[0-9A-F]{30,}$/Ui
+LIST\]SpamBlockerUtilityTry2FindBasicHost\x3AUser-Agent\x3AAcmeprotocolSpy
+(^\d{3,5}\,\d{2}$)|(^\d{3,5}$)
+/\/[a-z]{2}\/testcon.php$/U

@@ -1,0 +1,4 @@
+^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$
+^((Fred|Wilma)\s+Flintstone|(Barney|Betty)\s+Rubble)$
+wowokayoffers\x2Ebullseye-network\x2EcomRTB\x0D\x0A\x0D\x0AAttached
+/^\x7b\x22[a-f0-9]{4}\x22\x3a\x22([a-f0-9]{32}|false)\x22,/smiP

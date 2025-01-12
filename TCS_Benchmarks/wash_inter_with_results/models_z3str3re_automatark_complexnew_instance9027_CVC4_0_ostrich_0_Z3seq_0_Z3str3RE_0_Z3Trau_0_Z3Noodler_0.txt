@@ -1,0 +1,5 @@
+/version\x3D[\x22\x27][^\x22\x27]{1024}/
+Guarded\s+ready\w+PARSERHost\x3aA-311ServerUser-Agent\x3Ascn\x2emystoretoolbar\x2ecom
+Strip-Player.*MyAgent.*\x2Fnewsurfer4\x2F
+/appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/smi
+/\x2efli([\?\x5c\x2f]|$)/smiU

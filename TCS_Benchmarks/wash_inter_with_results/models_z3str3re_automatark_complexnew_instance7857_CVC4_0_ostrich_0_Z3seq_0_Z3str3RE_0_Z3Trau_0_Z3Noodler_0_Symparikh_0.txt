@@ -1,0 +1,3 @@
+/\x2eswf([\x3f\x2f]|$)/Uim
+Host\x3A.*NETObserve\d+Host\x3aohgdhkzfhdzo\x2fuwpOK\r\n
+^[^iIoOqQ'-]{10,17}$

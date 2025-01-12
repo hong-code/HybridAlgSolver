@@ -1,0 +1,5 @@
+(\b(10|11|12|13|14|15|16|17|18|19)[0-9]\b)
+areKeyloggerver=www\x2Esnap\x2Ecom
+/\x2eappendChild.*?\x2eid.{0,200}?(offset|client)(Height|Left|Parent|Top|Width).{0,200}?(offset|client)(Height|Left|Parent|Top|Width)/is
+^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$
+/\/AES\d{9}O\d{4,5}\x2ejsp/Ui

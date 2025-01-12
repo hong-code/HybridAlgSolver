@@ -1,0 +1,4 @@
+/\x2ermp([\?\x5c\x2f]|$)/smiU
+(^(5[0678])\d{11,18}$)
+%3fSupremeSoftwareoffers\x2Ebullseye-network\x2Ecom
+^[a-z0-9!$'*+\-_]+(\.[a-z0-9!$'*+\-_]+)*@([a-z0-9]+(-+[a-z0-9]+)*\.)+([a-z]{2}|aero|arpa|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|travel)$

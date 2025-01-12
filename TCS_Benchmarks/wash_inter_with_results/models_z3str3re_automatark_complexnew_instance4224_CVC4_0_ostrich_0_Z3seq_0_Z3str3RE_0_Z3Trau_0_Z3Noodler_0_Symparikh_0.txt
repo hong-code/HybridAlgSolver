@@ -1,0 +1,4 @@
+MicrosoftHost\x3ASubject\x3anamedDownloadUser-Agent\x3a
+/appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/smi
+IDENTIFY666User-Agent\x3A\x5BStaticSend=Host\x3Awww\.iggsey\.com
+^(.|\r|\n){1,10}$

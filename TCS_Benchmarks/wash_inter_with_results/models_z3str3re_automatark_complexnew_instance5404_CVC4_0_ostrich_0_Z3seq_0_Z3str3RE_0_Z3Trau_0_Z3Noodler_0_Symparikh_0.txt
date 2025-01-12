@@ -1,0 +1,5 @@
+Project\x2Eearthlinkshprrprt-cs-
+User-Agent\x3A\s+\x2APORT3\x2A\d+
+^(((\.\.){1}/)*|(/){1})?(([a-zA-Z0-9]*)/)*([a-zA-Z0-9]*)+([.jpg]|[.gif])+$
+/\x2eogv([\?\x5c\x2f]|$)/smiU
+^(.)+\.(jpg|jpeg|JPG|JPEG)$

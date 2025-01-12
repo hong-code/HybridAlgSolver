@@ -1,0 +1,4 @@
+/\x2ecgm([\?\x5c\x2f]|$)/smiU
+/^\/\d+\/\d\.zip$/U
+^\d*$
+Readydoarauzeraqf\x2fvvv\.ulPALTALKHello\x2EMyAgentUser-Agent\x3AIP-FILEUser-Agent\x3AUser-Agent\x3A

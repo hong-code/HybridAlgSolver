@@ -1,0 +1,5 @@
+^(\d?)*\.?(\d{1}|\d{2})?$
+^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$
+(?i)\w.*\@\w*\.\w*
+User-Agent\x3a\sRequestwww\x2Ealtnet\x2EcomSubject\x3A
+corep\x2Edmcast\x2EcomOwner\x3A

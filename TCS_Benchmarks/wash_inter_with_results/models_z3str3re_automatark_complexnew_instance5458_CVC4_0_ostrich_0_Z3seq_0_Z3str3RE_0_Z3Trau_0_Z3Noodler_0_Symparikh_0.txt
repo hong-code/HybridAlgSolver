@@ -1,0 +1,5 @@
+ToolbarBasedATLRemoteFrom\x3Adcww\x2Edmcast\x2Ecom
+User-Agent\x3A.*Host\x3A\dName=Your\+Host\+is\x3A
+Ready\s+Toolbar\d+ServerLiteToolbar
+urn:[a-z0-9]{1}[a-z0-9\-]{1,31}:[a-z0-9_,:=@;!'%/#\(\)\+\-\.\$\*\?]+
+/User-Agent\x3a\x20[^\x0d\x0a]*?\x3bU\x3a[^\x0d\x0a]{1,68}\x3brv\x3a/H

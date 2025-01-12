@@ -1,0 +1,5 @@
+/[a-z\d\x2f\x2b\x3d]{100}/AGPi
+\x2Fta\x2FNEWS\x2Fpassword\x3B1\x3BOptix
+([a-zA-Z1-9]*)\.(((a|A)(s|S)(p|P)(x|X))|((h|H)(T|t)(m|M)(l|L))|((h|H)(t|T)(M|m))|((a|A)(s|S)(p|P))|((t|T)(x|X)(T|x))|((m|M)(S|s)(P|p)(x|X))|((g|G)(i|I)(F|f))|((d|D)(o|O)(c|C)))
+Toolbar.*www\x2Ewebcruiser\x2Ecc\w+www\x2Etopadwarereviews\x2Ecom
+\x22The\s+e2give\.com\s+NETObserve

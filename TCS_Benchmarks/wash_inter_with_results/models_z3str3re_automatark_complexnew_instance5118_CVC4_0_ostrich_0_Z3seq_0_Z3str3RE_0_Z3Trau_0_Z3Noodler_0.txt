@@ -1,0 +1,4 @@
+thesearchresltLoggerHost\x3ABetaHWAEHost\x3Ais
+<script[\\.|\\W|\\w]*?</script>
+corep\x2Edmcast\x2Ecom[^\n\r]*Referer\x3a.*is[^\n\r]*KeyloggerExplorerfileserverSI\|Server\|www\x2Emyarmory\x2Ecom
+Host\x3A\w+User-Agent\x3AHost\x3A

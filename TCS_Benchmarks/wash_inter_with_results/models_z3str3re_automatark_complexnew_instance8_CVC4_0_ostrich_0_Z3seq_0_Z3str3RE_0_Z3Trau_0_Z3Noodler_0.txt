@@ -1,0 +1,4 @@
+^(192\.168\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5]\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5])$
+User-Agent\x3A\s+\x2APORT3\x2A\d+
+Apofis.*Port\x2E\s+\x2FNFO\x2CRegistered
+\.cfg\s+xbqyosoe\x2fcpvmAdToolsconnectedNodes\/cgi-bin\/PopupV

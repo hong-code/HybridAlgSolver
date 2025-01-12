@@ -1,0 +1,4 @@
+[\w-]+@([\w-]+\.)+[\w-]+
+cyber@yahoo\x2Ecom\s+Host\x3a\x7D\x7Crichfind\x2Ecom
+^[a-zA-Z]{1}[\w\sa-zA-Z\d_]*[^\s]$
+^(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*$

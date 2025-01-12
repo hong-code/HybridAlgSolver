@@ -1,0 +1,2 @@
+snprtz\x7Cdialnoref\x3D\x25user\x5FidPG=SPEEDBAR
+^\d{2,6}-\d{2}-\d$

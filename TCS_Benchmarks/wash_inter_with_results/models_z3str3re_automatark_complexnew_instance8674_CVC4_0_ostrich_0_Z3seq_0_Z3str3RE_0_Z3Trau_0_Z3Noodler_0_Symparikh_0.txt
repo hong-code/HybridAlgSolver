@@ -1,0 +1,3 @@
+zzzvmkituktgr\x2fetie\s+WindowsAttachedPalas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=
+/(\d*\.?\d+)\s?(px|em|ex|%|in|cn|mm|pt|pc+)/igm
+^-?\d+(\.\d+)?$

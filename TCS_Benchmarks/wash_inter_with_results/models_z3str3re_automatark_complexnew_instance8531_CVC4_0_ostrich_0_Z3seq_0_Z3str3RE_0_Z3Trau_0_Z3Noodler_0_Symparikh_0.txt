@@ -1,0 +1,4 @@
+^[D-d][K-k]( |-)[1-9]{1}[0-9]{3}$
+Hours\w+User-Agent\x3AChildWebGuardian
+/\x2em3u([\?\x5c\x2f]|$)/smiU
+^(\w+)s?\:\/\/(\w+)?(\.)?(\w+)?\.(\w+)$

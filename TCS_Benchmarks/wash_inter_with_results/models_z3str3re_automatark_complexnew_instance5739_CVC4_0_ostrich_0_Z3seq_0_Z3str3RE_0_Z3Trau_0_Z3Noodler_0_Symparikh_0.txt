@@ -1,0 +1,5 @@
+SPY\s\x5BStaticHost\x3AFROM\x3Acs\x2Eshopperreports\x2Ecom
+/\x2ejmh([\?\x5c\x2f]|$)/smiU
+/filename\=[a-z0-9]{24}\.exe/H
+User-Agent\x3AHost\x3ATeomaBarHost\x3AHoursHost\x3A
+/\x2esmil([\?\x5c\x2f]|$)/smiU

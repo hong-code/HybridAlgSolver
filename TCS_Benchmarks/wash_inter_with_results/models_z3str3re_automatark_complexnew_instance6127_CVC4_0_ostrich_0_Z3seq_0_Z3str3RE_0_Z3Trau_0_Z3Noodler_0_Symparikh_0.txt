@@ -1,0 +1,4 @@
+/\x2eabc([\?\x5c\x2f]|$)/smiU
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A
+05\d{8}
+this\w+c\.goclick\.com\d

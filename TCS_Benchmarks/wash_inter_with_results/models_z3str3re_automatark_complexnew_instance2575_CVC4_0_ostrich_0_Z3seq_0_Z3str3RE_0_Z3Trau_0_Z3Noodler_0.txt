@@ -1,0 +1,5 @@
+OVN\s+\x2APORT3\x2A\[DRIVEwww\.raxsearch\.com
+^[a-z0-9!$'*+\-_]+(\.[a-z0-9!$'*+\-_]+)*@([a-z0-9]+(-+[a-z0-9]+)*\.)+([a-z]{2}|aero|arpa|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|travel)$
+/^\/lists\/\d{20}$/U
+Host\x3A\.exePass-OnHost\x3A\.exe\x2Ftoolbar\x2F
+^[SFTG]\d{7}[A-Z]$

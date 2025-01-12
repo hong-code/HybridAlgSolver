@@ -1,0 +1,5 @@
+/\/pte\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+Host\x3A\s+\.ico\s+Host\x3Aorigin\x3Dsidefind
+Host\x3A\w+wwwfromToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+stats\x2edrivecleaner\x2ecomExciteasdbiz\x2Ebiz
+Information.*Firewall\s+ised2k\xc0STATUS\xc0Server

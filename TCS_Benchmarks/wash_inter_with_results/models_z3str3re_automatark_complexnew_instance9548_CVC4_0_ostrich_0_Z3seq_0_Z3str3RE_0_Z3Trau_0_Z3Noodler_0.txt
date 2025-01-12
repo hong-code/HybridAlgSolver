@@ -1,0 +1,4 @@
+Information\s+Host\x3A.*com
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi
+twfofrfzlugq\x2feve\.qd\d+
+HANDYHost\x3aHost\x3aHost\x3Ayddznydqir\x2feviGatornewsSoftActivity

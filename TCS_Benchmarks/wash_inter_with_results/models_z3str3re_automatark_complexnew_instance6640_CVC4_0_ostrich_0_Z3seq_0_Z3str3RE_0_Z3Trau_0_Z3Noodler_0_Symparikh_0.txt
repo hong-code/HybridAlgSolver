@@ -1,0 +1,3 @@
+^([A-Z][a-z]+)\s([A-Z][a-zA-Z-]+)$
+^([987]{1})(\d{1})(\d{8})
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem

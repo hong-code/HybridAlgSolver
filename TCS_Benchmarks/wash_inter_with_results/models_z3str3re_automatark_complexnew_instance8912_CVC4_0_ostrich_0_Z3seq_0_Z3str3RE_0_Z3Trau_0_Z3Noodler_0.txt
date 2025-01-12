@@ -1,0 +1,3 @@
+User-Agent\x3A\d+PortaURLSSKC\x7croogoo\x7c\.cfgmPOPrtCUSTOMPal
+(^.+\|+[A-Za-z])
+gpstool\x2eglobaladserver\x2ecom\daction\x2ESearchdata2\.activshopper\.com

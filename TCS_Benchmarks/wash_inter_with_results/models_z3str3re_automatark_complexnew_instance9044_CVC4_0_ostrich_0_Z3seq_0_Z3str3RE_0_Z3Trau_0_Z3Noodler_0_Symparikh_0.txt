@@ -1,0 +1,3 @@
+A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic
+^([0-1]?\d|2[0-3])([:]?[0-5]\d)?([:]?|[0-5]\d)?\s?(A|AM|P|p|a|PM|am|pm|pM|aM|Am|Pm)?$
+/\/\d+\.mp3$/U

@@ -1,0 +1,4 @@
+(([A-Z]{1,2}[0-9][0-9A-Z]?)\ ([0-9][A-Z]{2}))|(GIR\ 0AA)
+[+-]*[0-9]+[,]*[0-9]*|[+-]*[0-9]*[,]+[0-9]*
+Subject\x3Alinkautomatici\x2EcomReferer\x3Awww\x2Esearchreslt\x2Ecom
+^\d*[0-9](\.\d?[0-9])?$

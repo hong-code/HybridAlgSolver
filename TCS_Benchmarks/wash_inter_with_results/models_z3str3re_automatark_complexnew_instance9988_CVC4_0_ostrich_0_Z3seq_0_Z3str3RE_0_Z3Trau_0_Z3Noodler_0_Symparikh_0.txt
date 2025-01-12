@@ -1,0 +1,3 @@
+^((\+)?(\d{2}[-])?(\d{10}){1})?(\d{11}){0,1}?$
+download\x2Eeblocs\x2EcomHost\x3AReferer\x3A
+^[B|K|T|P][A-Z][0-9]{4}$

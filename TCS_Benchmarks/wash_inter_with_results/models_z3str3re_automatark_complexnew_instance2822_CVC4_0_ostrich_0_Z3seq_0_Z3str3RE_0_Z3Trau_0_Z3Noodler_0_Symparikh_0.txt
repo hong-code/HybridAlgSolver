@@ -1,0 +1,5 @@
+ProjectHost\x3AlogHost\x3Awww\x2Esnap\x2EcomGoogle-\>rtServidor\x2E
+^[a-zA-Z0-9][a-zA-Z0-9_]{2,29}$
+^\d*[0-9](|.\d*[0-9]|)*$
+OSSProxyHost\x3ASubject\x3as_sq=aolsnssignin
+/^[a-z\d\x2b\x2f\x3d]{48,256}$/iP

@@ -1,0 +1,4 @@
+User-Agent\x3AUser-Agent\x3Awww\.take5bingo\.comUser-Agent\x3A
+^(\s*\d\s*){11}$
+Host\x3A\dMicrosoft\w+\+Version\+
+Spy\s+toolbar_domain_redirect

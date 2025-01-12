@@ -1,0 +1,4 @@
+^(0)$|^([1-9][0-9]*)$
+EFError.*\x2Fcs\x2Fpop4\x2F[^\n\r]*
+User-Agent\x3AFiltered
+\x2FNFO\x2CRegistered.*Host\x3A\s+TPSystemHost\x3A

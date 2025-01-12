@@ -1,0 +1,4 @@
+fsbuffsearch\x2econduit\x2ecomocllceclbhs\x2fgth
+^[http|ftp|wap|https]{3,5}:\//\www\.\w*\.[com|net]{2,3}$
+^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$
+/\x2ewri([\?\x5c\x2f]|$)/smiU

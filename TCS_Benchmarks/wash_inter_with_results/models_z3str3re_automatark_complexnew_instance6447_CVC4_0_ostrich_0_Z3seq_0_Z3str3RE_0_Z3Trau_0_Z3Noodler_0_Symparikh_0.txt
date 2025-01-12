@@ -1,0 +1,4 @@
+/\/\?[0-9a-f]{32}/Ui
+kl\x2Esearch\x2Eneed2find\x2Ecom\ssource%3Dultrasearch136%26campaign%3Dsnap
+^(100(\.0{0,2}?)?$|([1-9]|[1-9][0-9])(\.\d{1,2})?)$
+/^[^\s]*\x0D\x0A$/P

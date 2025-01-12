@@ -1,0 +1,4 @@
+Host\x3A\s+\x2Ftoolbar\x2Fico\x2F\dencoderserverreport\<\x2Ftitle\>
+URL\s+url=Host\x3ahttpUser-Agent\x3ASubject\x3A
+Subject\x3AEnTrYExplorer\x2APORT2\x2AHost\x3A
+^(\+|-)?(\d\.\d{1,6}|[1-9]\d\.\d{1,6}|1[1-7]\d\.\d{1,6}|180\.0{1,6})$

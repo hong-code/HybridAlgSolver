@@ -1,0 +1,3 @@
+.*[a-zA-Z]$
+log\=\x7BIP\x3A\d\x2Etxt\s+Pcast\x2Edat\x2EToolbar\x7D\x7BOS\x3Atoolsbar\x2Ekuaiso\x2EcomHost\x3A
+select\x2FGet\s+Host\x3A.*ppcdomain\x2Eco\x2Euk

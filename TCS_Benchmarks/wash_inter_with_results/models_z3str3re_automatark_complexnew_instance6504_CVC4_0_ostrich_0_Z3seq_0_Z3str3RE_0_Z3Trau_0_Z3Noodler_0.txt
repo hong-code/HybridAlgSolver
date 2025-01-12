@@ -1,0 +1,5 @@
+^01[0-2]\d{8}$
+(([A-Z]{1,2}[0-9][0-9A-Z]?)\ ([0-9][A-Z]{2}))|(GIR\ 0AA)
+/^[a-z]\x3d[a-f\d]{80,140}$/Pi
+/\x2ej2k([\?\x5c\x2f]|$)/smiU
+Spy\s+toolbar_domain_redirect

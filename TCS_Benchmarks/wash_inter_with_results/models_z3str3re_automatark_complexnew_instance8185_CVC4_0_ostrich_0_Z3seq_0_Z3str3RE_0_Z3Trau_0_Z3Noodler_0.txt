@@ -1,0 +1,4 @@
+/\x2elnk([\?\x5c\x2f]|$)/smiU
+IP.*encoder\d+SAHPORT-User-Agent\x3A
+(^(6334)[5-9](\d{11}$|\d{13,14}$))
+^[A-Z]{3}-[0-9]{4}$

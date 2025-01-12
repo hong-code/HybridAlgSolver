@@ -1,0 +1,3 @@
+Host\x3A.*rt[^\n\r]*Host\x3AUser-Agent\x3A
+^(\$)?((\d+)|(\d{1,3})(\,\d{3})*)(\.\d{2,})?$
+/infor\.php\?uid=\w{52}/Ui

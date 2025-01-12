@@ -1,0 +1,4 @@
+/^Host\x3a[^\x0d\x0a]+\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\x3a\d{1,5}\x0d?$/mi
+/\x2ejif([\?\x5c\x2f]|$)/smiU
+^(\d{1}|\d{2}|\d{3})(\.\d{3})*?$
+ChildWebGuardian\d+Subject\x3A

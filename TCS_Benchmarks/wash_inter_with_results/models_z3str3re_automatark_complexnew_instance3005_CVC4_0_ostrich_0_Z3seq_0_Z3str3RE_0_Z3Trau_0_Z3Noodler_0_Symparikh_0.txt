@@ -1,0 +1,3 @@
+ProtoSubject\x3asource\=IncrediFindProjectAgentHost\x3AHost\x3AHost\x3A
+/^stop\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+/\x2erjs([\?\x5c\x2f]|$)/smiU
