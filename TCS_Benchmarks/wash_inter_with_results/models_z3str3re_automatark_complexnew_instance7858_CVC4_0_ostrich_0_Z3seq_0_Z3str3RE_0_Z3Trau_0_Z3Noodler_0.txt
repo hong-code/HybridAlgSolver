@@ -1,0 +1,5 @@
+as\x2Estarware\x2Ecom%3fUser-Agent\x3Ahostie
+( xmlns:.*=[",'].*[",'])|( xmlns=[",'].*[",'])
+User-Agent\x3ASurveillancecomOnline
+e2give\.comrichfind\x2Ecom\x22007User-Agent\x3Awww\x2Esearchreslt\x2Ecom
+^((\+)?(\d{2})[-])?(([\(])?((\d){3,5})([\)])?[-])|(\d{3,5})(\d{5,8}){1}?$

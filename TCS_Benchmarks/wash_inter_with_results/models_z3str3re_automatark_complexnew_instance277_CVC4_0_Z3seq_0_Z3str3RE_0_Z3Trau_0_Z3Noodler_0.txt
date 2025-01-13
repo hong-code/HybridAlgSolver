@@ -1,0 +1,4 @@
+/document\.execCommand\(\s*[\x22\x27]InsertUnorderedList[\x22\x27]\s*\)\s*\x3B.{0,250}\s*\w+\.swapNode\(\s*[A-Za-z\(\)\"\'\.\=\ ]{1,75}\s*\)\s*document\.execCommand\(\s*[\x22\x27]Undo[\x22\x27]\s*\)\s*\x3B/smi
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22
+^[a-zA-Z]\w{0,30}$
+Subject\x3A\s+www\x2eproventactics\x2ecomdownloads\x2Emorpheus\x2Ecom\x2Frotation

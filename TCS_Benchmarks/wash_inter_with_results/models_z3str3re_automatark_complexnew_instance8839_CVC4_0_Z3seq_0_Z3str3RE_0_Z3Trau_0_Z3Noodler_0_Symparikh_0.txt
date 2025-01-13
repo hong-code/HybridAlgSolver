@@ -1,0 +1,5 @@
+$sPatternTablet = '/(Tablet|iPad|iPod)/';
+Host\x3A\w+www.*ToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+(INSERT INTO\s+)(\w+)(\s+\()([\w+,?\s*]+)(\)\s+VALUES\s+)((\(['?\w+'?,?\s*]+\)\,?;?\s*)+)
+/^\x01\x02.{0,50}[a-zA-Z]{10}\x2fPK.{0,50}[a-zA-Z]{10}\x2f[a-zA-Z]{7}\.classPK/sR
+.*[Pp]en[Ii1][\$s].*

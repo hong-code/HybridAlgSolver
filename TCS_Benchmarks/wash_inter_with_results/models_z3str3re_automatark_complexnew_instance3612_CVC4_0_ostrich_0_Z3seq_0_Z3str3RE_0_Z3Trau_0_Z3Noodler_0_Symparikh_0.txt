@@ -1,0 +1,3 @@
+www\x2Esearchreslt\x2Ecom
+^(\+48\s+)?\d{3}(\s*|\-)\d{3}(\s*|\-)\d{3}$
+Server\x3AWordTheHost\x3afrom

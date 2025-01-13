@@ -1,0 +1,5 @@
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+\x7D\x7BPort\x3AHost\x3Amqnqgijmng\x2fojNavhelperUser-Agent\x3A
+/encoding\x3D[\x22\x27][^\x22\x27]{1024}/
+(\+)?(\()?(\d+){1,4}(\))?(\s)?(-)?(\d+){1,3}(\s)?(-)?(\d+){1,4}(\s)?(-)?(\d+){1,4}(\s)?(-)?(\d+){1,4}
+((PL|SK)-?)?[0-9]{10}

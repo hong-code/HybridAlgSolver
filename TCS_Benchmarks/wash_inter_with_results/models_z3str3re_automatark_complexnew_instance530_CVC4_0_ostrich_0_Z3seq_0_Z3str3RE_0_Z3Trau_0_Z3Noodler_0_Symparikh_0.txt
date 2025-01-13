@@ -1,0 +1,3 @@
+From\x3A\w+SoftActivity\d+
+Host\x3Ahirmvtg\x2fggqh\.kqhverA-Spy
+Supervisor\s+User-Agent\x3A

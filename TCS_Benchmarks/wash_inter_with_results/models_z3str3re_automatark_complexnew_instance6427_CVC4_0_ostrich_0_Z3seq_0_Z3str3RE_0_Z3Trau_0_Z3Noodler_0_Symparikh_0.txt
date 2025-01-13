@@ -1,0 +1,2 @@
+^[a-zA-Z0-9]+([a-zA-Z0-9\-\.]+)?\.(com|org|net|mil|edu|COM|ORG|NET|MIL|EDU)$
+www\x2Ecameup\x2Ecom\s+spyblini\x2Eini

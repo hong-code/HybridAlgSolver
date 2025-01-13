@@ -1,0 +1,3 @@
+Ready\s+Client\s+MyBrowserHost\x3asecurityon\x3AHost\x3ARedirector\x22ServerHost\x3AX-Mailer\x3A
+Explorer\x2Fsto=notificationfind
+/^(\x00\x00\x00\x00|.{4}(\x00\x00\x00\x00|.{12}))/s

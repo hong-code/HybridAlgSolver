@@ -1,0 +1,3 @@
+gpstool\x2eglobaladserver\x2ecom\daction\x2E\w+data2\.activshopper\.com
+/exploit\/(Exploit(App)?|Loader)\.class/ims
+\x2APORT2\x2A\w+Host\x3a\s+jspIDENTIFYserverHOST\x3ASubject\x3Ai\-femdom\x2EcomUser-Agent\x3Alog\=\x7BIP\x3A

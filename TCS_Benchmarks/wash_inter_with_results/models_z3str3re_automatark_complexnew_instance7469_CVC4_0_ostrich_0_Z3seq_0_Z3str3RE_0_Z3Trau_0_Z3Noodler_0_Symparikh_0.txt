@@ -1,0 +1,2 @@
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch
+Searchdata2\.activshopper\.comdll\x3FproductsCUSTOMSAccwww\x2Elocators\x2Ecom

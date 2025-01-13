@@ -1,0 +1,4 @@
+configINTERNAL\.ini.*SecureNet\s+User-Agent\x3Aregister\.asp
+on\s+dist\x2Eatlas\x2Dia\x2Ecom
+/\x2easx([\?\x5c\x2f]|$)/smiU
+for mobile:^[0][1-9]{1}[0-9]{9}$

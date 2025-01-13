@@ -1,0 +1,5 @@
+^([0-9]{1}[\d]{0,2}(\,[\d]{3})*(\,[\d]{0,2})?|[0-9]{1}[\d]{0,}(\,[\d]{0,2})?|0(\,[\d]{0,2})?|(\,[\d]{1,2})?)$
+/\x2elnk([\?\x5c\x2f]|$)/smiU
+\x2FrssScaneradfsgecoiwnf\x7D\x7BTrojan\x3AlogsHost\x3a
+wowokayoffers\x2Ebullseye-network\x2EcomRTB\x0D\x0A\x0D\x0AAttached
+body=wordHost\x3ASpediartaddrEverywareHost\x3AHost\x3A

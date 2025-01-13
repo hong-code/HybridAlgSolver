@@ -1,0 +1,5 @@
+User-Agent\x3a\s+Host\x3A\s+Referer\x3a
+([0]|[-]?[0]\.[0-9]+)|([-]?([1-9]+\.[0-9]+))|([-]?[1-9]+)
+\b(((((one|t((en)|(wo)|(hree)|(welve)|(hirteen))|(evelen)|(f((our)|(ive))|s((ix)|(even))|eight|nine)(teen)?))\b(\s+hundred\s*)?)| ((t((wen)|(hir))|f((or)|(if))|s((ix)|(even))|eigh|nin)ty)(-(one|t((wo)|(hree))|f((our)|(ive))|s((ix)|(even))|eight|nine))?) (\s*(hundred|thousand|((([mb]|(t|quad)r))illion))\s*(and\s+)?)?)+
+^[ \w\.]{3,}([A-Za-z]\.)?([ \w]*\##\d+)?(\r\n| )[ \w]{3,},\x20([A-Z]{2}\.)\x20\d{5}(-\d{4})?$
+Warez\s+Online100013Agentsvr\x5E\x5EMerlin

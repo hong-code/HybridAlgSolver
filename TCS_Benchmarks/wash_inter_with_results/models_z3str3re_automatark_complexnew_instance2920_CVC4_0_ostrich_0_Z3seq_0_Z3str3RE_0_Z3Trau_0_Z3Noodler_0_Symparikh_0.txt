@@ -1,0 +1,3 @@
+port\d+\.compress\s+aresflashdownloader\x2Ecomv\x2Edll\x3F\[DRIVEHost\x3A\xb0\xae\xb6\xf9\xcd\xf8\xb5\xc1
+^([V|E|J|G|v|e|j|g])([0-9]{5,8})$
+^[0-9]{4}$

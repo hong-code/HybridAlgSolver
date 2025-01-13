@@ -1,0 +1,4 @@
+^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$
+[a-zA-Z0-9!#\$%&'\*\+\-\/=\?\^_`{\|}~]
+updates\x5D\x2520\x5BPort_NETObserve
+HANDY\s+Exploiter\w+\x2Fr\x2Fkeys\x2FkeysS\x3aUsers\x5cIterenet

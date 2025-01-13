@@ -1,0 +1,3 @@
+Host\x3A\dwww\x2Etrustedsearch\x2Ecom
+\x3BCIA\s+is\s+User-Agent\x3Acid=tb\x2eCookie\x3A
+User-Agent\x3awww\x2Eadoptim\x2Ecom

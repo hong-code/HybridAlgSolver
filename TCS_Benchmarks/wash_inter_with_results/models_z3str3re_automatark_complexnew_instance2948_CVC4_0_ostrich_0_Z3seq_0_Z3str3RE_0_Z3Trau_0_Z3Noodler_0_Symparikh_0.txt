@@ -1,0 +1,5 @@
+Host\x3A\s+Boss\s+media\x2Etop-banners\x2Ecom
+&[a-zA-Z]+\d{0,3};
+.*[a-zA-Z]$
+/^(\x75|\x2d|\x2f|\x73|\xa2|\x2e|\x24|\x74)/sR
+([0-9a-z_-]+[\.][0-9a-z_-]{1,3})$

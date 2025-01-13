@@ -1,0 +1,3 @@
+/\x2ep2g([\?\x5c\x2f]|$)/smiU
+/\x2esmil([\?\x5c\x2f]|$)/smiU
+http\x3A\x2F\x2Fmysearch\.dropspam\.com\x2Findex\.php\?tpid=

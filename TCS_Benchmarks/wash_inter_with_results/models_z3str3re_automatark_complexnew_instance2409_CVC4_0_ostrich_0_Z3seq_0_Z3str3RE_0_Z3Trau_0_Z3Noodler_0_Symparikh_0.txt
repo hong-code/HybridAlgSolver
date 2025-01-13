@@ -1,0 +1,3 @@
+^(ht|f)tp(s?)\:\/\/[a-zA-Z0-9\-\._]+(\.[a-zA-Z0-9\-\._]+){2,}(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$
+/\x2ej2k([\?\x5c\x2f]|$)/smiU
+User-Agent\x3Aconfig\x2E180solutions\x2Ecom

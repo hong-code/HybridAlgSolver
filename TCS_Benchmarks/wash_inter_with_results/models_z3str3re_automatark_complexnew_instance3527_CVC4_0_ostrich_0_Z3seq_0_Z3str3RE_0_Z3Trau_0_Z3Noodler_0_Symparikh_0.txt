@@ -1,0 +1,4 @@
+User-Agent\x3Atwfofrfzlugq\x2feve\.qduuid=ppcdomain\x2Eco\x2EukGuardedReferer\x3AreadyLOGUser-Agent\x3A
+GmbH\x2FcommunicatortbHost\x3AUser-Agent\x3Aadblock\x2Elinkz\x2Ecom
+^([0-9a-fA-F]){8}$
+u=with\x3AHBand,Deathhoroscope2

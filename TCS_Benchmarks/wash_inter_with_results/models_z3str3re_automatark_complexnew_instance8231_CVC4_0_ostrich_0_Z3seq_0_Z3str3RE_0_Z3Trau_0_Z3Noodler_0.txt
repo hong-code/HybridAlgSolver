@@ -1,0 +1,4 @@
+/\x2ecsv([\?\x5c\x2f]|$)/smiU
+(\"http:\/\/video\.google\.com\/googleplayer\.swf\?docId=\d{19}\&hl=[a-z]{2}\")
+^[2-9]\d{2}-\d{3}-\d{4}$
+User-Agent\x3A.*Host\x3a\s+www\x2Ewordiq\x2Ecom\s+Subject\x3AAlexaOnline\x2521\x2521\x2521

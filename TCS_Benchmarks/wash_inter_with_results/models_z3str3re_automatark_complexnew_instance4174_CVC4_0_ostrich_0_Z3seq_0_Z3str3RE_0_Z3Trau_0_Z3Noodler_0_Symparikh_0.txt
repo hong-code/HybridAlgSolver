@@ -1,0 +1,3 @@
+ClientsConnected-\d+online-casino-searcher\.com\s+Warezxmlns\x3A
+User-Agent\x3A\s+information\swww\x2Etopadwarereviews\x2Ecom
+ToolbarUser-Agent\x3Awww\x2Ewebcruiser\x2EccDaemonUser-Agent\x3A

@@ -1,0 +1,3 @@
+/^\/lists\/\d{20}$/U
+^(#){1}([a-fA-F0-9]){6}$
+filename=\x22Subject\x3awww\x2Eadoptim\x2Ecomreport\x2Fbar_pl\x2Fchk\.fcgi

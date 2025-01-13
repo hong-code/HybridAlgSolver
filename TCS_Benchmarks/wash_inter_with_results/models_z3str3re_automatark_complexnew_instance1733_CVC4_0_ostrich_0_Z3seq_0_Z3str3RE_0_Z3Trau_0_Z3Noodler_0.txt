@@ -1,0 +1,4 @@
+/^\x2f\d{3}\x2f\d{3}\x2ehtml$/U
+ShadowNet\dsearchreslt\sTROJAN-Host\x3AYWRtaW46cGFzc3dvcmQ
+upgrade\x2Eqsrch\x2Einfo[^\n\r]*dcww\x2Edmcast\x2Ecom
+action\x2EpioletHost\x3AIP-www\x2Einternetadvertisingcompany\x2Ebiz

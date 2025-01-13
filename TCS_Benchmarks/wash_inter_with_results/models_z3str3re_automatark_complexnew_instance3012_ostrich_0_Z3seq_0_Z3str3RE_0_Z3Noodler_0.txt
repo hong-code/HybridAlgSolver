@@ -1,0 +1,5 @@
+/encoding\x3D[\x22\x27][^\x22\x27]{1024}/
+^[SC]{2}[0-9]{6}$
+IDENTIFY.*\/cgi-bin\/PopupV.*Host\x3Asearchreslt
+[({]?(0x)?[0-9a-fA-F]{8}([-,]?(0x)?[0-9a-fA-F]{4}){2}((-?[0-9a-fA-F]{4}-?[0-9a-fA-F]{12})|(,\{0x[0-9a-fA-F]{2}(,0x[0-9a-fA-F]{2}){7}\}))[)}]?
+^([^ \x21-\x26\x28-\x2C\x2E-\x40\x5B-\x60\x7B-\xAC\xAE-\xBF\xF7\xFE]+)$

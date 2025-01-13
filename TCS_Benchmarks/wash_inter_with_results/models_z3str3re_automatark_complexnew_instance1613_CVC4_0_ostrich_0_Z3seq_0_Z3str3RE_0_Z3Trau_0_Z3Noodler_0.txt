@@ -1,0 +1,5 @@
+(.*\.jpe?g|.*\.JPE?G)
+/^([a-zA-Z0-9])(([\-.]|[_]+)?([a-zA-Z0-9]+))*(@){1}[a-z0-9]+[.]{1}(([a-z]{2,3})|([a-z]{2,3}[.]{1}[a-z]{2,3}))$/
+/\x2fblackmuscats?\x3f\d/Ui
+Host\x3A.*NETObserve\d+Host\x3aohgdhkzfhdzo\x2fuwpOK\r\n
+www\x2Eserverlogic3\x2Ecom

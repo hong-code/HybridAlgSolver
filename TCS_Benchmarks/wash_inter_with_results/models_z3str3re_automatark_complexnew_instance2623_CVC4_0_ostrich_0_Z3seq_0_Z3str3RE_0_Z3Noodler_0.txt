@@ -1,0 +1,4 @@
+^((\+){1}[1-9]{1}[0-9]{0,1}[0-9]{0,1}(\s){1}[\(]{1}[1-9]{1}[0-9]{1,5}[\)]{1}[\s]{1})[1-9]{1}[0-9]{4,9}$
+IPUSER-Host\x3AUser-Agent\x3A\x2Fsearchfast\x2F
+SoftActivity\s+User-Agent\x3A.*LogsHost\x3AHost\x3AX-Mailer\x3a
+User-Agent\x3A\s+Host\x3Acdpnode=FILESIZE\x3Etoolsbar\x2Ekuaiso\x2Ecom

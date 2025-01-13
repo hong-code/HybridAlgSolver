@@ -1,0 +1,2 @@
+Activityfilename=\x22StarLoggerDAWeb-Mail
+^http://\\.?video\\.google+\\.\\w{2,3}/videoplay\\?docid=[\\w-]{19}

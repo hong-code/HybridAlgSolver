@@ -1,0 +1,4 @@
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom
+User-Agent\x3A\s+\x2APORT3\x2A\d+
+Subject\x3areportGatorNavExcel
+Host\x3AHANDYwww\x2Epurityscan\x2Ecom

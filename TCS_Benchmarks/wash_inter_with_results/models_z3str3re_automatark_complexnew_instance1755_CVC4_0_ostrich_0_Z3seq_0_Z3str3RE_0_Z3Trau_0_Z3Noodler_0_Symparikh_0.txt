@@ -1,0 +1,2 @@
+XP\d+Acme\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3DversionContact
+/\x2fb\x2fshoe\x2f[0-9]{3,5}$/U

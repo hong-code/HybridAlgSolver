@@ -1,0 +1,5 @@
+Host\x3A\.exePass-OnHost\x3A\.exe\x2Ftoolbar\x2F
+^\d{5}(\-)(\d{3})?$
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN
+Ready\s+Eye.*http\x3A\x2F\x2Fsupremetoolbar
+\x2APORT3\x2A\s+Warez.*X-Mailer\x3ASubject\x3AKEY=

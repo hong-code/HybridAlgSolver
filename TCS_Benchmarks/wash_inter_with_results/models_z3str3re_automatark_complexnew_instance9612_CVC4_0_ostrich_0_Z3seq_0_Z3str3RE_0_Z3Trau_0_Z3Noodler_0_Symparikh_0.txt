@@ -1,0 +1,3 @@
+Host\x3A\s+Online\s+ocllceclbhs\x2fgth
+/\x2elzh([\?\x5c\x2f]|$)/smiU
+/\x2ehta([\?\x5c\x2f]|$)/smiU

@@ -1,0 +1,3 @@
+sponsor2\.ucmore\.com\s+informationHost\x3A\x2Fezsb
+/[a-z]\x3d[a-f\d]{126}/P
+KeyloggerFSWcmdldap\x3A\x2F\x2FExploiterconnection\x2Ewww\x2Eoemji\x2Ecomzopabora\x2EinfoConnection

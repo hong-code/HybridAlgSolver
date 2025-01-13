@@ -1,0 +1,5 @@
+client\x2Ebaigoo\x2EcomUser\x3A
+Hello\x2E\s+ovplrichfind\x2EcomCookie\x3a
+forum=From\x3acomTencentTravelerBackAtTaCkExplorer
+X-Mailer\x3a+Host\x3A\x2EaspxHost\x3Av=User-Agent\x3axbqyosoe\x2fcpvmRequestwww\x2Ealtnet\x2Ecom
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/iR

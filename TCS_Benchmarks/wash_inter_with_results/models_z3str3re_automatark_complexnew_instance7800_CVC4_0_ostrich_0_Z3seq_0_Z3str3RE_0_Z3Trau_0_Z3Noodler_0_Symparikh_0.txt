@@ -1,0 +1,4 @@
+User-Agent\x3A\s+BossUser-Agent\x3ASpediaUser-Agent\x3A
+/\x2epict([\?\x5c\x2f]|$)/smiU
+st=\s+Stopper\s+Host\x3AAgentProjectMyWebSearchSearchAssistant
+^[1-4]{1}[0-9]{4}(-)?[0-9]{7}(-)?[0-9]{1}$

@@ -1,0 +1,5 @@
+offers\x2Ebullseye-network\x2Ecom\s+news[^\n\r]*WatcherUser-Agent\x3A
+(^\d{9}[V|v|x|X]$)
+.*[Oo0][Ee][Mm].*
+Kontiki\s+resultsmaster\x2Ecom\x7croogoo\x7c
+body=\x2521\x2521\x2521Optix\s+Host\x3a

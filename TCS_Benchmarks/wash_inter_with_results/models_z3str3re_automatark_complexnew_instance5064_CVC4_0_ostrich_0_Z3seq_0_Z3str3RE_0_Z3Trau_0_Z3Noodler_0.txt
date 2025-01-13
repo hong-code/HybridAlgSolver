@@ -1,0 +1,4 @@
+^[A-Za-z]{1}[0-9]{7}$
+/[^\n -~\r]{4}/P
+Windows\s+haveFTUser-Agent\x3ADayspassword\x3B0\x3BIncorrect
+^[A-Z]{3}(\s)?[0-9]{4}$

@@ -1,0 +1,4 @@
+^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$
+Host\x3AHANDYwww\x2Epurityscan\x2Ecom
+Theef2\sHost\x3A\s+User-Agent\x3awww\x2Esogou\x2EcomUser-Agent\x3AMyPostToolbar
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F

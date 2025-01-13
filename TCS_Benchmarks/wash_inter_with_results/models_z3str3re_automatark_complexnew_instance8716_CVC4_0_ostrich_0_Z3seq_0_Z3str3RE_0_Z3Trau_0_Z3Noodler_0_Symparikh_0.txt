@@ -1,0 +1,5 @@
+url=http\x3A\s+jsp[^\n\r]*serverHOST\x3ASubject\x3Ai\-femdom\x2Ecom
+/\/pte\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+http://www.9lessons.info/2008/08/most-popular-articles.html
+Windows\x2Fclient\x2FBlackreportc\.goclick\.comX-Sender\x3A
+Subject\x3a\s+OnlineServer\x3aYeah\!User-Agent\x3a

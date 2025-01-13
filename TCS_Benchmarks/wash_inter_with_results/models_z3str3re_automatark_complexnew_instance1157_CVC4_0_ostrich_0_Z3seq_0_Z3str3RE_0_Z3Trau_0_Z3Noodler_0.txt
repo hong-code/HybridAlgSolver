@@ -1,0 +1,5 @@
+^(([a-z])+.)+[A-Z]([a-z])+$
+^([1-9]|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$
+^[a-zA-Z]{1,3}\[([0-9]{1,3})\]
+zmnjgmomgbdz\x2fzzmw\.gzt\d+Ready
+/\x2epict([\?\x5c\x2f]|$)/smiU

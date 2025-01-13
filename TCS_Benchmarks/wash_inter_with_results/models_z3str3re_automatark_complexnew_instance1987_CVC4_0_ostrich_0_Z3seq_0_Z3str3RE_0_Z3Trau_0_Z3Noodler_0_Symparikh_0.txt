@@ -1,0 +1,3 @@
+/\x2fb\x2fshoe\x2f[0-9]{3,5}$/U
+ProjectMyWebSearchSearchAssistantfast-look\x2EcomOneReporter
+/\/\d+\.mp3$/U

@@ -1,0 +1,5 @@
+User-Agent\x3A\w+Minutes\d+www\x2Eeblocs\x2EcomHost\x3ARunnerHost\x3a\x2Ehtmldll\x3F
+^[\w]{3}(p|P|c|C|h|H|f|F|a|A|t|T|b|B|l|L|j|J|g|G)[\w][\d]{4}[\w]$
+myway\.comzmnjgmomgbdz\x2fzzmw\.gztUser-Agent\x3A
+['`~!@#&$%^&*()-_=+{}|?><,.:;{}\"\\/\\[\\]]
+/\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B(\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B){500}/m

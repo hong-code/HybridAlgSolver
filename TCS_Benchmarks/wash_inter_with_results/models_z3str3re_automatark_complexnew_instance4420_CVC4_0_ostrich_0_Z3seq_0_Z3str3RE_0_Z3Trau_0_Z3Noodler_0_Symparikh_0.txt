@@ -1,0 +1,2 @@
+forum=related\x2Eyok\x2Ecom\sStarted\!$3
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch

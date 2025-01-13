@@ -1,0 +1,5 @@
+('.*$|Rem((\t| ).*$|$)|"(.|"")*?")
+^((\d{5})|(\d{5}-\d{4})|([A-CEGHJ-NPR-TV-Z]\d[A-CEGHJ-NPR-TV-Z]\s\d[A-CEGHJ-NPR-TV-Z]\d))$
+3A\d+Host\x3AHWAEUser-Agent\x3A
+FTPHost\x3AUser-Agent\x3aUser\x3AdistID=deskwizz\x2Ecom
+(^[+]?\d*\.?\d*[1-9]+\d*$)|(^[+]?[1-9]+\d*\.\d*$)

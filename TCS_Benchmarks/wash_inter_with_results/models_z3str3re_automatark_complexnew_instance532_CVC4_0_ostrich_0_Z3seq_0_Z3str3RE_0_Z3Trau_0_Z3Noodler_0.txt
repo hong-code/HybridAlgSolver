@@ -1,0 +1,5 @@
+IndyHost\x3AGirlFriendReferer\x3A
+/\/\d+\/\d\.zip\x27\x3b/
+\x2FrssaboutinformationHost\x3A\x2Fezsbu=DISKHost\x3Aad\x2Emokead\x2Ecom
+ver\d+sports\w+whenu\x2Ecomwp-includes\x2Ffeed\x2Ephp\x3F
+^(\$)?(([1-9]\d{0,2}(\,\d{3})*)|([1-9]\d*)|(0))(\.\d{2})?$

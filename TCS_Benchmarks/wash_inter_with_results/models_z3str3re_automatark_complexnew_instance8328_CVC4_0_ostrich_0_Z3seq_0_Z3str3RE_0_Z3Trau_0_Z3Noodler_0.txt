@@ -1,0 +1,5 @@
+ovpl\s+\x7D\x7BPort\x3A.*SOAPAction\x3A.*adfsgecoiwnfHost\x3A\x3Fsearch\x3D
+protocolNetControl\x2EServerKEYLOGGERUser-Agent\x3A
+100013Agentsvr\x5E\x5EMerlinIPBeta\s\x3E\x3C
+weatherSubject\x3aX-Mailer\x3aTOOLBAR\x2Fnewsurfer4\x2F
+^(3[0-1]|2[0-9]|1[0-9]|0[1-9])[\s{1}|\/|-](Jan|JAN|Feb|FEB|Mar|MAR|Apr|APR|May|MAY|Jun|JUN|Jul|JUL|Aug|AUG|Sep|SEP|Oct|OCT|Nov|NOV|Dec|DEC)[\s{1}|\/|-]\d{4}$

@@ -1,0 +1,5 @@
+/\x2emid([\?\x5c\x2f]|$)/smiU
+Host\x3A\s+Online\s+ocllceclbhs\x2fgth
+^\d* \d*\/{1}\d*$|^\d*$
+\.exe\s+v2\x2E0\s+smrtshpr-cs-
+^04[0-9]{8}

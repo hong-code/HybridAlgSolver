@@ -1,0 +1,5 @@
+^(([0-9]{3})[-]?)*[0-9]{6,7}$
+zopabora\x2EinfocomhoroscopeTravelInsidefromUser-Agent\x3AFrom\x3Awww\x2EZSearchResults\x2EcomExplorer
+/\x2epac([\?\x5c\x2f]|$)/smiU
+\x2Fcbn\x2F\s+Host\x3Abinde2give\.com
+^[a-zA-Z]+(([\'\,\.\-][a-zA-Z])?[a-zA-Z]*)*$

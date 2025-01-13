@@ -1,0 +1,2 @@
+/filename\s*=\s*[^\r\n]*?\x2eapplication[\x22\x27\x3b\s\r\n]/i
+^\${1}[a-z]{1}[a-z\d]{0,6}$

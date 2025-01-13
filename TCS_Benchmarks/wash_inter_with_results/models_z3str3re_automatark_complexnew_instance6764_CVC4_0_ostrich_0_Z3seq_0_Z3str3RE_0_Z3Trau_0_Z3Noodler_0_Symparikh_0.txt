@@ -1,0 +1,4 @@
+/^sleep\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$
+[\s]a[\s]|[\s]about[\s]|[\s]an[\s]|[\s]are[\s]|[\s]as[\s]|[\s]at[\s]|[\s]be[\s]|[\s]by[\s]|[\s]for[\s]|[\s]from[\s]|[\s]how[\s]|[\s]in[\s]|[\s]is[\s]|[\s]it[\s]|[\s]of[\s]|[\s]on[\s]|[\s]or[\s]|[\s]that[\s]|[\s]the[\s]|[\s]this[\s]|[\s]to[\s]|[\s]was[\s]|[\s]what[\s]|[\s]when[\s]|[\s]where[\s]|[\s]who[\s]|[\s]will[\s]|[\s]with[\s]|[\s]the[\s]|[\s]www[\s]
+User-Agent\x3A[^\n\r]*quick\x2Eqsrch\x2Ecom.*www\.searchinweb\.com

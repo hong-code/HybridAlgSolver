@@ -1,0 +1,4 @@
+SpywareStrike.*Subject\x3A\s+Pcast\x2Edat\x2EToolbar
+Kontiki\s+resultsmaster\x2Ecom\x7croogoo\x7c
+[A-Z][a-z]+
+User-Agent\x3a\s+Host\x3AnamediepluginHost\x3AX-Mailer\x3A

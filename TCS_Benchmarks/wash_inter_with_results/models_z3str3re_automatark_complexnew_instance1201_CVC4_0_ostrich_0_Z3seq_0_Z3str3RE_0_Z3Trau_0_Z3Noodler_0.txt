@@ -1,0 +1,4 @@
+<!--[\\.|\\W|\\w]*?-->
+ProSpywww\x2Eemp3finder\x2Ecomwww
+^((([A-PR-UWYZ](\d([A-HJKSTUW]|\d)?|[A-HK-Y]\d([ABEHMNPRVWXY]|\d)?))\s*(\d[ABD-HJLNP-UW-Z]{2})?)|GIR\s*0AA)$
+Host\x3a[^\n\r]*A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic

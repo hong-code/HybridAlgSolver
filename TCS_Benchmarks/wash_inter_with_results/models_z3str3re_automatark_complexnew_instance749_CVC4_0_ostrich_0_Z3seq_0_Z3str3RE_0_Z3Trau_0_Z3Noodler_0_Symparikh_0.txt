@@ -1,0 +1,4 @@
+^(\+48\s*)?\d{2}\s*\d{3}(\s*|\-)\d{2}(\s*|\-)\d{2}$
+ad\x2Esearchsquire\x2Ecom[^\n\r]*User-Agent\x3A
+/rapidshare\.com\/files\/(\d+)\/([^\'^\"^\s^>^<^\\^\/]+)/
+My\x2Fdesktop\x2FWinSessionHost\x3aOnlineTPSystem\x7D\x7C

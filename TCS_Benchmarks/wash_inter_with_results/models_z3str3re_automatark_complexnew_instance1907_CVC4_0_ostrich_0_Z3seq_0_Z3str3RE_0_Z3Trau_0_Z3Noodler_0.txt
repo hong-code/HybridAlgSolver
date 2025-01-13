@@ -1,0 +1,5 @@
+(^0[87][23467]((\d{7})|( |-)((\d{3}))( |-)(\d{4})|( |-)(\d{7})))
+loomcompany\x2EcomBasedURLS\swww\.fast-finder\.com
+dll\x3Fbadurl\x2Egrandstreetinteractive\x2Ecom
+zmnjgmomgbdz\x2fzzmw\.gztwww3\.addfreestats\.comKeylogger
+/^SSID=[a-zA-Z\d]{43}\x3B\x20A=[0-3]$/C

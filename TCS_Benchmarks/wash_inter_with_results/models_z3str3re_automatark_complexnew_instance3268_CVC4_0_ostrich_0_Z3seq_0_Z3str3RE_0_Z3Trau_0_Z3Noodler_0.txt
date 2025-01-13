@@ -1,0 +1,4 @@
+NSIS_DOWNLOAD.*User-Agent\x3A\s+gpstool\x2eglobaladserver\x2ecom
+(^(2014)|^(2149))\d{11}$
+^[0-2]?[1-9]{1}$|^3{1}[01]{1}$
+^(NAME)(\s?)<?(\w*)(\s*)([0-9]*)>?$

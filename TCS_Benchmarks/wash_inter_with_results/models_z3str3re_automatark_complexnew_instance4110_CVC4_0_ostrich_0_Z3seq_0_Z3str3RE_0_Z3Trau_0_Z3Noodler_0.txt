@@ -1,0 +1,5 @@
+^R(\d){8}
+/User-Agent\x3A\s+?mus[\x0d\x0a]/iH
+/\/click\?sid=\w{40}\&cid=/Ui
+toolbarplace\x2Ecom[^\n\r]*Server[^\n\r]*X-Mailer\x3a\sUser-Agent\x3aHost\x3ABar\x2Fnewsurfer4\x2F
+/^exec\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

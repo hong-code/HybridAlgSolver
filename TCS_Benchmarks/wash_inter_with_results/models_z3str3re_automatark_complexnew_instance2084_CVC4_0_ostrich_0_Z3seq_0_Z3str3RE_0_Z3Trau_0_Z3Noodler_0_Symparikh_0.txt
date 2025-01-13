@@ -1,0 +1,4 @@
+Host\x3aOnlineUser-Agent\x3Awww\x2Evip-se\x2Ecom
+DownloadDmInf\x5EinfoSimpsonUser-Agent\x3AClient
+dialupvpn\x5fpwd\s+HXDownloadupdailyinformation
+/^\/[a-f0-9]{8}\/[a-f0-9]{7,8}\/$/U

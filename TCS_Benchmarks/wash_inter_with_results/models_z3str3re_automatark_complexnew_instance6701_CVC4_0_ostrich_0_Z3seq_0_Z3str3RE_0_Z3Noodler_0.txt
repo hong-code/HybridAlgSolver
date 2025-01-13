@@ -1,0 +1,4 @@
+ShadowNet\dsearchreslt\sTROJAN-Host\x3AYWRtaW46cGFzc3dvcmQ
+^((([A-PR-UWYZ])([0-9][0-9A-HJKS-UW]?))|(([A-PR-UWYZ][A-HK-Y])([0-9][0-9ABEHMNPRV-Y]?))\s{0,2}(([0-9])([ABD-HJLNP-UW-Z])([ABD-HJLNP-UW-Z])))|(((GI)(R))\s{0,2}((0)(A)(A)))$
+^([0-9]{6}[\s\-]{1}[0-9]{12}|[0-9]{18})$
+www\.trackhits\.ccUser-Agent\x3Aiz=LOGSupremeResult

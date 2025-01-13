@@ -1,0 +1,5 @@
+<(\/{0,1})img(.*?)(\/{0,1})\>
+Googlelog\=\x7BIP\x3APG=SPEEDBAR
+Reports[^\n\r]*User-Agent\x3A.*largePass-Onseqepagqfphv\x2fsfd
+^(([8]))$|^((([0-7]))$|^((([0-7])).?((25)|(50)|(5)|(75)|(0)|(00))))$
+^(\(\d{3}\)[- ]?|\d{3}[- ])?\d{3}[- ]\d{4}$

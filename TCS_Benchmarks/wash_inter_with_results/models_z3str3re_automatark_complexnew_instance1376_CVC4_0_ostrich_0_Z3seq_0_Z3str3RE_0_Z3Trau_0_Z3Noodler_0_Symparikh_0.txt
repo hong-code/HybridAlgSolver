@@ -1,0 +1,2 @@
+^([A-HK-PRSVWY][A-HJ-PR-Y])\s?([0][2-9]|[1-9][0-9])\s?[A-HJ-PR-Z]{3}$
+thesearchresltLoggerHost\x3ABetaHWAEHost\x3Ais

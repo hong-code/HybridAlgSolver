@@ -1,0 +1,3 @@
+SE\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}|SE\d{22}
+<[ \t]*[iI][mM][gG][ \t]*[sS][rR][cC][ \t]*=[ \t]*['\"]([^'\"]+)
+\x7D\x7BTrojan\x3A\w+Host\x3A\s\d\x2El

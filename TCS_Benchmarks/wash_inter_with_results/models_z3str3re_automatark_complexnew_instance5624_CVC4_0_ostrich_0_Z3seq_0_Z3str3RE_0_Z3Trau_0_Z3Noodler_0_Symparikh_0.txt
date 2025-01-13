@@ -1,0 +1,2 @@
+User-Agent\x3AUser-Agent\x3Awww\.take5bingo\.comUser-Agent\x3A
+/\.html\?jar$/U

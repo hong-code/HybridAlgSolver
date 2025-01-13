@@ -1,0 +1,4 @@
+url=Referer\x3AHost\x3AWelcome\x2FcommunicatortbGateCrasher4\x2e8\x2e4\x7D\x7BTrojan\x3AareSubject\x3a
+/\/pte\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+(([2-9]{1})([0-9]{2})([0-9]{3})([0-9]{4}))$
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem

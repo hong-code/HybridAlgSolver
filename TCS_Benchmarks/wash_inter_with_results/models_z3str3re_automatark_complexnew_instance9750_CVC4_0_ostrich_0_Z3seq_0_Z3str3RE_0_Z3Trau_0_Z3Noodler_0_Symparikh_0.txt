@@ -1,0 +1,5 @@
+AID\x2FHost\x3aHourskl\x2Esearch\x2Eneed2find\x2EcomHost\x3aHost\x3A
+^[^iIoOqQ'-]{10,17}$
+^[a-zA-Z]:(\\|(\\[^\\/\s:*"<>|]+)+)>
+PASSW=\s+\x2Fta\x2FNEWS\x2F.*loomcompany\x2Ecom
+^([a-zA-Z0-9-\,\s]{2,64})$

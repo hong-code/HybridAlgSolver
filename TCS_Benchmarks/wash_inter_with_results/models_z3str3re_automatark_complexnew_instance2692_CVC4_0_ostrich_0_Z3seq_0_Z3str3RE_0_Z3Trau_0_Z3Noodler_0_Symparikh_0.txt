@@ -1,0 +1,5 @@
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+Host\x3Ahirmvtg\x2fggqh\.kqhverA-Spy
+/^(\d+\*)+(\d)+$/gm
+Hello\x2E\s+ovplrichfind\x2EcomCookie\x3a
+^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z_-]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$

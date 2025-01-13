@@ -1,0 +1,2 @@
+\b[^aeiou]+[aeiou][^aeiou]+\b
+(1 )?\d{3} \d{3}-\d{4}

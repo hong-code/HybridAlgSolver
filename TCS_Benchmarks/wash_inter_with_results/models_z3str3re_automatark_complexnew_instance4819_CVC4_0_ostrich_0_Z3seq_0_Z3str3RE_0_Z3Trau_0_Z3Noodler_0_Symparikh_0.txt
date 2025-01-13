@@ -1,0 +1,2 @@
+User-Agent\x3a\stoWebupdate\.cgi
+(^\d{5}-\d{3}|^\d{2}.\d{3}-\d{3}|\d{8})

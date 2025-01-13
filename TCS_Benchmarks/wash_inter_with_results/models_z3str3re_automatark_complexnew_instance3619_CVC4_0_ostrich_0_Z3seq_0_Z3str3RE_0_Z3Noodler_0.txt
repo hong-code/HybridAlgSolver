@@ -1,0 +1,5 @@
+^[A-Za-z]{6}[0-9]{2}[A-Za-z]{1}[0-9]{2}[A-Za-z]{1}[0-9]{3}[A-Za-z]{1}$
+^\d$
+Microsoft\w+Toolbar\x22StarLogger\x22
+We\d+pjpoptwql\x2frlnjX-Mailer\x3a
+\b([0-1]?\d{1,2}|2[0-4]\d|25[0-5])(\.([0-1]?\d{1,2}|2[0-4]\d|25[0-5])){3}\b

@@ -1,0 +1,4 @@
+Host\x3A\sToolbarServerserver\x7D\x7BSysuptime\x3A
+/\x2ewav([\?\x5c\x2f]|$)/smiU
+/^data\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+/\x2ejpg([\?\x5c\x2f]|$)/smiU

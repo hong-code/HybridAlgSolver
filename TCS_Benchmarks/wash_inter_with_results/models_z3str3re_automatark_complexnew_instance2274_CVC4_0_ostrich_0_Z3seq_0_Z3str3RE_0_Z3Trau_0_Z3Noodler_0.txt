@@ -1,0 +1,5 @@
+traffbest\x2Ebiz\d+\.compress.*sidebar\.activeshopper\.comaresflashdownloader\x2Ecom
+/^\s*?HELO\s+\d[\d\x2e]{500}/
+User-Agent\x3A\s+\x7D\x7BPort\x3A
+User-Agent\x3a\w+Owner\x3A
+/\x2f\x24\{\x23[^\x2f{}]+?\}(\.action)?\x2f?$/miU

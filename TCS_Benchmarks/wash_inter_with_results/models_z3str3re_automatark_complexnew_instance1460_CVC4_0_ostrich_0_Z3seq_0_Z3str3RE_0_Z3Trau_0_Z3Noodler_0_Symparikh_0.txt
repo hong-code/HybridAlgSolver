@@ -1,0 +1,4 @@
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs
+/\x2etif(f)?([\?\x5c\x2f]|$)/smiU
+Host\x3A\s+User-Agent\x3A.*v\x3BApofisToolbarUser
+/\x2ef4b([\?\x5c\x2f]|$)/smiU

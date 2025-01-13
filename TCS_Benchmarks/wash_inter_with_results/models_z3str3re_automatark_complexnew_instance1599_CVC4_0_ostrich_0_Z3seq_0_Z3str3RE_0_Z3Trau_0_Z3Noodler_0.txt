@@ -1,0 +1,5 @@
+Host\x3AWordmyway\.comhoroscope2Host
+^[0-9#\*abcdABCD]+$
+^\d{4,4}[A-Z0-9](, *\d{4,4})[A-Z0-9]*$
+SecureNet.*\x2Fsearchfast\x2F
+/\x2eplp([\?\x5c\x2f]|$)/smiU

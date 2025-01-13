@@ -1,0 +1,5 @@
+/\x2ert([\?\x5c\x2f]|$)/smiU
+/\x2ej2k([\?\x5c\x2f]|$)/smiU
+\x5D\x2520\x5BPort_\d+TM_SEARCH3engineto=\x2Fezsb\s\x3A
+ZC-Bridge\w+USER-AttachedReferer\x3AyouPointsUser-Agent\x3AHost\x3a
+sbRedirectionsHost\x3AHost\x3AUser-Agent\x3Ahotbar%3fwww\x2Einternetadvertisingcompany\x2Ebiz

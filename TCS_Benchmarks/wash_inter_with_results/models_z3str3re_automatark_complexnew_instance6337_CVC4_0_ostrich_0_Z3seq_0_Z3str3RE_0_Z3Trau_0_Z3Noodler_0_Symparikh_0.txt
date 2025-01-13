@@ -1,0 +1,2 @@
+configINTERNAL\.ini\s+User-Agent\x3A\s+Host\x3ASubject\x3a
+^(BG){0,1}([0-9]{9}|[0-9]{10})$

@@ -1,0 +1,2 @@
+^[D-d][K-k]-[1-9]{1}[0-9]{3}$
+User-Agent\x3A\s+\x7D\x7BPort\x3A

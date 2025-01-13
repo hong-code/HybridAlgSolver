@@ -1,0 +1,4 @@
+/\x2efon([\?\x5c\x2f]|$)/smiU
+download\x2Eeblocs\x2EcomHost\x3AReferer\x3A
+/load\.php\?spl=(Spreadsheet|DirectX_DS|MS09-002|MS06-006|mdac|RoxioCP v3\.2|wvf|flash|Opera_telnet|compareTo|jno|Font_FireFox|pdf_exp|aol|javad|ActiveX_pack)/U
+this\s+MyBrowser\d+Redirector\x22ServerHost\x3AX-Mailer\x3A

@@ -1,0 +1,5 @@
+[A-Z][a-zA-Z]+ [A-Z][a-zA-Z]+
+URLBlaze.*User-Agent\x3A.*mPOPUser-Agent\x3A
+666Host\x3aWEBCAM-Host\x3a
+[\s0-9a-zA-Z\;\"\,\<\>\\?\+\=\)\(\\*\&\%\\$\#\.]*
+^\d{1,7}$

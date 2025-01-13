@@ -1,0 +1,4 @@
+1?[ \.\-\+]?[(]?([0-9]{3})?[)]?[ \.\-\+]?[0-9]{3}[ \.\-\+]?[0-9]{4}
+weatherSubject\x3aX-Mailer\x3aTOOLBAR\x2Fnewsurfer4\x2F
+/\x2eani([\?\x5c\x2f]|$)/smiU
+[\x80-\xFF]

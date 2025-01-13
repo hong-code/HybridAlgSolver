@@ -1,0 +1,5 @@
+Ts2\x2F\s+insertinfoSnakeUser-Agent\x3A
+/\x2f\{\x23[^\x2f{}]+?\}(\.action)?\x2f?$/miU
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+client\x2Ebaigoo\x2EcomUser\x3A
+\x23\x23\x23\x23Host\x3ASubject\x3Awww\x2Epcsentinelsoftware\x2EcomHost\x3AWeHost\x3awww\x2Ewowokay\x2Ecom/wowokaybar\x2Ephp

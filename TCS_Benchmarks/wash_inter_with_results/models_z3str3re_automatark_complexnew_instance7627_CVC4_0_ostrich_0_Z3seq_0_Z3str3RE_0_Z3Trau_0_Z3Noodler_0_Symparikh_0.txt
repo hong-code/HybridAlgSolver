@@ -1,0 +1,2 @@
+s/\b(\w+)\b/ucfirst($1)/ge
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22

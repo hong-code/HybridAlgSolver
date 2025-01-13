@@ -1,0 +1,4 @@
+AD\s+c\.goclick\.com\w+asdbiz\x2Ebizfrom\x7croogoo\x7cCurrent
+^(\d*\s*\-?\s*\d*)$
+/\x2ecpe([\?\x5c\x2f]|$)/smiU
+/^(\x75|\x2d|\x2f|\x73|\xa2|\x2e|\x24|\x74)/sR

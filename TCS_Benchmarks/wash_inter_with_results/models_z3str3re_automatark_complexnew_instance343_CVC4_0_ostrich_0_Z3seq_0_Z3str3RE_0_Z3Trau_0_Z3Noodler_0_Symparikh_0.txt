@@ -1,0 +1,5 @@
+^1?[1-2]$|^[1-9]$|^[1]0$
+User-Agent\x3a\s+Subject\x3Aas\x2Estarware\x2Ecom
+/\x2ewmv([\?\x5c\x2f]|$)/smiU
+badurl\x2Egrandstreetinteractive\x2EcomFilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F
+/\x2em4b([\?\x5c\x2f]|$)/smiU

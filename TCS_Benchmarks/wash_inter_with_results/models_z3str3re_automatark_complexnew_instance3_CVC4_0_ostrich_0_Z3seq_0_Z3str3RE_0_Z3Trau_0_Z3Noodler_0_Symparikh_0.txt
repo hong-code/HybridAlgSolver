@@ -1,0 +1,2 @@
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+User-Agent\x3aUser-Agent\x3A

@@ -1,0 +1,3 @@
+^(\w(([.-])*)(\s)?)+$
+\x2Fbonzibuddy\x2Forigin\x3DsidefindApofisUser-Agent\x3A
+TCP\s+Host\x3a\x7D\x7Crichfind\x2EcomHost\x3ASubject\x3a

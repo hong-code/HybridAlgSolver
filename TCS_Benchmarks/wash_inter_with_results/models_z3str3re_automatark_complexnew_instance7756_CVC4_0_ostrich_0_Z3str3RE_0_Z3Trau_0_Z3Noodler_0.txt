@@ -1,0 +1,4 @@
+TOOLBAR\s+dist\x2Eatlas\x2Dia\x2Ecom
+^\d+\x20*([pP][xXtT])?$
+\x7D\x7BTrojan\x3A\w+by\d+to\w+dddlogin\x2Edudu\x2EcomSurveillanceIPOblivion
+Fictional[^\n\r]*v\x3B[^\n\r]*\x22Stealth\d+moreKontikiHost\x3aAcmeEvilFTPHost\x3ATOOLBARSupremePort\x2E

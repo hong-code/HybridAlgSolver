@@ -1,0 +1,4 @@
+^(smtp)\.([\w\-]+)\.[\w\-]{2,3}$
+encoder[^\n\r]*\.cfg\s+Host\x3AWeHost\x3a
+[\w!#$%&&apos;*+./=?`{|}~^-]+@[\d.A-Za-z-]+
+AdTools\d+rprpgbnrppb\x2fciExplorer\x2Fsto=notificationfindwww\x2Emakemesearch\x2Ecom

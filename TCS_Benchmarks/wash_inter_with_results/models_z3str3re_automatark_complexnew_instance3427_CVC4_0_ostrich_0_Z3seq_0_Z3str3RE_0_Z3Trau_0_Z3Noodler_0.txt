@@ -1,0 +1,5 @@
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A
+e2give\.comrichfind\x2Ecom\x22007User-Agent\x3Awww\x2Esearchreslt\x2Ecom
+[^ _0-9a-zA-Z\$\%\'\-\@\{\}\~\!\#\(\)\&\^]
+^([0-9]{12},)+[0-9]{12}$|^([0-9]{12})$
+\x28\x29\s+WatchDog\sNetspy\d+pjpoptwql\x2frlnjX-Mailer\x3aHost\x3asnprtz\x7Cdialnoref\x3D\x25user\x5Fid

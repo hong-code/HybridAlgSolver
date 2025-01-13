@@ -1,0 +1,2 @@
+/ps0=[A-F0-9]*&ps1=[A-F0-9]*&cs1=[A-F0-9]*&cs2=[A-F0-9]*&cs3=[A-F0-9]*/P
+act=\s+User-Agent\x3AEvilFTPHost\x3A

@@ -1,0 +1,2 @@
+Host\x3A\d+Subject\x3A[^\n\r]*Seconds\-ovplHost\x3AHost\x3ADownload
+/&q=[a-f0-9]{32},[a-f0-9]{16}&kgs=/U

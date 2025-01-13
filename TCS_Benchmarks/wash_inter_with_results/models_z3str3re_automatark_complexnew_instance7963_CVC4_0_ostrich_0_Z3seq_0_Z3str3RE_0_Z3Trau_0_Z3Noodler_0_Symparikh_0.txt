@@ -1,0 +1,5 @@
+HWAE\s+\x2Fta\x2FNEWS\x2FGuptacharloomcompany\x2Ecom
+/\x2ert([\?\x5c\x2f]|$)/smiU
+^(\+?420)? ?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$
+/\/stat_svc\/$/U
+\x2Fbar_pl\x2Fchk\.fcgiHost\x3a

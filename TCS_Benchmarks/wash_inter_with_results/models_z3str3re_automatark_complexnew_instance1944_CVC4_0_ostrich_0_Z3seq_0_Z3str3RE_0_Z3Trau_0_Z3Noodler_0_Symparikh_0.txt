@@ -1,0 +1,4 @@
+[-'a-zA-Z]
+^([012346789][0-9]{4})$
+/\.php\?catalogp\=\d{2}$/U
+^[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|COM|ORG|NET|MIL|EDU)$

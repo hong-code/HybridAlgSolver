@@ -1,0 +1,5 @@
+/\/$/U
+^(9|2{1})+([1-9]{1})+([0-9]{7})$
+/^\/info\.php\?act\x3d(list|online)/U
+requested\s+Reports\s+HostHost\x3aHost\x3AHost\x3AMyWebSearchSearchAssistant
+^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$

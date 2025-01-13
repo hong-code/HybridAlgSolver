@@ -1,0 +1,3 @@
+Authorization\x3a\d+lnzzlnbk\x2fpkrm\.fin
+^[\d]{5}[-\s]{1}[\d]{2}[-\s]{1}[\d]{2}[-\s]{1}[\d]{2}$
+%3fSupremeSoftwareoffers\x2Ebullseye-network\x2Ecom

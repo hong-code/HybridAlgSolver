@@ -1,0 +1,4 @@
+badurl\x2Egrandstreetinteractive\x2EcomFilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F
+/^\/images2\/[0-9a-fA-F]{500,}/U
+si=\s+ProAgentUI2Host\x3A00000www\x2Ezhongsou\x2Ecom
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi

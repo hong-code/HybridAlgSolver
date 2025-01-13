@@ -1,0 +1,5 @@
+/\x2ef4v([\?\x5c\x2f]|$)/smiU
+asdbiz\x2Ebiz\s+HWAEUser-Agent\x3ATheef2
+(^\d{3,5}\,\d{2}$)|(^\d{3,5}$)
+client\x2Ebaigoo\x2EcomUser\x3A
+Host\x3A[^\n\r]*Travel[^\n\r]*From\x3Awww\x2EZSearchResults\x2Ecom

@@ -1,0 +1,4 @@
+PASSW=\s+\x2Fta\x2FNEWS\x2F.*loomcompany\x2Ecom
+User-Agent\x3AUser-Agent\x3Awp-includes\x2Ftheme\x2Ephp\x3Fframe_ver2
+^[a-zA-Z0-9]+(([_][a-zA-Z0-9])?[a-zA-Z0-9]*)*$
+Host\x3A\s+User-Agent\x3A.*v\x3BApofisToolbarUser

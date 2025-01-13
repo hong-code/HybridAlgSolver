@@ -1,0 +1,4 @@
+^(([0-2])?([0-9]))$
+YWRtaW46YWRtaW4www\x2Ee-finder\x2EccNSIS_DOWNLOADHost\x3A
+Toolbar\w+www\x2Etopadwarereviews\x2Ecommedia\x2Etop-banners\x2Ecom
+/User-Agent\x3a[^\x0d\x0a]*Java\/1\./H

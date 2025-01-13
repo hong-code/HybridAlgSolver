@@ -1,0 +1,4 @@
+badurl\x2Egrandstreetinteractive\x2EcomFilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F
+(^(\+?\-? *[0-9]+)([,0-9 ]*)([0-9 ])*$)|(^ *$)
+User-Agent\x3Aupgrade\x2Eqsrch\x2Einfo
+^(http(s?)\:\/\/)*[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$

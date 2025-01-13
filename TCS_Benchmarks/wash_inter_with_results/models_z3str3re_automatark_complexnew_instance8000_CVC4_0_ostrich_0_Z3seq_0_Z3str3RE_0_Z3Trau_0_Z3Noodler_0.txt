@@ -1,0 +1,5 @@
+^(FR)?\s?[A-Z0-9-[IO]]{2}[0-9]{9}$
+A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic
+Server\x00\s+SbAts\s+versionetbuviaebe\x2feqv\.bvv
+^(sip|sips)\:\+?([\w|\:?\.?\-?\@?\;?\,?\=\%\&]+)
+Client.*Peer\s+ThistoIpHost\x3Abadurl\x2Egrandstreetinteractive\x2Ecom

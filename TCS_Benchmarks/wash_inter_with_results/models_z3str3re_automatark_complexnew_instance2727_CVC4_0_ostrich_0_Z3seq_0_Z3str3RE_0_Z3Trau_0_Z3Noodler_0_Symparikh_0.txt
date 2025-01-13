@@ -1,0 +1,4 @@
+iz=Referer\x3Aoffers\x2Ebullseye-network\x2Ecom
+(^\d*\.\d{2}$)
+is\x7D\x7BPort\x3A\x7D\x7BUser\x3A
+e(vi?)?

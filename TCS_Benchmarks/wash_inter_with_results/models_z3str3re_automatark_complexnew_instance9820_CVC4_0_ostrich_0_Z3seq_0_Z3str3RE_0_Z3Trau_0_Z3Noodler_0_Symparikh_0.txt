@@ -1,0 +1,5 @@
+Handyst=ClassStopperHost\x3ASpamBlockerUtility
+User-Agent\x3AUser-Agent\x3AHost\x3ASoftActivityYeah\!
+^\d+((\.|\,)\d+)?$
+User-Agent\x3AUser-Agent\x3a
+\x2Fta\x2FNEWS\x2Fpassword\x3B1\x3BOptix

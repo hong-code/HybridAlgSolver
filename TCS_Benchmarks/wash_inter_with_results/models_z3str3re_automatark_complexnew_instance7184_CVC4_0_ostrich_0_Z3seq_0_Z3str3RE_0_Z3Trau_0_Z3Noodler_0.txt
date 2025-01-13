@@ -1,0 +1,5 @@
+/onload\s*\x3D\s*[\x22\x27]?location\.reload\s*\x28/smi
+this\s+MyBrowser\d+Redirector\x22ServerHost\x3AX-Mailer\x3A
+PORT\x3D\s+User-Agent\x3A\s+ProAgentUI2Host\x3A00000www\x2Ezhongsou\x2Ecom
+^(([0-9]{5})|([0-9]{3}[ ]{0,1}[0-9]{2}))$
+^[a-zA-Z]\w{3,14}$

@@ -1,0 +1,4 @@
+LoggerovplUser-Agent\x3At=searchreslt\x7D\x7BSysuptime\x3A
+Send=\s+User-Agent\x3A\s+LoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?Host\x3aCenterSubject\x3A
+www\x2Eweepee\x2Ecom\d+metaresults\.copernic\.com\s+
+-i%3fUser-Agent\x3Awww\x2eproventactics\x2ecom

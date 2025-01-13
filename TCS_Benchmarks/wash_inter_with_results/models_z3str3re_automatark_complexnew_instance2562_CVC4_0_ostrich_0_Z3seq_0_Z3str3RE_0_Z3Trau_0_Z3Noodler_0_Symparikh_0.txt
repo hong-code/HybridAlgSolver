@@ -1,0 +1,5 @@
+Activityfilename=\x22StarLoggerDAWeb-Mail
+^\s*(\d{0,2})(\.?(\d*))?\s*\%?\s*$
+/update\/barcab\/.*?tn=.*id=.*version=/smi
+Spyware\s+ToolBar\s+User-Agent\x3AMM_RECO\x2EEXEToClientonAlert
+Stablecmemailyxegtd\x2fefcwgUin=PromulGate

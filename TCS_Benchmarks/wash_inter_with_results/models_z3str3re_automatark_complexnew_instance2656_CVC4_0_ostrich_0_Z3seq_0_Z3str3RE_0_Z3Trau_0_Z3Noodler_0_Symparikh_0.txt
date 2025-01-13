@@ -1,0 +1,2 @@
+/\/home\/index.asp\?typeid\=[0-9]{1,3}/Ui
+/\x2eafm([\?\x5c\x2f]|$)/smiU

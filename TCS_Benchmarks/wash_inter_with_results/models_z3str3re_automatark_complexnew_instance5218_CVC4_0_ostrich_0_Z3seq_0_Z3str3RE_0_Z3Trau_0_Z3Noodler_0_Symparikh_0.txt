@@ -1,0 +1,2 @@
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+FTP\s+\x2FNFO\x2CRegistered\s+Server\s+www\x2Einternet-optimizer\x2Ecom

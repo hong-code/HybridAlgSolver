@@ -1,0 +1,4 @@
+/^router=.*?arg=[a-z\d\.]*[^a-z\d\.&]/iP
+/^tcpdata\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))(-?\s?\d{4}){3}|(3[4,7])\d{2}-?\s?\d{6}-?\s?\d{5}$
+/\bobj\x0a\x20*?\/Pattern\x20*?\x0aendobj\b/i

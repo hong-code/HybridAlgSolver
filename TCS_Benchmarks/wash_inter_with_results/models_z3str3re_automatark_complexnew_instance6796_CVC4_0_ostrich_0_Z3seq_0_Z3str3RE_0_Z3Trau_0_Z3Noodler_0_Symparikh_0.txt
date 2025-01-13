@@ -1,0 +1,5 @@
+([AEHKLTY][ABEHKLMPRSTWXYZ]|B[ABEHKLMT]|C[ABEHKLR]|GY|[JS][ABCEGHJKLMNPRSTWXYZ]|M[AWX]|N[ABEHLMPRSWXYZ]|O[ABEHKLMPRSX]|P[ABCEGHJKLMNPRSTWXY]|R[ABEHKMPRSTWXYZ]|W[ABEKLMP]|Z[ABEHKLMPRSTWXY])[0-9]{6}[A-D]?
+/^[0-9]\d{2,4}-\d{6,8}$/
+/^dataget\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+\({1}[0-9]{3}\){1}\-{1}[0-9]{3}\-{1}[0-9]{4}
+^\d{1}(\.\d{3})-\d{3}(\.\d{1})$

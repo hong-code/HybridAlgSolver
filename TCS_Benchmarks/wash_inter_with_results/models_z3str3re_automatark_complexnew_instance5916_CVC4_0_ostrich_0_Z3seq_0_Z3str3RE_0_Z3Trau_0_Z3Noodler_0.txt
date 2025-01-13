@@ -1,0 +1,5 @@
+/^\/[a-f0-9]{8}\/[a-f0-9]{8}\/$/iU
+this\s+MyBrowser\d+Redirector\x22ServerHost\x3AX-Mailer\x3A
+\x28\x29url=http\x3A1\x2E0b3\x2EaspxWatchDogupwww\.klikvipsearch\.comNetspyt=WeHost\x3A\x2Fcgi\x2Flogurl\.cgi
+/\x2ejar([\?\x5c\x2f]|$)/smiU
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2

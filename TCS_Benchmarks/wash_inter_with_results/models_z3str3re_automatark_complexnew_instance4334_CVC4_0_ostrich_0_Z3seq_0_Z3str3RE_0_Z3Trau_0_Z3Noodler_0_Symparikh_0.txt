@@ -1,0 +1,5 @@
+^\d*\d?((5)|(0))\.?((0)|(00))?$
+/^\x2f[0-9a-f]+$/iU
+Toolbar\s+pjpoptwql\x2frlnjSubject\x3A
+www\x2Emirarsearch\x2Ecom
+zopabora\x2Einfo\s+Inside\s+SystemSleuth\s+www\x2Eyok\x2EcomHost\x3AInformationwww\x2Ezhongsou\x2EcomLite

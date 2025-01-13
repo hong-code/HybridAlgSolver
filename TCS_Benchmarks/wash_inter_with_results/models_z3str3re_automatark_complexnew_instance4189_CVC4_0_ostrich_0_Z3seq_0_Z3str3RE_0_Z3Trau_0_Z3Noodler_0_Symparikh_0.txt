@@ -1,0 +1,4 @@
+security\s+ad\x2Emokead\x2Ecom\x3C\x2Fchat\x3E
+filename=\x22\dDA\s+www\x2Epeer2mail\x2Ecom
+^([Aa][LKSZRAEPlkszraep]|[Cc][AOTaot]|[Dd][ECec]|[Ff][LMlm]|[Gg][AUau]|HI|hi|[Ii][ADLNadln]|[Kk][SYsy]|LA|la|[Mm][ADEHINOPSTadehinopst]|[Nn][CDEHJMVYcdehjmvy]|[Oo][HKRhkr]|[Pp][ARWarw]|RI|ri|[Ss][CDcd]|[Tt][NXnx]|UT|ut|[Vv][AITait]|[Ww][AIVYaivy])$
+/\x2eafm([\?\x5c\x2f]|$)/smiU

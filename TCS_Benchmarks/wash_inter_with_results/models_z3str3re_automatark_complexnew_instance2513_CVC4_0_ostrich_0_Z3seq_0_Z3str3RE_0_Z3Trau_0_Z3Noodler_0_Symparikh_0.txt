@@ -1,0 +1,5 @@
+pjpoptwql\x2frlnjsportsHost\x3ASubject\x3aYAHOOdestroyed\x21
+\x22reaction\x2Etxt\x22User-Agent\x3AnewsSpyAgentsmrtshpr-cs-
+ContactHost\x3aHost\x3AFloodedFictionalUser-Agent\x3AHost\x3a
+^(\$|R\$|\-\$|\-R\$|\$\-|R\$\-|-)?([0-9]{1}[0-9]{0,2}(\.[0-9]{3})*(\,[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\,[0-9]{0,2})?|0(\,[0-9]{0,2})?|(\,[0-9]{1,2})?)$
+c\.goclick\.com\s+URLBlaze\s+Host\x3A

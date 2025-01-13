@@ -1,0 +1,5 @@
+^(9\d{2})([ \-]?)([7]\d|8[0-8])([ \-]?)(\d{4})$
+/Referer\x3a\s*?http\x3a\x2f{2}[a-z0-9\x2e\x2d]+\x2fs\x2f\x3fk\x3d/Hi
+url=\swww\x2Ealfacleaner\x2Ecom\d+Host\x3A\x2Fproducts\x2Fspyblocs\x2F
+Host\x3A\w+wwwfromToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+^([a-zA-z\s]{4,32})$

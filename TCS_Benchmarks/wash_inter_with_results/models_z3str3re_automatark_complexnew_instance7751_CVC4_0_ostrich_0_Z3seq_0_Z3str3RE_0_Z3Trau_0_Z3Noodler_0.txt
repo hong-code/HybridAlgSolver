@@ -1,0 +1,5 @@
+GmbH\x2FcommunicatortbHost\x3AUser-Agent\x3Aadblock\x2Elinkz\x2Ecom
+/^Host:\s*?[a-f0-9]{63,64}\./Him
+SystemSleuth1\x2E0versionHost\x3AArrowHost\x3a3Awebsearch\x2Edrsnsrch\x2EcomhostieiWonHost\x3apjpoptwql\x2frlnj
+/^Host\x3A\s+.*jaiku\x2Ecom/smiH
+/filename\s*=\s*[^\r\n]*?\x2eswf[\x22\x27\x3b\s\r\n]/i

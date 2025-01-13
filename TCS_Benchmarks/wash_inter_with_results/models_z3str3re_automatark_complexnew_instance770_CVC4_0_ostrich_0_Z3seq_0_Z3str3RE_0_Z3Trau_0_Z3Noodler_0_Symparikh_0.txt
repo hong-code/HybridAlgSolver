@@ -1,0 +1,3 @@
+HXDownloadUser-Agent\x3AanswerDeletingCookieReferer\x3A
+[ ]*=[ ]*[\"]*cid[ ]*:[ ]*([^\"<> ]+)
+Host\x3A[^\n\r]*cache\x2Eeverer\x2Ecom\s+from\.myway\.comToolbar

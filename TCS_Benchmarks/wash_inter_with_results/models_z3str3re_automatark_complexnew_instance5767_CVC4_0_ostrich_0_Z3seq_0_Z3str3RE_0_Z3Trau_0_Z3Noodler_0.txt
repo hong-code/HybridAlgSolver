@@ -1,0 +1,4 @@
+^\d+([.,]?\d+)?$
+www\x2Eyok\x2Ecom\s+jupitersatellites\x2Ebiz.*User-Agent\x3Aclvompycem\x2fcen\.vcn
+offers\x2Ebullseye-network\x2Ecom\s+news[^\n\r]*WatcherUser-Agent\x3A
+^([A-Z][a-z]+)\s([A-Z][a-zA-Z-]+)$

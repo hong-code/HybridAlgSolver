@@ -1,0 +1,3 @@
+NetControl\x2EServerNetTrackerSiLENTHost\x3A
+\d[\d\,\.]+
+c\.goclick\.com[^\n\r]*is\s+URLBlaze

@@ -1,0 +1,4 @@
+^[a-zA-Z_:]+[a-zA-Z_:\-\.\d]*$
+666Host\x3aWEBCAM-Host\x3a
+^(\+27|27)?(\()?0?[87][23467](\))?( |-|\.|_)?(\d{3})( |-|\.|_)?(\d{4})
+User-Agent\x3A\s+Host\x3Acdpnode=FILESIZE\x3Etoolsbar\x2Ekuaiso\x2Ecom

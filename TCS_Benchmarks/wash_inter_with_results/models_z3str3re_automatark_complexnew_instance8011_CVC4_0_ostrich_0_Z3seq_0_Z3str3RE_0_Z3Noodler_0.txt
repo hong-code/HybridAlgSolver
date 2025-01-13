@@ -1,0 +1,4 @@
+^\(?082|083|084|072\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$
+\x2Fsearchfast\x2Fhoroscope2libManager\x2Edll\x5EgetFreeAccessBarHost\x3Ahostiedesksearch\.dropspam\.com
+^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$
+[0][x][0-9a-fA-F]+

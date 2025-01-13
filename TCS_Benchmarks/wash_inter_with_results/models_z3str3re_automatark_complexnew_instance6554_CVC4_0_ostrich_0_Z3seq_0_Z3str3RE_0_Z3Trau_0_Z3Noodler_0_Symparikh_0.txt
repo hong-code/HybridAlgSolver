@@ -1,0 +1,4 @@
+/\x2Ecall\x2Ecall\s*\x28[^\x29\x2C]*?\x2C\s*\x28?(0x|\d)/i
+engineResultUser-Agent\x3A
+\x7D\x7BTrojan\x3A\w+by\d+to\w+dddlogin\x2Edudu\x2EcomSurveillanceIPOblivion
+([0-9]|[0-9][0-9])\.\s

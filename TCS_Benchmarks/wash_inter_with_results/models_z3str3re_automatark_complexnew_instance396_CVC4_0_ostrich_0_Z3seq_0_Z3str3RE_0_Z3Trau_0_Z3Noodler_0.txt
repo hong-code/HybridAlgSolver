@@ -1,0 +1,4 @@
+\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,15}
+Host\x3a\dOVNUsertooffers\x2Ebullseye-network\x2Ecom
+HXLogOnlyDaemonactivityIterenetFrom\x3AClass
+([a-zA-Z]:(\\w+)*\\[a-zA-Z0_9]+)?.xls

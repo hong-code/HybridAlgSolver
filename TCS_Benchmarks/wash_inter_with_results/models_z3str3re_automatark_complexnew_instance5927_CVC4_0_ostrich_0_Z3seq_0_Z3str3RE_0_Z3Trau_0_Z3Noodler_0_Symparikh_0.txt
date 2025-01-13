@@ -1,0 +1,4 @@
+Server\s+Basic\d+action\x2EpioletHost\x3AIP-www\x2Einternetadvertisingcompany\x2Ebiz
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+www\x2Ecameup\x2Ecom\s+spyblini\x2Eini
+Host\x3A\s+Boss\s+media\x2Etop-banners\x2Ecom

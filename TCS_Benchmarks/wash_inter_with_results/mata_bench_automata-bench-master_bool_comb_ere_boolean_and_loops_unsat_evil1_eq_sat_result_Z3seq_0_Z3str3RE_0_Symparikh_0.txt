@@ -1,0 +1,2 @@
+(([a-z])+.)+[A-Z]([a-z])+
+aaaaaaaaaaaaaaaaaaaa 

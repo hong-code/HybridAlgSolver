@@ -1,0 +1,4 @@
+Host\x3A\s+www\x2Eyoogee\x2Ecom
+xpsp2-\s+spyblpat.*is\x2EphpBarFrom\x3A
+[0-9][.][0-9]{3}$
+www\x2Ezhongsou\x2Ecomclick\x2Edotcomtoolbar\x2Ecom

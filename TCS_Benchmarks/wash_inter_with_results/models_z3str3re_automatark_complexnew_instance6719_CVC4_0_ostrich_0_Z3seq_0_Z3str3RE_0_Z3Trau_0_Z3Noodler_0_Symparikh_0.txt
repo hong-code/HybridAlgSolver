@@ -1,0 +1,2 @@
+XP\d+Acme\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3DversionContact
+/\x2em4v([\?\x5c\x2f]|$)/smiU

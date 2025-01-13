@@ -1,0 +1,3 @@
+www\.actualnames\.com.*www\.klikvipsearch\.com.*\x3C\x2Fchat\x3E
+[\w!#$%&&apos;*+./=?`{|}~^-]+@[\d.A-Za-z-]+
+X-Mailer\x3aSpyAgentRootHost\x3A

@@ -1,0 +1,5 @@
+dll\x3F\w+updates\w+Host\x3aSoftwareHost\x3Ajoke
+Host\x3A\x2Fta\x2FNEWS\x2Fyayad\x2Ecom
+^\d*(\.\d*)$
+com\x2Findex\.php\?tpid=.*pop\x2Epopuptoast\x2Ecom.*Host\x3A
+/^die\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

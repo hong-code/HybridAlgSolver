@@ -1,0 +1,4 @@
+url=\"([^\[\]\"]*)\"
+www\x2Eweepee\x2Ecom\w+Owner\x3A\d+metaresults\.copernic\.com
+sidesearch\.dropspam\.com\s+Strip-Player\s+
+[-]?[1-9]\d{0,16}\.?\d{0,2}|[-]?[0]?\.[1-9]{1,2}|[-]?[0]?\.[0-9][1-9]

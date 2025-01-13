@@ -1,0 +1,4 @@
+\.fcgi[^\n\r]*Host\x3A\s\x5D\x2520\x5BPort_NETObserveTM_SEARCH3
+User-Agent\x3aUser-Agent\x3A
+^[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,3})$
+/[a-z]{2}_[a-z0-9]{8}\.mod/Ui

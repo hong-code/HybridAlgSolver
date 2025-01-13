@@ -1,0 +1,4 @@
+\binterface\b.*(\bI[_]\w*\b)
+^[a-zA-Z][a-zA-Z0-9_]+$
+^[SC]{2}[0-9]{6}$
+\d\d?\d?\.\d\d?\d?\.\d\d?\d?\.\d\d?\d?

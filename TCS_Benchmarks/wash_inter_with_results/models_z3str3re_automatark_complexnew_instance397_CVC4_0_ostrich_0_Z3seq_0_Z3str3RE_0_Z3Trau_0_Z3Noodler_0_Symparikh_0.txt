@@ -1,0 +1,4 @@
+ChildWebGuardian\d+Subject\x3A
+^([1-9]|1[0-2]):[0-5]\d ?(a|A|p|P)(m|M)$
+SbAts\d+dcww\x2Edmcast\x2EcomdistID=
+(\n\r)   replacement string---->\n

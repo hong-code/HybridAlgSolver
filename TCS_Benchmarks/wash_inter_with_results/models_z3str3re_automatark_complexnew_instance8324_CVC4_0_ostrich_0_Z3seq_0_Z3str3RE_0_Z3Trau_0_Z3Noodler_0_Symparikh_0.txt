@@ -1,0 +1,3 @@
+/^\x2f[a-f0-9]{135}/Um
+www\x2Epcsentinelsoftware\x2Ecom
+([^a-zA-Z0-9])

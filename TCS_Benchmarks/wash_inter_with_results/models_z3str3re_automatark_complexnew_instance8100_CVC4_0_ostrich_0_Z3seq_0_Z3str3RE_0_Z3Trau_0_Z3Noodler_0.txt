@@ -1,0 +1,5 @@
+/\/loader\.cpl$/U
+/[a-zA-Z0-9]\/[a-f0-9]{5}\.swf[\x22\x27]/
+body=wordHost\x3ASpediartaddrEverywareHost\x3AHost\x3A
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin

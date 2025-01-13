@@ -1,0 +1,4 @@
+^100$|^[0-9]{1,2}$|^[0-9]{1,2}\,[0-9]{1,3}$
+(\w+),\s+(\w+)\s+ (\((\w+)\)\s+)? (\w+),\s+(\w+)[^\d]+ (\d+)\s+(\w+)
+Host\x3A\s+\x2Ftoolbar\x2Fsupremetb\s+wjpropqmlpohj\x2flo\x2Ftoolbar\x2Fsupremetb
+/^\/info\.php\?act\x3d(list|online)/U

@@ -1,0 +1,3 @@
+/\/[a-z]{4}\.html\?h\=\d{6,7}$/Ui
+trustyfiles\x2Ecom\d+lnzzlnbk\x2fpkrm\.fin\s+
+ProAgentHost\x3aHost\x3AiOpuss_sq=aolsnssigninwininet

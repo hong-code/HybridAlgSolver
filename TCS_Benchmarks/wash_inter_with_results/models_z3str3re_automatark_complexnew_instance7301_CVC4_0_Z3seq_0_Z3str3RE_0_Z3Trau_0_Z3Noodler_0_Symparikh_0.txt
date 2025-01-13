@@ -1,0 +1,5 @@
+/\x2eappendChild.*?\x2eid.{0,200}?(offset|client)(Height|Left|Parent|Top|Width).{0,200}?(offset|client)(Height|Left|Parent|Top|Width)/is
+couponbar\.coupons\.com\dOwner\x3A\s+Host\x3A
+\x2Fbar_pl\x2Fchk_bar\.fcgiTrojanHost\x3A
+/\.exe$/U
+/\x2epict([\?\x5c\x2f]|$)/smiU

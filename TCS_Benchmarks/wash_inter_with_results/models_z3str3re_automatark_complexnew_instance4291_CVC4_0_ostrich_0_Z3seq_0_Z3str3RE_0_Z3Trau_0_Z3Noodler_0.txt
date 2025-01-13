@@ -1,0 +1,4 @@
+[a-zA-Z0-9]*
+/^Host\x3a\s*(cache.dyndns.info|flashcenter.info|flashrider.org|webapp.serveftp.com|web.autoflash.info|webupdate.dyndns.info|webupdate.hopto.org|web.velocitycache.com)/smiH
+/GET\s\/[\w-]{64}\sHTTP\/1/
+<\?xml.*</note>

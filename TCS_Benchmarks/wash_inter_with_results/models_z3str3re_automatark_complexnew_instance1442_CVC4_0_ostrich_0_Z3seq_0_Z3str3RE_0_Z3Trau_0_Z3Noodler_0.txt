@@ -1,0 +1,5 @@
+Host\x3A\dName=Your\+Host\+is\x3A.*has\s+ComputerKeylogger\x2EcomHost\x3A
+Server\x3AWordTheHost\x3afrom
+/\/[a-f0-9]{32}\/\d{10}\/[a-f0-9]{32}\/\d{10}\.tpl$/U
+/\x2epng([\?\x5c\x2f]|$)/smiU
+www\x2Eweepee\x2Ecom\w+Owner\x3A\d+metaresults\.copernic\.com

@@ -1,0 +1,5 @@
+ref\x3D\x25user\x5Fid\s+X-Mailer\x3aSpyBuddyUser-Agent\x3A
+/^([A-Za-z]){1}([A-Za-z0-9-_.\:])+$/
+62[0-9]{14,17}
+config\x2E180solutions\x2Ecom\dStable\s+Host\x3a\x7D\x7C
+protocolNetControl\x2EServerKEYLOGGERUser-Agent\x3A

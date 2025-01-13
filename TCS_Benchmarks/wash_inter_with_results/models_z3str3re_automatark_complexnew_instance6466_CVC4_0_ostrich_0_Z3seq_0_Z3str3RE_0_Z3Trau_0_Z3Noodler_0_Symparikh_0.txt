@@ -1,0 +1,4 @@
+Toolbar[^\n\r]*User-Agent\x3A\w+Host\x3A.*toX-Mailer\x3aLogsmax-Cookie\x3aAppName
+/\/java(rh|db)\.php$/U
+^[A-z]?\d{8}[A-z]$
+^([1-9]|1[0-2]|0[1-9]){1}(:[0-5][0-9][ ][aApP][mM]){1}$

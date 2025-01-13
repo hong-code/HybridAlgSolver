@@ -1,0 +1,3 @@
+\x5BStaticHost\x3AFROM\x3Acs\x2Eshopperreports\x2Ecommedia\x2Etop-banners\x2Ecom\x2Fbar_pl\x2Fb\.fcgi
+Toolbarverpop\x2Epopuptoast\x2Ecomtvshowticketscount\x2Eyok\x2Ecom
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/iR

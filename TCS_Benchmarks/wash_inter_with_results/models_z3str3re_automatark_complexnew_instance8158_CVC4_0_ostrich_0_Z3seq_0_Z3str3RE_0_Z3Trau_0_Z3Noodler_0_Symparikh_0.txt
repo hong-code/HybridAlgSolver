@@ -1,0 +1,4 @@
+upgrade\x2Eqsrch\x2Einfo[^\n\r]*dcww\x2Edmcast\x2Ecom
+/setup=[a-z]$/Ui
+Host\x3A.*client\x2Ebaigoo\x2Ecom
+/\/state1\.php\?[A-Za-z0-9\x2B\x2F\x3D]{300}/Ui

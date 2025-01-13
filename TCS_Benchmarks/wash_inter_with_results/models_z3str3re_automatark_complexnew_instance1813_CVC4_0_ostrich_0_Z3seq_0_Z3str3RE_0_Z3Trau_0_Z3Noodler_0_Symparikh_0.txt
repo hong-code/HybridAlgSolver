@@ -1,0 +1,2 @@
+are\d+X-Mailer\x3a+\d+v=User-Agent\x3a
+^L[a-zA-Z0-9]{26,33}$

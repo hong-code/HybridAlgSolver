@@ -1,0 +1,4 @@
+www\x2Esnap\x2Ecom\w+FTX-Mailer\x3AfromReferer\x3Asearch\x2econduit\x2ecom
+^[a-zA-Z][a-zA-Z0-9_]+$
+[0-9]+
+[:]{1}[-~+o]?[)>]+

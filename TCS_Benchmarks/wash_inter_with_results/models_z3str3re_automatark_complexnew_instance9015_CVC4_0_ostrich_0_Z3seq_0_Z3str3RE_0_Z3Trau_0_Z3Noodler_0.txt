@@ -1,0 +1,5 @@
+Host\x3A\s+\.ico\s+Host\x3Aorigin\x3Dsidefind
+/MODE\sd?u?n?\x7b[AU]\x5c[LD]\x5c(86|64)\x5c\w{0,8}\x5c\w{2,16}\x7d[a-z]{8}\s\x2BpiwksT\x2Dx\x0D\x0A/i
+^((0[1-9])|(1[0-2]))[\/\.\-]*((0[8-9])|(1[1-9]))$
+Host\x3ATest\x3C\x2Fchat\x3EResultsSubject\x3A
+^([EV])?\d{3,3}(\.\d{1,2})?$

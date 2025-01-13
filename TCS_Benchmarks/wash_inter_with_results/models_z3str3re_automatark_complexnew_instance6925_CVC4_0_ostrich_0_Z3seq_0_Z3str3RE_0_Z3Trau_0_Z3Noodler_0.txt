@@ -1,0 +1,5 @@
+clvompycem\x2fcen\.vcnHost\x3AUser-Agent\x3A\x0d\x0a
+zmnjgmomgbdz\x2fzzmw\.gztwww3\.addfreestats\.comKeylogger
+^[a-zA-Z_]{1}[a-zA-Z0-9_]+$
+/GET\s\/[\w-]{64}\sHTTP\/1/
+/version\x3D[\x22\x27][^\x22\x27]{1024}/

@@ -1,0 +1,3 @@
+Host\x3a.*UNSEEN\x22\s+Agentbody=\x2521\x2521\x2521Optix
+media\x2Etop-banners\x2Ecom
+/\/ddd\/[a-z]{2}.gif/iU

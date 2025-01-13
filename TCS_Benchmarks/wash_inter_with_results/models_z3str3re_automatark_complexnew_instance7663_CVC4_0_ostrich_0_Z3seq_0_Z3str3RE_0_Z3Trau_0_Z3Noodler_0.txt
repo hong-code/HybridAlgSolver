@@ -1,0 +1,5 @@
+Port\x2E[^\n\r]*007\d+Logsdl\x2Eweb-nexus\x2Enet
+^[0-9]%?$|^1[0-9]%?$|^2[0-9]%?$|^3[0-5]%?$|^[0-9]\.\d{1,2}%?$|^1[0-9]\.\d{1,2}%?$|^2[0-9]\.\d{1,2}%?$|^3[0-4]\.\d{1,2}%?$|^35%?$
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs
+doarauzeraqf\x2fvvv\.ul
+/\x2ejs\x3f[a-zA-Z0-9]{9,20}=Mozilla\x2f/UGi

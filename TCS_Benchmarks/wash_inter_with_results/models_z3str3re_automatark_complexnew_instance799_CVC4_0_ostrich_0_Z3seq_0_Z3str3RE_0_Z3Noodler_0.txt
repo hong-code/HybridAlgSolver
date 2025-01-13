@@ -1,0 +1,4 @@
+(http|ftp|https):\/\/(\w[\w\-_\.]*\.)?([_\-\w]+)(:[0-9]+)?([\/[\w_\.-]+]*)\/(\.?\w[\w._-]*[\w_-])?(#\w+)?([\w\-\.,@?^=%&:\~\+#]*[\w\-\@?^=%&\/\~\+#])?
+engineResultUser-Agent\x3A
+^(\d{2,3}|\(\d{2,3}\))[ ]?\d{3,4}[-]?\d{3,4}$
+Travel\s+SystemSleuthserverUser-Agent\x3a\x2Fnewsurfer4\x2F

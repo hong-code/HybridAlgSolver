@@ -1,0 +1,2 @@
+[\x00-\x1F\x7F]
+/\x2ejpg([\?\x5c\x2f]|$)/smiU

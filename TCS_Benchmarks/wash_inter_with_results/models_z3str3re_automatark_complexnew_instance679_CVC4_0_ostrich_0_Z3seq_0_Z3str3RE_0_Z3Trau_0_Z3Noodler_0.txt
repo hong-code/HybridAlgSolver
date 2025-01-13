@@ -1,0 +1,5 @@
+^[\w0-9]+( [\w0-9]+)*$
+Host\x3a\w+Host\x3A.*Host\x3aToolbarServerserver\x7D\x7BSysuptime\x3A
+(1[8,9]|20)[0-9]{2}
+Spy\dccecaedbebfcaf\x2Ecom
+Ready\s+Client\s+MyBrowserHost\x3asecurityon\x3AHost\x3ARedirector\x22ServerHost\x3AX-Mailer\x3A

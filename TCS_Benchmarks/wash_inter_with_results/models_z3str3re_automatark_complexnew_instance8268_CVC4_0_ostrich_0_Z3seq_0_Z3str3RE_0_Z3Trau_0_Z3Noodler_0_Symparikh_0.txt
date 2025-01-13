@@ -1,0 +1,4 @@
+^(.*)
+Ready\s+Eye.*http\x3A\x2F\x2Fsupremetoolbar
+^[A-Z]$
+Host\x3A\s+www\x2Eyoogee\x2Ecom

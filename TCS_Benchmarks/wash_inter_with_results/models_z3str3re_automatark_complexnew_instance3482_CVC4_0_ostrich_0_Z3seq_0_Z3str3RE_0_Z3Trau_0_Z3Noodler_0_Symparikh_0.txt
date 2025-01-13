@@ -1,0 +1,5 @@
+^([a-zA-Z][a-zA-Z\&\-\.\'\s]*|)$
+fsbuffshprrprt-cs-Host\x3A
+/^\x2fnosignal\.jpg\?\d\.\d+$/U
+User-Agent\x3a\s+Host\x3AnamediepluginHost\x3AX-Mailer\x3A
+3A\d+Host\x3AHWAEUser-Agent\x3A

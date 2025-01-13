@@ -1,0 +1,2 @@
+%3fSupremeSoftwareoffers\x2Ebullseye-network\x2Ecom
+^[0-9#\*abcdABCD]+$

@@ -1,0 +1,5 @@
+/\?new\=.*?\:.*?\&v\=\d\.\d\.\d\&av\=/U
+www\x2Esogou\x2Ecomix=WebsiteHost\x3aWeb-Mail
+Host\x3aOnlineUser-Agent\x3Awww\x2Evip-se\x2Ecom
+^[A-Za-z]{1,2}[0-9A-Za-z]{1,2}[ ]?[0-9]{0,1}[A-Za-z]{2}$
+/\r\nReferer\x3A\x20http\x3A\x2F\x2f[a-z0-9\x2d\x2e]+\x2F\x3Fdo\x3Dpayment\x26ver\x3D\d+\x26sid\x3D\d+\x26sn\x3D\d+\r\n/H

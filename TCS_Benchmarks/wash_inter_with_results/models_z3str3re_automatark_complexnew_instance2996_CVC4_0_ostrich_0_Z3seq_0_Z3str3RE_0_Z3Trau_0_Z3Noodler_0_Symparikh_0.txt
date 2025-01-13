@@ -1,0 +1,5 @@
+ovplSubject\x3ATencentTravelerClient\x7D\x7BSysuptime\x3A
+^([0-9]{0,5}|[0-9]{0,5}\.[0-9]{0,3})$
+trustyfiles\x2Ecom\d+lnzzlnbk\x2fpkrm\.fin\s+
+^[a-zA-Z][a-zA-Z\-' ]*[a-zA-Z ]$
+SAcc\d+Seconds\-\x2Fcommunicatortb

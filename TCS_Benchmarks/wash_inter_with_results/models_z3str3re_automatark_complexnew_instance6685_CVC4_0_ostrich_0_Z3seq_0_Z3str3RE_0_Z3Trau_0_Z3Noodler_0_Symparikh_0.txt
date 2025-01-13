@@ -1,0 +1,4 @@
+Login\sHost\x3A\w+Host\x3aiz=iMeshBar%3f\x2Fbar_pl\x2Fchk_bar\.fcgi
+/\x2emp3([\?\x5c\x2f]|$)/smiU
+User-Agent\x3A\d+Theef2\sHost\x3A
+TM_SEARCH3SearchUser-Agent\x3Aas\x2Estarware\x2EcomM\x2EzipCasinoResults_sq=aolsnssignin

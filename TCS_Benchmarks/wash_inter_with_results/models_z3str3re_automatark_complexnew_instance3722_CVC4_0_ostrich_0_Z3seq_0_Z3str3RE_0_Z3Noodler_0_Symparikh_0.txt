@@ -1,0 +1,4 @@
+^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[A-Za-z]{1}\d{1}[A-Za-z]{1}\d{1}$
+/^\x2f[a-z\x2d\x5f]{90,97}\.php$/U
+User-Agent\x3Aupgrade\x2Eqsrch\x2Einfo
+^[a-zA-Z][a-zA-Z0-9_]+$

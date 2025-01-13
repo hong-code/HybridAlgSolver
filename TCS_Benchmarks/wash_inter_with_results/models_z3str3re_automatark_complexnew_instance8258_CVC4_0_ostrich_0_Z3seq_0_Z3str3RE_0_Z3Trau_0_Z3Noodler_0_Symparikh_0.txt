@@ -1,0 +1,5 @@
+User-Agent\x3A\d+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+\x2Fbonzibuddy\x2Forigin\x3DsidefindApofisUser-Agent\x3A
+(\[[abiu][^\[\]]*\])([^\[\]]+)(\[/?[abiu]\])
+/^(\x00\x00\x00\x00|.{4}(\x00\x00\x00\x00|.{12}))/s
+^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z]))$

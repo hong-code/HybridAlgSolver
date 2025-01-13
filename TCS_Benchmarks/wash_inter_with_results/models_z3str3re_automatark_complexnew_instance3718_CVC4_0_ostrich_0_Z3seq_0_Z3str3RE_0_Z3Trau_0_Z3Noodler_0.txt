@@ -1,0 +1,5 @@
+Pass-On\w+c\.goclick\.comletter
+^\d{2}\s{1}(Jan|Feb|Mar|Apr|May|Jun|Jul|Apr|Sep|Oct|Nov|Dec)\s{1}\d{4}$
+/^\/\/?[a-z0-9_]{7,8}\/\??[0-9a-f]{60,68}[\x3b\x2c\d+]*$/U
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2
+(^\d{5}\-\d{3}$)|(^\d{2}\.\d{3}\-\d{3}$)|(^\d{8}$)

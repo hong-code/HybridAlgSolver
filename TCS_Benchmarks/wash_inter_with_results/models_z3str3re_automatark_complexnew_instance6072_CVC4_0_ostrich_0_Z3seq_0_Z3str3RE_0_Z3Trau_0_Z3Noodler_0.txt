@@ -1,0 +1,5 @@
+Ts2\x2FUser-Agent\x3Aactualnames\.comGURLwww\x2Ealtnet\x2Ecom
+/\x2edib([\?\x5c\x2f]|$)/smiU
+^([a-zA-Z][a-zA-Z\&\-\.\'\s]*|)$
+\+44\s\(0\)\s\d{2}\s\d{4}\s\d{4}
+(.*\.jpe?g|.*\.JPE?G)

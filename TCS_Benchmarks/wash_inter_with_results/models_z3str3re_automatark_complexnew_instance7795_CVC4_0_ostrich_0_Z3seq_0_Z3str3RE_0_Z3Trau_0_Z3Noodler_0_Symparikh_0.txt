@@ -1,0 +1,5 @@
+Activityfilename=\x22StarLoggerDAWeb-Mail
+\x7D\x7BPort\x3AHost\x3Amqnqgijmng\x2fojNavhelperUser-Agent\x3A
+/\x2emanifest([\?\x5c\x2f]|$)/smiU
+www\x2Eserverlogic3\x2Ecom
+(^\*\.[a-zA-Z][a-zA-Z][a-zA-Z]$)|(^\*\.\*$)

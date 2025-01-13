@@ -1,0 +1,5 @@
+^((\\){2})(([A-Za-z ',.;]+)(\\?)([A-Za-z ',.;]\\?)*)$
+/\/[a-zA-Z0-9]{4,10}\.jar$/U
+Reports[^\n\r]*User-Agent\x3A.*largePass-Onseqepagqfphv\x2fsfd
+^[0-9]{5}([\s-]{1}[0-9]{4})?$
+aohobygi\x2fzwiwHost\x3a\x7D\x7Crichfind\x2Ecom

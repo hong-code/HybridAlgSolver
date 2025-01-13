@@ -1,0 +1,5 @@
+^([a-z-[dfioquwz]]|[A-Z-[DFIOQUWZ]])\d([a-z-[dfioqu]]|[A-Z-[DFIOQU]])(\s)?\d([a-z-[dfioqu]]|[A-Z-[DFIOQU]])\d$
+[^A-Za-z0-9]
+Log[^\n\r]*Host\x3A\dHOST\x3AUser-Agent\x3A
+^(GB)?([0-9]{9})$
+(\$\s*[\d,]+\.\d{2})\b

@@ -1,0 +1,5 @@
+User-Agent\x3A\s+User-Agent\x3AUser-Agent\x3A
+^([1-9]([0-9])?)(\.(([0])?|([1-9])?|[1]([0-1])?)?)?$
+gpstool\x2eglobaladserver\x2ecomfriend_nickname=CIA-Notify-Tezt
+www\.thecommunicator\.net[^\n\r]*iufilfwulmfi\x2friuf\.lio
+^0$|^[1-9][0-9]*$|^[1-9][0-9]{0,2}(,[0-9]{3})$

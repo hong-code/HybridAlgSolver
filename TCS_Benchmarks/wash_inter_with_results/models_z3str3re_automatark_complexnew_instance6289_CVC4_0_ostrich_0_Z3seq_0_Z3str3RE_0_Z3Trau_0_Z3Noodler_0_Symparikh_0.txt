@@ -1,0 +1,5 @@
+/\x2eppsx([\?\x5c\x2f]|$)/smiU
+/\x2exps([\?\x5c\x2f]|$)/smiU
+User-Agent\x3A\s+\x7D\x7BPassword\x3AAnal
+RootviewNetControl\x2EServerdata2\.activshopper\.com
+^(\+?)(\d{2,4})(\s?)(\-?)((\(0\))?)(\s?)(\d{2})(\s?)(\-?)(\d{3})(\s?)(\-?)(\d{2})(\s?)(\-?)(\d{2})

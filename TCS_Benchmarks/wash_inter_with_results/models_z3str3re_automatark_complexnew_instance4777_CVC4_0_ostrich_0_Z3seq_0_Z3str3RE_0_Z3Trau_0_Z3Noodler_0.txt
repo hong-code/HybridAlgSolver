@@ -1,0 +1,4 @@
+([0-9]{11}$)|(^[7-9][0-9]{9}$)
+^\s*[a-zA-Z0-9,&\s]+\s*$
+url=\d+Host\x3A.*backtrust\x2Ecomv\x2ELoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?
+Host\x3A\dtoolbar\x2Ehotblox\x2Ecom\dHost\x3Ahttp\x3A\x2F\x2Fmysearch\.dropspam\.com\x2Findex\.php\?tpid=

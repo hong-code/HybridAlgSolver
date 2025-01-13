@@ -1,0 +1,5 @@
+^(\d{4})-((0[1-9])|(1[0-2]))-(0[1-9]|[12][0-9]|3[01])$
+/\.php\?action=jv\&h=\d+/Ui
+/^\x2Fcap\x2Ftemp\x2F[A-Za-z0-9]+\x2Ejpg/miU
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+UI2Host\x3ADesktopUser-Agent\x3a\x2Fnotifier\x2F

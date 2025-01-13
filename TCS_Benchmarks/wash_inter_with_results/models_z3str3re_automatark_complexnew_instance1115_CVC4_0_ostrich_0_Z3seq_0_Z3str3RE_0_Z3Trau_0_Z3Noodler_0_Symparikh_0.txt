@@ -1,0 +1,5 @@
+<title>(.*?)</title>
+thereHost\x3Aselect\x2FGetwww\x2e2-seek\x2ecom\x2fsearch
+/\/[a-z]{4}\.html\?i\=\d{6,7}$/Ui
+\d{6}
+^[0-9]*(\.)?[0-9]+$

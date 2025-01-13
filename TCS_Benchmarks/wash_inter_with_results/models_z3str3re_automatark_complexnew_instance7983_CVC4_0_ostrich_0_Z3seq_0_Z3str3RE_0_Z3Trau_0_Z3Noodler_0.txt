@@ -1,0 +1,5 @@
+(^(2014)|^(2149))\d{11}$
+\.cfg.*spyblini\x2Eini[^\n\r]*urfiqileuq\x2ftjzu.*Host\x3A666password\x3B1\x3BOptixGmbHPG=SPEEDBARcuReferer\x3A
+metaresults\.copernic\.comServer\x00
+^[0-9]{2}-[0-9]{8}-[0-9]$
+^.*[_A-Za-z0-9]+[\t ]+[\*&]?[\t ]*[_A-Za-z0-9](::)?[_A-Za-z0-9:]+[\t ]*\(( *[ \[\]\*&A-Za-z0-9_]+ *,? *)*\).*$

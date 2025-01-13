@@ -1,0 +1,3 @@
+Toolbarkl\x2Esearch\x2Eneed2find\x2EcomtvshowticketsToolbarUser-Agent\x3A\.compress
+\x5BStatic\w+www\.iggsey\.comUser-Agent\x3AX-Mailer\x3aComputer
+/\x2f(css|upload)\x2f[a-z]{2}[0-9]{3}\x2eccs/U

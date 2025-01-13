@@ -1,0 +1,2 @@
+/[^\x20-\x7e\x0d\x0a]{4}/P
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A

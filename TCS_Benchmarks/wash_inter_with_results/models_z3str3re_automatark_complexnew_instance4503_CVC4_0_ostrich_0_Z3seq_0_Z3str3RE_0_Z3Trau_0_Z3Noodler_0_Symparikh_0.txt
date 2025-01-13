@@ -1,0 +1,5 @@
+From\x3A\w+SoftActivity\d+
+/\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.com\x2d[a-z0-9\x2d\x2e]+(\x3a\d{1,5})?\r\n/Hi
+\?<.+?>
+User-Agent\x3A\d+Theef2\sHost\x3A
+Ready\s+Client\dFrom\x3AWebtool\x2Eworld2\x2EcnUser-Agent\x3AUser-Agent\x3aURLencoderthis\x7CConnected

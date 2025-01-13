@@ -1,0 +1,5 @@
+Supervisor\s+User-Agent\x3A
+/^[a-zA-Z\s]+$/
+(01*0|1)*
+/\x2ettf([\?\x5c\x2f]|$)/smiU
+/^SSID=[a-zA-Z\d]{43}\x3B\x20A=[0-3]$/C

@@ -1,0 +1,4 @@
+([0-9][0-9])((0[1-9])|(1[0-2]))((0[1-9])|([1-2][0-9])|(3[0-1]))\-([0-9][0-9])\-([0-9][0-9][0-9][0-9])
+www\x2e2-seek\x2ecom\x2fsearch\s+TPSystem
+Toolbar\d+Host\x3A\d+4\x2e8\x2e4\x7D\x7BTrojan\x3Aare
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom

@@ -1,0 +1,5 @@
+\x3BCIAKeylogger-ProHost\x3aproductscs\x2Eshopperreports\x2Ecom
+if\s[(][A-Za-z]*\s[=]\s
+(Mo(n(day)?)?|Tu(e(sday)?)?|We(d(nesday)?)?|Th(u(rsday)?)?|Fr(i(day)?)?|Sa(t(urday)?)?|Su(n(day)?)?)
+^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$
+^[0-9]{5}([- /]?[0-9]{4})?$

@@ -1,0 +1,5 @@
+welcome\s+Host\x3A\s+ThistoIpHost\x3Abadurl\x2Egrandstreetinteractive\x2Ecom
+Keylogger-Pro\s+isUser-Agent\x3A
+^([0-1]?[0-9]{1}|2[0-3]{1}):([0-5]{1}[0-9]{1})$
+media\x2Edxcdirect\x2Ecom
+/^Host\x3A\s+.*jaiku\x2Ecom/smiH

@@ -1,0 +1,4 @@
+[ \t]+$
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+Validation of Mexican RFC for tax payers (individuals)
+/^[a-z][\w\.]+@([\w\-]+\.)+[a-z]{2,7}$/i

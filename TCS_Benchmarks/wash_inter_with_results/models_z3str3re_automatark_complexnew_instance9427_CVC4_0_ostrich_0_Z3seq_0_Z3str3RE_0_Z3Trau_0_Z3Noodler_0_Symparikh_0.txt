@@ -1,0 +1,5 @@
+User-Agent\x3ASpyPORT-ischeck=Component
+^\d{3}\s?\d{3}\s?\d{3}$
+^.*(yourdomain.com).*$
+/\bobj\x0a\x20*?\/Pattern\x20*?\x0aendobj\b/i
+Host\x3A\s+Boss\s+media\x2Etop-banners\x2Ecom

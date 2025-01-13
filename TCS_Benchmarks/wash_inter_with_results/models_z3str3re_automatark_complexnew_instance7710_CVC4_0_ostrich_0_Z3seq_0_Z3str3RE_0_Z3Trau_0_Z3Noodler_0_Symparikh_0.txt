@@ -1,0 +1,5 @@
+/\x2ewmf([\?\x5c\x2f]|$)/smiU
+<!*[^<>]*>
+User-Agent\x3A\x2Ftba\x2FFrom\x3A
+/\x2evwr([\?\x5c\x2f]|$)/smiU
+^100(\.0{0,2})? *%?$|^\d{1,2}(\.\d{1,2})? *%?$

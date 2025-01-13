@@ -1,0 +1,4 @@
+^(([0-9])|([0-2][0-9])|([3][0-1]))\/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\/\d{4}$
+/\x2eimg([\?\x5c\x2f]|$)/smiU
+on\w+Host\x3AComputerKeylogger\x2EcomHost\x3AUser-Agent\x3A
+Host\x3A.*Peer.*Host\x3ABasicurl=http\x3A

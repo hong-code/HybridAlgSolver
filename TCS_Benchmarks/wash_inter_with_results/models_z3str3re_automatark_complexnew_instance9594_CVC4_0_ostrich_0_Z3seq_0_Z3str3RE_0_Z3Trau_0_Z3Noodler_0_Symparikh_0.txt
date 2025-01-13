@@ -1,0 +1,2 @@
+iepluginBrowsedOVNHost\x3A\x2Fproducts\x2Fspyblocs\x2F
+^http[s]?://([a-zA-Z0-9\-]+\.)*([a-zA-Z]{3,61}|[a-zA-Z]{1,}\.[a-zA-Z]{2})/.*$

@@ -1,0 +1,4 @@
+/#([1-9]){2}([1-9]){2}([1-9]){2}/
+^[a-zA-Z]{1,3}\[([0-9]{1,3})\]
+Host\x3A\s+\x2Ftoolbar\x2Fico\x2F\dencoderserverreport\<\x2Ftitle\>
+eveocczmthmmq\x2fomzl\d+Host\x3Aulmxct\x2fmqoyc

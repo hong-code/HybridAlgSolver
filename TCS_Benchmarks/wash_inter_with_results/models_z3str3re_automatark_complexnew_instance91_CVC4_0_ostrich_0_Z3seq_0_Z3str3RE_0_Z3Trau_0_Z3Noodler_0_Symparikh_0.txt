@@ -1,0 +1,2 @@
+^[^\s]+$
+User-Agent\x3A[^\n\r]*aadserver\dYOUR\x2Fxml\x2Ftoolbar\x2F

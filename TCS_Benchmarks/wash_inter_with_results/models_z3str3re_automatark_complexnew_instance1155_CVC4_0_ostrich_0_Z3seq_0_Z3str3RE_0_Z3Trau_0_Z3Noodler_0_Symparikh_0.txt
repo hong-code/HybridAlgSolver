@@ -1,0 +1,2 @@
+Host\x3a\w+Host\x3A\d+anHost\x3AspasHost\x3A
+/\x5f\w{24}\.exe/Pi

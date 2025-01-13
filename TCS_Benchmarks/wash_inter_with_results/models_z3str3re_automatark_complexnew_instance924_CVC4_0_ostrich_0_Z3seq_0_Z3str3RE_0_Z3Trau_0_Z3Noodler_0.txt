@@ -1,0 +1,5 @@
+^[0-9]+(,[0-9]+)*$
+http\x3A\x2F\x2Fmysearch\.dropspam\.com\x2Findex\.php\?tpid=
+DigExtNetBus\x5BStatic
+/\/jorg\.html$/U
+/\x2eflv([\?\x5c\x2f]|$)/Umsi

@@ -1,0 +1,4 @@
+Host\x3a[^\n\r]*A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic
+/\x00\.\x00\.\x00[\x2f\x5c]/R
+^\s*[a-zA-Z0-9,\s]+\s*$
+User-Agent\x3aetbuviaebe\x2feqv\.bvv

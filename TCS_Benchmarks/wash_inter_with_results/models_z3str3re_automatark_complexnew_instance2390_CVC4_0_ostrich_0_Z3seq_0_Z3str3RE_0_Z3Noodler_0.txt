@@ -1,0 +1,4 @@
+From\x3A.*Host\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddy
+^[http|ftp|wap|https]{3,5}:\//\www\.\w*\.[com|net]{2,3}$
+\d\d?\d?\.\d\d?\d?\.\d\d?\d?\.\d\d?\d?
+Host\x3A\s+Basic\s+\.htaServerTheef2

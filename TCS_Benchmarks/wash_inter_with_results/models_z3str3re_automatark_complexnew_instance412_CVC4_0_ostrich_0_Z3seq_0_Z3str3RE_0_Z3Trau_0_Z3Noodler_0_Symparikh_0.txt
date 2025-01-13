@@ -1,0 +1,2 @@
+/\x2eswf([\?\x5c\x2f]|$)/smiU
+ConectadoHost\x3aas\.cometsystems\.com

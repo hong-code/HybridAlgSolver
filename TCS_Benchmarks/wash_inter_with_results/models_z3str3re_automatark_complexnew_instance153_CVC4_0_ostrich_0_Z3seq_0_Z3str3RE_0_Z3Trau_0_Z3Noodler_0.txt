@@ -1,0 +1,5 @@
+^([(][1-9]{2}[)] )?[0-9]{4}[-]?[0-9]{4}$
+/\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B(\xF6\xEC\xD9\xB3\x67\xCF\x9E\x3D\x7B){500}/m
+www\x2Eeblocs\x2Ecomcorep\x2Edmcast\x2Ecom
+^([\(]{1}[0-9]{3}[\)]{1}[ |\-]{0,1}|^[0-9]{3}[\-| ])?[0-9]{3}(\-| ){1}[0-9]{4}(([ ]{0,1})|([ ]{1}[0-9]{3,4}|))$
+Host\x3A\x2cSTATSTimeTotalpassword\x3B1\x3BOptix

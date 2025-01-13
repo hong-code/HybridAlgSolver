@@ -1,0 +1,4 @@
+.*[Pp]re[Ss\$]cr[iI1]pt.*
+^([0-9]*|\d*\.\d{1}?\d*)$
+/\x2eavi([\?\x5c\x2f]|$)/smiU
+comLOGUser-Agent\x3Aistsvcwww\x2Eoemji\x2EcomSystemSleuth

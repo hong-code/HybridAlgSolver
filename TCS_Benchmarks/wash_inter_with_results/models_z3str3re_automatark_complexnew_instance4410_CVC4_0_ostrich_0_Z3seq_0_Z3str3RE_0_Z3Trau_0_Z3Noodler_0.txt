@@ -1,0 +1,4 @@
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A
+SbAts[^\n\r]*Subject\x3a\d+dcww\x2Edmcast\x2Ecom
+PASSW=.*www\x2Emakemesearch\x2Ecom.*HBand,X-Mailer\x3A
+(<input )(.*?)(>)

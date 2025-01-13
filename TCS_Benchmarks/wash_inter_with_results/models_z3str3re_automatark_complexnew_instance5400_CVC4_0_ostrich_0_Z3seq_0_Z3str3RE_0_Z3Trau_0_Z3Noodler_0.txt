@@ -1,0 +1,4 @@
+StarLoggerCookie\x3aHost\x3APRODUCEDwebsearch\.getmirar\.com
+^[1-9]\d$
+\x22reaction\x2Etxt\x22User-Agent\x3AnewsSpyAgentsmrtshpr-cs-
+TOOLBARX-Mailer\x3a+dist\x2Eatlas\x2Dia\x2Ecom

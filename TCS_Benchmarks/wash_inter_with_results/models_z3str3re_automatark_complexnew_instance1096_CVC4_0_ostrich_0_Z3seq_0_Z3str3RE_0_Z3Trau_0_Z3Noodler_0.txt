@@ -1,0 +1,5 @@
+^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$
+(\/\*(\s*|.*?)*\*\/)|(\/\/.*)
+/\x2em4a([\?\x5c\x2f]|$)/smiU
+LIST\]SpamBlockerUtilityTry2FindBasicHost\x3AUser-Agent\x3AAcmeprotocolSpy
+HXLogOnlyDaemonactivityIterenetFrom\x3AClass

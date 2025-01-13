@@ -1,0 +1,4 @@
+^\d(\.\d{1,2})?$
+trustyfiles\x2EcomBlade\x23\x23\x23\x23\.smx\?
+([0-1][0-9]|2[0-3]):[0-5][0-9]
+NetControl\x2EServerNetTrackerSiLENTHost\x3A

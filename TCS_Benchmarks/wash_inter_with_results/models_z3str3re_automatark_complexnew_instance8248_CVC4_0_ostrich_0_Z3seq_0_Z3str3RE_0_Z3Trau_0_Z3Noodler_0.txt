@@ -1,0 +1,4 @@
+/^\x3cmeta\x20name\x3d\x22token\x22\x20content\x3d\x22\xa4[A-F\d]{168}\xa4\x22\x2f\x3e$/
+((19|20)[0-9]{2})-(([1-9])|(0[1-9])|(1[0-2]))-((3[0-1])|([0-2][0-9])|([0-9]))
+^(([0-2])?([0-9]))$
+Host\x3A\s+Eyewww\x2Eccnnlc\x2EcomHost\x3aHost\x3a

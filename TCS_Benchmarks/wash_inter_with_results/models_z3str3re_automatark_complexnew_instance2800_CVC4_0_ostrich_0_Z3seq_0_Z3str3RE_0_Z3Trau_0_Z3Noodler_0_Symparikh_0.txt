@@ -1,0 +1,3 @@
+name\x3dEmailbadurl\x2Egrandstreetinteractive\x2EcomHost\x3Astepwww\x2Ekornputers\x2Ecom
+/\r\n\r\nsession\x3a\d{1,7}$/
+Host\x3AHost\x3AX-Mailer\x3a

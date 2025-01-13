@@ -1,0 +1,4 @@
+Minutes\s+\x2Fcgi\x2Flogurl\.cgi\s+e2give\.com
+www\.actualnames\.com\s+toolbar_domain_redirect\s+Contactfrom=GhostVoiceServer
+Host\x3AHost\x3AFrom\x3a\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furaxbnymomspyo\x2fzowy
+^([GB])*(([1-9]\d{8})|([1-9]\d{11}))$

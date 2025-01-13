@@ -1,0 +1,4 @@
+/Windows\s+?Key:\s+?\w{5}-\w{5}-\w{5}-\w{5}-\w{5}/smi
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+CH\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{1}|CH\d{19}
+User-Agent\x3A.*User-Agent\x3A.*spyblini\x2Einidata\.warezclient\.com

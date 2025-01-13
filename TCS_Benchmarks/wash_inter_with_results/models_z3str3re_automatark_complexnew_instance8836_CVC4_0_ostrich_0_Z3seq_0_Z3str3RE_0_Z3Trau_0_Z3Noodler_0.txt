@@ -1,0 +1,4 @@
+SystemSleuth1\x2E0versionHost\x3AArrowHost\x3a3Awebsearch\x2Edrsnsrch\x2EcomhostieiWonHost\x3apjpoptwql\x2frlnj
+forum=From\x3acomTencentTravelerBackAtTaCkExplorer
+/GET \/[a-z]{8,12}\?[a-z] HTTP\/1.1/i
+^(0[1-9]|1[0-2])\/((0[1-9]|2\d)|3[0-1])\/(19\d\d|200[0-3])$

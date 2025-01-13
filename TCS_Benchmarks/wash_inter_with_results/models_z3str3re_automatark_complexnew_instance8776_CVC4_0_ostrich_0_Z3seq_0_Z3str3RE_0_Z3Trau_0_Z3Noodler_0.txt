@@ -1,0 +1,5 @@
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi
+/^\d{2}[\-\/]\d{2}[\-\/]\d{4}$/
+^\d{3}\s?\d{3}$
+tid\x3D\x7B\s+Basic.*\x2Ftoolbar\x2F
+Host\x3A\s+Online100013Agentsvr\x5E\x5EMerlin

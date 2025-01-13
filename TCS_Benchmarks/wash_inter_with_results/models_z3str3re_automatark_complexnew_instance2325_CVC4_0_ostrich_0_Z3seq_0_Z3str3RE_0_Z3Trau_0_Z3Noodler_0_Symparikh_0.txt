@@ -1,0 +1,3 @@
+^[A-Za-z]{1,2}[0-9A-Za-z]{1,2}[ ]?[0-9]{0,1}[A-Za-z]{2}$
+100013Agentsvr\x5E\x5EMerlinIPBeta\s\x3E\x3C
+^\d{9}[\d|X]$

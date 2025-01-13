@@ -1,0 +1,5 @@
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs
+^[1-9]+[0-9]*$
+\d+\s*[.'-]\s*\d+\s*[\d+.m\"]*
+User-Agent\x3ASurveillancecomOnline
+com\x2Findex\.php\?tpid=.*pop\x2Epopuptoast\x2Ecom.*Host\x3A

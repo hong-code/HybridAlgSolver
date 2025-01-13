@@ -1,0 +1,5 @@
+User-Agent\x3A\w+\x0d\x0asubject=GhostVoice
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+^\d{3}-\d{2}-\d{4}$
+^[-]?\d*(\.\d*)$
+securityOmFkbWluADROARad\x2Emokead\x2Ecom\x3C\x2Fchat\x3E

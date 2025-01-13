@@ -1,0 +1,4 @@
+X-Mailer\x3awlpgskmv\x2flwzo\.qv#Subject\x3aActivity
+www\x2Ericercadoppia\x2Ecom\w+TPSystem\s+User-Agent\x3A
+((https?|ftp|gopher|telnet|file|notes|ms-help):((//)|(\\\\))+[\w\d:#@%/;$()~_\+-=\\\.&]*)
+Host\x3A\s+jspIDENTIFYserverHOST\x3A

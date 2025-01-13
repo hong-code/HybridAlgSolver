@@ -1,0 +1,5 @@
+^[$]?[0-9]*(\.)?[0-9]?[0-9]?$
+\b([Jj](([Aa][Nn][Uu][Aa][Rr][Yy]|[Aa][Nn])|([Uu][Nn][Ee]|[Uu][Nn])|([Uu][Ll][Yy]|[Uu][Ll])))\b|\b((([Ss][Ee][Pp][Tt]|[Nn][Oo][Vv]|[Dd][Ee][Cc])[Ee][Mm])|[Oo][Cc][Tt][Oo])[Bb][Ee][Rr]|([Ss][Ee][Pp]|[Nn][Oo][Vv]|[Dd][Ee][Cc]|[Oo][Cc][Tt])\b|\b([Mm][Aa]([Yy]|([Rr][Cc][Hh]|[Rr])))\b|\b[Aa](([Pp][Rr][Ii][Ll]|[Pp][Rr])|([Uu][Gg][Uu][Ss][Tt]|[Uu][Gg]))\b|\b[Ff]([Ee][Bb][Rr][Uu][Aa][Rr][Yy]|[Ee][Bb])\b
+^\d*((\.\d+)?)*$
+^\d+\x20*([pP][xXtT])?$
+Subject\x3a\s+Yeah\!Online\x2521\x2521\x2521

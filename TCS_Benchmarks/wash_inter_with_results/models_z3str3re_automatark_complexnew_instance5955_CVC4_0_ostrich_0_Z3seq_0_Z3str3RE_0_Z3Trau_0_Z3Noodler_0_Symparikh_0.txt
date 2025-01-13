@@ -1,0 +1,3 @@
+Searchdata2\.activshopper\.comdll\x3FproductsCUSTOMSAccwww\x2Elocators\x2Ecom
+^([4]{1})([0-9]{12,15})$
+/^GET\s\x2f[A-F0-9]{152}/m

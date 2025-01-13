@@ -1,0 +1,2 @@
+[a-zA-Z0-9]*
+action\x2EIP-FTPsearch\.dropspam\.com

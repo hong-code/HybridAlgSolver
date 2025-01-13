@@ -1,0 +1,4 @@
+/\x2ehhk([\?\x5c\x2f]|$)/smiU
+Host\x3A\s+User-Agent\x3A
+\bhttp(s?)\:\/\/[a-zA-Z0-9\/\?\-\.\&\(\)_=#]*
+Host\x3A\.exePass-OnHost\x3A\.exe\x2Ftoolbar\x2F

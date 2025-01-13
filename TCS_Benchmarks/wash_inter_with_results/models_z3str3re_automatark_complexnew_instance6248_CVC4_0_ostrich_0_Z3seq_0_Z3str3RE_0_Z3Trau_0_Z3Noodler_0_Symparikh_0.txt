@@ -1,0 +1,5 @@
+(\bR(\.|)R(\.|)|RURAL\s{0,}(ROUTE|RT(\.|)))\s{0,}\d{1,}(,|)\s{1,}\bBOX\s{0,}\d
+TOOLBARX-Mailer\x3a+dist\x2Eatlas\x2Dia\x2Ecom
+filename=\x22\s+www\x2Epeer2mail\x2Ecom.*LOG
+\b[1-9]\b
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN

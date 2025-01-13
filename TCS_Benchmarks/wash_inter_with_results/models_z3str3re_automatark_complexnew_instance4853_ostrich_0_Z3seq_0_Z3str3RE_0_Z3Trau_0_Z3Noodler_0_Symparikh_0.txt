@@ -1,0 +1,4 @@
+[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]\.[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9][\.][cn]{2,4}
+\A(([a-zA-Z]{1,2}\d{1,2})|([a-zA-Z]{2}\d[a-zA-Z]{1}))\x20{0,1}\d[a-zA-Z]{2}\Z
+^([(][1-9]{2}[)] )?[0-9]{4}[-]?[0-9]{4}$
+dist\x2Eatlas\x2Dia\x2EcomSpy\-LockedOnlineconnection

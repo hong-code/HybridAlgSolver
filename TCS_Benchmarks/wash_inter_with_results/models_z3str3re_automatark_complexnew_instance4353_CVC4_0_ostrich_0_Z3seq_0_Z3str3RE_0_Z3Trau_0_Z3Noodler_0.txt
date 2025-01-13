@@ -1,0 +1,5 @@
+/^"|'+(.*)+"$|'$/
+st=\s+www\.iggsey\.com.*BackAtTaCkadserver\.warezclient\.com
+Report\dDmInf\x5EinfoSimpsonUser-Agent\x3AClientwww\x2Einternet-optimizer\x2Ecom
+^([1-9]|1[0-2])$
+^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w ]*.*))+\.((html|HTML)|(htm|HTM))$

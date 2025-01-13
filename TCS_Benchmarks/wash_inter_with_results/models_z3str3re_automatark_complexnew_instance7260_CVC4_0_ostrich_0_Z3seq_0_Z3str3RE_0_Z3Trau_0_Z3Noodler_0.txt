@@ -1,0 +1,2 @@
+error\*\-\*Wrong\s+www\x2Ewordiq\x2Ecom\s+Subject\x3AAlexaOnline\x2521\x2521\x2521User-Agent\x3A
+<.*\b(bgcolor\s*=\s*[\"|\']*(\#\w{6})[\"|\']*).*>

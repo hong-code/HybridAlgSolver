@@ -1,0 +1,5 @@
+\w+@\w+\.\w+
+toolbarplace\x2Ecom\sUser-Agent\x3a\d+\x2Fnewsurfer4\x2Fclient=BysooTBADdcww\x2Edmcast\x2Ecom
+/\x2eswf([\x3f\x2f]|$)/Uim
+/\x2eets([\?\x5c\x2f]|$)/smiU
+SpyAgent\d+sErver\s+User-Agent\x3A

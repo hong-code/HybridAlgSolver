@@ -1,0 +1,2 @@
+(0[0-9]{7}|(AC|BR|FC|GE|GN|GS|IC|IP|LP|NA|NF|NI|NL|NO|NP|NR|NZ|OC|RC|SA|SC|SF|SI|SL|SO|SP|SR|SZ|ZC|R)[0-9]{6})
+\x7D\x7BSysuptime\x3A\d+\x2Fcommunicatortb

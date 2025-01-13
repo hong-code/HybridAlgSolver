@@ -1,0 +1,5 @@
+Pleasewww\x2Ewebfringe\x2Ecom\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax
+/^.{27}/sR
+(^[1-9]\d{2}\s*-\s*\d{3}\s*-\s*\d{4}$|^[2-9]\d{9}|^\x28\s*[2-9]\d{2}\s*\x29\s*\d{3}\s*-\s*\d{4}$)
+nick_name=CIA-Test\s+User-Agent\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddywww\x2Eeasymessage\x2Enet
+^(([1-9]{1}\d{0,2},(\d{3},)*\d{3})|([1-9]{1}\d{0,}))$

@@ -1,0 +1,4 @@
+User-Agent\x3A\d+Desktop\sIDENTIFY666User-Agent\x3A\x5BStatic
+^(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$
+HANDY\s+Exploiter\w+\x2Fr\x2Fkeys\x2FkeysS\x3aUsers\x5cIterenet
+\x28\x29\s+WatchDog\sNetspy\d+pjpoptwql\x2frlnjX-Mailer\x3aHost\x3asnprtz\x7Cdialnoref\x3D\x25user\x5Fid

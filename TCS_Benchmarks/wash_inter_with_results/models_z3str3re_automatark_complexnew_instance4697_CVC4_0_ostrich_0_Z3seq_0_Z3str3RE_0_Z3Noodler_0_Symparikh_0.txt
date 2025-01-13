@@ -1,0 +1,5 @@
+/\x2ettf([\?\x5c\x2f]|$)/smiU
+Ready[^\n\r]*User-Agent\x3A\s+Client\dFrom\x3AWebtool\x2Eworld2\x2EcnUser-Agent\x3AUser-Agent\x3a
+LOG\w+PARSER\d+scn\x2emystoretoolbar\x2ecom
+(\+1|\+|1)|([^0-9])
+([A-Za-z]{2}|[A-Za-z]\d|\d[A-Za-z])[A-Za-z]{0,1}\d(\d{0,3})[A-Za-z]{0,1}

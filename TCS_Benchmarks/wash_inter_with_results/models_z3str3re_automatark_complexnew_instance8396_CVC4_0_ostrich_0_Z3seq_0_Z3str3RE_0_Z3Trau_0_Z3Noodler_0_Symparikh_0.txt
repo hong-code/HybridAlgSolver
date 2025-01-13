@@ -1,0 +1,2 @@
+started\x2E.*\/cgi-bin\/PopupV
+^([a-zA-Z0-9\-]{2,80})$

@@ -1,0 +1,5 @@
+ads\.grokads\.com\s+deskwizz\x2Ecom
+/\x2emid([\?\x5c\x2f]|$)/smiU
+Ready[^\n\r]*User-Agent\x3A\s+Client\dFrom\x3AWebtool\x2Eworld2\x2EcnUser-Agent\x3AUser-Agent\x3a
+/\/\d+\.mp3$/U
+adserver\.warezclient\.com530Host\x3A

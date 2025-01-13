@@ -1,0 +1,3 @@
+filename=\x22\s+www\x2Epeer2mail\x2Ecomgot
+\x2Fbar_pl\x2Fshdoclc\.fcgisource%3Dultrasearch136%26campaign%3DsnapEIHBand,
+^\d{3}-\d{7}[0-6]{1}$

@@ -1,0 +1,4 @@
+/^\/[a-f0-9]{32}\/[a-f0-9]{32}\.jar$/Ui
+\x2Fsearchfast\x2FNavhelper
+^[^ ,0]*$
+\x2Fpagead\x2Fads\?waitingisDownload

@@ -1,0 +1,5 @@
+hirmvtg\x2fggqh\.kqhSurveillanceHost\x3A
+^[a-zA-Z0-9]+$
+www\x2Ewebcruiser\x2Eccgot
+^([a-z0-9]{32})$
+From\x3A.*Host\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddy

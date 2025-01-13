@@ -1,0 +1,5 @@
+Subject\x3a\d+rprpgbnrppb\x2fci
+shprrprt-cs-Pre\x2Fta\x2FNEWS\x2F
+Host\x3A\s+\.ico\s+Host\x3Aorigin\x3Dsidefind
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F
+spas\d+media\x2Edxcdirect\x2Ecom\.smx\?PASSW=

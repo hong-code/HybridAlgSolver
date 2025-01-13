@@ -1,0 +1,3 @@
+/\x2ekvl([\?\x5c\x2f]|$)/smiU
+SpyAgent\d+sErver\s+User-Agent\x3A
+User-Agent\x3A\s+GET\d+\x2Fcommunicatortb

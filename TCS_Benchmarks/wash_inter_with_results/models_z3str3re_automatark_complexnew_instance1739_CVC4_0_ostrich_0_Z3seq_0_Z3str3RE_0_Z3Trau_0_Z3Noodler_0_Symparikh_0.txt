@@ -1,0 +1,4 @@
+^[0-9]{5}$
+Referer\x3A.*notification.*qisezhin\x2fiqor\.ymspasServer\x3a
+www\.trackhits\.ccUser-Agent\x3Aiz=LOGSupremeResult
+^(\+27|27)?(\()?0?([7][1-9]|[8][2-4])(\))?( |-|\.|_)?(\d{3})( |-|\.|_)?(\d{4})

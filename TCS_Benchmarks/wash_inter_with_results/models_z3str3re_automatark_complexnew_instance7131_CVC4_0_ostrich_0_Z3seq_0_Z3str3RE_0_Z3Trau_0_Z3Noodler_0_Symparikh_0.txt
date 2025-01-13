@@ -1,0 +1,4 @@
+^[0-9]*$
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi
+/\x2esmil([\?\x5c\x2f]|$)/smiU
+(^\d{1,2}\.\d{1,2}\.\d{4})|(^\d{1,2}\.\d{1,2})|(^\d{1,2})$

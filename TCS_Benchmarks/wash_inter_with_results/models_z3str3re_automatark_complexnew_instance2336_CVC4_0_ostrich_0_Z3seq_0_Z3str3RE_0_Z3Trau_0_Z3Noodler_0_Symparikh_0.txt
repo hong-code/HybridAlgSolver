@@ -1,0 +1,4 @@
+([\r\n ]*//[^\r\n]*)+
+EFError\swww\x2emalware-stopper\x2ecom
+User-Agent\x3A\d+dll\x3F.*started\x2EfeedbackUser-Agent\x3A
+[\+]?[1]?[-. ]?(\(\d{3}\)|\d{3})(|[-. ])?\d{3}(|[-. ])\d{4}|\d{3}(|[-. ])\d{4}

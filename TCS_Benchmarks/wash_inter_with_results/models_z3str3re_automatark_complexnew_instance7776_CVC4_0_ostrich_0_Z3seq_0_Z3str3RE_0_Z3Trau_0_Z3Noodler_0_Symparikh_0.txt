@@ -1,0 +1,3 @@
+PortweatherX-Mailer\x3aUser-Agent\x3AToolbar
+(^[1-9]$)|(^10$)
+=(?m)^(LogName=(Security).*)\n(SourceName=.*)\n(EventCode=.*)\n(EventType=.*)\n(Type=(Success Audit|Information).*)\n(ComputerName=(HOSTNAME1|HOSTNAME2|HOSTNAME3).*)\n

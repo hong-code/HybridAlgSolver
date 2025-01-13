@@ -1,0 +1,4 @@
+<[\w\"\ '\#\* \=\',\.\\\(\)\/\-\$\{\}\[\]\|\*\?\+\^\&\:\%\;\!]+>
+User-Agent\x3A\s+\x7D\x7BPassword\x3A\d+information
+Host\x3A[^\n\r]*cache\x2Eeverer\x2Ecom\s+from\.myway\.comToolbar
+/\.php\?b=[A-F0-9]+&v=1\./U

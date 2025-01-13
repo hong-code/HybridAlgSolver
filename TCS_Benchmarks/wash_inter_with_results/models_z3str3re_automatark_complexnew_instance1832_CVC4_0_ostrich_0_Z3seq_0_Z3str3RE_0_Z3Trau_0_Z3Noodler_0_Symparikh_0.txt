@@ -1,0 +1,2 @@
+YWRtaW46YWRtaW4www\x2Ee-finder\x2EccNSIS_DOWNLOADHost\x3A
+/^\x2F40e800[0-9A-F]{30,}$/Ui

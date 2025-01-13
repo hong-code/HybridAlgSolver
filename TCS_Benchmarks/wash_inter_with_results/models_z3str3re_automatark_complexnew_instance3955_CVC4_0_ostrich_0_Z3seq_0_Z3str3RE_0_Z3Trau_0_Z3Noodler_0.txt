@@ -1,0 +1,5 @@
+from\x3AHost\x3awww\.thecommunicator\.net
+^([a-zA-z\s]{2,})$
+^([0][1-9]|[1][0-2]):[0-5][0-9] {1}(AM|PM|am|pm)$
+ProxyDownCurrentUser-Agent\x3AHost\x3Acom\x2Findex\.php\?tpid=
+^(www\.regxlib\.com)$

@@ -1,0 +1,4 @@
+/^die\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+/\d+&/miR
+^\d{2}\s{1}(Jan|Feb|Mar|Apr|May|Jun|Jul|Apr|Sep|Oct|Nov|Dec)\s{1}\d{4}$
+IPUSER-Host\x3AUser-Agent\x3A\x2Fsearchfast\x2F

@@ -1,0 +1,4 @@
+^[+]?\d*$
+search\x2eimesh\x2ecom\s+WatchDogupwww\.klikvipsearch\.com
+/\x2ejar([\?\x5c\x2f]|$)/smiU
+information\s+User-Agent\x3AMM_RECO\x2EEXE

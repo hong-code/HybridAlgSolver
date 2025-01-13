@@ -1,0 +1,4 @@
+Toolbar\d+Host\x3AWelcome\x2FcommunicatortbGateCrasher
+^([1-9]{0,1})([0-9]{1})((\.[0-9]{0,1})([0-9]{1})|(\,[0-9]{0,1})([0-9]{1}))?$
+badurl\x2Egrandstreetinteractive\x2EcomFilteredHost\x3Ae2give\.com\x2Fnewsurfer4\x2F
+Toolbar\s+pjpoptwql\x2frlnjSubject\x3A

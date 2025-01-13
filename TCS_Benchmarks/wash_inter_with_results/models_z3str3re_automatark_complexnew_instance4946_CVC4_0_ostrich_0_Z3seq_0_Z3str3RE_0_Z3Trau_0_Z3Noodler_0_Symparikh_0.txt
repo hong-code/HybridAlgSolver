@@ -1,0 +1,4 @@
+GmbH\x2FcommunicatortbHost\x3AUser-Agent\x3Aadblock\x2Elinkz\x2Ecom
+gpstool\x2eglobaladserver\x2ecom\daction\x2ESearchdata2\.activshopper\.com
+/^"|'+(.*)+"$|'$/
+www\x2Eweepee\x2Ecom\d+metaresults\.copernic\.com\s+

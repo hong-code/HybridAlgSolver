@@ -1,0 +1,4 @@
+Ts2\x2F\s+insert.*Host\x3aHELOHourssurvey\.asp\?nUserId=
+www\x2Epurityscan\x2Ecom.*
+tipHost\x3AGirafaClient\x0d\x0asubject=GhostVoice
+/filename\s*=\s*[^\r\n]*?\x2ettf[\x22\x27\x3b\s\r\n]/i

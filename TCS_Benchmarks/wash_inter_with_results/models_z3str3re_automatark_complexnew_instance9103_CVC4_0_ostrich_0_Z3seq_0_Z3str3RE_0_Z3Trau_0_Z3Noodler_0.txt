@@ -1,0 +1,4 @@
+[0-9]+
+YWRtaW46cGFzc3dvcmQ\s+www\x2Ealfacleaner\x2Ecom
+NETObserve\d+Host\x3aohgdhkzfhdzo\x2fuwpOK\r\nHost\x3AHWAEname\x2ecnnic\x2ecn
+/^\/[A-Z]{6}$/U

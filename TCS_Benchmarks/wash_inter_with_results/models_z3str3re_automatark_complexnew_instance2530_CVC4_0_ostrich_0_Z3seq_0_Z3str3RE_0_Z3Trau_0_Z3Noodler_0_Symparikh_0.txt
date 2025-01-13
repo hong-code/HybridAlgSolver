@@ -1,0 +1,5 @@
+/\/14\d{8}(.jar)?$/U
+9[0-9]
+Host\x3A[^\n\r]*Travel[^\n\r]*From\x3Awww\x2EZSearchResults\x2Ecom
+/\.php\?b=[A-F0-9]+&v=1\./U
+[^ _0-9a-zA-Z\$\%\'\-\@\{\}\~\!\#\(\)\&\^]

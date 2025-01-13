@@ -1,0 +1,4 @@
+/exploit\/(Exploit(App)?|Loader)\.class/ims
+([.])([a-z,1-9]{3,4})(\/)
+/\/[a-zA-Z_-]+\.doc$/U
+^((\d{8})|(\d{10})|(\d{11})|(\d{6}-\d{5}))?$

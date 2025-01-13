@@ -1,0 +1,4 @@
+/\x2ermp([\?\x5c\x2f]|$)/smiU
+actualnames\.com\s+fast-look\x2Ecomwww\x2Emaxifiles\x2Ecom
+hotbar\s+ocllceclbhs\x2fgthftpquickbruteUser-Agent\x3A
+^[^<>`~!/@\#},.?"-$%:;)(_ ^{&*=|'+]+$

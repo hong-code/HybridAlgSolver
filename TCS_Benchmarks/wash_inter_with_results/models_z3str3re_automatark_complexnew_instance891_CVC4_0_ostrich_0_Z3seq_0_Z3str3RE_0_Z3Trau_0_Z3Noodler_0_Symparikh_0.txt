@@ -1,0 +1,2 @@
+/filename\=[a-z0-9]{24}\.jar/H
+/\x2exspf([\?\x5c\x2f]|$)/smiU

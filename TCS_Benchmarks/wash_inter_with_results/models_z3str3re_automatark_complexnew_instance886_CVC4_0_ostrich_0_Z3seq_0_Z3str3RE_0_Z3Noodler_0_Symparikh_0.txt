@@ -1,0 +1,4 @@
+((^\d{5}$)|(^\d{8}$))|(^\d{5}-\d{3}$)
+cdpView.*protocol.*\x2Fs\x28robert\x40blackcastlesoft\x2Ecom\x29
+Host\x3A\w+User-Agent\x3A\sTeomaBarHost\x3AHoursHost\x3AHost\x3A
+/\/software\x2ephp\x3f[0-9]{15,}/Ui

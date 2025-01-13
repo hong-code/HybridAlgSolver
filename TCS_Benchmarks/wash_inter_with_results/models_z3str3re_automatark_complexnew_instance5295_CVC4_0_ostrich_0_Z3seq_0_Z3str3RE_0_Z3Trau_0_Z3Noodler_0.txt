@@ -1,0 +1,5 @@
+^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$
+Host\x3A\x2cSTATSTimeTotalpassword\x3B1\x3BOptix
+^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$
+NSIS_DOWNLOAD.*User-Agent\x3A\s+gpstool\x2eglobaladserver\x2ecom
+^(0)44[\s]{0,1}[\-]{0,1}[\s]{0,1}2[\s]{0,1}[1-9]{1}[0-9]{6}$

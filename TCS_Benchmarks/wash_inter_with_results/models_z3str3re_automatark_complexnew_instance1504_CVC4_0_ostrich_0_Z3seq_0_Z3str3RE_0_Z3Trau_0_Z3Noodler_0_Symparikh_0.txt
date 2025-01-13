@@ -1,0 +1,2 @@
+M\x2Ezip.*w3who.*\x2Fcgi\x2Flogurl\.cgiMyPostdll\x3FHOST\x3A
+^100(\.0{0,2})? *%?$|^\d{1,2}(\.\d{1,2})? *%?$

@@ -1,0 +1,3 @@
+IPUSER-Host\x3AUser-Agent\x3A\x2Fsearchfast\x2F
+\x2Fbar_pl\x2Fchk\.fcgiHost\x3a
+/\/setup\/[a-z0-9!-]{50}/Ui

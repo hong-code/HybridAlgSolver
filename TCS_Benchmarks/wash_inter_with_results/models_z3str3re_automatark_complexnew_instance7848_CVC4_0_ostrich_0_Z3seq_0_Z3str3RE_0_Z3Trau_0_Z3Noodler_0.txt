@@ -1,0 +1,5 @@
+^[0-9]{4}((0[1-9])|(1[0-2]))$
+HXLogOnly\w+areSubject\x3a\swww\.fast-finder\.comawbeta\.net-nucleus\.com
+^[A-Z][a-z]+(tz)?(man|berg)$
+\.fcgi[^\n\r]*Host\x3A\s\x5D\x2520\x5BPort_NETObserveTM_SEARCH3
+\x2Fpagead\x2Fads\?waitingisDownload

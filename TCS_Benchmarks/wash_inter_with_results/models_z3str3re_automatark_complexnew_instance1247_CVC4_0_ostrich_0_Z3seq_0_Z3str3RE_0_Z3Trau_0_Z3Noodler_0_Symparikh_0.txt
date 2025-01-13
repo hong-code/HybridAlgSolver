@@ -1,0 +1,4 @@
+User-Agent\x3A[^\n\r]*HTTP_RAT_
+Subject\x3Alinkautomatici\x2EcomReferer\x3Awww\x2Esearchreslt\x2Ecom
+deskwizz\x2EcomReportsadblock\x2Elinkz\x2EcomUser-Agent\x3A
+/*d(9,15)

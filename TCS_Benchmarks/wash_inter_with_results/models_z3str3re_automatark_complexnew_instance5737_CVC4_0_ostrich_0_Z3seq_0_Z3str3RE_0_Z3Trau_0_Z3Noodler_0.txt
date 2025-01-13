@@ -1,0 +1,4 @@
+about\d+yxegtd\x2fefcwgHost\x3ATPSystemwww\x2Ee-finder\x2Ecc
+[^a-zA-Z0-9]+
+Host\x3aSubject\x3AClientnamedFrom\x3A
+\.fcgi[^\n\r]*Host\x3A\s\x5D\x2520\x5BPort_NETObserveTM_SEARCH3

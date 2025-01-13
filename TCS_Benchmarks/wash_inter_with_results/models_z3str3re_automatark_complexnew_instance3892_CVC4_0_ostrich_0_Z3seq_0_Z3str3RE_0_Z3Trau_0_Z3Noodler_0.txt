@@ -1,0 +1,4 @@
+/\x2Equo([\?\x5c\x2f]|$)/smiU
+\x28robert\x40blackcastlesoft\x2Ecom\x29
+www\.iggsey\.com\sX-Mailer\x3aComputeron\x3Acom\x3E2\x2E41
+^((0|[1-9]+[0-9]*)-(0|[1-9]+[0-9]*);|(0|[1-9]+[0-9]*);)*?((0|[1-9]+[0-9]*)-(0|[1-9]+[0-9]*)|(0|[1-9]+[0-9]*)){1}$

@@ -1,0 +1,4 @@
+/\x2eclass([\?\x5c\x2f]|$)/smiU
+NSIS_DOWNLOAD.*User-Agent\x3A\s+gpstool\x2eglobaladserver\x2ecom
+User-Agent\x3A\s+BossUser-Agent\x3ASpediaUser-Agent\x3A
+^[\-]{0,1}[0-9]{1,}(([\.\,]{0,1}[0-9]{1,})|([0-9]{0,}))$

@@ -1,0 +1,3 @@
+show\x2Eroogoo\x2Ecom\s+report\<\x2Ftitle\>Host\x3a\.fcgi
+IP.*encoder\d+SAHPORT-User-Agent\x3A
+PortweatherX-Mailer\x3aUser-Agent\x3AToolbar

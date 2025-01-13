@@ -1,0 +1,4 @@
+Current[^\n\r]*server[^\n\r]*Host\x3Aocllceclbhs\x2fgth
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET
+Runner.*\x2Ehtml[^\n\r]*NetControl\x2EServer\d+media\x2Edxcdirect\x2Ecom\.smx\?PASSW=SAH
+\/cgi-bin\/PopupV\s+insert.*Host\x3aHELOHourssurvey\.asp\?nUserId=

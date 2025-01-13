@@ -1,0 +1,4 @@
+logs\d+X-Mailer\x3a\d+url=enews\x2Eearthlink\x2Enet
+rprpgbnrppb\x2fci\d\x2ElStopperHost\x3AHost\x3aclvompycem\x2fcen\.vcn
+toolsbar\x2Ekuaiso\x2Ecom\d\x2Fbar_pl\x2Fchk_bar\.fcgi
+User-Agent\x3a[^\n\r]*Echelon.*Blacksnprtz\x7CdialnoSearch

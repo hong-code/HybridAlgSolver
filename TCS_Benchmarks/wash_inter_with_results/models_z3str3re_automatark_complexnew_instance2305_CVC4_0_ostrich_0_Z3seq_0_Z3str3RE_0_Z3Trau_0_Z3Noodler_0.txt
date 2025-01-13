@@ -1,0 +1,4 @@
+^[\w\s]+$
+Host\x3AWordmyway\.comhoroscope2Host
+MyAgentprotocolprotocolHost\x3A\x2Fs\x28robert\x40blackcastlesoft\x2Ecom\x29data2\.activshopper\.com
+NetControl\x2EServerNetTrackerSiLENTHost\x3A

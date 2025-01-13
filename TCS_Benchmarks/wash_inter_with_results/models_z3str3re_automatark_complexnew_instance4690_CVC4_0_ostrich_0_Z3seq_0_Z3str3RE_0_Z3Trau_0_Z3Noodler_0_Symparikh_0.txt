@@ -1,0 +1,4 @@
+\x2Fcs\x2Fpop4\x2FA-Spywww\x2Eyoogee\x2Ecom
+(^\d*\.?\d*[1-9]+\d*$)|(^[1-9]+\d*\.\d*$)
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET

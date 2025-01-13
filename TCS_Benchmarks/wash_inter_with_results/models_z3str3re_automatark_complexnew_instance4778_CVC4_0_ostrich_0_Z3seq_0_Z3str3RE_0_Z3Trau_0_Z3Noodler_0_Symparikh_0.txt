@@ -1,0 +1,4 @@
+/\x2exls([\?\x5c\x2f]|$)/smiU
+\x23\x23\x23\x23Host\x3ASubject\x3Awww\x2Epcsentinelsoftware\x2EcomHost\x3AWeHost\x3awww\x2Ewowokay\x2Ecom/wowokaybar\x2Ephp
+/\x2ehtc([\?\x5c\x2f]|$)/smiU
+BysooTBwhenu\x2EcomToolbarWeAgentUser-Agent\x3ahasHost\x3atoWebupdate\.cgithis

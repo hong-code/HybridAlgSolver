@@ -1,0 +1,5 @@
+(("|')[a-z0-9\/\.\?\=\&]*(\.htm|\.asp|\.php|\.jsp)[a-z0-9\/\.\?\=\&]*("|'))|(href=*?[a-z0-9\/\.\?\=\&"']*)
+\d{10,12}@[a-zA-Z].[a-zA-Z].*
+action\x2EIP-FTPsearch\.dropspam\.com
+fhfksjzsfu\x2fahm\.uqs\s+Host\x3a\swww\.fast-finder\.com\sStarted\!$3
+^[0-9]{1,15}(\.([0-9]{1,2}))?$

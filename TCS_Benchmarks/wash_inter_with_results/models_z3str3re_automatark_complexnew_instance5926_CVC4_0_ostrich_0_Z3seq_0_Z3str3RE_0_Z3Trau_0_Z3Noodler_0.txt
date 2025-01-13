@@ -1,0 +1,4 @@
+([^\.\?\!]*)[\.\?\!]
+DesktopSupportFiles\x2EhtmlReferer\x3Awww\x2Efreescratchandwin\x2Ecom
+User-Agent\x3ADirectory
+DISK\s+\x2Fcgi\x2Flogurl\.cgiSubject\x3AinsertX-Mailer\x3A

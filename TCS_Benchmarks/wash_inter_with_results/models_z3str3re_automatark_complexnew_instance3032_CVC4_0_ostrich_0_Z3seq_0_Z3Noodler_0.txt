@@ -1,0 +1,4 @@
+^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*\s+<(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})>$|^(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})$
+YOUR.*\x2Fsearchfast\x2F\s+hostiedesksearch\.dropspam\.com\x2Fbi\x2Fservlet\x2FThinstall
+[a-zA-Z][a-zA-Z0-9_\-\,\.]{5,31}
+/encoding\x3D[\x22\x27][^\x22\x27]{1024}/

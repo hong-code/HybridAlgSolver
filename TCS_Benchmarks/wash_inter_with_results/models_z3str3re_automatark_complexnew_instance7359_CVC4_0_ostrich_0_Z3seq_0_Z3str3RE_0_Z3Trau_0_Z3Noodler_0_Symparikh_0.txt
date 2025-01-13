@@ -1,0 +1,2 @@
+PortweatherX-Mailer\x3aUser-Agent\x3AToolbar
+(https:[/][/]|http:[/][/]|www.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*$

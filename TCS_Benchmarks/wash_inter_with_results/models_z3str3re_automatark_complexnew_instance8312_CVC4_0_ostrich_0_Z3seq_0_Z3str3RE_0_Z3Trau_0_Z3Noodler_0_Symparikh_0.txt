@@ -1,0 +1,2 @@
+^([0-9a-fA-F])*$
+aohobygi\x2fzwiwHost\x3a\x7D\x7Crichfind\x2Ecom

@@ -1,0 +1,3 @@
+^\w+(([-+']|[-+.]|\w+))*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+User-Agent\x3A\d+Theef2\sHost\x3A
+attachedEverywareHELOBasic

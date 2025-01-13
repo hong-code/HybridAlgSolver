@@ -1,0 +1,3 @@
+/gate\x2ephp\x3freg=[a-zA-Z]{15}/U
+ToolbarUser-Agent\x3AFrom\x3A
+This\s+\x7D\x7BPassword\x3A\d+

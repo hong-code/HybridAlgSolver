@@ -1,0 +1,2 @@
+^(([a-zA-Z]{2})([0-9]{6}))$
+Subject\x3aFTPdistdcww\x2Edmcast\x2Ecom

@@ -1,0 +1,5 @@
+Host\x3AHost\x3Aalertseqepagqfphv\x2fsfd
+Logger\w+searchreslt\dSubject\x3AHANDY\x2FrssScaner
+Toolbar.*www\x2Ewebcruiser\x2Ecc\w+www\x2Etopadwarereviews\x2Ecom
+/\/images\/[a-zA-Z]\.php\?id\=[0-9]{2,3}(\.\d)?$/Ui
+/\x2ejp2([\?\x5c\x2f]|$)/smiU

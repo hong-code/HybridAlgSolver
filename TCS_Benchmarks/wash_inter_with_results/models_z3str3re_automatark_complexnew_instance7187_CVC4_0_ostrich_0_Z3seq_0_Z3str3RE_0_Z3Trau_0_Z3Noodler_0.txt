@@ -1,0 +1,5 @@
+www\x2Epurityscan\x2Ecom.*
+Server.*Host\x3a\s+newsSoftActivitypassword\x3B1\x3BOptix
+Host\x3A\ssource%3Dultrasearch136%26campaign%3Dsnap
+Stablecmemailyxegtd\x2fefcwgUin=PromulGate
+^(([0]?[1-9])|(1[0-2]))\/(([0]?[1-9])|([1,2]\d{1})|([3][0,1]))\/[12]\d{3}$

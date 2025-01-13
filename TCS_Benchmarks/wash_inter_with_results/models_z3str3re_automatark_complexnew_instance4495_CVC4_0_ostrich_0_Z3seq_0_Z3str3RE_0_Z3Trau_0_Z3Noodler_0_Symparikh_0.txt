@@ -1,0 +1,5 @@
+^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$
+/^<!--\s+[\w]{52,}\s+-->\r\n/smi
+\x2Fbar_pl\x2Fchk_bar\.fcgiTrojanHost\x3A
+User-Agent\x3A[^\n\r]*connection
+Host\x3AAddressDaemonUser-Agent\x3AUser-Agent\x3a

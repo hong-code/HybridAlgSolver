@@ -1,0 +1,2 @@
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch
+[A-Za-z]{1,2}[\d]{1,2}[A-Za-z]{0,1}\s*[\d]

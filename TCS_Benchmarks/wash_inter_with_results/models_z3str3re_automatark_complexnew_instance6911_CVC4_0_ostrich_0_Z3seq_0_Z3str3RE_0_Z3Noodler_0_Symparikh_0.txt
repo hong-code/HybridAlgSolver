@@ -1,0 +1,5 @@
+^((5)/(1|2|5)/([0-9])/([0-9])/([0-9])/([0-9])/([0-9])/([0-9])/([2-9]))$
+^(\+){0,1}\d{1,10}$
+Host\x3A\d+\.compress.*sidebar\.activeshopper\.com
+Host\x3A\s+Eyewww\x2Eccnnlc\x2EcomHost\x3aHost\x3a
+^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(-?[a-z0-9]+)?(\.[a-z0-9]+(-?[a-z0-9]+)?)*\.([a-z]{2}|xn\-{2}[a-z0-9]{4,18}|arpa|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|xxx)$

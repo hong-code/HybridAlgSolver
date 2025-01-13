@@ -1,0 +1,5 @@
+^[ a - z, 0 - 9 , ?   -   ?   ,?   -   ? , ?    -  ?   ,?   -  ? , . ]
+/[a-zA-Z0-9]\/[a-f0-9]{5}\.swf[\x22\x27]/
+www\x2Ecameup\x2Ecom\s+spyblini\x2Eini
+^[\d]{5}[-\s]{1}[\d]{3}[-\s]{1}[\d]{3}$
+WinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid4\x2e8\x2e4

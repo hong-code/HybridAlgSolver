@@ -1,0 +1,4 @@
+^[B|K|T|P][A-Z][0-9]{4}$
+^(\+48\s*)?\d{2}\s*\d{3}(\s*|\-)\d{2}(\s*|\-)\d{2}$
+^((0?[1-9]|1[012])(:[0-5]\d){1,2}(\ [AaPp][Mm]))$
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww

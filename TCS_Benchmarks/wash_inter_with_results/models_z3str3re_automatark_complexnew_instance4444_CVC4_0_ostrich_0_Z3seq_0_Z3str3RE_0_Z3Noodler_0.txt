@@ -1,0 +1,5 @@
+[1-9][0-9]
+^(9\d{2})([ \-]?)([7]\d|8[0-8])([ \-]?)(\d{4})$
+LOG\s+spyblini\x2EiniUpdateUser-Agent\x3A
+/outerhtml\s*?\+\=\s*?\x22/i
+^((\(?\+45\)?)?)(\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2})$

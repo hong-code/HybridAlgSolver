@@ -1,0 +1,3 @@
+^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[a-zA-Z]{2,9})$
+/^[^\s]*\x0D\x0A$/P
+Host\x3AtoUser-Agent\x3AClientsConnected-

@@ -1,0 +1,3 @@
+^(\d|,)*\.?\d*$
+logs\d+X-Mailer\x3a\d+url=enews\x2Eearthlink\x2Enet
+thesearchresltLoggerHost\x3ABetaHWAEHost\x3Ais

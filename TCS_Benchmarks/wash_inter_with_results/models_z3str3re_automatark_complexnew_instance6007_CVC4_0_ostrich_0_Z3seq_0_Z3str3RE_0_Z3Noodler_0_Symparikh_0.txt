@@ -1,0 +1,5 @@
+actualnames\.com\s+fast-look\x2Ecomwww\x2Emaxifiles\x2Ecom
+^[a-zA-Z]{1}[\w\sa-zA-Z\d_]*[^\s]$
+/\x2exspf([\?\x5c\x2f]|$)/smiU
+/^[a-z]\x3d[a-f\d]{80,140}$/Pi
+/^hello\/[0-9]\.[0-9]\/[0-9]{3}\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i

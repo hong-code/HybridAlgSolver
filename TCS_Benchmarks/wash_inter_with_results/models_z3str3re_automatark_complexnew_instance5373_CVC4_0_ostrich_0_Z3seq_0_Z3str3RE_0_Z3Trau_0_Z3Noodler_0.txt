@@ -1,0 +1,5 @@
+/^\/\d{10}\/\d{10}\.tpl$/U
+kl\x2Esearch\x2Eneed2find\x2Ecom\ssource%3Dultrasearch136%26campaign%3Dsnap
+Subject\x3A\d+media\x2Edxcdirect\x2Ecom\.smx\?PASSW=SAHHost\x3A
+^[AHJ-NPR-UW-Z]{2}\s?[0-9]{3}\s?[AHJ-NPR-UW-Z]{2}$
+\x2Fcs\x2Fpop4\x2FA-Spywww\x2Eyoogee\x2Ecom

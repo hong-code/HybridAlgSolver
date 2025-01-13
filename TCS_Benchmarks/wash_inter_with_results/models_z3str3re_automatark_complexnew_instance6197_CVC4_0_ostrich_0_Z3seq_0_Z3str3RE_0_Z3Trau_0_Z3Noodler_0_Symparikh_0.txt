@@ -1,0 +1,5 @@
+to\s+Host\x3AWeHost\x3a
+/\x2ejar([\?\x5c\x2f]|$)/smiU
+Subject\x3A\swww\x2Esearchwords\x2Ecom
+for[^\n\r]*Host\x3A\sinternalcyber@yahoo\x2EcomHeadersRedirection
+User-Agent\x3aHost\x3AHost\x3ASpyBuddy

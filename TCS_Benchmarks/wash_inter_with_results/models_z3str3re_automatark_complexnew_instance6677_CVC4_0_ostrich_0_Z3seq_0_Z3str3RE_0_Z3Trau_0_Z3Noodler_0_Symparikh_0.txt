@@ -1,0 +1,5 @@
+/\x2em4b([\?\x5c\x2f]|$)/smiU
+^[0-4][0-9]{2}[\s][B][P][\s][0-9]{3}$
+Host\x3Acdpnode=FILESIZE\x3E
+/^\/\?[A-Za-z0-9_-]{15}=l3S/U
+^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$

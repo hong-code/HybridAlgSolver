@@ -1,0 +1,4 @@
+[^A-Za-z0-9]
+whenu\x2Ecom\d+Agent\stoWebupdate\.cgithisHost\x3aconnection
+[A-Za-z]{2}[0-9]{1,6}|[0-9]{1,8}
+^([GB])*(([1-9]\d{8})|([1-9]\d{11}))$

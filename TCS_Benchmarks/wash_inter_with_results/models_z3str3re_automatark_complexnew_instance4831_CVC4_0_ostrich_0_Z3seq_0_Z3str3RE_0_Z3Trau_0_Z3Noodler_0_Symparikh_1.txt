@@ -1,0 +1,2 @@
+<!--.*?-->
+Spy\s+\x0d\x0a.*YAHOOdestroyed\x21Host\x3a

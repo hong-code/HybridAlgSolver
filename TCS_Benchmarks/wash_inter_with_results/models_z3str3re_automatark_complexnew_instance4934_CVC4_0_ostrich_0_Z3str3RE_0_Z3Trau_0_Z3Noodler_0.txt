@@ -1,0 +1,3 @@
+@([_a-zA-Z]+)
+(.*\.jpe?g|.*\.JPE?G)
+Test\d+DesktopAddressIDENTIFY666User-Agent\x3A\x5BStatic

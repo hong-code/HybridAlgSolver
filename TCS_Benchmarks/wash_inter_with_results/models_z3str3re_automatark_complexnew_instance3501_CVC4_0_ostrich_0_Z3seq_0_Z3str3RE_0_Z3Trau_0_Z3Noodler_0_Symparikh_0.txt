@@ -1,0 +1,4 @@
+/\x2ehtc([\?\x5c\x2f]|$)/smiU
+User-Agent\x3A\d+Theef2\sHost\x3A
+/[a-f0-9]{32}=[a-f0-9]{32}/C
+/^Host:\s*?[a-f0-9]{63,64}\./Him

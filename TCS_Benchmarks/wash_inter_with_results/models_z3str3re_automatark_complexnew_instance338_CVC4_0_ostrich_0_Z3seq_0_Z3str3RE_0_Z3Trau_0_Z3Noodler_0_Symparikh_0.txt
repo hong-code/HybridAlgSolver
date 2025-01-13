@@ -1,0 +1,5 @@
+www\.thecommunicator\.net\d+http\x3A\x2F\x2Ftv\x2Eseekmo\x2Ecom\x2Fshowme\x2Easpx\x3Fkeyword=
+A + B
+/\x2ewps([\?\x5c\x2f]|$)/smiU
+User-Agent\x3AUser-Agent\x3AHost\x3a
+UI2Host\x3ADesktopUser-Agent\x3a\x2Fnotifier\x2F

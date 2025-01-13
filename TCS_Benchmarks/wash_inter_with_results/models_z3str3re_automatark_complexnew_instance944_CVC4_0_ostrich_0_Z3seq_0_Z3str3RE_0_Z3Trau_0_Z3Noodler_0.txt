@@ -1,0 +1,5 @@
+TM_SEARCH3SearchUser-Agent\x3Aas\x2Estarware\x2EcomM\x2EzipCasinoResults_sq=aolsnssignin
+url=\swww\x2Ealfacleaner\x2Ecom\d+Host\x3A\x2Fproducts\x2Fspyblocs\x2F
+areHost\x3Ae2give\.comHost\x3aX-Mailer\x3AsportsHost\x3AToolbar
+Host\x3A\d+Black\s+daosearch\x2EcomMyPostwww\.raxsearch\.com
+^([a-zA-Z]+)[0-9]*\.*[a-zA-Z0-9]+$|^[a-zA-Z]+[0-9]*$

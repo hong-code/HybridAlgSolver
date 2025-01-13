@@ -1,0 +1,5 @@
+/^\/0[a-z]{0,13}[0-9]{0,12}[a-z][a-z0-9]{1,11}$/U
+fsbuff\s+User-Agent\x3Afrom\x3A
+/\/[a-f0-9]{32}\.jar/
+dialup\x5fvpn\x40hermangroup\x2EorgUser-Agent\x3A
+\x2Fsearchfast\x2F\s+Host\x3A\s+

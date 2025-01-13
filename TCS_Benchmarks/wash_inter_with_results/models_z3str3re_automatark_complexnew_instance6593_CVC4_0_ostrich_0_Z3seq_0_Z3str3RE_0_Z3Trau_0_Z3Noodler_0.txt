@@ -1,0 +1,4 @@
+Box\d+GENERAL_PARAM2FTA-SpyLoggerHost\x3A\.exePass-On
+/^\/\?[a-f0-9]{32}$/U
+\x7D\x7BTrojan\x3AUser-Agent\x3AbyHost\x3A\xb0\xae\xb6\xf9\xcd\xf8\xb5\xc1
+URL\s+\.cfgmPOPrtCUSTOMPalToolbarUser-Agent\x3A

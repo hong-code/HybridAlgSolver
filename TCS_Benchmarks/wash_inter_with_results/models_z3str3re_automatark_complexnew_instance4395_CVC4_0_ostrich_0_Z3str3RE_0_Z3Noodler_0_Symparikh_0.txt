@@ -1,0 +1,3 @@
+^([a-zA-Z.\s']{1,50})$
+Host\x3A\d+Litequick\x2Eqsrch\x2EcomaboutHost\x3AComputer\x7D\x7BSysuptime\x3A
+\x7D\x7BTrojan\x3A\w+Host\x3A\s\d\x2El

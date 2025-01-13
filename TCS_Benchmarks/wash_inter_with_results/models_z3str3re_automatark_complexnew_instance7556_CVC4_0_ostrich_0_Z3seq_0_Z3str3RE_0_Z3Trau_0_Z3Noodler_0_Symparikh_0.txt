@@ -1,0 +1,2 @@
+/\?new\=.*?\:.*?\&v\=\d\.\d\.\d\&av\=/U
+kwd\s+User-Agent\x3Aregister\.aspUser-Agent\x3A

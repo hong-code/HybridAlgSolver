@@ -1,0 +1,5 @@
+/^[014567d]-/R
+^\d{1,3}\.\d{1,4}$
+^A([0-9]|10)$
+/(\x17\x00|\x00\x5C)\x00e\x00l\x00s\x00e\x00x\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet

@@ -1,0 +1,4 @@
+Host\x3A\dMicrosoft\w+\+Version\+
+MyPostsearch\x2econduit\x2ecomUser-Agent\x3AAcmeSubject\x3Aready\.\r\n
+filename=\x22\dDA\s+www\x2Epeer2mail\x2Ecom
+smrtshpr-cs-.*TPSystem\s+dist\x2Eatlas\x2Dia\x2Ecom

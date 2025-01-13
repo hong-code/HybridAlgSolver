@@ -1,0 +1,5 @@
+com\x2Findex\.php\?tpid=\x7D\x7BUser\x3A
+^((0[1-9])|(1[0-2]))\/(\d{2})$
+/^\/[-\w]{70,78}==?$/U
+www\x2e2-seek\x2ecom\x2fsearchUser-Agent\x3a
+^\d+(\.\d{2})?$

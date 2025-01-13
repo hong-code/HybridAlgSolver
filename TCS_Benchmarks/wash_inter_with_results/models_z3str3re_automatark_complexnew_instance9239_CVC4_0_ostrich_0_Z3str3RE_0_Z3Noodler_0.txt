@@ -1,0 +1,5 @@
+asdbiz\x2Ebiz\s+HWAEUser-Agent\x3ATheef2
+[A-Za-z_.0-9-]+@{1}[a-z]+([.]{1}[a-z]{2,4})+
+frame_ver2\s+communityLibrarySoftwareWinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid
+(\s)*(int|void|float|char|double|string)((\s)|(\*))*(\&?)(\s)+([a-z])([a-z0-9])*(\s)*(\()(\s)*((int|void|float|char|double|string)((\s)|(\*))*(\&?)(\s)+([a-z])([a-z0-9])*((\s)*[,](\s)*(int|void|float|char|double|string)((\s)|(\*))*(\&?)(\s)+([a-z])([a-z0-9])*)*)?(\s)*(\))(\s)*;
+/\x2ewm([\?\x5c\x2f]|$)/smiU

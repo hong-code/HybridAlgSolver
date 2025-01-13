@@ -1,0 +1,5 @@
+Host\x3a\dgpstool\x2eglobaladserver\x2ecomdesksearch\.dropspam\.com
+subject\x3Anode=LoginNSIS_DOWNLOAD
+User-Agent\x3ADirectory
+^\w+(([-+']|[-+.]|\w+))*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+/^udp\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

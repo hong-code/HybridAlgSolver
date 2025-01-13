@@ -1,0 +1,4 @@
+MSNLOGOVNUsertooffers\x2Ebullseye-network\x2Ecom
+^[A-Za-z]{2}[0-9]{6}[A-Za-z]{1}$
+FTP.*www\x2Ewordiq\x2Ecom
+this\w+c\.goclick\.com\d

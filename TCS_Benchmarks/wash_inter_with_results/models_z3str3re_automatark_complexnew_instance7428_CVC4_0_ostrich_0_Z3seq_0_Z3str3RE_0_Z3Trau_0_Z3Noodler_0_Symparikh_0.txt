@@ -1,0 +1,4 @@
+[\t ]+
+www\x2Epurityscan\x2Ecom.*
+/\x2emet([\?\x5c\x2f]|$)/smiU
+^[A-Z]{5}[0-9]{4}[A-Z]{1}$

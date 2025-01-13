@@ -1,0 +1,3 @@
+(FR-?)?[0-9A-Z]{2}\ ?[0-9]{9}
+tid\x3D\x7B\s+Basic.*\x2Ftoolbar\x2F
+LOG\s+spyblpatHost\x3Ais\x2Ephp

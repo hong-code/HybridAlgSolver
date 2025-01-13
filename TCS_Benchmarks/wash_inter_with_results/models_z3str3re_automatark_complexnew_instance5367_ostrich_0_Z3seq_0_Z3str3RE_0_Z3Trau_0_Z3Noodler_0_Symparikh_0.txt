@@ -1,0 +1,3 @@
+^(GB)?([0-9]{9})$
+^[a-zA-Z]+((\s|\-|\')[a-zA-Z]+)?$
+\x2FrssScaneradfsgecoiwnf\x7D\x7BTrojan\x3AlogsHost\x3a

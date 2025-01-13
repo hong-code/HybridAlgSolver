@@ -1,0 +1,4 @@
+/GET\s\/[\w-]{64}\sHTTP\/1/
+/^.{9}[^\x03\x0a\x11\x10]/R
+Log[^\n\r]*Host\x3A\dHOST\x3AUser-Agent\x3A
+forum=From\x3acomTencentTravelerBackAtTaCkExplorer

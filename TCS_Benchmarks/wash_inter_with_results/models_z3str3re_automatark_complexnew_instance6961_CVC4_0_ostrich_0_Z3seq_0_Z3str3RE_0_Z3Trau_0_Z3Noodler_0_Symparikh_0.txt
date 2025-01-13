@@ -1,0 +1,4 @@
+vbwwwc\.goclick\.compassword\x3B0\x3BIncorrect
+X-Mailer\x3A.*\x2Frss.*Desktopcargo=report\<\x2Ftitle\>
+PortaUser-Agent\x3AHost\x3A
+(([a-zA-Z]{3}[0-9]{3})|(\w{2}-\w{2}-\w{2})|([0-9]{2}-[a-zA-Z]{3}-[0-9]{1})|([0-9]{1}-[a-zA-Z]{3}-[0-9]{2})|([a-zA-Z]{1}-[0-9]{3}-[a-zA-Z]{2}))

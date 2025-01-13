@@ -1,0 +1,5 @@
+AgentanswerHost\x3Atool\x2Eworld2\x2EcnTCwhenu\x2Ecom
+^07[789]-\d{7}$
+((\+351|00351|351)?)(2\d{1}|(9(3|6|2|1)))\d{7}
+Host\x3A\s+ulmxct\x2fmqoyc\s+securityOmFkbWluADROARad\x2Emokead\x2Ecom
+\d+\s*[.'-]\s*\d+\s*[\d+.m\"]*

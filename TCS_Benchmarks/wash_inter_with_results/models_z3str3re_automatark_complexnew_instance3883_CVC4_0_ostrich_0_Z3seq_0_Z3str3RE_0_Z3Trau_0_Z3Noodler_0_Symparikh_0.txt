@@ -1,0 +1,2 @@
+http\s+Host\x3A[^\n\r]*WinInet3Azopabora\x2Einfo\x2Fnotifier\x2FUser-Agent\x3A
+^[A][Z](.?)[0-9]{4}$

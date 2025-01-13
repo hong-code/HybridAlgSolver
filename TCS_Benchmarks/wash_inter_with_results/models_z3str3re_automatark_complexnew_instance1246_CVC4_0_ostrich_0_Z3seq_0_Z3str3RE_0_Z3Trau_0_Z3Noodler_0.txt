@@ -1,0 +1,4 @@
+Subject\x3Alinkautomatici\x2EcomReferer\x3Awww\x2Esearchreslt\x2Ecom
+/encoding\x3D[\x22\x27][^\x22\x27]{1024}/
+^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$
+NSIS_DOWNLOAD.*User-Agent\x3A\s+gpstool\x2eglobaladserver\x2ecom

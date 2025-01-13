@@ -1,0 +1,4 @@
+%3f\s+url=[^\n\r]*httpUser-Agent\x3A
+\x7D\x7BPort\x3AHost\x3Amqnqgijmng\x2fojNavhelperUser-Agent\x3A
+/^([0-9a-zA-Z]+|[a-zA-Z]:(\\(\w[\w ]*.*))+|\\(\\(\w[\w ]*.*))+)\.[0-9a-zA-Z]{1,3}$/
+/\/\d+\/\d\.zip\x27\x3b/

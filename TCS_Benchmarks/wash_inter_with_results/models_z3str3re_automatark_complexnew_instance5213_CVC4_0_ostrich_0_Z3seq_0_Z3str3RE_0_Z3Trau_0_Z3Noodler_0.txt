@@ -1,0 +1,5 @@
+ads\.grokads\.com\s+deskwizz\x2Ecom
+/\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.com\x2d[a-z0-9\x2d\x2e]+(\x3a\d{1,5})?\r\n/Hi
+^[a-zA-Z0-9\-\.]+\.(com|org|net|mil|edu|COM|ORG|NET|MIL|EDU)$
+User-Agent\x3a\s+Host\x3AnamediepluginHost\x3AX-Mailer\x3A
+[\w\-_\+\(\)]{0,}[\.png|\.PNG]{4}

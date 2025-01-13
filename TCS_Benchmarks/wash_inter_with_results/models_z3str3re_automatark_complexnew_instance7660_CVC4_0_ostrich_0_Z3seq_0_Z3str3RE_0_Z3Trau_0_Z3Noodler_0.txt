@@ -1,0 +1,3 @@
+Center\w+Host\x3aiz=iMeshBar
+software.*com\x2Findex\.php\?tpid=\s+Host\x3A\x2Ftoolbar\x2Fsupremetb
+\sKeylogging\s+ApofisToolbar

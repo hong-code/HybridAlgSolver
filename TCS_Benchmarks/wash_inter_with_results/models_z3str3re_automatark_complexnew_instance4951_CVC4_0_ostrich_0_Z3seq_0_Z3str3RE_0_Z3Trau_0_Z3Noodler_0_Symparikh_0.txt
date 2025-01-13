@@ -1,0 +1,4 @@
+Host\x3A\s+\x2Ftoolbar\x2Fsupremetb\s+wjpropqmlpohj\x2flo\x2Ftoolbar\x2Fsupremetb
+/\x2esmil([\?\x5c\x2f]|$)/smiU
+^UA-\d+-\d+$
+www\x2EZSearchResults\x2Ecom\dBar.*sponsor2\.ucmore\.com

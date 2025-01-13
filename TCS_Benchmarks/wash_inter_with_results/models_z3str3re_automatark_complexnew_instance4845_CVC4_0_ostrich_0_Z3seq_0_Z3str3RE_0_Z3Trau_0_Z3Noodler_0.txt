@@ -1,0 +1,5 @@
+www\.actualnames\.com\s+toolbar_domain_redirect\s+Contactfrom=GhostVoiceServer
+^[-+]?\d*\.?\d*$
+(^\d{3}\x2E\d{3}\x2E\d{3}\x2D\d{2}$)
+^[a-zA-Z]{4}\d{7}$
+(^(6334)[5-9](\d{11}$|\d{13,14}$))

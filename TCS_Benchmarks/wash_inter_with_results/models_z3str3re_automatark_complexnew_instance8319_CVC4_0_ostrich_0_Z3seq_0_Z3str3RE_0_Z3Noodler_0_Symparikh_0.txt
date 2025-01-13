@@ -1,0 +1,4 @@
+encoder\s+cyber@yahoo\x2Ecomcu
+^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$
+iebar\s+Referer\x3aThis
+^(([+]|00)39)?((3[1-6][0-9]))(\d{7})$

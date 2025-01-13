@@ -1,0 +1,4 @@
+http[s]?://[a-zA-Z0-9.-/]+
+Host\x3A\ssource%3Dultrasearch136%26campaign%3Dsnap
+[0-3]{1}[0-9]{1}(jan|JAN|feb|FEB|mar|MAR|apr|APR|may|MAY|jun|JUN|jul|JUL|aug|AUG|sep|SEP|oct|OCT|nov|NOV|dec|DEC){1}
+www\x2Ewebcruiser\x2Eccgot

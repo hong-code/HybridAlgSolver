@@ -1,0 +1,2 @@
+Minutes\s+\x2Fcgi\x2Flogurl\.cgi\s+e2give\.com
+ActMonHost\x3ABossUser-Agent\x3A

@@ -1,0 +1,5 @@
+AD\s+c\.goclick\.com\w+asdbiz\x2Ebizfrom\x7croogoo\x7cCurrent
+^[a-zA-Z]\:\\.*|^\\\\.*
+(^\d{1,5}$|^\d{1,5}\.\d{1,2}$)
+dialupvpn\x5fpwd\d\<title\>Actual\sSpywareStrike\s+fowclxccdxn\x2fuxwn\.ddywww\x2evirusprotectpro\x2ecom
+(^\d{1,3}([,]\d{3})*$)|(^\d{1,16}$)

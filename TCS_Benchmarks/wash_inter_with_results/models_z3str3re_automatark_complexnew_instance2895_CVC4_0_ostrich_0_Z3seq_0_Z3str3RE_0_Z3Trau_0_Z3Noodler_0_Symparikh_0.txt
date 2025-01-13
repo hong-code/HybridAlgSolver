@@ -1,0 +1,5 @@
+^\s+|\s+$
+/^User-Agent\x3a\x20[A-Z]{9}\x0d\x0a/Hm
+Root\s+insert\s+haveFTUser-Agent\x3ADayspassword\x3B0\x3BIncorrectClientsConnected-Host\x3A\x2APORT3\x2A
+Port\x2E[^\n\r]*007\d+Logsdl\x2Eweb-nexus\x2Enet
+^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$

@@ -1,0 +1,5 @@
+/\x2ejnlp([\?\x5c\x2f]|$)/smiU
+/^SpyBuddy\s+Activity\s+Logs/smi
+libManager\x2Edll\x5Eget
+www\x2Epurityscan\x2Ecom\s+from\.myway\.comToolbarUI2
+(^\d{9}[V|v|x|X]$)

@@ -1,0 +1,4 @@
+TROJAN-Owner\x3AUser-Agent\x3a%3fTs2\x2F
+^[\d]{5}[-\s]{1}[\d]{3}[-\s]{1}[\d]{3}$
+/\/app\/\?prj=\d\x26pid=[^\r\n]+\x26mac=/Ui
+^\w+.*$

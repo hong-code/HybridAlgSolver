@@ -1,0 +1,5 @@
+spas\s+This\s+\x7D\x7BPassword\x3A\s+OSSProxy\x5Chome\/lordofsearch
+^[0-9]{5}([\s-]{1}[0-9]{4})?$
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+Xtra\s+Host\x3A\s+Referer\x3aThisSubject\x3a
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom

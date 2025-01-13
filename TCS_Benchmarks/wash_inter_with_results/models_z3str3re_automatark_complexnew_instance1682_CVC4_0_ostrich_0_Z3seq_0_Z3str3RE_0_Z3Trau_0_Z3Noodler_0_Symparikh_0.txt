@@ -1,0 +1,4 @@
+^([a-hA-H]{1}[1-8]{1})$
+Referer\x3A\s+HXDownload\w+installs\x2Eseekmo\x2Ecom
+^[A-Za-z]{2}[ ]{0,1}[0-9]{2}[ ]{0,1}[a-zA-Z]{3}$
+/^h=\d+&w=\d+&ua=/Psi

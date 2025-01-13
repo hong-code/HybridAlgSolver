@@ -1,0 +1,4 @@
+/(\x17\x00|\x00\x5C)\x00w\x00u\x00a\x00e\x00x\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[a-zA-Z]{2,9})$
+^\d{4,}$|^[3-9]\d{2}$|^2[5-9]\d$
+www\.thecommunicator\.net[^\n\r]*iufilfwulmfi\x2friuf\.lio

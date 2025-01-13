@@ -1,0 +1,3 @@
+www\x2Epurityscan\x2Ecom.*
+Kontikidownloadfile\x2eorged2kcom\x3EHost\x3AWindows
+Host\x3A.*c=[^\n\r]*KeyloggerHost\x3Awww\.trackhits\.cc

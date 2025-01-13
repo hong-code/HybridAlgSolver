@@ -1,0 +1,3 @@
+/\x2edib([\?\x5c\x2f]|$)/smiU
+ovplEchelonUser-Agent\x3AUser-Agent\x3AHost\x3a
+^([0-9A-Fa-f]{1,4}:){7}[0-9A-Fa-f]{1,4}$

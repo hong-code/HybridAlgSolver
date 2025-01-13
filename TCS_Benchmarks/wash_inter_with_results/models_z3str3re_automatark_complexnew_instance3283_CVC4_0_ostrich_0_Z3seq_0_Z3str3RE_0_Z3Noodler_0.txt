@@ -1,0 +1,4 @@
+ShadowNet\dsearchresltAID\x2FUser-Agent\x3AFen\xeatreEye\x2Fdss\x2Fcc\.2_0_0\.
+Host\x3A\s+User-Agent\x3A\s+Host\x3ADesktopBlade
+/^\/[A-Za-z0-9]+\/[A-Za-z0-9]+\.php\?[A-Za-z0-9\x2B\x2F\x3D]{300}/Ui
+/^\/\d{9,10}\/1\/1\d{9}\.pdf$/U

@@ -1,0 +1,4 @@
+/^\/[\w-]{48}\.[a-z]{2,8}[0-9]?$/U
+/MODE\sd?u?n?\x7b[AU]\x5c[LD]\x5c(86|64)\x5c\w{0,8}\x5c\w{2,16}\x7d[a-z]{8}\s\x2BpiwksT\x2Dx\x0D\x0A/i
+www\x2Efreescratchandwin\x2Ecom\w+Port.*User-Agent\x3AToolbarkit
+/[^ -~\r\n]{4}/P

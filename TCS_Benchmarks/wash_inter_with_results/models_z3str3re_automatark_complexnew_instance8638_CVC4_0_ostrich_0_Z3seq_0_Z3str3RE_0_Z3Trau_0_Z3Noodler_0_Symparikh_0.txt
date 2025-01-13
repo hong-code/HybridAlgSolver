@@ -1,0 +1,5 @@
+data\.warezclient\.comHost\x3AUser-Agent\x3A
+/\x2egni([\?\x5c\x2f]|$)/smiU
+^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$
+Host\x3A\dKeyloggercargo=
+Authorization\x3a\d+lnzzlnbk\x2fpkrm\.fin

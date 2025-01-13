@@ -1,0 +1,4 @@
+^\(?082|083|084|072\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$
+&#\d{2,5};
+^[a-zA-z0-9]+[@]{1}[a-zA-Z]+[.]{1}[a-zA-Z]+$
+Host\x3A\d+zmnjgmomgbdz\x2fzzmw\.gzt%3ftoolbar\x2Ei-lookup\x2Ecom

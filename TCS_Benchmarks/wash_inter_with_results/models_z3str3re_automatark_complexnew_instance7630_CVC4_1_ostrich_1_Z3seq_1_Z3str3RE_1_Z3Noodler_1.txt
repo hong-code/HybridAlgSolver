@@ -1,0 +1,5 @@
+^(BG){0,1}([0-9]{9}|[0-9]{10})$
+OSSProxy\d+X-Mailer\x3Abacktrust\x2Ecom
+/filename\=[a-z0-9]{24}\.jar/H
+User-Agent\x3A\x2FrssMinutesansweras\x2Estarware\x2EcomFictionalHost\x3AHost\x3A
+^(9,)*([1-9]\d{2}-?)*[1-9]\d{2}-?\d{4}$

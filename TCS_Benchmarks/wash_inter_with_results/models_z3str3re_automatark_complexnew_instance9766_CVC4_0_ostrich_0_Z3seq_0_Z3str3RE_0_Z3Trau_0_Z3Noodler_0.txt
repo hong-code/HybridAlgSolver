@@ -1,0 +1,3 @@
+corep\x2Edmcast\x2Ecom[^\n\r]*Referer\x3a.*is[^\n\r]*KeyloggerExplorerfileserverSI\|Server\|www\x2Emyarmory\x2Ecom
+adfsgecoiwnf\d+Host\x3aTCP\x2FAD\x2FULOGNetBus
+Port\x2E[^\n\r]*007\d+Logsdl\x2Eweb-nexus\x2Enet

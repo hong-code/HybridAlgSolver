@@ -1,0 +1,5 @@
+Host\x3A\s+gpstool\x2eglobaladserver\x2ecomfriend_nickname=CIA-Notify-Tezt
+ApofisAgentFunWebProductsUser-Agent\x3A
+^([a-zA-Z ';-]+)$
+ShadowNet\dsearchreslt\sTROJAN-Host\x3AYWRtaW46cGFzc3dvcmQ
+Host\x3Acdpnode=FILESIZE\x3E

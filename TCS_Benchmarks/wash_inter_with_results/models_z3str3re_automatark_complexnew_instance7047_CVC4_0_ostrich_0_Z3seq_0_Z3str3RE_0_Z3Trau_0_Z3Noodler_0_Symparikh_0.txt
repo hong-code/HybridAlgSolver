@@ -1,0 +1,5 @@
+Host\x3AHost\x3Abody=\x2521\x2521\x2521Optix
+\.fcgi[^\n\r]*Host\x3A\s\x5D\x2520\x5BPort_NETObserveTM_SEARCH3
+/\/\d+\.mp3$/U
+Host\x3AtoUser-Agent\x3AClientsConnected-
+(^[1]$)|(^[1]+\d*\.+\d*[1-5]$)

@@ -1,0 +1,5 @@
+sidesearch\.dropspam\.com\s+Strip-Player\s+
+^([0-9]{8})|(R[0-9]{7})|((AC|FC|GE|GN|GS|IC|IP|LP|NA|NF|NI|NL|NO|NP|NR|NZ|OC|RC|SA|SC|SF|SI|SL|SO|SP|SR)[0-9]{6})$
+^[\\(]{0,1}[0-9]{3}([\\)]{0,1}|-|\s){0,1}[0-9]{3}(-|\s){0,1}[0-9]{4}$
+From\x3A\w+SoftActivity\d+
+/\x2epptx([\?\x5c\x2f]|$)/smiU

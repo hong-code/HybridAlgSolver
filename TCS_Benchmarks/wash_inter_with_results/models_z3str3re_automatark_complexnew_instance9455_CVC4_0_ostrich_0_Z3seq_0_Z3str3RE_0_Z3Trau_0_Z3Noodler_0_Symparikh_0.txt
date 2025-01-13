@@ -1,0 +1,3 @@
+/\x2elnk([\?\x5c\x2f]|$)/smiU
+products\s+Host\x3A\s+User-Agent\x3A
+/filename\s*=\s*[^\r\n]*?\x2epcx[\x22\x27\x3b\s\r\n]/i

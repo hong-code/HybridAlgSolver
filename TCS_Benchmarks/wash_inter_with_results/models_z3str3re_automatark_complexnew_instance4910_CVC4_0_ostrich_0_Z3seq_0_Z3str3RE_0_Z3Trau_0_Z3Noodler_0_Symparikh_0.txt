@@ -1,0 +1,2 @@
+Googlelog\=\x7BIP\x3APG=SPEEDBAR
+Host\x3A\dName=Your\+Host\+is\x3A.*has\s+ComputerKeylogger\x2EcomHost\x3A

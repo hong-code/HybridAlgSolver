@@ -1,0 +1,4 @@
+Host\x3A\d+Host\x3A.*communitytipHost\x3AGirafaClient
+www\s+X-Mailer\x3aSpyBuddyUser-Agent\x3A
+/^\/jhan.jar?r=\d+/Ui
+([0-9][0-9])((0[1-9])|(1[0-2]))((0[1-9])|([1-2][0-9])|(3[0-1]))\-([0-9][0-9])\-([0-9][0-9][0-9][0-9])

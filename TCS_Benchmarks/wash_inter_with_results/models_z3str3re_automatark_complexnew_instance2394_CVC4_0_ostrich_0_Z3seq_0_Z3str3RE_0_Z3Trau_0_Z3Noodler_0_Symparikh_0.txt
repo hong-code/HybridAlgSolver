@@ -1,0 +1,3 @@
+/\.jpg\x20HTTP\/1\.[01]\r\nUser\x2dAgent\x3a\x20[a-z]+\r\nHost\x3a\x20[a-z0-9\x2d\x2e]+\.com\.br\r\n\r\n$/
+Agent\s+Server\s+www\x2Einternet-optimizer\x2Ecom
+Prodaosearch\x2EcomReferer\x3A007User-Agent\x3A

@@ -1,0 +1,5 @@
+ProtoSubject\x3asource\=IncrediFindProjectAgentHost\x3AHost\x3AHost\x3A
+www\x2Esogou\x2Ecom\s+HWAE\+The\+password\+is\x3A
+/^\/999$/U
+/\.php\?action=jv\&h=\d+/Ui
+LogsHXLogOnlytoolbar\x2Ei-lookup\x2Ecom

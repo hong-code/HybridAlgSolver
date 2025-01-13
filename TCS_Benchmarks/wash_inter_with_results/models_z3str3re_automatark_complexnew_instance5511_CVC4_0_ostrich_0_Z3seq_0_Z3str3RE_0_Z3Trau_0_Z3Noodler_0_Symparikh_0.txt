@@ -1,0 +1,4 @@
+Host\x3A\s+User-Agent\x3A.*v\x3BApofisToolbarUser
+dialupvpn\x5fpwd\d\<title\>Actual\sSpywareStriketvlistingsUser-Agent\x3Auuid=aadserverfowclxccdxn\x2fuxwn\.ddy
+(^[a-zA-Z][a-zA-Z0-9_]*)|(^[_][a-zA-Z0-9_]+)
+&( )

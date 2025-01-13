@@ -1,0 +1,5 @@
+^((\+)?[1-9]{1,2})?([-\s\.])?((\(\d{1,4}\))|\d{1,4})(([-\s\.])?[0-9]{1,12}){1,2}$
+/^[oz]/Ri
+/\x2eses([\?\x5c\x2f]|$)/smiU
+[A-Za-z_.0-9-]+@{1}[a-z]+([.]{1}[a-z]{2,4})+
+%3fc=UI2GmbHbacktrust\x2EcomSpediaReferer\x3ASubject\x3aHost\x3apasscorrect\x3B

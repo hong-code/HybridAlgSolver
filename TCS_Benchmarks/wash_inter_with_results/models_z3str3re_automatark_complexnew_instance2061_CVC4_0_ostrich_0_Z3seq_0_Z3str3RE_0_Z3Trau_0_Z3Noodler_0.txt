@@ -1,0 +1,5 @@
+EIcdpnode=reportUID\x2FServertoX-Mailer\x3a
+^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7]\d{13}$
+A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic
+\b([0-1]?\d{1,2}|2[0-4]\d|25[0-5])(\.([0-1]?\d{1,2}|2[0-4]\d|25[0-5])){3}\b
+shprrprt-cs-Pre\x2Fta\x2FNEWS\x2F

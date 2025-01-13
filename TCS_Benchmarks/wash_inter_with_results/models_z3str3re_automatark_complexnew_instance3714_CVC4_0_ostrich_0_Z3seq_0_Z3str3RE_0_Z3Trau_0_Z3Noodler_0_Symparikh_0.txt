@@ -1,0 +1,5 @@
+TM_SEARCH3Host\x3aUser-Agent\x3Amedia\x2Edxcdirect\x2Ecom
+(^3[47])((\d{11}$)|(\d{13}$))
+^\s*
+^((\d{1,2})?([.][\d]{1,2})?){1}[%]{1}$
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom

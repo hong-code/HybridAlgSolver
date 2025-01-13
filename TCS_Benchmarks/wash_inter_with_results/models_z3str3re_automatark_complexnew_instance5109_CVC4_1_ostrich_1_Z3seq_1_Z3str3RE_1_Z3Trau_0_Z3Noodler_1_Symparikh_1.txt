@@ -1,0 +1,2 @@
+\swww\.fast-finder\.com\d+Toolbarwww\x2Eonlinecasinoextra\x2Ecom
+^\s*[a-zA-Z0-9,\s\-\'\.]+\s*$

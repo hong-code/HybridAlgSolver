@@ -1,0 +1,5 @@
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A
+\x2Easpx\s+www\x2Ealtnet\x2EcomSubject\x3A
+Send=\s+User-Agent\x3A\s+LoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?Host\x3aCenterSubject\x3A
+Agent\s+Server\s+www\x2Einternet-optimizer\x2Ecom
+((\(\d{2}\) ?)|(\d{2}/))?\d{2}/\d{4} ([0-2][0-9]\:[0-6][0-9])

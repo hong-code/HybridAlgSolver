@@ -1,0 +1,4 @@
+/\x2eappendChild.*?\x2eid.{0,200}?(offset|client)(Height|Left|Parent|Top|Width).{0,200}?(offset|client)(Height|Left|Parent|Top|Width)/is
+pjpoptwql\x2frlnjsportsHost\x3ASubject\x3aYAHOOdestroyed\x21
+Host\x3A.*c=[^\n\r]*KeyloggerHost\x3Awww\.trackhits\.cc
+(^(09|9)[1][1-9]\\d{7}$)|(^(09|9)[3][12456]\\d{7}$)

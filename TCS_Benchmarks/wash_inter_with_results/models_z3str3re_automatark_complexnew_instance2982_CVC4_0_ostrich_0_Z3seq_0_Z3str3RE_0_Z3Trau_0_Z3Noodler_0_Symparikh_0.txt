@@ -1,0 +1,2 @@
+toolbarplace\x2Ecom[^\n\r]*Server[^\n\r]*X-Mailer\x3a\sUser-Agent\x3aHost\x3ABar\x2Fnewsurfer4\x2F
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom

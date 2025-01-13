@@ -1,0 +1,4 @@
+^-?\d+([.,]?\d+)?$
+A-311[^\n\r]*Attached\sHost\x3AWordmyway\.comhoroscope2
+username=(.*)&password=(.*)
+search\.dropspam\.com.*SupportFiles.*Referer\x3A

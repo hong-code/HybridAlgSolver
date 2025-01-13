@@ -1,0 +1,5 @@
+Host\x3A.*Basic.*ProtoUser-Agent\x3A
+/^(\x75|\x2d|\x2f|\x73|\xa2|\x2e|\x24|\x74)/sR
+([+]?\d[ ]?[(]?\d{3}[)]?[ ]?\d{2,3}[- ]?\d{2}[- ]?\d{2})
+/\x2ehlp([\?\x5c\x2f]|$)/smiU
+engineResultUser-Agent\x3A

@@ -1,0 +1,4 @@
+Host\x3A\sclvompycem\x2fcen\.vcn
+^(http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&%\$#\=~])*$
+dialup\x5fvpn\x40hermangroup\x2Eorg\s+www\x2Epeer2mail\x2Ecom
+http\x3A\x2F\x2Fmysearch\.dropspam\.com\x2Findex\.php\?tpid=

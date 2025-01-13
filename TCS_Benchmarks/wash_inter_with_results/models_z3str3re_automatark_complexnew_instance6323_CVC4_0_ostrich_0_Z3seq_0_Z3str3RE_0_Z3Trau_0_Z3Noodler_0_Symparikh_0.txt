@@ -1,0 +1,4 @@
+NavExcel\s+dist\x2Eatlas\x2Dia\x2Ecom
+/\x2f\x24\{\x23[^\x2f{}]+?\}(\.action)?\x2f?$/miU
+User-Agent\x3A\s+GET\d+\x2Fcommunicatortb
+Server\x3AWordTheHost\x3afrom

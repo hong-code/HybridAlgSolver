@@ -1,0 +1,5 @@
+/z\x3D[A-Z0-9%]{700}/i
+^[a-z\.]*\s?([a-z\-\']+\s)+[a-z\-\']+$
+/5FDC81917DE08A41A6AC(E9B8ECA1EE.8|.98ECB1EEA8E)/smi
+Test\d+TencentTravelerWebConnLibHost\x3Awww\x2Ee-finder\x2Ecc
+(Word1|Word2).*?(10|[1-9])

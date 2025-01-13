@@ -1,0 +1,5 @@
+^http[s]?://twitter\.com/(#!/)?[a-zA-Z0-9]{1,15}[/]?$
+/(\x17\x00|\x00\x5C)\x00w\x00u\x00a\x00e\x00x\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+^(\d){7,8}$
+(^(((GIR)\s{0,1}((0AA))))|(([A-PR-UWYZ][0-9][0-9]?)|([A-PR-UWYZ][A-HK-Y][0-9][0-9]?)|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s{0,1}([0-9][ABD-HJLNP-UW-Z]{2})$)
+^([A-Za-z]|[A-Za-z][0-9]*|[0-9]*[A-Za-z])+$

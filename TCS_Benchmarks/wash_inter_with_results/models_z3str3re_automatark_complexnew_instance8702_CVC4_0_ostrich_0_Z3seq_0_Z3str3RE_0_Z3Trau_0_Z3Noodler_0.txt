@@ -1,0 +1,4 @@
+jsp\d+Host\x3A\d+moreKontikiHost\x3aAcmeEvilFTP
+\x2Fpagead\x2Fads\?search2\.ad\.shopnav\.com\x2F9899\x2Fsearch\x2Fresults\.php
+/\x2fib2\x2f$/U
+Host\x3a\dATTENTION\x3A.*User-Agent\x3A

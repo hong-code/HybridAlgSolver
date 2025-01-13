@@ -1,0 +1,2 @@
+activityHWAEHost\x3aMyWayServidor\x2EHANDYEmail
+^[a-zA-Z]\w{3,14}$

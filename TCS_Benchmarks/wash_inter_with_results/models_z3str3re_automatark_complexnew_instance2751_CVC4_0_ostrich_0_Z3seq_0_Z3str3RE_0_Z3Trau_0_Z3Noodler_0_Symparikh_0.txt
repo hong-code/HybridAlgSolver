@@ -1,0 +1,3 @@
+Validation of Mexican RFC for tax payers (individuals)
+/[a-zA-Z0-9]\/[a-f0-9]{5}\.swf[\x22\x27]/
+welcome\s+Host\x3A\s+ThistoIpHost\x3Abadurl\x2Egrandstreetinteractive\x2Ecom

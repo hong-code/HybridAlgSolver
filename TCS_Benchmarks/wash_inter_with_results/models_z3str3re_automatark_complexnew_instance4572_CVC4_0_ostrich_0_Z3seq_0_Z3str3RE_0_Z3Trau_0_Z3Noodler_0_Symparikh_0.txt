@@ -1,0 +1,5 @@
+ProAgentHost\x3ALOGSeconds\-
+ShadowNetMyAgentServerconfigINTERNAL\.iniKeylogger-Prosearchreslt
+<asp:requiredfieldvalidator(\s*\w+\s*=\s*\"?\s*\w+\s*\"?\s*)+\s*>\s*<\/asp:requiredfieldvalidator>
+c\.goclick\.com[^\n\r]*is\s+URLBlaze
+\d{1,2}d \d{1,2}h

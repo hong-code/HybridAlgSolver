@@ -1,0 +1,5 @@
+select\x2FGet\s+Host\x3A.*ppcdomain\x2Eco\x2Euk
+/\x2ehpj([\?\x5c\x2f]|$)/smiU
+/^.{27}/sR
+/nim:import\?[^\x22\x27>\s]*?filename=[^\x22\x27>\s]{485}/i
+PORT\x3D\s+User-Agent\x3A\s+ProAgentUI2Host\x3A00000www\x2Ezhongsou\x2Ecom

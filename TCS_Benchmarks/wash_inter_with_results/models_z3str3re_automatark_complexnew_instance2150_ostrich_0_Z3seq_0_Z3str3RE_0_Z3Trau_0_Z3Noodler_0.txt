@@ -1,0 +1,5 @@
+e(vi?)?
+^(X(-|\.)?0?\d{7}(-|\.)?[A-Z]|[A-Z](-|\.)?\d{7}(-|\.)?[0-9A-Z]|\d{8}(-|\.)?[A-Z])$
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22
+/\x2edae([\?\x5c\x2f]|$)/smiU
+^([a-zA-Z0-9!@#$%^&*()-_=+;:'"|~`<>?/{}]{1,5})$

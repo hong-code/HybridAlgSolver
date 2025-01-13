@@ -1,0 +1,4 @@
+[-'a-zA-Z]
+Ts2\x2F\s+insertinfoSnakeUser-Agent\x3A
+www\x2Ealtnet\x2Ecom[^\n\r]*Host\x3A
+config\x2E180solutions\x2Ecom\dStableWeb-MailUser-Agent\x3A

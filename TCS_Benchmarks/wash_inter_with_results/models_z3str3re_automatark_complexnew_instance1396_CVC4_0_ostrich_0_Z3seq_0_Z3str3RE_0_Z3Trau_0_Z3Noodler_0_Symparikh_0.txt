@@ -1,0 +1,5 @@
+^(\d{1,})$|^(\d{1,}\.)$|^(\d{0,}?\.\d{1,})$|^([+-]\d{1,}(\.)?)$|^([+-](\d{1,})?\.\d{1,})$
+\x28\x29\s+WatchDog\sNetspy\d+pjpoptwql\x2frlnjX-Mailer\x3aHost\x3asnprtz\x7Cdialnoref\x3D\x25user\x5Fid
+^([A-Za-z]{5})([0-9]{4})([A-Za-z]{1})$
+^[-]?\d*(\.\d*)$
+/\x2emsi([\?\x5c\x2f]|$)/miU

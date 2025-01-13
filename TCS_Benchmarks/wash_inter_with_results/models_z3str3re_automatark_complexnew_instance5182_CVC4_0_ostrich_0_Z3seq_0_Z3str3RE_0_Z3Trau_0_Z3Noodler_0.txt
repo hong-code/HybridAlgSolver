@@ -1,0 +1,5 @@
+(\"http:\/\/www\.youtube\.com\/v\/\w{11}\&rel\=1\")
+[1-2][0|9][0-9]{2}[0-1][0-9][0-3][0-9][-][0-9]{4}
+on\dName=Your\+Host\+is\x3AcdpViewHost\x3AUser-Agent\x3A
+ixqshv\x2fqzccsMM_RECO\x2EEXE%3fwwwwp-includes\x2Ftheme\x2Ephp\x3F
+/[0-9a-fA-F]{8}[a-z]{6}.php/

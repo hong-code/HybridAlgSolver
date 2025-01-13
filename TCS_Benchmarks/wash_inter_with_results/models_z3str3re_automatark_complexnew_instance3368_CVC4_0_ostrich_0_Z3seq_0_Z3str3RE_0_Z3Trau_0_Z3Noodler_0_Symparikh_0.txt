@@ -1,0 +1,4 @@
+[0-9.\-/+() ]{4,}
+^\.{0,2}[\/\\]
+FTPHost\x3AUser-Agent\x3aUser\x3AdistID=deskwizz\x2Ecom
+cyber@yahoo\x2Ecomconfig\x2E180solutions\x2Ecom

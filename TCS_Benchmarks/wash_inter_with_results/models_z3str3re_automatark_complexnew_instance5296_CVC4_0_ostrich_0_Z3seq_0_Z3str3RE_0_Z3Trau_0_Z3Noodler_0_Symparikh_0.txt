@@ -1,0 +1,3 @@
+/^\x2f[0-9A-F]{42}$/Um
+EFError\swww\x2emalware-stopper\x2ecom
+\x2Frssupdate\.cgiToolbarsearch\.dropspam\.com

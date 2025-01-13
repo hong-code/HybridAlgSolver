@@ -1,0 +1,4 @@
+\b[1-9]\b
+Guarded\s+3A\s+data2\.activshopper\.comUser-Agent\x3A
+From\x3A\<title\>ActualUser-Agent\x3A\x2Fbar_pl\x2Ffav\.fcgi
+LoggerovplUser-Agent\x3At=searchreslt\x7D\x7BSysuptime\x3A

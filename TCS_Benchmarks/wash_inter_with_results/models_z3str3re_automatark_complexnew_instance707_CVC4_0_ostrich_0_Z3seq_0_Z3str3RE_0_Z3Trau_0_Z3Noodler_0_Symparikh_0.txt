@@ -1,0 +1,5 @@
+^(([a-z])+.)+[A-Z]([a-z])+$
+findX-Mailer\x3aUser-Agent\x3Awww\.take5bingo\.comX-Mailer\x3a\x04\x00
+on\w+Host\x3AComputerKeylogger\x2EcomHost\x3AUser-Agent\x3A
+search\.dropspam\.com.*SupportFiles.*Referer\x3A
+(\bR(\.|)R(\.|)|RURAL\s{0,}(ROUTE|RT(\.|)))\s{0,}\d{1,}(,|)\s{1,}\bBOX\s{0,}\d

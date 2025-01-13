@@ -1,0 +1,4 @@
+/z\x3D[A-Z0-9%]{700}/i
+/\x3fsv\x3d\d{1,3}\x26tq\x3d/smiU
+^[A-Za-z]{1}[0-9]{7}$
+Server\x00\s+SbAts\s+versionetbuviaebe\x2feqv\.bvv

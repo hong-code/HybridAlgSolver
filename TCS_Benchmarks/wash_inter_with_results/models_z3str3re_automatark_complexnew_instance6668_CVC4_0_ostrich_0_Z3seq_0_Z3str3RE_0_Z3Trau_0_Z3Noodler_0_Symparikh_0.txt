@@ -1,0 +1,5 @@
+(\'([^\'\\]*\\.)*[^\'\\]*\')+
+UI2AgentConnectedDesktopSubject\x3Aixqshv\x2fqzccsactualnames\.com
+Host\x3A\w+wwwfromToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+Host\x3AHost\x3asidebar\.activeshopper\.com
+name\x2ecnnic\x2ecn\scom\x2Findex\.php\?tpid=\s\x5BStatic.*\x2Fbar_pl\x2Fb\.fcgi

@@ -1,0 +1,3 @@
+Host\x3A\s+twfofrfzlugq\x2feve\.qd\s+\x2Ftoolbar\x2Fsupremetb
+^[a-zA-Z]{1,3}\[([0-9]{1,3})\]
+onAlertMGS-Internal-Web-Manager

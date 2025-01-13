@@ -1,0 +1,4 @@
+^((([+])?[1])?\s{0,1}\d{3}\s{0,1}\d{3}\s{0,1}\d{4})$
+FTP\s+\x7D\x7BPort\x3A\s+Host\x3A
+User-Agent\x3A[^\n\r]*aadserver\dYOUR\x2Fxml\x2Ftoolbar\x2F
+/\x2eqcp([\?\x5c\x2f]|$)/smiU

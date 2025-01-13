@@ -1,0 +1,5 @@
+/User\x2dAgent\x3a\x20[A-F\d]{32}\r\n/H
+([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)
+ref\x3D\x25user\x5Fid\d+\x2Fbar_pl\x2Fchk\.fcgi
+Host\x3a\w+Pre.*Keyloggeradfsgecoiwnfhirmvtg\x2fggqh\.kqh
+(\s{1,})

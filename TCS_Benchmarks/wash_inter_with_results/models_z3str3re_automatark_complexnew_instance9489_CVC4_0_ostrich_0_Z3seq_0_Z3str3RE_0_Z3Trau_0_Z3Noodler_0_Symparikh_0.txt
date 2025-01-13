@@ -1,0 +1,3 @@
+('{2})*([^'\r\n]*)('{2})*([^'\r\n]*)('{2})*
+now\d+\x2Fbar_pl\x2Fshdoclc\.fcgiareHost\x3Ae2give\.com
+^\d+(\,\d{1,2})?$

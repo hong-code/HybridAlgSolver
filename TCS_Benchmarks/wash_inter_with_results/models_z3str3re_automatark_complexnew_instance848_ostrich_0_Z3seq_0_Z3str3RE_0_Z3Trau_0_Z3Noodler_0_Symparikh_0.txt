@@ -1,0 +1,4 @@
+/^\x2frouji.txt$/mU
+^[+]?100(\.0{1,2})?%?$|^[+]?\d{1,2}(\.\d{1,2})?%?$
+^((1[01])|(\d)):[0-5]\d(:[0-5]\d)?\s?([apAP][Mm])?$
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin

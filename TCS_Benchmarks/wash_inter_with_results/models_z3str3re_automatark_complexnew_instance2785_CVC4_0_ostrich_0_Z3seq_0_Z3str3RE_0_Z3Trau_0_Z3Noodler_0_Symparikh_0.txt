@@ -1,0 +1,5 @@
+^[0-3][0-9][0-1]\d{3}-\d{4}?
+^[a-zA-Z0-9][a-zA-Z0-9_]{2,29}$
+((https?|ftp|gopher|telnet|file|notes|ms-help):((//)|(\\\\))+[\w\d:#@%/;$()~_\+-=\\\.&]*)
+/[a-z0-9]{32}\.jar/
+GmbH\s+Host\x3AHost\x3AMonitoringGoogle

@@ -1,0 +1,4 @@
+.*(\.[Jj][Pp][Gg]|\.[Gg][Ii][Ff]|\.[Jj][Pp][Ee][Gg]|\.[Pp][Nn][Gg])
+^[13][a-zA-Z0-9]{26,33}$
+Host\x3A\s+Online100013Agentsvr\x5E\x5EMerlin
+NetTracker\.htaServerTheef2trustyfiles\x2EcomlogsHost\x3Aversion

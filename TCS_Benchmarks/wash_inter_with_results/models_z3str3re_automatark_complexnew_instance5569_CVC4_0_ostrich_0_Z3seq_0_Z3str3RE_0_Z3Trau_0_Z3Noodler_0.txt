@@ -1,0 +1,4 @@
+^http://\\.?video\\.google+\\.\\w{2,3}/videoplay\\?docid=[\\w-]{19}
+iz=cyber@yahoo\x2EcomSpyBuddyCenterIP-WindowsAttachedPalas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=
+User-Agent\x3a\s+Subject\x3Aas\x2Estarware\x2Ecom
+^\([0-9]{3}\)[0-9]{3}(-)[0-9]{4}

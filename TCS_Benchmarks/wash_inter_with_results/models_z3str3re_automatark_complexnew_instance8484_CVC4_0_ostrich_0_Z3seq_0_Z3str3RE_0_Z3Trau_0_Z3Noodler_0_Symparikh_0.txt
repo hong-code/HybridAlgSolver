@@ -1,0 +1,5 @@
+DmInf\x5E\s+Contactfrom=GhostVoiceServerUser-Agent\x3A
+^((\d[-. ]?)?((\(\d{3}\))|\d{3}))?[-. ]?\d{3}[-. ]?\d{4}$
+^(\(\d{3}\)|\d{3})[\s.-]?\d{3}[\s.-]?\d{4}$
+Guarded\s+3A\s+data2\.activshopper\.comUser-Agent\x3A
+^([a-zA-Z0-9])+\\{1}([a-zA-Z0-9])+$

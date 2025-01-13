@@ -1,0 +1,3 @@
+ProAgentHost\x3ALOGSeconds\-
+^\d{5}$|^\d{5}-\d{4}$
+clvompycem\x2fcen\.vcnHost\x3AUser-Agent\x3A\x0d\x0a

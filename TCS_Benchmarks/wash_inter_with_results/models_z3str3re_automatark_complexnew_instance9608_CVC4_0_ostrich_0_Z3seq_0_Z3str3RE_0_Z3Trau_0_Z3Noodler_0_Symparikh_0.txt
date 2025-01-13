@@ -1,0 +1,5 @@
+Host\x3A[^\n\r]*\x2Fbar_pl\x2Fshdoclc\.fcgi
+TM_SEARCH3Host\x3aUser-Agent\x3Amedia\x2Edxcdirect\x2Ecom
+\<img ((src|height|width|border)=:q:Wh*)*/\>
+/^(\x75|\x2d|\x2f|\x73|\xa2|\x2e|\x24|\x74)/sR
+info\s+wjpropqmlpohj\x2flo\x2Ftoolbar\x2Fsupremetbhoroscope2Cookie\x3a

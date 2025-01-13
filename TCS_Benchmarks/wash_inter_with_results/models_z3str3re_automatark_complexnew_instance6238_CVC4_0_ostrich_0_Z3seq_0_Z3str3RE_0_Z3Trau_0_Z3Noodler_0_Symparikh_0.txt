@@ -1,0 +1,2 @@
+/User-Agent\:[^\x0a\x0d]+?Havij/H
+Host\x3A\x252EResultsUser-Agent\x3A
