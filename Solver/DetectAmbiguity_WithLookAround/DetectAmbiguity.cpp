@@ -152,8 +152,8 @@ namespace solverbin{
       LastWord = e1.ReturnLastWord(e1.Renode);
       // std::cout << "reverse: " << e1.REnodeToString(e1.Renode) << std::endl;
     }
-    if (Is_FullMatch == 1)
-      e1.matchFlag = REnodeClass::MatchFlag::dollarEnd;
+    // if (Is_FullMatch == 1)
+    e1.matchFlag = REnodeClass::MatchFlag::dollarEnd;
     F1 = FollowAtomata(e1);
     SSBegin = {F1.NState, F1.NState, F1.NState};
     ComputeAlphabet_Colormap(e1.ByteMap, Alphabet);
