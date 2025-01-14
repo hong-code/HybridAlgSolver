@@ -1,1 +1,3 @@
-(?:^\s*(?<host>[\w-\.]*)\s*(?<rectype>\w*)\s*(?<value>[\w\.-].*)\s*$)
+[:\w]*
+hos\w*name:2024
+hostname[:2024]+
