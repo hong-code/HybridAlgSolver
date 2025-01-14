@@ -1,0 +1,5 @@
+ActMonHost\x3ABossUser-Agent\x3A
+(\$(([0-9]?)[a-zA-Z]+)([0-9]?))
+Host\x3a[^\n\r]*snprtz\x7Cdialno\s+Agent\s+Host\x3AUser-Agent\x3A\.cfgUser-Agent\x3Axbqyosoe\x2fcpvm
+/\x2fib2\x2f$/U
+Host\x3A\s+\x2Ftoolbar\x2Fsupremetb\s+wjpropqmlpohj\x2flo\x2Ftoolbar\x2Fsupremetb

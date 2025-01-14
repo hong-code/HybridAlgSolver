@@ -1,0 +1,4 @@
+^\w*[-]*\w*\\\w*$
+/\x2Ermf([\?\x5c\x2f]|$)/smiU
+/^\x2Fcap\x2Ftemp\x2F[A-Za-z0-9]+\x2Ejpg/miU
+couponbar\.coupons\.comKeystrokesSubject\x3A

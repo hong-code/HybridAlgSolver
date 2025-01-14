@@ -1,0 +1,3 @@
+\x28BDLL\x29Googledll\x3F
+/\x2Fmrow\x5Fpin\x2F\x3Fid\d+[a-z]{5,}\d{5}\x26rnd\x3D\d+/smi
+www\.iggsey\.com\sX-Mailer\x3a[^\n\r]*on\x3Acom\x3E2\x2E41Client

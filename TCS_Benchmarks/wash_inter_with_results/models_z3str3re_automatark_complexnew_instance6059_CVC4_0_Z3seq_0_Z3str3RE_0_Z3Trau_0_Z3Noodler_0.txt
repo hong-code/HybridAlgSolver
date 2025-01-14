@@ -1,0 +1,5 @@
+/\x2eappendChild.*?\x2eid.{0,200}?(offset|client)(Height|Left|Parent|Top|Width).{0,200}?(offset|client)(Height|Left|Parent|Top|Width)/is
+/^\d+$/P
+^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w ]*.*))+\.(txt|TXT)$
+<textarea(.|\n)*?>((.|\n)*?)</textarea>
+^[-+]?[0-9]\d{0,2}(\.\d{1,2})?%?$

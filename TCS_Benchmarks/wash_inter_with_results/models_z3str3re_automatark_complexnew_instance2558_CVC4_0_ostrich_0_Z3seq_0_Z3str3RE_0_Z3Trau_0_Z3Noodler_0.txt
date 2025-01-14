@@ -1,0 +1,5 @@
+/^([A-Za-z]){1}([A-Za-z0-9-_.\:])+$/
+^([a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]\.)+([a-zA-Z0-9]{3,5})$
+Referer\x3A\s+HXDownload.*Referer\x3AGREATDripline
+^-?[0-9]\d{0,8}(\.\d{1,4})
+Host\x3A\w+User-Agent\x3A\sTeomaBarHost\x3AHoursHost\x3AHost\x3A

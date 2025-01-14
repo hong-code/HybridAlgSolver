@@ -1,0 +1,2 @@
+\x7D\x7BTrojan\x3A\w+by\d+to\w+dddlogin\x2Edudu\x2EcomSurveillanceIPOblivion
+^\d{0,2}(\.\d{1,2})?$

@@ -1,0 +1,5 @@
+^[1-5]$
+\x2Fimages\x2Fnocache\x2Ftr\x2Fgca\x2Fm\.gif\?
+/\/index\d{9}\.asp/i
+SecureNet\sHost\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+dll\x3F\w+updates\w+Host\x3aSoftwareHost\x3Ajoke

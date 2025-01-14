@@ -1,0 +1,2 @@
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+^([0-9]{4})([0-9]{5})([0-9]{1})$

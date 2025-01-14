@@ -1,0 +1,4 @@
+Kontiki\s+resultsmaster\x2Ecom\x7croogoo\x7c
+((079)|(078)|(077)){1}[0-9]{7}
+^([1-9]+)?[13579]$
+/\x2eaif[cf]?([\?\x5c\x2f]|$)/smiU

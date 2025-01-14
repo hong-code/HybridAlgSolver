@@ -1,0 +1,5 @@
+(^\d*\.\d{2}$)
+versionIDENTIFYstarted\x2EUser-Agent\x3A
+^([01]\d|2[0123])([0-5]\d){2}([0-99]\d)$
+^[A-Z][a-z]+(tz)?(man|berg)$
+^( [1-9]|[1-9]|0[1-9]|10|11|12)[0-5]\d$

@@ -1,0 +1,5 @@
+/^(1)?(-|.)?(\()?([0-9]{3})(\))?(-|.)?([0-9]{3})(-|.)?([0-9]{4})/
+jsp\d+Host\x3A\d+moreKontikiHost\x3aAcmeEvilFTP
+Admin\s+daosearch\x2EcomMyPostwww\.raxsearch\.comref\x3D\x25user\x5Fid
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\/\d+\.\d+\.\d+\.\d+\//
+CodeguruBrowserMyPostStableWeb-MailUser-Agent\x3A195\.225\.

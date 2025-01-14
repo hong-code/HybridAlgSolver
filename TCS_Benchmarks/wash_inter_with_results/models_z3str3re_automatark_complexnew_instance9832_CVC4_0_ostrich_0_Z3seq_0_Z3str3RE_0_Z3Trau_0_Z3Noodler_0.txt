@@ -1,0 +1,2 @@
+^([a-zA-z]:((\\([-*\.*\w+\s+\d+]+)|(\w+)\\)+)(\w+.zip)|(\w+.ZIP))$
+subject\x3A.*Login\s+adfsgecoiwnf

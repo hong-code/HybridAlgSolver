@@ -1,0 +1,4 @@
+Host\x3a\w+Pre.*Keyloggeradfsgecoiwnfhirmvtg\x2fggqh\.kqh
+^([a-zA-Z]{5})([a-zA-Z0-9-]{3,12})
+Host\x3A[^\n\r]*cache\x2Eeverer\x2Ecom\s+from\.myway\.comToolbar
+X-Mailer\x3aUser-Agent\x3A

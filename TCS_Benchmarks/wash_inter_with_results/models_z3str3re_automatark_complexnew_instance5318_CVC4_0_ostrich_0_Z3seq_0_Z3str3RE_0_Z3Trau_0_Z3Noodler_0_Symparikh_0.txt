@@ -1,0 +1,2 @@
+IDENTIFY.*\x2Fezsb\d+X-Mailer\x3A
+\swww\.fast-finder\.com[^\n\r]*\x2Fbar_pl\x2Fchk\.fcgi\d+Toolbar

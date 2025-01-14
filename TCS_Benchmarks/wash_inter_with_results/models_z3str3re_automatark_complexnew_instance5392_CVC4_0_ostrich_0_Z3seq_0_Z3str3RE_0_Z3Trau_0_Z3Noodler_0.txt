@@ -1,0 +1,5 @@
+/^\x2fwp-content\x2fthemes\x2f[A-Za-z0-9]\.php\?[A-Za-z0-9\x2B\x2F\x3D]{300}/Ui
+A-311.*with\x3A\s+OnlineServer\x3aYeah\!User-Agent\x3a
+User-Agent\x3AHost\x3AhasHost\x3AComputerKeylogger\x2Ecom
+^([EV])?\d{3,3}(\.\d{1,2})?$
+/^Host:\s*?[a-f0-9]{63,64}\./Him

@@ -1,0 +1,5 @@
+^(Function|Sub)(\s+[\w]+)\([^\(\)]*\)
+YAHOODesktopHost\x3aLOGHost\x3AtvshowticketsResultsFROM\x3A
+/Expression\x28\s*?GetClass\x28\x22sun.awt.SunToolkit\x22\x29\s*?,\s*?\x22getField\x22/smi
+^([1-9]+)?[13579]$
+User-Agent\x3A\dServer

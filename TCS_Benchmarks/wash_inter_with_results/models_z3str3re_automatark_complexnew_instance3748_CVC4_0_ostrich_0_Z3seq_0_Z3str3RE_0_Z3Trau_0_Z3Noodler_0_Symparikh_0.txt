@@ -1,0 +1,4 @@
+/\x2eskm([\?\x5c\x2f]|$)/smiU
+\x2Ftoolbar\x2Fsupremetb\s+wjpropqmlpohj\x2flo\s+resultsmaster\x2Ecom
+ookflolfctm\x2fnmot\.fmu
+^\.{0,2}[\/\\]

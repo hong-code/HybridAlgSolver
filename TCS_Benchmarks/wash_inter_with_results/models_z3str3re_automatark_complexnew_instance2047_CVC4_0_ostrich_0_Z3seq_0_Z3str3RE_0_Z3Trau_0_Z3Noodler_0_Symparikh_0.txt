@@ -1,0 +1,5 @@
+X-Mailer\x3Acom\x18\x16dcww\x2Edmcast\x2EcomHost\x3Adist\x2Eatlas\x2Dia\x2Ecom
+Software\s+User-Agent\x3A.*FictionalUser-Agent\x3AUser-Agent\x3a
+Host\x3A\s+Online100013Agentsvr\x5E\x5EMerlin
+^(\d{5}-\d{2}-\d{7})*$
+^(([a-zA-Z]{2})([0-9]{6}))$

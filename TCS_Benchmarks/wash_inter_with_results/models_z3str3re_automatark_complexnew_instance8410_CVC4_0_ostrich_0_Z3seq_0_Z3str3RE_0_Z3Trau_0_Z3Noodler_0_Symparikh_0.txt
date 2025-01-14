@@ -1,0 +1,4 @@
+/\.background\s*=\s*[\x22\x27]{2}/i
+@([_a-zA-Z]+)
+Host\x3Ahjhgquqssq\x2fpjmonHost\x3AHost\x3AA-311byName=Your\+Host\+is\x3A
+Host\x3A\d+Litequick\x2Eqsrch\x2EcomaboutHost\x3AComputer\x7D\x7BSysuptime\x3A

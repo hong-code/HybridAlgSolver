@@ -1,0 +1,5 @@
+/\(\?[gimxs]{1,5}\)/
+LOG\s+spyblpatHost\x3Ais\x2Ephp
+hirmvtg\x2fggqh\.kqh\w+whenu\x2Ecom\w+weatherHost\x3AUser-Agent\x3A
+(0?[1-9]|[12][0-9]|3[01])[.](0?[1-9]|1[012])[.]\d{4}
+Desktop.*Hello\x2E.*Referer\x3AToolbar

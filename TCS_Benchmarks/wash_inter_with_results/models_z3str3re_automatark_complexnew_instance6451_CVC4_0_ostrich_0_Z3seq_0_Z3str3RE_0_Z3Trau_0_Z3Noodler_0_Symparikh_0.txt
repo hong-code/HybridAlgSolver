@@ -1,0 +1,4 @@
+\x2Fta\x2FNEWS\x2Fpassword\x3B1\x3BOptix
+[a-z0-9]{1,11}
+/^POST\x20\x2fg[ao]lfstream\x26/
+^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z]))$

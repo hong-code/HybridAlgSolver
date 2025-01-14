@@ -1,0 +1,5 @@
+www\.thecommunicator\.net[^\n\r]*iufilfwulmfi\x2friuf\.lio
+(http(s?)://|[a-zA-Z0-9\-]+\.)[a-zA-Z0-9/~\-]+\.[a-zA-Z0-9/~\-_,&\?\.;]+[^\.,\s<]
+DA\dwww\x2Ee-finder\x2Ecc.*User-Agent\x3A
+/\x2fn\.php\?h=[a-zA-Z0-9]*?\&s=[a-zA-Z0-9]{1,5}$/Ui
+^R(\d){8}

@@ -1,0 +1,3 @@
+/^[^\s]*\x0D\x0A$/P
+\x22reaction\x2Etxt\x22.*Cookie\x3a[^\n\r]*richfind\x2EcomSimpsonFrom\x3A
+Toolbar\x5Chome\/lordofsearchthis

@@ -1,0 +1,5 @@
+^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\,*\s\s*\d{4}$|^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\,*\s\d{4}$|^(January|February|March|April|May|June|July|August|September|October|November|December)\,*\s\d{4}$|^(january|february|march|april|may|june|july|august|september|october|november|december)\,*\s\d{4}$
+/\*.+?\*/
+/filename\s*=\s*[^\r\n]*?\x2emcl[\x22\x27\x3b\s\r\n]/i
+(script)|(<)|(>)|(%3c)|(%3e)|(SELECT) |(UPDATE) |(INSERT) |(DELETE)|(GRANT) |(REVOKE)|(UNION)|(&lt;)|(&gt;)
+/^udp\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

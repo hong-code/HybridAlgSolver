@@ -1,0 +1,2 @@
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+(\<\?php\s+.*?((\?\>)|$))

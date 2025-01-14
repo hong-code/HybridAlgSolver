@@ -1,0 +1,2 @@
+Host\x3ASpyxpsp2-Host\x3aHost\x3Awjpropqmlpohj\x2floregister\.asp
+(^\d{1,5}$|^\d{1,5}\.\d{1,2}$)

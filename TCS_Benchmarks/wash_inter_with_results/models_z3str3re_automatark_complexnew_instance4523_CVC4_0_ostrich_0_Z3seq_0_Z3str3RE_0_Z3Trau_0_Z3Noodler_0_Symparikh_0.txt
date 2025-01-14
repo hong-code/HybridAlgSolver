@@ -1,0 +1,5 @@
+^[9]9\d{10}|^[5]\d{10}
+hirmvtg\x2fggqh\.kqhSurveillanceHost\x3A
+SpyAgent\d+sErver\s+User-Agent\x3A
+X-Mailer\x3a.*User-Agent\x3A[^\n\r]*ulmxct\x2fmqoyc
+^0$|^[1-9][0-9]*$|^[1-9][0-9]{0,2}(,[0-9]{3})$

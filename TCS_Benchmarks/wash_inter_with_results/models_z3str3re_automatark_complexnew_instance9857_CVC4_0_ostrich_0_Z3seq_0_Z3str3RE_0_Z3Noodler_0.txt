@@ -1,0 +1,4 @@
+^(0+[1-9]|[1-9])[0-9]*$
+[^A-Za-z0-9_@\.]|@{2,}|\.{5,}
+Host\x3A\d+Host\x3A.*communitytipHost\x3AGirafaClient
+\x7D\x7BSysuptime\x3A\d+\x2Fcommunicatortb

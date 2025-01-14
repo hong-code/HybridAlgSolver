@@ -1,0 +1,4 @@
+/\x0aArray\x0a\x28\x0a\x20{4}\x5b[a-z\d]{11}\x5d\x20\x3d\x3e\x20\d{16}\x0a\x29/i
+YWRtaW46cGFzc3dvcmQ[^\n\r]*DA[^\n\r]*Host\x3Awww\x2Ee-finder\x2Ecc
+^[0-9]{5}([- /]?[0-9]{4})?$
+/\x2eotf([\?\x5c\x2f]|$)/smiU

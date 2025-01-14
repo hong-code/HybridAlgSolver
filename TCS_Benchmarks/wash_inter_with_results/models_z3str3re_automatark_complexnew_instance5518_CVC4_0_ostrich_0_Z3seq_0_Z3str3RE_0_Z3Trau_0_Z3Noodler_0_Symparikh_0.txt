@@ -1,0 +1,2 @@
+\x2Ephp\s+www\x2Ewebfringe\x2Ecom
+/\&k=\d+($|\&h=)/U

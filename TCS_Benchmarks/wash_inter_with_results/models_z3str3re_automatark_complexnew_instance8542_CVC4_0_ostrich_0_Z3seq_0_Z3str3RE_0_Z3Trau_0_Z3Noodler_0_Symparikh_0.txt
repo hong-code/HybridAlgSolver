@@ -1,0 +1,4 @@
+from\x3AUser-Agent\x3AChildWebGuardian
+^[a-zA-Z]{3}[uU]{1}[0-9]{7}$
+^[a-zA-Z_][a-zA-Z0-9_]*$
+<title>+(.*?)</title>

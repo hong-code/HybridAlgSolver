@@ -1,0 +1,5 @@
+User-Agent\x3a\s+Subject\x3Aas\x2Estarware\x2Ecom
+Password="(\{.+\}[0-9a-zA-Z]+[=]*|[0-9a-zA-Z]+)"
+Host\x3A\s+Host\x3ASubject\x3anamedDownloadUser-Agent\x3aBackAtTaCk
+dat\s+resultsmaster\x2Ecom.*Host\x3a.*SpyAgentRootHost\x3AAdToolsSubject\x3Ae2give\.com
+adserver\.warezclient\.com\s+URLBlaze\s+Host\x3AHost\x3A

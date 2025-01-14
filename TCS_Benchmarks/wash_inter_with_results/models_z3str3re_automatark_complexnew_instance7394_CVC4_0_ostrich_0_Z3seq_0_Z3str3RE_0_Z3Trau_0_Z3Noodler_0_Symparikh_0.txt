@@ -1,0 +1,5 @@
+[A-Z][a-z]+
+/\/bin\.exe$/U
+^([07][1-7]|1[0-6]|2[0-7]|[35][0-9]|[468][0-8]|9[0-589])-?\d{7}$
+Host\x3A\d+Host\x3A.*communitytipHost\x3AGirafaClient
+/\x3d\x3d$/P

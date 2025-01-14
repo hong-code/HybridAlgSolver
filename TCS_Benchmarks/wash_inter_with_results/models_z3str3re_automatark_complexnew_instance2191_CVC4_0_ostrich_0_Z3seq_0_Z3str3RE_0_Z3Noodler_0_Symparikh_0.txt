@@ -1,0 +1,4 @@
+SbAts\d+dcww\x2Edmcast\x2EcomdistID=
+^(LDAP://([\w]+/)?(CN=['\w\s\-\&]+,)*(OU=['\w\s\-\&]+,)*(DC=['\w\s\-\&]+[,]*)+)$
+(Mo(n(day)?)?|Tu(e(sday)?)?|We(d(nesday)?)?|Th(u(rsday)?)?|Fr(i(day)?)?|Sa(t(urday)?)?|Su(n(day)?)?)
+^[-+]?\d+(\.\d{2})?$

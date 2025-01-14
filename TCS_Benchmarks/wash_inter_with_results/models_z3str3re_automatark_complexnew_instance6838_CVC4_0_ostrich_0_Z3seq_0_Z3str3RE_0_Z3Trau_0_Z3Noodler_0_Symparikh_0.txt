@@ -1,0 +1,4 @@
+[0-9]+|-[0-9]+
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+/\x2exlw([\?\x5c\x2f]|$)/smiU
+/\x2emet([\?\x5c\x2f]|$)/smiU

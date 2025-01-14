@@ -1,0 +1,5 @@
+^[a-zA-Z0-9]+$
+^[A-Z]{1,3}\d{6}$
+Host\x3A\ssource%3Dultrasearch136%26campaign%3Dsnap
+couponbar\.coupons\.com\dOwner\x3AX-Sender\x3A
+\.icosearch\x2econduit\x2ecom\x3Clogs\x40logs\x2Ecom\x3E

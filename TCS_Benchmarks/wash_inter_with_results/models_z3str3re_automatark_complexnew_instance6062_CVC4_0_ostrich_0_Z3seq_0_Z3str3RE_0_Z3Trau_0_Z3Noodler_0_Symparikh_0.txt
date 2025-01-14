@@ -1,0 +1,2 @@
+/User-Agent\x3a[^\x0d\x0a]*Java\/1\./H
+SpyBuddyZOMBIES\x5fHTTP\x5fGETearch\x2Eearthlink

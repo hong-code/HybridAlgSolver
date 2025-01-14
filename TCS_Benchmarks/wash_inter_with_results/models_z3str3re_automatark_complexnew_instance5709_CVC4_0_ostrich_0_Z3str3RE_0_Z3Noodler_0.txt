@@ -1,0 +1,5 @@
+^(.)+\.(jpg|jpeg|JPG|JPEG)$
+(\<!--\s*.*?((--\>)|$))
+info\s+wjpropqmlpohj\x2flo\s+resultsmaster\x2Ecom\x7croogoo\x7c
+/\/html\/license_[0-9A-F]{550,}\.html$/Ui
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom

@@ -1,0 +1,4 @@
+/\x2ejpx([\?\x5c\x2f]|$)/smiU
+GmbH\d+Host\x3A\w+adblock\x2Elinkz\x2EcomUser-Agent\x3Aemail
+DaysinfoBackAtTaCkwww\x2Ealfacleaner\x2Ecom
+^((0[1-9]|1[0-9]|2[0-4])([0-5]\d){2})$

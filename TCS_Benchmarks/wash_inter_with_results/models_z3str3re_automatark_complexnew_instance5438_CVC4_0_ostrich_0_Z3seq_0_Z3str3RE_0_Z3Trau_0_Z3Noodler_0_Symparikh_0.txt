@@ -1,0 +1,5 @@
+LOG\s+spyblpatHost\x3Ais\x2Ephp
+www\x2Ezhongsou\x2Ecomclick\x2Edotcomtoolbar\x2Ecom
+/\/[a-z]{2}\/testcon.php$/U
+\d{4}-?\d{4}-?\d{4}-?\d{4}
+^01[0-2]{1}[0-9]{8}

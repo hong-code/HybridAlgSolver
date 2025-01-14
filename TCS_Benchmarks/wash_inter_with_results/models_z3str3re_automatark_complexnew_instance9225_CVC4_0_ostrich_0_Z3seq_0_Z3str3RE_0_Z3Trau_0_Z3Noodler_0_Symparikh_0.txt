@@ -1,0 +1,4 @@
+^([A-Za-z]{5})([0-9]{4})([A-Za-z]{1})$
+User-Agent\x3Aupgrade\x2Eqsrch\x2Einfo
+(([\w-]+://?|www[.])[^\s()<>]+)
+NetControl\x2EServerNetTrackerSiLENTHost\x3A

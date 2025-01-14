@@ -1,0 +1,2 @@
+^(/w|/W|[^<>+?$%{}&])+$
+spas\s+This\s+\x7D\x7BPassword\x3A\s+OSSProxy\x5Chome\/lordofsearch

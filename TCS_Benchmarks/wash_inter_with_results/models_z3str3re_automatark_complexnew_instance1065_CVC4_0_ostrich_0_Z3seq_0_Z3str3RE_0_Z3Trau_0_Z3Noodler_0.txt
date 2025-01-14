@@ -1,0 +1,5 @@
+(?s)/\*.*\*/
+^UA-\d+-\d+$
+^(([1-9])|(0[1-9])|(1[0-2]))\/((0[1-9])|([1-31]))\/((\d{2})|(\d{4}))$
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym
+fromMinixmlldap\x3A\x2F\x2F\x2Fbonzibuddy\x2Ftoolbar_domain_redirectUser-Agent\x3A

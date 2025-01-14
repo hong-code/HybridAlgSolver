@@ -1,0 +1,5 @@
+/^[a-z]\x3d[a-f\d]{80,140}$/Pi
+offers\x2Ebullseye-network\x2Ecom[^\n\r]*this\dwww\x2Etrustedsearch\x2Ecom
+\d{4}-?\d{4}-?\d{4}-?\d{4}
+^([A-Za-z0-9]\s?)+([,]\s?([A-Za-z0-9]\s?)+)*$
+^\(?082|083|084|072\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$

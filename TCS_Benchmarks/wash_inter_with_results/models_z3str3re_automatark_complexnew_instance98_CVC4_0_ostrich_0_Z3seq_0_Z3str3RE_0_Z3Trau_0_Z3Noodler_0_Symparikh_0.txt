@@ -1,0 +1,3 @@
+HXDownloadUser-Agent\x3AanswerDeletingCookieReferer\x3A
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/iR
+^(\d{5})$|^([a-zA-Z]\d[a-zA-Z]( )?\d[a-zA-Z]\d)$

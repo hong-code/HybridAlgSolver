@@ -1,0 +1,4 @@
+(?i:[aeiou]+)\B
+(< *balise[ *>|:(.|\n)*>| (.|\n)*>](.|\n)*</balise *>)
+^[http|ftp|wap|https]{3,5}:\//\www\.\w*\.[com|net]{2,3}$
+(^\*\.[a-zA-Z][a-zA-Z][a-zA-Z]$)|(^\*\.\*$)

@@ -1,0 +1,2 @@
+/^Content-Type\x3a[\x20\x09]+application\/octet-stream/smiH
+\x2FcommunicatortbHost\x3a

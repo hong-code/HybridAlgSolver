@@ -1,0 +1,3 @@
+Uin=\s+\.htaServerTheef2trustyfiles\x2EcomlogsHost\x3A
+/^.{27}/sR
+/\x253D$/Im

@@ -1,0 +1,3 @@
+/counter.img\?theme\=\d+\&digits\=10\&siteId\=\d+$/Ui
+/^\/\d\x2eexe/Ui
+^[A-Z]{1}( |-)?[1-9]{1}[0-9]{3}$

@@ -1,0 +1,5 @@
+^([1-9]\d{0,3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$
+devSoft\x27s\s+Host\x3A\s+Host\x3A
+User-Agent\x3ASurveillancecomOnline
+User-Agent\x3AUser-Agent\x3a
+^(0{0,1}[1-9]|[12][0-9]|3[01])[- /.](0{0,1}[1-9]|1[012])[- /.](\d{2}|\d{4})$

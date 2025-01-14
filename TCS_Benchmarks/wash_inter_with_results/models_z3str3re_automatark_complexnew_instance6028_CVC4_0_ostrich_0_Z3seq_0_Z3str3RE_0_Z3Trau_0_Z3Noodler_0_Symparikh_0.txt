@@ -1,0 +1,2 @@
+Host\x3A\dMicrosoft\w+\+Version\+
+[$][0 -9]+

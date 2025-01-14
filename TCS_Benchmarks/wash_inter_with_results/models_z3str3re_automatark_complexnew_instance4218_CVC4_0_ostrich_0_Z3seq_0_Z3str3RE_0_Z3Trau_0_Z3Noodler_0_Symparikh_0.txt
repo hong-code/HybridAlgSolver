@@ -1,0 +1,2 @@
+/\x2exml([\?\x5c\x2f]|$)/smiU
+Host\x3A\s+CD\x2F\s+twfofrfzlugq\x2feve\.qdSeconds\-\x2Ftoolbar\x2Fsupremetb

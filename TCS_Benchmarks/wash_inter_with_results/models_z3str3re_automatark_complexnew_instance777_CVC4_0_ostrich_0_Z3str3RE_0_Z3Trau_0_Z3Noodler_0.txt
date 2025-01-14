@@ -1,0 +1,4 @@
+/filename=[a-z]+\.jat/
+doarauzeraqf\x2fvvv\.ul
+HTTPwwwProbnymomspyo\x2fzowy
+\A(.*?)\s+(\d+[a-zA-Z]{0,1}\s{0,1}[-]{1}\s{0,1}\d*[a-zA-Z]{0,1}|\d+[a-zA-Z-]{0,1}\d*[a-zA-Z]{0,1})

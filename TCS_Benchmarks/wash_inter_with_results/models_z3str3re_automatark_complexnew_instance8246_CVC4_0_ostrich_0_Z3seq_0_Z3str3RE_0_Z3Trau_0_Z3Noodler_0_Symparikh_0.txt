@@ -1,0 +1,2 @@
+Fictional\sHost\x3AWordmyway\.com
+User-Agent\x3A[^\n\r]*Host\x3A.*\x2Ftoolbar\x2FHost\x3AUser-Agent\x3A

@@ -1,0 +1,5 @@
+IP\d+SAHPORT-User-Agent\x3AUser-Agent\x3A
+^(([a-zA-Z][a-zA-Z_$0-9]*(\.[a-zA-Z][a-zA-Z_$0-9]*)*)\.)?([a-zA-Z][a-zA-Z_$0-9]*)$
+/\x2elnk([\?\x5c\x2f]|$)/smiU
+(SELECT\s[\w\*\)\(\,\s]+\sFROM\s[\w]+)|
+/^[a-zA-Z0-9]+$/

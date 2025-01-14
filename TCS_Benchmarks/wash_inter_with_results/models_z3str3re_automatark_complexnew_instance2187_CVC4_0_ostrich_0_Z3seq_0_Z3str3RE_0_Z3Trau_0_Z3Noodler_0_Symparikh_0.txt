@@ -1,0 +1,2 @@
+DesktopBladeclient=wwwHello\x2Exmlns\x3A
+\.([A-Za-z0-9]{2,5}($|\b\?))

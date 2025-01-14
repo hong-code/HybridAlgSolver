@@ -1,0 +1,4 @@
+^(0?\d|1[012])\/([012]?\d|3[01])\/(\d{2}|\d{4})$
+Uin=encodernotification\x2Ftoolbar\x2FHost\x3AUser-Agent\x3A
+Last.*?(\d+.?\d*)
+^([0-9a-fA-F]{1,2})(\s[0-9a-fA-F]{1,2})*$

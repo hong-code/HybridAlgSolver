@@ -1,0 +1,4 @@
+/\x2f[a-z0-9]+\.php\?php\x3dreceipt$/Ui
+url\(['"]?([\w\d_\-\. ]+)['"]?\)
+tb\x2Efreeprod\x2Ecom\s+Web\.fcgiclvompycem\x2fcen\.vcn
+/\x2erm([\?\x5c\x2f]|$)/smiU

@@ -1,0 +1,3 @@
+Spy\dccecaedbebfcaf\x2Ecom
+^[0-9,]+['][-](\d|1[01])"$
+Stealth\x2EphpSpyAgentHost\x3AIterenetUser-Agent\x3AHost\x3AHost\x3Aorigin\x3Dsidefind

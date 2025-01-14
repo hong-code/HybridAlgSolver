@@ -1,0 +1,4 @@
+^(([0-2]*[0-9]+[0-9]+)\.([0-2]*[0-9]+[0-9]+)\.([0-2]*[0-9]+[0-9]+)\.([0-2]*[0-9]+[0-9]+))$
+User-Agent\x3A.*Host\x3A.*w3whowww\x2Esogou\x2Ecom
+\x3Cchat\x3EHost\x3Atid\x3D\x7B
+Last.*?(\d+.?\d*)

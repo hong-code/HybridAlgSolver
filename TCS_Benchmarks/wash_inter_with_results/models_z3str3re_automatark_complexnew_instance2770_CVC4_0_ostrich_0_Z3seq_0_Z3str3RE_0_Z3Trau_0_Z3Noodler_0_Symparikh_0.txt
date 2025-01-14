@@ -1,0 +1,3 @@
+^(4915[0-1]|491[0-4]\d|490\d\d|4[0-8]\d{3}|[1-3]\d{4}|[2-9]\d{3}|1[1-9]\d{2}|10[3-9]\d|102[4-9])$
+search\x2econduit\x2ecom\d+sidebar\.activeshopper\.comUser-Agent\x3A
+Host\x3A\s+Host\x3A.*c=MicrosoftStartupStarLoggerServerX-Mailer\x3a

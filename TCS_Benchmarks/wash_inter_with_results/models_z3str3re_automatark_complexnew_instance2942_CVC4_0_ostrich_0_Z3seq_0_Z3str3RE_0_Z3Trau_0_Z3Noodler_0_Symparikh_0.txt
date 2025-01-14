@@ -1,0 +1,4 @@
+User-Agent\x3ADirectory
+^[0-9]{4}\s{0,1}[a-zA-Z]{2}$
+(^0[78][2347][0-9]{7})
+/filename\s*=\s*[^\r\n]*?\x2eswf[\x22\x27\x3b\s\r\n]/i

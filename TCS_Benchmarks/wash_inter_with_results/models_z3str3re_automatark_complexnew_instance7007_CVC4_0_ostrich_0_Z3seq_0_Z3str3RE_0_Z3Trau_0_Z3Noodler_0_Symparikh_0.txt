@@ -1,0 +1,3 @@
+Minutes\s+\x2Fcgi\x2Flogurl\.cgi\s+e2give\.com
+IDENTIFY.*\x2Fezsb\d+X-Mailer\x3A
+toolbar_domain_redirectlibManager\x2Edll\x5Eget

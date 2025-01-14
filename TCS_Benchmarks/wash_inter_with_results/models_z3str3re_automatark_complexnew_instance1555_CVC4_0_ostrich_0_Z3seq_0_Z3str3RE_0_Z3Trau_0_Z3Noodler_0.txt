@@ -1,0 +1,5 @@
+^/{1}(((/{1}\.{1})?[a-zA-Z0-9 ]+/?)+(\.{1}[a-zA-Z0-9]{2,4})?)$
+/\/[a-zA-Z_-]+\.ee$/U
+\x2APORT2\x2Acdpnode=Host\x3A
+Theef2offers\x2Ebullseye-network\x2Ecom
+/[^\x0d\x0a\x09\x20-\x7e]{4}/P

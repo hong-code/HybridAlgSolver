@@ -1,0 +1,3 @@
+MailerHost\x3AUser-Agent\x3A
+Fictional[^\n\r]*v\x3B[^\n\r]*\x22Stealth\d+moreKontikiHost\x3aAcmeEvilFTPHost\x3ATOOLBARSupremePort\x2E
+^\$?\d+(\.(\d{2}))?$

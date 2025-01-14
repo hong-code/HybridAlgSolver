@@ -1,0 +1,5 @@
+www\x2Eweepee\x2Ecom\w+Owner\x3Aiswww\x2Eemp3finder\x2Ecom
+httphost[^\n\r]*www\x2Emaxifiles\x2Ecom
+^(\+?420)? ?[0-9]{3} ?[0-9]{3} ?[0-9]{3}$
+Pleasewww\x2Ewebfringe\x2Ecom\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furax
+((IT|LV)-?)?[0-9]{11}

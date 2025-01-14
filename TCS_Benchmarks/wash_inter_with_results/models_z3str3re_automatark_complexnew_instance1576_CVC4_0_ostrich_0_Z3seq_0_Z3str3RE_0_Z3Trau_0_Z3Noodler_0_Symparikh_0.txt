@@ -1,0 +1,2 @@
+MyverToolbarTrojanControlHost\x3A
+/\/app\/\?prj=\d\x26pid=[^\r\n]+\x26mac=/Ui

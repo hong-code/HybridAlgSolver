@@ -1,0 +1,3 @@
+SI\|Server\|\d+informationWinInetEvilFTPOSSProxy\x5Chome\/lordofsearch
+^\d{0,2}(\.\d{1,4})? *%?$
+Server\.exeHWPEServer\x3aHost\x3A

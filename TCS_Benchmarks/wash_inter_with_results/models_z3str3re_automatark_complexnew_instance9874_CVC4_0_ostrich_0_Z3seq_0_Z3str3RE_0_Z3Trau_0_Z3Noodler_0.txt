@@ -1,0 +1,4 @@
+^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$
+\[DRIVE\w+updates[^\n\r]*\x22StarLogger\x22User-Agent\x3AJMailUser-Agent\x3A
+url=http\x3AGamespyjspIDENTIFYserverHOST\x3ASubject\x3A
+^(([0]?[1-9]|[1-2][0-3])(:)([0-5][0-9]))$

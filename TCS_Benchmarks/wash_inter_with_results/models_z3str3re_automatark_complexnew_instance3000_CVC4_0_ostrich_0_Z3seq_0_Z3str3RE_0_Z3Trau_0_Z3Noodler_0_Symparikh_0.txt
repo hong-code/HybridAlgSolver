@@ -1,0 +1,5 @@
+www\x2Eezula\x2Ecom.*FTP.*User-Agent\x3Acontainsw3whoreport
+(::|(([a-fA-F0-9]{1,4}):){7}(([a-fA-F0-9]{1,4}))|(:(:([a-fA-F0-9]{1,4})){1,6})|((([a-fA-F0-9]{1,4}):){1,6}:)|((([a-fA-F0-9]{1,4}):)(:([a-fA-F0-9]{1,4})){1,6})|((([a-fA-F0-9]{1,4}):){2}(:([a-fA-F0-9]{1,4})){1,5})|((([a-fA-F0-9]{1,4}):){3}(:([a-fA-F0-9]{1,4})){1,4})|((([a-fA-F0-9]{1,4}):){4}(:([a-fA-F0-9]{1,4})){1,3})|((([a-fA-F0-9]{1,4}):){5}(:([a-fA-F0-9]{1,4})){1,2}))
+\x22Thewebsearch\.getmirar\.com
+-i%3fUser-Agent\x3Awww\x2eproventactics\x2ecom
+/\x2erpt([\?\x5c\x2f]|$)/smiU

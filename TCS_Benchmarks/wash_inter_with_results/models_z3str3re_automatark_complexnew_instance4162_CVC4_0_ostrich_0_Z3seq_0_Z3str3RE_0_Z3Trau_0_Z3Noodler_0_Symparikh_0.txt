@@ -1,0 +1,5 @@
+^[2-9][0-8]\d[2-9]\d{6}$
+cojud\x2Edmcast\x2Ecom\sApofis\w+Referer\x3Awww\x2Emirarsearch\x2Ecom
+^((\d{1,2})?([.][\d]{1,2})?){1}[%]{1}$
+/\x2ewmf([\?\x5c\x2f]|$)/smiU
+^(\d{5}-\d{4}|\d{5})$

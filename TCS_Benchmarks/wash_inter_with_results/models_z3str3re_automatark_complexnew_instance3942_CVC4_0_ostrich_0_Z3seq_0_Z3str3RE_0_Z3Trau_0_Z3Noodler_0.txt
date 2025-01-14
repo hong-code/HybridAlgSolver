@@ -1,0 +1,5 @@
+.*-[0-9]{1,10}.*
+^-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\.{1}\d{1,6}
+\x3Cchat\x3EHost\x3Atid\x3D\x7B
+^\d(\d)?(\d)?$
+\x7D\x7BPassword\x3ADesktopDownloadfowclxccdxn\x2fuxwn\.ddy

@@ -1,0 +1,5 @@
+EFError\swww\x2emalware-stopper\x2ecom
+^(.*)
+62[0-9]{14,17}
+^(http(s?)\:\/\/)*[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$
+uuid=\s+User-Agent\x3a\d+\x5Chome\/lordofsearch

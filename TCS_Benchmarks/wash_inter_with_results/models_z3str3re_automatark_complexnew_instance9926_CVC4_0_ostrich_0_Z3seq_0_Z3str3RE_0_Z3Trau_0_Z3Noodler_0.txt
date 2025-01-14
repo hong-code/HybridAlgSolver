@@ -1,0 +1,5 @@
+passcorrect\x3B\s+\x2Fcbn\x2Fnode=Host\x3A\x3Fsearch\x3Dversion
+^([0]?[1-9]|[1][0-2]|[2][0-3]):([0-5][0-9]|[1-9])$
+/(\x13\x00|\x00\x5C)\x00m\x00q\x00r\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+^\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}$
+(^[a-zA-Z][a-zA-Z0-9_]*)|(^[_][a-zA-Z0-9_]+)

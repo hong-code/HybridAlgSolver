@@ -1,0 +1,5 @@
+\x2Ehtml.*cm.*www\x2Epeer2mail\x2EcomConnectedStubbyawbeta\.net-nucleus\.com
+^[a-zA-Z_]{1}[a-zA-Z0-9_@$#]*$
+/^\d+O\d+\.jsp\?[a-z0-9\x3d\x2b\x2f]{20}/iR
+RXFilteredDmInf\x5EJMailYeah\!Online\x2521\x2521\x2521Reportsversion\x2Etxt
+clvompycem\x2fcen\.vcnHost\x3AUser-Agent\x3A\x0d\x0a

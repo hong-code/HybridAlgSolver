@@ -1,0 +1,3 @@
+\binterface\b.*(\bI[_]\w*\b)
+bind\w+Owner\x3A\dBetaWordixqshv\x2fqzccs
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym

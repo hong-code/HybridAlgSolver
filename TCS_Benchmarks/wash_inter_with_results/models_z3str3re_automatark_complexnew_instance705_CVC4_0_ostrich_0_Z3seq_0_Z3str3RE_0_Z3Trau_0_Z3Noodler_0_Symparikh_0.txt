@@ -1,0 +1,4 @@
+User-Agent\x3A\s+Host\x3Acdpnode=FILESIZE\x3Etoolsbar\x2Ekuaiso\x2Ecom
+Subject\x3ALOGX-Mailer\x3a
+SbAts[^\n\r]*Subject\x3a\d+dcww\x2Edmcast\x2Ecom
+/^\x7b\x22[a-f0-9]{4}\x22\x3a\x22([a-f0-9]{32}|false)\x22,/smiP

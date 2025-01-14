@@ -1,0 +1,2 @@
+ProtoSubject\x3asource\=IncrediFindProjectAgentHost\x3AHost\x3AHost\x3A
+^[a-zA-Z]+((\s|\-|\')[a-zA-Z]+)?$

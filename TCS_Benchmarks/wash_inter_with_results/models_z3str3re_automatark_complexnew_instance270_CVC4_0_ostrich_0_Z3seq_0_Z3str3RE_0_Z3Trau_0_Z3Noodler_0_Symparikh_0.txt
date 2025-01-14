@@ -1,0 +1,5 @@
+%[\-\+0\s\#]{0,1}(\d+){0,1}(\.\d+){0,1}[hlI]{0,1}[cCdiouxXeEfgGnpsS]{1}
+^A([0-9]|10)$
+[^ _0-9a-zA-Z\$\%\'\-\@\{\}\~\!\#\(\)\&\^]
+MailerHost\x3AUser-Agent\x3A
+([^\w]+)|([^A-Za-z])|(\b[^aeiouy]+\b)|(\b(\w{2})\b)

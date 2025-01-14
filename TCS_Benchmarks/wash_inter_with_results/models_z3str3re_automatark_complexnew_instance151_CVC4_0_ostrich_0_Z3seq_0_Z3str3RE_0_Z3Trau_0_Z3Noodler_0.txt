@@ -1,0 +1,5 @@
+^[1-9][0-9]{3}[ ]?(([a-rt-zA-RT-Z]{2})|([sS][^dasDAS]))$
+Days\s+HWAE\s+Host\x3APortawww\.thecommunicator\.net
+^(((ht|f)tp(s?))\://).*$
+/^\/cnt\.php\?id=\d+$/U
+/bincode=Wz[0-9A-Za-z\x2b\x2f]{32}\x3d{0,2}$/Um

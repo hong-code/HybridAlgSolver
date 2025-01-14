@@ -1,0 +1,5 @@
+RequestWindowszzzvmkituktgr\x2fetieencoder
+/\/pte\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+/^[0-9a-fA-F]+$/
+([A-Z]|[a-z])|\/|\?|\-|\+|\=|\&|\%|\$|\#|\@|\!|\||\\|\}|\]|\[|\{|\;|\:|\'|\"|\,|\.|\>|\<|\*|([0-9])|\(|\)|\s
+www\x2Epcsentinelsoftware\x2Ecom

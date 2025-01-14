@@ -1,0 +1,2 @@
+/\*.+?\*/
+This\s+\x7D\x7BPassword\x3A\d+

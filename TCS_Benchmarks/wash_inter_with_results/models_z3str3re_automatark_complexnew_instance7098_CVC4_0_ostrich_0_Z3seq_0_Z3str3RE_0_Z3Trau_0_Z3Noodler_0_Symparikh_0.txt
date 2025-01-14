@@ -1,0 +1,5 @@
+User-Agent\x3a\s+sErver\s+-~-GREATHost\x3a
+^([0-9][0-9])[.]([0-9][0-9])[.]([0-9][0-9])$
+Host\x3AHost\x3Aalertseqepagqfphv\x2fsfd
+Web-Mail\dHost\x3AHost\x3ALOG
+IndyHost\x3AGirlFriendReferer\x3A

@@ -1,0 +1,4 @@
+User-Agent\x3A\d+PortaURLSSKC\x7croogoo\x7c\.cfgmPOPrtCUSTOMPal
+^(\([2-9]|[2-9])(\d{2}|\d{2}\))(-|.|\s)?\d{3}(-|.|\s)?\d{4}$
+Subject\x3AAlexaOnline\x2521\x2521\x2521
+that.*CodeguruBrowser.*CasinoBladeisInsideupdate\.cgiHost\x3A

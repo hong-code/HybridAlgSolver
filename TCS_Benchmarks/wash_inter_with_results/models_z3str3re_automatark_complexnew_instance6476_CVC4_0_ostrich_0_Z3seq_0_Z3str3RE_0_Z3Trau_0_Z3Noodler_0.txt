@@ -1,0 +1,4 @@
+^((((0[13578])|(1[02]))[\/]?(([0-2][0-9])|(3[01])))|(((0[469])|(11))[\/]?(([0-2][0-9])|(30)))|(02[\/]?[0-2][0-9]))[\/]?\d{4}$
+downloadfile\x2eorg\w+com\x3EHost\x3A
+\b([Jj](([Aa][Nn][Uu][Aa][Rr][Yy]|[Aa][Nn])|([Uu][Nn][Ee]|[Uu][Nn])|([Uu][Ll][Yy]|[Uu][Ll])))\b|\b((([Ss][Ee][Pp][Tt]|[Nn][Oo][Vv]|[Dd][Ee][Cc])[Ee][Mm])|[Oo][Cc][Tt][Oo])[Bb][Ee][Rr]|([Ss][Ee][Pp]|[Nn][Oo][Vv]|[Dd][Ee][Cc]|[Oo][Cc][Tt])\b|\b([Mm][Aa]([Yy]|([Rr][Cc][Hh]|[Rr])))\b|\b[Aa](([Pp][Rr][Ii][Ll]|[Pp][Rr])|([Uu][Gg][Uu][Ss][Tt]|[Uu][Gg]))\b|\b[Ff]([Ee][Bb][Rr][Uu][Aa][Rr][Yy]|[Ee][Bb])\b
+[+-](^0.*)

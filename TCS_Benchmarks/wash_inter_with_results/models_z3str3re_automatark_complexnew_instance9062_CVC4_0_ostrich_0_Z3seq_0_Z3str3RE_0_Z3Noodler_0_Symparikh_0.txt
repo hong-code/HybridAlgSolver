@@ -1,0 +1,5 @@
+spyblpat.*is[^\n\r]*BarFrom\x3AHost\x3Agdvsotuqwsg\x2fdxt\.hdPASSW=
+([a-zA-Z0-9_\-\.]+)(@[a-zA-Z0-9_\-\.]+)
+[ ]*=[ ]*[\"]*cid[ ]*:[ ]*([^\"<> ]+)
+[\+]?[\s]?(\d(\-|\s)?)?(\(\d{3}\)\s?|\d{3}\-?)\d{3}(-|\s-\s)?\d{4}(\s(ex|ext)\s?\d+)?
+/[a-z\d\x2f\x2b\x3d]{100,300}/Pi

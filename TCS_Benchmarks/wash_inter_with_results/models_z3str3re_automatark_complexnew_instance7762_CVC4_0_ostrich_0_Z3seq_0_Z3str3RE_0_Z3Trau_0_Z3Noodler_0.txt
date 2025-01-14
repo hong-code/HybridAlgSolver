@@ -1,0 +1,5 @@
+\x5BStaticHost\x3AFROM\x3Acs\x2Eshopperreports\x2Ecommedia\x2Etop-banners\x2Ecom\x2Fbar_pl\x2Fb\.fcgi
+Host\x3A.*Hello\x2E.*Referer\x3AToolbarCurrent\x3BCIA
+www\x2Efreescratchandwin\x2Ecom\d+Server.*www\x2Ecameup\x2Ecom
+^[a-zA-Z]+$
+^[0-9]{10}$|^\(0[1-9]{1}\)[0-9]{8}$|^[0-9]{8}$|^[0-9]{4}[ ][0-9]{3}[ ][0-9]{3}$|^\(0[1-9]{1}\)[ ][0-9]{4}[ ][0-9]{4}$|^[0-9]{4}[ ][0-9]{4}$

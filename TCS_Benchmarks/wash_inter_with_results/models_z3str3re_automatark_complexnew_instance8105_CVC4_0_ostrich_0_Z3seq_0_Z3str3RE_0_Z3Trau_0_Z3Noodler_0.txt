@@ -1,0 +1,5 @@
+^[A-Za-z0-9_]+$
+hirmvtg\x2fggqh\.kqh\d+sports\w+whenu\x2Ecomwp-includes\x2Ffeed\x2Ephp\x3F
+^((0?[1-9])|((1)[0-1]))?((\.[0-9]{0,2})?|0(\.[0-9]{0,2}))$
+^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$
+^[AaWaKkNn][a-zA-Z]?[0-9][a-zA-Z]{1,3}$

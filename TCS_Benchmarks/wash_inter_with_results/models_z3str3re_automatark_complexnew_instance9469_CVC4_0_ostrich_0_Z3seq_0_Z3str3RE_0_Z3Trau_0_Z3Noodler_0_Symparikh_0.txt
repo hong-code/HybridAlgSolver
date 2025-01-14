@@ -1,0 +1,2 @@
+HWPE[^\n\r]*Basic.*LOGsearches\x2Eworldtostart\x2Ecom
+^-?[0-9]\d{0,8}(\.\d{1,4})

@@ -1,0 +1,5 @@
+^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$
+^[a-zA-Z]+(\.[a-zA-Z]+)+$
+^([0-9]*\,?[0-9]+|[0-9]+\,?[0-9]*)?$
+^07[789]-\d{7}$
+www\x2Epurityscan\x2Ecom.*

@@ -1,0 +1,4 @@
+(\d{3}\-\d{2}\-\d{4})
+/\x2etga([\?\x5c\x2f]|$)/smiU
+Host\x3a\dgpstool\x2eglobaladserver\x2ecomdesksearch\.dropspam\.com
+/^User-Agent\x3A[^\r\n]*beagle_beagle/smiH

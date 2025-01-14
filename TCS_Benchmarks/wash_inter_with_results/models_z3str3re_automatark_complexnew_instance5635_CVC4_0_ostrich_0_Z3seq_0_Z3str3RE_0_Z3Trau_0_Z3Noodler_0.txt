@@ -1,0 +1,5 @@
+Guarded\s+ready\w+PARSERHost\x3aA-311ServerUser-Agent\x3Ascn\x2emystoretoolbar\x2ecom
+Toolbar\s+wwwProbnymomspyo\x2fzowy
+^([0-9]*\-?\ ?\/?[0-9]*)$
+^[0-9,]+['][-](\d|1[01])"$
+^(([0-9])|([0-2][0-9])|([3][0-1]))\/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\/\d{4}$

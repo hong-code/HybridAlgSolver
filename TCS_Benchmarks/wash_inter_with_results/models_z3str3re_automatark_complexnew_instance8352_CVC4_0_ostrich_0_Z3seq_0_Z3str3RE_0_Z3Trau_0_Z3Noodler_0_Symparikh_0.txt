@@ -1,0 +1,2 @@
+/\x2efli([\?\x5c\x2f]|$)/smiU
+/appendChild\x28\s*document\x2ecreateElement\x28\s*[\x22\x27]button[\x22\x27].*?outerText\s*=\s*[\x22\x27]{2}/smi

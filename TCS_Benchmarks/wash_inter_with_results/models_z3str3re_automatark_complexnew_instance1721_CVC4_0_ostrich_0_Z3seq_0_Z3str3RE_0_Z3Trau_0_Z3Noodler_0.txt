@@ -1,0 +1,5 @@
+EIcdpnode=reportUID\x2FServertoX-Mailer\x3a
+(^[0-9]{0,10}$)
+/\x2exap([\?\x5c\x2f]|$)/smiU
+/\x2ecgm([\?\x5c\x2f]|$)/smiU
+/\/[a-f0-9]{32}\/[a-f0-9]{32}\x22/R

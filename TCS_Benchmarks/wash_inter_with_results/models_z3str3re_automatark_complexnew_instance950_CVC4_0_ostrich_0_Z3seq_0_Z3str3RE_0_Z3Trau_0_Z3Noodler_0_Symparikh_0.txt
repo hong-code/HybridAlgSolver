@@ -1,0 +1,3 @@
+^([A-Z]+[a-zA-Z]*)(\s|\-)?([A-Z]+[a-zA-Z]*)?(\s|\-)?([A-Z]+[a-zA-Z]*)?$
+Subject\x3A\.bmpfromemail=couponbar\.coupons\.comToolbarxml\.alexa\.com
+/GET\s\/[\w-]{64}\sHTTP\/1/

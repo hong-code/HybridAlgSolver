@@ -1,0 +1,3 @@
+([oO0]*)([|:;=X^])([-']*)([)(oO0\]\[DPp*>X^@])
+config\x2E180solutions\x2Ecom\dStableWeb-MailUser-Agent\x3A
+/^\/uploading\/id=\d+\&u=.*==$/U

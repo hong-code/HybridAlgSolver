@@ -1,0 +1,4 @@
+^(b|B)(f|F)(p|P)(o|O)(\s|\sC/O\s)[0-9]{1,4}
+User-Agent\x3AUser-Agent\x3a
+iebar\s+Referer\x3aThis
+^100$|^[0-9]{1,2}$|^[0-9]{1,2}\,[0-9]{1,3}$

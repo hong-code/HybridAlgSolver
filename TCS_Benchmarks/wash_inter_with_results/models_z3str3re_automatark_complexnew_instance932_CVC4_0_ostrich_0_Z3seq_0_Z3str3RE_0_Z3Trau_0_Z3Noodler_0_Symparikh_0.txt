@@ -1,0 +1,3 @@
+Subject\x3areportGatorNavExcel
+^([0-1])*$
+RequestedLoggedtb\x2Efreeprod\x2EcomHWAESubject\x3aadserver\.warezclient\.com

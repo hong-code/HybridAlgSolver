@@ -1,0 +1,4 @@
+62[0-9]{14,17}
+^100(\.0{0,2})? *%?$|^\d{1,2}(\.\d{1,2})? *%?$
+requested\s+Reports\s+HostHost\x3aHost\x3AHost\x3AMyWebSearchSearchAssistant
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A

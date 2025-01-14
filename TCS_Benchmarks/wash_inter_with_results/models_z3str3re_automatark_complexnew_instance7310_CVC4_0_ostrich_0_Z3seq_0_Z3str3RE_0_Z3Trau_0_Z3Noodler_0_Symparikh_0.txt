@@ -1,0 +1,5 @@
+(^([1-9]|[1][0-2]):([0-5][0-9])(\s{0,1})(AM|PM|am|pm|aM|Am|pM|Pm{2,2})$)|(^([0-9]|[1][0-9]|[2][0-3]):([0-5][0-9])$)|(^([1-9]|[1][0-2])(\s{0,1})(AM|PM|am|pm|aM|Am|pM|Pm{2,2})$)|(^([0-9]|[1][0-9]|[2][0-3])$)
+Hello\x2E\s+ovpl\s+Host\x3AWeHost\x3awww\x2Ewowokay\x2Ecom/wowokaybar\x2Ephp
+User-Agent\x3AFrom\x3Awww\x2Eonlinecasinoextra\x2EcomHost\x3A
+^\d*$
+/User-Agent\x3A\s+?mus[\x0d\x0a]/iH

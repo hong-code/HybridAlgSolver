@@ -1,0 +1,4 @@
+OS\x2F\d+User-Agent\x3AUser-Agent\x3A
+mywayUser-Agent\x3AHost\x3ARedirector\x22body=FeaR\x25200\x2E2\x2E0\x2520Online\x3A\x2520\x5BIP_
+\x2FrssScaneradfsgecoiwnf\x7D\x7BTrojan\x3AlogsHost\x3a
+^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/((19|20)\d{2}|\d{2})$

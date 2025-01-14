@@ -1,0 +1,5 @@
+Everyware.*Email.*Host\x3Astepwww\x2Ekornputers\x2Ecom
+/\x2eru\/\w+\?\d$/miU
+^(A[A-HJ-M]|[BR][A-Y]|C[A-HJ-PR-V]|[EMOV][A-Y]|G[A-HJ-O]|[DFHKLPSWY][A-HJ-PR-Y]|MAN|N[A-EGHJ-PR-Y]|X[A-F]|)(0[02-9]|[1-9][0-9])[A-HJ-P-R-Z]{3}$
+[1-8][0-9]{2}[0-9]{5}
+^([A-Z]+[a-zA-Z]*)(\s|\-)?([A-Z]+[a-zA-Z]*)?(\s|\-)?([A-Z]+[a-zA-Z]*)?$

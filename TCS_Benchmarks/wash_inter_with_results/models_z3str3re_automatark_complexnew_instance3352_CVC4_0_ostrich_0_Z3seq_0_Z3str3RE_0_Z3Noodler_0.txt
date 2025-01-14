@@ -1,0 +1,5 @@
+Supreme\s+User-Agent\x3A\s+ApofisToolbarUser
+\.myway\.comToolbarUI2Host\x3ASubject\x3Atoxbqyosoe\x2fcpvm
+ver.*Black\s+CD\x2Furl=Host\x3anotification
+/[^\x20-\x7e\x0d\x0a]{4}/P
+^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$

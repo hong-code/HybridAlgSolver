@@ -1,0 +1,5 @@
+^(\d{1,})$|^(\d{1,}\.)$|^(\d{0,}?\.\d{1,})$|^([+-]\d{1,}(\.)?)$|^([+-](\d{1,})?\.\d{1,})$
+Netspy\s\x3Aauto\x2Eisearch\x2EcomUser-Agent\x3Aaohobygi\x2fzwiwHWAEfhfksjzsfu\x2fahm\.uqs
+['`~!@#&$%^&*()-_=+{}|?><,.:;{}\"\\/\\[\\]]
+^((\+989)|(989)|(00989)|(09|9))([1|2|3][0-9]\d{7}$)
+User-Agent\x3AFiltered

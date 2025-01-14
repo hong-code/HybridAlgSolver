@@ -1,0 +1,3 @@
+encoder\s%3fsearchresltX-Mailer\x3A
+/\x2ehlp([\?\x5c\x2f]|$)/smiU
+^(#){1}([a-fA-F0-9]){6}$

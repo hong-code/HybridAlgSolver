@@ -1,0 +1,4 @@
+URL\s+url=Host\x3ahttpUser-Agent\x3ASubject\x3A
+^[A-Za-z]{3,4}[0-9]{6}$
+URL\s+\.cfgmPOPrtCUSTOMPalToolbarUser-Agent\x3A
+Pleasetvshowticketsmedia\x2Edxcdirect\x2Ecom\x2Fbar_pl\x2Fchk\.fcgi

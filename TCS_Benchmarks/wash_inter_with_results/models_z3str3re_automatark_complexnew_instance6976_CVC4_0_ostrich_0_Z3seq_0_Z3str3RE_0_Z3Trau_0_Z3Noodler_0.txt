@@ -1,0 +1,5 @@
+client\x2Ebaigoo\x2Ecom\s+ised2k
+^([1-9]|1[0-2]|0[1-9]){1}(:[0-5][0-9][aApP][mM]){1}$
+\x5BStatic\w+www\.iggsey\.comUser-Agent\x3AX-Mailer\x3aComputer
+^[2-7]{1}[0-9]{3}$
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom

@@ -1,0 +1,2 @@
+DownloadDmInf\x5EinfoSimpsonUser-Agent\x3AClient
+/\x26tv\x3d\d\.\d\.\d{4}\.\d{4}/smiU

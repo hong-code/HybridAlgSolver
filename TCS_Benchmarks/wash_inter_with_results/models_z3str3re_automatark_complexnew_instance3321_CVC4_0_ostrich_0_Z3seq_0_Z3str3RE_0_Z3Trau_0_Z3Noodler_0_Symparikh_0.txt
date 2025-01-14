@@ -1,0 +1,2 @@
+Version\s+User-Agent\x3Abindmqnqgijmng\x2foj
+^DOMAIN\\\w+$

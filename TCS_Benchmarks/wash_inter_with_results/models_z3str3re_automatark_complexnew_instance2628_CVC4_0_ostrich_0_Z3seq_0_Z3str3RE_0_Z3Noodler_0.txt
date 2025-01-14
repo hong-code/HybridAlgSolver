@@ -1,0 +1,4 @@
+Server\x00\s+SbAts\s+versionetbuviaebe\x2feqv\.bvv
+zmnjgmomgbdz\x2fzzmw\.gzt\s+Reports\s+HostHost\x3aHost\x3AHost\x3AMyWebSearchSearchAssistant
+<[\w\"\ '\#\* \=\',\.\\\(\)\/\-\$\{\}\[\]\|\*\?\+\^\&\:\%\;\!]+>
+(\w+([-+.']\w+)*@(gmail.com))

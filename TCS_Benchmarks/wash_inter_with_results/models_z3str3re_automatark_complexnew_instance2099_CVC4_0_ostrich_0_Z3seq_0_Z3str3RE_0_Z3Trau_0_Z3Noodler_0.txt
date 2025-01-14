@@ -1,0 +1,5 @@
+/\x2ehpj([\?\x5c\x2f]|$)/smiU
+^\s*
+SpywareStrike.*Subject\x3A\s+Pcast\x2Edat\x2EToolbar
+snprtz\x7Cdialnoref\x3D\x25user\x5FidPG=SPEEDBAR
+"^[A-Z]{1}\d{7}$

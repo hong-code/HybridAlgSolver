@@ -1,0 +1,4 @@
+^((0?[1-9]|1[012])(:[0-5]\d){0,2}(\ [AP]M))$|^([01]\d|2[0-3])(:[0-5]\d){0,2}$
+/\x2elzh([\?\x5c\x2f]|$)/smiU
+Norton customer service is a type of method used to care your personal or business computer system from any virus or spyware.
+Monitor\s+Supervisor\s+User-Agent\x3A

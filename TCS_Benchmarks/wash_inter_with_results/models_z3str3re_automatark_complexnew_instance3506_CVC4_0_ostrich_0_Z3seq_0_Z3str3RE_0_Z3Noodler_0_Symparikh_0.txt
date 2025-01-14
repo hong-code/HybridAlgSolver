@@ -1,0 +1,4 @@
+^\d{5}-\d{4}$
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+/(\x13\x00|\x00\x5C)\x00m\x00q\x00r\x00t\x00\.\x00d\x00l\x00l\x00\x00\x00/i
+^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY][0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ] {0,1}[0-9][abceghjklmnprstvwxyzABCEGHJKLMNPRSTVWXYZ][0-9]$

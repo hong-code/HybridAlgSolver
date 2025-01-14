@@ -1,0 +1,2 @@
+^([\w]+@([\w]+\.)+[a-zA-Z]{2,9}(\s*;\s*[\w]+@([\w]+\.)+[a-zA-Z]{2,9})*)$
+messages.*Windows.*From\x3AX-Mailer\x3a+\x2Fcbn\x2FearchSchwindler

@@ -1,0 +1,5 @@
+/filename\s*=\s*[^\r\n]*?\x2ettf[\x22\x27\x3b\s\r\n]/i
+(^\d{1,9})+(,\d{1,9})*$
+^([a-zA-z\s]{4,32})$
+^(Function|Sub)(\s+[\w]+)\([^\(\)]*\)
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem

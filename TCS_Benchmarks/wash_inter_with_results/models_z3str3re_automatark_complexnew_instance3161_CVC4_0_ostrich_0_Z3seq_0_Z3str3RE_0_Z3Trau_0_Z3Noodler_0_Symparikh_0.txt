@@ -1,0 +1,4 @@
+195\.225\.\<title\>Actual
+searchnugget\s+User-Agent\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddy
+/filename=[\x22\x27]?\d\.exe[\x22\x27]?/Hi
+Cookie\x3a.*Host\x3A.*ldap\x3A\x2F\x2F

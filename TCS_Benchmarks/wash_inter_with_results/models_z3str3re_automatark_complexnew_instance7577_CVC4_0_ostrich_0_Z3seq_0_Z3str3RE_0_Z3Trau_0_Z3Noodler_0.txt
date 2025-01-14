@@ -1,0 +1,5 @@
+whenu\x2Ecom\d+Agent\stoWebupdate\.cgithisHost\x3aconnection
+Toolbarverpop\x2Epopuptoast\x2Ecomtvshowticketscount\x2Eyok\x2Ecom
+^[1-9]{1}$|^[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}$|^9999$
+/^\/\d+\/\d\.zip$/U
+From\x3A\w+SoftActivity\d+

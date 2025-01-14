@@ -1,0 +1,4 @@
+\x28robert\x40blackcastlesoft\x2Ecom\x29
+Days\s+HWAE\s+Host\x3APortawww\.thecommunicator\.net
+url\(['"]?([\w\d_\-\. ]+)['"]?\)
+PASSW=\s+\x2Fta\x2FNEWS\x2F.*loomcompany\x2Ecom

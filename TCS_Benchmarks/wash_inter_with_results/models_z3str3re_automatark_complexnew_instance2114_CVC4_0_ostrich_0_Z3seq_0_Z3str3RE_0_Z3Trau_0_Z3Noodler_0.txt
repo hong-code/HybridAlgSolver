@@ -1,0 +1,3 @@
+/Libs\/Starter(CmdExec|NetUtils|Rec|ScreenShots|Settings)\.py/
+from\s+\x2Fdss\x2Fcc\.2_0_0\.[^\n\r]*uploadServer
+\x2Fcs\x2Fpop4\x2FA-Spywww\x2Eyoogee\x2Ecom

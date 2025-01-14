@@ -1,0 +1,4 @@
+weatherSubject\x3aX-Mailer\x3aTOOLBAR\x2Fnewsurfer4\x2F
+/\x2empeg([\?\x5c\x2f]|$)/smiU
+IP.*encoder\d+SAHPORT-User-Agent\x3A
+gpstool\x2eglobaladserver\x2ecom\daction\x2E\w+data2\.activshopper\.com

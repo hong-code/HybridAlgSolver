@@ -1,0 +1,4 @@
+Host\x3A1\-extreme\x2EbizX-Mailer\x3awww\x2Ewebcruiser\x2Ecc
+HWAE\s+\x2Fta\x2FNEWS\x2FGuptacharloomcompany\x2Ecom
+Host\x3APortawww\.thecommunicator\.net
+version\s+CodeguruBrowserwww\x2Esogou\x2Ecom

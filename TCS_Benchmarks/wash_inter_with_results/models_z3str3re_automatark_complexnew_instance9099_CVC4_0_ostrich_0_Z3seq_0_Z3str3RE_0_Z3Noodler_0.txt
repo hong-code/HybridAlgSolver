@@ -1,0 +1,5 @@
+[^A-Za-z0-9]
+/^\x2f[A-Za-z0-9+~=]{16,17}\x2f[A-Za-z0-9+~=]{35,40}\x2f[A-Za-z0-9+~=]{8}\x2f[A-Za-z0-9+~=]*?\x2f[A-Za-z0-9+~=]{12,30}$/I
+HXDownloadUser-Agent\x3AanswerDeletingCookieReferer\x3A
+^([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$
+^\d(\d)?(\d)?$

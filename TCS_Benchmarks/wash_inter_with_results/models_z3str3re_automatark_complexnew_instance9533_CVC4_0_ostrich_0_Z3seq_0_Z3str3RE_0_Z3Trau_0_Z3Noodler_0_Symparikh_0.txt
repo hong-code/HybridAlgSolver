@@ -1,0 +1,5 @@
+User-Agent\x3A[^\n\r]*aadserver\dYOUR\x2Fxml\x2Ftoolbar\x2F
+/\x2exps([\?\x5c\x2f]|$)/smiU
+^\d{0,2}(\.\d{1,2})?$
+/\x2eses([\?\x5c\x2f]|$)/smiU
+^((\+44\s?\d{4}|\(?\d{5}\)?)\s?\d{6})|((\+44\s?|0)7\d{3}\s?\d{6})$

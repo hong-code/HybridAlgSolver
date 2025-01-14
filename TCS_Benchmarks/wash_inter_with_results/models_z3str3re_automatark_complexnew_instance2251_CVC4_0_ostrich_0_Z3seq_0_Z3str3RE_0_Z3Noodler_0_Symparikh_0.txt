@@ -1,0 +1,4 @@
+(^\d{5}\x2D\d{3}$)
+/^\x2f[A-Za-z0-9+~=]{16,17}\x2f[A-Za-z0-9+~=]{35,40}\x2f[A-Za-z0-9+~=]{8}\x2f[A-Za-z0-9+~=]*?\x2f[A-Za-z0-9+~=]{12,30}$/I
+www\x2Eserverlogic3\x2Ecom
+LOG\swww\x2Esearchwords\x2EcomHost\x3A

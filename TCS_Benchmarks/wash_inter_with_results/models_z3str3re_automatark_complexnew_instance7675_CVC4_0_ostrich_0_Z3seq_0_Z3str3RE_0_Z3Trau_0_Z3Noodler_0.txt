@@ -1,0 +1,5 @@
+^(([a-zA-Z][a-zA-Z_$0-9]*(\.[a-zA-Z][a-zA-Z_$0-9]*)*)\.)?([a-zA-Z][a-zA-Z_$0-9]*)$
+/\x2ewmv([\?\x5c\x2f]|$)/smiU
+www\x2Emakemesearch\x2EcomLOGOnevclxatmlhavj\x2fvsy
+User-Agent\x3A\s+information\swww\x2Etopadwarereviews\x2Ecom
+www\x2Ezhongsou\x2Ecomclick\x2Edotcomtoolbar\x2Ecom

@@ -1,0 +1,5 @@
+Runner.*\x2Ehtml[^\n\r]*NetControl\x2EServer\d+media\x2Edxcdirect\x2Ecom\.smx\?PASSW=SAH
+HXDownloadUser-Agent\x3AanswerDeletingCookieReferer\x3A
+[^\d^\-^\,^\x20]+
+/\/[a-z]{4}\.html\?j\=\d{6,7}$/Ui
+Host\x3A\d+Litequick\x2Eqsrch\x2EcomaboutHost\x3AComputer\x7D\x7BSysuptime\x3A

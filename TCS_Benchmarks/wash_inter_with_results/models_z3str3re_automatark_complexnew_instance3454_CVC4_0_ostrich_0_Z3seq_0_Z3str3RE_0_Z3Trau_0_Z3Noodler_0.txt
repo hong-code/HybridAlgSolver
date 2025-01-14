@@ -1,0 +1,3 @@
+^A([0-9]|10)$
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch
+User-Agent\x3A.*User-Agent\x3A.*spyblini\x2Einidata\.warezclient\.com

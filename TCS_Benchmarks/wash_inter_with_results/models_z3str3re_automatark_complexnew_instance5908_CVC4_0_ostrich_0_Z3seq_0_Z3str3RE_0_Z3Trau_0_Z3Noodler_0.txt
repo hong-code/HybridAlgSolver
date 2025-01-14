@@ -1,0 +1,4 @@
+/^SSID=[a-zA-Z\d]{43}\x3B\x20A=[0-3]$/C
+/\x2eogx([\?\x5c\x2f]|$)/smiU
+requested.*zmnjgmomgbdz\x2fzzmw\.gzt\s+Reportsdaosearch\x2Ecom
+Subject\x3A\swww\x2Esearchwords\x2Ecom

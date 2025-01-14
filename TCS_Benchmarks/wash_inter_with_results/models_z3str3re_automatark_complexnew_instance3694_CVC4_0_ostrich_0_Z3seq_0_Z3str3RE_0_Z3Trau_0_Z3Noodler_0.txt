@@ -1,0 +1,5 @@
+passcorrect\x3B\d+AcmeSubject\x3Aready\.\r\nby\x2Fcbn\x2Fnode=
+Subject\x3a\s+BossUser-Agent\x3ASpediaUser-Agent\x3A
+Send=\s+User-Agent\x3A\s+LoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?Host\x3aCenterSubject\x3A
+/\&k=\d+($|\&h=)/U
+^([1-9]|[1-9]\d|1\d{2}|2[0-4]\d|25[0-5])$

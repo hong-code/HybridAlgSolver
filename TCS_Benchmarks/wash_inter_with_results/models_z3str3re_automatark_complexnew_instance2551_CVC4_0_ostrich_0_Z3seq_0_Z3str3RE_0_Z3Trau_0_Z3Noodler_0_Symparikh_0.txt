@@ -1,0 +1,4 @@
+195\.225\.\<title\>Actual
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A
+Host\x3A\w+www.*ToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+^(100(\.0{0,2}?)?$|([1-9]|[1-9][0-9])(\.\d{1,2})?)$

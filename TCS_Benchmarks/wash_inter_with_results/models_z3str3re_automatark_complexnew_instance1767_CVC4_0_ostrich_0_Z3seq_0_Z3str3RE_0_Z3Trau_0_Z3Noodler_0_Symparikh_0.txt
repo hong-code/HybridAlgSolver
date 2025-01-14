@@ -1,0 +1,5 @@
+^[13][a-zA-Z0-9]{26,33}$
+/\x2esmil([\?\x5c\x2f]|$)/smiU
+/^\/[\w-]{48}$/U
+/\x2emks([\?\x5c\x2f]|$)/smiU
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin

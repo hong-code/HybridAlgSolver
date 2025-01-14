@@ -1,0 +1,4 @@
+on\dName=Your\+Host\+is\x3AcdpViewHost\x3AUser-Agent\x3A
+Uin=\s+\.htaServerTheef2trustyfiles\x2EcomlogsHost\x3A
+u=with\x3AHBand,Deathhoroscope2
+^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)*[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$

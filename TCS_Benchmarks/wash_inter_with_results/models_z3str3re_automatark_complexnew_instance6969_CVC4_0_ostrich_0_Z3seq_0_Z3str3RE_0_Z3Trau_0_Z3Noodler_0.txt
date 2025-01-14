@@ -1,0 +1,5 @@
+[^a-zA-Z \-]|(  )|(\-\-)|(^\s*$)
+(INSERT INTO\s+)(\w+)(\s+\()([\w+,?\s*]+)(\)\s+VALUES\s+)((\(['?\w+'?,?\s*]+\)\,?;?\s*)+)
+act=\s+smrtshpr-cs-verDANavExcel
+^\+?[a-z0-9](([-+.]|[_]+)?[a-z0-9]+)*@([a-z0-9]+(\.|\-))+[a-z]{2,6}$
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom

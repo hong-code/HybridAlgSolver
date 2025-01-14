@@ -1,0 +1,4 @@
+Host\x3a\s+Agentbody=\x2521\x2521\x2521OptixSubject\x3A
+upgrade\x2Eqsrch\x2Einfo[^\n\r]*dcww\x2Edmcast\x2Ecom
+^([0-9]{1})([0-9]{2})([0-9]{2})([0-9]{7})([0-9]{1})$
+\{\\\*\\bkmkstart\s(.*?)\}

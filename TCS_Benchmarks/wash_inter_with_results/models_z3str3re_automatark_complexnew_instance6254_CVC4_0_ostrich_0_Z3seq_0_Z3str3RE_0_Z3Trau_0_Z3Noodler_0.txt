@@ -1,0 +1,5 @@
+comLOGUser-Agent\x3Aistsvcwww\x2Eoemji\x2EcomSystemSleuth
+(\d+)([,|.\d])*\d
+^[0-9]{1}$|^[1-6]{1}[0-3]{1}$|^64$|\-[1-9]{1}$|^\-[1-6]{1}[0-3]{1}$|^\-64$
+Toolbar[^\n\r]*url=\d+Host\x3AWelcome\x2FcommunicatortbGateCrasher
+Host\x3A\d+Subject\x3Aas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=

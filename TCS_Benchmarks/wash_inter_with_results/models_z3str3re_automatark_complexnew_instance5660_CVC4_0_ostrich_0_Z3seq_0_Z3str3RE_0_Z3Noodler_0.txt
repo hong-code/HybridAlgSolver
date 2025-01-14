@@ -1,0 +1,5 @@
+www\.actualnames\.com\s+toolbar_domain_redirect\s+Contactfrom=GhostVoiceServer
+URLBlaze.*User-Agent\x3A.*mPOPUser-Agent\x3A
+^[1-9]{1}$|^[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}$|^9999$
+^[-\w'+*$^&%=~!?{}#|/`]{1}([-\w'+*$^&%=~!?{}#|`.]?[-\w'+*$^&%=~!?{}#|`]{1}){0,31}[-\w'+*$^&%=~!?{}#|`]?@(([a-zA-Z0-9]{1}([-a-zA-Z0-9]?[a-zA-Z0-9]{1}){0,31})\.{1})+([a-zA-Z]{2}|[a-zA-Z]{3}|[a-zA-Z]{4}|[a-zA-Z]{6}){1}$
+/\x2emkv([\?\x5c\x2f]|$)/smiU

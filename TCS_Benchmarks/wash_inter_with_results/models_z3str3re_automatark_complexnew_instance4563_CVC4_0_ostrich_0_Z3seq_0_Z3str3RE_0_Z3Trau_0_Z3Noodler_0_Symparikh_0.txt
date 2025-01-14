@@ -1,0 +1,3 @@
+/\/load_module\.php\?user\=(n1|1|2|11)$/U
+^\d*$
+User-Agent\x3a\x2Fnewsurfer4\x2F

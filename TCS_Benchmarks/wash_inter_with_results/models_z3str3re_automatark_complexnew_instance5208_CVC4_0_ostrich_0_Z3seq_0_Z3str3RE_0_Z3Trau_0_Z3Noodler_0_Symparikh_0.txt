@@ -1,0 +1,4 @@
+ReportIterenetUser-Agent\x3AHost\x3AKEYLOGGER\x2Fbar_pl\x2Fchk_bar\.fcgi
+((\\")|[^"(\\")])+
+Toolbar[^\n\r]*tvshowtickets\w+weatherHost\x3AUser-Agent\x3Atwfofrfzlugq\x2feve\.qd
+/\x2ecis([\?\x5c\x2f]|$)/smiU

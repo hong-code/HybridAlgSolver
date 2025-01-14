@@ -1,0 +1,5 @@
+^(\+48\s*)?\d{2}\s*\d{3}(\s*|\-)\d{2}(\s*|\-)\d{2}$
+u=with\x3AHBand,Deathhoroscope2
+User-Agent\x3A\s+User-Agent\x3AUser-Agent\x3A
+/filename=[a-z]{5,8}\d{2,3}\.jar\x0d\x0a/Hm
+^[13][a-zA-Z0-9]{26,33}$

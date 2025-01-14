@@ -1,0 +1,5 @@
+ookflolfctm\x2fnmot\.fmu
+/^udp\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+^[SFTG]\d{7}[A-Z]$
+Subject\x3aHostYWRtaW46cGFzc3dvcmQ
+.*[a-zA-Z]$

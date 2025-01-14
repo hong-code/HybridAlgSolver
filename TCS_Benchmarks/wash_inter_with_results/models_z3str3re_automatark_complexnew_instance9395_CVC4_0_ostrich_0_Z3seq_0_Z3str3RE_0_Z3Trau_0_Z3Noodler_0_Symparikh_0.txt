@@ -1,0 +1,4 @@
+/\/ZES\d+O\d+\.jsp\?[a-z0-9=\x2b\x2f]{20}/iU
+asdbiz\x2Ebiz\dATTENTION\x3Aemail
+Server\x3AWordTheHost\x3afrom
+([a-zA-Z0-9\_\-\.]+[a-zA-Z0-9\_\-\.]+[a-zA-Z0-9\_\-\.]+)+@([a-zA-z0-9][a-zA-z0-9][a-zA-z0-9]*)+(\.[a-zA-z0-9][a-zA-z0-9][a-zA-z0-9]*)(\.[a-zA-z0-9]+)*

@@ -1,0 +1,5 @@
+/\x2fAdmin\x2fFunctionsClient\x2f(check.txt|Select.php|Update.php)/iU
+^[-\w\s"'=/!@#%&,;:`~\.\$\^\{\[\(\|\)\]\}\*\+\?\\]*$
+^\d+\.\d\.\d[01]\d[0-3]\d\.[1-9]\d*$
+\x7D\x7BTrojan\x3A\w+Host\x3A\s\d\x2El
+/\/\?[0-9a-f]{32}/Ui

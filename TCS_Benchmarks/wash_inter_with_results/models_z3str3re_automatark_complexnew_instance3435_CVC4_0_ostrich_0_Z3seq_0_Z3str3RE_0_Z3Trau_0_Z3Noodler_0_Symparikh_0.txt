@@ -1,0 +1,5 @@
+jsp\s+pjpoptwql\x2frlnj[^\n\r]*Host\x3A
+Referer\x3A\s+www\x2eproventactics\x2ecom
+User-Agent\x3A\x2Ftba\x2FFrom\x3A
+Logtraffbest\x2EbizAdToolsLogged
+spyblpat.*is[^\n\r]*BarFrom\x3AHost\x3Agdvsotuqwsg\x2fdxt\.hdPASSW=

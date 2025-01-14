@@ -1,0 +1,4 @@
+/\x2exap([\?\x5c\x2f]|$)/smiU
+asdbiz\x2Ebiz\s+informationHost\x3A
+/\x2emanifest([\?\x5c\x2f]|$)/smiU
+User-Agent\x3A\s+www\x2Ewordiq\x2Ecom

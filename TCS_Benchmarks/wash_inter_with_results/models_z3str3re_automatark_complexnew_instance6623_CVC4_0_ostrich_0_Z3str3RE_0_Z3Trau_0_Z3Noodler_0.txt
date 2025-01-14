@@ -1,0 +1,5 @@
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+Fictional[^\n\r]*v\x3B[^\n\r]*\x22Stealth\d+moreKontikiHost\x3aAcmeEvilFTPHost\x3ATOOLBARSupremePort\x2E
+^[a-zA-Z0-9]+(([_][a-zA-Z0-9])?[a-zA-Z0-9]*)*$
+SAcc\d+Seconds\-\x2Fcommunicatortb
+password\x3B1\x3BOptixOwner\x3ABarwww\x2Eaccoona\x2Ecom

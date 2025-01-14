@@ -1,0 +1,5 @@
+User-Agent\x3A\s+Host\x3A[^\n\r]*Hourspjpoptwql\x2frlnjFrom\x3Asbver\x3aGhost
+about\d+yxegtd\x2fefcwgHost\x3ATPSystemwww\x2Ee-finder\x2Ecc
+^((67\d{2})|(4\d{3})|(5[1-5]\d{2})|(6011))-?\s?\d{4}-?\s?\d{4}-?\s?\d{4}|3[4,7]\d{13}$
+(^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$)
+NetControl\x2EServerNetTrackerSiLENTHost\x3A

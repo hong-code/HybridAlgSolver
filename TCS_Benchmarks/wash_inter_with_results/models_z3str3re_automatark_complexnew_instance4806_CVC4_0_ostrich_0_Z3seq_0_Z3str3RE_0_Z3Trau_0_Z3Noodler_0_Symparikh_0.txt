@@ -1,0 +1,5 @@
+CZ\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}|CZ\d{22}
+HXLogOnlyanHost\x3AspasHost\x3A
+[1-8][0-9]{2}[0-9]{5}
+(CZ-?)?[0-9]{8,10}
+X-Mailer\x3A\s+ToolbarScanerX-Mailer\x3AInformation

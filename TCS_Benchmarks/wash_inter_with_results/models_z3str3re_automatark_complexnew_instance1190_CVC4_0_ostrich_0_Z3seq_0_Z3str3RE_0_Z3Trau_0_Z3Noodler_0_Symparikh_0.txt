@@ -1,0 +1,2 @@
+isiz=Xtrastepwebhancer\x2EcomStubbyOnever\x3aGhost
+/\)\r\nHost\x3a\x20[a-z\d\x2e\x2d]{6,32}\r\nCache\x2dControl\x3a\x20no\x2dcache\r\n\r\n$/

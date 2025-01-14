@@ -1,0 +1,4 @@
+^((\-|d|l|p|s){1}(\-|r|w|x){9})$
+download\x2Eeblocs\x2EcomHost\x3AReferer\x3A
+/^POST\x20\x2fg[ao]lfstream\x26/
+\x2Fbar_pl\x2Fshdoclc\.fcgisource%3Dultrasearch136%26campaign%3DsnapEIHBand,

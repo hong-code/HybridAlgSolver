@@ -1,0 +1,2 @@
+\[DRIVE\w+updates[^\n\r]*\x22StarLogger\x22User-Agent\x3AJMailUser-Agent\x3A
+Softwarerequestedoffers\x2Ebullseye-network\x2Ecom

@@ -1,0 +1,4 @@
+IPUSER-Host\x3AUser-Agent\x3A\x2Fsearchfast\x2F
+^[\d]{5}[-\s]{1}[\d]{3}[-\s]{1}[\d]{3}$
+Host\x3a.*ver\dRobert\dDmInf\x5EinfoSimpsonUser-Agent\x3AClientwww\x2Einternet-optimizer\x2Ecom
+3A\d+Host\x3AHWAEUser-Agent\x3A

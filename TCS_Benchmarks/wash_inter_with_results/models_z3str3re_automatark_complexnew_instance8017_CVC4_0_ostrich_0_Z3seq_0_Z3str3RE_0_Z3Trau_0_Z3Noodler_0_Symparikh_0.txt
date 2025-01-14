@@ -1,0 +1,2 @@
+/\x2eurl([\?\x5c\x2f]|$)/smiU
+spyblpat.*is[^\n\r]*BarFrom\x3AHost\x3Agdvsotuqwsg\x2fdxt\.hdPASSW=

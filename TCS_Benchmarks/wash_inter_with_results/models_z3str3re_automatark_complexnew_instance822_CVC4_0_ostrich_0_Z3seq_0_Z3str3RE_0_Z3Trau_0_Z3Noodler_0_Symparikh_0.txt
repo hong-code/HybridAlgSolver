@@ -1,0 +1,4 @@
+Host\x3A.*Basic.*ProtoUser-Agent\x3A
+Server\s+www\x2Epeer2mail\x2Ecom.*Subject\x3AReferer\x3A
+/\x2ereg([\?\x5c\x2f]|$)/smiU
+www\x2Eweepee\x2Ecom\w+Owner\x3A\d+metaresults\.copernic\.com

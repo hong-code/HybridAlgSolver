@@ -1,0 +1,3 @@
+^[\w ]{0,}$
+Iterenet\s+www\x2Emirarsearch\x2EcomHost\x3A
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin

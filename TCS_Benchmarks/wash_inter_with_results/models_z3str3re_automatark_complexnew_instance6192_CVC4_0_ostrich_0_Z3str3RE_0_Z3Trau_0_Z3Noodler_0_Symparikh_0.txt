@@ -1,0 +1,3 @@
+GmbH\s+Host\x3AHost\x3AMonitoringGoogle
+www\x2Eonlinecasinoextra\x2Ecomsearchreslt\x7D\x7BSysuptime\x3A
+^([A-Za-z]|[A-Za-z][0-9]*|[0-9]*[A-Za-z])+$

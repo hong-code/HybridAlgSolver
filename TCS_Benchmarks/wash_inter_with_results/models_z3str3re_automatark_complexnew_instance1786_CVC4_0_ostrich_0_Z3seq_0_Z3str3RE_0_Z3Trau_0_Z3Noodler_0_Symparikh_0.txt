@@ -1,0 +1,4 @@
+^\d{1,7}$
+Host\x3AtoUser-Agent\x3AClientsConnected-
+TOOLBAR\s+dist\x2Eatlas\x2Dia\x2Ecom
+^[B|K|T|P][A-Z][0-9]{4}$

@@ -1,0 +1,4 @@
+^[A-Z]\d{2}(\.\d){0,1}$
+(\d{1,3},(\d{3},)*\d{3}(\.\d{1,3})?|\d{1,3}(\.\d{3})?)$
+/\x26tv\x3d\d\.\d\.\d{4}\.\d{4}/smiU
+Agent\s+Server\s+www\x2Einternet-optimizer\x2Ecom

@@ -1,0 +1,4 @@
+^((\(?0\d{4}\)?\s?\d{3}\s?\d{3})|(\(?0\d{3}\)?\s?\d{3}\s?\d{4})|(\(?0\d{2}\)?\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$
+horoscope2YAHOOwww\x2e2-seek\x2ecom\x2fsearchHost\x3A
+Hello\x2E\s+ovplrichfind\x2EcomCookie\x3a
+Host\s+pjpoptwql\x2frlnjSubject\x3A

@@ -1,0 +1,5 @@
+(\"http:\/\/www\.youtube\.com\/v\/\w{11}\&rel\=1\")
+Host\x3A\s+User-Agent\x3A.*LogsHost\x3AHost\x3A
+ppcdomain\x2Eco\x2Euk.*Spy\-Locked\s+Exploiter\w+\x2Fr\x2Fkeys\x2FkeysS\x3aUsers\x5cIterenet
+hostie\s+freeIPaddrs\s+TPSystemHost\x3a\x7D\x7BUser\x3AAlert\x2Fcgi-bin\x2F
+/\/[a-f0-9]{32}\.jar/

@@ -1,0 +1,5 @@
+sql.*badurl\x2Egrandstreetinteractive\x2Ecom
+/\/crypt_1_sell\d\d-\d\d.exe$/Ui
+^(\d{3}-\d{3}-\d{4})*$
+/^resolve\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+^\$[+-]?([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(\.[0-9]{1,2})?$

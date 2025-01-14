@@ -1,0 +1,4 @@
+^[-+]?\d*$
+(01*0|1)*
+^[^';<>?%!\s]{1,20}$
+\.cfg.*spyblini\x2Eini[^\n\r]*urfiqileuq\x2ftjzu.*Host\x3A666password\x3B1\x3BOptixGmbHPG=SPEEDBARcuReferer\x3A

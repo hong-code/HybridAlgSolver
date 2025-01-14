@@ -1,0 +1,4 @@
+Host\x3ADIMBUSsidebar\.activeshopper\.comUser-Agent\x3APcast
+target[ ]*[=]([ ]*)(["]|['])*([_])*([A-Za-z0-9])+(["])*
+messages.*Windows.*From\x3AX-Mailer\x3a+\x2Fcbn\x2FearchSchwindler
+www\.123mania\.com\x2F0409areZC-Bridge

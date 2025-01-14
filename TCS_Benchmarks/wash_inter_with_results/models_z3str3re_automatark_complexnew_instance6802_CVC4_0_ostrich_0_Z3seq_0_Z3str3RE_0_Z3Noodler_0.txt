@@ -1,0 +1,5 @@
+^([a-zA-Z]{5})([a-zA-Z0-9-]{3,12})
+Host\x3A\w+wwwfromToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+(^0?[1-9]|^1[0-2])\/(0?[1-9]|[1-2][0-9]|3[0-1])\/(19|20)?[0-9][0-9](\s(((0?[0-9]|1[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?)|((0?[0-9]|1[0-2]):[0-5][0-9](:[0-5][0-9])?\s(AM|PM))))?$
+asdbiz\x2Ebiz\s+informationHost\x3A
+Subject\x3ALOGX-Mailer\x3a

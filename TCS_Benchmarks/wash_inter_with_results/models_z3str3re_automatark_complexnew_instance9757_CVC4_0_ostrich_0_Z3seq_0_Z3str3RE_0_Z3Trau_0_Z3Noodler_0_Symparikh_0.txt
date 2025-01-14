@@ -1,0 +1,2 @@
+securityon\x3AHost\x3ARedirector\x22ServerHost\x3A
+/^\/[a-f0-9]{32}\/\d{10}\/[a-f0-9]{32}\.jar$/Ui

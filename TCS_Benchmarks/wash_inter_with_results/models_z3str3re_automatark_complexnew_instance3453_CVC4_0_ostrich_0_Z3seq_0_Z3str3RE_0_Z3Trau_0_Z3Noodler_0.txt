@@ -1,0 +1,5 @@
+/^(\d{1,2})(\/)(\d{1,2})(\/)(\d{4})(T|\s{1,2})(([0-1][0-9])|(2[0-3])):([0-5][0-9])+$/;
+Host\x3A\dKeyloggercargo=
+ShadowNetMyAgentServerconfigINTERNAL\.iniKeylogger-Prosearchreslt
+/\/feed\.dll\?pub_id=\d+?\&ua=/Ui
+^([0-1]?[0-9]{1}|2[0-3]{1}):([0-5]{1}[0-9]{1})$

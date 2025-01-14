@@ -1,0 +1,5 @@
+^[a-zA-Z]\:\\.*|^\\\\.*
+Everyware.*Email.*Host\x3Astepwww\x2Ekornputers\x2Ecom
+Server\x3AWordTheHost\x3afrom
+/\/\?[a-z0-9]{9}\=[a-zA-Z0-9]{45}/U
+^([012346789][0-9]{4})$

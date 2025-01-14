@@ -1,0 +1,3 @@
+^\$?\d{1,2}\,\d{3}?\,\d{3}?(\.(\d{2}))$|^\$?\d{1,3}?\,\d{3}?(\.(\d{2}))$|^\$?\d{1,3}?(\.(\d{2}))$
+portSpediaYourtraffbest\x2EbizUser-Agent\x3ACSmtpMonsterixqshv\x2fqzccsHost\x3A
+^L[a-zA-Z0-9]{26,33}$

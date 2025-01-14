@@ -1,0 +1,4 @@
+hjhgquqssq\x2fpjm[^\n\r]*User-Agent\x3A
+(^[0][2][1579]{1})(\d{6,7}$)
+logs\s+TCP.*Toolbarads\.grokads\.com
+^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w ]*.*))+\.(jpg|JPG)$

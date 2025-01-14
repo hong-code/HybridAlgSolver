@@ -1,0 +1,4 @@
+Pattern that matches all DVLA Vehicle Registration Marks (VRM). Allows for an optional single space between segments.
+ovplSubject\x3ATencentTravelerClient\x7D\x7BSysuptime\x3A
+Host\x3AHost\x3AFrom\x3a\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furaxbnymomspyo\x2fzowy
+sql.*badurl\x2Egrandstreetinteractive\x2Ecom

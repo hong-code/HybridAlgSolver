@@ -1,0 +1,5 @@
+^([0-9]*\-?\ ?\/?[0-9]*)$
+versionIDENTIFYstarted\x2EUser-Agent\x3A
+/^\/[a-z]{2,20}\.php\?[a-z]{2,10}\x3d[a-zA-Z0-9\x2f\x2b]+\x3d$/I
+$sPatternTablet = '/(Tablet|iPad|iPod)/';
+Server\.exeHWPEServer\x3aHost\x3A

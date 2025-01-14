@@ -1,0 +1,4 @@
+\$?GP[a-z]{3,},([a-z0-9\.]*,)+([a-z0-9]{1,2}\*[a-z0-9]{1,2})
+alert\d+an.*Spyiz=e2give\.comrichfind\x2Ecom
+Logger\w+gdvsotuqwsg\x2fdxt\.hd\dovplLogtraffbest\x2EbizAdToolsLoggedsidesearch\.dropspam\.com
+/\x2e(jpg|png|gif)\x3fs?v.*?&tq=g[A-Z0-9]{2}/U

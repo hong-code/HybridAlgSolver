@@ -1,0 +1,5 @@
+\b[^aeiou]+[aeiou][^aeiou]+\b
+are\s+Toolbar\s+X-Mailer\x3AInformationsearchnuggetspastb\x2Efreeprod\x2Ecom
+^(N[BLSTU]|[AMN]B|[BQ]C|ON|PE|SK)$
+connectedNodes\s+insert\s+haveFTUser-Agent\x3A
+DISK\s+\x2Fcgi\x2Flogurl\.cgiSubject\x3AinsertX-Mailer\x3A

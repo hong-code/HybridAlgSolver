@@ -1,0 +1,5 @@
+FTP\s+\x2FNFO\x2CRegistered\s+Server\s+www\x2Einternet-optimizer\x2Ecom
+/\x2egni([\?\x5c\x2f]|$)/smiU
+([0-9]{6}|[0-9]{3}\s[0-9]{3})
+Host\x3A.*www\x2e2-seek\x2ecom\x2fsearch
+www\x2Eonlinecasinoextra\x2EcomWindows

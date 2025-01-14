@@ -1,0 +1,3 @@
+YWRtaW46YWRtaW4www\x2Ee-finder\x2EccNSIS_DOWNLOADHost\x3A
+/\/stat_u\/$/U
+^[\d]{1,}?\.[\d]{2}$

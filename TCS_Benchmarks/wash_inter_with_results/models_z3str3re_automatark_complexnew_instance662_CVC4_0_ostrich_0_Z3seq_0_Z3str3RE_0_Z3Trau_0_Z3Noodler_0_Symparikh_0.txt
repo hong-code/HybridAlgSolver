@@ -1,0 +1,5 @@
+(a|b|c).(a.b)*.b+.c
+^((\d{5}-?\d{4})|(\d{5})|([A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d))$
+^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$
+e2give\.comConnectionSpywww\x2Eslinkyslate
+HBand,\sHost\x3A[^\n\r]*lnzzlnbk\x2fpkrm\.fin

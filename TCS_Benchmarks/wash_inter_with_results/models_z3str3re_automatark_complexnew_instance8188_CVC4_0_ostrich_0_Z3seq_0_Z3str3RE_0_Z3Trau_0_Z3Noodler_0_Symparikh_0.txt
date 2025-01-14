@@ -1,0 +1,4 @@
+^[0-9]*\/{1}[1-9]{1}[0-9]*$
+^[^\\\./:\*\?\"<>\|]{1}[^\\/:\*\?\"<>\|]{0,254}$
+^(\d*\s*\-?\s*\d*)$
+dl\x2Eweb-nexus\x2Enet\d+www\x2Eonlinecasinoextra\x2Ecomsqlads\.grokads\.com

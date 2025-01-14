@@ -1,0 +1,5 @@
+InformationSubject\x3ASpynovabyBlacksnprtz\x7CdialnoSearch
+User-Agent\x3A[^\n\r]*connection
+^[A-Z]{1,3}\d{6}$
+\d{2}.?\d{3}.?\d{3}/?\d{4}-?\d{2}
+/bincode=Wz[0-9A-Za-z\x2b\x2f]{32}\x3d{0,2}$/Um

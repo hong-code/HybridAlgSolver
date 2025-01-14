@@ -1,0 +1,2 @@
+User-Agent\x3AServerHost\x3A
+Subject\x3ALOGX-Mailer\x3a

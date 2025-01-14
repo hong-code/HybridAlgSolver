@@ -1,0 +1,4 @@
+X-Mailer\x3A\s+ToolbarScanerX-Mailer\x3AInformation
+&#\d{2,5};
+Server\s+www\x2Epeer2mail\x2Ecomsubject\x3AfileId\x3d\x5b
+/^([a-zA-Z0-9\.\_\-\&]+)@[a-zA-Z0-9]+\.[a-zA-Z]{3}|(.[a-zA-Z]{2}(\.[a-zA-Z]{2}))$/

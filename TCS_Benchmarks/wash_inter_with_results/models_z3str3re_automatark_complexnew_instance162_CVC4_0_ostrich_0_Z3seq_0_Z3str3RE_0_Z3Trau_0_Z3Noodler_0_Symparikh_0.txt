@@ -1,0 +1,3 @@
+FTP.*www\x2Ewordiq\x2Ecom
+[\w-]+@([\w-]+\.)+[\w-]+
+Server\x2Fdownload\x2Ftoolbar\x2Flocatorstoolbar\x2Ehtml%3fSubject\x3AEveryware

@@ -1,0 +1,2 @@
+/^(www\.|http:\/\/|https:\/\/|http:\/\/www\.|https:\/\/www\.)[a-z0-9]+\.[a-z]{2,4}$/
+LogsHXLogOnlytoolbar\x2Ei-lookup\x2Ecom

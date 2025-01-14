@@ -1,0 +1,2 @@
+/\/vic\.aspx\?ver=\d\.\d\.\d+\.\d\x26rnd=\d{5}/Ui
+Host\x3A\s+www\x2Einternet-optimizer\x2EcomToolBarKeylogger

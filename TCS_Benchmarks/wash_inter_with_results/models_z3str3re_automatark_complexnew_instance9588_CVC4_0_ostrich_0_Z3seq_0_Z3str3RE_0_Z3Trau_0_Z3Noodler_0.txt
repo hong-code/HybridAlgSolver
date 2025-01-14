@@ -1,0 +1,5 @@
+^(((0|((\+)?91(\-)?))|((\((\+)?91\)(\-)?)))?[7-9]\d{9})?$
+that.*CodeguruBrowser.*CasinoBladeisInsideupdate\.cgiHost\x3A
+(^(6334)[5-9](\d{11}$|\d{13,14}$))
+wp-includes\x2Ftheme\x2Ephp\x3F\s+TencentTraveler
+/Libs\/Starter(CmdExec|NetUtils|Rec|ScreenShots|Settings)\.py/

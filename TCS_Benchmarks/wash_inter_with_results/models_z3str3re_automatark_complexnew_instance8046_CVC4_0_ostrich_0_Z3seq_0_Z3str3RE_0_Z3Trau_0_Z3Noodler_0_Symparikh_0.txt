@@ -1,0 +1,2 @@
+^[2-9][0-8]\d[2-9]\d{6}$
+WinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid4\x2e8\x2e4

@@ -1,0 +1,4 @@
+clvompycem\x2fcen\.vcnHost\x3AUser-Agent\x3A\x0d\x0a
+/filename\s*=\s*[^\r\n]*?\x2epcx[\x22\x27\x3b\s\r\n]/i
+^[a-zA-Z][a-zA-Z0-9_]+$
+[AaEeIiOoUuYy]

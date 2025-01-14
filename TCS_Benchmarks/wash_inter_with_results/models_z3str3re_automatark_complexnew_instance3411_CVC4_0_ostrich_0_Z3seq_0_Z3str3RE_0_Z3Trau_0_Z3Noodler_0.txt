@@ -1,0 +1,4 @@
+com\dsearch\x2econduit\x2ecom\s+User-Agent\x3A
+/\/docushare\/dsweb\/ResultBackgroundJobMultiple\/\d*[^\d]/U
+^[a-z]
+protocolNetControl\x2EServerKEYLOGGERUser-Agent\x3A

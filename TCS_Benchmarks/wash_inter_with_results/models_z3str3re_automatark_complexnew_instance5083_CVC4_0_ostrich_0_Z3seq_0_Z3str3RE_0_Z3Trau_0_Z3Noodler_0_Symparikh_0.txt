@@ -1,0 +1,3 @@
+User-Agent\x3A\s+GETwww\x2Eoemji\x2Ecom
+name\x2ecnnic\x2ecn\scom\x2Findex\.php\?tpid=\s\x5BStatic.*\x2Fbar_pl\x2Fb\.fcgi
+\x22reaction\x2Etxt\x22\d+sErverdist\x2Eatlas\x2Dia\x2EcomUser-Agent\x3A

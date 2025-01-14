@@ -1,0 +1,5 @@
+CodeguruBrowserMyPostStableWeb-MailUser-Agent\x3A195\.225\.
+/\x2ejar([\?\x5c\x2f]|$)/smiU
+wowokay\d+FTP\s+Host\x3AFiltered\x22reaction\x2Etxt\x22
+Kontiki\s+resultsmaster\x2Ecom\x7croogoo\x7c
+Referer\x3A\s+HXDownload.*Referer\x3AGREATDripline

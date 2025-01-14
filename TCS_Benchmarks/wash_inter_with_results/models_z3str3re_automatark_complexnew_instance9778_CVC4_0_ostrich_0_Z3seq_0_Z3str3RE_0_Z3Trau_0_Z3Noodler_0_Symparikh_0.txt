@@ -1,0 +1,4 @@
+/\.php\x3fw\x3d\d+\x26n\x3d\d+/U
+\x2Fsearchfast\x2F\s+Host\x3A\s+
+User-Agent\x3ABetaWordixqshv\x2fqzccsServer\x00
+^((0?[1-9]|1[012])(:[0-5]\d){1,2}(\ [AaPp][Mm]))$

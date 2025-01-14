@@ -1,0 +1,5 @@
+((\\")|[^"(\\")])+
+^([A-Z]{3}\s?(\d{3}|\d{2}|d{1})\s?[A-Z])|([A-Z]\s?(\d{3}|\d{2}|\d{1})\s?[A-Z]{3})|(([A-HK-PRSVWY][A-HJ-PR-Y])\s?([0][2-9]|[1-9][0-9])\s?[A-HJ-PR-Z]{3})$
+^[ a - z, 0 - 9 , ?   -   ?   ,?   -   ? , ?    -  ?   ,?   -  ? , . ]
+Subject\x3a\d+zmnjgmomgbdz\x2fzzmw\.gzt
+/\x2ejnlp([\?\x5c\x2f]|$)/smiU

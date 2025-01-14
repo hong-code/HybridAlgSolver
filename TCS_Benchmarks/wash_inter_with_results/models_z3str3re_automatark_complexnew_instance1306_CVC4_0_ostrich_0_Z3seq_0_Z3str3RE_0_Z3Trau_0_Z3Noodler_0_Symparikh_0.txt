@@ -1,0 +1,3 @@
+Windows\x2Fclient\x2FBlackreportc\.goclick\.comX-Sender\x3A
+Port\s+AgentHost\x3Ainsertkeys\x3Ckeys\x40hotpop
+(\"http:\/\/www\.youtube\.com\/v\/\w{11}\&rel\=1\")

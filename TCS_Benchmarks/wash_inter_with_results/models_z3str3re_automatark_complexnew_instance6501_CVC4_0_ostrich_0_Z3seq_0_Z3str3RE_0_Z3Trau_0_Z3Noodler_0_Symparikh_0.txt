@@ -1,0 +1,2 @@
+is\s+lnzzlnbk\x2fpkrm\.fin\s+Host\x3A\x2Ftoolbar\x2Fsupremetb
+/^\/b\/(letr|req|opt|eve)\/[0-9a-fA-F]{24}$/U

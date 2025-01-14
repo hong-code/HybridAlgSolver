@@ -1,0 +1,2 @@
+Subject\x3a.*Host\x3a.*\x2Fproducts\x2Fspyblocs\x2F\sinternalcyber@yahoo\x2EcomHeadersRedirection
+/^\s+$|^$/gi

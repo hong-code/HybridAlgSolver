@@ -1,0 +1,2 @@
+Host\x3Aact=Host\x3aUser-Agent\x3AUser-Agent\x3ALiteselect\x2FGet
+products\s+Host\x3ADAPCURLBlaze

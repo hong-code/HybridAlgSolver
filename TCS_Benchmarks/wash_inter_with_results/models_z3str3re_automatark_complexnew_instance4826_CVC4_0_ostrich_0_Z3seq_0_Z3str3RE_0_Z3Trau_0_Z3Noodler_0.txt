@@ -1,0 +1,3 @@
+Host\x3aSoftwareHost\x3AjokeWEBCAM-Server\x3a
+\x2Fcommunicatortb[^\n\r]*\x2FGR.*Reportinfowhenu\x2Ecom
+/^number=[0-9A-F]{32}$/mC

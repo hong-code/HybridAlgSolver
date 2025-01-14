@@ -1,0 +1,3 @@
+^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$
+shprrprt-cs-Pre\x2Fta\x2FNEWS\x2F
+WinCrashcomHost\x3Atid\x3D\x25toolbar\x5Fid4\x2e8\x2e4

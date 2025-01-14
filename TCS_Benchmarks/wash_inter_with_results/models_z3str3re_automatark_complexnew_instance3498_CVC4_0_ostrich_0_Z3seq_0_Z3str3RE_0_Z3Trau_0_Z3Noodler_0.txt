@@ -1,0 +1,5 @@
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom
+www\x2Eemp3finder\x2Ecom\d+ZOMBIES\x5fHTTP\x5fGET
+upgrade\x2Eqsrch\x2Einfo.*report.*Host\x3A.*Host\x3Akwd-i%3fUser-Agent\x3Awww\x2eproventactics\x2ecom
+/^number=[0-9A-F]{32}$/mC
+/^tcpdata\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

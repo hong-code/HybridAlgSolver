@@ -1,0 +1,4 @@
+/\x2eogg([\?\x5c\x2f]|$)/smiU
+DmInf\x5E\x0D\x0A\x0D\x0AAttached\x2Fbar_pl\x2Fchk\.fcgi
+^(\+?\d{1,2}[ -]?)?(\(\+?\d{2,3}\)|\+?\d{2,3})?[ -]?\d{3,4}[ -]?\d{3,4}$
+Hello\x2E\s+ovplrichfind\x2EcomCookie\x3a

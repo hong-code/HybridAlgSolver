@@ -1,0 +1,5 @@
+^([_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,})))(;[ ]?[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,})))*$
+/setup=[a-z]$/Ui
+frame_ver2\s+www\x2eurlblaze\x2enet\s+source\=IncrediFind\s+AgentHost\x3AHost\x3AHost\x3A\x2FGRSpynova3AFrom\x3A
+Points\d+Host\x3a\stoBasicwww\x2Ewebcruiser\x2Ecc
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi

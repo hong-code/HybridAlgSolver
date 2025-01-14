@@ -1,0 +1,5 @@
+\x2Fcommunicatortb[^\n\r]*\x2FGR.*Reportinfowhenu\x2Ecom
+/\/html\/license_[0-9A-F]{550,}\.html$/Ui
+\/cgi-bin\/PopupV\s+insert.*Host\x3aHELOHourssurvey\.asp\?nUserId=
+com\dsearch\x2econduit\x2ecom\s+User-Agent\x3A
+/\x2ettf([\?\x5c\x2f]|$)/smiU

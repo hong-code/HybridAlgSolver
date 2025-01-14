@@ -1,0 +1,4 @@
+^([a-zA-Z]+[\'\,\.\-]?[a-zA-Z ]*)+[ ]([a-zA-Z]+[\'\,\.\-]?[a-zA-Z ]+)+$
+wp-includes\x2Ftheme\x2Ephp\x3F.*Apofis\s+TencentTraveler
+(CY-?)?[0-9]{8}[A-Z]
+^01[0-2]{1}[0-9]{8}

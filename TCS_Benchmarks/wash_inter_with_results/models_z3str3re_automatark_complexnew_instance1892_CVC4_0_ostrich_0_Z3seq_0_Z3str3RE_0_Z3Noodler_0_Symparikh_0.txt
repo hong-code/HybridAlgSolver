@@ -1,0 +1,4 @@
+/^\x2F40e800[0-9A-F]{30,}$/Ui
+/\x2ert([\?\x5c\x2f]|$)/smiU
+^(([8]))$|^((([0-7]))$|^((([0-7])).?((25)|(50)|(5)|(75)|(0)|(00))))$
+Host\x3A\w+www.*ToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom

@@ -1,0 +1,4 @@
+Logger.*Host\x3A.*\x2Fcommunicatortb\x7croogoo\x7c
+^((0?[1-9]|1[012])(:[0-5]\d){1,2}(\ [AaPp][Mm]))$
+^[A-Z]{3}(\s)?[0-9]{4}$
+Port.*Pro.*www\x2eproventactics\x2ecomwv=update\.cgidrivesDays

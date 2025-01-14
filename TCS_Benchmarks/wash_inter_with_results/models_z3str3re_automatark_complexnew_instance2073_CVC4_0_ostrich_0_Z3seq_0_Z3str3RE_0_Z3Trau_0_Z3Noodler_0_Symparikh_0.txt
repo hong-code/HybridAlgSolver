@@ -1,0 +1,5 @@
+www\x2Epurityscan\x2Ecom.*
+^\d{1,5}(\.\d{1,2})?$
+Host\x3AHost\x3ALOGServer\.compressxpsp2-toolbar\x2Ehotblox\x2EcomAttached100013Agentsvr\x5E\x5EMerlin
+Contact\d+Host\x3A[^\n\r]*User-Agent\x3AHost\x3aMailHost\x3aMSNLOGOVN
+/ \x2D .{1,20}\x07(LAN|PROXY|MODEM|MODEM BUSY|UNKNOWN)\x07Win/

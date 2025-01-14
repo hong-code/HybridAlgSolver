@@ -1,0 +1,4 @@
+(.|[\r\n]){1,5}
+PortweatherX-Mailer\x3aUser-Agent\x3AToolbar
+HXDownloadUser-Agent\x3AanswerDeletingCookieReferer\x3A
+(^(\d|,)*\.?\d*[1-9]+\d*$)|(^[1-9]+(\d|,)*\.\d*$)|(^[1-9]+(\d|,)*\d*$)

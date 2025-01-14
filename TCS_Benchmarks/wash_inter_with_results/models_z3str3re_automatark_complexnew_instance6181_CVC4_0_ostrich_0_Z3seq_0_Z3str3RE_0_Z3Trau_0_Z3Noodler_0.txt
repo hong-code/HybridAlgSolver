@@ -1,0 +1,5 @@
+eveocczmthmmq\x2fomzl\d\x2Fasp\x2Foffers\.asp\?
+/filename\=[a-z0-9]{24}\.jar/H
+whenu\x2Ecom\d+Agent\stoWebupdate\.cgithisHost\x3aconnection
+^[0-9]{4} {0,1}[A-Z]{2}$
+^(-?\$?([1-9]\d{0,2}(,\d{3})*|[1-9]\d*|0|)(.\d{1,2})?|\(\$?([1-9]\d{0,2}(,\d{3})*|[1-9]\d*|0|)(.\d{1,2})?\))$

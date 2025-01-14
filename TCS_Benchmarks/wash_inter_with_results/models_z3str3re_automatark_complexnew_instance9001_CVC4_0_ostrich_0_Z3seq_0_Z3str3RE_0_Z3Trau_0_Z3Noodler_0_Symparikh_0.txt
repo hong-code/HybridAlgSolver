@@ -1,0 +1,4 @@
+Host\x3A.*rt[^\n\r]*Host\x3AUser-Agent\x3A
+\x22Thewebsearch\.getmirar\.com
+/^User-Agent\x3A[^\r\n]*TT-Bot/mi
+Host\x3AtoUser-Agent\x3AClientsConnected-

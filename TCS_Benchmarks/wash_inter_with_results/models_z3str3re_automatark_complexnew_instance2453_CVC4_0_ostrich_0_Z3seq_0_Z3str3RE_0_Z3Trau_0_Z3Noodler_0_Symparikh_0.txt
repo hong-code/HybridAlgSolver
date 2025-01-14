@@ -1,0 +1,2 @@
+Keylogger[^\n\r]*dll\x3F\w+www2\x2einstantbuzz\x2ecom\s+Online100013Agentsvr\x5E\x5EMerlinHost\x3AHost\x3Aport
+^\d{5}$|^\d{5}-\d{4}$

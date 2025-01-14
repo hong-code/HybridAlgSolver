@@ -1,0 +1,4 @@
+(ISBN[-]*(1[03])*[ ]*(: ){0,1})*(([0-9Xx][- ]*){13}|([0-9Xx][- ]*){10})
+M\x2Ezip.*w3who.*\x2Fcgi\x2Flogurl\.cgiMyPostdll\x3FHOST\x3A
+(?s)/\*.*\*/
+/\x2edae([\?\x5c\x2f]|$)/smiU

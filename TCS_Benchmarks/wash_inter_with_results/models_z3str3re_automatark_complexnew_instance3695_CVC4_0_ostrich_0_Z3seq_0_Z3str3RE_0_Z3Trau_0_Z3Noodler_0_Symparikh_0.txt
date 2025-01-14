@@ -1,0 +1,4 @@
+^\.{1}
+^((\(\d{3}\) ?)|(\d{3}-)|(\(\d{2}\) ?)|(\d{2}-)|(\(\d{1}\) ?)|(\d{1}-))?\d{3}-(\d{3}|\d{4})
+Host\x3A\w+www.*ToolbartheServer\x3Awww\x2Esearchreslt\x2Ecom
+GmbH\d+Host\x3A\w+adblock\x2Elinkz\x2EcomUser-Agent\x3Aemail

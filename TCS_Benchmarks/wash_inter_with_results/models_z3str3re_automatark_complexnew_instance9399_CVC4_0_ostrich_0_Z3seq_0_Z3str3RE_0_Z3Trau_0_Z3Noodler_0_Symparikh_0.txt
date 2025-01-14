@@ -1,0 +1,2 @@
+GamespyAttachedIndyReferer\x3AToolbarCurrent\x3BCIA
+/\x2fb\x2fshoe\x2f[0-9]{3,5}$/U

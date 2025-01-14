@@ -1,0 +1,5 @@
+^([EV])?\d{3,3}(\.\d{1,2})?$
+Port\x2Ebody=ocllceclbhs\x2fgthWeComputerLoggerHost\x3Agdvsotuqwsg\x2fdxt\.hd^User-Agent\x3A
+SecureNet.*\x2Fsearchfast\x2F
+Host\x3a\dOVNUsertooffers\x2Ebullseye-network\x2Ecom
+/\/feed\.dll\?pub_id=\d+?\&ua=/Ui

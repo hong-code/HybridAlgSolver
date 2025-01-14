@@ -1,0 +1,4 @@
+twfofrfzlugq\x2feve\.qd\d+
+User.*User-Agent\x3A.*ResultATTENTION\x3Ariggiymd\x2fwdhi\.vhi
+http\x3A\x2F\x2Ftv\x2Eseekmo\x2Ecom\x2Fshowme\x2Easpx\x3Fkeyword=
+/^\/\d{2,4}\.xap$/U

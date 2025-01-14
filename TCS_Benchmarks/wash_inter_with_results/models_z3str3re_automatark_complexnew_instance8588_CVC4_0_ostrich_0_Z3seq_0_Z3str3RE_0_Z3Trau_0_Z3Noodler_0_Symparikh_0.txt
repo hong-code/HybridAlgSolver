@@ -1,0 +1,4 @@
+traffbest\x2Ebiz\d+\.compress.*sidebar\.activeshopper\.comaresflashdownloader\x2Ecom
+as\x2Estarware\x2Ecom%3fUser-Agent\x3Ahostie
+this\w+c\.goclick\.com\d
+this\w+c\.goclick\.comletter

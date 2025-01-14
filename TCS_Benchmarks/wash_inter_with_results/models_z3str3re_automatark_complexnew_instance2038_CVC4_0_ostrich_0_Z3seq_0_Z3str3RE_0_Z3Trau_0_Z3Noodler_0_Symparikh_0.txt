@@ -1,0 +1,2 @@
+eveocczmthmmq\x2fomzl\d\x2Fasp\x2Foffers\.asp\?
+^http[s]?://twitter\.com/(#!/)?[a-zA-Z0-9]{1,15}[/]?$

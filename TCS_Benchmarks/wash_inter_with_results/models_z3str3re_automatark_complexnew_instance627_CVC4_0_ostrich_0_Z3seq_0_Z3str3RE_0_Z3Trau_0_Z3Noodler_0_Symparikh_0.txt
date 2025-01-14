@@ -1,0 +1,3 @@
+/\x2eram?([\?\x5c\x2f]|$)/smiU
+connectedNodes\s+insert\s+haveFTUser-Agent\x3A
+\x7D\x7BTrojan\x3A\w+Host\x3Arprpgbnrppb\x2fci

@@ -1,0 +1,3 @@
+/\x2efli([\?\x5c\x2f]|$)/smiU
+HXLogOnlyanHost\x3AspasHost\x3A
+.*[Oo0][Ee][Mm].*

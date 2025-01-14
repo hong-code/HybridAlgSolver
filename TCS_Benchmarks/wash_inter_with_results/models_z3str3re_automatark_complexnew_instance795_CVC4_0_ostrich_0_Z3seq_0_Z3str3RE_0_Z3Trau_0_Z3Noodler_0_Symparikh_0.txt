@@ -1,0 +1,4 @@
+/\x2eogx([\?\x5c\x2f]|$)/smiU
+www.*tool\x2Eworld2\x2Ecn
+^\d{1,5}(\.\d{1,2})?$
+Subject\x3a\s+BossUser-Agent\x3ASpediaUser-Agent\x3A

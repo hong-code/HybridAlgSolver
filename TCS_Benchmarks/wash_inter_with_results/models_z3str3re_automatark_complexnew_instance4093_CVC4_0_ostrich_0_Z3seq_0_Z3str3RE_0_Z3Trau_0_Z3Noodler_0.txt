@@ -1,0 +1,5 @@
+^[A-PR-UWYZ]([0-9]([A-HJKSTUW]|[0-9])?|[A-HK-Y][0-9]([ABEHMNPRVWXY]|[0-9])) [0-9][ABD-HJLNP-UW-Z]{2}|GIR 0AA$
+www\x2Ealtnet\x2Ecom[^\n\r]*Host\x3A
+/^\x2f[A-Z\d]{83}\x3d[A-Z\d]{10}$/Ui
+/\x3d\x0a$/P
+Host\x3AHost\x3AFrom\x3a\x03\x00\x1c\x00\x00\x00\x00\x00\x01Furaxbnymomspyo\x2fzowy

@@ -1,0 +1,5 @@
+/\/crypt_1_sell\d\d-\d\d.exe$/Ui
+^(([0]?[1-9]|1[0-2])(:)([0-5][0-9]))$
+OS\x2F\d+User-Agent\x3AUser-Agent\x3A
+dll\x3F\w+updates\w+Host\x3aSoftwareHost\x3Ajoke
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem

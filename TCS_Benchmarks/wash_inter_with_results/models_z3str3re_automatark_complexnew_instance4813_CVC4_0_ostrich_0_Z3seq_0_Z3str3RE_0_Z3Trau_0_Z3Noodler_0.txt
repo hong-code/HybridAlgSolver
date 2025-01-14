@@ -1,0 +1,5 @@
+AdTools\sdownloadfile\x2eorg\w+com\x3E[^\n\r]*as\x2Estarware\x2EcomOS\x2FSSKCstech\x2Eweb-nexus\x2Enet
+/\/\?[0-9a-f]{32}/Ui
+Host\x3A\dName=Your\+Host\+is\x3A.*has\s+ComputerKeylogger\x2EcomHost\x3A
+X-Mailer\x3A\s+www\.iggsey\.com
+/\x2ejar([\?\x5c\x2f]|$)/smiU

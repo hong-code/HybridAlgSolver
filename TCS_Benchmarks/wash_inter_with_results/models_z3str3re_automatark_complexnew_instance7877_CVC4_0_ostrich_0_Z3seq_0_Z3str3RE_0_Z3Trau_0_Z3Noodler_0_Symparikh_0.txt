@@ -1,0 +1,5 @@
+Host\x3A\s+ulmxct\x2fmqoycWinSession\x2Fclient\x2F\x2APORT1\x2A
+Remote\x3Cchat\x3EX-Mailer\x3awww\x2eproventactics\x2ecom
+^[a-z]
+\.cfg\s+xbqyosoe\x2fcpvmAdToolsconnectedNodes\/cgi-bin\/PopupV
+Host\x3A\.exePass-OnHost\x3A\.exe\x2Ftoolbar\x2F

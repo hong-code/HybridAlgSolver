@@ -1,0 +1,4 @@
+/^sleep\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/
+PASSW=\s+\x2Fta\x2FNEWS\x2F.*loomcompany\x2Ecom
+^((l((ll)|(b)|(bb)|(bbb)))|(bb*))$
+search2\.ad\.shopnav\.com\x2F9899\x2Fsearch\x2Fresults\.php.*Logger.*Subject\x3a\s+Host\x3AHost\x3A

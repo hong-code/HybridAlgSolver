@@ -1,0 +1,4 @@
+^[+]?100(\.0{1,2})?%?$|^[+]?\d{1,2}(\.\d{1,2})?%?$
+for[^\n\r]*Host\x3A\sinternalcyber@yahoo\x2EcomHeadersRedirection
+Port\x2E[^\n\r]*007\d+Logsdl\x2Eweb-nexus\x2Enet
+User-Agent\x3A\d+Desktop\sIDENTIFY666User-Agent\x3A\x5BStatic

@@ -1,0 +1,4 @@
+User-Agent\x3A\d+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+TPSystemHost\x3AHost\x3ashow\x2Eroogoo\x2EcomX-Mailer\x3A
+^[A-Z]{1}( |-)?[1-9]{1}[0-9]{3}$
+PASSW=.*www\x2Emakemesearch\x2Ecom.*HBand,X-Mailer\x3A

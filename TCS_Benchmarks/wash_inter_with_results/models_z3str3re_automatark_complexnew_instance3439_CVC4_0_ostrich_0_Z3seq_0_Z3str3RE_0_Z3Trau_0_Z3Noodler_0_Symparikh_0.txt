@@ -1,0 +1,3 @@
+^(GIR|[A-Z]\d[A-Z\d]?|[A-Z]{2}\d[A-Z\d]?)[ ]??(\d[A-Z]{0,2})??$
+\b[^aeiou]+[aeiou][^aeiou]+\b
+cyber@yahoo\x2Ecom\s+WindowsAttachedPalas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=

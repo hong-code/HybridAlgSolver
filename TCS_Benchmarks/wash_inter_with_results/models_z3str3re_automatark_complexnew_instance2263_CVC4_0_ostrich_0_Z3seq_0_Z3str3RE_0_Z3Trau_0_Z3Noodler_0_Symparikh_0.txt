@@ -1,0 +1,2 @@
+(^-\d*\.?\d*[1-9]+\d*$)|(^-[1-9]+\d*\.\d*$)
+e2give\.comConnectionSpywww\x2Eslinkyslate

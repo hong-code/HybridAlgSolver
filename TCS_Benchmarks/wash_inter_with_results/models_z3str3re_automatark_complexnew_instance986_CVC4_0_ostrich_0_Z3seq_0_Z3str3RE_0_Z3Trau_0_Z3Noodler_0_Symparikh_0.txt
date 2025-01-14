@@ -1,0 +1,4 @@
+SpyBuddyZOMBIES\x5fHTTP\x5fGETearch\x2Eearthlink
+((http(s)?:\/\/)?[a-z0-9-]{3,}(\.[a-z0-9-]{2,})+(:[0-9]+)?((\/[^\/\s.]+\.[^\/\s.,!]+)|(\/[^\/\s.,!]*))*)
+(\<(.*?)\>)(.*?)(\<\/(.*?)\>)
+www\x2Eweepee\x2Ecom\w+Owner\x3A\d+metaresults\.copernic\.com

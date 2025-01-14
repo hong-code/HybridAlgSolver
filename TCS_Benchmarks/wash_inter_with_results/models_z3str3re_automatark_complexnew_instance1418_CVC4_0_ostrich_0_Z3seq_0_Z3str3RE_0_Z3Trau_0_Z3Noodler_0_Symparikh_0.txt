@@ -1,0 +1,4 @@
+^\d*((\.\d+)?)*$
+FreeAccessBar\s+hostie[^\n\r]*CodeguruBrowser\dStableWeb-MailUser-Agent\x3A195\.225\.Subject\x3A
+WindowsAcmeReferer\x3A
+[\s]+

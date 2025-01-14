@@ -1,0 +1,5 @@
+^[-+]?\d+([.,]\d{0,2}){0,1}$
+cyber@yahoo\x2Ecom\s+Host\x3a\x7D\x7Crichfind\x2Ecom
+\swww\.fast-finder\.com[^\n\r]*\x2Fbar_pl\x2Fchk\.fcgi\d+Toolbar
+^[0-9#\*abcdABCD]+$
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi

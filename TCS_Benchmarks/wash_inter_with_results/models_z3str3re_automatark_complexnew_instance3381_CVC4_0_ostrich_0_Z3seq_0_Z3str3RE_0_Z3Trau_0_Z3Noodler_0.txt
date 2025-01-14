@@ -1,0 +1,4 @@
+(0?[1-9]|[12][0-9]|3[01])-(0?[1-9]|1[012])-((19|20)\\d\\d)
+/User-Agent\x3a\x20[^\x0d\x0a]*?\x3bU\x3a[^\x0d\x0a]{1,68}\x3brv\x3a/H
+ppcdomain\x2Eco\x2Euk\s+ready\w+PARSERHost\x3aA-311ServerUser-Agent\x3Ascn\x2emystoretoolbar\x2ecom
+/^(\x00\x00\x00\x00|.{4}(\x00\x00\x00\x00|.{12}))/s

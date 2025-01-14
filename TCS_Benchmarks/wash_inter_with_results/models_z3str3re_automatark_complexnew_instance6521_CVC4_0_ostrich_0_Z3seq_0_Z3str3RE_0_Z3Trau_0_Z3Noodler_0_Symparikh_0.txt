@@ -1,0 +1,5 @@
+Days\s+HWAE\s+Host\x3APortawww\.thecommunicator\.net
+^#(\d{6})|^#([A-F]{6})|^#([A-F]|[0-9]){6}
+.*[Pp]en[Ii1][\$s].*
+Host\x3Aact=Host\x3aUser-Agent\x3AUser-Agent\x3ALiteselect\x2FGet
+/\x2ert([\?\x5c\x2f]|$)/smiU

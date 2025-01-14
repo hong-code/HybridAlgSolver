@@ -1,0 +1,4 @@
+offers\x2Ebullseye-network\x2Ecom\s+news[^\n\r]*WatcherUser-Agent\x3A
+[\x80-\xFF]
+^([A-Z]{2}\s?(\d{2})?(-)?([A-Z]{1}|\d{1})?([A-Z]{1}|\d{1})?( )?(\d{4}))$
+\x7croogoo\x7cTestiufilfwulmfi\x2friuf\.lioHeaders

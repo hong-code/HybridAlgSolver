@@ -1,0 +1,2 @@
+Logger.*aresflashdownloader\x2Ecom
+^((Fred|Wilma)\s+Flintstone|(Barney|Betty)\s+Rubble)$

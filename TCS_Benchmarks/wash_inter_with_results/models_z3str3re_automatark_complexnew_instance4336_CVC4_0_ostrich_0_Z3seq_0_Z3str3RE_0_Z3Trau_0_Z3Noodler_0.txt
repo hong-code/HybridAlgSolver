@@ -1,0 +1,5 @@
+http://\([a-zA-Z0-9_\-]\+\(\.[a-zA-Z0-9_\-]\+\)\+\)\+:\?[0-9]\?\(/*[a-zA-Z0-9_\-#]*\.*\)*?\?\(&*[a-zA-Z0-9;_+/.\-%]*-*=*[a-zA-Z0-9;_+/.\-%]*-*\)*
+Handyst=ClassStopperHost\x3ASpamBlockerUtility
+^(\(\d{3}\)[- ]?|\d{3}[- ])?\d{3}[- ]\d{4}$
+\+353\(0\)\s\d\s\d{3}\s\d{4}
+protocol\s+3A\s+data2\.activshopper\.comUser-Agent\x3A

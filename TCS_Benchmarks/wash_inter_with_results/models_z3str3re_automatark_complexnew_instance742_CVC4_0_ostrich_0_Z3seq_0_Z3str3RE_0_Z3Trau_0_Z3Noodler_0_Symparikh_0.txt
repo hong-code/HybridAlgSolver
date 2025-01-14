@@ -1,0 +1,3 @@
+Subject\x3a\s+Yeah\!Online\x2521\x2521\x2521
+/hwid=[^\x0a\x26]+?\x26pc=[^\x0a\x26]+?\x26localip=[^\x0a\x26]+?\x26winver=/U
+/^\d{2}[\-\/]\d{2}[\-\/]\d{4}$/

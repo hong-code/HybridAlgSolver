@@ -1,0 +1,5 @@
+Host\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+hirmvtg\x2fggqh\.kqh\w+whenu\x2Ecom\w+weatherHost\x3AUser-Agent\x3A
+^([0-9]{6}[\s\-]{1}[0-9]{12}|[0-9]{18})$
+User-Agent\x3A\w+www\x2Etopadwarereviews\x2Ecom
+User-Agent\x3A\dBarwww\x2Eaccoona\x2Ecom

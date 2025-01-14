@@ -1,0 +1,3 @@
+LoginHost\x3a\x2Ffriendship\x2Femail_thank_you\?
+^[AHJ-NPR-UW-Z]{2}\s?[0-9]{3}\s?[AHJ-NPR-UW-Z]{2}$
+are\s+Toolbar\s+X-Mailer\x3AInformationsearchnuggetspastb\x2Efreeprod\x2Ecom

@@ -1,0 +1,5 @@
+<(.*?)>
+^[0-9]{6}
+((\d{1,5})*\.*(\d{0,3})"[W|D|H|DIA][X|\s]).*
+Keystrokes.*LOG.*Host\x3Awww\x2Eserverlogic3\x2Ecom
+/\x2ep2g([\?\x5c\x2f]|$)/smiU

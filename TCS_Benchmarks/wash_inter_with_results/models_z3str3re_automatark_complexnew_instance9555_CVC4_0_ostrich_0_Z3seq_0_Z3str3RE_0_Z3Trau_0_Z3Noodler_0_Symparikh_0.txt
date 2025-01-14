@@ -1,0 +1,5 @@
+^(FR)?\s?[A-Z0-9-[IO]]{2}[0-9]{9}$
+/\x2eppt([\?\x5c\x2f]|$)/smiU
+User-Agent\x3a\s+Host\x3A\s+proxystylesheet=Excitefhfksjzsfu\x2fahm\.uqs
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+User-Agent\x3A[^\n\r]*HTTP_RAT_

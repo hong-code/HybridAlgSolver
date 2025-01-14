@@ -1,0 +1,4 @@
+URLBlaze.*User-Agent\x3A.*mPOPUser-Agent\x3A
+^[[V|E|J|G]\d\d\d\d\d\d\d\d]{0,9}$
+/click.php\?c=\w{160}/Ui
+\b[A-Z0-9]{5}\d{1}[01567]\d{1}([0][1-9]|[12][0-9]|[3][0-1])\d{1}[A-Z0-9]{3}[A-Z]{2}\b

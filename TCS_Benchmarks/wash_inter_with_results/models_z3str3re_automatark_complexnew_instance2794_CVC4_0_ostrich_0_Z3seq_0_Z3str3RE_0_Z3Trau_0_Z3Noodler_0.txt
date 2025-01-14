@@ -1,0 +1,5 @@
+Supreme\d+Host\x3A\d+yxegtd\x2fefcwgHost\x3ATPSystem
+\$[0-9]?[0-9]?[0-9]?((\,[0-9][0-9][0-9])*)?(\.[0-9][0-9])?$
+^(1[89]|[2-9]\d)$
+Daemonwww\x2Elookquick\x2EcomHost\x3A
+Host\x3A.*c=[^\n\r]*KeyloggerHost\x3Awww\.trackhits\.cc

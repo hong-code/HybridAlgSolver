@@ -1,0 +1,3 @@
+.*-[0-9]{1,10}.*
+Host\x3A.*rt[^\n\r]*Host\x3AUser-Agent\x3A
+logs\d+X-Mailer\x3a\d+url=enews\x2Eearthlink\x2Enet

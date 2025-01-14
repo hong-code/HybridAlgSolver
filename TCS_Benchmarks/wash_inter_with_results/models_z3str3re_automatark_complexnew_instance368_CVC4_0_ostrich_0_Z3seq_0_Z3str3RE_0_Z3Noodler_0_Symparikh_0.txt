@@ -1,0 +1,4 @@
+/\x2epmd([\?\x5c\x2f]|$)/smiU
+^[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}$
+downloadfile\x2eorg\w+com\x3EHost\x3A
+Host\x3A\s+\x2Ftoolbar\x2Fico\x2F\dencoderserverreport\<\x2Ftitle\>

@@ -1,0 +1,5 @@
+securityOmFkbWluADROARad\x2Emokead\x2Ecom\x3C\x2Fchat\x3E
+/onload\s*\x3D\s*[\x22\x27]?location\.reload\s*\x28/smi
+^((6011)((-|\s)?[0-9]{4}){3})$
+www\x2EZSearchResults\x2Ecom\dBar.*sponsor2\.ucmore\.com
+linkautomatici\x2Ecom\dBasic\d+Host\x3AFloodedFictionalUser-Agent\x3A

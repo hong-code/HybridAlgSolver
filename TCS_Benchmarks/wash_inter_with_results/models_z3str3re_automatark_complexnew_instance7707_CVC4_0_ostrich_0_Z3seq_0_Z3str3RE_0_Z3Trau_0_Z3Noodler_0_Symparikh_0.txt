@@ -1,0 +1,3 @@
+/^POST\x20\x2f[A-F\d]{42}\x20HTTP/
+Yeah\!User-Agent\x3a
+Googlelog\=\x7BIP\x3APG=SPEEDBAR

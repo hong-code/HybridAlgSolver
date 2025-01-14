@@ -1,0 +1,4 @@
+User-Agent\x3A\s+GETwww\x2Eoemji\x2Ecom
+\x2Fbar_pl\x2Fchk\.fcgiHWAEcom\x2Findex\.php\?tpid=
+t=[^\n\r]*Host\x3A\s+Basicaohobygi\x2fzwiw
+^[+][0-9]\d{2}-\d{3}-\d{4}$

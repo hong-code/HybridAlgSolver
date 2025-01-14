@@ -1,0 +1,3 @@
+richfind\x2Ecom\s+Host\x3A.*User-Agent\x3Athroughpjpoptwql\x2frlnj
+\x7D\x7BPort\x3AHost\x3Amqnqgijmng\x2fojNavhelperUser-Agent\x3A
+phpinfo[^\n\r]*195\.225\.\dccecaedbebfcaf\x2Ecom

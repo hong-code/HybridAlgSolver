@@ -1,0 +1,3 @@
+^\d+?(\.\d+)?$
+/^[a-z]{5}\d=_\d_/C
+/^loginpost\x7c\d+\x7c\d+\x7C[a-z0-9]+\x2E[a-z]{2,3}\x7C[a-z0-9]+\x7C/

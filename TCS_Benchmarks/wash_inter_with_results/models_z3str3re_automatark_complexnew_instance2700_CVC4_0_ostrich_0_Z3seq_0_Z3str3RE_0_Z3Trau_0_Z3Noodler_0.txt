@@ -1,0 +1,5 @@
+^[0-3][0-9][0-1]\d{3}-\d{4}?
+url=http\x3A\s+jsp[^\n\r]*serverHOST\x3ASubject\x3Ai\-femdom\x2Ecom
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi
+yddznydqir\x2feviaresflashdownloader\x2Ecom
+/^\/[a-z0-9]{32}\/[a-z0-9]{32}\.jnlp/U

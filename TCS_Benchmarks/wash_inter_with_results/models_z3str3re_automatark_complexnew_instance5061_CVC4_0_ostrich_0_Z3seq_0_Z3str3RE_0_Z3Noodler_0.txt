@@ -1,0 +1,5 @@
+www\x2Eweepee\x2Ecom\d+metaresults\.copernic\.com\s+
+/X-ID\x3a\s\x30\x30+[0-9a-f]{20}(\r\n)+/iH
+search\x2eimesh\x2ecom\s+WatchDogupwww\.klikvipsearch\.com
+^([0]\d|[1][0-2])\/([0-2]\d|[3][0-1])\/([2][01]|[1][6-9])\d{2}(\s([0-1]\d|[2][0-3])(\:[0-5]\d){1,2})?$
+/[a-z\d\x2f\x2b\x3d]{100,300}/Pi

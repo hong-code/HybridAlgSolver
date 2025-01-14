@@ -1,0 +1,4 @@
+\x2Easpx\s+www\x2Ealtnet\x2EcomSubject\x3A
+/\.(jsp|html)\?[^\r\n]*PG=SPEEDBAR/Ui
+((\(\d{3,4}\)|\d{3,4}-)\d{4,9}(-\d{1,5}|\d{0}))|(\d{4,12})
+/\x2exsl([\?\x5c\x2f]|$)/smiU

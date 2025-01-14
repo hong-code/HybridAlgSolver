@@ -1,0 +1,2 @@
+/\x2elzh([\?\x5c\x2f]|$)/smiU
+/\/index\d{9}\.asp/i

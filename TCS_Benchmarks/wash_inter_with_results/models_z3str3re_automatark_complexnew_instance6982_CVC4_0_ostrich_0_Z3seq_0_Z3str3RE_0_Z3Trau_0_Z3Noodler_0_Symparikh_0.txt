@@ -1,0 +1,2 @@
+/^[a-z\d\x2b\x2f\x3d]{48,256}$/iP
+\x2Ehtml\s+IDENTIFY\s+\x2Fbar_pl\x2Ffav\.fcgiwwwUser-Agent\x3A

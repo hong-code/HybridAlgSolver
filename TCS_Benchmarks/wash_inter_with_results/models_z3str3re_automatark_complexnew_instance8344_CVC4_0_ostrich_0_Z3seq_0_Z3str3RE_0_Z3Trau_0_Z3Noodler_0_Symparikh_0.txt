@@ -1,0 +1,4 @@
+/\x2ejpg([\?\x5c\x2f]|$)/smiU
+weather2ResultX-Sender\x3A
+Apofis.*Port\x2E\s+\x2FNFO\x2CRegistered
+^[a-zA-Z]\w{3,14}$

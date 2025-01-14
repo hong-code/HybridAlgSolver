@@ -1,0 +1,2 @@
+Ready\s+Eye.*http\x3A\x2F\x2Fsupremetoolbar
+(.|[\r\n]){1,5}

@@ -1,0 +1,3 @@
+User-Agent\x3AX-Mailer\x3aHost\x3Adcww\x2Edmcast\x2Ecom
+\sKeylogging\s+ApofisToolbar
+^([A-Z]|[a-z]){4} ?[0-9]{6}-?[0-9]{1}$

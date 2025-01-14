@@ -1,0 +1,5 @@
+/mJKV[^\s\x0D\x0A]+1Q_fQ_fQ_fQ_fQ_fQ_fQ_fQ/U
+Software\s+User-Agent\x3A.*FictionalUser-Agent\x3AUser-Agent\x3a
+X-Mailer\x3A.*\x2Frss.*Desktopcargo=report\<\x2Ftitle\>
+Logger\w+searchreslt\dSubject\x3AHANDY\x2FrssScaner
+^((\+989)|(989)|(00989)|(09|9))([1|2|3][0-9]\d{7}$)

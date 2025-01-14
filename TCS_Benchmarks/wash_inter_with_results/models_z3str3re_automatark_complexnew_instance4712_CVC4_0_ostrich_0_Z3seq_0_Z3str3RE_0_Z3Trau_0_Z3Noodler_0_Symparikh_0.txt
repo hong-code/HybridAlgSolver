@@ -1,0 +1,4 @@
+^\d?\d'(\d|1[01])"$
+DesktopBladeclient=wwwHello\x2Exmlns\x3A
+/^\/[a-z0-9]{32}\/[a-z0-9]{32}\.jnlp/U
+User-Agent\x3ABetaWordixqshv\x2fqzccsServer\x00

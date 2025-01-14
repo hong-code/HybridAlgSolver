@@ -1,0 +1,3 @@
+com\dsearch\x2econduit\x2ecom\s+User-Agent\x3A
+/(\d*\.?\d+)\s?(px|em|ex|%|in|cn|mm|pt|pc+)/igm
+/\x2eflac([\?\x5c\x2f]|$)/smiU

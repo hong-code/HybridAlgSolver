@@ -1,0 +1,5 @@
+^\$?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$
+URL\s+url=Host\x3ahttpUser-Agent\x3ASubject\x3A
+\.bmp[^\n\r]*couponbar\.coupons\.com.*Host\x3AHost\x3aHTTPwww
+/^Subject\x3A[^\r\n]*Trojaner-Info\sNewsletter/smi
+^([A-Za-z]|[A-Za-z][0-9]*|[0-9]*[A-Za-z])+$

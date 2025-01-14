@@ -1,0 +1,5 @@
+(facebook|twitter|youtube)
+User-Agent\x3A\s+information\swww\x2Etopadwarereviews\x2Ecom
+NetTracker.*Theef2[^\n\r]*versionA-311Subject\x3awww\x2Epcsentinelsoftware\x2Ecom
+^[A-Z0-9a-z'&()/]{0,1}[A-Z0-9a-z'&()/]{0,1}(([A-Z0-9a-z'&()/_-])|(\\s)){0,47}[A-Z0-9a-z'&()/]{1}$
+X-Mailer\x3A.*\x2Frss.*Desktopcargo=report\<\x2Ftitle\>

@@ -1,0 +1,5 @@
+Host\x3A\dName=Your\+Host\+is\x3A.*has\s+ComputerKeylogger\x2EcomHost\x3A
+3[47]\d{13}
+twfofrfzlugq\x2feve\.qd\d+
+adserver\.warezclient\.com\s+URLBlaze\s+Host\x3AHost\x3A
+[({]?(0x)?[0-9a-fA-F]{8}([-,]?(0x)?[0-9a-fA-F]{4}){2}((-?[0-9a-fA-F]{4}-?[0-9a-fA-F]{12})|(,\{0x[0-9a-fA-F]{2}(,0x[0-9a-fA-F]{2}){7}\}))[)}]?

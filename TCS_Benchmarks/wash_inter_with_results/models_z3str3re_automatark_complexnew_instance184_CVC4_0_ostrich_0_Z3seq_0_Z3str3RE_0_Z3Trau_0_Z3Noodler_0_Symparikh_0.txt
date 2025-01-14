@@ -1,0 +1,4 @@
+\x0D\x0A\x0D\x0AAttached.*Host\x3A\s+ZC-Bridge
+^\d{5}$|^\d{5}-\d{4}$
+/window\x2elocation\s*=\s*unescape\s*\x28\s*["']\x25[^"']*https?\x3a/
+HXLogOnlyanHost\x3AspasHost\x3A

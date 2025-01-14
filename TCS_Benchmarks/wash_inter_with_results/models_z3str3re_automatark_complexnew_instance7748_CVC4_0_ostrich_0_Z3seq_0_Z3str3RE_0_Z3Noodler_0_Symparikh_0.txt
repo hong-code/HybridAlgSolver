@@ -1,0 +1,4 @@
+\x28BDLL\x29\s+CD\x2F.*Host\x3A
+/^\/[-\w]{70,78}==?$/U
+^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}[- ]{0,1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}
+(antifraud\.ref\.num)[0-9]*(@citibank\.com)

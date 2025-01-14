@@ -1,0 +1,4 @@
+[+]346[0-9]{8}
+richfind\x2Ecomdcww\x2Edmcast\x2Ecom
+Port\s+AgentHost\x3Ainsertkeys\x3Ckeys\x40hotpop
+(\/\*(\s*|.*?)*\*\/)|(--.*)

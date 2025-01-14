@@ -1,0 +1,4 @@
+^[a-zA-Z]\:\\.*|^\\\\.*
+^[A-Z].*$
+ShadowNet\s+AID\x2FUser-Agent\x3AFen\xeatreEye\x2Fdss\x2Fcc\.2_0_0\.
+^(([0-9]{3})[-]?)*[0-9]{6,7}$

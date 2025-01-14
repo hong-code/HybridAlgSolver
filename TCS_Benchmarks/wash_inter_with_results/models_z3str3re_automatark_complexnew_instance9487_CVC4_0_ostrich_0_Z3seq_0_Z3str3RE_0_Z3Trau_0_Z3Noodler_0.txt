@@ -1,0 +1,5 @@
+devSoft\x27s\s+Host\x3AHost\x3A
+news\s+Host\x3A.*Peerwww\x2Elocators\x2Ecom
+nick_name=CIA-Test\d+url=http\x3A\d+\x2FNFO\x2CRegistered\x28BDLL\x29
+^[0-9]*\/{1}[1-9]{1}[0-9]*$
+(\bprotected\b.*(public))|(\bprivate\b.*(protected))|(\bprivate\b.*(public))

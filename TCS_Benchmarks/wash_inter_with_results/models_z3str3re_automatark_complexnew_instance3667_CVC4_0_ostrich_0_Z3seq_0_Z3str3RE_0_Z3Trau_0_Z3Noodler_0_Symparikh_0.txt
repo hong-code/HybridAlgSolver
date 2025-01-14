@@ -1,0 +1,3 @@
+^[-+]?(\d?\d?\d?,?)?(\d{3}\,?)*$
+IDENTIFY.*\x2Fezsb\d+X-Mailer\x3A
+pjpoptwql\x2frlnjsportsHost\x3ASubject\x3aYAHOOdestroyed\x21

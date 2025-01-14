@@ -1,0 +1,5 @@
+/\/[0-9A-F]{24}/Ui
+[+]346[0-9]{8}
+AgentHWAEUser-Agent\x3A
+YWRtaW46cGFzc3dvcmQ\s+www\x2Ealfacleaner\x2Ecom
+configINTERNAL\.inikwdwww\x2Ewordiq\x2Ecomas\x2Estarware\x2Ecom

@@ -1,0 +1,5 @@
+^[ABCGHJMPQRTWXYZ]$
+emailFrom\x3AUser-Agent\x3AUser-Agent\x3Aselect\x2FGet
+/\/[a-f0-9]{32}\/[a-f0-9]{32}\x22/R
+/^[1-9][0-9][0-9][0-9][0-9][0-9]$/
+Host\s+pjpoptwql\x2frlnjSubject\x3A

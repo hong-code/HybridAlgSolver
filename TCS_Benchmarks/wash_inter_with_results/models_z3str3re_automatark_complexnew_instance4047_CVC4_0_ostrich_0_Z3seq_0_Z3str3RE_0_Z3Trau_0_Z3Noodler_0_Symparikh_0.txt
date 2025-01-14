@@ -1,0 +1,2 @@
+wjpropqmlpohj\x2flo\s+media\x2Edxcdirect\x2Ecom
+(^\d{3,4}\-\d{4}$)|(^\d{7,8}$)

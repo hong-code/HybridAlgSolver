@@ -1,0 +1,4 @@
+www\.actualnames\.com\s+toolbar_domain_redirect\s+Contactfrom=GhostVoiceServer
+tid\x3D\x7B\s+Basic.*\x2Ftoolbar\x2F
+^([a-z|A-Z]{1}[0-9]{3})[-]([0-9]{3})[-]([0-9]{2})[-]([0-9]{3})[-]([0-9]{1})
+spyblpat.*is[^\n\r]*BarFrom\x3AHost\x3Agdvsotuqwsg\x2fdxt\.hdPASSW=

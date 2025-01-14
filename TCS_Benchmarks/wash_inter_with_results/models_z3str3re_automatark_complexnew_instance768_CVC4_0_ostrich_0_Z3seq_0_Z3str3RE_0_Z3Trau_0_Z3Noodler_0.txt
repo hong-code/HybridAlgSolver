@@ -1,0 +1,5 @@
+M\x2Ezip.*w3who.*\x2Fcgi\x2Flogurl\.cgiMyPostdll\x3FHOST\x3A
+HXDownload\s+Host\x3AArcadeHourspjpoptwql\x2frlnjFrom\x3A
+Host\x3AAddressDaemonUser-Agent\x3AUser-Agent\x3a
+/^[a-z\d\x2b\x2f\x3d]{48,256}$/iP
+Referer\x3aHost\x3aport\x3aactivity

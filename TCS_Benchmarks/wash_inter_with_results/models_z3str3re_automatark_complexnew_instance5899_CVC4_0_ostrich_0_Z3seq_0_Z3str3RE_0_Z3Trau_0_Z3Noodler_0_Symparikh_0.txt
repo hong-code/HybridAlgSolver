@@ -1,0 +1,3 @@
+(([A-Z]{1,2}[0-9][0-9A-Z]?)\ ([0-9][A-Z]{2}))|(GIR\ 0AA)
+/\/[a-zA-Z0-9]{4,10}\.jar$/U
+to=\x2Fezsb\s\x3Ahirmvtg\x2fggqh\.kqhSPYzzzvmkituktgr\x2fetie

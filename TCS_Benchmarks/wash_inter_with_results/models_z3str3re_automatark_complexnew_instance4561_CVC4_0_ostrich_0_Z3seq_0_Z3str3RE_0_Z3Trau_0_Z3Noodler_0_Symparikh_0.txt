@@ -1,0 +1,5 @@
+/\x2ecsd([\?\x5c\x2f]|$)/smiU
+RequestedLoggedtb\x2Efreeprod\x2EcomHWAESubject\x3aadserver\.warezclient\.com
+^((1[01])|(\d)):[0-5]\d(:[0-5]\d)?\s?([apAP][Mm])?$
+(facebook|twitter|youtube)
+([a-zA-Z]{2}[0-9]{1,2}\s{0,1}[0-9]{1,2}[a-zA-Z]{2})

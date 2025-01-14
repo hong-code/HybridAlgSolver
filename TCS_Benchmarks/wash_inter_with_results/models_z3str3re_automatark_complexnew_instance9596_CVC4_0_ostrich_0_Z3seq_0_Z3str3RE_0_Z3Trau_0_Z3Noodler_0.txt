@@ -1,0 +1,5 @@
+^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$
+/ID3\x03\x00.{5}([TW][A-Z]{3}|COMM)/smi
+^((1[1-9]|2[03489]|3[0347]|5[56]|7[04-9]|8[047]|9[018])\d{8}|(1[2-9]\d|[58]00)\d{6}|8(001111|45464\d))$
+\x2Fbar_pl\x2Fb\.fcgiHost\x3AHost\x3AClass\x2Ftoolbar\x2Fico\x2FGoogleLogsencoderserver
+^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$

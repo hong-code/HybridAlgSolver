@@ -1,0 +1,5 @@
+[()+-.0-9]*
+\{\\\*\\bkmkstart\s(.*?)\}
+([0-9a-zA-Z]+)|([0-9a-zA-Z][0-9a-zA-Z\\s]+[0-9a-zA-Z]+)
+\d+(/\d+)?
+TPSystemHost\x3AHost\x3ashow\x2Eroogoo\x2EcomX-Mailer\x3A

@@ -1,0 +1,3 @@
+Spynova\s+ZC-Bridge.*Host\x3A\s+TPSystemHost\x3AHost\x3ashow\x2Eroogoo\x2EcomX-Mailer\x3A
+^([A-z]{2}\d{7})|([A-z]{4}\d{10})$
+^.{4,8}$

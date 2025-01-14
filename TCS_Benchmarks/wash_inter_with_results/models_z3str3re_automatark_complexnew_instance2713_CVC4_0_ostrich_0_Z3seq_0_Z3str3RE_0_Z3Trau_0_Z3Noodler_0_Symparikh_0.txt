@@ -1,0 +1,4 @@
+Minutes\s+\x2Fcgi\x2Flogurl\.cgi\s+e2give\.com
+^((0?[1-9])|(([1|2]\d)|(3[0|1])))(/|-)((0?[1-9])|(1[0|1|2]))(/|-)(((19|20)\d\d)|(\d\d))
+^\d+([^.,])?$
+zzzvmkituktgr\x2fetie\sHost\x3ASoftActivityYeah\!whenu\x2Ecom

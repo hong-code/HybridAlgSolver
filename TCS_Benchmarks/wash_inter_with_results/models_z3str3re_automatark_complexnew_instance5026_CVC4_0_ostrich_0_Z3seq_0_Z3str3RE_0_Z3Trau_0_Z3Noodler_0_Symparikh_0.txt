@@ -1,0 +1,4 @@
+href[ ]*=[ ]*('|\")([^\"'])*('|\")
+\x7D\x7BPassword\x3ADesktopDownloadfowclxccdxn\x2fuxwn\.ddy
+^(sip|sips)\:\+?([\w|\:?\.?\-?\@?\;?\,?\=\%\&]+)
+^[A-Z]{3}-[0-9]{4}$

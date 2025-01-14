@@ -1,0 +1,4 @@
+X-Mailer\x3a[^\n\r]*Host\x3A\s+cyber@yahoo\x2Ecom
+/\x28compatible\x3b[A-Z]*\x3b\x29\x0d\x0a/H
+^(\d{4})[.](0{0,1}[1-9]|1[012])[.](0{0,1}[1-9]|[12][0-9]|3[01])[.](\d{2})$
+Host\x3A\s+Boss\s+media\x2Etop-banners\x2Ecom

@@ -1,0 +1,3 @@
+Host\x3a[^\n\r]*A-311\s+lnzzlnbk\x2fpkrm\.finSubject\x3aBasic
+^\.([rR]([aA][rR]|\d{2})|(\d{3})?)$
+Ready\s+Toolbar\d+ServerLiteToolbar

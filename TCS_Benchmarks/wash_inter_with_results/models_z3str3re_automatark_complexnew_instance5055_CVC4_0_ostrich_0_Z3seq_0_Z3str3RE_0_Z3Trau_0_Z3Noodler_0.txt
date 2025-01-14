@@ -1,0 +1,5 @@
+Logger\w+searchreslt\dSubject\x3AHANDY\x2FrssScaner
+/\/elections\.php\?([a-z0-9]+\x3d\d{1,3}\&){9}[a-z0-9]+\x3d\d{1,3}$/U
+\d+([\.|\,][0]+?[1-9]+)?
+SecureNet\sHost\x3AX-Mailer\x3Aas\x2Estarware\x2Ecom
+IDENTIFY666User-Agent\x3A\x5BStaticSend=Host\x3Awww\.iggsey\.com

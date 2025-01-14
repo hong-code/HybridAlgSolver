@@ -1,0 +1,5 @@
+[\x01-\x08,\x0A-\x1F,\x7F,\x81,\x8D,\x8F,\x90,\x9D]
+Spy\s+toolbar_domain_redirect
+/\x2exml([\?\x5c\x2f]|$)/smiU
+^[a-zA-Z_][a-zA-Z0-9_]*$
+\x2Fezsb\s+hirmvtg\x2fggqh\.kqh\dRemotetoolsbar\x2Ekuaiso\x2Ecom

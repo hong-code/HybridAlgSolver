@@ -1,0 +1,2 @@
+www\x2Ecameup\x2Ecom\s+spyblini\x2Eini
+presentsearch\.netLocalHost\x3APORT\x3DWatchDogHost\x3A

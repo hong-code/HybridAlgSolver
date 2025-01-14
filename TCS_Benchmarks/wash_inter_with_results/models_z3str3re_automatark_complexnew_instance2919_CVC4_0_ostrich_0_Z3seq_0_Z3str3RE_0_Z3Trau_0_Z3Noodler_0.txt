@@ -1,0 +1,5 @@
+/\/3\/[A-Z]{2}\/[a-f0-9]{32}\/\d+\.\d+\.\d+\.\d+\//
+/\x2emka([\?\x5c\x2f]|$)/smiU
+User-Agent\x3AUser-Agent\x3aURLencoderthis\x7CConnected
+whenu\x2Ecom\d+Agent\stoWebupdate\.cgithisHost\x3aconnection
+/\x2esmi([\?\x5c\x2f]|$)/smiU

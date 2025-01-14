@@ -1,0 +1,4 @@
+/\/[0-9A-F]{24}/Ui
+.*\$AVE|\$ave.*
+version\s+error\*\-\*WrongUser-Agent\x3Acom\x2Findex\.php\?tpid=
+\$(\d)*\d

@@ -1,0 +1,3 @@
+^[A-G](b|#)?((m(aj)?|M|aug|dim|sus)([2-7]|9|13)?)?(\/[A-G](b|#)?)?$
+Host\x3A\d+Black\s+daosearch\x2EcomMyPostwww\.raxsearch\.com
+ShadowNet\dsearchreslt\sTROJAN-Host\x3AYWRtaW46cGFzc3dvcmQ

@@ -1,0 +1,2 @@
+sql.*badurl\x2Egrandstreetinteractive\x2Ecom
+^[0-9]{6}

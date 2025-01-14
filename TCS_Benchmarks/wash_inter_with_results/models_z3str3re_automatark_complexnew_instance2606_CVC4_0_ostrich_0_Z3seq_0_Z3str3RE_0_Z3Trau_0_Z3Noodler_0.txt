@@ -1,0 +1,5 @@
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym
+^(192\.168\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5]\.[0-9]|[1-9][0-9]|[1-2][0-5][0-5])$
+com.*is[^\n\r]*Host\x3A\s+User-Agent\x3Au=serverFILE\x2Fxml\x2Ftoolbar\x2Fcheck=at\x3aHost\x3A
+([.])([a-z,1-9]{3,4})(\/)
+GREAT\d+X-Mailer\x3a\d+url=enews\x2Eearthlink\x2Enet

@@ -1,0 +1,2 @@
+\r\nSTATUS\x3AUser-Agent\x3AHost\x3aReferer\x3A
+/\r\n\r\nsession\x3a\d{1,7}$/

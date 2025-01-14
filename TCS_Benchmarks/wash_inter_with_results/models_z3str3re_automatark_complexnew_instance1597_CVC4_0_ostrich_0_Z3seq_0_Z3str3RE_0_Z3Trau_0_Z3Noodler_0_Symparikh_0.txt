@@ -1,0 +1,2 @@
+Host\x3A\s+\x2FNFO\x2CRegisteredDeletingadfsgecoiwnf
+(^\d{3,4}\-\d{4}$)|(^\d{7,8}$)

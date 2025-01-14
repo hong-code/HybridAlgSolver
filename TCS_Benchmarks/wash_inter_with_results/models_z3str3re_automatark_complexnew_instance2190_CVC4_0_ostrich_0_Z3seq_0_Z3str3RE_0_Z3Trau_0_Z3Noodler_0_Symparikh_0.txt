@@ -1,0 +1,4 @@
+vbwwwc\.goclick\.compassword\x3B0\x3BIncorrect
+securityon\x3AHost\x3ARedirector\x22ServerHost\x3A
+/\x2efli([\?\x5c\x2f]|$)/smiU
+/\x2eram?([\?\x5c\x2f]|$)/smiU

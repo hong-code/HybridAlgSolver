@@ -1,0 +1,4 @@
+([0-9]{1,2}[:][0-9]{1,2}[:]{0,2}[0-9]{0,2}[\s]{0,}[AMPamp]{0,2})
+Port\s+AgentHost\x3Ainsertkeys\x3Ckeys\x40hotpop
+/\x2e3gp([\?\x5c\x2f]|$)/smiU
+\x1f\x8b\x08\x00.+\x00\x00

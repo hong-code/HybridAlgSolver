@@ -1,0 +1,5 @@
+X-Mailer\x3A.*\x2Frss.*Desktopcargo=report\<\x2Ftitle\>
+Host\x3A\d+Subject\x3A[^\n\r]*Seconds\-ovplHost\x3AHost\x3ADownload
+^(100(\.0{0,2}?)?$|([1-9]|[1-9][0-9])(\.\d{1,2})?)$
+EFError.*Host\x3A\swww\x2emalware-stopper\x2ecom
+^(\+27|27)?(\()?0?[87][23467](\))?( |-|\.|_)?(\d{3})( |-|\.|_)?(\d{4})

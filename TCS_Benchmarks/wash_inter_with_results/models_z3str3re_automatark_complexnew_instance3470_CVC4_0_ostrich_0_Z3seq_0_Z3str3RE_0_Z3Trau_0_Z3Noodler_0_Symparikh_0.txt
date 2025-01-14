@@ -1,0 +1,3 @@
+User-Agent\x3Agpstool\x2eglobaladserver\x2ecom
+adblock\x2Elinkz\x2Ecomwww\.iggsey\.comHost\x3A
+<script[\\.|\\W|\\w]*?</script>

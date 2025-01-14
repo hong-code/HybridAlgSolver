@@ -1,0 +1,2 @@
+Runner.*\x2Ehtml[^\n\r]*NetControl\x2EServer\d+media\x2Edxcdirect\x2Ecom\.smx\?PASSW=SAH
+SpyAgent\d+sErver\s+User-Agent\x3A

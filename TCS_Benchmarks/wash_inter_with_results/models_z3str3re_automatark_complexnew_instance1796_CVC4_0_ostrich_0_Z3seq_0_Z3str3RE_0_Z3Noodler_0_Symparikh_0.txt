@@ -1,0 +1,5 @@
+^(((ht|f)tp(s?))\://).*$
+^((CN=['\w\d\s\-\&]+,)+(OU=['\w\d\s\-\&]+,)*(DC=['\w\d\s\-\&]+[,]*){2,})$
+From\x3A.*Host\x3A\s+Downloadfowclxccdxn\x2fuxwn\.ddy
+/\x2f[A-F0-9]{158}/U
+from\x3A\dwww\.thecommunicator\.net

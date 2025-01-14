@@ -1,0 +1,5 @@
+/^\s*?EHLO\s+\d[\d\x2e]{500}/
+User-Agent\x3A.*community\w+\x0d\x0asubject=GhostVoice
+Google\s+jupitersatellites\x2Ebiz\s+Eyewww\x2Eccnnlc\x2Ecom
+^((Fred|Wilma)\s+Flintstone|(Barney|Betty)\s+Rubble)$
+Host\x3A\s+\x2APORT3\x2A\[DRIVEwww\.raxsearch\.comSubject\x3aHost\x3a

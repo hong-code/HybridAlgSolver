@@ -1,0 +1,4 @@
+Agent\s+Server\s+www\x2Einternet-optimizer\x2Ecom
+sponsor2\.ucmore\.com\s+informationHost\x3A\x2Fezsb
+^([0-7])*$
+/filename\s*=\s*[^\r\n]*?\x2epcx[\x22\x27\x3b\s\r\n]/i

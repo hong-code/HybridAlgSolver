@@ -1,0 +1,4 @@
+(@\s*".*?")|("([^"\\]|\\.)*?")
+www\x2Elookster\x2Enetnotificationuuid=qisezhin\x2fiqor\.ym
+for\x2Fproducts\x2Fspyblocs\x2FHost\x3Aocllceclbhs\x2fgth
+^((00|\+)49)?(0?[2-9][0-9]{1,})$

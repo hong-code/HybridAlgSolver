@@ -1,0 +1,5 @@
+^[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+\.[a-zA-Z]{2,4}\s*$
+Host\x3A\x252EResultsUser-Agent\x3A
+t=ProtoUser-Agent\x3Aquick\x2Eqsrch\x2Ecom
+\.exe\s+ZC-Bridge\s+TPSystemHost\x3AHost\x3a
+too[^\n\r]*User-Agent\x3A\sHost\x3A.*IP-WindowsAttachedPalas\x2Estarware\x2Ecom\x2Fdp\x2Fsearch\?x=

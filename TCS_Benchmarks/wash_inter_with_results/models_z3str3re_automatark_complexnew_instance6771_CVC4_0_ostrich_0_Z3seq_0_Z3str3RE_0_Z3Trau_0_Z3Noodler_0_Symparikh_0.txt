@@ -1,0 +1,2 @@
+www\x2Eweepee\x2Ecom\d+metaresults\.copernic\.com\s+
+(077|078|079)\s?\d{2}\s?\d{6}

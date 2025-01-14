@@ -1,0 +1,5 @@
+comLOGUser-Agent\x3Aistsvcwww\x2Eoemji\x2EcomSystemSleuth
+^(\d{4},?)+$
+^([1-9]|1[0-2])$
+^\d{5}(\d{3})?$
+to\s+Host\x3AWeHost\x3a
