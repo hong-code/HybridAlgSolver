@@ -41,7 +41,7 @@ make # compile into .exe file
 #### A file `test.txt` containing three regexes is shown below:
 ```
 \w*
-hos\w*name:2024
+hos\w*name2024
 hostname[2024]+
 ```
 #### And running the command:
@@ -51,5 +51,5 @@ hostname[2024]+
 #### Its outputs will be printed in the shell:
 ```bash
 sat
-witness string: hostname:2024
+witness string: hostname2024
 ```
