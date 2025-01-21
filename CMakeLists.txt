@@ -20,7 +20,7 @@ add_subdirectory(Membership)
 target_link_libraries(String_Solver Parserbin Solverbin)
 
 # 查找 OpenSSL
-find_package(OpenSSL REQUIRED)
+# find_package(OpenSSL REQUIRED)
 
 add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
