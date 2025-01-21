@@ -9,7 +9,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include "DetectAmbiguity.h"
-#include <openssl/evp.h>
+// #include <openssl/evp.h>
 
 namespace solverbin{
 
@@ -19,7 +19,7 @@ namespace solverbin{
     char *encoded = new char[len + 1];
 
     // 编码
-    EVP_EncodeBlock((unsigned char*)encoded, (const unsigned char*)input.c_str(), input.length());
+    // EVP_EncodeBlock((unsigned char*)encoded, (const unsigned char*)input.c_str(), input.length());
 
     std::string result(encoded);
     delete[] encoded;
@@ -98,9 +98,9 @@ namespace solverbin{
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
     }
-    Outfile << base64_encode(InterStr) << '\n';
-    Outfile << base64_encode(WitnessStr) << '\n';
-    Outfile << base64_encode(Suffix);
+    // Outfile << base64_encode(InterStr) << '\n';
+    // Outfile << base64_encode(WitnessStr) << '\n';
+    // Outfile << base64_encode(Suffix);
     std::cout << "file is closed" << std::endl;
     Suffix.clear();
     Outfile.close();
