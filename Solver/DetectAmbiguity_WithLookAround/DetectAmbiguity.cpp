@@ -86,6 +86,39 @@ namespace solverbin{
       std::cout <<  "no match" << std::endl;
     std::ofstream Outfile;
     NumberOfCandidates++;
+    // if (NumberOfCandidates == 1){
+    //   NumberOfCandidates = 1;
+    //   for (; NumberOfCandidates <= 60; NumberOfCandidates++){
+    //     attack_string = InterStr + WitnessStr;
+    //    if (mkdir(Output.c_str(), 0777) == 0) {
+    //     std::cout << "Directory created successfully: " << Output << std::endl;
+    //   } else {
+    //     std::cerr << "Error: Unable to create directory " << Output << std::endl;
+    //   }
+    //   Outfile.open(Output + "/" + std::to_string(NumberOfCandidates) + ".txt");
+    //   if (!Outfile.is_open()) {
+    //     std::cerr << "Failed to open the file." << std::endl;
+    //     return 0;
+    //   }
+    //   if (IsRandom){
+    //     while (attack_string.size() <= length)
+    //       attack_string.append(GenerateRandomWitness(WitnessStr));
+    //   }
+    //   else
+    //     while (attack_string.size() <= length)
+    //       attack_string.append(WitnessStr);
+    //   attack_string.append(Suffix); 
+    //   attack_string.append("\n");
+    //   if (ConsiderReverse == 1)
+    //     attack_string.append(LastWord); 
+    //   Outfile << attack_string;
+    //   std::cout << "file is closed" << std::endl;
+    //   Suffix.clear();
+    //   Outfile.close();
+    //   }
+    //   exit(0);
+    // }
+    
     if (mkdir(Output.c_str(), 0777) == 0) {
       std::cout << "Directory created successfully: " << Output << std::endl;
     } else {

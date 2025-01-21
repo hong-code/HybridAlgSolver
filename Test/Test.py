@@ -33,8 +33,8 @@ count = 0
 
     # 使用线程池执行任务
     # 编译文件
-def dotask(id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse):
-    command = "timeout 40s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s %s %s"  % (path + '/'+ id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse)
+def dotask(id, Output, Length, SimplifiedModeOn, DecrementalOn, MatchingFunction):
+    command = "timeout 60s /home/HybridAlgSolver/build/GREWIA %s %s %s %s %s %s"  % (path + '/'+ id, Output, Length, SimplifiedModeOn, DecrementalOn, MatchingFunction)
     print(command)
     output = subprocess.Popen(command,  stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -49,9 +49,9 @@ def dotask(id, Output, Length, Islazy, IsRandom, IsFullMatch, IsReverse):
     # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(path)
-thread_num = 16
+thread_num = 20
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i].split('.')[0])
-        executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 100000, 0, 0, 1, 0)    
+        executor.submit(dotask, filenames[i], Output + '/' + filenames[i].split('.')[0], 1000000, 0, 0, 1)    
 

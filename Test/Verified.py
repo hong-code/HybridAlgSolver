@@ -84,7 +84,7 @@ def dotask(id, Output, Length, Islazy):
     # print("Standard Error:\n", stderr)    
 
 filenames=os.listdir(Output)
-thread_num = 10
+thread_num = 38
 with ThreadPoolExecutor(max_workers=thread_num) as executor:
     for i in range(len(filenames)):
         print(str(i) + ": " + filenames[i].split('.')[0])
