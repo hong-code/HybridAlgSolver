@@ -22,8 +22,8 @@ sudo apt install libssl-dev # install OpenSSL to encode and decode base64
 ```shell
 HybridAlgSolver/
 ├── Membership
-├── Parser
-├── Solver # Solving Regular Expression Intersection Non-emptiness
+├── Parser # Source code of parser
+├── Solver # Source code
     ├── String
     ├── solver.cpp
     ├── ...
