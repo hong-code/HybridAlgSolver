@@ -12,6 +12,7 @@ Ubuntu20.04 # Other Ubuntu Long-Term Support (LTS) versions are also acceptable.
 ```bash
 sudo apt install build-essential  # install gcc, g++ and make
 sudo apt install cmake  # install cmake
+sudo apt install libssl-dev # install OpenSSL to encode and decode base64
 ```
 
 ## Running Commands
@@ -26,7 +27,7 @@ HybridAlgSolver/
     ├── String
     ├── solver.cpp
     ├── ...
-└── IntersectionK.cpp  #main code
+└── GREWIA.cpp  #main code
 ```
 ### Building and Running
 ```bash
@@ -34,36 +35,17 @@ cd HybridAlgSolver # Enter the root directory of the project
 mkdir build && cd build # create build directory
 cmake .. # load cmakelist file
 make # compile into .exe file
-./IntersectionK [RegexFile]  # running command
+./GREWIA -h # to get more information of the parameters of GREWIA.
+./GREWIA [RegexFile] [OutputDirectory] [AttackStringLength] [SimplifiedModeOn] [DecrementalOn] [MatchingFunction] # running command
 ```
 ## Running example
  
 #### A file `test.txt` containing three regexes is shown below:
 ```
-\w*
 hos\w*name:2024
-hostname[2024]+
 ```
 #### And running the command:
 ```bash
-./IntersectionK 
+./GREWIA PathTo/test.txt PathTo/Output/1 100000 0 1 0
 ```
-#### Its outputs will be printed in the shell:
-```bash
-sat
-witness string: hostname:2024
-```
-
-
-# Detect Ambiguity of Regex
-Online Algorithms for Detecting Ambiguity of Regex and Generating an Effective Attack String.
-
-# Running Commands
-
-```bash
-cd HybridAlgSolver # Enter the root directory of the project
-mkdir build && cd build # create build directory
-cmake .. # load cmakelist file
-make # compile into .exe file
-./DetectAmbiguity [Path of Regex File] [Path of Output File] # runnning command
-```
+#### Its outputs will be written to PathTo/Output/1:
