@@ -8,6 +8,12 @@
 Ubuntu20.04 # Other Ubuntu Long-Term Support (LTS) versions are also acceptable.
 ```
 
+### Toolkit Version
+```shell
+gcc 11.4.0
+cmake version 3.22.1
+```
+
 ### Set up
 ```bash
 sudo apt install build-essential  # install gcc, g++ and make
