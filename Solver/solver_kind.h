@@ -4827,6 +4827,8 @@ enum ENUM(Kind) : int32_t
   EVALUE(REGEXP_NLookahead),
   EVALUE(REGEXP_Lookbehind),
   EVALUE(REGEXP_NLookbehind),
+  EVALUE(REGEXP_CaptureLeft),
+  EVALUE(REGEXP_CaptureRight),
   EVALUE(REGEXP_RUNE),
   /**
    * Regular expression difference.
