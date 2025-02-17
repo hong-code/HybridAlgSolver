@@ -79,6 +79,9 @@ class REnode{
     RuneClass Counting;      // counting range
     std::string Str;    // string Kind
     std::string PrefixStr;
+    std::wstring CaptureName;
+    unsigned int CaptureIndex;
+    std::map<unsigned int, std::string> CaptureIndexToMatchStr;
     bool Iscompute = false;
     bool Isnullable = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;

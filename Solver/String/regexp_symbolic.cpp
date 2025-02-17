@@ -23,6 +23,7 @@
 #include <bitset>
 #include <ostream>
 #include <regex>
+#include <codecvt>
 #include "../../Parser/parser.h"
 
 
@@ -342,6 +343,26 @@ std::string REnodeClass::REnodeToString(REnode* r ) {
           retStr += REnodeToString( r->Children[i] );
         }
         retStr += ")";
+        break;
+      }
+
+      case Kind::REGEXP_CaptureLeft:
+      {
+        retStr += "(<";
+        std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+        std::string str = converter.to_bytes(r->CaptureName);
+        retStr += str;
+        retStr += ">";
+        break;
+      }
+
+      case Kind::REGEXP_CaptureRight:
+      {
+        retStr += ">)";
+        std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+        std::string str = converter.to_bytes(r->CaptureName);
+        retStr.insert(0, str);
+        retStr.insert(0, "<");
         break;
       }
 
