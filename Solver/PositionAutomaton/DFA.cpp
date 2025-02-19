@@ -102,6 +102,9 @@ namespace solverbin{
     for (auto j : s->NodeSequence){
       for (auto i : j->FirstSet){
         if (c >= i->ValideRange.min && c <= i->ValideRange.max){
+          for (int index = 0; index < i->Ccontinuation->CaptureIndexToMatchStr.size(); index++){
+            i->Ccontinuation->CaptureIndexToMatchStr[index].push_back(c);
+          } 
           auto Tuple = FA->FirstNode(i->Ccontinuation);
           // if (Tuple.second.size() == 0)
           //   Mark = true;

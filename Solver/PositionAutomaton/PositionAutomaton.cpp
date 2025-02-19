@@ -197,6 +197,12 @@ namespace solverbin{
     return VEC;
   }  
 
+  void UpdateCaptureGroup(std::map<int, std::string>& CaptureIndexToMatchStr, char c){
+    for (auto it : CaptureIndexToMatchStr){
+      it.second.push_back(c);
+    }
+  }
+
   std::pair<std::vector<FollowAtomata::State*>, std::vector<FollowAtomata::State*>> FollowAtomata::FirstNode(REnode* e1){
   // BuildBytemapToString(this->ByteMap);
   // std::cout << REnodeToString(e1) << std::endl;
@@ -230,10 +236,23 @@ namespace solverbin{
     case Kind::REGEXP_CONCAT:{
       auto Vec2 = Node2NFAState.find(e1);
       auto Vec1 = Node2LookAState.find(e1);
+      std::map<unsigned int, std::string> CaptureIndexToMatchString;
+      std::map<unsigned int, std::string> CaptureIndexToMatchStringEnd;
       if (Vec2 == Node2NFAState.end()){
         e1->Status = NODE_STATUS::NODE_NULLABLE;
         e1->Isnullable = true;
+        for (auto k : e1->CaptureIndexToMatchStr){
+          CaptureIndexToMatchString.insert(k);
+        }
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
+          if (e1->Children[i]->kind == Kind::REGEXP_CaptureLeft){
+            CaptureIndexToMatchString.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
+            continue;
+          }
+          if (e1->Children[i]->kind == Kind::REGEXP_CaptureRight){
+            CaptureIndexToMatchStringEnd.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
+            continue;
+          }
           auto RSA = FirstNode(e1->Children[i]);
           auto RS1 = RSA.second;
           if (RS1.size() != 0){
@@ -257,7 +276,17 @@ namespace solverbin{
                   e2->Children.emplace_back(it->Ccontinuation);
                   e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
                 }
-              }        
+              }
+              for (auto k : CaptureIndexToMatchString){
+                e2->CaptureIndexToMatchStr.insert(k);
+              }
+              for (auto k : it->Ccontinuation->CaptureIndexToMatchStr){
+                e2->CaptureIndexToMatchStr.insert(k);
+              }
+              for (auto k : CaptureIndexToMatchStringEnd){
+                e2->CaptureIndexToMatchStr.erase(k.first);
+              }
+              // e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());        
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
               if (RSVec1.size() != 0){
                 auto Vec_Ret = MergeState(RSVec1, nfa_e2);
@@ -346,12 +375,14 @@ namespace solverbin{
         if (RS1.size() != 0){
           for (auto it : RS1){
             if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
+              e1->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());       
               RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e1, it->ValideRange));
             }
             else{
               REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               e2->Children.emplace_back(it->Ccontinuation);
               e2->Children.emplace_back(e1);
+              e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());       
               RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange));
             }
           }
@@ -443,7 +474,8 @@ namespace solverbin{
                   e2->Children.emplace_back(it->Ccontinuation);
                   e2->Children.emplace_back(e1Copy);
                 }
-              }        
+              }     
+              e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());  
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
               if (RSVec1.size() != 0){
                 auto Vec_Ret = MergeState(RSVec1, nfa_e2);
@@ -538,6 +570,22 @@ namespace solverbin{
       else {
         return std::make_pair(Vec1->second, Vec2->second);
       }
+    }
+
+    case Kind::REGEXP_CaptureLeft:{
+      IndexS2.insert(FindIndexOfNodes(e1));
+      e1->Isnullable = true;
+      e1->Status = NODE_STATUS::NODE_NULLABLE;
+      RSVec2.emplace_back(new FollowAtomata::State(IndexS2, e1, RuneClass(0, 0)));
+      return std::make_pair(RSVec1, RSVec2);
+    }
+
+    case Kind::REGEXP_CaptureRight:{
+      IndexS2.insert(FindIndexOfNodes(e1));
+      e1->Isnullable = true;
+      e1->Status = NODE_STATUS::NODE_NULLABLE;
+      RSVec2.emplace_back(new FollowAtomata::State(IndexS2, e1, RuneClass(0, 0)));
+      return std::make_pair(RSVec1, RSVec2);
     }
 
     default: break;

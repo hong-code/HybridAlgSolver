@@ -283,6 +283,14 @@ namespace solverbin{
         return false;
       // DumpState(NState);
       if (NState->DFlag == DFA::Match){
+        std::cout << Complement_str << " is matched\n";
+        for (auto s : NState->NodeSequence){
+          if (s->DFlag == FollowAtomata::Match){
+            for (auto c : s->Ccontinuation->CaptureIndexToMatchStr){
+              std::cout << "CaptureGroup: " << c.second << std::endl;
+            }
+          }
+        }
         IsPrefixMatch = true;
       }
       else
