@@ -197,8 +197,8 @@ namespace solverbin{
     return VEC;
   }  
 
-  void UpdateCaptureGroup(std::map<int, std::string>& CaptureIndexToMatchStr, char c){
-    for (auto it : CaptureIndexToMatchStr){
+  void UpdateCaptureGroup(std::map<int, std::string>& CaptureIndexToMatchStrStart, char c){
+    for (auto it : CaptureIndexToMatchStrStart){
       it.second.push_back(c);
     }
   }
@@ -241,15 +241,18 @@ namespace solverbin{
       if (Vec2 == Node2NFAState.end()){
         e1->Status = NODE_STATUS::NODE_NULLABLE;
         e1->Isnullable = true;
-        for (auto k : e1->CaptureIndexToMatchStr){
-          CaptureIndexToMatchString.insert(k);
-        }
         for (long unsigned int i = 0; i < e1->Children.size(); i++){
           if (e1->Children[i]->kind == Kind::REGEXP_CaptureLeft){
             CaptureIndexToMatchString.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
             continue;
           }
           if (e1->Children[i]->kind == Kind::REGEXP_CaptureRight){
+            REnode* e2 = REClass.initREnode(Kind::REGEXP_CaptureRight, RuneClass(0, 0));
+            e2->CaptureIndexToMatchStrEnd.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
+            e2->Status = NODE_STATUS::NODE_CAPTURERIGHT;
+            auto RSA = FirstNode(e1->Children[i]);
+            auto nfa_e2 = new FollowAtomata::State(RSA.second[0]->IndexSequence, e2, RSA.second[0]->ValideRange);
+            RSVec2.emplace_back(nfa_e2);
             CaptureIndexToMatchStringEnd.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
             continue;
           }
@@ -258,7 +261,13 @@ namespace solverbin{
           if (RS1.size() != 0){
             for (auto it : RS1){
               REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
-              if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
+              if (it->Ccontinuation->Status == NODE_STATUS::NODE_CAPTURERIGHT){
+                for (auto k : it->Ccontinuation->CaptureIndexToMatchStrEnd){
+                  CaptureIndexToMatchStringEnd.insert(k);
+                }
+                continue;
+              }
+              else if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
                 if (i == e1->Children.size() - 1)
                   e2 = it->Ccontinuation;
                 else{
@@ -278,13 +287,17 @@ namespace solverbin{
                 }
               }
               for (auto k : CaptureIndexToMatchString){
-                e2->CaptureIndexToMatchStr.insert(k);
+                e2->CaptureIndexToMatchStrStart.insert(k);
               }
-              for (auto k : it->Ccontinuation->CaptureIndexToMatchStr){
-                e2->CaptureIndexToMatchStr.insert(k);
+              for (auto k : it->Ccontinuation->CaptureIndexToMatchStrStart){
+                e2->CaptureIndexToMatchStrStart.insert(k);
               }
               for (auto k : CaptureIndexToMatchStringEnd){
-                e2->CaptureIndexToMatchStr.erase(k.first);
+                e2->CaptureIndexToMatchStrEnd.insert(k);
+              }
+              for (auto k : it->Ccontinuation->CaptureIndexToMatchStrEnd){
+                e2->CaptureIndexToMatchStrEnd.insert(k);
+                CaptureIndexToMatchStringEnd.insert(k);
               }
               // e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());        
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
@@ -374,15 +387,19 @@ namespace solverbin{
         auto RS1 = RSA.second;
         if (RS1.size() != 0){
           for (auto it : RS1){
+            if (it->Ccontinuation->Status == NODE_STATUS::NODE_CAPTURERIGHT){
+              continue;
+            }
             if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
-              e1->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());       
+              // e1->Isnullable = true;
               RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e1, it->ValideRange));
             }
             else{
               REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               e2->Children.emplace_back(it->Ccontinuation);
               e2->Children.emplace_back(e1);
-              e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());       
+              e2->CaptureIndexToMatchStrStart = it->Ccontinuation->CaptureIndexToMatchStrStart;
+              e2->CaptureIndexToMatchStrEnd = it->Ccontinuation->CaptureIndexToMatchStrEnd;
               RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange));
             }
           }
@@ -475,7 +492,8 @@ namespace solverbin{
                   e2->Children.emplace_back(e1Copy);
                 }
               }     
-              e2->CaptureIndexToMatchStr.insert(it->Ccontinuation->CaptureIndexToMatchStr.begin(), it->Ccontinuation->CaptureIndexToMatchStr.end());  
+              e2->CaptureIndexToMatchStrStart = it->Ccontinuation->CaptureIndexToMatchStrStart;
+              e2->CaptureIndexToMatchStrEnd = it->Ccontinuation->CaptureIndexToMatchStrEnd;
               auto nfa_e2 = new FollowAtomata::State(it->IndexSequence, e2, it->ValideRange);
               if (RSVec1.size() != 0){
                 auto Vec_Ret = MergeState(RSVec1, nfa_e2);
@@ -583,7 +601,7 @@ namespace solverbin{
     case Kind::REGEXP_CaptureRight:{
       IndexS2.insert(FindIndexOfNodes(e1));
       e1->Isnullable = true;
-      e1->Status = NODE_STATUS::NODE_NULLABLE;
+      e1->Status = NODE_STATUS::NODE_CAPTURERIGHT;
       RSVec2.emplace_back(new FollowAtomata::State(IndexS2, e1, RuneClass(0, 0)));
       return std::make_pair(RSVec1, RSVec2);
     }
@@ -662,6 +680,7 @@ namespace solverbin{
   }
 
   void  FollowAtomata::DumpState(State* s){
+    std::cout << "Index: " << s << std::endl;
     std::cout << "Follow: ";
     for (auto i : s->FirstSet){
       std::cout << REnodeClass::REnodeToString(i->Ccontinuation) << "\n";
