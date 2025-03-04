@@ -391,7 +391,6 @@ namespace solverbin{
               continue;
             }
             if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
-              // e1->Isnullable = true;
               RSVec2.emplace_back(new FollowAtomata::State(it->IndexSequence, e1, it->ValideRange));
             }
             else{
