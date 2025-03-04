@@ -341,9 +341,18 @@ namespace solverbin {
               this->CaptureGroup++;
               NodeCaptureRight->CaptureName = CaptureName;
               NodeCaptureRight->CaptureIndex = NodeCaptureLeft->CaptureIndex;
-              REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
-              REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
-              r->Children.emplace_back(REnodeCONCAT);
+              if (REnodeCONCAT->KindReturn() == Kind::REGEXP_UNION){
+                auto REnodeCONCAT1 = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+                REnodeCONCAT1->Children.emplace_back(NodeCaptureLeft);
+                REnodeCONCAT1->Children.emplace_back(REnodeCONCAT);
+                REnodeCONCAT1->Children.emplace_back(NodeCaptureRight);
+                r->Children.emplace_back(REnodeCONCAT1);
+              }
+              else{
+                REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
+                REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
+                r->Children.emplace_back(REnodeCONCAT);
+              }
             }
             else if (RegexString[0] == 'P' && RegexString[1] == '<'){
               REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
@@ -364,9 +373,18 @@ namespace solverbin {
               this->CaptureGroup++;
               NodeCaptureRight->CaptureName = CaptureName;
               NodeCaptureRight->CaptureIndex = NodeCaptureLeft->CaptureIndex;
-              REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
-              REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
-              r->Children.emplace_back(REnodeCONCAT);
+              if (REnodeCONCAT->KindReturn() == Kind::REGEXP_UNION){
+                auto REnodeCONCAT1 = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+                REnodeCONCAT1->Children.emplace_back(NodeCaptureLeft);
+                REnodeCONCAT1->Children.emplace_back(REnodeCONCAT);
+                REnodeCONCAT1->Children.emplace_back(NodeCaptureRight);
+                r->Children.emplace_back(REnodeCONCAT1);
+              }
+              else{
+                REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
+                REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
+                r->Children.emplace_back(REnodeCONCAT);
+              }
             }
           }
           else{

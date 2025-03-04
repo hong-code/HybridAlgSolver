@@ -50,6 +50,7 @@ enum AssertionStatus {
       NODE_NULLABLE_UNKNOWN = 1,
       NODE_NULLABLE_NOT = 2,
       NODE_MATCH = 3,
+      NODE_CAPTURERIGHT = 4,
 };
 
 struct RuneClass
@@ -82,6 +83,9 @@ class REnode{
     std::wstring CaptureName;
     unsigned int CaptureIndex;
     std::map<unsigned int, std::string> CaptureIndexToMatchStr;
+    std::map<unsigned int, std::string> CaptureIndexToMatchStrStart;
+    std::map<unsigned int, std::string> CaptureIndexToMatchStrEnd;
+    std::map<unsigned int, std::string> CaptureIndexToMatchStrDone;
     bool Iscompute = false;
     bool Isnullable = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;

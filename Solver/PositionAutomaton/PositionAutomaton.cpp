@@ -250,6 +250,7 @@ namespace solverbin{
             REnode* e2 = REClass.initREnode(Kind::REGEXP_CaptureRight, RuneClass(0, 0));
             e2->CaptureIndexToMatchStrEnd.insert(std::make_pair(e1->Children[i]->CaptureIndex, ""));
             e2->Status = NODE_STATUS::NODE_CAPTURERIGHT;
+            e2->Isnullable = false;
             auto RSA = FirstNode(e1->Children[i]);
             auto nfa_e2 = new FollowAtomata::State(RSA.second[0]->IndexSequence, e2, RSA.second[0]->ValideRange);
             RSVec2.emplace_back(nfa_e2);
@@ -599,7 +600,7 @@ namespace solverbin{
 
     case Kind::REGEXP_CaptureRight:{
       IndexS2.insert(FindIndexOfNodes(e1));
-      e1->Isnullable = true;
+      e1->Isnullable = false;
       e1->Status = NODE_STATUS::NODE_CAPTURERIGHT;
       RSVec2.emplace_back(new FollowAtomata::State(IndexS2, e1, RuneClass(0, 0)));
       return std::make_pair(RSVec1, RSVec2);

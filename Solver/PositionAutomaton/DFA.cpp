@@ -19,8 +19,9 @@ namespace solverbin{
     for (auto i : s->IndexSequence){
       std::cout << i << " ";
     }
+    std::cout << std::endl;
     for (auto i : s->NodeSequence){
-      std::cout << FA->REClass.REnodeToString(i->Ccontinuation) << std::endl;
+      std::cout << i << ": " << FA->REClass.REnodeToString(i->Ccontinuation) << std::endl;
     }
     std::cout << "" << std::endl;
   }
@@ -95,16 +96,64 @@ namespace solverbin{
     DFA::DFAState* DFA::StepOneByte(DFAState* s, uint8_t c){
     std::set<FollowAtomata::State*> NFAStateVec;
     auto itc = s->Next.find(FA->REClass.ByteMap[c]);
+    std::cout << "The char is: " << c << std::endl;
     if (itc != s->Next.end()){
+      for (auto j : s->NodeSequence){
+        for (auto i : j->FirstSet){
+          if (c >= i->ValideRange.min && c <= i->ValideRange.max){
+            std::map<unsigned int, std::string> CaptureIndexToMatchStr;
+            std::map<unsigned int, std::string> CaptureIndexToMatchStrDone;
+            for (auto index : j->Ccontinuation->CaptureIndexToMatchStr) {
+              if (i->Ccontinuation->CaptureIndexToMatchStrEnd.find(index.first) != i->Ccontinuation->CaptureIndexToMatchStrEnd.end()) {
+                CaptureIndexToMatchStrDone.insert(index);
+                continue;
+              }
+              else {
+                index.second.push_back(c);
+                CaptureIndexToMatchStr.insert(index);
+              }
+            }
+            for (auto k : i->Ccontinuation->CaptureIndexToMatchStrStart){
+              k.second.push_back(c);
+              CaptureIndexToMatchStr.insert(k);
+            }
+            for (auto k : j->Ccontinuation->CaptureIndexToMatchStrDone){
+              CaptureIndexToMatchStrDone.insert(k);
+            }
+            i->Ccontinuation->CaptureIndexToMatchStr = CaptureIndexToMatchStr;
+            i->Ccontinuation->CaptureIndexToMatchStrDone = CaptureIndexToMatchStrDone;
+            FA->DumpState(i);
+          }
+        }
+      }      
+      DumpState(itc->second);
       return itc->second;
     }
     DFAState* NextDFAState = new DFAState();
     for (auto j : s->NodeSequence){
-      for (auto i : j->FirstSet){
+      for (auto& i : j->FirstSet){
         if (c >= i->ValideRange.min && c <= i->ValideRange.max){
-          for (int index = 0; index < i->Ccontinuation->CaptureIndexToMatchStr.size(); index++){
-            i->Ccontinuation->CaptureIndexToMatchStr[index].push_back(c);
-          } 
+          std::map<unsigned int, std::string> CaptureIndexToMatchStr;
+          std::map<unsigned int, std::string> CaptureIndexToMatchStrDone;
+          for (auto index : j->Ccontinuation->CaptureIndexToMatchStr) {
+            if (i->Ccontinuation->CaptureIndexToMatchStrEnd.find(index.first) != i->Ccontinuation->CaptureIndexToMatchStrEnd.end()) {
+              CaptureIndexToMatchStrDone.insert(index);
+              continue;
+            }
+            else {
+              index.second.push_back(c);
+              CaptureIndexToMatchStr.insert(index);
+            }
+          }
+          for (auto k : i->Ccontinuation->CaptureIndexToMatchStrStart){
+            k.second.push_back(c);
+            CaptureIndexToMatchStr.insert(k);
+          }
+          for (auto k : j->Ccontinuation->CaptureIndexToMatchStrDone){
+            CaptureIndexToMatchStrDone.insert(k);
+          }
+          i->Ccontinuation->CaptureIndexToMatchStr = CaptureIndexToMatchStr;
+          i->Ccontinuation->CaptureIndexToMatchStrDone = CaptureIndexToMatchStrDone;
           auto Tuple = FA->FirstNode(i->Ccontinuation);
           // if (Tuple.second.size() == 0)
           //   Mark = true;
@@ -115,7 +164,18 @@ namespace solverbin{
             NextDFAState->DFlag = DFA::Match;
           }else
             i->DFlag = FollowAtomata::Normal;
-          NFAStateVec.insert(FA->FindInNFACache(FA->nfacache, i));
+          FA->DumpState(i);
+          auto UniqueNFAState = FA->FindInNFACache(FA->nfacache, i);
+          if (UniqueNFAState != i) {
+            NFAStateVec.insert(UniqueNFAState);
+            UniqueNFAState->Ccontinuation->CaptureIndexToMatchStr = i->Ccontinuation->CaptureIndexToMatchStr;
+            UniqueNFAState->Ccontinuation->CaptureIndexToMatchStrStart = i->Ccontinuation->CaptureIndexToMatchStrStart;
+            UniqueNFAState->Ccontinuation->CaptureIndexToMatchStrDone = i->Ccontinuation->CaptureIndexToMatchStrDone;
+            UniqueNFAState->Ccontinuation->CaptureIndexToMatchStrEnd = i->Ccontinuation->CaptureIndexToMatchStrEnd;
+            i = UniqueNFAState;
+          }
+          else
+            NFAStateVec.insert(i);
         }
         else
           continue;
