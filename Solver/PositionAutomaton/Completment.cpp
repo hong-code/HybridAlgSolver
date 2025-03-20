@@ -289,6 +289,11 @@ namespace solverbin{
             for (auto c : s->Ccontinuation->CaptureIndexToMatchStrDone){
               std::cout << "CaptureGroup: " << c.second << std::endl;
             }
+            for (auto c : s->Ccontinuation->CaptureIndexToMatchStr){
+              if (s->Ccontinuation->CaptureIndexToMatchStrDone.find(c.first) != s->Ccontinuation->CaptureIndexToMatchStrDone.end())
+                continue;
+              std::cout << "CaptureGroup: " << c.second << std::endl;
+            }
             break;
           }
         }
