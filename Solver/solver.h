@@ -75,6 +75,7 @@ class REnode{
     Kind kind;
     NODE_STATUS Status = NODE_NULLABLE_UNKNOWN; // the status of the node
     std::vector<REnode*> Children;   //child nodes
+    std::vector<unsigned int> StarIDs; // the star id of the parents of the nodes
     REnode* LookAround = nullptr; // lookaround node
     RuneClass Rune_Class;     // charclass decoded by utf-8
     RuneClass Counting;      // counting range
