@@ -12,7 +12,7 @@
 namespace solverbin {
 
 
-  std::vector<RuneClass> Parer::ProcessingBlash(std::wstring &RegexString){
+  std::vector<RuneClass> Parser::ProcessingBlash(std::wstring &RegexString){
     std::vector<RuneClass> runeset;
     if (RegexString[0] != '\\')
       return runeset;
@@ -75,7 +75,7 @@ namespace solverbin {
     return runeset;
   }
 
-  signed int Parer::getcharacter(std::wstring &RegexString){
+  signed int Parser::getcharacter(std::wstring &RegexString){
     switch (RegexString[0])
     {
       case '\\': {
@@ -121,7 +121,7 @@ namespace solverbin {
     }
   }
 
-  void Parer::InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC){
+  void Parser::InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC){
     if (RuneSet.size() == 0){
       RuneSet.emplace_back(RC);
       return;
@@ -255,7 +255,7 @@ namespace solverbin {
   }
   
 
-  REnode* Parer::Parse(REnode* r,  std::wstring &RegexString) {
+  REnode* Parser::Parse(REnode* r,  std::wstring &RegexString) {
   REnode* rU = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   while (!RegexString.empty()) {
     switch (RegexString[0]) {
@@ -618,6 +618,8 @@ namespace solverbin {
           r->Children.emplace_back(REnodeRune);
           break;
         }
+        for (auto it : r->Children.back()->Children) AddStarID(it, StarID); // update StarID
+        StarID++;
         REnodeSTAR->Children.emplace_back(r->Children.back());
         r->Children.pop_back();
         r->Children.emplace_back(REnodeSTAR);
@@ -978,21 +980,21 @@ namespace solverbin {
     
 }
 
-
-Parer::Parer(std::wstring regex_string, bool GREWIA_){
+// 解析语法树
+Parser::Parser(std::wstring regex_string, bool GREWIA_){
   GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
   if (Re.Renode->Children.size() == 1)
     Re.Renode = Re.Renode->Children[0];
   memset(Re.ByteMap, 0, sizeof(Re.ByteMap));
-  Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
+  Re.BuildBytemap(Re.ByteMap, Re.BytemapRange); // 计算正则字母表
   // Re.BuildBytemapToString(Re.ByteMap);
   // Re.BytemapRangeToString(Re.BytemapRange);
   if (solverbin::debug.PrintREnode)
     std::cout << Re.REnodeToString(Re.Renode) << std::endl;
 
 }
-Parer::Parer(){}
+Parser::Parser(){}
 
 }

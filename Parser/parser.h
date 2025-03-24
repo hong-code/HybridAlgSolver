@@ -4,7 +4,7 @@
 
 
 namespace solverbin {
-  class Parer{
+  class Parser{
     public:
       #ifndef RuneSequence
         typedef std::vector<REnode*> RuneSequence;
@@ -12,14 +12,16 @@ namespace solverbin {
       std::string regex_string;
       REnodeClass Re;
       unsigned int CaptureGroup = 0;
+      unsigned int StarID = 0;
       bool GREWIA = false;
-      Parer(std::wstring regex_string, bool GREWIA);
-      Parer();
+      Parser(std::wstring regex_string, bool GREWIA);
+      Parser();
       REnode* Parse(REnode* r, std::wstring &RegexString);
       signed int getcharacter(std::wstring &RegexString);
       void InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC);
       REnode* LargeUnicodeBlock2Node(std::wstring &RegexString);
       REnode* RetNode(std::vector<RuneClass> &vecR);
+      void AddStarID(REnode* r, unsigned int ID);
       std::vector<RuneClass> unicode2utf_8(unsigned long unicode);
       std::vector<RuneClass> ProcessingBlash(std::wstring &RegexString);
   };
