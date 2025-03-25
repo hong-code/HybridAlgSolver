@@ -5,6 +5,7 @@
 #include <queue>
 #include <iostream>
 #include <string.h>
+#include <stack>
 
 #include "../solver.h"
 #include "../PositionAutomaton/PositionAutomaton.h"
@@ -20,43 +21,6 @@ namespace solverbin{
           IsSat
         };
         typedef std::vector<FollowAtomata::State*> TernarySimulationState;
-        // struct SimulationState{
-        //   FollowAtomata::State* NS1;
-        //   FollowAtomata::State* NS2;
-        //   std::map<u_int8_t, std::set<SimulationState*>> byte2state;
-        //   friend bool operator < (const SimulationState& n1, const SimulationState& n2)
-        //   {
-            
-        //     if (n1.NS1->Ccontinuation != n2.NS1->Ccontinuation) {
-        //       return n1.NS1->Ccontinuation < n2.NS1->Ccontinuation;
-        //     }
-        //     else
-        //       return n1.NS2->Ccontinuation < n2.NS2->Ccontinuation;
-        //   }
-        //   SimulationState(FollowAtomata::State* e1, FollowAtomata::State* e2) : NS1(e1), NS2(e2){};
-        // };
-
-        // struct TernarySimulationState{
-        //   DetectABTFlag IFlag;
-        //   bool IsSat;
-        //   bool IsDone;
-        //   FollowAtomata::State* NS1;
-        //   // SimulationState NS2;
-        //   std::map<u_int8_t, std::set<TernarySimulationState*>> byte2state;
-        //   friend bool operator < (const TernarySimulationState& n1, const TernarySimulationState& n2)
-        //   {
-        //     if (n1.NS1 != n2.NS1) {
-        //       return n1.NS1 < n2.NS1;
-        //     }
-        //     if (n1.NS2->NS1 != n2.NS2->NS1) {
-        //       return n1.NS2->NS1 < n2.NS2->NS1;
-        //     }
-        //     else
-        //       return n1.NS2->NS2 < n2.NS2->NS2;
-        //   }
-        //   TernarySimulationState(DetectABTFlag IF, FollowAtomata::State* e1, FollowAtomata::State* e2, FollowAtomata::State* e3) : IFlag(IF), NS1(e1), NS2(new SimulationState(e2, e3)){};
-        // };
-        // 使用 std::set 来存储无重复的元素集合
         std::set<std::vector<FollowAtomata::State*>> DoneCache;
 
         // 辅助函数：将输入的元素排序
@@ -80,6 +44,8 @@ namespace solverbin{
         std::string Output;
         std::vector<uint8_t> WitnessStrColor;
         std::map<uint8_t, std::vector<uint8_t>> ColorMap;
+        std::set<unsigned int> VulnerableStar;
+        std::deque<TernarySimulationState> S;
         int length = 0;
         int isLazy = 1;
         int IsRandom = 0;
@@ -94,6 +60,9 @@ namespace solverbin{
         void DumpAlphabet(std::set<uint8_t>& A);
         DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom, int IsFullMatch, int ConsiderReverse);
         DetectABTNFA_Lookaround() {};
+        void FindVulnerableLocation(std::deque<TernarySimulationState> S);
+        void CheckVulnerableStarClosure(std::deque<TernarySimulationState> S, unsigned int index);
+        void CheckVulnerablePath(std::deque<TernarySimulationState> S, unsigned int index);
         bool Writefile();
         bool WriteInBase64();
         bool Intersect();

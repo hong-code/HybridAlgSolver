@@ -75,7 +75,7 @@ class REnode{
     Kind kind;
     NODE_STATUS Status = NODE_NULLABLE_UNKNOWN; // the status of the node
     std::vector<REnode*> Children;   //child nodes
-    std::vector<unsigned int> StarIDs; // the star id of the parents of the nodes
+    std::set<unsigned int> StarIDs; // the star id of the parents of the nodes
     REnode* LookAround = nullptr; // lookaround node
     RuneClass Rune_Class;     // charclass decoded by utf-8
     RuneClass Counting;      // counting range
@@ -128,6 +128,8 @@ class REnodeClass{
 
     REnode* Renode;
     int color_max = 0;
+    unsigned int StarID = 0;
+    std::map<int, REnode*> StarIDToNode;
     MatchFlag matchFlag = NdollarEnd;
 
     REnodeClass(std::string e);

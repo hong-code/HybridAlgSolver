@@ -985,6 +985,7 @@ Parser::Parser(std::wstring regex_string, bool GREWIA_){
   GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
+  Re.StarID = StarID;
   if (Re.Renode->Children.size() == 1)
     Re.Renode = Re.Renode->Children[0];
   memset(Re.ByteMap, 0, sizeof(Re.ByteMap));

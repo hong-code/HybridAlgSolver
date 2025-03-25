@@ -11,6 +11,7 @@
 #include <random>
 #include <openssl/evp.h>
 #include <queue>
+#include <stack>
 
 #include "DetectAmbiguity.h"
 
@@ -306,14 +307,20 @@ namespace solverbin{
             }
             if (debug.PrintSimulation) DumpTernarySimulationState(ns);
             WitnessStr.push_back(c);
+            S.push_back(ns);
             if (TSSET.find(ns) != TSSET.end()){
+              std::cout << "witness str: " << WitnessStr.length() << std::endl;
+              std::deque<TernarySimulationState>().swap(S);
               return true;
             }
             if (DetectABTOFSDeepFirst(ns, TSSET)){
               return true;
             }
-            else
+            else{
               WitnessStr.pop_back();
+              S.pop_back();
+            }
+              
           
           }
         }
@@ -349,6 +356,7 @@ namespace solverbin{
               auto TSSET = DTSimulationState(ns);
               InterStr.push_back(c);
               if (!TSSET.empty()){
+                S.push_back(ns);
                 if (DetectABTOFSDeepFirst(ns, TSSET)){
                   std::string Preff = InterStr + WitnessStr;
                   if (Writefile()){  
@@ -361,6 +369,7 @@ namespace solverbin{
                   }
                 }
                 else {
+                  S.pop_back();
                   SimulationCache.clear();
                   WitnessStr = "";
                 }
