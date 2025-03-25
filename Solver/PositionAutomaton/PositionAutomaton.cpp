@@ -18,6 +18,7 @@ namespace solverbin{
     if (Index == Node2Index.end()){
       IndexMax++;
       Node2Index.insert(std::make_pair(e, IndexMax));
+      Index2Node.insert(std::make_pair(IndexMax, e));
       return IndexMax;
     }
     else {

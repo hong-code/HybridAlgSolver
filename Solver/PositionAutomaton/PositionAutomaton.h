@@ -50,6 +50,7 @@ namespace solverbin{
         NFACache(CacheFlag NCF, NFACache* N1, NFACache* N2) : NCFlage(NCF), left(N1), right(N2){};
       };
       std::map<REnode*, int> Node2Index; // map from the node to the index
+      std::map<int, REnode*> Index2Node; // map from the index to the node
       std::map<REnode*, std::vector<State*>> Node2NFAState; // map from the node to the index
       std::map<REnode*, std::vector<State*>> Node2LookAState; 
       int FindIndexOfNodes(REnode* e);
