@@ -620,6 +620,7 @@ namespace solverbin {
         }
         for (auto it : r->Children.back()->Children) AddStarID(it, Re.StarID); // update StarID
         Re.StarIDToNode.insert({Re.StarID, REnodeSTAR});
+        Re.StarID2StarPosition.insert({Re.StarID, Re.RegexString.size() - RegexString.size() - 1}); // update Position of Star in Real World Input Regex
         Re.StarID++;
         REnodeSTAR->Children.emplace_back(r->Children.back());
         r->Children.pop_back();
@@ -644,6 +645,7 @@ namespace solverbin {
         REnodeSTAR->Children.emplace_back(Re.CopyREnode(r->Children.back()));
         for (auto it : REnodeSTAR->Children.back()->Children) AddStarID(it, Re.StarID); // update StarID
         Re.StarIDToNode.insert({Re.StarID, REnodeSTAR});
+        Re.StarID2StarPosition.insert({Re.StarID, Re.RegexString.size() - RegexString.size() - 1}); // update Position of Star in Real World Input Regex
         Re.StarID++;
         r->Children.emplace_back(REnodeSTAR);
         break;
@@ -988,6 +990,7 @@ namespace solverbin {
 Parser::Parser(std::wstring regex_string, bool GREWIA_){
   GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+  Re.RegexString = regex_string;
   Re.Renode = Parse(Re.Renode, regex_string);
   if (Re.Renode->Children.size() == 1)
     Re.Renode = Re.Renode->Children[0];

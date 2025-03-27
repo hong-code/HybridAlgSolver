@@ -61,7 +61,7 @@ namespace solverbin{
         DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom, int IsFullMatch, int ConsiderReverse);
         DetectABTNFA_Lookaround() {};
         void FindVulnerableLocation(std::deque<TernarySimulationState> S);
-        void CheckVulnerableStarClosure(std::deque<TernarySimulationState> S, unsigned int index);
+        std::set<unsigned int> CheckVulnerableStarClosure(std::deque<TernarySimulationState> S, unsigned int index);
         void CheckVulnerablePath(std::deque<TernarySimulationState> S, unsigned int index);
         bool Writefile();
         bool WriteInBase64();

@@ -126,10 +126,12 @@ class REnodeClass{
     uint8_t ByteMap[256];   // disjoint range of the node
     std::set<RuneClass> BytemapRange;  // the range of the node
 
+    std::wstring RegexString; // the string of the node
     REnode* Renode;
     int color_max = 0;
     unsigned int StarID = 0;
     std::map<int, REnode*> StarIDToNode;
+    std::map<unsigned int, unsigned int> StarID2StarPosition; // map from the star id to the position of the star in Regex
     MatchFlag matchFlag = NdollarEnd;
 
     REnodeClass(std::string e);
