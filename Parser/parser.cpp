@@ -618,8 +618,9 @@ namespace solverbin {
           r->Children.emplace_back(REnodeRune);
           break;
         }
-        for (auto it : r->Children.back()->Children) AddStarID(it, StarID); // update StarID
-        StarID++;
+        for (auto it : r->Children.back()->Children) AddStarID(it, Re.StarID); // update StarID
+        Re.StarIDToNode.insert({Re.StarID, REnodeSTAR});
+        Re.StarID++;
         REnodeSTAR->Children.emplace_back(r->Children.back());
         r->Children.pop_back();
         r->Children.emplace_back(REnodeSTAR);
@@ -641,6 +642,9 @@ namespace solverbin {
           break;
         }
         REnodeSTAR->Children.emplace_back(Re.CopyREnode(r->Children.back()));
+        for (auto it : REnodeSTAR->Children.back()->Children) AddStarID(it, Re.StarID); // update StarID
+        Re.StarIDToNode.insert({Re.StarID, REnodeSTAR});
+        Re.StarID++;
         r->Children.emplace_back(REnodeSTAR);
         break;
       }
@@ -985,7 +989,6 @@ Parser::Parser(std::wstring regex_string, bool GREWIA_){
   GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
-  Re.StarID = StarID;
   if (Re.Renode->Children.size() == 1)
     Re.Renode = Re.Renode->Children[0];
   memset(Re.ByteMap, 0, sizeof(Re.ByteMap));

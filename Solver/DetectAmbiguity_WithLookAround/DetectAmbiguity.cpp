@@ -310,6 +310,7 @@ namespace solverbin{
             S.push_back(ns);
             if (TSSET.find(ns) != TSSET.end()){
               std::cout << "witness str: " << WitnessStr.length() << std::endl;
+              FindVulnerableLocation(S);
               std::deque<TernarySimulationState>().swap(S);
               return true;
             }
