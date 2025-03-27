@@ -19,11 +19,19 @@ namespace solverbin{
     // Find the vulnerable star closure
     void DetectABTNFA_Lookaround::CheckVulnerableStarClosure(std::deque<TernarySimulationState> S, unsigned int index){
         std::set<unsigned int> VulStarIDs;
-        for (auto Index : S[0][index]->Ccontinuation->StarIDs){
-            VulStarIDs.insert(Index);
-        } 
-        for (auto state : S){
-            
+        for (unsigned int ID = 0; ID < e1.StarID; ID++){
+            bool isVulnerable = true;
+            for (auto state : S){
+                for (auto NodeIndex : state[index]->IndexSequence){
+                    auto Node = F1.Index2Node[NodeIndex];
+                    if (Node->StarIDs.find(ID) == Node->StarIDs.end()){
+                        isVulnerable = false;
+                        break;
+                    }
+                }
+            }
+            if (isVulnerable)
+                VulStarIDs.insert(ID);
         }
     }
         
@@ -50,7 +58,6 @@ namespace solverbin{
         }
         else
             CheckVulnerablePath(S, 1);
-
 
         if (S[0][2]->Ccontinuation == S.back()[2]->Ccontinuation){
             // The location is vulnerable
