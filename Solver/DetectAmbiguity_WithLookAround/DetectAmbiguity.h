@@ -46,6 +46,7 @@ namespace solverbin{
         std::map<uint8_t, std::vector<uint8_t>> ColorMap;
         std::set<unsigned int> VulnerableStar;
         std::deque<TernarySimulationState> S;
+        std::vector<std::pair<unsigned int, unsigned int>> VulStarClosurePair; //a pair of stars of (P, Q)
         int length = 0;
         int isLazy = 1;
         int IsRandom = 0;
