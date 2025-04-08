@@ -30,7 +30,7 @@ add_executable(IntersectionK IntersectionK.cpp)
 
 # 链接 MPI 库
 target_include_directories(IntersectionK PRIVATE ${MPI_INCLUDE_PATH})
-target_link_libraries(IntersectionK PRIVATE MPI::MPI_CXX Parserbin Solverbin)
+target_link_libraries(IntersectionK Parserbin Solverbin)
 
 add_executable(PositionTest PositionTest.cpp)
 target_link_libraries(PositionTest Parserbin Solverbin)
