@@ -22,8 +22,15 @@ target_link_libraries(String_Solver Parserbin Solverbin)
 # 查找 OpenSSL
 # find_package(OpenSSL REQUIRED)
 
+
+# 找到 MPI
+find_package(MPI REQUIRED)
+
 add_executable(IntersectionK IntersectionK.cpp)
-target_link_libraries(IntersectionK Parserbin Solverbin)
+
+# 链接 MPI 库
+target_include_directories(IntersectionK PRIVATE ${MPI_INCLUDE_PATH})
+target_link_libraries(IntersectionK PRIVATE MPI::MPI_CXX Parserbin Solverbin)
 
 add_executable(PositionTest PositionTest.cpp)
 target_link_libraries(PositionTest Parserbin Solverbin)
