@@ -5,7 +5,7 @@
 #include <map>
 #include <list>
 #include <bitset>
-
+#include <mpi.h>
 
 
 using namespace solverbin;
@@ -445,22 +445,46 @@ namespace solverbin{
   }
   RegExpSymbolic::FollowAtomata::FollowAtomata(REnodeClass e){
     REClass = e;
-    NState = new NFAState(Begin, REClass.FirstNode(REClass.Renode));
-    auto BeginNode = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
-    NState->Node2Continuation = std::pair(BeginNode, REClass.Renode);
-    if (REClass.Renode->Status == NODE_STATUS::NODE_NULLABLE){
-      NState->NFlag = Match;
-    }else
-      NState->NFlag = Begin;
-    for (auto it : NState->NodeSequence){
-      auto itc = Node2Index.find(it.first);
-      if (itc != Node2Index.end()){
-        NState->IndexSequence.insert(itc->second);
+    int rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    if (rank == 0){
+      NState = new NFAState(Begin, REClass.FirstNode(REClass.Renode));
+      auto BeginNode = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+      NState->Node2Continuation = std::pair(BeginNode, REClass.Renode);
+      if (REClass.Renode->Status == NODE_STATUS::NODE_NULLABLE){
+        NState->NFlag = Match;
+      }else
+        NState->NFlag = Begin;
+      for (auto it : NState->NodeSequence){
+        auto itc = Node2Index.find(it.first);
+        if (itc != Node2Index.end()){
+          NState->IndexSequence.insert(itc->second);
+        }
+        else{
+          IndexMax++;
+          Node2Index.insert(std::make_pair(it.first, IndexMax));
+          NState->IndexSequence.insert(IndexMax);
+        }
       }
-      else{
-        IndexMax++;
-        Node2Index.insert(std::make_pair(it.first, IndexMax));
-        NState->IndexSequence.insert(IndexMax);
+    }
+    else{
+      NState = new NFAState(Begin, REClass.FirstNode(REClass.ReverseRenode));
+      auto BeginNode = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
+      NState->Node2Continuation = std::pair(BeginNode, REClass.ReverseRenode);
+      if (REClass.ReverseRenode->Status == NODE_STATUS::NODE_NULLABLE){
+        NState->NFlag = Match;
+      }else
+        NState->NFlag = Begin;
+      for (auto it : NState->NodeSequence){
+        auto itc = Node2Index.find(it.first);
+        if (itc != Node2Index.end()){
+          NState->IndexSequence.insert(itc->second);
+        }
+        else{
+          IndexMax++;
+          Node2Index.insert(std::make_pair(it.first, IndexMax));
+          NState->IndexSequence.insert(IndexMax);
+        }
       }
     }
     Node2NFAState.insert(std::make_pair(NState->Node2Continuation.first, NState));

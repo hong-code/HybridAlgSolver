@@ -3,6 +3,7 @@
 #include <locale>
 #include <codecvt>
 #include <unistd.h>
+#include <mpi.h>
 #include "Solver/solver_kind.h"
 #include "Solver/solver.h"
 #include "Parser/parser.h"
@@ -11,6 +12,7 @@
 
 
 int main(int argc, char* argv[]){
+  MPI_Init(&argc, &argv);
   if (argc != 2){
     std::cout << "parameter error" << std::endl;
   }
@@ -34,6 +36,8 @@ int main(int argc, char* argv[]){
   std::vector<solverbin::REnodeClass> ReList;
   for (auto str : Regex_list){
     auto ren = solverbin::Parer(str);
+    ren.Re.ReverseRenode =  ren.Re.ReverseNode(ren.Re.Renode);
+    ren.Re.ReverseRenode = ren.Re.CopyREnode(ren.Re.ReverseRenode);
     ReList.emplace_back(ren.Re);
   }
   auto InK = solverbin::RegExpSymbolic::IntersectionK(ReList);
@@ -44,6 +48,8 @@ int main(int argc, char* argv[]){
   }
   else
     std::cout << "unsat" << std::endl;
+  // MPI 程序代码
+  MPI_Finalize();  
   // Test our tool.  
   // if ((InK.Intersect() && 1 == std::stoi(argv[2])) || (!InK.Intersect() && 0 == std::stoi(argv[2]))){
   //   std::cout << argv[1] << " : Match"  <<  std::endl;

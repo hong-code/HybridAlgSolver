@@ -5,6 +5,7 @@
 #include <map>
 #include <list>
 #include <bitset>
+#include <mpi.h>
 
 namespace solverbin{
 
@@ -139,6 +140,10 @@ namespace solverbin{
   }
 
   RegExpSymbolic::IntersectionK::IntersectionK(std::vector<REnodeClass> ReList){
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);  // 当前进程编号
+    MPI_Comm_size(MPI_COMM_WORLD, &size);  // 总进程数
+    std::cout << "rank: " << rank << " size: " << size << std::endl;
     RegExN = ReList.size();
     REClassList = ReList;
     for (auto it : REClassList)
