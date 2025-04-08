@@ -114,6 +114,7 @@ class REnodeClass{
     std::set<RuneClass> BytemapRange;  // the range of the node
 
     REnode* Renode;
+    REnode* ReverseRenode;
     int color_max = 0;
 
     REnodeClass(std::string e);
@@ -144,6 +145,8 @@ class REnodeClass{
     void ConvertToUTF_8(int_21 min, int_21 max, RuneSequence& RS); // convert the range to the utf-8
 
     void isNullable(REnode* e); // check if the node is nullable
+
+    REnode*  ReverseNode(REnode* e); // reverse the node
 
     REnode* CopyREnode(REnode* e);
     
