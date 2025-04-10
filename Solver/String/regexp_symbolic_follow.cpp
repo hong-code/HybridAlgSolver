@@ -447,7 +447,7 @@ namespace solverbin{
     REClass = e;
     int rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    if (rank == 0){
+    if (rank == 1){
       NState = new NFAState(Begin, REClass.FirstNode(REClass.Renode));
       auto BeginNode = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
       NState->Node2Continuation = std::pair(BeginNode, REClass.Renode);
@@ -492,11 +492,13 @@ namespace solverbin{
 
   void RegExpSymbolic::FollowAtomata::CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec){
     std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStates = NFAStateVec;
+    std::set<RegExpSymbolic::FollowAtomata::NFAState*> DeleteLists;;
     for (auto node : NFAStates){
-      NFAStates.erase(node);
       if (NFAStates.empty())
         break;
       for (auto Tnode : NFAStates){
+        if (node == Tnode)
+          continue;
         bool mark = true; 
         if (node->NodeSequence.size() != Tnode->NodeSequence.size())
           mark = false;

@@ -36,8 +36,7 @@ int main(int argc, char* argv[]){
   std::vector<solverbin::REnodeClass> ReList;
   for (auto str : Regex_list){
     auto ren = solverbin::Parer(str);
-    ren.Re.ReverseRenode =  ren.Re.ReverseNode(ren.Re.Renode);
-    ren.Re.ReverseRenode = ren.Re.CopyREnode(ren.Re.ReverseRenode);
+    // ren.Re.ReverseRenode = ren.Re.CopyREnode(ren.Re.ReverseRenode);
     ReList.emplace_back(ren.Re);
   }
   auto InK = solverbin::RegExpSymbolic::IntersectionK(ReList);

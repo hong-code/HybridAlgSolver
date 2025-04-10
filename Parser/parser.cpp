@@ -7,6 +7,7 @@
 #include <ostream>
 #include <string.h>
 #include <regex>
+#include <mpi.h>
 
 
 namespace solverbin {
@@ -922,8 +923,19 @@ Parer::Parer(std::wstring regex_string){
   Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
   // Re.BuildBytemapToString(Re.ByteMap);
   // Re.BytemapRangeToString(Re.BytemapRange);
-  if (solverbin::debug.PrintREnode)
-    std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+  Re.ReverseRenode =  Re.ReverseNode(Re.Renode);
+  if (solverbin::debug.PrintREnode) {
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);  // 当前进程编号
+    if (rank == 0) {
+      std::cout << "Reverse Version:" << std::endl;
+      std::cout << Re.REnodeToString(Re.ReverseRenode) << std::endl;
+    }
+    else {
+      std::cout << "Normal Version:" << std::endl;
+      std::cout << Re.REnodeToString(Re.Renode) << std::endl;
+    }
+  }
 
 }
 Parer::Parer(){}

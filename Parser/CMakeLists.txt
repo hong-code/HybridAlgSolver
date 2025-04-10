@@ -6,3 +6,13 @@ aux_source_directory(. DIR_LIB_SRCS)
 
 add_library (Parserbin ${DIR_LIB_SRCS}
                     )
+
+
+# 找到 MPI
+find_package(MPI REQUIRED)
+
+# 包含 MPI 头文件
+target_include_directories(Parserbin PRIVATE ${MPI_INCLUDE_PATH})    
+
+# 链接 MPI 库
+target_link_libraries(Parserbin PRIVATE MPI::MPI_CXX)
