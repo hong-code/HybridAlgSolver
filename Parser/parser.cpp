@@ -923,6 +923,7 @@ Parer::Parer(std::wstring regex_string){
   Re.BuildBytemap(Re.ByteMap, Re.BytemapRange);
   // Re.BuildBytemapToString(Re.ByteMap);
   // Re.BytemapRangeToString(Re.BytemapRange);
+  Re.LabelNode(Re.Renode);
   Re.ReverseRenode =  Re.ReverseNode(Re.Renode);
   if (solverbin::debug.PrintREnode) {
     int rank, size;

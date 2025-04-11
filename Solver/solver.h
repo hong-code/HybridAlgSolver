@@ -87,7 +87,7 @@ class REnode{
     std::map<uint8_t, std::map<REnode*, REnode*>> kToNode; // map from the byte to the node
     std::map<REnode*, REnode*> FiretSeq; // map from the byte to the node
     Kind KindReturn() {return kind;}; // return the kind of the node
-
+    int LabelID = 0;
     REnode()  :kind(), Rune_Class(){}
 
     REnode(Kind K, RuneClass RC) :kind(K), Rune_Class(RC){}
@@ -116,6 +116,7 @@ class REnodeClass{
     REnode* Renode;
     REnode* ReverseRenode;
     int color_max = 0;
+    int LabelID = 0;
 
     REnodeClass(std::string e);
     REnodeClass();
@@ -146,7 +147,9 @@ class REnodeClass{
 
     void isNullable(REnode* e); // check if the node is nullable
 
-    REnode*  ReverseNode(REnode* e); // reverse the node
+    REnode* ReverseNode(REnode* e); // reverse the node
+
+    void LabelNode(REnode* e); // label the node
 
     REnode* CopyREnode(REnode* e);
     
