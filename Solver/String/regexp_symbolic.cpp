@@ -397,6 +397,71 @@ void REnodeClass::RuneSequenceToString(std::map<REnode*, REnode*>& RS){
   }
 }
 
+void REnodeClass::LabelNode(REnode* e) {
+  switch (e->KindReturn()){
+    case Kind::REGEXP_NONE:{
+      break;
+    }
+    case Kind::REGEXP_RUNE:{
+      LabelID++;
+      e->LabelID = LabelID;
+      break;
+    }
+    case Kind::REGEXP_CONCAT:{
+      for (auto node = e->Children.rbegin(); node!= e->Children.rend(); node++){
+        LabelNode(*node);
+      }
+      break;
+    }
+    case Kind::REGEXP_UNION:{
+      for (auto node = e->Children.rbegin(); node!= e->Children.rend(); node++){
+        LabelNode(*node);
+      }
+      break;
+    }
+    case Kind::REGEXP_STAR:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      LabelNode(e->Children[0]);
+      break;
+    }
+    case Kind::REGEXP_PLUS:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      LabelNode(e->Children[0]);
+      break;
+    }
+    case Kind::REGEXP_OPT:{
+    // isNullable(e1->Children[0]); if you want to check whether the child is nullable
+      LabelNode(e->Children[0]);
+      break;
+    }
+    case Kind::REGEXP_CHARCLASS:{
+      LabelID++;
+      e->LabelID = LabelID;
+      break;
+    }
+    case Kind::REGEXP_DIFF:
+      break;
+    case Kind::REGEXP_COMPLEMENT:
+      break;
+    case Kind::REGEXP_STRING:
+      break;
+    case Kind::REGEXP_LOOP:{
+      LabelNode(e->Children[0]);
+      break;
+    }  
+    case Kind::REGEXP_REPEAT:{
+      LabelNode(e->Children[0]);
+      break;
+    }  
+    case Kind::REGEXP_Lookbehind:{
+      LabelNode(e->Children[0]);
+      break;
+    } 
+    default:
+      break;
+  }
+}
+
 REnode*  REnodeClass::ReverseNode(REnode* e) {
   REnode* r = initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
   switch (e->KindReturn()){

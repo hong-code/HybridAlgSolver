@@ -335,6 +335,7 @@ namespace solverbin {
         struct SimulationState{
           FollowAtomata::NFAState* NS;
           SimulationState* Next;
+          std::vector<int> IDSet;
           std::map<u_int8_t, std::set<SimulationState*>> byte2state;
           SimulationState() : NS(), Next() {};
           SimulationState(FollowAtomata::NFAState* ns) : NS(ns), Next(nullptr) {};
@@ -351,13 +352,15 @@ namespace solverbin {
         void DumpSimulationState(SimulationState* s);
         SimulationState* SSBegin;
         std::set<uint8_t> Alphabet;
+        std::map<std::vector<int>, std::pair<int, std::string>> SimulationIDSet;
+        std::set<std::vector<int>> RevSimulationIDSet;
         SimulationCache* Scache;
         std::string InterStr;
         uint8_t ByteMap[256];
         bool IsinAlphabet(uint8_t k, std::vector<REnodeClass> REClassList);
         void ComputeAlphabet(std::vector<REnodeClass> REClassList);
         bool IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>>);
-        bool ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns);
+        bool ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns, std::vector<int> &IDSet);
         bool IfMatch(SimulationState* SS);
         void InsertInCache(SimulationState* ss, SimulationCache* sc);
         bool IsInCache(SimulationState* ss, SimulationCache* sc);
