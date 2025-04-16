@@ -61,10 +61,10 @@ namespace solverbin{
           std::string InterStr1(buffer);
           auto P = SimulationIDSet.find(IDSet);
           if (P != SimulationIDSet.end() && P->second.first == 0) {
-            std::cout << "Meet the same data: ";
-            for (int num : IDSet) {
-              std::cout << num << " ";
-            }
+            // std::cout << "Meet the same data: ";
+            // for (int num : IDSet) {
+            //   std::cout << num << " ";
+            // }
             std::cout << std::endl;
             std::string InterStr2 = P->second.second;
             std::cout << "InterStr: " << InterStr << std::endl;
