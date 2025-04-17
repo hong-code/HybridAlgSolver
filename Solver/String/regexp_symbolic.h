@@ -150,6 +150,7 @@ namespace solverbin {
 
         DFAState* DState;
         REnodeClass REClass;
+        
         struct DFACache{
           DFACacheFlag DCFlage;
           DFACache* left;
@@ -311,7 +312,7 @@ namespace solverbin {
         std::queue<SimulationState> TODOCache;
         uint8_t ByteMap[256];
         void ComputeAlphabet(std::set<uint8_t>& A1, uint8_t* ByteMap1, uint8_t* ByteMap2);
-        InclusionDFA(Node r1, Node r2);
+        InclusionDFA(REnodeClass r1, REnodeClass r2);
         InclusionDFA() {};
         bool Inclusion();
         bool Isinclusion(SimulationState* s);

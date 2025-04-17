@@ -43,3 +43,7 @@ target_link_libraries(DetectAmbiguity Parserbin Solverbin)
 
 add_executable(Completment Completment_Main.cpp)
 target_link_libraries(Completment Parserbin Solverbin)
+
+add_executable(Inclusion Inclusion.cpp)
+target_include_directories(Inclusion PRIVATE ${MPI_INCLUDE_PATH})
+target_link_libraries(Inclusion Parserbin Solverbin)
