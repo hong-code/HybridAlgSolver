@@ -1121,6 +1121,7 @@ RegExpSymbolic::DFA::DFA(){};
 RegExpSymbolic::DFA::DFA(REnodeClass e){
   IndexMax = 0;
   REClass = e;
+  FA = FollowAtomata(e);
   std::map<REnode*, REnode*> RS2;
   RS2.insert(std::make_pair(e.Renode, e.Renode));
   DState = new DFAState(Begin, RS2);
@@ -1141,7 +1142,7 @@ RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::StepOneByte(DFAState* BeginS
   for (auto it : BeginState->NodeSequence){
     if (it.second->KindReturn() == Kind::REGEXP_NONE)
       continue;  
-    auto RS1 = REClass.ccontinuation(it.second, itc);
+    auto RS1 = REClass.FirstNode(it.second);
     for (auto IT : RS1){
       if (Node2Index.find(IT.first) == Node2Index.end()){
         Node2Index.insert(std::make_pair(IT.first, IndexMax));
