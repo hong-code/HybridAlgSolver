@@ -150,7 +150,7 @@ namespace solverbin {
 
         DFAState* DState;
         REnodeClass REClass;
-        
+        FollowAtomata FA;
         struct DFACache{
           DFACacheFlag DCFlage;
           DFACache* left;

@@ -1,3 +1,2 @@
 [:\w]*
 hos\w*name:2024
-hostname[:2024]+
