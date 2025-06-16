@@ -64,6 +64,7 @@ int main(int argc, char* argv[]){
       auto kk = solverbin::DetectABTNFA_Lookaround(ren.Re, std::stoi(argv[3]), argv[2], std::stoi(argv[4]), std::stoi(argv[5]), std::stoi(argv[6]), 0);
       kk.RegexFile = argv[1];
       kk.Regex = line;
+      kk.MatchingFunction = argv[6];
       kk.RegexEngine = argv[7];
       auto k1 = kk.IsABT(kk.SSBegin);
       if (k1){

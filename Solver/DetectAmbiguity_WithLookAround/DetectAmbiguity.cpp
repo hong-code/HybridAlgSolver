@@ -31,6 +31,20 @@ namespace solverbin{
       return result;
   }
 
+  bool RunningCmd(std::string cmd){
+    auto start = std::chrono::high_resolution_clock::now();
+    system(cmd.c_str());
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    if (duration.count() >= 1000){
+      std::cout << "Execution time: " << duration.count() << " ms" << std::endl;
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
   void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabetp){
 		std::set<uint8_t> color_set;
 		color_set.insert(ByteMap[0]);
@@ -57,27 +71,42 @@ namespace solverbin{
 	}
 
   bool DetectABTNFA_Lookaround::Verify(std::string& attack_string_file){
+    int time = length / 100000;
+    std::string time_str = std::to_string(time);
+    std::string matching_function;
+    if (MatchingFunction == "0"){
+      matching_function = "1";
+    }
+    else{
+      matching_function = "0";
+    }
     if (RegexEngine == "Java"){
-      std::string cmd = "java -jar /home/HybridAlgSolver/JavaMatch/JavaMatch.jar " + base64_encode(Regex) + " " + attack_string_file;
-      system(cmd.c_str());
+      std::string cmd = "timeout " +  time_str + "s /app/java8/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "JavaScript"){
-      std::string cmd = "node /home/HybridAlgSolver/JavaScriptMatch/JavaScriptMatch.js " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s /app/nodejs21/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "Perl"){
-      std::string cmd = "perl /home/HybridAlgSolver/PerlMatch/PerlMatch.pl " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s perl /app/perl/benchmark.pl " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "PHP"){
-      std::string cmd = "php /home/HybridAlgSolver/PHPMatch/PHPMatch.php " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s php /app/php/benchmark.php " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "Python"){  
-      std::string cmd = "python3 /home/HybridAlgSolver/PythonMatch/match.py " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s python3 /app/python/benchmark.py " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "Boost"){
-      std::string cmd = "boost /home/HybridAlgSolver/BoostMatch/BoostMatch.cpp " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s /app/cpp/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else if (RegexEngine == "C#"){    
-      std::string cmd = "dotnet /home/HybridAlgSolver/CSharpMatch/CSharpMatch.dll " + base64_encode(Regex) + " " + attack_string_file;
+      std::string cmd = "timeout " +  time_str + "s /app/csharp/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      return RunningCmd(cmd);
     }
     else{
       std::cout << "Regex engine not supported" << std::endl;
@@ -140,28 +169,12 @@ namespace solverbin{
       attack_string.append(LastWord); 
     Outfile << attack_string;
     std::cout << "file is closed" << std::endl;
-
-    // Validate whether the candidate attack string could cause ReDoS on regex engine
-    std::string cmd = "python3 /home/HybridAlgSolver/PythonMatch/match.py " + RegexFile + " " + attack_string_file;
-    std::cout << cmd << std::endl;
-    // Get start time
-    auto start = std::chrono::high_resolution_clock::now();
-    
-    // Execute command with timeout
-    std::string timeout_cmd = "timeout 1.2s " + cmd;
-    int ret = system(timeout_cmd.c_str());
-    // Get end time 
-    auto end = std::chrono::high_resolution_clock::now();
-    
-    // Calculate duration in milliseconds
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-    if (duration.count() >= 1000){
-      std::cout << "Execution time: " << duration.count() << " ms" << std::endl;
+    if (Verify(attack_string_file)){
       Suffix.clear();
       Outfile.close();
       return true;
     }else{
-      cmd = "rm -rf " + attack_string_file;
+      std::string cmd = "rm -rf " + attack_string_file;
       system(cmd.c_str());
       Suffix.clear();
       Outfile.close();

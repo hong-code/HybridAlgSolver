@@ -74,6 +74,7 @@ namespace solverbin{
         std::queue<TernarySimulationState> TODOCache;
         std::string Regex;
         std::string RegexEngine;
+        std::string MatchingFunction;
         std::string RegexFile;
         std::string InterStr;
         std::string WitnessStr;
