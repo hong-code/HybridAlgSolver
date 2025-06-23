@@ -1,11 +1,8 @@
 #include <cmath>
 #include <map>
-#include <list>
-#include <bitset>
 #include <queue>
 #include <iostream>
 #include <fstream>
-#include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <random>
@@ -13,23 +10,11 @@
 #include <queue>
 #include <chrono>
 
+
 #include "DetectAmbiguity.h"
 
 
 namespace solverbin{
-
-  std::string base64_encode(const std::string &input) {
-      // 计算编码后的大小
-      int len = 4 * ((input.length() + 2) / 3);
-      char *encoded = new char[len + 1];
-
-      // 编码
-      EVP_EncodeBlock((unsigned char*)encoded, (const unsigned char*)input.c_str(), input.length());
-
-      std::string result(encoded);
-      delete[] encoded;
-      return result;
-  }
 
   bool RunningCmd(std::string cmd){
     auto start = std::chrono::high_resolution_clock::now();
@@ -45,31 +30,6 @@ namespace solverbin{
     }
   }
 
-  void DetectABTNFA_Lookaround::ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabetp){
-		std::set<uint8_t> color_set;
-		color_set.insert(ByteMap[0]);
-    std::vector<uint8_t> RuneRange;
-    ColorMap.insert(std::make_pair(ByteMap[0], RuneRange));
-		if (ByteMap[0] != 0){
-      Alphabet.insert(0);
-      RuneRange.emplace_back(0);
-    }
-		for (int i = 0; i < 256; i++){
-      auto Color2Range = ColorMap.find(ByteMap[i]);
-			if (color_set.find(ByteMap[i]) != color_set.end()){
-        Color2Range->second.emplace_back(i);
-      }
-			else{
-        std::vector<uint8_t> Range;
-				color_set.insert(ByteMap[i]);
-        Range.emplace_back(i);
-        ColorMap.insert(std::make_pair(ByteMap[i], Range));
-				if (ByteMap[i] != 0)
-					Alphabet.insert(i);
-			}
-		}
-	}
-
   bool DetectABTNFA_Lookaround::Verify(std::string& attack_string_file){
     int time = length / 100000;
     std::string time_str = std::to_string(time);
@@ -81,31 +41,31 @@ namespace solverbin{
       matching_function = "0";
     }
     if (RegexEngine == "Java"){
-      std::string cmd = "timeout " +  time_str + "s /app/java8/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s /app/java8/bin/benchmark " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "JavaScript"){
-      std::string cmd = "timeout " +  time_str + "s /app/nodejs21/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s /app/nodejs21/bin/benchmark " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "Perl"){
-      std::string cmd = "timeout " +  time_str + "s perl /app/perl/benchmark.pl " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s perl /app/perl/benchmark.pl " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "PHP"){
-      std::string cmd = "timeout " +  time_str + "s php /app/php/benchmark.php " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s php /app/php/benchmark.php " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "Python"){  
-      std::string cmd = "timeout " +  time_str + "s python3 /app/python/benchmark.py " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s python3 /app/python/benchmark.py " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "Boost"){
-      std::string cmd = "timeout " +  time_str + "s /app/cpp/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s /app/cpp/bin/benchmark " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else if (RegexEngine == "C#"){    
-      std::string cmd = "timeout " +  time_str + "s /app/csharp/bin/benchmark " + base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
+      std::string cmd = "timeout " +  time_str + "s /app/csharp/bin/benchmark " + Utils::base64_encode(Regex) + " " + attack_string_file + " " + matching_function;
       return RunningCmd(cmd);
     }
     else{
@@ -201,9 +161,9 @@ namespace solverbin{
       std::cerr << "Failed to open the file." << std::endl;
       return 0;
     }
-    Outfile << base64_encode(InterStr) << '\n';
-    Outfile << base64_encode(WitnessStr) << '\n';
-    Outfile << base64_encode(Suffix);
+    Outfile << Utils::base64_encode(InterStr) << '\n';
+    Outfile << Utils::base64_encode(WitnessStr) << '\n';
+    Outfile << Utils::base64_encode(Suffix);
     std::cout << "file is closed" << std::endl;
     Suffix.clear();
     Outfile.close();
@@ -225,7 +185,7 @@ namespace solverbin{
     e1.matchFlag = REnodeClass::MatchFlag::dollarEnd;
     F1 = FollowAtomata(e1);
     SSBegin = {F1.NState, F1.NState, F1.NState};
-    ComputeAlphabet_Colormap(e1.ByteMap, Alphabet);
+    Utils::ComputeAlphabet_Colormap(e1.ByteMap, Alphabet, ColorMap);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
     if (debug.PrintAlphabet) DumpAlphabet(Alphabet);
   }

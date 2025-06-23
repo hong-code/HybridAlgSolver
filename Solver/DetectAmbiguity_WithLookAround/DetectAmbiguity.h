@@ -93,7 +93,6 @@ namespace solverbin{
         std::multimap<FollowAtomata::State*, TernarySimulationState> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState TS);
-        void ComputeAlphabet_Colormap(uint8_t* ByteMap, std::set<uint8_t> &Alphabet);
         std::string GenerateRandomWitness(std::string& WitnessStr);
         void DumpAlphabet(std::set<uint8_t>& A);
         DetectABTNFA_Lookaround(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom, int IsFullMatch, int ConsiderReverse);

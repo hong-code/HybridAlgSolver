@@ -31,7 +31,14 @@ int main(int argc, char* argv[]) {
     //   unicodeStr.insert(0, L".*");
     Regex_list.emplace_back(unicodeStr);
   }
-
+  std::ifstream infileStream;
+  infileStream.open("/app/HybridAlgSolver/Output/1.txt", std::ios::binary);
+  if (!infileStream.is_open()) {
+      std::cerr << "Error opening file." << std::endl;
+      return 1;
+  }
+  std::string text;
+  std::getline(infileStream, text);
   std::vector<solverbin::REnodeClass> ReList;
   std::wcout.sync_with_stdio(true);
   for (auto str : Regex_list){
@@ -41,19 +48,19 @@ int main(int argc, char* argv[]) {
     auto initState = solverbin::FollowAtomata(ren.Re);
     std::string Suffix;
     auto dfa = solverbin::DFA(&initState);
-    dfa.Complement(dfa.DState, "abcdaabcda", Suffix);
-    std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
-    std::ofstream outfile;  // 创建ofstream对象
-
-    // 打开文件，如果文件不存在将创建，存在则覆盖
-    outfile.open("output.txt");
-
-    if (!outfile) {
-        std::cerr << "File could not be opened!" << std::endl;
-        return 1;
+    // dfa.Complement(dfa.DState, "", Suffix);
+    // for (auto c : text)
+    // {
+    //   /* code */
+    // }
+    
+    if (dfa.Fullmatch(dfa.DState, text)) {
+      std::cout << "Full match found for regex: " << std::endl;
+      Ret = false;
+    } else {
+      std::cout << "No full match for regex: " << std::endl;
     }
-    outfile << Suffix << std::endl;
-    outfile.close();
+    // std::cout << "Suffix: " << Suffix << " Length: " << Suffix.length() << std::endl;
   }
 
 }

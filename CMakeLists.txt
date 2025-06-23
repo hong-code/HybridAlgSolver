@@ -38,3 +38,6 @@ target_link_libraries(GREWIA Parserbin Solverbin OpenSSL::SSL OpenSSL::Crypto)
 
 add_executable(Completment Completment_Main.cpp)
 target_link_libraries(Completment Parserbin Solverbin)
+
+add_executable(EulerStr EulerStr.cpp)
+target_link_libraries(EulerStr Parserbin Solverbin OpenSSL::SSL OpenSSL::Crypto)

@@ -1,11 +1,7 @@
+#include <cmath>
+
 #include "PositionAutomaton.h"
 #include "../solver.h"
-
-#include <cmath>
-#include <map>
-#include <list>
-#include <bitset>
-
 
 
 using namespace solverbin;
@@ -294,4 +290,7 @@ namespace solverbin{
       CheckOneByte(CurrState, 1, 0, RuneClass(0, 244), suffix);
     return IsPrefixMatch;
   }
+
+
+
 }

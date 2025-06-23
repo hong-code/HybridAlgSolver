@@ -12,7 +12,7 @@ int main(int argc, char* argv[]){
 
   if (argc != 8){
     std::cout << "parameter error" << std::endl;
-    std::cout << "Usage: ./GREWIA [RegexFile] [OutputDirectory] [AttackStringLength] [SimplifiedModeOn] [DecrementalOn] [MatchingFunction]\n" << std::endl;
+    std::cout << "Usage: ./GREWIA [RegexFile] [OutputDirectory] [AttackStringLength] [SimplifiedModeOn] [DecrementalOn] [MatchingFunction] [RegexEngine]\n" << std::endl;
     std::cout << "[RegexFile]: Path of a file which contain a regex.\n" << std::endl;
     std::cout << "[OutputDirectory]: Path of a directory where the candidate attack string will be write to.\n" << std::endl;
     std::cout << "[AttackStringLength]: Length of candidate attack string.\n" << std::endl;

@@ -18,7 +18,8 @@ namespace solverbin{
         Begin,
         Normal,
         Match,
-        Unmatch
+        Unmatch,
+        Dead
       };
 
       enum CacheFlag{
@@ -30,15 +31,17 @@ namespace solverbin{
       {
         StateFlag DFlag = Normal;
         REnode* Ccontinuation;
+        int Index;
         RuneClass ValideRange;
-        std::set<int> IndexSequence;
         std::vector<State*> FirstSet;
-        std::map<int, std::vector<State*>> NextStates;
+        std::vector<std::vector<State*>> NextStates;
         State() : DFlag(), Ccontinuation(), ValideRange(){};
-        State(std::set<int> IndexS, REnode* CurrState, RuneClass RC) : IndexSequence(IndexS), Ccontinuation(CurrState), ValideRange(RC){};
+        State(int IndexS, REnode* CurrState, RuneClass RC) : Index(IndexS), Ccontinuation(CurrState), ValideRange(RC){};
+        State(int IndexS, REnode* CurrState, RuneClass RC, int ColorMax) : Index(IndexS), Ccontinuation(CurrState), ValideRange(RC) {NextStates = std::vector<std::vector<State*>>(ColorMax+1);};
       };
 
       State* NState;
+      State* DeadState = new State();
       State* MatchState = new FollowAtomata::State();
       REnodeClass REClass;
       struct NFACache{
@@ -49,17 +52,16 @@ namespace solverbin{
         NFACache() : NCFlage(), left(), right(){};
         NFACache(CacheFlag NCF, NFACache* N1, NFACache* N2) : NCFlage(NCF), left(N1), right(N2){};
       };
-      std::map<REnode*, int> Node2Index; // map from the node to the index
       std::map<REnode*, std::vector<State*>> Node2NFAState; // map from the node to the index
-      std::map<REnode*, std::vector<State*>> Node2LookAState; 
-      int FindIndexOfNodes(REnode* e);
+      std::map<int, State*> Index2State;
+      // int FindIndexOfNodes(REnode* e);
       std::vector<State*> MergeState(std::vector<State*> SV1, State* s2);
       int IndexMax = 0;
       NFACache* nfacache = new NFACache(IsNULL, nullptr, nullptr);
-      std::pair<std::vector<FollowAtomata::State*>, std::vector<FollowAtomata::State*>> FirstNode(REnode* e1);
+      std::vector<FollowAtomata::State*> FirstNode(REnode* e1);
       NFACache* Step2Left(NFACache* DC, int c); // step to the left 
       NFACache* Step2Right(NFACache* DC, int c); // step to the left 
-      State* FindInNFACache(NFACache* DC, State* s);
+      // State* FindInNFACache(NFACache* DC, State* s);
       std::vector<State*> StepOneByte(State* s, uint8_t c);
       bool CheckOneByte(std::vector<State*> DFAState, uint8_t c, RuneClass RC, std::string &suffix);
       void Isnullable(REnode* e);
@@ -77,7 +79,7 @@ namespace solverbin{
       Begin,
       Normal,
       Match,
-      Unmatch
+      Dead
     };
 
     enum DFACacheFlag{
@@ -90,12 +92,13 @@ namespace solverbin{
       DFAStateFlag DFlag;
       std::set<int> IndexSequence; //vector<int> Index
       std::set<FollowAtomata::State*> NodeSequence;
-      std::map<uint8_t, DFAState*> Next;
-      DFAState() : DFlag(), NodeSequence(){};
-      DFAState(DFAStateFlag F,std::set<FollowAtomata::State*> NS) : DFlag(F), NodeSequence(NS){};
+      std::vector<DFAState*> Next; // 256 is the size of the byte map
+      DFAState(int ColorMax) : DFlag(), NodeSequence(){Next = std::vector<DFAState*>(ColorMax+1, nullptr);};
+      DFAState(DFAStateFlag F, std::set<FollowAtomata::State*> NS, int ColorMax) : DFlag(F), NodeSequence(NS){Next = std::vector<DFAState*>(ColorMax+1, nullptr);};
     };
 
     DFAState* DState;
+    DFAState* DeadState = new DFAState(Dead, std::set<FollowAtomata::State*>(), 0);
     FollowAtomata* FA;
     struct DFACache{
       DFACacheFlag DCFlage;
@@ -115,10 +118,10 @@ namespace solverbin{
     bool Complement(DFAState* InitState, std::string preffix, std::string &suffix);
     void MaintainNode2Index(DFAState* s, std::set<FollowAtomata::State*> RS1);
     void DumpState(DFAState* s);
-    bool Fullmatch(std::wstring Pattern, std::string str); 
+    bool Fullmatch(DFAState* Init_state, std::string str); 
     std::map<FollowAtomata::State*, int> Node2Index; // map from the node to the index
     int IndexMax = 0;
-    DFA();
+    DFA() {};
     DFA(FollowAtomata* fa);
   };
 

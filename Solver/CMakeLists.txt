@@ -21,4 +21,8 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         DetectAmbiguity/DetectAmbiguity.cpp
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.h
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.cpp
+                        GenerateEulerStr/GenerateEulerStr.h
+                        GenerateEulerStr/GenerateEulerStr.cpp
+                        Utils/Utils.cpp
+                        Utils/Utils.h
                         )

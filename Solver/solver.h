@@ -33,6 +33,8 @@
 #include <variant>
 #include <vector>
 
+#include "Utils/Utils.h"
+
 
 namespace solverbin {
 
@@ -80,7 +82,6 @@ class REnode{
     std::string Str;    // string Kind
     std::string PrefixStr;
     bool Iscompute = false;
-    bool Isnullable = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;
     REnode* UnfoldNode = nullptr;
     REnode* First = nullptr;
@@ -167,11 +168,12 @@ class Debug{
     bool PrintAlphabet = false;
     bool PrintSimulation = false;
     bool PrintREnode = false;
+    bool PrintEulerString = false;
     Debug() {};
-    Debug(bool p1, bool p2, bool p3, bool p4, bool p5) :PrintRegexString(p1), PrintBytemap(p2), PrintAlphabet(p3), PrintSimulation(p4), PrintREnode(p5) {};
+    Debug(bool p1, bool p2, bool p3, bool p4, bool p5, bool p6) :PrintRegexString(p1), PrintBytemap(p2), PrintAlphabet(p3), PrintSimulation(p4), PrintREnode(p5), PrintEulerString(p6) {};
 };
 
-static Debug debug = Debug(false, false, false, false, true);
+static Debug debug = Debug(false, false, false, false, true, false);
 
 bool isInteger(const std::string& str);
 
