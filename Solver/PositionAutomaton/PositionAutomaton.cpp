@@ -452,7 +452,6 @@ namespace solverbin{
       return NFAStateVec;
     }
     // bool Mark = false;
-    std::cout << "still in " << std::endl;
     for (auto i : s->FirstSet){
       i->NextStates = std::vector<std::vector<State*>>(REClass.color_max+1);
       if (c >= i->ValideRange.min && c <= i->ValideRange.max){

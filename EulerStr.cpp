@@ -66,8 +66,8 @@ int main(int argc, char* argv[]){
       EulerStr.Regex = line;
       EulerStr.MatchingFunction = argv[6];
       EulerStr.RegexEngine = argv[7];
-      // EulerStr.FindEulerStr(EulerStr.FolowDFA.DState);
-      EulerStr.FindSimpleStr(EulerStr.FolowDFA.DState);
+      EulerStr.FindEulerStr(EulerStr.FolowDFA.DState);
+      // EulerStr.FindSimpleStr(EulerStr.FolowDFA.DState);
       std::cout << "EulerStr: " << EulerStr.LongestEulerStr.first << std::endl;
     }
   }

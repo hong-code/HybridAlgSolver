@@ -5,7 +5,6 @@
 #include <cmath>
 #include <map>
 #include <list>
-#include <bitset>
 
 using namespace solverbin;
 

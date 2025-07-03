@@ -76,7 +76,7 @@ namespace solverbin{
         LongestEulerStr.first = EulerStr;
         LongestEulerStr.second = EulerStr.size();
       }
-      if (EulerStr.size() >= 90000) {
+      if (EulerStr.size() >= 100000) {
         return true;
       }
       if (debug.PrintEulerString) {
