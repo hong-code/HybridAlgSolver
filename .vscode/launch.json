@@ -133,6 +133,7 @@
                 "1",
                 "0",
                 "1",
+                "Java"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
