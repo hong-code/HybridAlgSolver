@@ -4,8 +4,6 @@
 #include <cmath>
 #include <iostream>
 #include <map>
-#include <list>
-#include <bitset>
 
 
 
