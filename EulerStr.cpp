@@ -69,6 +69,16 @@ int main(int argc, char* argv[]){
       EulerStr.FindEulerStr(EulerStr.FolowDFA.DState);
       // EulerStr.FindSimpleStr(EulerStr.FolowDFA.DState);
       std::cout << "EulerStr: " << EulerStr.LongestEulerStr.first << std::endl;
+      // 创建一个输出文件流（ofstream）
+      std::ofstream outfile("/home/HybridAlgSolver/Output/1.txt", std::ios::app);
+      if (!outfile) {
+        std::cerr << "Error opening output file." << std::endl;
+        return 1;   
+      }
+      else{
+        outfile << EulerStr.LongestEulerStr.first << std::endl;
+        outfile.close();
+      }
     }
   }
 } 

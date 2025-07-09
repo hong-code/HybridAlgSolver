@@ -10,7 +10,7 @@
 
 int main(int argc, char* argv[]) {
 
-  if (argc != 2){
+  if (argc != 3){
     std::cout << "parameter error" << std::endl;
   }
   std::ifstream infile;
@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     Regex_list.emplace_back(unicodeStr);
   }
   std::ifstream infileStream;
-  infileStream.open("/app/HybridAlgSolver/Output/1.txt", std::ios::binary);
+  infileStream.open(argv[2], std::ios::binary);
   if (!infileStream.is_open()) {
       std::cerr << "Error opening file." << std::endl;
       return 1;
