@@ -66,7 +66,7 @@ int main(int argc, char* argv[]){
       EulerStr.Regex = line;
       EulerStr.MatchingFunction = argv[6];
       EulerStr.RegexEngine = argv[7];
-      EulerStr.FindEulerStr(EulerStr.FolowDFA.DState);
+      EulerStr.FindEulerStrBFS(EulerStr.FolowDFA.DState);
       // EulerStr.FindSimpleStr(EulerStr.FolowDFA.DState);
       std::cout << "EulerStr: " << EulerStr.LongestEulerStr.first << std::endl;
       // 创建一个输出文件流（ofstream）
@@ -76,7 +76,7 @@ int main(int argc, char* argv[]){
         return 1;   
       }
       else{
-        outfile << EulerStr.LongestEulerStr.first << std::endl;
+        outfile << EulerStr.EulerStr << std::endl;
         outfile.close();
       }
     }

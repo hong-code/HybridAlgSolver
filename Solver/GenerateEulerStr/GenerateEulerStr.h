@@ -38,6 +38,7 @@ namespace solverbin{
       std::map<uint8_t, std::vector<uint8_t>> ColorMap;
       GenerateEulerStr(REnodeClass e1, int l, std::string Path, int IsLazy, int IsRandom, int IsFullMatch, int ConsiderReverse);
       bool FindEulerStr(DFA::DFAState* state);
+      bool FindEulerStrBFS(DFA::DFAState* state);
       bool FindSimpleStr(DFA::DFAState* state);
   };
 }

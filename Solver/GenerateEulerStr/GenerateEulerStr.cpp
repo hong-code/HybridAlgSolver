@@ -27,6 +27,43 @@ namespace solverbin{
     if (debug.PrintAlphabet) Utils::DumpAlphabet(Alphabet);
   }
 
+  bool GenerateEulerStr::FindEulerStrBFS(DFA::DFAState* state){
+    std::queue<std::tuple<DFA::DFAState*, std::set<transition>, std::string>> queue;
+    queue.push({state, {}, ""});
+    while (!queue.empty()) {
+      auto currentState = queue.front();
+      queue.pop();
+      for (auto c : Alphabet) {
+        auto NextState = std::get<0>(currentState)->Next[FolowDFA.FA->REClass.ByteMap[c]];
+        if (NextState == nullptr) {
+          NextState = FolowDFA.StepOneByte(std::get<0>(currentState), c);
+        }
+        if (NextState->DFlag == DFA::DFAStateFlag::Match || NextState->DFlag == DFA::DFAStateFlag::Dead || DFAStateSet.find(NextState) != DFAStateSet.end()){
+          EulerStr.append(std::get<2>(currentState));
+          continue;
+        }
+        DFAStateSet.insert({NextState});
+        std::get<2>(currentState).push_back(c);
+        // if (EulerStr.size() > LongestEulerStr.second) {
+        //   // std::cout << "EulerStr: " << EulerStr << std::endl;
+        //   LongestEulerStr.first = EulerStr;
+        //   LongestEulerStr.second = EulerStr.size();
+        // }
+        if (EulerStr.size() >= 100000000) {
+          return true;
+        }
+        if (debug.PrintEulerString) {
+          std::cout << "begin state "; 
+          FolowDFA.DumpState(std::get<0>(currentState));
+          std::cout << "transition to state ";
+          FolowDFA.DumpState(NextState);
+        }
+        queue.push({NextState, {}, std::get<2>(currentState)});
+      }
+    }
+    return false;
+  } 
+
   bool GenerateEulerStr::FindEulerStr(DFA::DFAState* state){
     for (auto c : Alphabet){
       auto NextState =  state->Next[FolowDFA.FA->REClass.ByteMap[c]];
@@ -42,7 +79,7 @@ namespace solverbin{
         LongestEulerStr.first = EulerStr;
         LongestEulerStr.second = EulerStr.size();
       }
-      if (EulerStr.size() >= 100000) {
+      if (EulerStr.size() >= 300000) {
         return true;
       }
       if (debug.PrintEulerString) {
