@@ -4,7 +4,7 @@
 
 
 namespace solverbin {
-  class Parer{
+  class Parser{
     public:
       #ifndef RuneSequence
         typedef std::vector<REnode*> RuneSequence;
@@ -12,8 +12,8 @@ namespace solverbin {
       std::string regex_string;
       REnodeClass Re;
       bool GREWIA = false;
-      Parer(std::wstring regex_string, bool GREWIA);
-      Parer();
+      Parser(std::wstring regex_string, bool GREWIA);
+      Parser();
       REnode* Parse(REnode* r, std::wstring &RegexString);
       signed int getcharacter(std::wstring &RegexString);
       void InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC);

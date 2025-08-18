@@ -1076,7 +1076,7 @@ bool RegExpSymbolic::AC_include(Node e1, Node e2) {
 }
 
 bool RegExpSymbolic::FULLMATCH(std::wstring r, std::string str) {
-  auto Pa = Parer(r, 0);
+  auto Pa = Parser(r, 0);
   REnodeClass REClass = Pa.Re;
   auto e1 = REClass.Renode;
   std::vector<uint8_t> uvec;
@@ -1188,7 +1188,7 @@ RegExpSymbolic::DFA::DFAState* RegExpSymbolic::DFA::StepOneByte(DFAState* BeginS
 
 
 // bool RegExpSymbolic::DFA::Fullmatch(std::wstring Pattern, std::string str) {
-//   REClass = Parer(Pattern).Re;
+//   REClass = Parser(Pattern).Re;
 //   auto e1 = REClass.Renode;
 //   std::vector<uint8_t> uvec;
 //   std::map<REnode*, REnode*> RS2;

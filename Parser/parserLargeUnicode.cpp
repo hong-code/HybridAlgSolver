@@ -134,7 +134,7 @@ namespace solverbin {
   std::vector<RuneClass> ScBlock = { RuneClass(0x24, 0x24),RuneClass(0xa2, 0xa5), RuneClass(0x58f, 0x58f),RuneClass(0x60b, 0x60b),RuneClass(0x7fe, 0x7ff), RuneClass(0x9f2, 0x9f3), RuneClass(0x9fb, 0x9fb),RuneClass(0xaf1, 0xaf1),RuneClass(0xbf9, 0xbf9),RuneClass(0xe3f, 0xe3f),RuneClass(0x17db, 0x17db),RuneClass(0x20a0, 0x20c0), RuneClass(0xa838, 0xa838),RuneClass(0xfdfc, 0xfdfc),RuneClass(0xfe69, 0xfe69),RuneClass(0xff04, 0xff04),RuneClass(0xffe0, 0xffe1), RuneClass(0xffe5, 0xffe6), RuneClass(0x11fdd, 0x11fe0), RuneClass(0x1e2ff, 0x1e2ff),RuneClass(0x1ecb0, 0x1ecb0)};
 
 
-  REnode* Parer::RetNode(std::vector<RuneClass> &vecR){
+  REnode* Parser::RetNode(std::vector<RuneClass> &vecR){
     REnode* REnodeUNION = Re.initREnode(Kind::REGEXP_UNION, {0, 0});
     for (auto it : LBlock){
         RuneSequence RS;
@@ -146,7 +146,7 @@ namespace solverbin {
     return REnodeUNION;
   }
 
-  REnode* Parer::LargeUnicodeBlock2Node(std::wstring &str){
+  REnode* Parser::LargeUnicodeBlock2Node(std::wstring &str){
     std::string Pclass;
     if (str[0] == '\\' && str[1] == 'p')
       str.erase(0, 3);  

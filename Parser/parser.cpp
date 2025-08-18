@@ -12,7 +12,7 @@
 namespace solverbin {
 
 
-  std::vector<RuneClass> Parer::ProcessingBlash(std::wstring &RegexString){
+  std::vector<RuneClass> Parser::ProcessingBlash(std::wstring &RegexString){
     std::vector<RuneClass> runeset;
     if (RegexString[0] != '\\')
       return runeset;
@@ -75,7 +75,7 @@ namespace solverbin {
     return runeset;
   }
 
-  signed int Parer::getcharacter(std::wstring &RegexString){
+  signed int Parser::getcharacter(std::wstring &RegexString){
     switch (RegexString[0])
     {
       case '\\': {
@@ -121,7 +121,7 @@ namespace solverbin {
     }
   }
 
-  void Parer::InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC){
+  void Parser::InsertRune(std::vector<RuneClass> &RuneSet, RuneClass RC){
     if (RuneSet.size() == 0){
       RuneSet.emplace_back(RC);
       return;
@@ -255,7 +255,7 @@ namespace solverbin {
   }
   
 
-  REnode* Parer::Parse(REnode* r,  std::wstring &RegexString) {
+  REnode* Parser::Parse(REnode* r,  std::wstring &RegexString) {
   REnode* rU = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   while (!RegexString.empty()) {
     switch (RegexString[0]) {
@@ -915,7 +915,7 @@ namespace solverbin {
 }
 
 
-Parer::Parer(std::wstring regex_string, bool GREWIA_){
+Parser::Parser(std::wstring regex_string, bool GREWIA_){
   GREWIA = GREWIA_;
   Re.Renode = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
   Re.Renode = Parse(Re.Renode, regex_string);
@@ -929,6 +929,6 @@ Parer::Parer(std::wstring regex_string, bool GREWIA_){
     std::cout << Re.REnodeToString(Re.Renode) << std::endl;
 
 }
-Parer::Parer(){}
+Parser::Parser(){}
 
 }

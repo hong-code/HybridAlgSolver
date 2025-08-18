@@ -166,14 +166,14 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/EulerStr",
             "args": [
-                "/app/HybridAlgSolver/test.txt",
-                "/app/HybridAlgSolver/Output",
+                "/home/HybridAlgSolver/test.txt",
+                "/home/HybridAlgSolver/Output",
                 "100000",
                 "1",
                 "1",
                 "0",
                 "Java",
-                "> /app/HybridAlgSolver/Output/EulerStr.txt"
+                "> /home/HybridAlgSolver/Output/EulerStr.txt"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
