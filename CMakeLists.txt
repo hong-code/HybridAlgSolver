@@ -33,6 +33,11 @@ target_link_libraries(PositionTest Parserbin Solverbin)
 add_executable(Match Match.cpp)
 target_link_libraries(Match Parserbin Solverbin MembershipBin)
 
+set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libtorch")
+find_package(Torch REQUIRED)
+add_executable(GenerateGNNDatesets GenerateGNNDatesets.cpp)
+target_link_libraries(GenerateGNNDatesets Parserbin Solverbin "${TORCH_LIBRARIES}")
+
 add_executable(GREWIA GREWIA.cpp)
 target_link_libraries(GREWIA Parserbin Solverbin OpenSSL::SSL OpenSSL::Crypto)
 
