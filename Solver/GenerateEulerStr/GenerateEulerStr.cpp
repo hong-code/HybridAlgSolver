@@ -30,6 +30,7 @@ namespace solverbin{
   bool GenerateEulerStr::FindEulerStrBFS(DFA::DFAState* state){
     std::queue<std::tuple<DFA::DFAState*, std::set<transition>, std::string>> queue;
     queue.push({state, {}, ""});
+    DFAStateSet.insert({state});
     while (!queue.empty()) {
       auto currentState = queue.front();
       queue.pop();
@@ -38,17 +39,21 @@ namespace solverbin{
         if (NextState == nullptr) {
           NextState = FolowDFA.StepOneByte(std::get<0>(currentState), c);
         }
+        // if (NextState->NodeSequence.size() == std::get<0>(currentState)->NodeSequence.size()) {
+        //   continue;
+        // }
         if (NextState->DFlag == DFA::DFAStateFlag::Match || NextState->DFlag == DFA::DFAStateFlag::Dead || DFAStateSet.find(NextState) != DFAStateSet.end()){
+          DFAStateSet.insert({NextState});
           EulerStr.append(std::get<2>(currentState));
           continue;
         }
         DFAStateSet.insert({NextState});
         std::get<2>(currentState).push_back(c);
-        // if (EulerStr.size() > LongestEulerStr.second) {
-        //   // std::cout << "EulerStr: " << EulerStr << std::endl;
-        //   LongestEulerStr.first = EulerStr;
-        //   LongestEulerStr.second = EulerStr.size();
-        // }
+        if (std::get<2>(currentState).size() > LongestEulerStr.second) {
+          std::cout << "EulerStr: " << std::get<2>(currentState) << std::endl;
+          LongestEulerStr.first = std::get<2>(currentState);
+          LongestEulerStr.second = std::get<2>(currentState).size();
+        }
         if (EulerStr.size() >= 100000000) {
           return true;
         }
@@ -128,7 +133,7 @@ namespace solverbin{
       EulerStr.pop_back();
       DFAStateSet.erase( NextState);
     }
-    // std::cout << "EulerStr: " << EulerStr << std::endl;
+    std::cout << "EulerStr: " << EulerStr << std::endl;
     return false;
   }
 
