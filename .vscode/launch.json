@@ -201,6 +201,39 @@
             "miDebuggerPath": "/usr/bin/gdb"
         },
         {
+            "name": "GenerateGNNDatesets",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/GenerateGNNDatesets",
+            "args": [
+                "/home/HybridAlgSolver/test.txt",
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Test",
+                    "text": "python import sys;sys.path.insert(0, '/usr/share/gcc/python');from libstdcxx.v6.printers import register_libstdcxx_printers;register_libstdcxx_printers(None)",
+                    "ignoreFailures": false
+                },
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "将反汇编风格设置为 Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc 生成活动文件",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
             "name": "Completment",
             "type": "cppdbg",
             "request": "launch",
