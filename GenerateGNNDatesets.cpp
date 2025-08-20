@@ -7,7 +7,7 @@
 #include "Solver/solver_kind.h"
 #include "Solver/solver.h"
 #include "Parser/parser.h"
-<<<<<<< HEAD
+
 #include "Solver/PositionAutomaton/PositionAutomaton.h" 
 
 struct GraphData {
@@ -53,17 +53,4 @@ int main(int argc, char* argv[]) {
       auto ren = solverbin::Parser(str, true);
       auto NFA = solverbin::FollowAtomata(ren.Re);
     }
-=======
-
-int main() {
-    // 创建一个随机张量
->>>>>>> fb140d324e6053c2b1d66955179e623e7ed296d3
-    torch::Tensor tensor = torch::rand({3, 3});
-    std::cout << "Random Tensor:" << std::endl << tensor << std::endl;
-
-    // 简单计算
-    auto result = tensor * 2 + 1;
-    std::cout << "Result:" << std::endl << result << std::endl;
-
-    return 0;
-}
+  }
