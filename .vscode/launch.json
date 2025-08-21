@@ -127,17 +127,13 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/GREWIA",
             "args": [
-                "/app/HybridAlgSolver/test.txt",
-                "/app/HybridAlgSolver/Output",
+                "/home/HybridAlgSolver/test.txt",
+                "/home/HybridAlgSolver/Output",
                 "100000",
+                "0",
                 "1",
-                "1",
-<<<<<<< HEAD
+                "0",
                 "Java"
-=======
-                "1",
-                "Java",
->>>>>>> 7552d5beda43c16c2f987ff13a167d954a04331e
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
