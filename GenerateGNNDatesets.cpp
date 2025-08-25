@@ -3,27 +3,34 @@
 #include <locale>
 #include <codecvt>
 #include <unistd.h>
-#include <torch/torch.h>
 #include "Solver/solver_kind.h"
 #include "Parser/parser.h"
-// #include "Solver/PositionAutomaton/PositionAutomaton.h" 
+#include "Solver/PositionAutomaton/PositionAutomaton.h" 
 
-// struct GraphData {
-//     torch::Tensor x;          // 节点特征
-//     torch::Tensor edge_index; // 边索引 (2, E)
-//     torch::Tensor edge_attr;  // 边特征 (E, d)
-//     torch::Tensor y;          // 图/节点标签
+void export_automaton_to_csv(const std::set<solverbin::FollowAtomata::State*> & states,
+                             const std::vector<solverbin::FollowAtomata::Transition>& transitions,
+                             const std::string& nodes_file,
+                             const std::string& edges_file) {
+    // 导出 nodes.csv
+    std::ofstream nodes_out(nodes_file);
+    nodes_out << "id,is_accept\n";
+    for (const auto& s : states) {
+        nodes_out << s->Index << "," << (s->Ccontinuation->Status == solverbin::NODE_STATUS::NODE_NULLABLE ? 1 : 0) << "\n";
+    }
+    nodes_out.close();
 
-//     GraphData(torch::Tensor x_, torch::Tensor edge_index_,
-//               torch::Tensor edge_attr_, torch::Tensor y_)
-//         : x(x_), edge_index(edge_index_), edge_attr(edge_attr_), y(y_) {}
-// };
+    // 导出 edges.csv
+    std::ofstream edges_out(edges_file);
+    edges_out << "src,dst,symbol\n";
+    for (const auto& t : transitions) {
+        edges_out << t.src << "," << t.dst << "," << t.symbol << "\n";
+    }
+    edges_out.close();
 
-// Input Regexes
-// Output .pt
+    std::cout << "Export finished: " << nodes_file << " and " << edges_file << std::endl;
+}
 
-// To begin with just one regex
-// Output .py which contains one graph
+
 int main(int argc, char* argv[]) {
   // 创建一个随机张量
   std::ifstream infile;
@@ -46,7 +53,16 @@ int main(int argc, char* argv[]) {
     // Convert to automatas
     std::wcout << L"Regex: " << unicodeStr << std::endl;
     auto ren = solverbin::Parser(unicodeStr, false);
-    // auto NFA = solverbin::FollowAtomata(ren.Re);
+    auto NFA = solverbin::FollowAtomata(ren.Re);
+    std::set<solverbin::FollowAtomata::State*> StateSet;
+    std::vector<solverbin::FollowAtomata::Transition> TransitionSet;
+    NFA.ComputeFullNFA(StateSet, TransitionSet);
+    export_automaton_to_csv(StateSet, TransitionSet, "nodes.csv", "edges.csv");
   }
+  infile.close();
+  // write to a csv file
+
+  return 0;
+
 
 }

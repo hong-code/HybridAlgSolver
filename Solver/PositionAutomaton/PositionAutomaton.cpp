@@ -520,22 +520,35 @@ namespace solverbin{
     return dc;
   }
 
-  // FollowAtomata::State* FollowAtomata::FindInNFACache(NFACache* DC, State* s){
-  //   int BeginiIndex = 0;
-  //   for (auto i : s->IndexSequence){
-  //     if (i - BeginiIndex > 0){
-  //       DC = Step2Left(DC, i - BeginiIndex);
-  //     }
-  //     DC = Step2Right(DC, 1);
-  //     BeginiIndex = i;
-  //   }
-  //   if (DC->NCFlage == IsNotNULL){
-  //     return DC->DS;
-  //   }else{
-  //     DC->NCFlage = IsNotNULL;
-  //     DC->DS = s;
-  //     return s;
-  //   }
-  // }
+  void FollowAtomata::ComputeFullNFA(std::set<State*>& StateSet, std::vector<Transition>& TransitionSet){
+    std::queue<State*> StateQueue;
+    StateQueue.push(this->NState);
+    while (StateQueue.size() != 0){
+      auto CurrState = StateQueue.front();
+      StateQueue.pop();
+      if (StateSet.find(CurrState) == StateSet.end()){
+        StateSet.insert(CurrState);
+      }
+      else
+        continue;
+      std::set<uint8_t> SymbolSet;
+      REClass.ComputeAlphabet(REClass.ByteMap, SymbolSet);
+      for (auto i : SymbolSet){
+        auto NextStates = StepOneByte(CurrState, i);
+        if (NextStates.size() != 0){
+          for (auto it : NextStates){
+            Transition T;
+            T.src = CurrState->Index;
+            T.dst = it->Index;
+            T.symbol = i;
+            TransitionSet.emplace_back(T);
+            if (StateSet.find(it) == StateSet.end()){
+              StateQueue.push(it);
+            }
+          }
+        }
+      }
+    }
+  }  
 
 } //solverbin

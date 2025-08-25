@@ -40,6 +40,12 @@ namespace solverbin{
         State(int IndexS, REnode* CurrState, RuneClass RC, int ColorMax) : Index(IndexS), Ccontinuation(CurrState), ValideRange(RC) {NextStates = std::vector<std::vector<State*>>(ColorMax+1);};
       };
 
+      struct Transition {
+        int src;
+        int dst;
+        int symbol;
+      };
+
       State* NState;
       State* DeadState = new State();
       State* MatchState = new FollowAtomata::State();
@@ -61,9 +67,9 @@ namespace solverbin{
       std::vector<FollowAtomata::State*> FirstNode(REnode* e1);
       NFACache* Step2Left(NFACache* DC, int c); // step to the left 
       NFACache* Step2Right(NFACache* DC, int c); // step to the left 
-      // State* FindInNFACache(NFACache* DC, State* s);
       std::vector<State*> StepOneByte(State* s, uint8_t c);
       bool CheckOneByte(std::vector<State*> DFAState, uint8_t c, RuneClass RC, std::string &suffix);
+      void ComputeFullNFA(std::set<State*>& StateSet, std::vector<Transition>& TransitionSet);
       void Isnullable(REnode* e);
       static void DumpState(State* s);
       void ProcessCounting(RuneClass&);
