@@ -24,10 +24,6 @@ target_link_libraries(String_Solver Parserbin Solverbin)
 # 查找 OpenSSL
 find_package(OpenSSL REQUIRED)
 
-# Torch
-set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libtorch")
-find_package(Torch REQUIRED)
-
 # 可执行文件
 add_executable(IntersectionK IntersectionK.cpp)
 target_link_libraries(IntersectionK Parserbin Solverbin)
@@ -43,7 +39,6 @@ target_link_libraries(GenerateGNNDatesets
                         PRIVATE 
                             Parserbin 
                             Solverbin 
-                            ${TORCH_LIBRARIES}
 )
 
 add_executable(GREWIA GREWIA.cpp)
