@@ -432,13 +432,17 @@ namespace solverbin{
     IndexMax++;
     DeadState->DFlag = Dead;
     auto Ret = FirstNode(REClass.Renode);
-    NState->FirstSet = Ret;
+    for (auto it : Ret){
+      NState->FollowIndexSet.insert(it->Index);
+      NState->FirstSet.emplace_back(it);
+    }
     if (NState->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
       NState->DFlag = Match;
     }else
       NState->DFlag = Begin;
     // FindInNFACache(nfacache, NState);
     Index2State.insert({NState->Index, NState});
+    IndexSet2State.insert({NState->FollowIndexSet, NState});
   }
 
   std::vector<FollowAtomata::State*> FollowAtomata::StepOneByte(State* s, uint8_t c){
@@ -453,23 +457,35 @@ namespace solverbin{
     for (auto i : s->FirstSet){
       i->NextStates = std::vector<std::vector<State*>>(REClass.color_max+1);
       if (c >= i->ValideRange.min && c <= i->ValideRange.max){
-        auto Tuple = FirstNode(i->Ccontinuation);
-        // if (Tuple.second.size() == 0)
-        //   Mark = true;
-        i->FirstSet = Tuple;
-        if (i->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
-          i->DFlag = Match;
-          // if (REClass.matchFlag != REnodeClass::MatchFlag::dollarEnd)
-          //   return {};
-        }else
-          i->DFlag = Normal;
         auto OldState = Index2State.find(i->Index);
         if (OldState != Index2State.end()){
-          NFAStateVec.emplace_back(OldState->second);
+          i = OldState->second;
         }
         else {
-          NFAStateVec.emplace_back(i);
           Index2State.insert({i->Index, i});
+          auto Tuple = FirstNode(i->Ccontinuation);
+          for (auto it : Tuple){
+            i->FirstSet.emplace_back(it);
+            i->FollowIndexSet.insert(it->Index);
+          }
+          if (i->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
+            i->DFlag = Match;
+            // if (REClass.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+            //   return {};
+          }else
+            i->DFlag = Normal;
+
+        }
+        // if (Tuple.second.size() == 0)
+        //   Mark = true;
+        // Follow
+        auto FollowState = IndexSet2State.find(i->FollowIndexSet);
+        if (FollowState != IndexSet2State.end()){
+          NFAStateVec.emplace_back(FollowState->second);
+        }
+        else{
+          NFAStateVec.emplace_back(i);
+          IndexSet2State.insert({i->FollowIndexSet, i});
         }
           
       }

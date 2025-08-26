@@ -11,15 +11,21 @@
 
 int main(int argc, char* argv[]) {
   // 创建一个随机张量
-  std::ofstream nodes_out("nodes.csv");
-  std::ofstream edges_out("edges.csv");
+  std::ofstream A("OutputGraphs/A.txt");
+  std::ofstream graph_indicator("OutputGraphs/graph_indicator.txt");
+  std::ofstream edge_labels("OutputGraphs/edge_labels.txt");
+  std::ofstream nodes_labels("OutputGraphs/nodes_labels.txt");
+  std::ofstream graph_labels("OutputGraphs/graphs_labels.txt");
   std::ifstream infile;
   infile.open(argv[1], std::ios::binary);
   std::string line;
   std::vector<std::wstring> Regex_list;
   wchar_t c;
+  int index = 1;
+  int graph_index = 1;
   while (getline(infile, line))
   {
+    std::map<int, int> Index2Index;
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
     std::wstring unicodeStr = converter.from_bytes(line);
     c = unicodeStr.back();
@@ -39,18 +45,23 @@ int main(int argc, char* argv[]) {
     std::set<solverbin::FollowAtomata::State*> StateSet;
     std::vector<solverbin::FollowAtomata::Transition> TransitionSet;
     NFA.ComputeFullNFA(StateSet, TransitionSet);
-    nodes_out << "id,is_accept\n";
     for (const auto& s : StateSet) {
-        nodes_out << s->Index << "," << (s->Ccontinuation->Status == solverbin::NODE_STATUS::NODE_NULLABLE ? 1 : 0) << "\n";
+      graph_indicator << graph_index << "\n";
+      nodes_labels << (s->Ccontinuation->Status == solverbin::NODE_STATUS::NODE_NULLABLE ? 1 : 0) << "\n";
+      Index2Index[s->Index] = index;
+      index++;
     }
-    edges_out << "src,dst,symbol\n";
     for (const auto& t : TransitionSet) {
-        edges_out << t.src << "," << t.dst << "," << t.symbol << "\n";
+      A << Index2Index[t.src] << ", " << Index2Index[t.dst] << "\n";
+      edge_labels << (int)(t.symbol) << "\n";
     }
+    graph_index++;
   }
   infile.close();
-  nodes_out.close();
-  edges_out.close();
+  A.close();
+  graph_indicator.close();
+  edge_labels.close();
+  nodes_labels.close();
   // write to a csv file
 
   return 0;

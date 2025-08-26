@@ -34,6 +34,7 @@ namespace solverbin{
         int Index;
         RuneClass ValideRange;
         std::vector<State*> FirstSet;
+        std::set<int> FollowIndexSet;
         std::vector<std::vector<State*>> NextStates;
         State() : DFlag(), Ccontinuation(), ValideRange(){};
         State(int IndexS, REnode* CurrState, RuneClass RC) : Index(IndexS), Ccontinuation(CurrState), ValideRange(RC){};
@@ -60,6 +61,7 @@ namespace solverbin{
       };
       std::map<REnode*, std::vector<State*>> Node2NFAState; // map from the node to the index
       std::map<int, State*> Index2State;
+      std::map<std::set<int>, State*> IndexSet2State;
       // int FindIndexOfNodes(REnode* e);
       std::vector<State*> MergeState(std::vector<State*> SV1, State* s2);
       int IndexMax = 0;
