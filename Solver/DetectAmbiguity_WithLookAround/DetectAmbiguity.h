@@ -7,22 +7,22 @@
 #include <string.h>
 
 #include "../solver.h"
-#include "../PositionAutomaton/PositionAutomaton.h"
+#include "../Automaton/PositionAutomaton.h"
 
 namespace solverbin{
     class DetectABTNFA_Lookaround{
       public:
         REnodeClass e1;
-        FollowAtomata F1;
+        PositionAutomaton F1;
         enum DetectABTFlag{
           Begin,
           Normal,
           IsSat
         };
-        typedef std::vector<FollowAtomata::State*> TernarySimulationState;
+        typedef std::vector<PositionAutomaton::State*> TernarySimulationState;
         // struct SimulationState{
-        //   FollowAtomata::State* NS1;
-        //   FollowAtomata::State* NS2;
+        //   PositionAutomaton::State* NS1;
+        //   PositionAutomaton::State* NS2;
         //   std::map<u_int8_t, std::set<SimulationState*>> byte2state;
         //   friend bool operator < (const SimulationState& n1, const SimulationState& n2)
         //   {
@@ -33,14 +33,14 @@ namespace solverbin{
         //     else
         //       return n1.NS2->Ccontinuation < n2.NS2->Ccontinuation;
         //   }
-        //   SimulationState(FollowAtomata::State* e1, FollowAtomata::State* e2) : NS1(e1), NS2(e2){};
+        //   SimulationState(PositionAutomaton::State* e1, PositionAutomaton::State* e2) : NS1(e1), NS2(e2){};
         // };
 
         // struct TernarySimulationState{
         //   DetectABTFlag IFlag;
         //   bool IsSat;
         //   bool IsDone;
-        //   FollowAtomata::State* NS1;
+        //   PositionAutomaton::State* NS1;
         //   // SimulationState NS2;
         //   std::map<u_int8_t, std::set<TernarySimulationState*>> byte2state;
         //   friend bool operator < (const TernarySimulationState& n1, const TernarySimulationState& n2)
@@ -54,14 +54,14 @@ namespace solverbin{
         //     else
         //       return n1.NS2->NS2 < n2.NS2->NS2;
         //   }
-        //   TernarySimulationState(DetectABTFlag IF, FollowAtomata::State* e1, FollowAtomata::State* e2, FollowAtomata::State* e3) : IFlag(IF), NS1(e1), NS2(new SimulationState(e2, e3)){};
+        //   TernarySimulationState(DetectABTFlag IF, PositionAutomaton::State* e1, PositionAutomaton::State* e2, PositionAutomaton::State* e3) : IFlag(IF), NS1(e1), NS2(new SimulationState(e2, e3)){};
         // };
         // 使用 std::set 来存储无重复的元素集合
-        std::set<std::vector<FollowAtomata::State*>> DoneCache;
+        std::set<std::vector<PositionAutomaton::State*>> DoneCache;
 
         // 辅助函数：将输入的元素排序
-        std::vector<FollowAtomata::State*> getSorted(const std::vector<FollowAtomata::State*>& element) {
-            std::vector<FollowAtomata::State*> sortedElement = element;
+        std::vector<PositionAutomaton::State*> getSorted(const std::vector<PositionAutomaton::State*>& element) {
+            std::vector<PositionAutomaton::State*> sortedElement = element;
             std::sort(sortedElement.begin(), sortedElement.end());
             return sortedElement;
         }
@@ -90,7 +90,7 @@ namespace solverbin{
         int NumberOfCandidates = 0;
         int IsFullMatch = 0;
         int ConsiderReverse = 0;
-        std::multimap<FollowAtomata::State*, TernarySimulationState> SimulationQ;
+        std::multimap<PositionAutomaton::State*, TernarySimulationState> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState TS);
         std::string GenerateRandomWitness(std::string& WitnessStr);

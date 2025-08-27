@@ -47,8 +47,8 @@ void RegExpSymbolic::IntersectionNFA::ComputeAlphabet(std::set<uint8_t>& A31, ui
 RegExpSymbolic::IntersectionNFA::IntersectionNFA(Node r1, Node r2){
   e1 = REnodeClass("");
   e2 = REnodeClass("");
-  F1 = FollowAtomata(e1);
-  F2 = FollowAtomata(e2);
+  F1 = PositionAutomaton(e1);
+  F2 = PositionAutomaton(e2);
   SSBegin = new SimulationState(Begin, F1.NState, F2.NState);
   TODOCache.push(*SSBegin);
   ComputeAlphabet(Alphabet, e1.ByteMap, e2.ByteMap);
@@ -61,8 +61,8 @@ RegExpSymbolic::IntersectionNFA::IntersectionNFA(Node r1, Node r2){
 RegExpSymbolic::IntersectionNFA::IntersectionNFA(REnodeClass r1, REnodeClass r2){
   e1 = r1;
   e2 = r2;
-  F1 = FollowAtomata(e1);
-  F2 = FollowAtomata(e2);
+  F1 = PositionAutomaton(e1);
+  F2 = PositionAutomaton(e2);
   SSBegin = new SimulationState(Begin, F1.NState, F2.NState);
   TODOCache.push(*SSBegin);
   ComputeAlphabet(Alphabet, e1.ByteMap, e2.ByteMap);
@@ -116,7 +116,7 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
             }  
           }
           else{
-              if (nextns1_it->NFlag == RegExpSymbolic::FollowAtomata::Normal && nextns2_it->NFlag == RegExpSymbolic::FollowAtomata::Normal)
+              if (nextns1_it->NFlag == RegExpSymbolic::PositionAutomaton::Normal && nextns2_it->NFlag == RegExpSymbolic::PositionAutomaton::Normal)
               {
                 SimulationSet.insert(itc->second); 
                 ns->IFlag = Normal;
@@ -129,7 +129,7 @@ bool RegExpSymbolic::IntersectionNFA::IsIntersect(SimulationState* s){
                 }
                    
               }
-              else if (nextns1_it->NFlag == RegExpSymbolic::FollowAtomata::Match && nextns2_it->NFlag == RegExpSymbolic::FollowAtomata::Match){
+              else if (nextns1_it->NFlag == RegExpSymbolic::PositionAutomaton::Match && nextns2_it->NFlag == RegExpSymbolic::PositionAutomaton::Match){
                 SimulationSet.insert(itc->second); 
                 InterStr = InterStr + char(c);
                 std::cout << "witness str: " << InterStr << std::endl;

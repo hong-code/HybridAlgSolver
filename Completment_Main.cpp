@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include "Solver/solver_kind.h"
 #include "Parser/parser.h"
-#include "Solver/PositionAutomaton/PositionAutomaton.h"
+#include "Solver/Automaton/PositionAutomaton.h"
 
 
 int main(int argc, char* argv[]) {
@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
     if (solverbin::debug.PrintRegexString) std::wcout << L"Regex: " << str << std::endl;
     auto ren = solverbin::Parser(str, 0);
     ReList.emplace_back(ren.Re);
-    auto initState = solverbin::FollowAtomata(ren.Re);
+    auto initState = solverbin::PositionAutomaton(ren.Re);
     std::string Suffix;
     auto dfa = solverbin::DFA(&initState);
     // dfa.Complement(dfa.DState, "", Suffix);

@@ -10,7 +10,7 @@
 namespace solverbin{
   DetectABTNFA::DetectABTNFA(REnodeClass r){
     e1 = r;
-    F1 = RegExpSymbolic::FollowAtomata(e1);
+    F1 = RegExpSymbolic::PositionAutomaton(e1);
     SSBegin = new TernarySimulationState(Begin, F1.NState, F1.NState, F1.NState);
     e1.ComputeAlphabet(e1.ByteMap, Alphabet);
     e1.BuildBytemapToString(e1.ByteMap);

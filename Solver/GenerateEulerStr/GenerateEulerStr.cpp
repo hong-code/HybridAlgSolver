@@ -20,7 +20,7 @@ namespace solverbin{
     if (ConsiderReverse == 1) {
       this->LastWord = e1.ReturnLastWord(e1.Renode);
     }
-    this->FolowA = FollowAtomata(this->e1);
+    this->FolowA = PositionAutomaton(this->e1);
     this->FolowDFA = DFA(&this->FolowA);
     Utils::ComputeAlphabet_Colormap(e1.ByteMap, Alphabet, ColorMap);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);

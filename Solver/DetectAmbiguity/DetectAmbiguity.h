@@ -13,15 +13,15 @@ namespace solverbin{
     class DetectABTNFA{
       public:
         REnodeClass e1;
-        RegExpSymbolic::FollowAtomata F1;
+        RegExpSymbolic::PositionAutomaton F1;
         enum DetectABTFlag{
           Begin,
           Normal,
           IsSat
         };
         struct SimulationState{
-          RegExpSymbolic::FollowAtomata::NFAState* NS1;
-          RegExpSymbolic::FollowAtomata::NFAState* NS2;
+          RegExpSymbolic::PositionAutomaton::NFAState* NS1;
+          RegExpSymbolic::PositionAutomaton::NFAState* NS2;
           std::map<u_int8_t, std::set<SimulationState*>> byte2state;
           friend bool operator < (const SimulationState& n1, const SimulationState& n2)
           {
@@ -31,14 +31,14 @@ namespace solverbin{
             else
               return n1.NS2->Node2Continuation.first < n2.NS2->Node2Continuation.first;
           }
-          SimulationState(RegExpSymbolic::FollowAtomata::NFAState* e1, RegExpSymbolic::FollowAtomata::NFAState* e2) : NS1(e1), NS2(e2){};
+          SimulationState(RegExpSymbolic::PositionAutomaton::NFAState* e1, RegExpSymbolic::PositionAutomaton::NFAState* e2) : NS1(e1), NS2(e2){};
         };
 
         struct TernarySimulationState{
           DetectABTFlag IFlag;
           bool IsSat;
           bool IsDone;
-          RegExpSymbolic::FollowAtomata::NFAState* NS1;
+          RegExpSymbolic::PositionAutomaton::NFAState* NS1;
           SimulationState* NS2;
           std::map<u_int8_t, std::set<TernarySimulationState*>> byte2state;
           friend bool operator < (const TernarySimulationState& n1, const TernarySimulationState& n2)
@@ -52,7 +52,7 @@ namespace solverbin{
             else
               return n1.NS2->NS2->Node2Continuation.first < n2.NS2->NS2->Node2Continuation.first;
           }
-          TernarySimulationState(DetectABTFlag IF, RegExpSymbolic::FollowAtomata::NFAState* e1, RegExpSymbolic::FollowAtomata::NFAState* e2, RegExpSymbolic::FollowAtomata::NFAState* e3) : IFlag(IF), NS1(e1), NS2(new SimulationState(e2, e3)){};
+          TernarySimulationState(DetectABTFlag IF, RegExpSymbolic::PositionAutomaton::NFAState* e1, RegExpSymbolic::PositionAutomaton::NFAState* e2, RegExpSymbolic::PositionAutomaton::NFAState* e3) : IFlag(IF), NS1(e1), NS2(new SimulationState(e2, e3)){};
         };
         void DumpTernarySimulationState(TernarySimulationState* TSS);
         TernarySimulationState* SSBegin;
@@ -62,7 +62,7 @@ namespace solverbin{
         std::queue<TernarySimulationState> TODOCache;
         std::string InterStr;
         std::string WitnessStr;
-        std::multimap<RegExpSymbolic::FollowAtomata::NFAState*, TernarySimulationState*> SimulationQ;
+        std::multimap<RegExpSymbolic::PositionAutomaton::NFAState*, TernarySimulationState*> SimulationQ;
         uint8_t ByteMap[256];
         std::set<TernarySimulationState> DTSimulationState(TernarySimulationState* TS);
         DetectABTNFA(REnodeClass e1);

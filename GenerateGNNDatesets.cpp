@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include "Solver/solver_kind.h"
 #include "Parser/parser.h"
-#include "Solver/PositionAutomaton/PositionAutomaton.h" 
+#include "Solver/Automaton/PositionAutomaton.h" 
 
 
 
@@ -41,9 +41,9 @@ int main(int argc, char* argv[]) {
     std::wcout << L"Regex: " << unicodeStr << std::endl;
     
     auto ren = solverbin::Parser(unicodeStr, false);
-    auto NFA = solverbin::FollowAtomata(ren.Re);
-    std::set<solverbin::FollowAtomata::State*> StateSet;
-    std::vector<solverbin::FollowAtomata::Transition> TransitionSet;
+    auto NFA = solverbin::PositionAutomaton(ren.Re);
+    std::set<solverbin::PositionAutomaton::State*> StateSet;
+    std::vector<solverbin::PositionAutomaton::Transition> TransitionSet;
     NFA.ComputeFullNFA(StateSet, TransitionSet);
     for (const auto& s : StateSet) {
       graph_indicator << graph_index << "\n";

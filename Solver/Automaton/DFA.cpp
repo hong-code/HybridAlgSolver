@@ -69,9 +69,9 @@ namespace solverbin{
     }
   }
 
-  void DFA::MaintainNode2Index(DFAState* NS, std::set<FollowAtomata::State*> RS1){
+  void DFA::MaintainNode2Index(DFAState* NS, std::set<PositionAutomaton::State*> RS1){
     std::set<int> IndexSequence;
-    std::set<FollowAtomata::State*> NodeSequence;
+    std::set<PositionAutomaton::State*> NodeSequence;
     for (auto IT : RS1){
       auto Index = Node2Index.find(IT);
       if (Index == Node2Index.end()){
@@ -96,10 +96,10 @@ namespace solverbin{
       auto NFAStateVector = FA->StepOneByte(j, c);
       for (auto i : NFAStateVector){
           if (i->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
-            i->DFlag = FollowAtomata::Match;
+            i->DFlag = PositionAutomaton::Match;
             NextDFAState->DFlag = DFA::Match;
           }else
-            i->DFlag = FollowAtomata::Normal;
+            i->DFlag = PositionAutomaton::Normal;
           NextDFAState->IndexSequence.insert(i->Index);
           NextDFAState->NodeSequence.insert(i);
       }
@@ -136,7 +136,7 @@ namespace solverbin{
       return false;
   }
 
-  DFA::DFA(FollowAtomata* fa){ 
+  DFA::DFA(PositionAutomaton* fa){ 
     FA = fa;
     DState = new DFAState(FA->REClass.color_max);
     DState->IndexSequence.insert(0);

@@ -3,7 +3,7 @@
 #include <locale>
 #include <codecvt>
 #include <unistd.h>
-#include "Solver/PositionAutomaton/Intersectiontest.h"
+#include "Solver/Automaton/Intersectiontest.h"
 #include "Solver/solver.h"
 #include "Parser/parser.h"
 

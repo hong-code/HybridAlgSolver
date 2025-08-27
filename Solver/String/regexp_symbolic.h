@@ -73,7 +73,7 @@ namespace solverbin {
     static void DumpAlphabet(std::set<uint8_t>& A); // dump the alphabet 
 
 
-    class FollowAtomata{
+    class PositionAutomaton{
       public:
         enum NFAStateFlag{
           Begin,
@@ -115,12 +115,12 @@ namespace solverbin {
         NFACache* Step2Left(NFACache* DC, int c); // step to the left 
         NFACache* Step2Right(NFACache* DC, int c); // step to the left 
         NFAState* FindInNFACache(NFACache* DC, NFAState* s);
-        void CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec);
+        void CheckingFollow(std::set<RegExpSymbolic::PositionAutomaton::NFAState*> &NFAStateVec);
         std::set<NFAState*> StepOneByte(NFAState* s, uint8_t c);
         static void DumpState(NFAState* s);
-        FollowAtomata();
-        FollowAtomata(REnodeClass e);
-        FollowAtomata(Node r);
+        PositionAutomaton();
+        PositionAutomaton(REnodeClass e);
+        PositionAutomaton(Node r);
     };
     
 
@@ -224,8 +224,8 @@ namespace solverbin {
       public:
         REnodeClass e1;
         REnodeClass e2;
-        FollowAtomata F1;
-        FollowAtomata F2;
+        PositionAutomaton F1;
+        PositionAutomaton F2;
         enum IntersectionFlag{
           Begin,
           Normal,
@@ -236,8 +236,8 @@ namespace solverbin {
           IntersectionFlag IFlag;
           bool IsIntersect;
           bool IsDone;
-          FollowAtomata::NFAState* NS1;
-          FollowAtomata::NFAState* NS2;
+          PositionAutomaton::NFAState* NS1;
+          PositionAutomaton::NFAState* NS2;
           std::map<u_int8_t, std::set<SimulationState*>> byte2state;
           friend bool operator < (const SimulationState& n1, const SimulationState& n2)
           {
@@ -247,7 +247,7 @@ namespace solverbin {
             else
               return n1.NS2->Node2Continuation.first < n2.NS2->Node2Continuation.first;
           }
-          SimulationState(IntersectionFlag IF, FollowAtomata::NFAState* e1, FollowAtomata::NFAState* e2) : IFlag(IF), NS1(e1), NS2(e2){};
+          SimulationState(IntersectionFlag IF, PositionAutomaton::NFAState* e1, PositionAutomaton::NFAState* e2) : IFlag(IF), NS1(e1), NS2(e2){};
         };
         void DumpSimulationState(SimulationState* s);
         SimulationState* SSBegin;
@@ -322,7 +322,7 @@ namespace solverbin {
     class IntersectionK{
       public:
         std::vector<REnodeClass> REClassList;
-        std::vector<FollowAtomata> FList;
+        std::vector<PositionAutomaton> FList;
         std::vector<REnode*> ReNodeList;
         int RegExN;
         enum IntersectionFlag{
@@ -333,19 +333,19 @@ namespace solverbin {
         };
 
         struct SimulationState{
-          FollowAtomata::NFAState* NS;
+          PositionAutomaton::NFAState* NS;
           SimulationState* Next;
           std::map<u_int8_t, std::set<SimulationState*>> byte2state;
           SimulationState() : NS(), Next() {};
-          SimulationState(FollowAtomata::NFAState* ns) : NS(ns), Next(nullptr) {};
+          SimulationState(PositionAutomaton::NFAState* ns) : NS(ns), Next(nullptr) {};
         };
 
         // a Cache store k state
         struct SimulationCache{
-          FollowAtomata::NFAState* NS1;
+          PositionAutomaton::NFAState* NS1;
           std::map<REnode*, SimulationCache*> NS2Cache;
           SimulationCache() : NS1()  {};
-          SimulationCache(FollowAtomata::NFAState* ns) : NS1(ns) {};
+          SimulationCache(PositionAutomaton::NFAState* ns) : NS1(ns) {};
         };
 
         void DumpSimulationState(SimulationState* s);
@@ -356,8 +356,8 @@ namespace solverbin {
         uint8_t ByteMap[256];
         bool IsinAlphabet(uint8_t k, std::vector<REnodeClass> REClassList);
         void ComputeAlphabet(std::vector<REnodeClass> REClassList);
-        bool IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>>);
-        bool ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns);
+        bool IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::PositionAutomaton::NFAState*>>);
+        bool ComputAllState(std::vector<std::set<RegExpSymbolic::PositionAutomaton::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns);
         bool IfMatch(SimulationState* SS);
         void InsertInCache(SimulationState* ss, SimulationCache* sc);
         bool IsInCache(SimulationState* ss, SimulationCache* sc);

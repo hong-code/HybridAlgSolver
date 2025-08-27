@@ -9,7 +9,7 @@
 #include <tuple>
 
 #include "../solver.h"
-#include "../PositionAutomaton/PositionAutomaton.h"
+#include "../Automaton/PositionAutomaton.h"
 
 
 namespace solverbin{
@@ -32,7 +32,7 @@ namespace solverbin{
       std::string Regex;
       std::string MatchingFunction;
       std::string RegexEngine;
-      FollowAtomata FolowA;
+      PositionAutomaton FolowA;
       DFA FolowDFA;
       std::set<uint8_t> Alphabet;
       std::map<uint8_t, std::vector<uint8_t>> ColorMap;

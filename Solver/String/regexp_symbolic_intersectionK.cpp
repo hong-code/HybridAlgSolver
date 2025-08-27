@@ -12,7 +12,7 @@ namespace solverbin{
 
   bool RegExpSymbolic::IntersectionK::IfMatch(SimulationState* SS){
     while (SS != nullptr){
-      if (SS->NS->NFlag == RegExpSymbolic::FollowAtomata::Match){
+      if (SS->NS->NFlag == RegExpSymbolic::PositionAutomaton::Match){
         SS = SS->Next;
         continue;
       }
@@ -23,7 +23,7 @@ namespace solverbin{
     return true;
   }
 
-  bool RegExpSymbolic::IntersectionK::ComputAllState(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns){
+  bool RegExpSymbolic::IntersectionK::ComputAllState(std::vector<std::set<RegExpSymbolic::PositionAutomaton::NFAState*>> NextV, int i, SimulationState* s, SimulationState* ns){
     if (i == 0)
       for (auto it : NextV[0]){
         s->NS = it;
@@ -66,7 +66,7 @@ namespace solverbin{
     return false;
   }
 
-  bool RegExpSymbolic::IntersectionK::IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextV){
+  bool RegExpSymbolic::IntersectionK::IsEmptyStateIn(std::vector<std::set<RegExpSymbolic::PositionAutomaton::NFAState*>> NextV){
     for (auto it : NextV){
       if (it.empty())
         return false;
@@ -77,7 +77,7 @@ namespace solverbin{
   void RegExpSymbolic::IntersectionK::DumpSimulationState(SimulationState* s){
     while (s != nullptr){
       std::cout << s->NS->Node2Continuation.first << ": continuation" <<  REnodeClass::REnodeToString(s->NS->Node2Continuation.second) << std::endl;
-      FollowAtomata::DumpState(s->NS);
+      PositionAutomaton::DumpState(s->NS);
       s = s->Next;
     }
   }
@@ -142,14 +142,14 @@ namespace solverbin{
     RegExN = ReList.size();
     REClassList = ReList;
     for (auto it : REClassList)
-      FList.emplace_back(FollowAtomata(it));
+      FList.emplace_back(PositionAutomaton(it));
     auto SS = new SimulationState(FList[0].NState);
     SSBegin = SS;
     for (int i = 1; i < FList.size(); i++){
       SS->Next = new SimulationState(FList[i].NState);
       SS = SS->Next;
     };
-    Scache = new SimulationCache((FollowAtomata::NFAState*)malloc(sizeof(FollowAtomata::NFAState)));
+    Scache = new SimulationCache((PositionAutomaton::NFAState*)malloc(sizeof(PositionAutomaton::NFAState)));
     // IsInCache(SSBegin, Scache);
     ComputeAlphabet(REClassList);
     // RegExpSymbolic::DumpAlphabet(Alphabet);
@@ -171,7 +171,7 @@ namespace solverbin{
       // std::cout << "matching: " << int(c) << " " << std::endl;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
       auto ss = s;
-      std::vector<std::set<RegExpSymbolic::FollowAtomata::NFAState*>> NextList;
+      std::vector<std::set<RegExpSymbolic::PositionAutomaton::NFAState*>> NextList;
       int FollowID = 0;
       bool ISN = false;
       while (ss != nullptr){

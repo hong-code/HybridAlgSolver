@@ -12,7 +12,7 @@
 
 namespace solverbin{
 
-  class FollowAtomata{
+  class FollowAutomaton{
     public:
       enum StateFlag{
         Begin,
@@ -49,7 +49,7 @@ namespace solverbin{
 
       State* NState;
       State* DeadState = new State();
-      State* MatchState = new FollowAtomata::State();
+      State* MatchState = new FollowAutomaton::State();
       REnodeClass REClass;
       struct NFACache{
         CacheFlag NCFlage;
@@ -66,7 +66,7 @@ namespace solverbin{
       std::vector<State*> MergeState(std::vector<State*> SV1, State* s2);
       int IndexMax = 0;
       NFACache* nfacache = new NFACache(IsNULL, nullptr, nullptr);
-      std::vector<FollowAtomata::State*> FirstNode(REnode* e1);
+      std::vector<FollowAutomaton::State*> FirstNode(REnode* e1);
       NFACache* Step2Left(NFACache* DC, int c); // step to the left 
       NFACache* Step2Right(NFACache* DC, int c); // step to the left 
       std::vector<State*> StepOneByte(State* s, uint8_t c);
@@ -75,9 +75,9 @@ namespace solverbin{
       void Isnullable(REnode* e);
       static void DumpState(State* s);
       void ProcessCounting(RuneClass&);
-      FollowAtomata();
-      FollowAtomata(REnodeClass e);
-      FollowAtomata(Node r);
+      FollowAutomaton();
+      FollowAutomaton(REnodeClass e);
+      FollowAutomaton(Node r);
   };
 
 
@@ -99,15 +99,15 @@ namespace solverbin{
     {
       DFAStateFlag DFlag;
       std::set<int> IndexSequence; //vector<int> Index
-      std::set<FollowAtomata::State*> NodeSequence;
+      std::set<FollowAutomaton::State*> NodeSequence;
       std::vector<DFAState*> Next; // 256 is the size of the byte map
       DFAState(int ColorMax) : DFlag(), NodeSequence(){Next = std::vector<DFAState*>(ColorMax+1, nullptr);};
-      DFAState(DFAStateFlag F, std::set<FollowAtomata::State*> NS, int ColorMax) : DFlag(F), NodeSequence(NS){Next = std::vector<DFAState*>(ColorMax+1, nullptr);};
+      DFAState(DFAStateFlag F, std::set<FollowAutomaton::State*> NS, int ColorMax) : DFlag(F), NodeSequence(NS){Next = std::vector<DFAState*>(ColorMax+1, nullptr);};
     };
 
     DFAState* DState;
-    DFAState* DeadState = new DFAState(Dead, std::set<FollowAtomata::State*>(), 0);
-    FollowAtomata* FA;
+    DFAState* DeadState = new DFAState(Dead, std::set<FollowAutomaton::State*>(), 0);
+    FollowAutomaton* FA;
     struct DFACache{
       DFACacheFlag DCFlage;
       DFACache* left;
@@ -124,13 +124,13 @@ namespace solverbin{
     DFAState* StepOneByte(DFAState* s, uint8_t c);
     bool CheckOneByte(DFAState* DFAState, uint8_t Position, uint8_t Kind, RuneClass RC, std::string &suffix);
     bool Complement(DFAState* InitState, std::string preffix, std::string &suffix);
-    void MaintainNode2Index(DFAState* s, std::set<FollowAtomata::State*> RS1);
+    void MaintainNode2Index(DFAState* s, std::set<FollowAutomaton::State*> RS1);
     void DumpState(DFAState* s);
     bool Fullmatch(DFAState* Init_state, std::string str); 
-    std::map<FollowAtomata::State*, int> Node2Index; // map from the node to the index
+    std::map<FollowAutomaton::State*, int> Node2Index; // map from the node to the index
     int IndexMax = 0;
     DFA() {};
-    DFA(FollowAtomata* fa);
+    DFA(FollowAutomaton* fa);
   };
 
 

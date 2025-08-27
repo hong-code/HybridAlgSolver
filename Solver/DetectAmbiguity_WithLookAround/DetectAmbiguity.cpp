@@ -98,7 +98,7 @@ namespace solverbin{
 
   bool DetectABTNFA_Lookaround::Writefile(){
     attack_string = InterStr + WitnessStr;
-    auto initState = solverbin::FollowAtomata(this->e1);
+    auto initState = solverbin::PositionAutomaton(this->e1);
     auto dfa = solverbin::DFA(&initState);
     if (!dfa.Complement(dfa.DState, attack_string, Suffix)) 
       std::cout <<  "no match" << std::endl;
@@ -145,7 +145,7 @@ namespace solverbin{
 
   bool DetectABTNFA_Lookaround::WriteInBase64() {
     attack_string = InterStr + WitnessStr;
-    auto initState = solverbin::FollowAtomata(this->e1);
+    auto initState = solverbin::PositionAutomaton(this->e1);
     auto dfa = solverbin::DFA(&initState);
     if (!dfa.Complement(dfa.DState, attack_string, Suffix))
       std::cout <<  "no match" << std::endl;
@@ -183,7 +183,7 @@ namespace solverbin{
     }
     // if (Is_FullMatch == 1)
     e1.matchFlag = REnodeClass::MatchFlag::dollarEnd;
-    F1 = FollowAtomata(e1);
+    F1 = PositionAutomaton(e1);
     SSBegin = {F1.NState, F1.NState, F1.NState};
     Utils::ComputeAlphabet_Colormap(e1.ByteMap, Alphabet, ColorMap);
     if (debug.PrintBytemap) e1.BuildBytemapToString(e1.ByteMap);
@@ -234,13 +234,13 @@ namespace solverbin{
         if (nextns1.empty() || nextns2.empty() || nextns3.empty())
           continue;
         for (auto nextns1_it : nextns1){
-          // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+          // if (nextns1_it->DFlag == PositionAutomaton::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
           //   continue;
           for (auto nextns2_it : nextns2){
-            // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+            // if (nextns2_it->DFlag == PositionAutomaton::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
             //   continue;
             for (auto nextns3_it : nextns3){
-              // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+              // if (nextns3_it->DFlag == PositionAutomaton::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
               //   continue;
               TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
               auto itc = SimulationCache.find(ns);
@@ -287,13 +287,13 @@ namespace solverbin{
       if (nextns1.empty() || nextns2.empty() || nextns3.empty())
         continue;
       for (auto nextns1_it : nextns1){
-        // if (nextns1_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+        // if (nextns1_it->DFlag == PositionAutomaton::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
         //   continue;
         for (auto nextns2_it : nextns2){
-          // if (nextns2_it->DFlag == FollowAtomata::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+          // if (nextns2_it->DFlag == PositionAutomaton::StateFlag::Match  && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
           //   continue;
           for (auto nextns3_it : nextns3){
-            // if (nextns3_it->DFlag == FollowAtomata::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+            // if (nextns3_it->DFlag == PositionAutomaton::StateFlag::Match && e1.matchFlag != REnodeClass::MatchFlag::dollarEnd)
             //   continue;
             TernarySimulationState ns ={nextns1_it, nextns2_it, nextns3_it};
             auto itc = SimulationCache.find(ns);

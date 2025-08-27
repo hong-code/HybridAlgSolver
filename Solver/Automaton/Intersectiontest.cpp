@@ -12,7 +12,7 @@ namespace solverbin{
 
   bool IntersectionK::IfMatch(SimulationState* SS){
     while (SS != nullptr){
-      if (SS->NS->DFlag == FollowAtomata::Match){
+      if (SS->NS->DFlag == PositionAutomaton::Match){
         SS = SS->Next;
         continue;
       }
@@ -23,7 +23,7 @@ namespace solverbin{
     return true;
   }
 
-  bool IntersectionK::ComputAllState(std::vector<std::vector<FollowAtomata::State*>> NextV, int i, SimulationState* s, SimulationState* ns){
+  bool IntersectionK::ComputAllState(std::vector<std::vector<PositionAutomaton::State*>> NextV, int i, SimulationState* s, SimulationState* ns){
     if (i == 0)
       for (auto it : NextV[0]){
         s->NS = it;
@@ -66,7 +66,7 @@ namespace solverbin{
     return false;
   }
 
-  bool IntersectionK::IsEmptyStateIn(std::vector<std::vector<FollowAtomata::State*>> NextV){
+  bool IntersectionK::IsEmptyStateIn(std::vector<std::vector<PositionAutomaton::State*>> NextV){
     for (auto it : NextV){
       if (it.empty())
         return false;
@@ -77,7 +77,7 @@ namespace solverbin{
   void IntersectionK::DumpSimulationState(SimulationState* s){
     while (s != nullptr){
       std::cout << "continuation: " <<  REnodeClass::REnodeToString(s->NS->Ccontinuation) << std::endl;
-      FollowAtomata::DumpState(s->NS);
+      PositionAutomaton::DumpState(s->NS);
       s = s->Next;
     }
   }
@@ -142,14 +142,14 @@ namespace solverbin{
     RegExN = ReList.size();
     REClassList = ReList;
     for (auto it : REClassList)
-      FList.emplace_back(FollowAtomata(it));
+      FList.emplace_back(PositionAutomaton(it));
     auto SS = new SimulationState(FList[0].NState);
     SSBegin = SS;
     for (int i = 1; i < FList.size(); i++){
       SS->Next = new SimulationState(FList[i].NState);
       SS = SS->Next;
     };
-    Scache = new SimulationCache((FollowAtomata::State*)malloc(sizeof(FollowAtomata::State)));
+    Scache = new SimulationCache((PositionAutomaton::State*)malloc(sizeof(PositionAutomaton::State)));
     // IsInCache(SSBegin, Scache);
     ComputeAlphabet(REClassList);
     // DumpAlphabet(Alphabet);
@@ -171,7 +171,7 @@ namespace solverbin{
       // std::cout << "matching: " << int(c) << " " << std::endl;
       // s->byte2state.insert(std::make_pair(ByteMap[c], SimulationSet));
       auto ss = s;
-      std::vector<std::vector<FollowAtomata::State*>> NextList;
+      std::vector<std::vector<PositionAutomaton::State*>> NextList;
       int FollowID = 0;
       bool ISN = false;
       while (ss != nullptr){

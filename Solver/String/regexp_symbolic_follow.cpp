@@ -357,7 +357,7 @@ namespace solverbin{
   return RSVec;
 }
 
-  void  RegExpSymbolic::FollowAtomata::DumpState(NFAState* s){
+  void  RegExpSymbolic::PositionAutomaton::DumpState(NFAState* s){
     std::cout << "Follow: ";
     for (auto i : s->NodeSequence){
       std::cout << i.first << ":" << REnodeClass::REnodeToString(i.first) << " ";
@@ -365,7 +365,7 @@ namespace solverbin{
     std::cout << "" << std::endl;
   }
 
-  RegExpSymbolic::FollowAtomata::NFACache* RegExpSymbolic::FollowAtomata::Step2Left(NFACache* DC, int c){
+  RegExpSymbolic::PositionAutomaton::NFACache* RegExpSymbolic::PositionAutomaton::Step2Left(NFACache* DC, int c){
     NFACache* dc = DC;
     for (int i = 0; i < c; i++){
       if (dc->left == nullptr){
@@ -379,7 +379,7 @@ namespace solverbin{
     return dc;
   }
 
-  RegExpSymbolic::FollowAtomata::NFACache* RegExpSymbolic::FollowAtomata::Step2Right(NFACache* DC, int c){
+  RegExpSymbolic::PositionAutomaton::NFACache* RegExpSymbolic::PositionAutomaton::Step2Right(NFACache* DC, int c){
     NFACache* dc = DC;
     for (int i = 0; i < c; i++){
       if (dc->right == nullptr){
@@ -393,7 +393,7 @@ namespace solverbin{
     return dc;
   }
 
-  RegExpSymbolic::FollowAtomata::NFAState* RegExpSymbolic::FollowAtomata::FindInNFACache(NFACache* DC, NFAState* s){
+  RegExpSymbolic::PositionAutomaton::NFAState* RegExpSymbolic::PositionAutomaton::FindInNFACache(NFACache* DC, NFAState* s){
     int BeginiIndex = 0;
     for (auto i : s->IndexSequence){
       if (i - BeginiIndex > 1){
@@ -410,8 +410,8 @@ namespace solverbin{
       return s;
     }
   }
-  RegExpSymbolic::FollowAtomata::FollowAtomata(){}
-  RegExpSymbolic::FollowAtomata::FollowAtomata(Node e){
+  RegExpSymbolic::PositionAutomaton::PositionAutomaton(){}
+  RegExpSymbolic::PositionAutomaton::PositionAutomaton(Node e){
     REClass = REnodeClass("");
     REClass.REnodeToString(REClass.Renode);
     // REClass.FirstNode(REClass.Renode);
@@ -443,7 +443,7 @@ namespace solverbin{
     }
     
   }
-  RegExpSymbolic::FollowAtomata::FollowAtomata(REnodeClass e){
+  RegExpSymbolic::PositionAutomaton::PositionAutomaton(REnodeClass e){
     REClass = e;
     NState = new NFAState(Begin, REClass.FirstNode(REClass.Renode));
     auto BeginNode = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
@@ -466,8 +466,8 @@ namespace solverbin{
     Node2NFAState.insert(std::make_pair(NState->Node2Continuation.first, NState));
   }
 
-  void RegExpSymbolic::FollowAtomata::CheckingFollow(std::set<RegExpSymbolic::FollowAtomata::NFAState*> &NFAStateVec){
-    std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStates = NFAStateVec;
+  void RegExpSymbolic::PositionAutomaton::CheckingFollow(std::set<RegExpSymbolic::PositionAutomaton::NFAState*> &NFAStateVec){
+    std::set<RegExpSymbolic::PositionAutomaton::NFAState*> NFAStates = NFAStateVec;
     while (!NFAStates.empty()){
       auto node = *NFAStates.begin();
       NFAStates.erase(node);
@@ -493,8 +493,8 @@ namespace solverbin{
     }
   }
 
-  std::set<RegExpSymbolic::FollowAtomata::NFAState*> RegExpSymbolic::FollowAtomata::StepOneByte(NFAState* s, uint8_t c){
-    std::set<RegExpSymbolic::FollowAtomata::NFAState*> NFAStateVec;
+  std::set<RegExpSymbolic::PositionAutomaton::NFAState*> RegExpSymbolic::PositionAutomaton::StepOneByte(NFAState* s, uint8_t c){
+    std::set<RegExpSymbolic::PositionAutomaton::NFAState*> NFAStateVec;
     auto itc = s->Next.find(REClass.ByteMap[c]);
     if (itc != s->Next.end()){
       NFAStateVec = itc->second;

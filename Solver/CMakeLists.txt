@@ -11,12 +11,12 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         String/regexp_symbolic_inclusion.cpp
                         String/regexp_symbolic_intersectionK.cpp
                         String/regexp_symbolic_Completment.cpp
-                        PositionAutomaton/PositionAutomaton.h
-                        PositionAutomaton/Intersectiontest.h
-                        PositionAutomaton/Intersectiontest.cpp
-                        PositionAutomaton/PositionAutomaton.cpp
-                        PositionAutomaton/Completment.cpp
-                        PositionAutomaton/DFA.cpp
+                        Automaton/PositionAutomaton.h
+                        Automaton/Intersectiontest.h
+                        Automaton/Intersectiontest.cpp
+                        Automaton/PositionAutomaton.cpp
+                        Automaton/Completment.cpp
+                        Automaton/DFA.cpp
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.h

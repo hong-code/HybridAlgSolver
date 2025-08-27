@@ -12,7 +12,7 @@ using namespace solverbin;
 
 namespace solverbin{
 
-  // int FollowAtomata::FindIndexOfNodes(REnode* e){
+  // int PositionAutomaton::FindIndexOfNodes(REnode* e){
   //   auto Index = Node2Index.find(e);
   //   if (Index == Node2Index.end()){
   //     IndexMax++;
@@ -24,7 +24,7 @@ namespace solverbin{
   //   }
   // }
 
-  void FollowAtomata::ProcessCounting(RuneClass& r){
+  void PositionAutomaton::ProcessCounting(RuneClass& r){
     if (r.min == 0){
       r.max--;
     }
@@ -34,7 +34,7 @@ namespace solverbin{
     }
   }
 
-  void FollowAtomata::Isnullable(REnode* e1){
+  void PositionAutomaton::Isnullable(REnode* e1){
   switch (e1->KindReturn())
   {
   case Kind::REGEXP_NONE:{
@@ -147,8 +147,8 @@ namespace solverbin{
   }
 }
 
-  // std::vector<FollowAtomata::State*> FollowAtomata::MergeState(std::vector<FollowAtomata::State*> SV1, FollowAtomata::State* s2){
-  //   std::vector<FollowAtomata::State*> VEC;
+  // std::vector<PositionAutomaton::State*> PositionAutomaton::MergeState(std::vector<PositionAutomaton::State*> SV1, PositionAutomaton::State* s2){
+  //   std::vector<PositionAutomaton::State*> VEC;
   //   for (auto it : SV1){
   //     if (it->ValideRange.max >= s2->ValideRange.min){
         
@@ -161,7 +161,7 @@ namespace solverbin{
   //             continue;
   //           }
   //         }
-  //         auto S = new FollowAtomata::State(s2->IndexSequence, it->Ccontinuation, it->ValideRange);
+  //         auto S = new PositionAutomaton::State(s2->IndexSequence, it->Ccontinuation, it->ValideRange);
   //         S->ValideRange = RuneClass(low_bound, up_bound);
   //         for (auto itc : it->IndexSequence)
   //           S->IndexSequence.insert(itc);
@@ -196,8 +196,8 @@ namespace solverbin{
   //   return VEC;
   // }  
 
-  std::vector<FollowAtomata::State*> FollowAtomata::FirstNode(REnode* e1){
-  std::vector<FollowAtomata::State*> NFAStateVec;
+  std::vector<PositionAutomaton::State*> PositionAutomaton::FirstNode(REnode* e1){
+  std::vector<PositionAutomaton::State*> NFAStateVec;
   std::set<int> IndexS1;
   switch (e1->KindReturn()){
     case Kind::REGEXP_NONE:{
@@ -209,7 +209,7 @@ namespace solverbin{
       if (Vec == Node2NFAState.end()){
         e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
         REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
-        FollowAtomata::State* SubState = new FollowAtomata::State(IndexMax, e2, e1->Rune_Class);
+        PositionAutomaton::State* SubState = new PositionAutomaton::State(IndexMax, e2, e1->Rune_Class);
         IndexMax++;
         NFAStateVec.emplace_back(SubState);
         Node2NFAState.insert(std::make_pair(e1, NFAStateVec));
@@ -247,7 +247,7 @@ namespace solverbin{
                   e2->Children.insert(e2->Children.end(), e1->Children.begin() + i + 1, e1->Children.end());
                 }
               }        
-              auto SubState = new FollowAtomata::State(it->Index, e2, it->ValideRange);
+              auto SubState = new PositionAutomaton::State(it->Index, e2, it->ValideRange);
               NFAStateVec.emplace_back(SubState);
             }
           }
@@ -297,13 +297,13 @@ namespace solverbin{
         if (FirstSetofChild.size() != 0){
           for (auto it : FirstSetofChild){
             if (it->Ccontinuation->KindReturn() == Kind::REGEXP_NONE){
-              NFAStateVec.emplace_back(new FollowAtomata::State(it->Index, e1, it->ValideRange));
+              NFAStateVec.emplace_back(new PositionAutomaton::State(it->Index, e1, it->ValideRange));
             }
             else{
               REnode* e2 = REClass.initREnode(Kind::REGEXP_CONCAT, RuneClass(0, 0));
               e2->Children.emplace_back(it->Ccontinuation);
               e2->Children.emplace_back(e1);
-              NFAStateVec.emplace_back(new FollowAtomata::State(it->Index, e2, it->ValideRange));
+              NFAStateVec.emplace_back(new PositionAutomaton::State(it->Index, e2, it->ValideRange));
             }
           }
         }
@@ -334,7 +334,7 @@ namespace solverbin{
       if (Vec == Node2NFAState.end()){
         e1->Status = NODE_STATUS::NODE_NULLABLE_NOT;
         REnode* e2 = REClass.initREnode(Kind::REGEXP_NONE, RuneClass(0, 0));
-        FollowAtomata::State* SubState = new FollowAtomata::State(IndexMax, e2, e1->Rune_Class);
+        PositionAutomaton::State* SubState = new PositionAutomaton::State(IndexMax, e2, e1->Rune_Class);
         IndexMax++;
         NFAStateVec.emplace_back(SubState);
         Node2NFAState.insert(std::make_pair(e1, NFAStateVec));
@@ -383,7 +383,7 @@ namespace solverbin{
                   e2->Children.emplace_back(e1Copy);
                 }
               }        
-              auto SubState = new FollowAtomata::State(it->Index, e2, it->ValideRange);
+              auto SubState = new PositionAutomaton::State(it->Index, e2, it->ValideRange);
               NFAStateVec.emplace_back(SubState);
             }
           }
@@ -407,8 +407,8 @@ namespace solverbin{
   return NFAStateVec;
 }
 
-  FollowAtomata::FollowAtomata(){}
-  FollowAtomata::FollowAtomata(Node e){
+  PositionAutomaton::PositionAutomaton(){}
+  PositionAutomaton::PositionAutomaton(Node e){
     REClass = REnodeClass("");
     REClass.REnodeToString(REClass.Renode);
     // REClass.FirstNode(REClass.Renode);
@@ -426,27 +426,23 @@ namespace solverbin{
       NState->DFlag = Begin;
     
   }
-  FollowAtomata::FollowAtomata(REnodeClass e){
+  PositionAutomaton::PositionAutomaton(REnodeClass e){
     REClass = e;
     NState = new State(IndexMax, REClass.Renode, RuneClass(0, 0), REClass.color_max);
     IndexMax++;
     DeadState->DFlag = Dead;
     auto Ret = FirstNode(REClass.Renode);
-    for (auto it : Ret){
-      NState->FollowIndexSet.insert(it->Index);
-      NState->FirstSet.emplace_back(it);
-    }
+    NState->FirstSet = Ret;
     if (NState->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
       NState->DFlag = Match;
     }else
       NState->DFlag = Begin;
     // FindInNFACache(nfacache, NState);
     Index2State.insert({NState->Index, NState});
-    IndexSet2State.insert({NState->FollowIndexSet, NState});
   }
 
-  std::vector<FollowAtomata::State*> FollowAtomata::StepOneByte(State* s, uint8_t c){
-    std::vector<FollowAtomata::State*> NFAStateVec;
+  std::vector<PositionAutomaton::State*> PositionAutomaton::StepOneByte(State* s, uint8_t c){
+    std::vector<PositionAutomaton::State*> NFAStateVec;
     auto itc = s->NextStates[REClass.ByteMap[c]];
     if (!itc.empty()){
       if (itc[0] != DeadState)
@@ -457,35 +453,23 @@ namespace solverbin{
     for (auto i : s->FirstSet){
       i->NextStates = std::vector<std::vector<State*>>(REClass.color_max+1);
       if (c >= i->ValideRange.min && c <= i->ValideRange.max){
-        auto OldState = Index2State.find(i->Index);
-        if (OldState != Index2State.end()){
-          i = OldState->second;
-        }
-        else {
-          Index2State.insert({i->Index, i});
-          auto Tuple = FirstNode(i->Ccontinuation);
-          for (auto it : Tuple){
-            i->FirstSet.emplace_back(it);
-            i->FollowIndexSet.insert(it->Index);
-          }
-          if (i->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
-            i->DFlag = Match;
-            // if (REClass.matchFlag != REnodeClass::MatchFlag::dollarEnd)
-            //   return {};
-          }else
-            i->DFlag = Normal;
-
-        }
+        auto Tuple = FirstNode(i->Ccontinuation);
         // if (Tuple.second.size() == 0)
         //   Mark = true;
-        // Follow
-        auto FollowState = IndexSet2State.find(i->FollowIndexSet);
-        if (FollowState != IndexSet2State.end()){
-          NFAStateVec.emplace_back(FollowState->second);
+        i->FirstSet = Tuple;
+        if (i->Ccontinuation->Status == NODE_STATUS::NODE_NULLABLE){
+          i->DFlag = Match;
+          // if (REClass.matchFlag != REnodeClass::MatchFlag::dollarEnd)
+          //   return {};
+        }else
+          i->DFlag = Normal;
+        auto OldState = Index2State.find(i->Index);
+        if (OldState != Index2State.end()){
+          NFAStateVec.emplace_back(OldState->second);
         }
-        else{
+        else {
           NFAStateVec.emplace_back(i);
-          IndexSet2State.insert({i->FollowIndexSet, i});
+          Index2State.insert({i->Index, i});
         }
           
       }
@@ -500,7 +484,7 @@ namespace solverbin{
     return NFAStateVec;
   }
 
-  void  FollowAtomata::DumpState(State* s){
+  void  PositionAutomaton::DumpState(State* s){
     std::cout << "Follow: ";
     for (auto i : s->FirstSet){
       std::cout << REnodeClass::REnodeToString(i->Ccontinuation) << "\n";
@@ -508,7 +492,7 @@ namespace solverbin{
     std::cout << "" << std::endl;
   }
 
-  FollowAtomata::NFACache* FollowAtomata::Step2Left(NFACache* DC, int c){
+  PositionAutomaton::NFACache* PositionAutomaton::Step2Left(NFACache* DC, int c){
     NFACache* dc = DC;
     for (int i = 0; i < c; i++){
       if (dc->left == nullptr){
@@ -522,7 +506,7 @@ namespace solverbin{
     return dc;
   }
 
-  FollowAtomata::NFACache* FollowAtomata::Step2Right(NFACache* DC, int c){
+  PositionAutomaton::NFACache* PositionAutomaton::Step2Right(NFACache* DC, int c){
     NFACache* dc = DC;
     for (int i = 0; i < c; i++){
       if (dc->right == nullptr){
@@ -536,7 +520,7 @@ namespace solverbin{
     return dc;
   }
 
-  void FollowAtomata::ComputeFullNFA(std::set<State*>& StateSet, std::vector<Transition>& TransitionSet){
+  void PositionAutomaton::ComputeFullNFA(std::set<State*>& StateSet, std::vector<Transition>& TransitionSet){
     std::queue<State*> StateQueue;
     StateQueue.push(this->NState);
     while (StateQueue.size() != 0){
