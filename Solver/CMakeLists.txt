@@ -17,6 +17,8 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         Automaton/PositionAutomaton.cpp
                         Automaton/Completment.cpp
                         Automaton/DFA.cpp
+                        Automaton/FollowAutomaton.h
+                        Automaton/FollowAutomaton.cpp
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.h

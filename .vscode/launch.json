@@ -206,7 +206,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/GenerateGNNDatesets",
             "args": [
-                "/home/HybridAlgSolver/test.txt",
+                "/home/HybridAlgSolver/regex.txt",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -239,8 +239,9 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/Completment",
             "args": [
-                "/app/HybridAlgSolver/test.txt"
-            ],
+                "/home/HybridAlgSolver/test.txt",
+                "/home/HybridAlgSolver/output.txt"
+                ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

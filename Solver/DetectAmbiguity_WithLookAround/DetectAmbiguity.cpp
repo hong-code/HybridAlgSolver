@@ -374,5 +374,54 @@ namespace solverbin{
     }
     return false;
   }
+
+  bool DetectABTNFA_Lookaround::IsInfiniteAmbiguity(TernarySimulationState TSS) {
+    if (debug.PrintSimulation){
+      std::cout << "witness str: " << WitnessStr << std::endl;
+      DumpTernarySimulationState(TSS);
+    }
+    for (auto c : Alphabet){
+      if (debug.PrintSimulation) std::cout << "matching: " << int(c) << " " << std::endl;
+      auto nextns1 = F1.StepOneByte(TSS[0], c);
+      auto nextns2 = F1.StepOneByte(TSS[1], c);
+      auto nextns3 = F1.StepOneByte(TSS[2], c);
+      if (nextns1.empty() || nextns2.empty() || nextns3.empty())
+        continue;
+      for (auto nextns1_it : nextns1){
+        for (auto nextns2_it : nextns2){
+          for (auto nextns3_it : nextns3){
+            TernarySimulationState ns =  getSorted({nextns1_it, nextns2_it, nextns3_it});
+            if (debug.PrintSimulation) DumpTernarySimulationState(ns);
+            auto itc = DoneCache.find(ns);
+            if (itc != DoneCache.end()){
+              continue;
+            }
+            else{
+              DoneCache.insert(ns);
+              auto TSSET = DTSimulationState(ns);
+              InterStr.push_back(c);
+              if (!TSSET.empty()){
+                if (DetectABTOFSDeepFirst(ns, TSSET)){
+                  std::string Preff = InterStr + WitnessStr;
+                  return true;
+                }
+                else {
+                  SimulationCache.clear();
+                  WitnessStr = "";
+                }
+              }
+              if (IsInfiniteAmbiguity(ns)){
+                return true;
+              }
+              else {
+                InterStr.pop_back();
+              }
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
   
 }

@@ -81,7 +81,7 @@ namespace solverbin{
   };
 
 
-  class DFA{
+  class FollowDFA{
   public:
     enum DFAStateFlag{
       Begin,
@@ -129,8 +129,8 @@ namespace solverbin{
     bool Fullmatch(DFAState* Init_state, std::string str); 
     std::map<FollowAutomaton::State*, int> Node2Index; // map from the node to the index
     int IndexMax = 0;
-    DFA() {};
-    DFA(FollowAutomaton* fa);
+    FollowDFA() {};
+    FollowDFA(FollowAutomaton* fa);
   };
 
 
