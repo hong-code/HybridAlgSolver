@@ -207,6 +207,8 @@
             "program": "${workspaceFolder}/build/GenerateGNNDatesets",
             "args": [
                 "/home/HybridAlgSolver/regex.txt",
+                "1",
+                "1",
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

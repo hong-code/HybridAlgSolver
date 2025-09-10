@@ -80,6 +80,8 @@ class REnode{
     RuneClass Rune_Class;     // charclass decoded by utf-8
     RuneClass Counting;      // counting range
     std::string Str;    // string Kind
+    std::wstring CaptureName;
+    int CaptureIndex;
     std::string PrefixStr;
     bool Iscompute = false;
     std::vector<std::map<REnode*, std::set<int>>> Prefix;
@@ -131,6 +133,7 @@ class REnodeClass{
     // REnode* linearize(Node e, std::set<RuneClass>& BytemapRange); // convert the node to the linear form
 
     static std::string REnodeToString(REnode* e); // convert the node to the string
+    static void REnodeToAST(REnode* e, std::string blankStr);
 
     std::map<REnode*, REnode*> FirstNode(REnode* e);
 

@@ -50,6 +50,7 @@ int main(int argc, char* argv[]) {
     // std::wcout << L"Regex: " << unicodeStr << std::endl;
     
     auto ren = solverbin::Parser(unicodeStr, false);
+    ren.Re.REnodeToAST(ren.Re.Renode, "");
     bool is_position = false;
     if (is_position){
       auto NFA = solverbin::PositionAutomaton(ren.Re);

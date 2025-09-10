@@ -314,31 +314,95 @@ namespace solverbin {
           // r->Children.emplace_back(REnodeLookahead);
           break;
         }
-        else{
-          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
-          if (RegexString[0] == '?'){
+        else {
+        if (RegexString[0] == '?'){
+          RegexString.erase(0, 1);
+          if (RegexString[0] == ':'){
+            REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
             RegexString.erase(0, 1);
-            if (RegexString[0] == ':')
+            REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+            // if (REnodeCONCAT->Children.size() > 1)
+            r->Children.emplace_back(REnodeCONCAT);
+          }
+          else if (RegexString[0] == '<'){
+            REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+            RegexString.erase(0, 1);
+            auto NodeCaptureLeft =  Re.initREnode(Kind::REGEXP_CaptureLeft, {0, 0});
+            auto NodeCaptureRight =  Re.initREnode(Kind::REGEXP_CaptureRight, {0, 0});
+            std::wstring CaptureName;
+            while (RegexString[0] != '>'){
+              CaptureName.push_back(RegexString[0]);
               RegexString.erase(0, 1);
-            else if (RegexString[0] == '<'){
-              RegexString.erase(0, 1);
-              while (RegexString[0] != '>')
-                RegexString.erase(0, 1);
-              RegexString.erase(0, 1);  
+            }               
+            RegexString.erase(0, 1);
+            REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+            NodeCaptureLeft->CaptureName = CaptureName;
+            NodeCaptureLeft->CaptureIndex = this->CaptureGroup;
+            this->CaptureGroup++;
+            NodeCaptureRight->CaptureName = CaptureName;
+            NodeCaptureRight->CaptureIndex = NodeCaptureLeft->CaptureIndex;
+            if (REnodeCONCAT->KindReturn() == Kind::REGEXP_UNION){
+              auto REnodeCONCAT1 = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+              REnodeCONCAT1->Children.emplace_back(NodeCaptureLeft);
+              REnodeCONCAT1->Children.emplace_back(REnodeCONCAT);
+              REnodeCONCAT1->Children.emplace_back(NodeCaptureRight);
+              r->Children.emplace_back(REnodeCONCAT1);
             }
-            else if (RegexString[0] == 'P' && RegexString[1] == '<'){
-              while (RegexString[0] != '>')
-                RegexString.erase(0, 1);
-              RegexString.erase(0, 1);
+            else{
+              REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
+              REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
+              r->Children.emplace_back(REnodeCONCAT);
             }
           }
-          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
-          // if (REnodeCONCAT->Children.size() > 1)
-          r->Children.emplace_back(REnodeCONCAT);
-          // else
-          //   r->Children.emplace_back(REnodeCONCAT->Children[0]);
-          break;
+          else if (RegexString[0] == 'P' && RegexString[1] == '<'){
+            REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+            auto NodeCaptureLeft =  Re.initREnode(Kind::REGEXP_CaptureLeft, {0, 0});
+            auto NodeCaptureRight =  Re.initREnode(Kind::REGEXP_CaptureRight, {0, 0});
+            std::wstring CaptureName;
+            RegexString.erase(0, 1);
+            RegexString.erase(0, 1);
+            while (RegexString[0] != '>'){
+              CaptureName.push_back(RegexString[0]);
+              RegexString.erase(0, 1);
+            }
+            RegexString.erase(0, 1);
+            REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+            // if (REnodeCONCAT->Children.size() > 1)
+            NodeCaptureLeft->CaptureName = CaptureName;
+            NodeCaptureLeft->CaptureIndex = this->CaptureGroup;
+            this->CaptureGroup++;
+            NodeCaptureRight->CaptureName = CaptureName;
+            NodeCaptureRight->CaptureIndex = NodeCaptureLeft->CaptureIndex;
+            if (REnodeCONCAT->KindReturn() == Kind::REGEXP_UNION){
+              auto REnodeCONCAT1 = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+              REnodeCONCAT1->Children.emplace_back(NodeCaptureLeft);
+              REnodeCONCAT1->Children.emplace_back(REnodeCONCAT);
+              REnodeCONCAT1->Children.emplace_back(NodeCaptureRight);
+              r->Children.emplace_back(REnodeCONCAT1);
+            }
+            else{
+              REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
+              REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
+              r->Children.emplace_back(REnodeCONCAT);
+            }
+          }
         }
+        else{
+          REnode* REnodeCONCAT = Re.initREnode(Kind::REGEXP_CONCAT, {0, 0});
+          auto NodeCaptureLeft =  Re.initREnode(Kind::REGEXP_CaptureLeft, {0, 0});
+          auto NodeCaptureRight =  Re.initREnode(Kind::REGEXP_CaptureRight, {0, 0});
+          REnodeCONCAT = Parse(REnodeCONCAT, RegexString);
+          NodeCaptureLeft->CaptureIndex = this->CaptureGroup;
+          this->CaptureGroup++;
+          NodeCaptureRight->CaptureIndex = NodeCaptureLeft->CaptureIndex;
+          REnodeCONCAT->Children.insert(REnodeCONCAT->Children.begin(), NodeCaptureLeft);
+          REnodeCONCAT->Children.emplace_back(NodeCaptureRight);
+          r->Children.emplace_back(REnodeCONCAT);
+        }
+        // else
+        //   r->Children.emplace_back(REnodeCONCAT->Children[0]);
+        break;
+      }
         
       }
 
@@ -872,6 +936,18 @@ namespace solverbin {
             REnodeUNION = REnodeRune;
           }
           r->Children.emplace_back(REnodeUNION);
+          break;
+        }
+        if (RegexString[1] >= '0' && RegexString[1] <= '9'){
+          std::wstring BackReferenceId;
+          while (RegexString[1] >= '0' && RegexString[1] <= '9'){
+            BackReferenceId.push_back(RegexString[1]);
+            RegexString.erase(0, 1);
+          }
+          int BackReferenceIdInt = stoi(BackReferenceId);
+          REnode* REnodeBACKREFERENCE = Re.initREnode(Kind::REGEXP_BACKREFERENCE, {0, 0});
+          REnodeBACKREFERENCE->CaptureIndex = BackReferenceIdInt;
+          r->Children.emplace_back(REnodeBACKREFERENCE);
           break;
         }
         RegexString.erase(0, 1);
