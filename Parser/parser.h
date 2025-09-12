@@ -10,7 +10,7 @@ namespace solverbin {
         typedef std::vector<REnode*> RuneSequence;
       #endif  
       std::string regex_string;
-      int CaptureGroup = 0;
+      int CaptureGroup = 1;
       REnodeClass Re;
       bool GREWIA = false;
       Parser(std::wstring regex_string, bool GREWIA);
