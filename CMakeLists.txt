@@ -43,6 +43,15 @@ target_link_libraries(GenerateGNNDatesets
                             OpenSSL::Crypto
 )
 
+add_executable(GenerateASTDatasets GenerateASTDatasets.cpp)
+target_link_libraries(GenerateASTDatasets
+                        PRIVATE 
+                            Parserbin 
+                            Solverbin 
+                            OpenSSL::SSL 
+                            OpenSSL::Crypto
+)
+
 add_executable(GREWIA GREWIA.cpp)
 target_link_libraries(GREWIA Parserbin Solverbin OpenSSL::SSL OpenSSL::Crypto)
 

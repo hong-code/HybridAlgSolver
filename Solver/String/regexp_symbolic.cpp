@@ -359,61 +359,69 @@ std::string REnodeClass::REnodeToString(REnode* r ) {
 }
 
 
-void REnodeClass::REnodeToAST(REnode* e, std::string blankStr){
+void REnodeClass::REnodeToAST(REnode* e, std::string blankStr, std::string& returnStr) {
   switch (e->KindReturn()){
     case Kind::REGEXP_NONE:{
-      std::cout << blankStr << "EPSILON" << std::endl;
+      // std::cout << blankStr << "EPSILON" << std::endl;
+      returnStr += blankStr + "EPSILON" + "\n";
       break;
     }
     case Kind::REGEXP_RUNE:{
-      std::cout << blankStr << "CHARCLASS: " << "[" << e->Rune_Class.min << ", " << e->Rune_Class.max << "]" << std::endl;
+      // std::cout << blankStr << "CHARCLASS: " << "[" << e->Rune_Class.min << ", " << e->Rune_Class.max << "]" << std::endl;
+      returnStr += blankStr + "CHARCLASS: " + "[" + std::to_string(e->Rune_Class.min) + ", " + std::to_string(e->Rune_Class.max) + "]" + "\n";
       break;
     }
     case Kind::REGEXP_CONCAT:{
-      std::cout << blankStr << "CONCAT: " << std::endl;
+      // std::cout << blankStr << "CONCAT: " << std::endl;
+      returnStr += blankStr + "CONCAT: " + "\n";
       blankStr += "|   ";
       for (auto i : e->Children){
-        REnodeToAST(i, blankStr);
+        REnodeToAST(i, blankStr, returnStr);
       }
       break;
     }
     case Kind::REGEXP_UNION:{
-      std::cout << blankStr << "UNION: " << std::endl;
+      // std::cout << blankStr << "UNION: " << std::endl;
+      returnStr += blankStr + "UNION: " + "\n";
       blankStr += "|   ";
       for (auto i : e->Children){
-        REnodeToAST(i, blankStr);
+        REnodeToAST(i, blankStr, returnStr);
       }
       break;
     }
     case Kind::REGEXP_STAR:{
-      std::cout << blankStr << "STAR: " << std::endl;
+      // std::cout << blankStr << "STAR: " << std::endl;
+      returnStr += blankStr + "STAR: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
     case Kind::REGEXP_PLUS:{
-      std::cout << blankStr << "PLUS: " << std::endl;
+      // std::cout << blankStr << "PLUS: " << std::endl;
+      returnStr += blankStr + "PLUS: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
     case Kind::REGEXP_OPT:
     {
-      std::cout << blankStr << "OPT: " << std::endl;
+      // std::cout << blankStr << "OPT: " << std::endl;
+      returnStr += blankStr + "OPT: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
     case Kind::REGEXP_CHARCLASS:{
-      std::cout << blankStr << "CHARCLASS: " << "[" << e->Rune_Class.min << ", " << e->Rune_Class.max << "]" << std::endl;
+      // std::cout << blankStr << "CHARCLASS: " << "[" << e->Rune_Class.min << ", " << e->Rune_Class.max << "]" << std::endl;
+      returnStr += blankStr + "CHARCLASS: " + "[" + std::to_string(e->Rune_Class.min) + ", " + std::to_string(e->Rune_Class.max) + "]" + "\n";
       break;
     }
     case Kind::REGEXP_LOOP:
     {
-      std::cout << blankStr << "REPEAT: " << "{" << e->Counting.min << ", " << e->Counting.max << "}" << std::endl;
+      // std::cout << blankStr << "REPEAT: " << "{" << e->Counting.min << ", " << e->Counting.max << "}" << std::endl;
+      returnStr += blankStr + "REPEAT: " + "{" + std::to_string(e->Counting.min) + ", " + std::to_string(e->Counting.max) + "}" + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
-      break;
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
       // case REGEXP_rv:
@@ -425,55 +433,63 @@ void REnodeClass::REnodeToAST(REnode* e, std::string blankStr){
       // }
     case Kind::REGEXP_REPEAT:
     {
-      std::cout << blankStr << "REPEAT: " << "{" << e->Counting.min << ", " << e->Counting.max << "}" << std::endl;
+      // std::cout << blankStr << "REPEAT: " << "{" << e->Counting.min << ", " << e->Counting.max << "}" << std::endl;
+      returnStr += blankStr + "REPEAT: " + "{" + std::to_string(e->Counting.min) + ", " + std::to_string(e->Counting.max) + "}" + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
 
     case Kind::REGEXP_CaptureLeft:{
-      std::cout << blankStr << "CAPTURELEFT " << "Index: " << e->CaptureIndex << std::endl;
+      // std::cout << blankStr << "CAPTURELEFT " << "Index: " << e->CaptureIndex << std::endl;
+      returnStr += blankStr + "CAPTURELEFT " + "Index: " + std::to_string(e->CaptureIndex) + "\n";
       break;
     }
 
     case Kind::REGEXP_CaptureRight:{
-      std::cout << blankStr << "CAPTURERIGHT " << "Index: " << e->CaptureIndex << std::endl;
+      // std::cout << blankStr << "CAPTURERIGHT " << "Index: " << e->CaptureIndex << std::endl;
+      returnStr += blankStr + "CAPTURERIGHT " + "Index: " + std::to_string(e->CaptureIndex) + "\n";
       break;
     }
 
     case Kind::REGEXP_Lookahead:
     {
-      std::cout << blankStr << "PLOOKAHEAD: " << std::endl;
+      // std::cout << blankStr << "PLOOKAHEAD: " << std::endl;
+      returnStr += blankStr + "PLOOKAHEAD: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
 
     case Kind::REGEXP_NLookahead:
     {
-      std::cout << blankStr << "NLOOKAHEAD: " << std::endl;
+      // std::cout << blankStr << "NLOOKAHEAD: " << std::endl;
+      returnStr += blankStr + "NLOOKAHEAD: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
     case Kind::REGEXP_Lookbehind:
     {
-      std::cout << blankStr << "PLOOKBEHIND: " << std::endl;
+      // std::cout << blankStr << "PLOOKBEHIND: " << std::endl;
+      returnStr += blankStr + "PLOOKBEHIND: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
 
     case Kind::REGEXP_NLookbehind:
     {
-      std::cout << blankStr << "NLOOKBEHIND: " << std::endl;
+      // std::cout << blankStr << "NLOOKBEHIND: " << std::endl;
+      returnStr += blankStr + "NLOOKBEHIND: " + "\n";
       blankStr += "|   ";
-      REnodeToAST(e->Children[0], blankStr);
+      REnodeToAST(e->Children[0], blankStr, returnStr);
       break;
     }
 
     case Kind::REGEXP_BACKREFERENCE:{
-      std::cout << blankStr << "BACKREFERENCE Refers to: " << e->CaptureIndex << std::endl;
+      // std::cout << blankStr << "BACKREFERENCE Refers to: " << e->CaptureIndex << std::endl;
+      returnStr += blankStr + "BACKREFERENCE Refers to: " + std::to_string(e->CaptureIndex) + "\n";
       break;
     }
     default:

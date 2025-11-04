@@ -133,7 +133,7 @@ class REnodeClass{
     // REnode* linearize(Node e, std::set<RuneClass>& BytemapRange); // convert the node to the linear form
 
     static std::string REnodeToString(REnode* e); // convert the node to the string
-    static void REnodeToAST(REnode* e, std::string blankStr);
+    static void REnodeToAST(REnode* e, std::string blankStr, std::string& returnStr); // convert the node to the AST string
 
     std::map<REnode*, REnode*> FirstNode(REnode* e);
 
