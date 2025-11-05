@@ -20,5 +20,6 @@ add_library (Solverbin ${DIR_LIB_SRCS}
                         DetectAmbiguity/DetectAmbiguity.h
                         DetectAmbiguity/DetectAmbiguity.cpp
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.h
+                        DetectAmbiguity_WithLookAround/ComputeFiniteAmbiguity.cpp
                         DetectAmbiguity_WithLookAround/DetectAmbiguity.cpp
                         )

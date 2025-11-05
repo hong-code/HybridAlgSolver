@@ -14,6 +14,7 @@ namespace solverbin{
       public:
         REnodeClass e1;
         FollowAtomata F1;
+        DFA D1;
         enum DetectABTFlag{
           Begin,
           Normal,
@@ -104,6 +105,7 @@ namespace solverbin{
         bool IsABT(TernarySimulationState s);
         bool DetectABTOFS(TernarySimulationState s, std::set<TernarySimulationState> TSSET);
         bool DetectABTOFSDeepFirst(TernarySimulationState TSS_Ex, std::set<TernarySimulationState> TSSET);
+        bool DetectFiniteAmbiguity();
         bool Verify(std::string& attack_string);
     };
 }

@@ -89,22 +89,27 @@ namespace solverbin{
     }  
     NS->IndexSequence = IndexSequence;
     NS->NodeSequence = NodeSequence;
+    NS->id = DFAIndexMax;
+    DFAIndexMax++;
   }
 
 
-    DFA::DFAState* DFA::StepOneByte(DFAState* s, uint8_t c){
+  DFA::DFAState* DFA::StepOneByte(DFAState* s, uint8_t c){
     std::set<FollowAtomata::State*> NFAStateVec;
+    std::vector<int> NextStatePatitionVec;
     auto itc = s->Next.find(FA->REClass.ByteMap[c]);
     if (itc != s->Next.end()){
-      return itc->second;
+      return itc->second.first;
     }
     DFAState* NextDFAState = new DFAState();
     for (auto j : s->NodeSequence){
+      int sizeoffollowset = 0;
       for (auto i : j->FirstSet){
         if (c >= i->ValideRange.min && c <= i->ValideRange.max){
           auto Tuple = FA->FirstNode(i->Ccontinuation);
           // if (Tuple.second.size() == 0)
           //   Mark = true;
+          sizeoffollowset++;
           i->FirstSet = Tuple.second;
           i->FirstSet.insert(i->FirstSet.end(), Tuple.first.begin(), Tuple.first.end());
           if (i->Ccontinuation->Isnullable){
@@ -117,6 +122,7 @@ namespace solverbin{
         else
           continue;
       }
+      NextStatePatitionVec.push_back(sizeoffollowset);
     }
     if (NFAStateVec.size() == 0)
       return nullptr;
@@ -126,7 +132,7 @@ namespace solverbin{
       delete NextDFAState;
       NextDFAState = nullptr;
     }
-    s->Next.insert(std::make_pair(FA->REClass.ByteMap[c], UniqueDFAState));
+    s->Next.insert(std::make_pair(FA->REClass.ByteMap[c], std::make_pair(UniqueDFAState, NextStatePatitionVec)));
     return UniqueDFAState;
   }
 

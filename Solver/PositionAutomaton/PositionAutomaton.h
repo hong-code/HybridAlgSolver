@@ -88,9 +88,10 @@ namespace solverbin{
     struct DFAState
     {
       DFAStateFlag DFlag;
+      int id;
       std::set<int> IndexSequence; //vector<int> Index
       std::set<FollowAtomata::State*> NodeSequence;
-      std::map<uint8_t, DFAState*> Next;
+      std::unordered_map<uint8_t, std::pair<DFAState*, std::vector<int>>> Next;
       DFAState() : DFlag(), NodeSequence(){};
       DFAState(DFAStateFlag F,std::set<FollowAtomata::State*> NS) : DFlag(F), NodeSequence(NS){};
     };
@@ -118,7 +119,8 @@ namespace solverbin{
     bool Fullmatch(std::wstring Pattern, std::string str); 
     std::map<FollowAtomata::State*, int> Node2Index; // map from the node to the index
     int IndexMax = 0;
-    DFA();
+    int DFAIndexMax = 1;
+    DFA() {};
     DFA(FollowAtomata* fa);
   };
 
