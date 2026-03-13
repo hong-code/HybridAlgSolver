@@ -10,7 +10,11 @@
 
 
 int main(int argc, char* argv[]) {
-  std::string line = argv[1];
+  std::ifstream infile;
+  infile.open(argv[1], std::ios::binary);
+  std::string line;
+  std::getline(infile, line);
+  // std::string line = argv[1];
   wchar_t c;
   std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
   std::wstring unicodeStr = converter.from_bytes(line);
@@ -18,15 +22,15 @@ int main(int argc, char* argv[]) {
   if (c == '\r'){
     unicodeStr.pop_back();
   }
-  if (unicodeStr[0] == '/'){
-    for (int j = unicodeStr.length()-1; j > 1; j--){
-      if (unicodeStr[j] == '/' ){
-        unicodeStr.erase(j, unicodeStr.length());
-        unicodeStr.erase(0, 1);
-        break;
-      }
-    }
-  }
+  // if (unicodeStr[0] == '/'){
+  //   for (int j = unicodeStr.length()-1; j > 1; j--){
+  //     if (unicodeStr[j] == '/' ){
+  //       unicodeStr.erase(j, unicodeStr.length());
+  //       unicodeStr.erase(0, 1);
+  //       break;
+  //     }
+  //   }
+  // }
   std::vector<solverbin::REnodeClass> ReList;
   std::cout << "Regex: " << line << std::endl;
   auto ren = solverbin::Parser(unicodeStr, false);

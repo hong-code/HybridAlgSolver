@@ -221,7 +221,6 @@ def label_totals_bars(ax, fontsize: int = 9, pad: float = 1.5,
     for c in ax.containers:
         try:
             if mode == "inside":
-                # 贴在条形内部右侧：label_type='center' + 右对齐
                 ax.bar_label(
                     c,
                     fmt="%.0f",
@@ -229,9 +228,7 @@ def label_totals_bars(ax, fontsize: int = 9, pad: float = 1.5,
                     padding=0,
                     fontsize=fontsize
                 )
-                # 将刚生成的文本右对齐并向右微移到“条形末端附近”
                 for txt, patch in zip(ax.texts[-len(c):], c.patches):
-                    # x: 条形右端 - 一个小 padding
                     x = patch.get_x() + patch.get_width()
                     y = patch.get_y() + patch.get_height() / 2.0
                     txt.set_position((x - max_w * 0.01, y))
@@ -241,6 +238,16 @@ def label_totals_bars(ax, fontsize: int = 9, pad: float = 1.5,
                 ax.bar_label(c, fmt="%.0f", label_type="edge", padding=pad, fontsize=fontsize)
         except Exception:
             pass
+
+
+def set_intersection_yaxis_font(ax, tick_font: int = 10, ylabel_font: Optional[int] = None):
+    """Adjust intersection y-axis tick label font size (+ optional y-label font size)."""
+    if ax is None:
+        return
+    ax.tick_params(axis="y", labelsize=int(tick_font))
+    if ylabel_font is not None:
+        yl = ax.get_ylabel()
+        ax.set_ylabel(yl, fontsize=int(ylabel_font))
 
 
 def main():
@@ -269,6 +276,12 @@ def main():
                     help="Gap between totals bars and tool names/matrix area. Larger => more separation.")
     ap.add_argument("--totals-label", choices=["inside", "edge"], default="inside",
                     help="Where to draw totals numbers. 'inside' avoids overlapping tool names.")
+
+    # NEW: intersection y-axis font controls
+    ap.add_argument("--inter-yfont", type=int, default=10,
+                    help="Font size of intersection y-axis tick labels")
+    ap.add_argument("--inter-ylabel-font", type=int, default=None,
+                    help="Font size of intersection y-axis label (if any)")
 
     args = ap.parse_args()
 
@@ -307,6 +320,9 @@ def main():
     # 上面交集柱变矮
     ax_inter = find_intersection_axis(axes)
     shrink_top_intersection_axis_height(ax_inter, scale=args.top_vscale, anchor=args.top_anchor)
+
+    # NEW: intersection y-axis tick/ylabel font sizes
+    set_intersection_yaxis_font(ax_inter, tick_font=args.inter_yfont, ylabel_font=args.inter_ylabel_font)
 
     # matrix/totals 行更紧，并把上面柱往下贴近
     shrink_matrix_totals_and_pull_intersections_down(axes, tool_vscale=args.tool_vscale, anchor="bottom")
