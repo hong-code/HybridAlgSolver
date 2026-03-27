@@ -20,3 +20,4 @@ OutputGraphs
 *.txt
 .venv
 Datasets/sp25_rq1.db
+Datasets/DataBase/Outputdb

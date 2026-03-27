@@ -13,7 +13,7 @@ namespace solverbin{
     dp[dfa.DState->id][0].first = 1;
     std::queue<std::pair<DFA::DFAState*, int>> stk;
     stk.push(std::pair<DFA::DFAState*, int>(dfa.DState, 0));
-    int MaxLength = 100000;
+    int MaxLength = 1000;
     int ActualMaxLength = 0;
     while (!stk.empty())
     {
@@ -24,7 +24,7 @@ namespace solverbin{
       for (auto c : Alphabet){
         auto NextState = dfa.StepOneByte(CurrentState, c);
         if (NextState == nullptr || NextState->NodeSequence.size() == 0){
-          std::cout << "Error: NextState NodeSequence size is zero! or NextState is nullable" << std::endl;
+          // std::cout << "Error: NextState NodeSequence size is zero! or NextState is nullable" << std::endl;
           continue;
         }
         if (dp[CurrentState->id][length].first == 0){
