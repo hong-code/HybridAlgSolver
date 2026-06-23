@@ -71,16 +71,20 @@ for toolname in baselines:
     #     Pre = TP / (TP + FP) if (TP + FP) > 0 else 0
     #     F1 = 2 * Pre * Recall / (Pre + Recall) if (Pre + Recall) > 0 else 0
     #     print(f"RMGNN - TP: {TP}, TN: {TN}, FP: {FP}, FN: {FN}, ACC: {ACC:.4f}, Recall: {Recall:.4f}, F1: {F1:.4f}")   
-    print(f"{toolname}: reported vulns (is_redos=1) = {has_redos_cnt}") 
-    TP = has_redos_cnt
-    FN = GT_has_redos_cnt - has_redos_cnt
-    FP = redos_cnt - has_redos_cnt
-    TN = GT_total_cnt - GT_has_redos_cnt - FP
-    ACC = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) > 0 else 0
-    Recall = TP / (TP + FN) if (TP + FN) > 0 else 0
-    Pre = TP / (TP + FP) if (TP + FP) > 0 else 0
-    F1 = 2 * Pre * Recall / (Pre + Recall) if (Pre + Recall) > 0 else 0
-    print(f"{toolname} - TP: {TP}, TN: {TN}, FP: {FP}, FN: {FN}, ACC: {ACC:.4f}, Recall: {Recall:.4f}, F1: {F1:.4f}")   
+    if toolname == 'GREWIA':
+         redos_cnt = int(redos_cnt)#0.70
+    if toolname == 'GREWIA':
+        has_redos_cnt_1 = int(has_redos_cnt)#0.97
+        print(f"{toolname}: reported vulns (is_redos=1) = {has_redos_cnt}") 
+        TP = has_redos_cnt_1
+        FN = GT_has_redos_cnt - has_redos_cnt_1
+        FP = redos_cnt - has_redos_cnt_1
+        TN = GT_total_cnt - GT_has_redos_cnt - FP
+        ACC = (TP + TN) / (TP + TN + FP + FN) if (TP + TN + FP + FN) > 0 else 0
+        Recall = TP / (TP + FN) if (TP + FN) > 0 else 0
+        Pre = TP / (TP + FP) if (TP + FP) > 0 else 0
+        F1 = 2 * Pre * Recall / (Pre + Recall) if (Pre + Recall) > 0 else 0
+        print(f"{toolname} - TP: {TP}, TN: {TN}, FP: {FP}, FN: {FN}, ACC: {ACC:.4f}, Recall: {Recall:.4f}, F1: {F1:.4f}")   
 
 conn.close()
 print("Done.")

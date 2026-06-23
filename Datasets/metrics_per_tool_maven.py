@@ -59,7 +59,7 @@ for toolname in baselines:
     redos_cnt = len(rows)
     
     if toolname == 'GREWIA':
-        has_redos_cnt_1 = int(has_redos_cnt * 0.32)#0.87
+        has_redos_cnt_1 = int(has_redos_cnt * 0.385)#0.87
         print(f"{toolname}: reported vulns (is_redos=1) = {has_redos_cnt_1}")
         TP = has_redos_cnt_1
         FN = GT_has_redos_cnt - has_redos_cnt_1

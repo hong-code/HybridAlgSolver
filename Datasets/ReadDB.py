@@ -2,7 +2,7 @@ import sqlite3
 import csv
 
 # 连接数据库
-conn = sqlite3.connect("/home/HybridAlgSolver/Datasets/DataBase/Outputdb/CVE.db")
+conn = sqlite3.connect("/home/HybridAlgSolver/Datasets/DataBase/Outputdb/python.db")
 cursor = conn.cursor()
 
 # 查看所有表
@@ -10,7 +10,7 @@ cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 print("Tables:", cursor.fetchall())
 
 # CSV 文件名
-filename = "/home/HybridAlgSolver/Datasets/DataBase/CVE_regex_with_redos.csv"
+filename = "/home/HybridAlgSolver/Datasets/DataBase/PyPI_regex_with_redos.csv"
 
 # CSV 文件名
 filename1 = "/home/HybridAlgSolver/Datasets/test_regex_with_redos_hunter.csv"
@@ -33,7 +33,7 @@ FROM regexes r
 LEFT JOIN (
   SELECT id, MAX(COALESCE(user_time, 0)) AS user_time
   FROM verify_result
-  WHERE engine = 'nodejs14'
+  WHERE engine = 'python'
   GROUP BY id
 ) v
   ON r.id = v.id;
