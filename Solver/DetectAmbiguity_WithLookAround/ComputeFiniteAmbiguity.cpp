@@ -34,10 +34,19 @@ namespace solverbin{
       }
       for (auto c : Alphabet){
         auto NextState = dfa.StepOneByte(CurrentState, c);
-        if (NextState == nullptr || NextState->NodeSequence.size() == 0 || NextState->DFlag == DFA::Match){
-          // std::cout << "Error: NextState NodeSequence size is zero! or NextState is nullable" << std::endl;
-          continue;
+        if (this->MatchingFunction == 1){
+          if (NextState == nullptr || NextState->NodeSequence.size() == 0 || NextState->DFlag == DFA::Match){
+            // std::cout << "Error: NextState NodeSequence size is zero! or NextState is nullable" << std::endl;
+            continue;
+          }
         }
+        else {
+          if (NextState == nullptr || NextState->NodeSequence.size() == 0){
+            // std::cout << "Error: NextState NodeSequence size is zero! or NextState is nullable" << std::endl;
+            continue;
+          }
+        }
+        
         auto &CurrentDP = dp[length][CurrentState->id];
         if (CurrentDP.path_count == 0){
           std::cout << "Error: dp value is zero!" << std::endl;
@@ -87,7 +96,7 @@ namespace solverbin{
     std::reverse(witness.begin(), witness.end());
     MaxAmbiguityWitnessString = witness;
     std::cout << "MaxDegreeOfAmbiguity: " << MaxDegreeOfAmbiguity << std::endl;
-    std::cout << "witness string with MaxDegreeOfAmbiguity: " << witness << std::endl;
+    // std::cout << "witness string with MaxDegreeOfAmbiguity: " << witness << std::endl;
     if (MaxDegreeOfAmbiguity > MaxLength){
       return true;
     }

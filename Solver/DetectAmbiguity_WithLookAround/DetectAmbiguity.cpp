@@ -74,7 +74,7 @@ namespace solverbin{
     int time = length / 100000;
     std::string time_str = std::to_string(time);
     std::string matching_function;
-    if (MatchingFunction == "0"){
+    if (MatchingFunction == 0){
       matching_function = "1";
     }
     else{
@@ -216,6 +216,7 @@ namespace solverbin{
     Output = Path;
     IsRandom = Is_Random;
     ConsiderReverse = Consider_Reverse;
+    MatchingFunction = Is_FullMatch;
     e1 = r;
     if (ConsiderReverse == 1) {
       LastWord = e1.ReturnLastWord(e1.Renode);

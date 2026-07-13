@@ -75,7 +75,6 @@ namespace solverbin{
         std::queue<TernarySimulationState> TODOCache;
         std::string Regex;
         std::string RegexEngine;
-        std::string MatchingFunction;
         std::string RegexFile;
         std::string InterStr;
         std::string WitnessStr;
@@ -91,7 +90,7 @@ namespace solverbin{
         int isLazy = 1;
         int IsRandom = 0;
         int NumberOfCandidates = 0;
-        int IsFullMatch = 0;
+        int MatchingFunction = 0;
         int ConsiderReverse = 0;
         std::multimap<FollowAtomata::State*, TernarySimulationState> SimulationQ;
         uint8_t ByteMap[256];

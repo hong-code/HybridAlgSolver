@@ -47,6 +47,20 @@ namespace {
 
     return true;
   }
+
+  std::string BuildDranceAttackString(solverbin::REnodeClass regex, const std::string& witness, int matchingFunction) {
+    if (matchingFunction != 0) {
+      return witness;
+    }
+
+    auto initState = solverbin::FollowAtomata(regex);
+    auto dfa = solverbin::DFA(&initState);
+    std::string suffix;
+    if (dfa.Complement(dfa.DState, witness, suffix)) {
+      return witness + suffix;
+    }
+    return witness;
+  }
 }
 
 int main(int argc, char* argv[]) {
@@ -114,9 +128,13 @@ int main(int argc, char* argv[]) {
       matchingFunction,
       0
     );
-
     detector.DetectFiniteAmbiguity();
-    attackOut << lineNumber << '\t' << detector.MaxAmbiguityWitnessString << '\n';
+    const std::string attackString = BuildDranceAttackString(
+      detector.e1,
+      detector.MaxAmbiguityWitnessString,
+      matchingFunction
+    );
+    attackOut << attackString << '\n';
     ambiguityOut << lineNumber << '\t' << detector.MaxDegreeOfAmbiguity << '\n';
   }
 
