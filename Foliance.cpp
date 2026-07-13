@@ -48,7 +48,7 @@ namespace {
     return true;
   }
 
-  std::string BuildDranceAttackString(solverbin::REnodeClass regex, const std::string& witness, int matchingFunction) {
+  std::string BuildFolianceAttackString(solverbin::REnodeClass regex, const std::string& witness, int matchingFunction) {
     if (matchingFunction != 0) {
       return witness;
     }
@@ -66,7 +66,7 @@ namespace {
 int main(int argc, char* argv[]) {
   if (argc != 8) {
     std::cout << "parameter error" << std::endl;
-    std::cout << "Usage: ./k-Drance [RegexFile] [AttackStringOutputFile] [AmbiguityOutputFile] [AttackStringLength] [SimplifiedModeOn] [DecrementalOn] [MatchingFunction]\n" << std::endl;
+    std::cout << "Usage: ./Foliance [RegexFile] [AttackStringOutputFile] [AmbiguityOutputFile] [AttackStringLength] [SimplifiedModeOn] [DecrementalOn] [MatchingFunction]\n" << std::endl;
     std::cout << "[RegexFile]: Path of a file which contains regexes, one regex per line.\n" << std::endl;
     std::cout << "[AttackStringOutputFile]: Path of the file where attack strings will be written.\n" << std::endl;
     std::cout << "[AmbiguityOutputFile]: Path of the file where ambiguity degrees will be written.\n" << std::endl;
@@ -129,7 +129,7 @@ int main(int argc, char* argv[]) {
       0
     );
     detector.DetectFiniteAmbiguity();
-    const std::string attackString = BuildDranceAttackString(
+    const std::string attackString = BuildFolianceAttackString(
       detector.e1,
       detector.MaxAmbiguityWitnessString,
       matchingFunction
