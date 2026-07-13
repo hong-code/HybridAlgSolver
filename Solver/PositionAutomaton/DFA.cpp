@@ -101,6 +101,7 @@ namespace solverbin{
     if (itc != s->Next.end()){
       return itc->second.first;
     }
+    // std::cout << "StepOneByte: " << (int)c << std::endl;
     DFAState* NextDFAState = new DFAState();
     for (auto j : s->NodeSequence){
       int sizeoffollowset = 0;
@@ -124,8 +125,10 @@ namespace solverbin{
       }
       NextStatePatitionVec.push_back(sizeoffollowset);
     }
-    if (NFAStateVec.size() == 0)
+    if (NFAStateVec.size() == 0) {
+      s->Next.insert(std::make_pair(FA->REClass.ByteMap[c], std::make_pair(nullptr, NextStatePatitionVec)));
       return nullptr;
+    }
     MaintainNode2Index(NextDFAState, NFAStateVec);
     auto UniqueDFAState = FindInDFACache(dfacache, NextDFAState);
     if (UniqueDFAState != NextDFAState) {

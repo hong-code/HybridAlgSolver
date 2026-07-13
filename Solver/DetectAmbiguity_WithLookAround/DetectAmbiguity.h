@@ -83,9 +83,11 @@ namespace solverbin{
         std::string LastWord;
         std::string attack_string;
         std::string Output;
+        std::string MaxAmbiguityWitnessString;
         std::vector<uint8_t> WitnessStrColor;
         std::map<uint8_t, std::vector<uint8_t>> ColorMap;
         int length = 0;
+        int MaxDegreeOfAmbiguity = 0;
         int isLazy = 1;
         int IsRandom = 0;
         int NumberOfCandidates = 0;
